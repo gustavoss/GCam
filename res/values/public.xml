@@ -738,6 +738,9 @@
     <public type="drawable" name="ic_lowlight_mode_black_grey600_24dp" id="0x7f020177" />
     <public type="drawable" name="ic_noise_mode_black_grey600_24dp" id="0x7f020178" />
     <public type="drawable" name="ic_refocus_camera_back_grey600_24dp" id="0x7f020179" />
+    <public type="drawable" name="ic_camera_front_black_24px" id="0x7f02017a" />
+    <public type="drawable" name="ic_camera_rear_black_24px" id="0x7f02017b" />
+    <public type="drawable" name="ic_hdrparams_grey600_24px" id="0x7f02017c" />
     <public type="drawable" name="abc_action_bar_item_background_material" id="0x7f020001" />
     <public type="drawable" name="avd_hide_password" id="0x7f020055" />
     <public type="drawable" name="avd_show_password" id="0x7f020056" />
@@ -896,6 +899,11 @@
     <public type="drawable" name="tutorial_graphics_photo_front" id="0x7f020163" />
     <public type="drawable" name="zoom_slider_thumb" id="0x7f020165" />
     <public type="drawable" name="common_full_open_on_phone" id="0x7f02006b" />
+    <public type="drawable" name="quantum_ic_HDR plus icon_grey600_24" id="0x7f02017d" />
+    <public type="drawable" name="quantum_ic_JPG_grey600_24" id="0x7f02017e" />
+    <public type="drawable" name="quantum_ic_aemode_grey600_24" id="0x7f02017f" />
+    <public type="drawable" name="quantum_ic_lensblur_grey600_24" id="0x7f020180" />
+    <public type="drawable" name="quantum_ic_port_grey600_24" id="0x7f020181" />
     <public type="mipmap" name="adaptiveproduct_pixelcamera_launcher" id="0x7f030002" />
     <public type="mipmap" name="adaptiveproduct_pixelcamera" id="0x7f030006" />
     <public type="mipmap" name="adaptiveproduct_pixelcamera_background_color_108" id="0x7f030000" />
@@ -1219,8 +1227,10 @@
     <public type="array" name="pref_compress_jpeg_entryvalues" id="0x7f0a0028" />
     <public type="array" name="pref_refocus_resolution_entries" id="0x7f0a0029" />
     <public type="array" name="pref_refocus_resolution_entryvalues" id="0x7f0a002a" />
-    <public type="array" name="pref_aemode_entries" id="0x7f0a002b" />
-    <public type="array" name="pref_aemode_entryvalues" id="0x7f0a002c" />
+    <public type="array" name="exp_entries" id="0x7f0a002b" />
+    <public type="array" name="exp_entryvalues" id="0x7f0a002c" />
+    <public type="array" name="pref_zoompmode_entries" id="0x7f0a002d" />
+    <public type="array" name="pref_zoompmode_entryvalues" id="0x7f0a002e" />
     <public type="bool" name="abc_action_bar_embed_tabs" id="0x7f0b0000" />
     <public type="bool" name="abc_allow_stacked_button_bar" id="0x7f0b0001" />
     <public type="bool" name="abc_config_actionMenuItemAllCaps" id="0x7f0b0002" />
@@ -3300,25 +3310,31 @@
     <public type="string" name="pref_enable_noise_summary" id="0x7f110250" />
     <public type="string" name="pref_hdrplus_settings_title" id="0x7f110251" />
     <public type="string" name="pref_misc_settings_title" id="0x7f110252" />
-    <public type="string" name="pref_paemode_title" id="0x7f110253" />
-    <public type="string" name="pref_aemode_title" id="0x7f110254" />
-    <public type="string" name="pref_aemode_default" id="0x7f110255" />
-    <public type="string" name="pref_aemode_0" id="0x7f110256" />
-    <public type="string" name="pref_aemode_m1" id="0x7f110257" />
-    <public type="string" name="pref_aemode_m2" id="0x7f110258" />
-    <public type="string" name="pref_aemode_1" id="0x7f110259" />
-    <public type="string" name="pref_aemode_2" id="0x7f11025a" />
-    <public type="string" name="pref_aemode_3" id="0x7f11025b" />
-    <public type="string" name="pref_aemode_4" id="0x7f11025c" />
-    <public type="string" name="pref_aemode_5" id="0x7f11025d" />
-    <public type="string" name="pref_aemode_6" id="0x7f11025e" />
-    <public type="string" name="pref_aemode_7" id="0x7f11025f" />
-    <public type="string" name="pref_aemode_8" id="0x7f110260" />
+    <public type="string" name="exp_title" id="0x7f110253" />
+    <public type="string" name="exp_default" id="0x7f110254" />
+    <public type="string" name="exp_FOURISO" id="0x7f110255" />
+    <public type="string" name="exp_TWOISO" id="0x7f110256" />
+    <public type="string" name="exp_off" id="0x7f110257" />
+    <public type="string" name="exp_TWOExp" id="0x7f110258" />
+    <public type="string" name="exp_FOURExp" id="0x7f110259" />
+    <public type="string" name="exp_SIXExp" id="0x7f11025a" />
+    <public type="string" name="exp_EIGHTExp" id="0x7f11025b" />
+    <public type="string" name="exp_MinISO" id="0x7f11025c" />
+    <public type="string" name="setting_zoompmodeb_title" id="0x7f11025d" />
+    <public type="string" name="setting_zoompmodef_title" id="0x7f11025e" />
+    <public type="string" name="pref_zoompmode_default" id="0x7f11025f" />
+    <public type="string" name="pref_zoompmode_0" id="0x7f110260" />
     <public type="string" name="pref_disable_zoom_title" id="0x7f110261" />
     <public type="string" name="pref_gcam_hdr_raw_summary" id="0x7f110262" />
     <public type="string" name="pref_gcam_hdr_raw_title" id="0x7f110263" />
     <public type="string" name="pref_compress_dng_title" id="0x7f110264" />
     <public type="string" name="pref_compress_dng_summary" id="0x7f110265" />
+    <public type="string" name="pref_zoompmode_10" id="0x7f110266" />
+    <public type="string" name="pref_zoompmode_11" id="0x7f110267" />
+    <public type="string" name="pref_zoompmode_12" id="0x7f110268" />
+    <public type="string" name="pref_zoompmode_13" id="0x7f110269" />
+    <public type="string" name="pref_zoompmode_14" id="0x7f11026a" />
+    <public type="string" name="pref_zoompmode_15" id="0x7f11026b" />
     <public type="style" name="AlertDialog.AppCompat" id="0x7f120000" />
     <public type="style" name="AlertDialog.AppCompat.Light" id="0x7f120001" />
     <public type="style" name="Animation.AppCompat.Dialog" id="0x7f120002" />

@@ -683,12 +683,6 @@
 .method final e()V
     .locals 3
 
-    const-string/jumbo v2, "pref_disable_zoom_key"
-
-    invoke-static {v2}, Lbka;->a(Ljava/lang/String;)I
-
-    move-result v2
-
     iget-object v0, p0, Ldcp;->c:Ldya;
 
     invoke-virtual {v0}, Ldya;->a()Z
@@ -699,14 +693,22 @@
 
     iget-object v0, p0, Ldcp;->x:Lhhj;
 
-    if-nez v2, :cond_0
+    invoke-virtual {p0}, Ldcp;->zoomPb()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
 
     const/high16 v1, 0x3fc00000    # 1.5f
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :cond_0
-    const/high16 v1, 0x3f800000    # 1.0f
+    const v2, 0x41200000    # 10.0f
+
+    int-to-float v1, v1
+
+    div-float/2addr v1, v2
 
     :goto_0
     invoke-interface {v0, v1}, Lhhj;->b(F)V
@@ -756,17 +758,107 @@
     :cond_2
     iget-object v0, p0, Ldcp;->x:Lhhj;
 
-    if-nez v2, :cond_3
+    invoke-virtual {p0}, Ldcp;->zoomPf()I
+
+    move-result v1
+
+    if-nez v1, :cond_3
 
     const v1, 0x3f99999a    # 1.2f
 
-    goto/16 :goto_2
+    goto :goto_2
 
     :cond_3
-    const/high16 v1, 0x3f800000    # 1.0f
+    const v2, 0x41200000    # 10.0f
+
+    int-to-float v1, v1
+
+    div-float/2addr v1, v2
 
     :goto_2
     invoke-interface {v0, v1}, Lhhj;->b(F)V
 
-    goto/16 :goto_1
+    goto :goto_1
+.end method
+
+.method public zoomPb()I
+    .locals 8
+
+    iget-object v0, p0, Ldcp;->o:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v2
+
+    const-string v7, "pref_zoompmodeb_key"
+
+    invoke-interface {v2, v7}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+
+    move-result v4
+
+    const/4 v3, 0x0
+
+    if-eqz v4, :cond_0
+
+    invoke-static {v1}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v2
+
+    const/4 v5, 0x0
+
+    invoke-interface {v2, v7, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v3
+
+    :cond_0
+    return v3
+.end method
+
+.method public zoomPf()I
+    .locals 8
+
+    iget-object v0, p0, Ldcp;->o:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v2
+
+    const-string v7, "pref_zoompmodef_key"
+
+    invoke-interface {v2, v7}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+
+    move-result v4
+
+    const/4 v3, 0x0
+
+    if-eqz v4, :cond_0
+
+    invoke-static {v1}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v2
+
+    const/4 v5, 0x0
+
+    invoke-interface {v2, v7, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v3
+
+    :cond_0
+    return v3
 .end method

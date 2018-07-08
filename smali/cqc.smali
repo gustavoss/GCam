@@ -16,6 +16,14 @@
 
 .field private static final d:I
 
+.field private static sGetDesired_analog_gain:F
+
+.field private static sGetDesired_digital_gain:F
+
+.field private static sGetDesired_exposure_time_ms:F
+
+.field private static sGetMaxISO:F
+
 
 # instance fields
 .field public final a:Lfea;
@@ -93,6 +101,685 @@
 
     iput v0, p0, Lcqc;->e:I
 
+    return-void
+.end method
+
+.method public static CalcParamDesired()V
+    .locals 4
+
+    const-string v0, "exp_key"
+
+    invoke-static {v0}, Lcqc;->MenuValue(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_2
+
+    const/4 v1, 0x3
+
+    if-eq v0, v1, :cond_3
+
+    const/4 v1, 0x4
+
+    if-eq v0, v1, :cond_4
+
+    const/4 v1, 0x5
+
+    if-eq v0, v1, :cond_5
+
+    const/4 v1, 0x6
+
+    if-eq v0, v1, :cond_6
+
+    const/4 v1, 0x7
+
+    if-eq v0, v1, :cond_7
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    invoke-static {}, Lcqc;->MinISOParamDesired()V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {}, Lcqc;->EIGHTExpParamDesired()V
+
+    goto :goto_0
+
+    :cond_3
+    invoke-static {}, Lcqc;->SIXExpParamDesired()V
+
+    goto :goto_0
+
+    :cond_4
+    invoke-static {}, Lcqc;->FOURExpParamDesired()V
+
+    goto :goto_0
+
+    :cond_5
+    invoke-static {}, Lcqc;->TWOExpParamDesired()V
+
+    goto :goto_0
+
+    :cond_6
+    invoke-static {}, Lcqc;->TWOISOParamDesired()V
+
+    goto :goto_0
+
+    :cond_7
+    invoke-static {}, Lcqc;->FOURISOParamDesired()V
+
+    goto :goto_0
+.end method
+
+.method public static EIGHTExpParamDesired()V
+    .locals 9
+
+    sget v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sget v1, Lcqc;->sGetDesired_analog_gain:F
+
+    sget v2, Lcqc;->sGetDesired_digital_gain:F
+
+    mul-float v3, v1, v2
+
+    const v4, 0x41000000    # 8.0f
+
+    sub-float v5, v3, v4
+
+    float-to-int v5, v5
+
+    if-lez v5, :cond_0
+
+    div-float v5, v3, v4
+
+    sget v6, Lcqc;->sGetMaxISO:F
+
+    sub-float v7, v5, v6
+
+    float-to-int v7, v7
+
+    if-lez v7, :cond_1
+
+    mul-float v0, v0, v4
+
+    sput v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sput v6, Lcqc;->sGetDesired_analog_gain:F
+
+    div-float v7, v5, v6
+
+    sput v7, Lcqc;->sGetDesired_digital_gain:F
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-static {}, Lcqc;->SIXExpParamDesired()V
+
+    goto :goto_0
+
+    :cond_1
+    mul-float v0, v0, v4
+
+    sput v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sput v5, Lcqc;->sGetDesired_analog_gain:F
+
+    const v2, 0x3f800000    # 1.0f
+
+    sput v2, Lcqc;->sGetDesired_digital_gain:F
+
+    goto :goto_0
+.end method
+
+.method public static FOURExpParamDesired()V
+    .locals 9
+
+    sget v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sget v1, Lcqc;->sGetDesired_analog_gain:F
+
+    sget v2, Lcqc;->sGetDesired_digital_gain:F
+
+    mul-float v3, v1, v2
+
+    const v4, 0x40800000    # 4.0f
+
+    sub-float v5, v3, v4
+
+    float-to-int v5, v5
+
+    if-lez v5, :cond_0
+
+    div-float v5, v3, v4
+
+    sget v6, Lcqc;->sGetMaxISO:F
+
+    sub-float v7, v5, v6
+
+    float-to-int v7, v7
+
+    if-lez v7, :cond_1
+
+    mul-float v0, v0, v4
+
+    sput v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sput v6, Lcqc;->sGetDesired_analog_gain:F
+
+    div-float v7, v5, v6
+
+    sput v7, Lcqc;->sGetDesired_digital_gain:F
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-static {}, Lcqc;->TWOExpParamDesired()V
+
+    goto :goto_0
+
+    :cond_1
+    mul-float v0, v0, v4
+
+    sput v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sput v5, Lcqc;->sGetDesired_analog_gain:F
+
+    const v2, 0x3f800000    # 1.0f
+
+    sput v2, Lcqc;->sGetDesired_digital_gain:F
+
+    goto :goto_0
+.end method
+
+.method public static FOURISOParamDesired()V
+    .locals 9
+
+    sget v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sget v1, Lcqc;->sGetDesired_analog_gain:F
+
+    sget v2, Lcqc;->sGetDesired_digital_gain:F
+
+    mul-float v3, v1, v2
+
+    const v4, 0x41c00000    # 24.0f
+
+    sub-float v5, v3, v4
+
+    float-to-int v5, v5
+
+    if-gtz v5, :cond_0
+
+    const v4, 0x40800000    # 4.0f
+
+    mul-float v5, v3, v4
+
+    sget v6, Lcqc;->sGetMaxISO:F
+
+    sub-float v7, v5, v6
+
+    float-to-int v7, v7
+
+    if-lez v7, :cond_1
+
+    div-float v0, v0, v4
+
+    sput v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sput v6, Lcqc;->sGetDesired_analog_gain:F
+
+    div-float v7, v5, v6
+
+    sput v7, Lcqc;->sGetDesired_digital_gain:F
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-static {}, Lcqc;->TWOISOParamDesired()V
+
+    goto :goto_0
+
+    :cond_1
+    div-float v0, v0, v4
+
+    sput v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sput v5, Lcqc;->sGetDesired_analog_gain:F
+
+    const v2, 0x3f800000    # 1.0f
+
+    sput v2, Lcqc;->sGetDesired_digital_gain:F
+
+    goto :goto_0
+.end method
+
+.method public static MenuValue(Ljava/lang/String;)I
+    .locals 3
+
+    invoke-static {}, Landroid/app/AppGlobals;->getInitialApplication()Landroid/app/Application;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Application;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->createPackageContext(Ljava/lang/String;I)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v1
+
+    invoke-interface {v1, p0}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, p0, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v2
+
+    :cond_0
+    return v2
+.end method
+
+.method public static MinExpParamDesired()V
+    .locals 7
+
+    sget v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sget v1, Lcqc;->sGetDesired_analog_gain:F
+
+    sget v2, Lcqc;->sGetDesired_digital_gain:F
+
+    mul-float v3, v0, v1
+
+    mul-float v3, v3, v2
+
+    sget v0, Lcqc;->sGetMaxISO:F
+
+    div-float v4, v3, v0
+
+    const v5, 0x4479fff0    # 999.999f
+
+    sub-float v6, v5, v4
+
+    float-to-int v6, v6
+
+    if-ltz v6, :cond_0
+
+    sput v4, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sput v0, Lcqc;->sGetDesired_analog_gain:F
+
+    const v0, 0x3f800000    # 1.0f
+
+    sput v0, Lcqc;->sGetDesired_digital_gain:F
+
+    :cond_0
+    return-void
+.end method
+
+.method public static MinISOParamDesired()V
+    .locals 10
+
+    sget v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sget v1, Lcqc;->sGetDesired_analog_gain:F
+
+    sget v2, Lcqc;->sGetDesired_digital_gain:F
+
+    mul-float v3, v0, v1
+
+    mul-float v3, v3, v2
+
+    sget v4, Lcqc;->sGetMaxISO:F
+
+    const v5, 0x4479fff0    # 999.999f
+
+    sub-float v6, v3, v5
+
+    float-to-int v6, v6
+
+    if-lez v6, :cond_1
+
+    div-float v6, v3, v5
+
+    sget v7, Lcqc;->sGetMaxISO:F
+
+    sub-float v8, v6, v7
+
+    float-to-int v9, v8
+
+    if-lez v9, :cond_0
+
+    div-float v9, v6, v7
+
+    sput v9, Lcqc;->sGetDesired_digital_gain:F
+
+    sput v7, Lcqc;->sGetDesired_analog_gain:F
+
+    sput v5, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    :goto_0
+    return-void
+
+    :cond_0
+    sput v6, Lcqc;->sGetDesired_analog_gain:F
+
+    const v1, 0x3f800000    # 1.0f
+
+    sput v1, Lcqc;->sGetDesired_digital_gain:F
+
+    sput v5, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    goto :goto_0
+
+    :cond_1
+    sput v3, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    const v1, 0x3f800000    # 1.0f
+
+    sput v1, Lcqc;->sGetDesired_analog_gain:F
+
+    const v1, 0x3f800000    # 1.0f
+
+    sput v1, Lcqc;->sGetDesired_digital_gain:F
+
+    goto :goto_0
+.end method
+
+.method public static SIXExpParamDesired()V
+    .locals 9
+
+    sget v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sget v1, Lcqc;->sGetDesired_analog_gain:F
+
+    sget v2, Lcqc;->sGetDesired_digital_gain:F
+
+    mul-float v3, v1, v2
+
+    const v4, 0x40c00000    # 6.0f
+
+    sub-float v5, v3, v4
+
+    float-to-int v5, v5
+
+    if-lez v5, :cond_0
+
+    div-float v5, v3, v4
+
+    sget v6, Lcqc;->sGetMaxISO:F
+
+    sub-float v7, v5, v6
+
+    float-to-int v7, v7
+
+    if-lez v7, :cond_1
+
+    mul-float v0, v0, v4
+
+    sput v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sput v6, Lcqc;->sGetDesired_analog_gain:F
+
+    div-float v7, v5, v6
+
+    sput v7, Lcqc;->sGetDesired_digital_gain:F
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-static {}, Lcqc;->FOURExpParamDesired()V
+
+    goto :goto_0
+
+    :cond_1
+    mul-float v0, v0, v4
+
+    sput v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sput v5, Lcqc;->sGetDesired_analog_gain:F
+
+    const v2, 0x3f800000    # 1.0f
+
+    sput v2, Lcqc;->sGetDesired_digital_gain:F
+
+    goto :goto_0
+.end method
+
+.method public static SuperMinExpParamDesired()V
+    .locals 4
+
+    sget v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sget v1, Lcqc;->sGetDesired_analog_gain:F
+
+    sget v2, Lcqc;->sGetDesired_digital_gain:F
+
+    mul-float v3, v0, v1
+
+    mul-float v3, v3, v2
+
+    sget v0, Lcqc;->sGetMaxISO:F
+
+    const v1, 0x40c00000    # 6.0f
+
+    mul-float/2addr v0, v1
+
+    div-float v3, v3, v0
+
+    sput v3, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sget v0, Lcqc;->sGetMaxISO:F
+
+    sput v0, Lcqc;->sGetDesired_analog_gain:F
+
+    const v0, 0x40c00000    # 6.0f
+
+    sput v0, Lcqc;->sGetDesired_digital_gain:F
+
+    return-void
+.end method
+
+.method public static TWOExpParamDesired()V
+    .locals 9
+
+    sget v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sget v1, Lcqc;->sGetDesired_analog_gain:F
+
+    sget v2, Lcqc;->sGetDesired_digital_gain:F
+
+    mul-float v3, v1, v2
+
+    const v4, 0x40000000    # 2.0f
+
+    sub-float v5, v3, v4
+
+    float-to-int v5, v5
+
+    if-lez v5, :cond_0
+
+    div-float v5, v3, v4
+
+    sget v6, Lcqc;->sGetMaxISO:F
+
+    sub-float v7, v5, v6
+
+    float-to-int v7, v7
+
+    if-lez v7, :cond_1
+
+    mul-float v0, v0, v4
+
+    sput v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sput v6, Lcqc;->sGetDesired_analog_gain:F
+
+    div-float v7, v5, v6
+
+    sput v7, Lcqc;->sGetDesired_digital_gain:F
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-static {}, Lcqc;->MinISOParamDesired()V
+
+    goto :goto_0
+
+    :cond_1
+    mul-float v0, v0, v4
+
+    sput v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sput v5, Lcqc;->sGetDesired_analog_gain:F
+
+    const v2, 0x3f800000    # 1.0f
+
+    sput v2, Lcqc;->sGetDesired_digital_gain:F
+
+    goto :goto_0
+.end method
+
+.method public static TWOISOParamDesired()V
+    .locals 9
+
+    sget v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sget v1, Lcqc;->sGetDesired_analog_gain:F
+
+    sget v2, Lcqc;->sGetDesired_digital_gain:F
+
+    mul-float v3, v1, v2
+
+    const v4, 0x42400000    # 48.0f
+
+    sub-float v5, v3, v4
+
+    float-to-int v5, v5
+
+    if-gtz v5, :cond_0
+
+    const v4, 0x40000000    # 2.0f
+
+    mul-float v5, v3, v4
+
+    sget v6, Lcqc;->sGetMaxISO:F
+
+    sub-float v7, v5, v6
+
+    float-to-int v7, v7
+
+    if-lez v7, :cond_1
+
+    div-float v0, v0, v4
+
+    sput v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sput v6, Lcqc;->sGetDesired_analog_gain:F
+
+    div-float v7, v5, v6
+
+    sput v7, Lcqc;->sGetDesired_digital_gain:F
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-static {}, Lcqc;->SuperMinExpParamDesired()V
+
+    goto :goto_0
+
+    :cond_1
+    div-float v0, v0, v4
+
+    sput v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sput v5, Lcqc;->sGetDesired_analog_gain:F
+
+    const v2, 0x3f800000    # 1.0f
+
+    sput v2, Lcqc;->sGetDesired_digital_gain:F
+
+    goto :goto_0
+.end method
+
+.method public static TWOMinExpParamDesired()V
+    .locals 7
+
+    sget v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sget v1, Lcqc;->sGetDesired_analog_gain:F
+
+    sget v2, Lcqc;->sGetDesired_digital_gain:F
+
+    mul-float v3, v0, v1
+
+    mul-float v3, v3, v2
+
+    sget v0, Lcqc;->sGetMaxISO:F
+
+    const v1, 0x40000000    # 2.0f
+
+    div-float/2addr v0, v1
+
+    div-float v4, v3, v0
+
+    const v5, 0x4479fff0    # 999.999f
+
+    sub-float v6, v5, v4
+
+    float-to-int v6, v6
+
+    if-ltz v6, :cond_0
+
+    sput v4, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sput v0, Lcqc;->sGetDesired_analog_gain:F
+
+    const v0, 0x3f800000    # 1.0f
+
+    sput v0, Lcqc;->sGetDesired_digital_gain:F
+
+    :cond_0
     return-void
 .end method
 
@@ -3941,13 +4628,27 @@
 
     move-result v0
 
+    sput v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
     invoke-virtual {p2}, Lcom/google/googlex/gcam/FrameRequest;->getDesired_analog_gain()F
 
     move-result v2
 
+    sput v2, Lcqc;->sGetDesired_analog_gain:F
+
     invoke-virtual {p2}, Lcom/google/googlex/gcam/FrameRequest;->getDesired_digital_gain()F
 
     move-result v3
+
+    sput v3, Lcqc;->sGetDesired_digital_gain:F
+
+    invoke-static {}, Lcqc;->CalcParamDesired()V
+
+    sget v0, Lcqc;->sGetDesired_exposure_time_ms:F
+
+    sget v2, Lcqc;->sGetDesired_analog_gain:F
+
+    sget v3, Lcqc;->sGetDesired_digital_gain:F
 
     sget-object v4, Landroid/hardware/camera2/CaptureRequest;->CONTROL_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 

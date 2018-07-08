@@ -249,30 +249,42 @@
         <item>8</item>
         <item>5</item>
     </string-array>
-    <string-array name="pref_aemode_entries">
-        <item>@string/pref_aemode_0</item>
-        <item>@string/pref_aemode_m1</item>
-        <item>@string/pref_aemode_m2</item>
-        <item>@string/pref_aemode_1</item>
-        <item>@string/pref_aemode_2</item>
-        <item>@string/pref_aemode_3</item>
-        <item>@string/pref_aemode_4</item>
-        <item>@string/pref_aemode_5</item>
-        <item>@string/pref_aemode_6</item>
-        <item>@string/pref_aemode_7</item>
-        <item>@string/pref_aemode_8</item>
+    <string-array name="exp_entries">
+        <item>@string/exp_FOURISO</item>
+        <item>@string/exp_TWOISO</item>
+        <item>@string/exp_off</item>
+        <item>@string/exp_TWOExp</item>
+        <item>@string/exp_FOURExp</item>
+        <item>@string/exp_SIXExp</item>
+        <item>@string/exp_EIGHTExp</item>
+        <item>@string/exp_MinISO</item>
     </string-array>
-    <string-array name="pref_aemode_entryvalues">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
+    <string-array name="exp_entryvalues">
         <item>7</item>
-        <item>8</item>
-        <item>9</item>
+        <item>6</item>
+        <item>0</item>
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="pref_zoompmode_entries">
+        <item>@string/pref_zoompmode_0</item>
+        <item>@string/pref_zoompmode_10</item>
+        <item>@string/pref_zoompmode_11</item>
+        <item>@string/pref_zoompmode_12</item>
+        <item>@string/pref_zoompmode_13</item>
+        <item>@string/pref_zoompmode_14</item>
+        <item>@string/pref_zoompmode_15</item>
+    </string-array>
+    <string-array name="pref_zoompmode_entryvalues">
+        <item>0</item>
         <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
     </string-array>
 </resources>
