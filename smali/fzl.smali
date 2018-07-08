@@ -1,0 +1,21 @@
+.class public final Lfzl;
+.super Ljava/lang/Object;
+.source "PG"
+
+
+# instance fields
+.field public final synthetic a:Ldcp;
+
+
+# direct methods
+.method public constructor <init>(Ldcp;)V
+    .locals 0
+
+    .prologue
+    .line 1
+    iput-object p1, p0, Lfzl;->a:Ldcp;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

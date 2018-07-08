@@ -1,0 +1,76 @@
+.class public final Livm;
+.super Ljava/lang/Object;
+.source "PG"
+
+
+# instance fields
+.field public final a:Liqn;
+
+.field private final b:Lium;
+
+
+# direct methods
+.method public constructor <init>(Lium;)V
+    .locals 1
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    const/4 v0, 0x2
+
+    invoke-static {v0}, Liih;->c(I)Liqn;
+
+    move-result-object v0
+
+    iput-object v0, p0, Livm;->a:Liqn;
+
+    .line 3
+    iput-object p1, p0, Livm;->b:Lium;
+
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Livl;
+    .locals 4
+
+    .prologue
+    .line 7
+    new-instance v0, Livl;
+
+    iget-object v1, p0, Livm;->b:Lium;
+
+    iget-object v2, p0, Livm;->b:Lium;
+
+    new-instance v3, Livn;
+
+    invoke-direct {v3, p0}, Livn;-><init>(Livm;)V
+
+    .line 8
+    invoke-static {v2, v3}, Liur;->a(Lium;Ljava/util/concurrent/Callable;)Lirp;
+
+    move-result-object v2
+
+    .line 10
+    invoke-direct {v0, v1, v2}, Livl;-><init>(Lium;Lirp;)V
+
+    .line 11
+    return-object v0
+.end method
+
+.method public final a(Liyp;)Livm;
+    .locals 1
+
+    .prologue
+    .line 5
+    iget-object v0, p0, Livm;->a:Liqn;
+
+    invoke-interface {v0, p1}, Liqn;->add(Ljava/lang/Object;)Z
+
+    .line 6
+    return-object p0
+.end method
