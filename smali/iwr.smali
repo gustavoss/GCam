@@ -16,8 +16,6 @@
 .method public constructor <init>(Liok;Lihj;)V
     .locals 0
 
-    .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Liwr;->a:Liok;
@@ -32,24 +30,18 @@
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 1
     check-cast p1, Landroid/media/MediaCodec;
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/media/MediaCodec;->setInputSurface(Landroid/view/Surface;)V
 
-    .line 4
     return-object v0
 .end method
 
 .method public final a(Ljava/util/Set;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 6
     iget-object v0, p0, Liwr;->a:Liok;
 
     iget-object v1, p0, Liwr;->b:Lihj;

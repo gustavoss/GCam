@@ -14,8 +14,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,8 +22,6 @@
 .method public constructor <init>(B)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Lhqx;-><init>()V
 
     return-void
@@ -34,14 +30,10 @@
 .method public static a(Landroid/os/Parcel;)I
     .locals 5
 
-    .prologue
-    .line 7
-    .line 8
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 9
     invoke-static {p0, v0}, Lhqx;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -50,12 +42,10 @@
 
     move-result v2
 
-    .line 10
     const v3, 0xffff
 
     and-int/2addr v3, v0
 
-    .line 11
     const/16 v4, 0x4f45
 
     if-eq v3, v4, :cond_1
@@ -149,10 +139,8 @@
 .method public static a(Landroid/os/Parcel;I)I
     .locals 2
 
-    .prologue
     const/high16 v1, -0x10000
 
-    .line 4
     and-int v0, p1, v1
 
     if-eq v0, v1, :cond_0
@@ -177,8 +165,6 @@
 .method public static a(Ljava/util/List;)Landroid/os/Bundle;
     .locals 5
 
-    .prologue
-    .line 63
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
@@ -233,8 +219,6 @@
 .method public static a(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
     .locals 3
 
-    .prologue
-    .line 18
     invoke-static {p0, p1}, Lhqx;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -267,21 +251,16 @@
 .method public static a(Ljava/lang/Object;)Lhmr;
     .locals 1
 
-    .prologue
-    .line 43
     new-instance v0, Lhmr;
 
-    .line 44
     invoke-direct {v0, p0}, Lhmr;-><init>(Ljava/lang/Object;)V
 
-    .line 45
     return-object v0
 .end method
 
 .method public static a(Ljava/util/List;Ljava/lang/Object;)Lhso;
     .locals 13
 
-    .prologue
     const/16 v12, 0x9
 
     const/4 v11, 0x6
@@ -292,7 +271,6 @@
 
     const/16 v5, 0xe
 
-    .line 65
     new-instance v3, Lhso;
 
     invoke-direct {v3}, Lhso;-><init>()V
@@ -303,11 +281,9 @@
 
     move-object v0, v3
 
-    .line 69
     :goto_0
     return-object v0
 
-    .line 65
     :cond_0
     new-instance v1, Lhsp;
 
@@ -330,10 +306,8 @@
     :goto_1
     move-object v0, v3
 
-    .line 69
     goto :goto_0
 
-    .line 65
     :cond_1
     instance-of v1, p1, Ljava/lang/Integer;
 
@@ -539,7 +513,6 @@
 
     check-cast p1, Lcom/google/android/gms/wearable/Asset;
 
-    .line 66
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -548,7 +521,6 @@
 
     add-int/lit8 v1, v1, -0x1
 
-    .line 67
     int-to-long v4, v1
 
     iput-wide v4, v0, Lhsp;->n:J
@@ -566,14 +538,12 @@
 
     new-instance v1, Ljava/util/TreeSet;
 
-    .line 68
     iget-object v2, p1, Lhxr;->a:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v2
 
-    .line 69
     invoke-direct {v1, v2}, Ljava/util/TreeSet;-><init>(Ljava/util/Collection;)V
 
     invoke-virtual {v1}, Ljava/util/TreeSet;->size()I
@@ -886,8 +856,6 @@
 .method public static a(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 64
     invoke-static {}, Landroid/os/StrictMode;->getThreadPolicy()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v1
@@ -929,8 +897,6 @@
 .method public static a(I)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 3
     packed-switch p0, :pswitch_data_0
 
     :pswitch_0
@@ -1067,8 +1033,6 @@
 .method public static a(Lhsy;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 70
     if-nez p0, :cond_0
 
     const-string v0, ""
@@ -1167,8 +1131,6 @@
 .method public static a(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 47
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1190,8 +1152,6 @@
 .method public static a(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 48
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1215,8 +1175,6 @@
 .method public static a(Landroid/os/Handler;)V
     .locals 2
 
-    .prologue
-    .line 54
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -1242,8 +1200,6 @@
 .method public static a(Landroid/os/Parcel;IB)V
     .locals 1
 
-    .prologue
-    .line 29
     const/4 v0, 0x4
 
     invoke-static {p0, p1, v0}, Lhqx;->b(Landroid/os/Parcel;II)V
@@ -1256,8 +1212,6 @@
 .method public static a(Landroid/os/Parcel;II)V
     .locals 5
 
-    .prologue
-    .line 6
     invoke-static {p0, p1}, Lhqx;->a(Landroid/os/Parcel;I)I
 
     move-result v0
@@ -1339,8 +1293,6 @@
 .method public static a(Landroid/os/Parcel;IJ)V
     .locals 2
 
-    .prologue
-    .line 31
     const/16 v0, 0x8
 
     invoke-static {p0, p1, v0}, Lhqx;->b(Landroid/os/Parcel;II)V
@@ -1353,8 +1305,6 @@
 .method public static a(Landroid/os/Parcel;ILandroid/os/Bundle;)V
     .locals 1
 
-    .prologue
-    .line 35
     if-nez p2, :cond_0
 
     :goto_0
@@ -1375,8 +1325,6 @@
 .method public static a(Landroid/os/Parcel;ILandroid/os/IBinder;)V
     .locals 1
 
-    .prologue
-    .line 33
     if-nez p2, :cond_0
 
     :goto_0
@@ -1397,8 +1345,6 @@
 .method public static a(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
     .locals 1
 
-    .prologue
-    .line 34
     if-nez p2, :cond_0
 
     :goto_0
@@ -1419,8 +1365,6 @@
 .method public static a(Landroid/os/Parcel;ILjava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 32
     if-nez p2, :cond_0
 
     :goto_0
@@ -1441,10 +1385,8 @@
 .method public static a(Landroid/os/Parcel;ILjava/util/List;)V
     .locals 5
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 40
     if-nez p2, :cond_0
 
     :goto_0
@@ -1497,8 +1439,6 @@
 .method public static a(Landroid/os/Parcel;IZ)V
     .locals 1
 
-    .prologue
-    .line 28
     const/4 v0, 0x4
 
     invoke-static {p0, p1, v0}, Lhqx;->b(Landroid/os/Parcel;II)V
@@ -1521,8 +1461,6 @@
 .method public static a(Landroid/os/Parcel;I[B)V
     .locals 1
 
-    .prologue
-    .line 36
     if-nez p2, :cond_0
 
     :goto_0
@@ -1543,8 +1481,6 @@
 .method public static a(Landroid/os/Parcel;I[I)V
     .locals 1
 
-    .prologue
-    .line 37
     if-nez p2, :cond_0
 
     :goto_0
@@ -1565,10 +1501,8 @@
 .method public static a(Landroid/os/Parcel;I[Landroid/os/Parcelable;I)V
     .locals 5
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 39
     if-nez p2, :cond_0
 
     :goto_0
@@ -1613,8 +1547,6 @@
 .method public static a(Landroid/os/Parcel;I[Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 38
     if-nez p2, :cond_0
 
     :goto_0
@@ -1635,8 +1567,6 @@
 .method private static a(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
     .locals 3
 
-    .prologue
-    .line 41
     invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v0
@@ -1669,7 +1599,6 @@
 .method private static a(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/StringBuffer;Ljava/lang/StringBuffer;)V
     .locals 12
 
-    .prologue
     const/16 v5, 0x5c
 
     const/16 v8, 0x20
@@ -1680,7 +1609,6 @@
 
     const/4 v1, 0x0
 
-    .line 71
     if-eqz p1, :cond_9
 
     instance-of v0, p1, Lhsy;
@@ -1993,12 +1921,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 76
     :cond_9
     :goto_7
     return-void
 
-    .line 71
     :cond_a
     invoke-static {p0}, Lhqx;->b(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2022,7 +1948,6 @@
 
     check-cast p1, Ljava/lang/String;
 
-    .line 72
     const-string v0, "http"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -2055,7 +1980,6 @@
 
     move-result-object p1
 
-    .line 73
     :cond_b
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -2117,7 +2041,6 @@
 
     move-result-object v0
 
-    .line 74
     const-string v1, "\""
 
     invoke-virtual {p3, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -2132,7 +2055,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 76
     :goto_a
     const-string v0, "\n"
 
@@ -2140,7 +2062,6 @@
 
     goto/16 :goto_7
 
-    .line 74
     :cond_e
     instance-of v0, p1, [B
 
@@ -2148,7 +2069,6 @@
 
     check-cast p1, [B
 
-    .line 75
     if-nez p1, :cond_f
 
     const-string v0, "\"\""
@@ -2226,7 +2146,6 @@
 
     goto :goto_a
 
-    .line 76
     :cond_14
     invoke-virtual {p3, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
 
@@ -2236,8 +2155,6 @@
 .method public static a(Z)V
     .locals 1
 
-    .prologue
-    .line 50
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -2253,8 +2170,6 @@
 .method public static a(ZLjava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 51
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -2277,13 +2192,10 @@
         value = 0x18
     .end annotation
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 58
-    .line 59
     sget-object v0, Lhqx;->c:Ljava/lang/Boolean;
 
     if-nez v0, :cond_0
@@ -2316,10 +2228,8 @@
 
     move-result v0
 
-    .line 60
     if-eqz v0, :cond_4
 
-    .line 61
     sget-object v0, Lhqx;->b:Ljava/lang/Boolean;
 
     if-nez v0, :cond_1
@@ -2352,7 +2262,6 @@
 
     move-result v0
 
-    .line 62
     if-eqz v0, :cond_4
 
     :goto_2
@@ -2361,34 +2270,28 @@
     :cond_2
     move v0, v2
 
-    .line 59
     goto :goto_0
 
     :cond_3
     move v0, v2
 
-    .line 61
     goto :goto_1
 
     :cond_4
     move v1, v2
 
-    .line 62
     goto :goto_2
 .end method
 
 .method public static a(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 55
     const-string v1, "com.google.android.gms"
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 56
     :try_start_0
     sget-object v1, Lhrk;->a:Lhrk;
 
@@ -2396,7 +2299,6 @@
 
     move-result-object v1
 
-    .line 57
     const/4 v2, 0x0
 
     invoke-virtual {v1, p1, v2}, Lhrj;->a(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
@@ -2428,8 +2330,6 @@
 .method public static a(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 42
     if-eq p0, p1, :cond_0
 
     if-eqz p0, :cond_1
@@ -2455,8 +2355,6 @@
 .method public static b(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 46
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/NullPointerException;
@@ -2474,8 +2372,6 @@
 .method public static b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 49
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/NullPointerException;
@@ -2495,8 +2391,6 @@
 .method private static b(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 77
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -2564,8 +2458,6 @@
 .method public static b(Landroid/os/Parcel;I)V
     .locals 2
 
-    .prologue
-    .line 5
     invoke-static {p0, p1}, Lhqx;->a(Landroid/os/Parcel;I)I
 
     move-result v0
@@ -2584,8 +2476,6 @@
 .method public static b(Landroid/os/Parcel;II)V
     .locals 1
 
-    .prologue
-    .line 25
     const v0, 0xffff
 
     if-lt p2, v0, :cond_0
@@ -2614,8 +2504,6 @@
 .method public static b(Z)V
     .locals 1
 
-    .prologue
-    .line 53
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -2631,8 +2519,6 @@
 .method public static b(ZLjava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 52
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -2652,8 +2538,6 @@
 .method public static b(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)[Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 23
     invoke-static {p0, p1}, Lhqx;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -2684,8 +2568,6 @@
 .method public static c(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
     .locals 3
 
-    .prologue
-    .line 24
     invoke-static {p0, p1}, Lhqx;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -2716,8 +2598,6 @@
 .method public static c(Landroid/os/Parcel;II)V
     .locals 1
 
-    .prologue
-    .line 30
     const/4 v0, 0x4
 
     invoke-static {p0, p1, v0}, Lhqx;->b(Landroid/os/Parcel;II)V
@@ -2730,8 +2610,6 @@
 .method public static c(Landroid/os/Parcel;I)Z
     .locals 1
 
-    .prologue
-    .line 12
     const/4 v0, 0x4
 
     invoke-static {p0, p1, v0}, Lhqx;->a(Landroid/os/Parcel;II)V
@@ -2756,8 +2634,6 @@
 .method public static d(Landroid/os/Parcel;I)B
     .locals 1
 
-    .prologue
-    .line 13
     const/4 v0, 0x4
 
     invoke-static {p0, p1, v0}, Lhqx;->a(Landroid/os/Parcel;II)V
@@ -2774,8 +2650,6 @@
 .method public static e(Landroid/os/Parcel;I)I
     .locals 1
 
-    .prologue
-    .line 14
     const/4 v0, 0x4
 
     invoke-static {p0, p1, v0}, Lhqx;->a(Landroid/os/Parcel;II)V
@@ -2790,8 +2664,6 @@
 .method public static f(Landroid/os/Parcel;I)J
     .locals 2
 
-    .prologue
-    .line 15
     const/16 v0, 0x8
 
     invoke-static {p0, p1, v0}, Lhqx;->a(Landroid/os/Parcel;II)V
@@ -2806,8 +2678,6 @@
 .method public static g(Landroid/os/Parcel;I)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 16
     invoke-static {p0, p1}, Lhqx;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -2838,8 +2708,6 @@
 .method public static h(Landroid/os/Parcel;I)Landroid/os/IBinder;
     .locals 3
 
-    .prologue
-    .line 17
     invoke-static {p0, p1}, Lhqx;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -2870,8 +2738,6 @@
 .method public static i(Landroid/os/Parcel;I)Landroid/os/Bundle;
     .locals 3
 
-    .prologue
-    .line 19
     invoke-static {p0, p1}, Lhqx;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -2902,8 +2768,6 @@
 .method public static j(Landroid/os/Parcel;I)[B
     .locals 3
 
-    .prologue
-    .line 20
     invoke-static {p0, p1}, Lhqx;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -2934,8 +2798,6 @@
 .method public static k(Landroid/os/Parcel;I)[I
     .locals 3
 
-    .prologue
-    .line 21
     invoke-static {p0, p1}, Lhqx;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -2966,8 +2828,6 @@
 .method public static l(Landroid/os/Parcel;I)[Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 22
     invoke-static {p0, p1}, Lhqx;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -2998,8 +2858,6 @@
 .method public static m(Landroid/os/Parcel;I)I
     .locals 1
 
-    .prologue
-    .line 26
     const/high16 v0, -0x10000
 
     or-int/2addr v0, p1
@@ -3020,8 +2878,6 @@
 .method public static n(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 27
     invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v0

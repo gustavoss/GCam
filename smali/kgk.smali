@@ -11,8 +11,6 @@
 .method public constructor <init>(II)V
     .locals 2
 
-    .prologue
-    .line 1
     const/16 v0, 0x6c
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -51,6 +49,5 @@
 
     invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    .line 2
     return-void
 .end method

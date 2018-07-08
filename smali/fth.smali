@@ -33,15 +33,12 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lfth;->a:Libm;
 
     iget-object v1, p0, Lfth;->b:Lftc;
 
     iget-object v2, p0, Lfth;->c:Liid;
 
-    .line 3
     invoke-interface {v1}, Lftc;->a()Lida;
 
     move-result-object v1
@@ -50,14 +47,11 @@
 
     invoke-direct {v3, v2}, Lfti;-><init>(Liid;)V
 
-    .line 4
     invoke-static {v1, v3}, Lidb;->a(Lida;Lihw;)Lihr;
 
     move-result-object v1
 
-    .line 5
     invoke-virtual {v0, v1}, Libm;->a(Lihr;)Lihr;
 
-    .line 6
     return-void
 .end method

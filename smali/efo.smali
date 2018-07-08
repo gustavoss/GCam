@@ -7,8 +7,6 @@
 .method constructor <init>(Lefn;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Lehc;-><init>(Lehb;)V
 
     return-void

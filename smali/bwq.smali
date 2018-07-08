@@ -38,11 +38,8 @@
 .method public constructor <init>(Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lbwq;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -53,7 +50,6 @@
 
     iput-object v0, p0, Lbwq;->a:Lkhp;
 
-    .line 3
     const/4 v0, 0x2
 
     invoke-static {p2, v0}, Lbwq;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -64,10 +60,8 @@
 
     iput-object v0, p0, Lbwq;->b:Lkhp;
 
-    .line 4
     const/4 v0, 0x3
 
-    .line 5
     invoke-static {p3, v0}, Lbwq;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -76,7 +70,6 @@
 
     iput-object v0, p0, Lbwq;->c:Lkhp;
 
-    .line 6
     const/4 v0, 0x4
 
     invoke-static {p4, v0}, Lbwq;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -87,10 +80,8 @@
 
     iput-object v0, p0, Lbwq;->d:Lkhp;
 
-    .line 7
     const/4 v0, 0x5
 
-    .line 8
     invoke-static {p5, v0}, Lbwq;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -99,7 +90,6 @@
 
     iput-object v0, p0, Lbwq;->e:Lkhp;
 
-    .line 9
     const/4 v0, 0x6
 
     invoke-static {p6, v0}, Lbwq;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -110,7 +100,6 @@
 
     iput-object v0, p0, Lbwq;->f:Lkhp;
 
-    .line 10
     const/4 v0, 0x7
 
     invoke-static {p7, v0}, Lbwq;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -121,7 +110,6 @@
 
     iput-object v0, p0, Lbwq;->g:Lkhp;
 
-    .line 11
     const/16 v0, 0x8
 
     invoke-static {p8, v0}, Lbwq;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -132,7 +120,6 @@
 
     iput-object v0, p0, Lbwq;->h:Lkhp;
 
-    .line 12
     const/16 v0, 0x9
 
     invoke-static {p9, v0}, Lbwq;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -143,7 +130,6 @@
 
     iput-object v0, p0, Lbwq;->i:Lkhp;
 
-    .line 13
     const/16 v0, 0xa
 
     invoke-static {p10, v0}, Lbwq;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -154,7 +140,6 @@
 
     iput-object v0, p0, Lbwq;->j:Lkhp;
 
-    .line 14
     const/16 v0, 0xb
 
     invoke-static {p11, v0}, Lbwq;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -165,7 +150,6 @@
 
     iput-object v0, p0, Lbwq;->k:Lkhp;
 
-    .line 15
     const/16 v0, 0xc
 
     invoke-static {p12, v0}, Lbwq;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -176,10 +160,8 @@
 
     iput-object v0, p0, Lbwq;->l:Lkhp;
 
-    .line 16
     const/16 v0, 0xd
 
-    .line 17
     invoke-static {p13, v0}, Lbwq;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -188,18 +170,14 @@
 
     iput-object v0, p0, Lbwq;->m:Lkhp;
 
-    .line 18
     return-void
 .end method
 
 .method private static a(Ljava/lang/Object;I)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 19
     if-nez p0, :cond_0
 
-    .line 20
     new-instance v0, Ljava/lang/NullPointerException;
 
     const/16 v1, 0x5d
@@ -226,7 +204,6 @@
 
     throw v0
 
-    .line 21
     :cond_0
     return-object p0
 .end method
@@ -236,16 +213,12 @@
 .method public final synthetic a(Lasr;Lfea;Lida;Ljrw;Lida;)Lasx;
     .locals 18
 
-    .prologue
-    .line 22
-    .line 23
     new-instance v2, Lbwo;
 
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lbwq;->a:Lkhp;
 
-    .line 24
     invoke-interface {v3}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -264,7 +237,6 @@
 
     iget-object v4, v0, Lbwq;->b:Lkhp;
 
-    .line 25
     invoke-interface {v4}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v4
@@ -283,7 +255,6 @@
 
     iget-object v5, v0, Lbwq;->c:Lkhp;
 
-    .line 26
     invoke-interface {v5}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v5
@@ -302,7 +273,6 @@
 
     iget-object v6, v0, Lbwq;->d:Lkhp;
 
-    .line 27
     invoke-interface {v6}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -321,7 +291,6 @@
 
     iget-object v7, v0, Lbwq;->e:Lkhp;
 
-    .line 28
     invoke-interface {v7}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v7
@@ -340,7 +309,6 @@
 
     iget-object v8, v0, Lbwq;->f:Lkhp;
 
-    .line 29
     invoke-interface {v8}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v8
@@ -359,7 +327,6 @@
 
     iget-object v9, v0, Lbwq;->g:Lkhp;
 
-    .line 30
     invoke-interface {v9}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v9
@@ -378,7 +345,6 @@
 
     iget-object v10, v0, Lbwq;->h:Lkhp;
 
-    .line 31
     invoke-interface {v10}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v10
@@ -397,7 +363,6 @@
 
     iget-object v11, v0, Lbwq;->i:Lkhp;
 
-    .line 32
     invoke-interface {v11}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v11
@@ -416,7 +381,6 @@
 
     iget-object v12, v0, Lbwq;->j:Lkhp;
 
-    .line 33
     invoke-interface {v12}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v12
@@ -431,7 +395,6 @@
 
     iget-object v12, v0, Lbwq;->k:Lkhp;
 
-    .line 34
     invoke-interface {v12}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v12
@@ -450,7 +413,6 @@
 
     iget-object v13, v0, Lbwq;->l:Lkhp;
 
-    .line 35
     invoke-interface {v13}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v13
@@ -471,7 +433,6 @@
 
     iget-object v13, v0, Lbwq;->m:Lkhp;
 
-    .line 36
     invoke-interface {v13}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v13
@@ -488,7 +449,6 @@
 
     const/16 v14, 0xe
 
-    .line 37
     move-object/from16 v0, p1
 
     invoke-static {v0, v14}, Lbwq;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -499,7 +459,6 @@
 
     const/16 v15, 0xf
 
-    .line 38
     move-object/from16 v0, p2
 
     invoke-static {v0, v15}, Lbwq;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -510,7 +469,6 @@
 
     const/16 v16, 0x10
 
-    .line 39
     move-object/from16 v0, p3
 
     move/from16 v1, v16
@@ -523,7 +481,6 @@
 
     const/16 v17, 0x11
 
-    .line 40
     move-object/from16 v0, p4
 
     move/from16 v1, v17
@@ -532,7 +489,6 @@
 
     const/16 v17, 0x12
 
-    .line 41
     move-object/from16 v0, p5
 
     move/from16 v1, v17
@@ -545,6 +501,5 @@
 
     invoke-direct/range {v2 .. v17}, Lbwo;-><init>(Lasp;Lass;Latc;Latf;Latr;Lhfv;Libo;Lbky;Ljrw;Ljrw;Lbxa;Lasr;Lfea;Lida;Lida;)V
 
-    .line 42
     return-object v2
 .end method

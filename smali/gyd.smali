@@ -15,19 +15,13 @@
 .method public constructor <init>(Landroid/app/ActionBar;Landroid/view/LayoutInflater;Lgyb;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgyd;->a:Landroid/app/ActionBar;
 
-    .line 3
     iput-object p2, p0, Lgyd;->c:Landroid/view/LayoutInflater;
 
-    .line 4
     iput-object p3, p0, Lgyd;->b:Lgyb;
 
-    .line 5
     return-void
 .end method

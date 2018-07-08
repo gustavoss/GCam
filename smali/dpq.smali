@@ -18,28 +18,20 @@
 .method private constructor <init>(Lkhp;Lkhp;Lkhp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldpq;->a:Lkhp;
 
-    .line 3
     iput-object p2, p0, Ldpq;->b:Lkhp;
 
-    .line 4
     iput-object p3, p0, Ldpq;->c:Lkhp;
 
-    .line 5
     return-void
 .end method
 
 .method public static a(Lkhp;Lkhp;Lkhp;)Ldpq;
     .locals 1
 
-    .prologue
-    .line 6
     new-instance v0, Ldpq;
 
     invoke-direct {v0, p0, p1, p2}, Ldpq;-><init>(Lkhp;Lkhp;Lkhp;)V
@@ -52,14 +44,10 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 19
 
-    .prologue
-    .line 7
-    .line 8
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldpq;->a:Lkhp;
 
-    .line 9
     invoke-interface {v2}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -92,27 +80,22 @@
 
     check-cast v13, Ldrc;
 
-    .line 12
     invoke-static {}, Lezo;->a()Lfhr;
 
     move-result-object v2
 
-    .line 13
     iget-object v3, v13, Ldrc;->e:Lkey;
 
     new-instance v4, Ldrd;
 
     invoke-direct {v4, v2}, Ldrd;-><init>(Lfhr;)V
 
-    .line 14
     sget-object v2, Lkfe;->a:Lkfe;
 
-    .line 16
     invoke-static {v3, v4, v2}, Lkdm;->a(Lkey;Ljrm;Ljava/util/concurrent/Executor;)Lkey;
 
     move-result-object v9
 
-    .line 18
     new-instance v17, Ldri;
 
     new-instance v2, Ldqe;
@@ -149,15 +132,12 @@
 
     invoke-direct {v0, v2, v3, v4}, Ldri;-><init>(Lftc;IZ)V
 
-    .line 20
     sget-object v2, Lfck;->a:Lfck;
 
-    .line 21
     new-instance v3, Lfcj;
 
     invoke-direct {v3, v2, v2, v2}, Lfcj;-><init>(Lfck;Lfck;Lfck;)V
 
-    .line 23
     iget-object v2, v15, Ldrf;->g:Lfea;
 
     invoke-interface {v2}, Lfea;->p()Z
@@ -166,23 +146,19 @@
 
     if-eqz v2, :cond_0
 
-    .line 24
     sget-object v2, Lfck;->b:Lfck;
 
     invoke-virtual {v3, v2}, Lfcj;->b(Lfck;)Lfcj;
 
-    .line 25
     :cond_0
     new-instance v8, Ldsg;
 
     invoke-direct {v8, v3}, Ldsg;-><init>(Lfcj;)V
 
-    .line 26
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
     move-result-object v14
 
-    .line 27
     new-instance v18, Ldri;
 
     new-instance v2, Ldsl;
@@ -201,7 +177,6 @@
 
     const-wide/32 v10, 0x5f5e100
 
-    .line 28
     invoke-virtual {v9, v10, v11}, Ldqg;->a(J)Lfin;
 
     move-result-object v9
@@ -212,7 +187,6 @@
 
     invoke-direct {v7, v9, v10}, Lfiq;-><init>(Lfin;Lfip;)V
 
-    .line 29
     invoke-virtual {v5, v6, v7}, Lfer;->a(ILfiq;)Lfep;
 
     move-result-object v5
@@ -241,7 +215,6 @@
 
     invoke-direct {v0, v2, v3, v4}, Ldri;-><init>(Lftc;IZ)V
 
-    .line 30
     move-object/from16 v0, v16
 
     move-object/from16 v1, v18
@@ -250,16 +223,13 @@
 
     move-result-object v2
 
-    .line 31
     const-string v3, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 32
     invoke-static {v2, v3}, Lkgh;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lftc;
 
-    .line 33
     return-object v2
 .end method

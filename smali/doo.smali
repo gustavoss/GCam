@@ -14,8 +14,6 @@
 .method constructor <init>(Ldon;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldoo;->a:Ldon;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,30 +26,21 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ldoo;->a:Ldon;
 
-    .line 3
     iget-object v0, v0, Ldon;->c:Lgbd;
 
-    .line 4
     iget-object v1, p0, Ldoo;->a:Ldon;
 
-    .line 5
     iget-object v1, v1, Ldon;->g:Lgbe;
 
-    .line 6
     iget-object v1, v1, Lgbe;->b:Liob;
 
     iget-object v2, p0, Ldoo;->a:Ldon;
 
-    .line 7
     iget-object v2, v2, Ldon;->d:Ljava/util/concurrent/Executor;
 
-    .line 8
     invoke-interface {v0, v1, v2}, Lgbd;->a(Liob;Ljava/util/concurrent/Executor;)V
 
-    .line 9
     return-void
 .end method

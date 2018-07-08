@@ -17,15 +17,12 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 20
     new-instance v0, Ldq;
 
     invoke-direct {v0}, Ldq;-><init>()V
 
     sput-object v0, Ldk;->a:Ldr;
 
-    .line 21
     new-instance v0, Ldl;
 
     const-class v1, Ljava/lang/Float;
@@ -36,7 +33,6 @@
 
     sput-object v0, Ldk;->b:Landroid/util/Property;
 
-    .line 22
     new-instance v0, Ldm;
 
     const-class v1, Landroid/graphics/Rect;
@@ -51,36 +47,28 @@
 .method static a()V
     .locals 0
 
-    .prologue
-    .line 3
     return-void
 .end method
 
 .method static a(Landroid/view/View;F)V
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Ldk;->a:Ldr;
 
     invoke-virtual {v0, p0, p1}, Ldr;->a(Landroid/view/View;F)V
 
-    .line 2
     return-void
 .end method
 
 .method static a(Landroid/view/View;I)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 5
     sget-boolean v0, Ldk;->d:Z
 
     if-nez v0, :cond_0
 
-    .line 6
     :try_start_0
     const-class v0, Landroid/view/View;
 
@@ -90,7 +78,6 @@
 
     move-result-object v0
 
-    .line 7
     sput-object v0, Ldk;->c:Ljava/lang/reflect/Field;
 
     const/4 v1, 0x1
@@ -99,17 +86,14 @@
     :try_end_0
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 11
     :goto_0
     sput-boolean v2, Ldk;->d:Z
 
-    .line 12
     :cond_0
     sget-object v0, Ldk;->c:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_1
 
-    .line 13
     :try_start_1
     sget-object v0, Ldk;->c:Ljava/lang/reflect/Field;
 
@@ -117,7 +101,6 @@
 
     move-result v0
 
-    .line 14
     sget-object v1, Ldk;->c:Ljava/lang/reflect/Field;
 
     and-int/lit8 v0, v0, -0xd
@@ -128,12 +111,10 @@
     :try_end_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 17
     :cond_1
     :goto_1
     return-void
 
-    .line 10
     :catch_0
     move-exception v0
 
@@ -154,8 +135,6 @@
 .method static a(Landroid/view/View;IIII)V
     .locals 6
 
-    .prologue
-    .line 18
     sget-object v0, Ldk;->a:Ldr;
 
     move-object v1, p0
@@ -170,14 +149,11 @@
 
     invoke-virtual/range {v0 .. v5}, Ldr;->a(Landroid/view/View;IIII)V
 
-    .line 19
     return-void
 .end method
 
 .method static b()V
     .locals 0
 
-    .prologue
-    .line 4
     return-void
 .end method

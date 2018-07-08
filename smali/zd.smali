@@ -18,8 +18,6 @@
 .method constructor <init>(Lzb;[Landroid/hardware/Camera$Parameters;Labd;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lzd;->c:Lzb;
 
     iput-object p2, p0, Lzd;->a:[Landroid/hardware/Camera$Parameters;
@@ -36,16 +34,12 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lzd;->c:Lzb;
 
     iget-object v0, v0, Lzb;->a:Lyv;
 
-    .line 3
     iget-object v0, v0, Lyv;->d:Lzm;
 
-    .line 4
     const/16 v1, 0xca
 
     iget-object v2, p0, Lzd;->a:[Landroid/hardware/Camera$Parameters;
@@ -56,21 +50,17 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 5
     iget-object v0, p0, Lzd;->c:Lzb;
 
     iget-object v0, v0, Lzb;->a:Lyv;
 
-    .line 6
     iget-object v0, v0, Lyv;->d:Lzm;
 
-    .line 7
     iget-object v1, p0, Lzd;->b:Labd;
 
     iget-object v1, v1, Labd;->a:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Lzm;->post(Ljava/lang/Runnable;)Z
 
-    .line 8
     return-void
 .end method

@@ -23,28 +23,19 @@
 .method public constructor <init>(Lgbd;Ljava/util/concurrent/Executor;Lihi;Lgbl;Leoe;Liii;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgcg;->a:Lgbd;
 
-    .line 3
     iput-object p2, p0, Lgcg;->b:Ljava/util/concurrent/Executor;
 
-    .line 4
     iput-object p3, p0, Lgcg;->d:Lihi;
 
-    .line 5
     iput-object p4, p0, Lgcg;->e:Lgbl;
 
-    .line 6
     iput-object p5, p0, Lgcg;->f:Leoe;
 
-    .line 7
     iput-object p6, p0, Lgcg;->g:Liii;
 
-    .line 8
     return-void
 .end method

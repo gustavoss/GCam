@@ -14,14 +14,10 @@
 .method constructor <init>(Lioe;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lfln;->a:Lioe;
 
-    .line 3
     return-void
 .end method
 
@@ -30,22 +26,16 @@
 .method public final a(Libm;Licg;Lihs;II)Lflf;
     .locals 3
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lfln;->a:Lioe;
 
-    .line 5
     iget v1, p3, Lihs;->a:I
 
-    .line 7
     iget v2, p3, Lihs;->b:I
 
-    .line 9
     invoke-interface {v0, v1, v2, p4, p5}, Lioe;->a(IIII)Liod;
 
     move-result-object v0
 
-    .line 10
     const-string v1, "NSISF/ImageReader"
 
     invoke-static {v0, v1}, Lich;->a(Lihr;Ljava/lang/String;)Lihr;
@@ -54,18 +44,14 @@
 
     invoke-virtual {p1, v1}, Libm;->a(Lihr;)Lihr;
 
-    .line 11
     new-instance v1, Lfld;
 
-    .line 12
     invoke-direct {v1}, Lfld;-><init>()V
 
-    .line 13
     new-instance v2, Lfkx;
 
     invoke-direct {v2, v0}, Lfkx;-><init>(Liod;)V
 
-    .line 14
     invoke-virtual {v1, v2}, Lfld;->a(Lfkx;)Lfld;
 
     move-result-object v0
@@ -78,26 +64,21 @@
 
     invoke-direct {v1, p1, p2, v2}, Lflg;-><init>(Libm;Licg;Lfuu;)V
 
-    .line 15
     invoke-virtual {v0, v1}, Lfld;->a(Lflg;)Lfld;
 
     move-result-object v0
 
-    .line 16
     new-instance v1, Lfki;
 
     invoke-direct {v1}, Lfki;-><init>()V
 
-    .line 17
     invoke-virtual {v0, v1}, Lfld;->a(Lfki;)Lfld;
 
     move-result-object v0
 
-    .line 18
     invoke-virtual {v0}, Lfld;->a()Lflf;
 
     move-result-object v0
 
-    .line 19
     return-object v0
 .end method

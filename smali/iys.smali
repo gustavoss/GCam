@@ -14,36 +14,28 @@
 .method private constructor <init>([I)V
     .locals 7
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     array-length v0, p1
 
     if-nez v0, :cond_1
 
-    .line 3
     new-array v0, v1, [I
 
     iput-object v0, p0, Liys;->a:[I
 
-    .line 22
     :cond_0
     return-void
 
-    .line 4
     :cond_1
     invoke-static {p1}, Ljava/util/Arrays;->sort([I)V
 
-    .line 7
     aget v0, p1, v1
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 8
     array-length v5, p1
 
     move v2, v1
@@ -55,7 +47,6 @@
 
     aget v3, p1, v2
 
-    .line 9
     if-ne v0, v3, :cond_2
 
     move v0, v1
@@ -63,7 +54,6 @@
     :goto_1
     add-int/2addr v4, v0
 
-    .line 11
     add-int/lit8 v0, v2, 0x1
 
     move v2, v0
@@ -72,27 +62,22 @@
 
     goto :goto_0
 
-    .line 9
     :cond_2
     const/4 v0, 0x1
 
     goto :goto_1
 
-    .line 13
     :cond_3
     new-array v0, v4, [I
 
     iput-object v0, p0, Liys;->a:[I
 
-    .line 14
     iget-object v4, p0, Liys;->a:[I
 
-    .line 15
     aget v0, p1, v1
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 17
     array-length v5, p1
 
     move v3, v1
@@ -102,17 +87,14 @@
 
     aget v2, p1, v3
 
-    .line 18
     if-eq v0, v2, :cond_4
 
-    .line 19
     add-int/lit8 v0, v1, 0x1
 
     aput v2, v4, v1
 
     move v1, v2
 
-    .line 21
     :goto_3
     add-int/lit8 v2, v3, 0x1
 
@@ -139,8 +121,6 @@
 .method public static varargs a([I)Liys;
     .locals 2
 
-    .prologue
-    .line 23
     new-instance v0, Liys;
 
     array-length v1, p0
@@ -159,8 +139,6 @@
 .method public final a(I)Z
     .locals 1
 
-    .prologue
-    .line 24
     iget-object v0, p0, Liys;->a:[I
 
     invoke-static {v0, p1}, Ljava/util/Arrays;->binarySearch([II)I
@@ -183,33 +161,25 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 27
     if-ne p0, p1, :cond_0
 
-    .line 28
     const/4 v0, 0x1
 
-    .line 32
     :goto_0
     return v0
 
-    .line 29
     :cond_0
     instance-of v0, p1, Liys;
 
     if-nez v0, :cond_1
 
-    .line 30
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 31
     :cond_1
     check-cast p1, Liys;
 
-    .line 32
     iget-object v0, p0, Liys;->a:[I
 
     iget-object v1, p1, Liys;->a:[I
@@ -224,8 +194,6 @@
 .method public final hashCode()I
     .locals 1
 
-    .prologue
-    .line 33
     iget-object v0, p0, Liys;->a:[I
 
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
@@ -238,8 +206,6 @@
 .method public final iterator()Ljava/util/Iterator;
     .locals 1
 
-    .prologue
-    .line 25
     new-instance v0, Liyt;
 
     invoke-direct {v0, p0}, Liyt;-><init>(Liys;)V
@@ -250,8 +216,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 26
     iget-object v0, p0, Liys;->a:[I
 
     array-length v0, v0

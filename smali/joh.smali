@@ -19,8 +19,6 @@
 .method public constructor <init>(Ljava/lang/String;JII)V
     .locals 8
 
-    .prologue
-    .line 9
     const-wide/16 v6, 0x0
 
     move-object v0, p0
@@ -35,35 +33,25 @@
 
     invoke-direct/range {v0 .. v7}, Ljoh;-><init>(Ljava/lang/String;JIIJ)V
 
-    .line 10
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;JIIJ)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Ljoh;->b:Ljava/lang/String;
 
-    .line 4
     iput-wide p2, p0, Ljoh;->c:J
 
-    .line 5
     iput p5, p0, Ljoh;->d:I
 
-    .line 6
     iput p4, p0, Ljoh;->e:I
 
-    .line 7
     iput-wide p6, p0, Ljoh;->f:J
 
-    .line 8
     return-void
 .end method

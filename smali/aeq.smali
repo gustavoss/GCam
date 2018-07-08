@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,10 +15,8 @@
 .method public static a(II)Z
     .locals 1
 
-    .prologue
     const/high16 v0, -0x80000000
 
-    .line 6
     if-eq p0, v0, :cond_0
 
     if-eq p1, v0, :cond_0
@@ -47,8 +43,6 @@
 .method public static a(Landroid/net/Uri;)Z
     .locals 2
 
-    .prologue
-    .line 2
     if-eqz p0, :cond_0
 
     const-string v0, "content"
@@ -65,7 +59,6 @@
 
     const-string v0, "media"
 
-    .line 3
     invoke-virtual {p0}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v1
@@ -78,23 +71,18 @@
 
     const/4 v0, 0x1
 
-    .line 4
     :goto_0
     return v0
 
-    .line 3
     :cond_0
     const/4 v0, 0x0
 
-    .line 4
     goto :goto_0
 .end method
 
 .method public static b(Landroid/net/Uri;)Z
     .locals 2
 
-    .prologue
-    .line 5
     invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0

@@ -11,18 +11,14 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/google/googlex/gcam/DirtyLensHistory;
 
     invoke-direct {v0}, Lcom/google/googlex/gcam/DirtyLensHistory;-><init>()V
 
     iput-object v0, p0, Lazx;->a:Lcom/google/googlex/gcam/DirtyLensHistory;
 
-    .line 3
     return-void
 .end method
 
@@ -31,8 +27,6 @@
 .method public final a()Lazy;
     .locals 2
 
-    .prologue
-    .line 4
     new-instance v0, Lazz;
 
     iget-object v1, p0, Lazx;->a:Lcom/google/googlex/gcam/DirtyLensHistory;

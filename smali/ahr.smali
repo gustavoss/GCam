@@ -30,12 +30,10 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 78
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/graphics/Bitmap$Config;
@@ -48,7 +46,6 @@
 
     aput-object v1, v0, v4
 
-    .line 79
     const/4 v1, 0x3
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
@@ -57,7 +54,6 @@
 
     check-cast v0, [Landroid/graphics/Bitmap$Config;
 
-    .line 80
     array-length v1, v0
 
     add-int/lit8 v1, v1, -0x1
@@ -66,12 +62,10 @@
 
     aput-object v2, v0, v1
 
-    .line 82
     sput-object v0, Lahr;->a:[Landroid/graphics/Bitmap$Config;
 
     sput-object v0, Lahr;->b:[Landroid/graphics/Bitmap$Config;
 
-    .line 83
     new-array v0, v4, [Landroid/graphics/Bitmap$Config;
 
     sget-object v1, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
@@ -80,7 +74,6 @@
 
     sput-object v0, Lahr;->c:[Landroid/graphics/Bitmap$Config;
 
-    .line 84
     new-array v0, v4, [Landroid/graphics/Bitmap$Config;
 
     sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_4444:Landroid/graphics/Bitmap$Config;
@@ -89,7 +82,6 @@
 
     sput-object v0, Lahr;->d:[Landroid/graphics/Bitmap$Config;
 
-    .line 85
     new-array v0, v4, [Landroid/graphics/Bitmap$Config;
 
     sget-object v1, Landroid/graphics/Bitmap$Config;->ALPHA_8:Landroid/graphics/Bitmap$Config;
@@ -104,25 +96,20 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lahu;
 
     invoke-direct {v0}, Lahu;-><init>()V
 
     iput-object v0, p0, Lahr;->f:Lahu;
 
-    .line 3
     new-instance v0, Lahi;
 
     invoke-direct {v0}, Lahi;-><init>()V
 
     iput-object v0, p0, Lahr;->g:Lahi;
 
-    .line 4
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -135,8 +122,6 @@
 .method static a(ILandroid/graphics/Bitmap$Config;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 77
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -191,8 +176,6 @@
 .method private final a(Landroid/graphics/Bitmap$Config;)Ljava/util/NavigableMap;
     .locals 2
 
-    .prologue
-    .line 57
     iget-object v0, p0, Lahr;->h:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -201,20 +184,16 @@
 
     check-cast v0, Ljava/util/NavigableMap;
 
-    .line 58
     if-nez v0, :cond_0
 
-    .line 59
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
-    .line 60
     iget-object v1, p0, Lahr;->h:Ljava/util/Map;
 
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 61
     :cond_0
     return-object v0
 .end method
@@ -222,35 +201,28 @@
 .method private final a(Ljava/lang/Integer;Landroid/graphics/Bitmap;)V
     .locals 6
 
-    .prologue
-    .line 47
     invoke-virtual {p2}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v0
 
-    .line 48
     invoke-direct {p0, v0}, Lahr;->a(Landroid/graphics/Bitmap$Config;)Ljava/util/NavigableMap;
 
     move-result-object v1
 
-    .line 49
     invoke-interface {v1, p1}, Ljava/util/NavigableMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 50
     if-nez v0, :cond_0
 
-    .line 51
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 52
     invoke-virtual {p0, p2}, Lahr;->b(Landroid/graphics/Bitmap;)Ljava/lang/String;
 
     move-result-object v2
@@ -331,7 +303,6 @@
 
     throw v0
 
-    .line 53
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -341,14 +312,11 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 54
     invoke-interface {v1, p1}, Ljava/util/NavigableMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 56
     :goto_0
     return-void
 
-    .line 55
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -370,8 +338,6 @@
 .method public final a()Landroid/graphics/Bitmap;
     .locals 2
 
-    .prologue
-    .line 42
     iget-object v0, p0, Lahr;->g:Lahi;
 
     invoke-virtual {v0}, Lahi;->a()Ljava/lang/Object;
@@ -380,22 +346,18 @@
 
     check-cast v0, Landroid/graphics/Bitmap;
 
-    .line 43
     if-eqz v0, :cond_0
 
-    .line 44
     invoke-static {v0}, Lary;->a(Landroid/graphics/Bitmap;)I
 
     move-result v1
 
-    .line 45
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     invoke-direct {p0, v1, v0}, Lahr;->a(Ljava/lang/Integer;Landroid/graphics/Bitmap;)V
 
-    .line 46
     :cond_0
     return-object v0
 .end method
@@ -403,22 +365,18 @@
 .method public final a(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
     .locals 9
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 12
     invoke-static {p1, p2, p3}, Lary;->a(IILandroid/graphics/Bitmap$Config;)I
 
     move-result v4
 
-    .line 14
     iget-object v0, p0, Lahr;->f:Lahu;
 
     invoke-virtual {v0, v4, p3}, Lahu;->a(ILandroid/graphics/Bitmap$Config;)Laht;
 
     move-result-object v2
 
-    .line 16
     sget-object v0, Landroid/graphics/Bitmap$Config;->RGBA_F16:Landroid/graphics/Bitmap$Config;
 
     invoke-virtual {v0, p3}, Landroid/graphics/Bitmap$Config;->equals(Ljava/lang/Object;)Z
@@ -427,12 +385,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 17
     sget-object v0, Lahr;->b:[Landroid/graphics/Bitmap$Config;
 
     move-object v1, v0
 
-    .line 24
     :goto_0
     array-length v5, v1
 
@@ -441,12 +397,10 @@
 
     aget-object v6, v1, v3
 
-    .line 25
     invoke-direct {p0, v6}, Lahr;->a(Landroid/graphics/Bitmap$Config;)Ljava/util/NavigableMap;
 
     move-result-object v0
 
-    .line 26
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -457,7 +411,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 27
     if-eqz v0, :cond_5
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -468,7 +421,6 @@
 
     if-gt v7, v8, :cond_5
 
-    .line 28
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -479,13 +431,11 @@
 
     if-eqz p3, :cond_4
 
-    .line 30
     :cond_0
     iget-object v1, p0, Lahr;->f:Lahu;
 
     invoke-virtual {v1, v2}, Lahu;->a(Lahq;)V
 
-    .line 31
     iget-object v1, p0, Lahr;->f:Lahu;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -498,7 +448,6 @@
 
     move-object v1, v0
 
-    .line 35
     :goto_2
     iget-object v0, p0, Lahr;->g:Lahi;
 
@@ -508,10 +457,8 @@
 
     check-cast v0, Landroid/graphics/Bitmap;
 
-    .line 36
     if-eqz v0, :cond_1
 
-    .line 37
     iget v1, v1, Laht;->a:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -520,7 +467,6 @@
 
     invoke-direct {p0, v1, v0}, Lahr;->a(Ljava/lang/Integer;Landroid/graphics/Bitmap;)V
 
-    .line 39
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v1
@@ -531,15 +477,12 @@
 
     move-result-object v1
 
-    .line 40
     :goto_3
     invoke-virtual {v0, p1, p2, v1}, Landroid/graphics/Bitmap;->reconfigure(IILandroid/graphics/Bitmap$Config;)V
 
-    .line 41
     :cond_1
     return-object v0
 
-    .line 18
     :cond_2
     sget-object v0, Lahs;->a:[I
 
@@ -551,7 +494,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 23
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/graphics/Bitmap$Config;
@@ -562,7 +504,6 @@
 
     goto :goto_0
 
-    .line 19
     :pswitch_0
     sget-object v0, Lahr;->a:[Landroid/graphics/Bitmap$Config;
 
@@ -570,7 +511,6 @@
 
     goto :goto_0
 
-    .line 20
     :pswitch_1
     sget-object v0, Lahr;->c:[Landroid/graphics/Bitmap$Config;
 
@@ -578,7 +518,6 @@
 
     goto :goto_0
 
-    .line 21
     :pswitch_2
     sget-object v0, Lahr;->d:[Landroid/graphics/Bitmap$Config;
 
@@ -586,7 +525,6 @@
 
     goto :goto_0
 
-    .line 22
     :pswitch_3
     sget-object v0, Lahr;->e:[Landroid/graphics/Bitmap$Config;
 
@@ -594,7 +532,6 @@
 
     goto :goto_0
 
-    .line 29
     :cond_3
     invoke-virtual {v6, p3}, Landroid/graphics/Bitmap$Config;->equals(Ljava/lang/Object;)Z
 
@@ -607,7 +544,6 @@
 
     goto :goto_2
 
-    .line 32
     :cond_5
     add-int/lit8 v0, v3, 0x1
 
@@ -615,13 +551,11 @@
 
     goto/16 :goto_1
 
-    .line 39
     :cond_6
     sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     goto :goto_3
 
-    .line 18
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -634,13 +568,10 @@
 .method public final a(Landroid/graphics/Bitmap;)V
     .locals 3
 
-    .prologue
-    .line 5
     invoke-static {p1}, Lary;->a(Landroid/graphics/Bitmap;)I
 
     move-result v0
 
-    .line 6
     iget-object v1, p0, Lahr;->f:Lahu;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
@@ -651,12 +582,10 @@
 
     move-result-object v1
 
-    .line 7
     iget-object v0, p0, Lahr;->g:Lahi;
 
     invoke-virtual {v0, v1, p1}, Lahi;->a(Lahq;Ljava/lang/Object;)V
 
-    .line 8
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v0
@@ -665,7 +594,6 @@
 
     move-result-object v2
 
-    .line 9
     iget v0, v1, Laht;->a:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -678,7 +606,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 10
     iget v1, v1, Laht;->a:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -696,10 +623,8 @@
 
     invoke-interface {v2, v1, v0}, Ljava/util/NavigableMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 11
     return-void
 
-    .line 10
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -713,13 +638,10 @@
 .method public final b(IILandroid/graphics/Bitmap$Config;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 64
     invoke-static {p1, p2, p3}, Lary;->a(IILandroid/graphics/Bitmap$Config;)I
 
     move-result v0
 
-    .line 65
     invoke-static {v0, p3}, Lahr;->a(ILandroid/graphics/Bitmap$Config;)Ljava/lang/String;
 
     move-result-object v0
@@ -730,13 +652,10 @@
 .method public final b(Landroid/graphics/Bitmap;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 62
     invoke-static {p1}, Lary;->a(Landroid/graphics/Bitmap;)I
 
     move-result v0
 
-    .line 63
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v1
@@ -751,8 +670,6 @@
 .method public final c(Landroid/graphics/Bitmap;)I
     .locals 1
 
-    .prologue
-    .line 66
     invoke-static {p1}, Lary;->a(Landroid/graphics/Bitmap;)I
 
     move-result v0
@@ -763,30 +680,24 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 67
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "SizeConfigStrategy{groupedMap="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 68
     iget-object v1, p0, Lahr;->g:Lahi;
 
-    .line 69
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     const-string v1, ", sortedSizes=("
 
-    .line 70
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 71
     iget-object v0, p0, Lahr;->h:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -810,7 +721,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 72
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -839,7 +749,6 @@
 
     goto :goto_0
 
-    .line 74
     :cond_0
     iget-object v0, p0, Lahr;->h:Ljava/util/Map;
 
@@ -849,7 +758,6 @@
 
     if-nez v0, :cond_1
 
-    .line 75
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
@@ -864,7 +772,6 @@
 
     invoke-virtual {v1, v0, v2, v3}, Ljava/lang/StringBuilder;->replace(IILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 76
     :cond_1
     const-string v0, ")}"
 

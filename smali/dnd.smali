@@ -16,8 +16,6 @@
 .method public constructor <init>(Ljrw;Lgbe;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldnd;->a:Ljrw;
 
     iput-object p2, p0, Ldnd;->b:Lgbe;
@@ -32,8 +30,6 @@
 .method public final a()Lkey;
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ldnd;->a:Ljrw;
 
     invoke-virtual {v0}, Ljrw;->b()Ljava/lang/Object;
@@ -54,8 +50,6 @@
 .method public final b()Lkey;
     .locals 2
 
-    .prologue
-    .line 3
     new-instance v0, Lijt;
 
     const-string v1, "YUV image could not be processed by FxImageSaver."

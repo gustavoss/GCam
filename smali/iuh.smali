@@ -7,11 +7,8 @@
 .method protected constructor <init>(Lium;Lirp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Liur;-><init>(Lium;Lirp;)V
 
-    .line 2
     return-void
 .end method
 
@@ -20,8 +17,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 3
     invoke-virtual {p0}, Liuh;->c()Livu;
 
     move-result-object v0

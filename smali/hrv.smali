@@ -20,8 +20,6 @@
 .method private constructor <init>(Lhmc;B)V
     .locals 0
 
-    .prologue
-    .line 15
     invoke-direct {p0, p1}, Lhrv;-><init>(Lhmc;)V
 
     return-void
@@ -30,8 +28,6 @@
 .method public constructor <init>(Lhmc;Landroid/net/Uri;)V
     .locals 1
 
-    .prologue
-    .line 19
     iput-object p2, p0, Lhrv;->a:Landroid/net/Uri;
 
     const/4 v0, 0x0
@@ -46,46 +42,36 @@
 .method protected final synthetic a(Lcom/google/android/gms/common/api/Status;)Lhmh;
     .locals 2
 
-    .prologue
-    .line 16
-    .line 17
     new-instance v0, Lhxb;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p1, v1}, Lhxb;-><init>(Lcom/google/android/gms/common/api/Status;Landroid/content/Intent;)V
 
-    .line 18
     return-object v0
 .end method
 
 .method protected final synthetic a(Lhlz;)V
     .locals 8
 
-    .prologue
     const/4 v7, 0x1
 
-    .line 1
     check-cast p1, Lhrw;
 
-    .line 3
     iget-object v1, p1, Lhmv;->c:Landroid/content/Context;
 
-    .line 4
     invoke-virtual {p1}, Lhrw;->p()Landroid/os/IInterface;
 
     move-result-object v0
 
     check-cast v0, Lhrs;
 
-    .line 5
     new-instance v2, Lhru;
 
     invoke-direct {v2, p0}, Lhru;-><init>(Lhtp;)V
 
     iget-object v3, p0, Lhrv;->a:Landroid/net/Uri;
 
-    .line 7
     const-string v4, "com.google.android.gms"
 
     invoke-virtual {v1, v4, v3, v7}, Landroid/content/Context;->grantUriPermission(Ljava/lang/String;Landroid/net/Uri;I)V
@@ -94,7 +80,6 @@
 
     invoke-direct {v4, v1, v3, v2}, Lhrt;-><init>(Landroid/content/Context;Landroid/net/Uri;Lhrq;)V
 
-    .line 8
     :try_start_0
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
     :try_end_0
@@ -151,10 +136,8 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 14
     return-void
 
-    .line 8
     :cond_0
     const/4 v4, 0x0
 
@@ -176,23 +159,18 @@
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 9
     :catch_0
     move-exception v0
 
-    .line 10
     invoke-virtual {v1, v3, v7}, Landroid/content/Context;->revokeUriPermission(Landroid/net/Uri;I)V
 
-    .line 11
     throw v0
 
     :catch_1
     move-exception v0
 
-    .line 12
     invoke-virtual {v1, v3, v7}, Landroid/content/Context;->revokeUriPermission(Landroid/net/Uri;I)V
 
-    .line 13
     throw v0
 .end method
 

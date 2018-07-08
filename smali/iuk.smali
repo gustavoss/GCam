@@ -16,8 +16,6 @@
 .method public constructor <init>(Liyp;Liqq;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Liuk;->a:Liyp;
 
     iput-object p2, p0, Liuk;->b:Liqq;
@@ -32,39 +30,32 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 9
 
-    .prologue
     const/4 v8, 0x1
 
     const/4 v6, 0x0
 
-    .line 3
     move-object v7, p1
 
     check-cast v7, Livp;
 
-    .line 4
     iget-object v0, p0, Liuk;->a:Liyp;
 
     iget-object v1, p0, Liuk;->b:Liqq;
 
-    .line 5
     new-array v2, v8, [I
 
     const/16 v3, 0x3038
 
     aput v3, v2, v6
 
-    .line 6
     invoke-interface {v7}, Livp;->e()Landroid/opengl/EGLDisplay;
 
     move-result-object v3
 
-    .line 7
     invoke-interface {v7}, Livp;->h()Landroid/opengl/EGLConfig;
 
     move-result-object v4
 
-    .line 8
     invoke-interface {v0}, Liyp;->b()Ljava/lang/Object;
 
     move-result-object v5
@@ -73,27 +64,22 @@
 
     move-result-object v2
 
-    .line 9
     new-instance v4, Liwi;
 
     invoke-direct {v4, v3, v2}, Liwi;-><init>(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)V
 
-    .line 10
     new-array v2, v8, [Lipz;
 
     aput-object v0, v2, v6
 
-    .line 11
     invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 12
     new-instance v8, Liyq;
 
     invoke-direct {v8, v4, v0}, Liyq;-><init>(Liyp;Ljava/lang/Iterable;)V
 
-    .line 14
     invoke-interface {v7}, Livp;->d()Liuc;
 
     move-result-object v0
@@ -104,46 +90,38 @@
 
     check-cast v6, Liuc;
 
-    .line 15
     new-instance v0, Livs;
 
     invoke-interface {v7}, Livp;->k()Liwe;
 
     move-result-object v1
 
-    .line 16
     invoke-interface {v7}, Livp;->e()Landroid/opengl/EGLDisplay;
 
     move-result-object v2
 
-    .line 17
     invoke-interface {v8}, Liyp;->b()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/opengl/EGLSurface;
 
-    .line 18
     invoke-interface {v7}, Livp;->g()Landroid/opengl/EGLContext;
 
     move-result-object v4
 
-    .line 19
     invoke-interface {v7}, Livp;->h()Landroid/opengl/EGLConfig;
 
     move-result-object v5
 
     invoke-direct/range {v0 .. v8}, Livs;-><init>(Liwe;Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;Landroid/opengl/EGLContext;Landroid/opengl/EGLConfig;Liuc;Livp;Liyp;)V
 
-    .line 20
     return-object v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 2
     const-string v0, "GLRawCanvases.createForSurface"
 
     return-object v0

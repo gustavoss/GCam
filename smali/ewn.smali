@@ -29,18 +29,14 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lewn;->a:Liii;
 
     iget-object v0, p0, Lewn;->b:Lkhp;
 
-    .line 2
     const-string v2, "MICRO_ImageReaderModule_runningStartupTasks"
 
     invoke-interface {v1, v2}, Liii;->a(Ljava/lang/String;)V
 
-    .line 3
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -64,23 +60,18 @@
 
     check-cast v0, Ljava/lang/Runnable;
 
-    .line 4
     const-string v3, "MICRO_ImageReaderModule_runSingleTask"
 
     invoke-interface {v1, v3}, Liii;->a(Ljava/lang/String;)V
 
-    .line 5
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 6
     invoke-interface {v1}, Liii;->a()V
 
     goto :goto_0
 
-    .line 8
     :cond_0
     invoke-interface {v1}, Liii;->a()V
 
-    .line 9
     return-void
 .end method

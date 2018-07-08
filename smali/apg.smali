@@ -11,8 +11,6 @@
 .method constructor <init>(Lapf;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lapg;->a:Lapf;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,13 +23,10 @@
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lapg;->a:Lapf;
 
     iget-boolean v0, v0, Lapf;->b:Z
 
-    .line 3
     iget-object v1, p0, Lapg;->a:Lapf;
 
     invoke-static {p1}, Lapf;->a(Landroid/content/Context;)Z
@@ -40,14 +35,12 @@
 
     iput-boolean v2, v1, Lapf;->b:Z
 
-    .line 4
     iget-object v1, p0, Lapg;->a:Lapf;
 
     iget-boolean v1, v1, Lapf;->b:Z
 
     if-eq v0, v1, :cond_3
 
-    .line 5
     const-string v0, "ConnectivityMonitor"
 
     const/4 v1, 0x3
@@ -58,7 +51,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 6
     const-string v0, "ConnectivityMonitor"
 
     iget-object v1, p0, Lapg;->a:Lapf;
@@ -87,7 +79,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     :cond_0
     iget-object v0, p0, Lapg;->a:Lapf;
 
@@ -97,13 +88,10 @@
 
     iget-boolean v1, v1, Lapf;->b:Z
 
-    .line 8
     if-eqz v1, :cond_3
 
-    .line 9
     iget-object v1, v0, Lapd;->a:Lapq;
 
-    .line 10
     iget-object v0, v1, Lapq;->a:Ljava/util/Set;
 
     invoke-static {v0}, Lary;->a(Ljava/util/Collection;)Ljava/util/List;
@@ -128,7 +116,6 @@
 
     check-cast v0, Laqi;
 
-    .line 11
     invoke-interface {v0}, Laqi;->f()Z
 
     move-result v3
@@ -141,20 +128,16 @@
 
     if-nez v3, :cond_1
 
-    .line 12
     invoke-interface {v0}, Laqi;->c()V
 
-    .line 13
     iget-boolean v3, v1, Lapq;->c:Z
 
     if-nez v3, :cond_2
 
-    .line 14
     invoke-interface {v0}, Laqi;->a()V
 
     goto :goto_0
 
-    .line 15
     :cond_2
     iget-object v3, v1, Lapq;->b:Ljava/util/List;
 
@@ -162,7 +145,6 @@
 
     goto :goto_0
 
-    .line 17
     :cond_3
     return-void
 .end method

@@ -11,8 +11,6 @@
 .method constructor <init>(Lcqx;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcrh;->a:Lcqx;
 
     invoke-direct {p0}, Lcom/google/googlex/gcam/EncodedBlobCallback;-><init>()V
@@ -25,11 +23,8 @@
 .method public final Run(ILcom/google/googlex/gcam/SWIGTYPE_p_unsigned_char;JII)V
     .locals 23
 
-    .prologue
-    .line 2
     sget-object v2, Lcqx;->a:Ljava/lang/String;
 
-    .line 3
     const-string v3, "Gcam merged DNG data ready: %d bytes, shotId = %d"
 
     const/4 v4, 0x2
@@ -38,7 +33,6 @@
 
     const/4 v5, 0x0
 
-    .line 4
     invoke-static/range {p3 .. p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v6
@@ -53,17 +47,14 @@
 
     aput-object v6, v4, v5
 
-    .line 6
     const/4 v5, 0x0
 
     invoke-static {v5, v3, v4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 7
     invoke-static {v2, v3}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcrh;->a:Lcqx;
@@ -72,7 +63,6 @@
 
     monitor-enter v3
 
-    .line 9
     :try_start_0
     move-object/from16 v0, p0
 
@@ -90,24 +80,18 @@
 
     check-cast v2, Lcro;
 
-    .line 10
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 12
     iget-object v3, v2, Lcro;->f:Ldoa;
 
-    .line 13
     if-eqz v3, :cond_0
 
-    .line 14
     iget-object v3, v2, Lcro;->a:Lfsr;
 
-    .line 15
     iget-object v3, v3, Lfsr;->b:Lgfy;
 
-    .line 16
     invoke-interface {v3}, Lgfy;->o()Lgho;
 
     move-result-object v3
@@ -116,32 +100,26 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 18
     iget-object v0, v2, Lcro;->f:Ldoa;
 
     move-object/from16 v20, v0
 
-    .line 19
     move-wide/from16 v0, p3
 
     long-to-int v3, v0
 
-    .line 20
     move-object/from16 v0, p2
 
     invoke-static {v0, v3}, Lcom/google/googlex/gcam/BufferUtils;->byteBufferViewOfNativePointer(Lcom/google/googlex/gcam/SWIGTYPE_p_unsigned_char;I)Ljava/nio/ByteBuffer;
 
     move-result-object v3
 
-    .line 21
     invoke-static/range {p5 .. p6}, Lihs;->a(II)Lihs;
 
     move-result-object v8
 
-    .line 22
     iget v4, v2, Lcro;->c:I
 
-    .line 23
     invoke-static {v4}, Lihp;->a(I)Lihp;
 
     move-result-object v11
@@ -154,7 +132,6 @@
 
     invoke-direct {v0, v1}, Lcri;-><init>(Lcom/google/googlex/gcam/SWIGTYPE_p_unsigned_char;)V
 
-    .line 25
     const-string v4, "RawModeImageSaver"
 
     move-object/from16 v0, v20
@@ -165,7 +142,6 @@
 
     move-result-object v5
 
-    .line 26
     invoke-virtual {v3}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result v6
@@ -208,10 +184,8 @@
 
     move-result-object v5
 
-    .line 27
     invoke-static {v4, v5}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 28
     :try_start_1
     invoke-virtual {v3}, Ljava/nio/ByteBuffer;->capacity()I
 
@@ -219,10 +193,8 @@
 
     new-array v14, v4, [B
 
-    .line 29
     invoke-virtual {v3, v14}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    .line 30
     move-object/from16 v0, v20
 
     iget-object v3, v0, Ldoa;->a:Lgfy;
@@ -231,7 +203,6 @@
 
     move-result-wide v6
 
-    .line 31
     move-object/from16 v0, v20
 
     iget-object v0, v0, Ldoa;->a:Lgfy;
@@ -244,7 +215,6 @@
 
     iget-object v4, v0, Ldoa;->a:Lgfy;
 
-    .line 32
     invoke-interface {v4}, Lgfy;->a()Ljava/lang/String;
 
     move-result-object v4
@@ -255,16 +225,12 @@
 
     iget-object v10, v0, Ldoa;->b:Ljava/util/UUID;
 
-    .line 33
     iget v12, v8, Lihs;->a:I
 
-    .line 35
     iget v13, v8, Lihs;->b:I
 
-    .line 36
     const/4 v15, 0x0
 
-    .line 37
     invoke-static {}, Lfzp;->c()Lfzq;
 
     move-result-object v8
@@ -283,25 +249,20 @@
 
     invoke-direct/range {v3 .. v19}, Lbmf;-><init>(Ljava/lang/String;IJJLjava/util/UUID;Lihp;II[BLcom/google/android/libraries/camera/exif/ExifInterface;Lfzp;Lbsy;ZLjava/lang/String;)V
 
-    .line 38
     move-object/from16 v0, v22
 
     invoke-interface {v0, v3}, Lgfy;->a(Lbme;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 39
     invoke-interface/range {v21 .. v21}, Lihr;->close()V
 
-    .line 42
     move-object/from16 v0, v20
 
     iget-object v3, v0, Ldoa;->e:Ldnz;
 
-    .line 43
     iget-object v3, v3, Ldnz;->b:Liow;
 
-    .line 44
     const/4 v4, 0x0
 
     move-object/from16 v0, v20
@@ -314,14 +275,12 @@
 
     invoke-virtual {v3, v4, v6, v7}, Liow;->a(FJ)V
 
-    .line 45
     const/4 v3, 0x1
 
     move-object/from16 v0, v20
 
     iput-boolean v3, v0, Ldoa;->d:Z
 
-    .line 46
     invoke-virtual {v2}, Lcro;->b()Libm;
 
     move-result-object v2
@@ -330,11 +289,9 @@
 
     invoke-virtual {v0, v2}, Ldoa;->a(Libm;)V
 
-    .line 50
     :goto_0
     return-void
 
-    .line 10
     :catchall_0
     move-exception v2
 
@@ -345,7 +302,6 @@
 
     throw v2
 
-    .line 41
     :catchall_1
     move-exception v2
 
@@ -353,11 +309,9 @@
 
     throw v2
 
-    .line 48
     :cond_0
     sget-object v2, Lcqx;->a:Ljava/lang/String;
 
-    .line 49
     const-string v3, "Got onDngReady() callback with raw data but did not request it"
 
     invoke-static {v2, v3}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V

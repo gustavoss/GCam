@@ -14,8 +14,6 @@
 .method constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lidt;->a:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final a(Lihw;Ljava/util/concurrent/Executor;)Lihr;
     .locals 2
 
-    .prologue
-    .line 4
     new-instance v0, Lidu;
 
     iget-object v1, p0, Lidt;->a:Ljava/lang/Object;
@@ -38,26 +34,20 @@
 
     invoke-interface {p2, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 5
     sget-object v0, Lids;->a:Lihr;
 
-    .line 6
     return-object v0
 .end method
 
 .method public final a(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 2
     return-void
 .end method
 
 .method public final c()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lidt;->a:Ljava/lang/Object;
 
     return-object v0
@@ -66,8 +56,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 7
     const-string v0, "Prop.of"
 
     invoke-static {v0}, Ljid;->b(Ljava/lang/String;)Ljrt;
@@ -76,15 +64,12 @@
 
     iget-object v1, p0, Lidt;->a:Ljava/lang/Object;
 
-    .line 9
     invoke-virtual {v0}, Ljrt;->a()Ljru;
 
     move-result-object v2
 
-    .line 10
     iput-object v1, v2, Ljru;->b:Ljava/lang/Object;
 
-    .line 12
     invoke-virtual {v0}, Ljrt;->toString()Ljava/lang/String;
 
     move-result-object v0

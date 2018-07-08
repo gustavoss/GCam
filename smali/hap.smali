@@ -37,7 +37,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -48,7 +47,6 @@
 
     const/4 v3, 0x0
 
-    .line 4
     new-instance v0, Lhap;
 
     const-string v1, "UNINITIALIZED"
@@ -57,7 +55,6 @@
 
     sput-object v0, Lhap;->a:Lhap;
 
-    .line 5
     new-instance v0, Lhap;
 
     const-string v1, "PHOTO"
@@ -66,7 +63,6 @@
 
     sput-object v0, Lhap;->b:Lhap;
 
-    .line 6
     new-instance v0, Lhap;
 
     const-string v1, "VIDEO"
@@ -75,7 +71,6 @@
 
     sput-object v0, Lhap;->c:Lhap;
 
-    .line 7
     new-instance v0, Lhap;
 
     const-string v1, "PANORAMA"
@@ -84,7 +79,6 @@
 
     sput-object v0, Lhap;->d:Lhap;
 
-    .line 8
     new-instance v0, Lhap;
 
     const-string v1, "IMAX"
@@ -93,7 +87,6 @@
 
     sput-object v0, Lhap;->e:Lhap;
 
-    .line 9
     new-instance v0, Lhap;
 
     const-string v1, "PHOTO_SPHERE"
@@ -104,7 +97,6 @@
 
     sput-object v0, Lhap;->f:Lhap;
 
-    .line 10
     new-instance v0, Lhap;
 
     const-string v1, "SLOW_MOTION"
@@ -115,7 +107,6 @@
 
     sput-object v0, Lhap;->g:Lhap;
 
-    .line 11
     new-instance v0, Lhap;
 
     const-string v1, "LENS_BLUR"
@@ -126,7 +117,6 @@
 
     sput-object v0, Lhap;->h:Lhap;
 
-    .line 12
     new-instance v0, Lhap;
 
     const-string v1, "PORTRAIT"
@@ -137,7 +127,6 @@
 
     sput-object v0, Lhap;->i:Lhap;
 
-    .line 13
     new-instance v0, Lhap;
 
     const-string v1, "IMAGE_INTENT"
@@ -148,7 +137,6 @@
 
     sput-object v0, Lhap;->j:Lhap;
 
-    .line 14
     new-instance v0, Lhap;
 
     const-string v1, "VIDEO_INTENT"
@@ -159,7 +147,6 @@
 
     sput-object v0, Lhap;->k:Lhap;
 
-    .line 15
     new-instance v0, Lhap;
 
     const-string v1, "SETTINGS"
@@ -170,7 +157,6 @@
 
     sput-object v0, Lhap;->l:Lhap;
 
-    .line 16
     new-instance v0, Lhap;
 
     const-string v1, "ORNAMENT"
@@ -181,7 +167,6 @@
 
     sput-object v0, Lhap;->m:Lhap;
 
-    .line 17
     const/16 v0, 0xd
 
     new-array v0, v0, [Lhap;
@@ -262,19 +247,14 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     return-void
 .end method
 
 .method public static values()[Lhap;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lhap;->n:[Lhap;
 
     invoke-virtual {v0}, [Lhap;->clone()Ljava/lang/Object;

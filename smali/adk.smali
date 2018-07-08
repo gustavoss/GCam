@@ -17,18 +17,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/16 v0, 0x100
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Ladk;->a:[B
 
-    .line 3
     const/4 v0, 0x0
 
     iput v0, p0, Ladk;->d:I
@@ -41,14 +37,11 @@
 .method public final a()V
     .locals 3
 
-    .prologue
-    .line 23
     :cond_0
     invoke-virtual {p0}, Ladk;->c()I
 
     move-result v0
 
-    .line 24
     iget-object v1, p0, Ladk;->b:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->position()I
@@ -67,40 +60,31 @@
 
     move-result v1
 
-    .line 25
     iget-object v2, p0, Ladk;->b:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 26
     if-gtz v0, :cond_0
 
-    .line 27
     return-void
 .end method
 
 .method public final a(I)[I
     .locals 10
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 4
     mul-int/lit8 v0, p1, 0x3
 
-    .line 5
     const/4 v1, 0x0
 
-    .line 6
     new-array v4, v0, [B
 
-    .line 7
     :try_start_0
     iget-object v0, p0, Ladk;->b:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    .line 8
     const/16 v0, 0x100
 
     new-array v0, v0, [I
@@ -109,11 +93,9 @@
 
     move v1, v2
 
-    .line 11
     :goto_0
     if-ge v2, p1, :cond_1
 
-    .line 12
     add-int/lit8 v3, v1, 0x1
 
     :try_start_1
@@ -121,21 +103,18 @@
 
     and-int/lit16 v5, v1, 0xff
 
-    .line 13
     add-int/lit8 v6, v3, 0x1
 
     aget-byte v1, v4, v3
 
     and-int/lit16 v7, v1, 0xff
 
-    .line 14
     add-int/lit8 v1, v6, 0x1
 
     aget-byte v3, v4, v6
 
     and-int/lit16 v6, v3, 0xff
 
-    .line 15
     add-int/lit8 v3, v2, 0x1
 
     const/high16 v8, -0x1000000
@@ -156,10 +135,8 @@
 
     move v2, v3
 
-    .line 16
     goto :goto_0
 
-    .line 18
     :catch_0
     move-exception v0
 
@@ -169,7 +146,6 @@
 
     move-object v1, v9
 
-    .line 19
     :goto_1
     const-string v2, "GifHeaderParser"
 
@@ -181,14 +157,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 20
     const-string v2, "GifHeaderParser"
 
     const-string v3, "Format Error Reading Color Table"
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 21
     :cond_0
     iget-object v1, p0, Ladk;->c:Ladj;
 
@@ -196,11 +170,9 @@
 
     iput v2, v1, Ladj;->b:I
 
-    .line 22
     :cond_1
     return-object v0
 
-    .line 18
     :catch_1
     move-exception v1
 
@@ -210,36 +182,30 @@
 .method public final b()V
     .locals 7
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 28
     invoke-virtual {p0}, Ladk;->c()I
 
     move-result v0
 
     iput v0, p0, Ladk;->d:I
 
-    .line 30
     iget v0, p0, Ladk;->d:I
 
     if-lez v0, :cond_1
 
     move v2, v1
 
-    .line 32
     :goto_0
     :try_start_0
     iget v0, p0, Ladk;->d:I
 
     if-ge v2, v0, :cond_1
 
-    .line 33
     iget v0, p0, Ladk;->d:I
 
     sub-int v1, v0, v2
 
-    .line 34
     iget-object v0, p0, Ladk;->b:Ljava/nio/ByteBuffer;
 
     iget-object v3, p0, Ladk;->a:[B
@@ -248,18 +214,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 35
     add-int v0, v2, v1
 
     move v2, v0
 
     goto :goto_0
 
-    .line 37
     :catch_0
     move-exception v0
 
-    .line 38
     const-string v3, "GifHeaderParser"
 
     const/4 v4, 0x3
@@ -270,7 +233,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 39
     const-string v3, "GifHeaderParser"
 
     iget v4, p0, Ladk;->d:I
@@ -317,7 +279,6 @@
 
     invoke-static {v3, v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 40
     :cond_0
     iget-object v0, p0, Ladk;->c:Ladj;
 
@@ -325,7 +286,6 @@
 
     iput v1, v0, Ladj;->b:I
 
-    .line 41
     :cond_1
     return-void
 .end method
@@ -333,11 +293,8 @@
 .method public final c()I
     .locals 3
 
-    .prologue
-    .line 42
     const/4 v0, 0x0
 
-    .line 43
     :try_start_0
     iget-object v1, p0, Ladk;->b:Ljava/nio/ByteBuffer;
 
@@ -349,11 +306,9 @@
 
     and-int/lit16 v0, v0, 0xff
 
-    .line 47
     :goto_0
     return v0
 
-    .line 46
     :catch_0
     move-exception v1
 
@@ -369,8 +324,6 @@
 .method public final d()Z
     .locals 1
 
-    .prologue
-    .line 48
     iget-object v0, p0, Ladk;->c:Ladj;
 
     iget v0, v0, Ladj;->b:I

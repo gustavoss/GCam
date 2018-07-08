@@ -33,37 +33,26 @@
 .method constructor <init>(Liie;Lhfj;Lgrs;Lfyd;Lcom/google/android/apps/camera/stats/Instrumentation;Lcom/google/android/apps/camera/ui/views/MainActivityLayout;Lgyb;Liii;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgxt;->d:Liie;
 
-    .line 3
     iput-object p2, p0, Lgxt;->e:Lhfj;
 
-    .line 4
     iget-object v0, p7, Lgyb;->d:Landroid/widget/FrameLayout;
 
     iput-object v0, p0, Lgxt;->f:Landroid/widget/FrameLayout;
 
-    .line 5
     iput-object p3, p0, Lgxt;->g:Lgrs;
 
-    .line 6
     iput-object p4, p0, Lgxt;->h:Lfyd;
 
-    .line 7
     iput-object p5, p0, Lgxt;->i:Lcom/google/android/apps/camera/stats/Instrumentation;
 
-    .line 8
     iput-object p6, p0, Lgxt;->j:Lcom/google/android/apps/camera/ui/views/MainActivityLayout;
 
-    .line 9
     iput-object p8, p0, Lgxt;->k:Liii;
 
-    .line 10
     const-string v0, "Viewfinder"
 
     invoke-interface {p1, v0}, Liie;->a(Ljava/lang/String;)Liid;
@@ -72,21 +61,18 @@
 
     iput-object v0, p0, Lgxt;->c:Liid;
 
-    .line 11
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lgxt;->a:Ljava/lang/Object;
 
-    .line 12
     iget-object v0, p0, Lgxt;->c:Liid;
 
     const-string v1, "Viewfinder constructed."
 
     invoke-interface {v0, v1}, Liid;->e(Ljava/lang/String;)V
 
-    .line 13
     return-void
 .end method
 
@@ -95,8 +81,6 @@
 .method public final a(Lgxw;)Lkey;
     .locals 11
 
-    .prologue
-    .line 14
     iget-object v0, p0, Lgxt;->c:Liid;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -133,30 +117,25 @@
 
     invoke-interface {v0, v1}, Liid;->e(Ljava/lang/String;)V
 
-    .line 15
     iget-object v0, p0, Lgxt;->k:Liii;
 
     const-string v1, "swapAndStartSurfaceViewViewfinder"
 
     invoke-interface {v0, v1}, Liii;->a(Ljava/lang/String;)V
 
-    .line 16
     iget-object v10, p0, Lgxt;->a:Ljava/lang/Object;
 
     monitor-enter v10
 
-    .line 17
     :try_start_0
     invoke-virtual {p0}, Lgxt;->a()V
 
-    .line 18
     iget-object v0, p0, Lgxt;->c:Liid;
 
     const-string v1, "Starting the new viewfinder"
 
     invoke-interface {v0, v1}, Liid;->e(Ljava/lang/String;)V
 
-    .line 20
     new-instance v0, Lgxq;
 
     iget-object v1, p0, Lgxt;->d:Liie;
@@ -183,29 +162,22 @@
 
     iput-object v0, p0, Lgxt;->l:Lgxq;
 
-    .line 21
     iget-object v0, p0, Lgxt;->l:Lgxq;
 
-    .line 22
     invoke-static {}, Libo;->a()V
 
-    .line 23
     iget-object v0, v0, Lgxq;->i:Lkfk;
 
-    .line 25
     monitor-exit v10
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 26
     iget-object v1, p0, Lgxt;->k:Liii;
 
     invoke-interface {v1}, Liii;->a()V
 
-    .line 27
     return-object v0
 
-    .line 25
     :catchall_0
     move-exception v0
 
@@ -220,37 +192,30 @@
 .method public final a()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 28
     iget-object v0, p0, Lgxt;->c:Liid;
 
     const-string v1, "Stopping current viewfinder"
 
     invoke-interface {v0, v1}, Liid;->e(Ljava/lang/String;)V
 
-    .line 29
     iget-object v0, p0, Lgxt;->l:Lgxq;
 
     if-eqz v0, :cond_0
 
-    .line 30
     iget-object v0, p0, Lgxt;->l:Lgxq;
 
     invoke-virtual {v0}, Lgxq;->close()V
 
-    .line 31
     const/4 v0, 0x0
 
     iput-object v0, p0, Lgxt;->l:Lgxq;
 
-    .line 32
     :cond_0
     iget-object v0, p0, Lgxt;->f:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, v2, v2, v2, v2}, Landroid/widget/FrameLayout;->setPadding(IIII)V
 
-    .line 33
     return-void
 .end method

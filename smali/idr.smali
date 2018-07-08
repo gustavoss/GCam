@@ -18,14 +18,10 @@
 .method public constructor <init>(Ljsd;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lidr;->b:Ljsd;
 
-    .line 3
     new-instance v0, Licm;
 
     invoke-interface {p1}, Ljsd;->a()Ljava/lang/Object;
@@ -36,7 +32,6 @@
 
     iput-object v0, p0, Lidr;->a:Licm;
 
-    .line 4
     iget-object v0, p0, Lidr;->a:Licm;
 
     invoke-static {v0}, Lidb;->b(Lida;)Lida;
@@ -45,7 +40,6 @@
 
     iput-object v0, p0, Lidr;->c:Lida;
 
-    .line 5
     return-void
 .end method
 
@@ -54,8 +48,6 @@
 .method public final a(Lihw;Ljava/util/concurrent/Executor;)Lihr;
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lidr;->c:Lida;
 
     invoke-interface {v0, p1, p2}, Lida;->a(Lihw;Ljava/util/concurrent/Executor;)Lihr;
@@ -68,8 +60,6 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lidr;->a:Licm;
 
     iget-object v1, p0, Lidr;->b:Ljsd;
@@ -80,15 +70,12 @@
 
     invoke-virtual {v0, v1}, Licm;->a(Ljava/lang/Object;)V
 
-    .line 7
     return-void
 .end method
 
 .method public final c()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lidr;->a:Licm;
 
     invoke-virtual {v0}, Licm;->c()Ljava/lang/Object;

@@ -18,8 +18,6 @@
 .method constructor <init>(Lfiv;Liob;Lfgp;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfiz;->c:Lfiv;
 
     iput-object p2, p0, Lfiz;->a:Liob;
@@ -36,19 +34,15 @@
 .method public final a(Ljava/lang/Object;)Lkey;
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lfiz;->c:Lfiv;
 
     iget-object v1, p0, Lfiz;->a:Liob;
 
     iget-object v2, p0, Lfiz;->b:Lfgp;
 
-    .line 3
     invoke-virtual {v0, v1, v2}, Lfiv;->a(Liob;Lfgp;)Lkey;
 
     move-result-object v0
 
-    .line 4
     return-object v0
 .end method

@@ -33,15 +33,12 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lbfq;->a:Lbfp;
 
     iget-object v1, p0, Lbfq;->b:Lkfk;
 
     iget-boolean v2, p0, Lbfq;->c:Z
 
-    .line 2
     iget-object v3, v0, Lbfp;->e:Lbjc;
 
     iget-object v4, v0, Lbfp;->c:Lbhe;
@@ -50,19 +47,15 @@
 
     const/4 v0, 0x1
 
-    .line 3
     :goto_0
     invoke-interface {v3, v4, v0}, Lbjc;->a(Lbhe;Z)Lkey;
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {v1, v0}, Lkfk;->a(Lkey;)Z
 
-    .line 5
     return-void
 
-    .line 2
     :cond_0
     const/4 v0, 0x0
 

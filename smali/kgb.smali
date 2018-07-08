@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 22
     const-string v0, "googleapp://lens"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -25,32 +23,24 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lkgb;->a:Landroid/content/Context;
 
-    .line 3
     new-instance v0, Lhij;
 
     invoke-direct {v0, p1}, Lhij;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lkgb;->b:Lhij;
 
-    .line 4
     return-void
 .end method
 
 .method public static a(I)I
     .locals 3
 
-    .prologue
-    .line 18
     packed-switch p0, :pswitch_data_0
 
-    .line 20
     :pswitch_0
     const-string v0, "LensApi"
 
@@ -76,13 +66,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
     const/4 p0, 0x1
 
     :pswitch_1
     return p0
 
-    .line 18
     nop
 
     :pswitch_data_0
@@ -100,18 +88,14 @@
 .method static b(Landroid/app/Activity;)V
     .locals 2
 
-    .prologue
-    .line 13
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 14
     const-string v1, "android.intent.action.VIEW"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 15
     const-string v1, "googleapp://lens"
 
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -120,12 +104,10 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 16
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 17
     return-void
 .end method
 
@@ -134,37 +116,29 @@
 .method public final a(Landroid/app/Activity;)V
     .locals 2
 
-    .prologue
-    .line 5
     const-string v0, "keyguard"
 
-    .line 6
     invoke-virtual {p1, v0}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/KeyguardManager;
 
-    .line 7
     invoke-virtual {v0}, Landroid/app/KeyguardManager;->isDeviceLocked()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 8
     new-instance v1, Lkgc;
 
     invoke-direct {v1, p0, p1}, Lkgc;-><init>(Lkgb;Landroid/app/Activity;)V
 
-    .line 9
     invoke-virtual {v0, p1, v1}, Landroid/app/KeyguardManager;->requestDismissKeyguard(Landroid/app/Activity;Landroid/app/KeyguardManager$KeyguardDismissCallback;)V
 
-    .line 12
     :goto_0
     return-void
 
-    .line 11
     :cond_0
     invoke-static {p1}, Lkgb;->b(Landroid/app/Activity;)V
 

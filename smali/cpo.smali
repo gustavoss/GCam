@@ -29,8 +29,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 16
     new-instance v0, Lbpw;
 
     const-string v1, "camera.raisr"
@@ -39,7 +37,6 @@
 
     sput-object v0, Lcpo;->a:Lbpw;
 
-    .line 17
     new-instance v0, Lbpv;
 
     const-string v1, "camera.p3"
@@ -48,7 +45,6 @@
 
     sput-object v0, Lcpo;->b:Lbpv;
 
-    .line 18
     new-instance v0, Lbpv;
 
     const-string v1, "camera.slowraw.RESTART"
@@ -57,7 +53,6 @@
 
     sput-object v0, Lcpo;->c:Lbpv;
 
-    .line 19
     new-instance v0, Lbpv;
 
     const-string v1, "camera.tbinning.RESTART"
@@ -72,35 +67,25 @@
 .method constructor <init>(Lbka;Lhbv;Ling;Lbky;Lbqi;Lbjy;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcpo;->e:Lbka;
 
-    .line 3
     iput-object p2, p0, Lcpo;->f:Lhbv;
 
-    .line 4
     iput-object p3, p0, Lcpo;->g:Ling;
 
-    .line 5
     iput-object p4, p0, Lcpo;->i:Lbky;
 
-    .line 6
     iput-object p6, p0, Lcpo;->h:Lbjy;
 
-    .line 7
     return-void
 .end method
 
 .method public static a()I
     .locals 1
 
-    .prologue
-    .line 8
-    const/4 v0, 0x3
+    const/4 v0, 0x1
 
     return v0
 .end method
@@ -110,18 +95,14 @@
 .method public final b()I
     .locals 4
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lcpo;->e:Lbka;
 
-    .line 10
     invoke-virtual {v0}, Lbka;->f()I
 
     move-result v1
 
     add-int/lit8 v1, v1, 0x2
 
-    .line 11
     iget-object v0, v0, Lbka;->a:Landroid/content/ContentResolver;
 
     const-string v2, "camera:hdr_plus_zsl_buffer_count"
@@ -130,22 +111,80 @@
 
     move-result v0
 
-    .line 13
     const/4 v1, 0x3
 
+    const-string/jumbo v2, "pref_parameters_camera_key"
+
+    invoke-static {v2}, Lbka;->a(Ljava/lang/String;)I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-le v2, v3, :cond_0
+
+    const/4 v3, 0x1
+
+    if-eq v2, v3, :cond_1
+
+    const/4 v3, 0x2
+
+    if-eq v2, v3, :cond_2
+
+    const/4 v3, 0x3
+
+    if-eq v2, v3, :cond_3
+
+    const/4 v3, 0x4
+
+    if-ge v2, v3, :cond_4
+
+    const/4 v3, 0x5
+
+    if-ge v2, v3, :cond_5
+
+    :goto_0
     iget-object v2, p0, Lcpo;->g:Ling;
 
     const-string v3, "persist.gcam.zsl_buffer_size"
 
-    .line 14
     invoke-virtual {v2, v3, v0}, Ling;->a(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 15
     invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
     return v0
+
+    :cond_0
+    const/4 v1, 0x3
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x7
+
+    goto :goto_0
+
+    :cond_2
+    const/16 v1, 0xe
+
+    goto :goto_0
+
+    :cond_3
+    const/16 v1, 0x18
+
+    goto :goto_0
+
+    :cond_4
+    const/16 v1, 0x23
+
+    goto :goto_0
+
+    :cond_5
+    const/16 v1, 0x2e
+
+    goto :goto_0
 .end method

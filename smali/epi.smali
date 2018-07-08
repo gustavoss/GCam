@@ -11,8 +11,6 @@
 .method public constructor <init>(Lbgg;)V
     .locals 0
 
-    .prologue
-    .line 4
     iput-object p1, p0, Lepi;->a:Lbgg;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,18 +23,14 @@
 .method public final a()Ljrw;
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lepi;->a:Lbgg;
 
-    .line 2
     iget-object v0, v0, Lbgg;->a:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3
     invoke-static {v0}, Ljrw;->b(Ljava/lang/Object;)Ljrw;
 
     move-result-object v0

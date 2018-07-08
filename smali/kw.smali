@@ -13,8 +13,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 195
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,8 +21,6 @@
 .method public constructor <init>(Lrr;Ljava/lang/ref/WeakReference;)V
     .locals 0
 
-    .prologue
-    .line 212
     iput-object p1, p0, Lkw;->b:Lrr;
 
     iput-object p2, p0, Lkw;->a:Ljava/lang/ref/WeakReference;
@@ -37,16 +33,12 @@
 .method public static a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
     .locals 1
 
-    .prologue
-    .line 88
     invoke-static {p1, p2}, Lkw;->a(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 89
     if-nez v0, :cond_0
 
-    .line 91
     :goto_0
     return p4
 
@@ -61,16 +53,12 @@
 .method public static a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
     .locals 1
 
-    .prologue
-    .line 92
     invoke-static {p1, p2}, Lkw;->a(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 93
     if-nez v0, :cond_0
 
-    .line 95
     :goto_0
     return p4
 
@@ -85,18 +73,14 @@
 .method public static a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 100
     if-nez p1, :cond_0
 
-    .line 101
     invoke-virtual {p0, p2, p3}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 102
     :goto_0
     return-object v0
 
@@ -111,13 +95,10 @@
 .method public static a(Landroid/content/Context;Landroid/content/res/Resources;Landroid/util/TypedValue;IILkw;)Landroid/graphics/Typeface;
     .locals 12
 
-    .prologue
-    .line 103
     iget-object v1, p2, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
 
     if-nez v1, :cond_0
 
-    .line 104
     new-instance v1, Landroid/content/res/Resources$NotFoundException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -140,7 +121,6 @@
 
     move-result-object v2
 
-    .line 105
     invoke-static {p3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -167,7 +147,6 @@
 
     throw v1
 
-    .line 106
     :cond_0
     iget-object v1, p2, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
 
@@ -175,7 +154,6 @@
 
     move-result-object v9
 
-    .line 107
     const-string v1, "res/"
 
     invoke-virtual {v9, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -184,7 +162,6 @@
 
     if-nez v1, :cond_1
 
-    .line 108
     const/4 v1, -0x3
 
     const/4 v2, 0x0
@@ -193,14 +170,11 @@
 
     invoke-virtual {v0, v1, v2}, Lkw;->a(ILandroid/os/Handler;)V
 
-    .line 109
     const/4 v1, 0x0
 
-    .line 194
     :goto_0
     return-object v1
 
-    .line 111
     :cond_1
     sget-object v1, Ley;->b:Lgo;
 
@@ -216,10 +190,8 @@
 
     check-cast v1, Landroid/graphics/Typeface;
 
-    .line 113
     if-eqz v1, :cond_2
 
-    .line 114
     const/4 v2, 0x0
 
     move-object/from16 v0, p5
@@ -228,7 +200,6 @@
 
     goto :goto_0
 
-    .line 116
     :cond_2
     :try_start_0
     invoke-virtual {v9}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
@@ -243,12 +214,10 @@
 
     if-eqz v1, :cond_15
 
-    .line 117
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
     move-result-object v8
 
-    .line 120
     :cond_3
     invoke-interface {v8}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -262,13 +231,11 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 121
     :cond_4
     const/4 v2, 0x2
 
     if-eq v1, v2, :cond_5
 
-    .line 122
     new-instance v1, Lorg/xmlpull/v1/XmlPullParserException;
 
     const-string v2, "No start tag found"
@@ -280,11 +247,9 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 188
     :catch_0
     move-exception v1
 
-    .line 189
     const-string v2, "ResourcesCompat"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -303,7 +268,6 @@
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 193
     :goto_1
     const/4 v1, -0x3
 
@@ -313,12 +277,10 @@
 
     invoke-virtual {v0, v1, v2}, Lkw;->a(ILandroid/os/Handler;)V
 
-    .line 194
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 124
     :cond_5
     const/4 v1, 0x2
 
@@ -329,12 +291,10 @@
 
     invoke-interface {v8, v1, v2, v3}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 125
     invoke-interface {v8}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 126
     const-string v2, "font-family"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -343,40 +303,34 @@
 
     if-eqz v1, :cond_13
 
-    .line 128
     invoke-static {v8}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object v1
 
-    .line 129
     sget-object v2, Lk;->a:[I
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v1
 
-    .line 130
     sget v2, Lk;->m:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 131
     sget v2, Lk;->q:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 132
     sget v2, Lk;->r:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 133
     sget v2, Lk;->n:I
 
     const/4 v6, 0x0
@@ -385,7 +339,6 @@
 
     move-result v2
 
-    .line 134
     sget v6, Lk;->o:I
 
     const/4 v7, 0x1
@@ -394,7 +347,6 @@
 
     move-result v6
 
-    .line 135
     sget v7, Lk;->p:I
 
     const/16 v10, 0x1f4
@@ -403,17 +355,14 @@
 
     move-result v7
 
-    .line 136
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 137
     if-eqz v3, :cond_7
 
     if-eqz v4, :cond_7
 
     if-eqz v5, :cond_7
 
-    .line 138
     :goto_2
     invoke-interface {v8}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -423,7 +372,6 @@
 
     if-eq v1, v10, :cond_6
 
-    .line 139
     invoke-static {v8}, Lei;->a(Lorg/xmlpull/v1/XmlPullParser;)V
     :try_end_1
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_0
@@ -431,11 +379,9 @@
 
     goto :goto_2
 
-    .line 191
     :catch_1
     move-exception v1
 
-    .line 192
     const-string v2, "ResourcesCompat"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -456,14 +402,12 @@
 
     goto :goto_1
 
-    .line 140
     :cond_6
     :try_start_2
     invoke-static {p1, v2}, Lei;->a(Landroid/content/res/Resources;I)Ljava/util/List;
 
     move-result-object v1
 
-    .line 141
     new-instance v2, Leu;
 
     new-instance v8, Lfj;
@@ -472,18 +416,15 @@
 
     invoke-direct {v2, v8, v6, v7}, Leu;-><init>(Lfj;II)V
 
-    .line 178
     :goto_3
     if-nez v2, :cond_14
 
-    .line 179
     const-string v1, "ResourcesCompat"
 
     const-string v2, "Failed to find font-family tag"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 180
     const/4 v1, -0x3
 
     const/4 v2, 0x0
@@ -492,18 +433,15 @@
 
     invoke-virtual {v0, v1, v2}, Lkw;->a(ILandroid/os/Handler;)V
 
-    .line 181
     const/4 v1, 0x0
 
     goto/16 :goto_0
 
-    .line 142
     :cond_7
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 143
     :cond_8
     :goto_4
     invoke-interface {v8}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -514,7 +452,6 @@
 
     if-eq v1, v2, :cond_11
 
-    .line 144
     invoke-interface {v8}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v1
@@ -523,12 +460,10 @@
 
     if-ne v1, v2, :cond_8
 
-    .line 145
     invoke-interface {v8}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 146
     const-string v2, "font"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -537,19 +472,16 @@
 
     if-eqz v1, :cond_10
 
-    .line 148
     invoke-static {v8}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object v1
 
-    .line 149
     sget-object v2, Lk;->b:[I
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v11
 
-    .line 150
     sget v1, Lk;->k:I
 
     invoke-virtual {v11, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -560,7 +492,6 @@
 
     sget v1, Lk;->k:I
 
-    .line 151
     :goto_5
     const/16 v2, 0x190
 
@@ -568,7 +499,6 @@
 
     move-result v3
 
-    .line 152
     sget v1, Lk;->i:I
 
     invoke-virtual {v11, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -579,7 +509,6 @@
 
     sget v1, Lk;->i:I
 
-    .line 153
     :goto_6
     const/4 v2, 0x1
 
@@ -593,7 +522,6 @@
 
     const/4 v4, 0x1
 
-    .line 154
     :goto_7
     sget v1, Lk;->l:I
 
@@ -607,11 +535,9 @@
 
     move v2, v1
 
-    .line 155
     :goto_8
     sget v1, Lk;->j:I
 
-    .line 156
     invoke-virtual {v11, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v1
@@ -620,20 +546,17 @@
 
     sget v1, Lk;->j:I
 
-    .line 157
     :goto_9
     invoke-virtual {v11, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 158
     const/4 v1, 0x0
 
     invoke-virtual {v11, v2, v1}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v6
 
-    .line 159
     sget v1, Lk;->h:I
 
     invoke-virtual {v11, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -644,7 +567,6 @@
 
     sget v1, Lk;->h:I
 
-    .line 160
     :goto_a
     const/4 v2, 0x0
 
@@ -652,15 +574,12 @@
 
     move-result v7
 
-    .line 161
     invoke-virtual {v11, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 162
     invoke-virtual {v11}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 163
     :goto_b
     invoke-interface {v8}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -670,30 +589,25 @@
 
     if-eq v1, v11, :cond_f
 
-    .line 164
     invoke-static {v8}, Lei;->a(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_b
 
-    .line 150
     :cond_9
     sget v1, Lk;->f:I
 
     goto :goto_5
 
-    .line 152
     :cond_a
     sget v1, Lk;->d:I
 
     goto :goto_6
 
-    .line 153
     :cond_b
     const/4 v4, 0x0
 
     goto :goto_7
 
-    .line 154
     :cond_c
     sget v1, Lk;->g:I
 
@@ -701,36 +615,30 @@
 
     goto :goto_8
 
-    .line 156
     :cond_d
     sget v1, Lk;->e:I
 
     goto :goto_9
 
-    .line 159
     :cond_e
     sget v1, Lk;->c:I
 
     goto :goto_a
 
-    .line 165
     :cond_f
     new-instance v1, Let;
 
     invoke-direct/range {v1 .. v7}, Let;-><init>(Ljava/lang/String;IZLjava/lang/String;II)V
 
-    .line 166
     invoke-interface {v10, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_4
 
-    .line 167
     :cond_10
     invoke-static {v8}, Lei;->a(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto/16 :goto_4
 
-    .line 169
     :cond_11
     invoke-interface {v10}, Ljava/util/List;->isEmpty()Z
 
@@ -738,23 +646,19 @@
 
     if-eqz v1, :cond_12
 
-    .line 170
     const/4 v2, 0x0
 
     goto/16 :goto_3
 
-    .line 171
     :cond_12
     new-instance v2, Les;
 
-    .line 172
     invoke-interface {v10}, Ljava/util/List;->size()I
 
     move-result v1
 
     new-array v1, v1, [Let;
 
-    .line 173
     invoke-interface {v10, v1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v1
@@ -765,16 +669,13 @@
 
     goto/16 :goto_3
 
-    .line 175
     :cond_13
     invoke-static {v8}, Lei;->a(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 176
     const/4 v2, 0x0
 
     goto/16 :goto_3
 
-    .line 182
     :cond_14
     const/4 v7, 0x0
 
@@ -796,7 +697,6 @@
 
     goto/16 :goto_0
 
-    .line 183
     :cond_15
     move/from16 v0, p4
 
@@ -804,10 +704,8 @@
 
     move-result-object v1
 
-    .line 184
     if-eqz v1, :cond_16
 
-    .line 185
     const/4 v2, 0x0
 
     move-object/from16 v0, p5
@@ -816,7 +714,6 @@
 
     goto/16 :goto_0
 
-    .line 186
     :cond_16
     const/4 v2, -0x3
 
@@ -835,23 +732,18 @@
 .method private static a(Ljava/util/ArrayList;C[F)V
     .locals 1
 
-    .prologue
-    .line 41
     new-instance v0, Lne;
 
     invoke-direct {v0, p1, p2}, Lne;-><init>(C[F)V
 
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 42
     return-void
 .end method
 
 .method public static a(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 87
     const-string v0, "http://schemas.android.com/apk/res/android"
 
     invoke-interface {p0, v0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -874,68 +766,53 @@
 .method public static a([FI)[F
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 1
     if-gez p1, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw v0
 
-    .line 3
     :cond_0
     array-length v0, p0
 
-    .line 4
     if-gez v0, :cond_1
 
-    .line 5
     new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
     invoke-direct {v0}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>()V
 
     throw v0
 
-    .line 7
     :cond_1
     invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
-    .line 8
     new-array v1, p1, [F
 
-    .line 9
     invoke-static {p0, v2, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 10
     return-object v1
 .end method
 
 .method public static a(Ljava/lang/String;)[Lne;
     .locals 8
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v3, 0x0
 
-    .line 11
     if-nez p0, :cond_0
 
-    .line 12
     const/4 v0, 0x0
 
-    .line 33
     :goto_0
     return-object v0
 
-    .line 15
     :cond_0
     new-instance v5, Ljava/util/ArrayList;
 
@@ -945,7 +822,6 @@
 
     move v2, v3
 
-    .line 16
     :goto_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -955,7 +831,6 @@
 
     move v4, v0
 
-    .line 18
     :goto_2
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -963,12 +838,10 @@
 
     if-ge v4, v0, :cond_3
 
-    .line 19
     invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 20
     add-int/lit8 v6, v0, -0x41
 
     add-int/lit8 v7, v0, -0x5a
@@ -994,13 +867,11 @@
 
     if-ne v0, v6, :cond_3
 
-    .line 21
     :cond_2
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 24
     :cond_3
     invoke-virtual {p0, v2, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -1010,35 +881,29 @@
 
     move-result-object v0
 
-    .line 25
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v2
 
     if-lez v2, :cond_4
 
-    .line 26
     invoke-static {v0}, Lkw;->b(Ljava/lang/String;)[F
 
     move-result-object v2
 
-    .line 27
     invoke-virtual {v0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
     invoke-static {v5, v0, v2}, Lkw;->a(Ljava/util/ArrayList;C[F)V
 
-    .line 29
     :cond_4
     add-int/lit8 v0, v4, 0x1
 
     move v2, v4
 
-    .line 30
     goto :goto_1
 
-    .line 31
     :cond_5
     sub-int/2addr v0, v2
 
@@ -1050,7 +915,6 @@
 
     if-ge v2, v0, :cond_6
 
-    .line 32
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -1059,7 +923,6 @@
 
     invoke-static {v5, v0, v1}, Lkw;->a(Ljava/util/ArrayList;C[F)V
 
-    .line 33
     :cond_6
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
@@ -1079,24 +942,18 @@
 .method public static a([Lne;)[Lne;
     .locals 4
 
-    .prologue
-    .line 34
     if-nez p0, :cond_0
 
-    .line 35
     const/4 v0, 0x0
 
-    .line 40
     :goto_0
     return-object v0
 
-    .line 36
     :cond_0
     array-length v0, p0
 
     new-array v1, v0, [Lne;
 
-    .line 37
     const/4 v0, 0x0
 
     :goto_1
@@ -1104,7 +961,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 38
     new-instance v2, Lne;
 
     aget-object v3, p0, v0
@@ -1113,7 +969,6 @@
 
     aput-object v2, v1, v0
 
-    .line 39
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -1121,23 +976,18 @@
     :cond_1
     move-object v0, v1
 
-    .line 40
     goto :goto_0
 .end method
 
 .method public static b(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
     .locals 1
 
-    .prologue
-    .line 96
     invoke-static {p1, p2}, Lkw;->a(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 97
     if-nez v0, :cond_0
 
-    .line 99
     :goto_0
     return p4
 
@@ -1152,12 +1002,10 @@
 .method private static b(Ljava/lang/String;)[F
     .locals 13
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 43
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -1174,15 +1022,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 44
     :cond_0
     new-array v0, v2, [F
 
-    .line 84
     :goto_0
     return-object v0
 
-    .line 45
     :cond_1
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -1191,12 +1036,10 @@
 
     new-array v8, v0, [F
 
-    .line 48
     new-instance v9, Lnd;
 
     invoke-direct {v9}, Lnd;-><init>()V
 
-    .line 49
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v10
@@ -1205,11 +1048,9 @@
 
     move v1, v2
 
-    .line 50
     :goto_1
     if-ge v7, v10, :cond_6
 
-    .line 54
     const/4 v0, 0x0
 
     iput-boolean v0, v9, Lnd;->b:Z
@@ -1222,7 +1063,6 @@
 
     move v6, v7
 
-    .line 57
     :goto_2
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -1230,12 +1070,10 @@
 
     if-ge v6, v11, :cond_4
 
-    .line 60
     invoke-virtual {p0, v6}, Ljava/lang/String;->charAt(I)C
 
     move-result v11
 
-    .line 61
     sparse-switch v11, :sswitch_data_0
 
     :cond_2
@@ -1245,11 +1083,9 @@
 
     move v0, v2
 
-    .line 73
     :goto_3
     if-nez v5, :cond_4
 
-    .line 74
     add-int/lit8 v6, v6, 0x1
 
     move v12, v0
@@ -1269,16 +1105,13 @@
 
     move v0, v2
 
-    .line 63
     goto :goto_3
 
-    .line 64
     :sswitch_1
     if-eq v6, v7, :cond_2
 
     if-nez v5, :cond_2
 
-    .line 66
     const/4 v4, 0x1
 
     iput-boolean v4, v9, Lnd;->b:Z
@@ -1291,7 +1124,6 @@
 
     goto :goto_3
 
-    .line 67
     :sswitch_2
     if-nez v0, :cond_3
 
@@ -1301,10 +1133,8 @@
 
     move v4, v3
 
-    .line 68
     goto :goto_3
 
-    .line 70
     :cond_3
     const/4 v4, 0x1
 
@@ -1316,7 +1146,6 @@
 
     move v0, v2
 
-    .line 71
     goto :goto_3
 
     :sswitch_3
@@ -1326,35 +1155,27 @@
 
     move v0, v3
 
-    .line 72
     goto :goto_3
 
-    .line 75
     :cond_4
     iput v6, v9, Lnd;->a:I
 
-    .line 76
     iget v4, v9, Lnd;->a:I
 
-    .line 77
     if-ge v7, v4, :cond_7
 
-    .line 78
     add-int/lit8 v0, v1, 0x1
 
-    .line 79
     invoke-virtual {p0, v7, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 80
     invoke-static {v5}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v5
 
     aput v5, v8, v1
 
-    .line 81
     :goto_4
     iget-boolean v1, v9, Lnd;->b:Z
 
@@ -1364,10 +1185,8 @@
 
     move v1, v0
 
-    .line 82
     goto :goto_1
 
-    .line 83
     :cond_5
     add-int/lit8 v7, v4, 0x1
 
@@ -1375,7 +1194,6 @@
 
     goto :goto_1
 
-    .line 84
     :cond_6
     invoke-static {v8, v1}, Lkw;->a([FI)[F
     :try_end_0
@@ -1385,11 +1203,9 @@
 
     goto :goto_0
 
-    .line 85
     :catch_0
     move-exception v0
 
-    .line 86
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1421,7 +1237,6 @@
 
     goto :goto_4
 
-    .line 61
     :sswitch_data_0
     .sparse-switch
         0x20 -> :sswitch_0
@@ -1438,11 +1253,8 @@
 .method public final a(ILandroid/os/Handler;)V
     .locals 1
 
-    .prologue
-    .line 208
     if-nez p2, :cond_0
 
-    .line 209
     new-instance p2, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -1451,7 +1263,6 @@
 
     invoke-direct {p2, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 210
     :cond_0
     new-instance v0, Lew;
 
@@ -1459,43 +1270,34 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 211
     return-void
 .end method
 
 .method public final a(Landroid/graphics/Typeface;)V
     .locals 3
 
-    .prologue
-    .line 196
     iget-object v1, p0, Lkw;->b:Lrr;
 
     iget-object v0, p0, Lkw;->a:Ljava/lang/ref/WeakReference;
 
-    .line 198
     iget-boolean v2, v1, Lrr;->e:Z
 
     if-eqz v2, :cond_0
 
-    .line 199
     iput-object p1, v1, Lrr;->d:Landroid/graphics/Typeface;
 
-    .line 200
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 201
     if-eqz v0, :cond_0
 
-    .line 202
     iget v1, v1, Lrr;->c:I
 
     invoke-virtual {v0, p1, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
 
-    .line 203
     :cond_0
     return-void
 .end method
@@ -1503,11 +1305,8 @@
 .method public final a(Landroid/graphics/Typeface;Landroid/os/Handler;)V
     .locals 1
 
-    .prologue
-    .line 204
     if-nez p2, :cond_0
 
-    .line 205
     new-instance p2, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -1516,7 +1315,6 @@
 
     invoke-direct {p2, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 206
     :cond_0
     new-instance v0, Lev;
 
@@ -1524,6 +1322,5 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 207
     return-void
 .end method

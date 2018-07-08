@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 13
     new-instance v0, Ljrk;
 
     invoke-direct {v0}, Ljrk;-><init>()V
@@ -27,8 +25,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljrw;-><init>()V
 
     return-void
@@ -37,8 +33,6 @@
 .method private final readResolve()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 12
     sget-object v0, Ljrk;->a:Ljrk;
 
     return-object v0
@@ -49,8 +43,6 @@
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 4
     const-string v0, "use Optional.orNull() instead of Optional.or(null)"
 
     invoke-static {p1, v0}, Ljiy;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -63,22 +55,16 @@
 .method public final a(Ljrm;)Ljrw;
     .locals 1
 
-    .prologue
-    .line 6
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     sget-object v0, Ljrk;->a:Ljrk;
 
-    .line 8
     return-object v0
 .end method
 
 .method public final a()Z
     .locals 1
 
-    .prologue
-    .line 2
     const/4 v0, 0x0
 
     return v0
@@ -87,8 +73,6 @@
 .method public final b()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 3
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Optional.get() cannot be called on an absent value"
@@ -101,8 +85,6 @@
 .method public final c()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 5
     const/4 v0, 0x0
 
     return-object v0
@@ -111,8 +93,6 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 9
     if-ne p1, p0, :cond_0
 
     const/4 v0, 0x1
@@ -129,8 +109,6 @@
 .method public final hashCode()I
     .locals 1
 
-    .prologue
-    .line 10
     const v0, 0x79a31aac
 
     return v0
@@ -139,8 +117,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 11
     const-string v0, "Optional.absent()"
 
     return-object v0

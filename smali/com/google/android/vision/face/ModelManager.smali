@@ -59,8 +59,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 136
     :try_start_0
     const-string v0, "vision_face_jni"
 
@@ -68,11 +66,9 @@
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 140
     :goto_0
     return-void
 
-    .line 139
     :catch_0
     move-exception v0
 
@@ -88,19 +84,14 @@
 .method constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
     iput-object p1, p0, Lcom/google/android/vision/face/ModelManager;->mContext:Landroid/content/Context;
 
-    .line 8
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/android/vision/face/ModelManager;->mDownloadComplete:Z
 
-    .line 9
     new-instance v0, Landroid/os/Handler;
 
     new-instance v1, Lcom/google/android/vision/face/ModelManager$ModelManagerHandlerCallback;
@@ -113,43 +104,36 @@
 
     iput-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mHandler:Landroid/os/Handler;
 
-    .line 10
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 11
     invoke-static {v0}, Lcom/google/android/vision/face/ModelManager;->getDataSubdirectoryName(Landroid/content/ContentResolver;)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/google/android/vision/face/ModelManager;->mDataSubdirectoryName:Ljava/lang/String;
 
-    .line 12
     invoke-static {v0}, Lcom/google/android/vision/face/ModelManager;->getRemoteModelsDirectoryName(Landroid/content/ContentResolver;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mRemoteModelsDirectoryName:Ljava/lang/String;
 
-    .line 13
     invoke-static {p1}, Lcom/google/android/vision/face/ModelManager;->getDataDirectoryName(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mDataDirectoryName:Ljava/lang/String;
 
-    .line 14
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/google/android/vision/face/ModelManager;)V
     .locals 0
 
-    .prologue
-    .line 127
     invoke-direct {p0}, Lcom/google/android/vision/face/ModelManager;->handleCheckProgress()V
 
     return-void
@@ -158,8 +142,6 @@
 .method static synthetic access$100(Lcom/google/android/vision/face/ModelManager;)V
     .locals 0
 
-    .prologue
-    .line 128
     invoke-direct {p0}, Lcom/google/android/vision/face/ModelManager;->handleInstallationSuccess()V
 
     return-void
@@ -168,8 +150,6 @@
 .method static synthetic access$200(Lcom/google/android/vision/face/ModelManager;I)V
     .locals 0
 
-    .prologue
-    .line 129
     invoke-direct {p0, p1}, Lcom/google/android/vision/face/ModelManager;->handleInstallationFailure(I)V
 
     return-void
@@ -178,8 +158,6 @@
 .method static synthetic access$400(Lcom/google/android/vision/face/ModelManager;)J
     .locals 2
 
-    .prologue
-    .line 130
     iget-wide v0, p0, Lcom/google/android/vision/face/ModelManager;->mDownloadId:J
 
     return-wide v0
@@ -188,8 +166,6 @@
 .method static synthetic access$500(Lcom/google/android/vision/face/ModelManager;)Landroid/app/DownloadManager;
     .locals 1
 
-    .prologue
-    .line 131
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mDownloadManager:Landroid/app/DownloadManager;
 
     return-object v0
@@ -198,8 +174,6 @@
 .method static synthetic access$600(Lcom/google/android/vision/face/ModelManager;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 132
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mDataDirectoryName:Ljava/lang/String;
 
     return-object v0
@@ -208,8 +182,6 @@
 .method static synthetic access$700(Lcom/google/android/vision/face/ModelManager;Ljava/lang/String;Ljava/io/File;)V
     .locals 0
 
-    .prologue
-    .line 133
     invoke-direct {p0, p1, p2}, Lcom/google/android/vision/face/ModelManager;->unzipFile(Ljava/lang/String;Ljava/io/File;)V
 
     return-void
@@ -218,8 +190,6 @@
 .method static synthetic access$800(Lcom/google/android/vision/face/ModelManager;)Landroid/content/BroadcastReceiver;
     .locals 1
 
-    .prologue
-    .line 134
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mDownloadCompleteReceiver:Landroid/content/BroadcastReceiver;
 
     return-object v0
@@ -228,8 +198,6 @@
 .method static synthetic access$900(Lcom/google/android/vision/face/ModelManager;)Landroid/os/Handler;
     .locals 1
 
-    .prologue
-    .line 135
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -238,8 +206,6 @@
 .method public static areApkModelsInstalled(Landroid/content/Context;Lcom/google/android/vision/face/Detector$Settings;)Z
     .locals 1
 
-    .prologue
-    .line 15
     invoke-virtual {p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v0
@@ -257,13 +223,10 @@
 .method private static getDataDirectoryName(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 3
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 4
     new-instance v1, Ljava/io/File;
 
     invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -276,7 +239,6 @@
 
     invoke-direct {v1, v2, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 5
     invoke-virtual {v1}, Ljava/io/File;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -287,21 +249,16 @@
 .method static getDataSubdirectoryName(Landroid/content/ContentResolver;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 70
     const-string v0, "vision_face_data_subdirectory_name"
 
     invoke-static {p0, v0}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 71
     if-nez v0, :cond_0
 
-    .line 72
     const-string v0, "com.google.android.vision.face"
 
-    .line 73
     :cond_0
     return-object v0
 .end method
@@ -312,8 +269,6 @@
 .method static getModelsDirectoryName(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-static {p0}, Lcom/google/android/vision/face/ModelManager;->getDataDirectoryName(Landroid/content/Context;)Ljava/lang/String;
@@ -324,7 +279,6 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {v0}, Ljava/io/File;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -335,21 +289,16 @@
 .method private static getModelsZipBasename(Landroid/content/ContentResolver;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 66
     const-string v0, "vision_face_models_zip_basename"
 
     invoke-static {p0, v0}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 67
     if-nez v0, :cond_0
 
-    .line 68
     const-string v0, "models"
 
-    .line 69
     :cond_0
     return-object v0
 .end method
@@ -357,22 +306,16 @@
 .method private static getRemoteModelsDirectoryName(Landroid/content/ContentResolver;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 74
     const-string v0, "vision_face_remote_models_directory_name"
 
-    .line 75
     invoke-static {p0, v0}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 76
     if-nez v0, :cond_0
 
-    .line 77
     const-string v0, "http://dl.google.com/dl/android/face"
 
-    .line 78
     :cond_0
     return-object v0
 .end method
@@ -380,20 +323,16 @@
 .method private final handleCheckProgress()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 106
     iget-boolean v0, p0, Lcom/google/android/vision/face/ModelManager;->mDownloadComplete:Z
 
     if-nez v0, :cond_1
 
-    .line 107
     new-instance v0, Landroid/app/DownloadManager$Query;
 
     invoke-direct {v0}, Landroid/app/DownloadManager$Query;-><init>()V
 
-    .line 108
     const/4 v1, 0x1
 
     new-array v1, v1, [J
@@ -404,46 +343,38 @@
 
     invoke-virtual {v0, v1}, Landroid/app/DownloadManager$Query;->setFilterById([J)Landroid/app/DownloadManager$Query;
 
-    .line 109
     iget-object v1, p0, Lcom/google/android/vision/face/ModelManager;->mDownloadManager:Landroid/app/DownloadManager;
 
     invoke-virtual {v1, v0}, Landroid/app/DownloadManager;->query(Landroid/app/DownloadManager$Query;)Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 110
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 111
     const-string v1, "bytes_so_far"
 
-    .line 112
     invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 113
     invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v1
 
-    .line 114
     const-string v2, "total_size"
 
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 115
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
 
-    .line 116
     int-to-float v1, v1
 
     int-to-float v2, v2
@@ -456,23 +387,19 @@
 
     float-to-int v1, v1
 
-    .line 117
     iget-object v2, p0, Lcom/google/android/vision/face/ModelManager;->mCallbacks:Lcom/google/android/vision/face/ModelManager$ModelManagerCallbacks;
 
     invoke-interface {v2, v1}, Lcom/google/android/vision/face/ModelManager$ModelManagerCallbacks;->onModelDownloadProgressUpdate(I)V
 
-    .line 118
     :cond_0
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 119
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v2, 0x1f4
 
     invoke-virtual {v0, v4, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 120
     :cond_1
     return-void
 .end method
@@ -480,36 +407,28 @@
 .method private final handleInstallationFailure(I)V
     .locals 1
 
-    .prologue
-    .line 124
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/android/vision/face/ModelManager;->mDownloadComplete:Z
 
-    .line 125
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mCallbacks:Lcom/google/android/vision/face/ModelManager$ModelManagerCallbacks;
 
     invoke-interface {v0, p1}, Lcom/google/android/vision/face/ModelManager$ModelManagerCallbacks;->onModelInstallationFailure(I)V
 
-    .line 126
     return-void
 .end method
 
 .method private final handleInstallationSuccess()V
     .locals 1
 
-    .prologue
-    .line 121
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/android/vision/face/ModelManager;->mDownloadComplete:Z
 
-    .line 122
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mCallbacks:Lcom/google/android/vision/face/ModelManager$ModelManagerCallbacks;
 
     invoke-interface {v0}, Lcom/google/android/vision/face/ModelManager$ModelManagerCallbacks;->onModelInstallationSuccess()V
 
-    .line 123
     return-void
 .end method
 
@@ -519,30 +438,24 @@
         value = 0x15
     .end annotation
 
-    .prologue
-    .line 79
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mContext:Landroid/content/Context;
 
     const-string v1, "connectivity"
 
-    .line 80
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 81
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 82
     const/4 v0, 0x1
 
-    .line 83
     :goto_0
     return v0
 
@@ -555,8 +468,6 @@
 .method private final unzipFile(Ljava/lang/String;Ljava/io/File;)V
     .locals 5
 
-    .prologue
-    .line 84
     new-instance v1, Ljava/util/zip/ZipInputStream;
 
     new-instance v0, Ljava/io/FileInputStream;
@@ -565,7 +476,6 @@
 
     invoke-direct {v1, v0}, Ljava/util/zip/ZipInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 85
     :goto_0
     :try_start_0
     invoke-virtual {v1}, Ljava/util/zip/ZipInputStream;->getNextEntry()Ljava/util/zip/ZipEntry;
@@ -574,7 +484,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 86
     new-instance v2, Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
@@ -583,7 +492,6 @@
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 87
     new-instance v3, Ljava/io/File;
 
     invoke-virtual {v2}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -592,14 +500,12 @@
 
     invoke-direct {v3, p2, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 88
     invoke-virtual {v0}, Ljava/util/zip/ZipEntry;->isDirectory()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 89
     invoke-virtual {v3}, Ljava/io/File;->mkdirs()Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -607,11 +513,9 @@
 
     goto :goto_0
 
-    .line 102
     :catch_0
     move-exception v0
 
-    .line 103
     :try_start_1
     const-string v2, "ModelManager"
 
@@ -619,12 +523,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
     throw v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 105
     :catchall_0
     move-exception v0
 
@@ -632,7 +534,6 @@
 
     throw v0
 
-    .line 90
     :cond_0
     :try_start_2
     new-instance v2, Ljava/io/FileOutputStream;
@@ -642,13 +543,11 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 91
     const/16 v0, 0x400
 
     :try_start_3
     new-array v0, v0, [B
 
-    .line 92
     :goto_1
     invoke-virtual {v1, v0}, Ljava/util/zip/ZipInputStream;->read([B)I
 
@@ -658,7 +557,6 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 93
     const/4 v4, 0x0
 
     invoke-virtual {v2, v0, v4, v3}, Ljava/io/FileOutputStream;->write([BII)V
@@ -668,11 +566,9 @@
 
     goto :goto_1
 
-    .line 96
     :catch_1
     move-exception v0
 
-    .line 97
     :try_start_4
     const-string v3, "ModelManager"
 
@@ -680,12 +576,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     throw v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 99
     :catchall_1
     move-exception v0
 
@@ -694,7 +588,6 @@
 
     throw v0
 
-    .line 94
     :cond_1
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
@@ -703,11 +596,9 @@
 
     goto :goto_0
 
-    .line 100
     :cond_2
     invoke-virtual {v1}, Ljava/util/zip/ZipInputStream;->close()V
 
-    .line 101
     return-void
 .end method
 
@@ -716,23 +607,19 @@
 .method final areModelsInstalled()Z
     .locals 7
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 16
     invoke-static {}, Lcom/google/android/vision/face/ModelManager;->getModelNamesJni()[Ljava/lang/String;
 
     move-result-object v2
 
     move v0, v1
 
-    .line 17
     :goto_0
     array-length v3, v2
 
     if-ge v0, v3, :cond_1
 
-    .line 18
     iget-object v3, p0, Lcom/google/android/vision/face/ModelManager;->mDataDirectoryName:Ljava/lang/String;
 
     aget-object v4, v2, v0
@@ -779,29 +666,24 @@
 
     move-result-object v3
 
-    .line 19
     new-instance v4, Ljava/io/File;
 
     invoke-direct {v4, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 20
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 23
     :goto_1
     return v1
 
-    .line 22
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 23
     :cond_1
     const/4 v1, 0x1
 
@@ -814,44 +696,36 @@
         value = 0x15
     .end annotation
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 24
     iput-object p1, p0, Lcom/google/android/vision/face/ModelManager;->mCallbacks:Lcom/google/android/vision/face/ModelManager$ModelManagerCallbacks;
 
-    .line 25
     invoke-direct {p0}, Lcom/google/android/vision/face/ModelManager;->isConnectionMetered()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 26
     const-string v0, "ModelManager"
 
     const-string v1, "Cannot download models over a metered network"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 27
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mCallbacks:Lcom/google/android/vision/face/ModelManager$ModelManagerCallbacks;
 
     const/4 v1, 0x3
 
     invoke-interface {v0, v1}, Lcom/google/android/vision/face/ModelManager$ModelManagerCallbacks;->onModelInstallationFailure(I)V
 
-    .line 65
     :goto_0
     return-void
 
-    .line 29
     :cond_0
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 30
     const-string v1, "mounted_ro"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -860,14 +734,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 31
     const-string v0, "ModelManager"
 
     const-string v1, "Storage is read-only"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 32
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mCallbacks:Lcom/google/android/vision/face/ModelManager$ModelManagerCallbacks;
 
     const/4 v1, 0x5
@@ -876,7 +748,6 @@
 
     goto :goto_0
 
-    .line 34
     :cond_1
     const-string v1, "mounted"
 
@@ -886,7 +757,6 @@
 
     if-nez v1, :cond_3
 
-    .line 35
     const-string v1, "ModelManager"
 
     const-string v2, "Cannot access storage, state = "
@@ -908,7 +778,6 @@
     :goto_1
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 36
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mCallbacks:Lcom/google/android/vision/face/ModelManager$ModelManagerCallbacks;
 
     const/4 v1, 0x4
@@ -917,7 +786,6 @@
 
     goto :goto_0
 
-    .line 35
     :cond_2
     new-instance v0, Ljava/lang/String;
 
@@ -925,7 +793,6 @@
 
     goto :goto_1
 
-    .line 38
     :cond_3
     new-instance v0, Ljava/io/File;
 
@@ -933,21 +800,18 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 39
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-nez v1, :cond_5
 
-    .line 40
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     move-result v0
 
     if-nez v0, :cond_5
 
-    .line 41
     const-string v1, "ModelManager"
 
     const-string v2, "Could not create directory: "
@@ -971,7 +835,6 @@
     :goto_2
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 42
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mCallbacks:Lcom/google/android/vision/face/ModelManager$ModelManagerCallbacks;
 
     const/4 v1, 0x6
@@ -980,7 +843,6 @@
 
     goto :goto_0
 
-    .line 41
     :cond_4
     new-instance v0, Ljava/lang/String;
 
@@ -988,7 +850,6 @@
 
     goto :goto_2
 
-    .line 44
     :cond_5
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mContext:Landroid/content/Context;
 
@@ -1000,7 +861,6 @@
 
     move-result-object v0
 
-    .line 45
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -1029,7 +889,6 @@
 
     move-result-object v0
 
-    .line 46
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v1
@@ -1080,15 +939,12 @@
 
     move-result-object v1
 
-    .line 47
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 48
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 49
     iget-object v2, p0, Lcom/google/android/vision/face/ModelManager;->mRemoteModelsDirectoryName:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -1133,17 +989,14 @@
 
     move-result-object v0
 
-    .line 50
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 51
     new-instance v2, Landroid/app/DownloadManager$Request;
 
     invoke-direct {v2, v0}, Landroid/app/DownloadManager$Request;-><init>(Landroid/net/Uri;)V
 
-    .line 52
     const-string v3, "file://"
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -1160,33 +1013,25 @@
 
     move-result-object v0
 
-    .line 53
     :goto_3
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 54
     invoke-virtual {v2, v0}, Landroid/app/DownloadManager$Request;->setDestinationUri(Landroid/net/Uri;)Landroid/app/DownloadManager$Request;
 
-    .line 55
     const/4 v0, 0x2
 
     invoke-virtual {v2, v0}, Landroid/app/DownloadManager$Request;->setNotificationVisibility(I)Landroid/app/DownloadManager$Request;
 
-    .line 56
     invoke-virtual {v2, v5}, Landroid/app/DownloadManager$Request;->setVisibleInDownloadsUi(Z)Landroid/app/DownloadManager$Request;
 
-    .line 57
     invoke-virtual {v2, v5}, Landroid/app/DownloadManager$Request;->setAllowedOverMetered(Z)Landroid/app/DownloadManager$Request;
 
-    .line 58
     invoke-virtual {v2, v5}, Landroid/app/DownloadManager$Request;->setAllowedOverRoaming(Z)Landroid/app/DownloadManager$Request;
 
-    .line 59
     iput-boolean v5, p0, Lcom/google/android/vision/face/ModelManager;->mDownloadComplete:Z
 
-    .line 60
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mContext:Landroid/content/Context;
 
     const-string v3, "download"
@@ -1199,7 +1044,6 @@
 
     iput-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mDownloadManager:Landroid/app/DownloadManager;
 
-    .line 61
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mDownloadManager:Landroid/app/DownloadManager;
 
     invoke-virtual {v0, v2}, Landroid/app/DownloadManager;->enqueue(Landroid/app/DownloadManager$Request;)J
@@ -1208,21 +1052,18 @@
 
     iput-wide v2, p0, Lcom/google/android/vision/face/ModelManager;->mDownloadId:J
 
-    .line 62
     new-instance v0, Lcom/google/android/vision/face/ModelManager$1;
 
     invoke-direct {v0, p0, v1}, Lcom/google/android/vision/face/ModelManager$1;-><init>(Lcom/google/android/vision/face/ModelManager;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mDownloadCompleteReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 63
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v2, 0x1f4
 
     invoke-virtual {v0, v5, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 64
     iget-object v0, p0, Lcom/google/android/vision/face/ModelManager;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/google/android/vision/face/ModelManager;->mDownloadCompleteReceiver:Landroid/content/BroadcastReceiver;
@@ -1237,7 +1078,6 @@
 
     goto/16 :goto_0
 
-    .line 52
     :cond_6
     new-instance v0, Ljava/lang/String;
 

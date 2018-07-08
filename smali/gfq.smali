@@ -29,17 +29,13 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgfq;->a:Lgfp;
 
     iget-object v1, p0, Lgfq;->b:Ljava/lang/Runnable;
 
-    .line 2
     iget-object v0, v0, Lgfp;->a:Ljava/util/concurrent/Executor;
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 3
     return-void
 .end method

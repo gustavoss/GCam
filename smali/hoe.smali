@@ -52,15 +52,12 @@
 .method public final addAll(Ljava/util/Collection;)Z
     .locals 3
 
-    .prologue
-    .line 1
     instance-of v0, p1, Lhoe;
 
     if-eqz v0, :cond_1
 
     check-cast p1, Lhoe;
 
-    .line 2
     invoke-virtual {p0}, Lhoe;->size()I
 
     move-result v0
@@ -79,15 +76,12 @@
 
     const/4 v0, 0x1
 
-    .line 3
     :goto_0
     return v0
 
-    .line 2
     :cond_0
     const/4 v0, 0x0
 
-    .line 3
     goto :goto_0
 
     :cond_1

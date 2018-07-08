@@ -7,16 +7,12 @@
 .method constructor <init>(ILjava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Livv;-><init>(I)V
 
-    .line 2
     iget v0, p0, Livy;->e:I
 
     invoke-static {v0, p2}, Landroid/opengl/GLES20;->glShaderSource(ILjava/lang/String;)V
 
-    .line 3
     return-void
 .end method
 
@@ -25,12 +21,9 @@
 .method public final close()V
     .locals 1
 
-    .prologue
-    .line 4
     iget v0, p0, Livy;->e:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
 
-    .line 5
     return-void
 .end method

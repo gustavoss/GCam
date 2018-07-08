@@ -27,7 +27,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x0
 
     const/4 v6, 0x3
@@ -38,7 +37,6 @@
 
     const/4 v3, 0x2
 
-    .line 6
     new-instance v0, Liel;
 
     const-string v1, "ENCODING_PCM_8BIT"
@@ -47,7 +45,6 @@
 
     sput-object v0, Liel;->c:Liel;
 
-    .line 7
     new-instance v0, Liel;
 
     const-string v1, "ENCODING_PCM_16BIT"
@@ -56,7 +53,6 @@
 
     sput-object v0, Liel;->d:Liel;
 
-    .line 8
     new-instance v0, Liel;
 
     const-string v1, "ENCODING_IEC61937"
@@ -67,7 +63,6 @@
 
     sput-object v0, Liel;->e:Liel;
 
-    .line 9
     new-instance v0, Liel;
 
     const-string v1, "ENCODING_DEFAULT"
@@ -76,7 +71,6 @@
 
     sput-object v0, Liel;->f:Liel;
 
-    .line 10
     new-instance v0, Liel;
 
     const-string v1, "ENCODING_PCM_FLOAT"
@@ -85,7 +79,6 @@
 
     sput-object v0, Liel;->g:Liel;
 
-    .line 11
     const/4 v0, 0x5
 
     new-array v0, v0, [Liel;
@@ -118,25 +111,18 @@
 .method private constructor <init>(Ljava/lang/String;III)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput p3, p0, Liel;->a:I
 
-    .line 4
     iput p4, p0, Liel;->b:I
 
-    .line 5
     return-void
 .end method
 
 .method public static values()[Liel;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Liel;->h:[Liel;
 
     invoke-virtual {v0}, [Liel;->clone()Ljava/lang/Object;

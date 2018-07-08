@@ -26,8 +26,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,8 +36,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 7
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lekg;->a:Ljava/lang/String;
 
     iget-object v1, p0, Lekg;->c:Ljava/lang/String;

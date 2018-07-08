@@ -14,14 +14,10 @@
 .method public constructor <init>(Lkhp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lhco;->a:Lkhp;
 
-    .line 3
     return-void
 .end method
 
@@ -30,9 +26,6 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 4
-    .line 5
     new-instance v1, Lhcn;
 
     iget-object v0, p0, Lhco;->a:Lkhp;
@@ -45,6 +38,5 @@
 
     invoke-direct {v1, v0}, Lhcn;-><init>(Landroid/content/Context;)V
 
-    .line 6
     return-object v1
 .end method

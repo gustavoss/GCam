@@ -31,8 +31,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 36
     const-string v0, "CptrBtnReadiness"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -47,31 +45,24 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Libo;
 
     invoke-direct {v0}, Libo;-><init>()V
 
     invoke-direct {p0, v0}, Lcsn;-><init>(Ljava/util/concurrent/Executor;)V
 
-    .line 2
     return-void
 .end method
 
 .method private constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     iput-boolean v2, p0, Lcsn;->e:Z
 
-    .line 5
     new-instance v0, Licm;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -82,10 +73,8 @@
 
     iput-object v0, p0, Lcsn;->a:Licm;
 
-    .line 6
     iput-object p1, p0, Lcsn;->b:Ljava/util/concurrent/Executor;
 
-    .line 7
     new-instance v0, Licm;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -96,7 +85,6 @@
 
     invoke-virtual {p0, v0}, Lcsn;->b(Lida;)V
 
-    .line 8
     new-instance v0, Licm;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -107,7 +95,6 @@
 
     invoke-virtual {p0, v0}, Lcsn;->c(Lida;)V
 
-    .line 9
     return-void
 .end method
 
@@ -116,8 +103,6 @@
 .method public final a(Lihw;Ljava/util/concurrent/Executor;)Lihr;
     .locals 1
 
-    .prologue
-    .line 12
     iget-object v0, p0, Lcsn;->a:Licm;
 
     invoke-virtual {v0, p1, p2}, Licm;->a(Lihw;Ljava/util/concurrent/Executor;)Lihr;
@@ -130,14 +115,10 @@
 .method public final a()Ljava/lang/Boolean;
     .locals 1
 
-    .prologue
-    .line 13
     iget-object v0, p0, Lcsn;->a:Licm;
 
-    .line 14
     iget-object v0, v0, Licm;->c:Ljava/lang/Object;
 
-    .line 15
     check-cast v0, Ljava/lang/Boolean;
 
     return-object v0
@@ -146,8 +127,6 @@
 .method public final a(Lida;)V
     .locals 2
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lcsn;->b:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcso;
@@ -156,17 +135,14 @@
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 11
     return-void
 .end method
 
 .method final b()V
     .locals 6
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 30
     iget-object v0, p0, Lcsn;->g:Lida;
 
     if-eqz v0, :cond_1
@@ -185,7 +161,6 @@
 
     move v1, v0
 
-    .line 31
     :goto_0
     iget-object v0, p0, Lcsn;->h:Lida;
 
@@ -203,7 +178,6 @@
 
     move-result v0
 
-    .line 32
     :goto_1
     sget-object v3, Lcsn;->f:Ljava/lang/String;
 
@@ -239,7 +213,6 @@
 
     invoke-static {v3, v4}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 33
     iget-object v3, p0, Lcsn;->a:Licm;
 
     if-eqz v1, :cond_0
@@ -255,40 +228,32 @@
 
     invoke-virtual {v3, v0}, Licm;->a(Ljava/lang/Object;)V
 
-    .line 34
     return-void
 
     :cond_1
     move v1, v2
 
-    .line 30
     goto :goto_0
 
     :cond_2
     move v0, v2
 
-    .line 31
     goto :goto_1
 .end method
 
 .method final b(Lida;)V
     .locals 3
 
-    .prologue
-    .line 18
     iput-object p1, p0, Lcsn;->g:Lida;
 
-    .line 19
     iget-object v0, p0, Lcsn;->c:Lihr;
 
     if-eqz v0, :cond_0
 
-    .line 20
     iget-object v0, p0, Lcsn;->c:Lihr;
 
     invoke-interface {v0}, Lihr;->close()V
 
-    .line 21
     :cond_0
     iget-object v0, p0, Lcsn;->g:Lida;
 
@@ -298,22 +263,18 @@
 
     iget-object v2, p0, Lcsn;->b:Ljava/util/concurrent/Executor;
 
-    .line 22
     invoke-interface {v0, v1, v2}, Lida;->a(Lihw;Ljava/util/concurrent/Executor;)Lihr;
 
     move-result-object v0
 
     iput-object v0, p0, Lcsn;->c:Lihr;
 
-    .line 23
     return-void
 .end method
 
 .method public final synthetic c()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 35
     invoke-virtual {p0}, Lcsn;->a()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -324,21 +285,16 @@
 .method final c(Lida;)V
     .locals 2
 
-    .prologue
-    .line 24
     iput-object p1, p0, Lcsn;->h:Lida;
 
-    .line 25
     iget-object v0, p0, Lcsn;->d:Lihr;
 
     if-eqz v0, :cond_0
 
-    .line 26
     iget-object v0, p0, Lcsn;->d:Lihr;
 
     invoke-interface {v0}, Lihr;->close()V
 
-    .line 27
     :cond_0
     new-instance v0, Lcss;
 
@@ -346,22 +302,18 @@
 
     iget-object v1, p0, Lcsn;->b:Ljava/util/concurrent/Executor;
 
-    .line 28
     invoke-interface {p1, v0, v1}, Lida;->a(Lihw;Ljava/util/concurrent/Executor;)Lihr;
 
     move-result-object v0
 
     iput-object v0, p0, Lcsn;->d:Lihr;
 
-    .line 29
     return-void
 .end method
 
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 16
     iget-object v0, p0, Lcsn;->b:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcsq;
@@ -370,6 +322,5 @@
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 17
     return-void
 .end method

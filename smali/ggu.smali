@@ -16,8 +16,6 @@
 .method constructor <init>(Lggt;Lghg;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lggu;->b:Lggt;
 
     iput-object p2, p0, Lggu;->a:Lghg;
@@ -32,24 +30,17 @@
 .method public final run()V
     .locals 7
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lggu;->b:Lggt;
 
-    .line 3
     iget-object v2, v0, Lggt;->a:Ljava/util/Map;
 
-    .line 4
     monitor-enter v2
 
-    .line 5
     :try_start_0
     iget-object v0, p0, Lggu;->b:Lggt;
 
-    .line 6
     iget-object v0, v0, Lggt;->a:Ljava/util/Map;
 
-    .line 7
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -71,23 +62,18 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 8
     iget-object v1, p0, Lggu;->b:Lggt;
 
-    .line 9
     iget-object v1, v1, Lggt;->a:Ljava/util/Map;
 
-    .line 10
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lgfy;
 
-    .line 11
     iget-object v4, p0, Lggu;->a:Lghg;
 
-    .line 12
     invoke-interface {v0}, Lgfy;->k()Landroid/net/Uri;
 
     move-result-object v1
@@ -98,17 +84,14 @@
 
     check-cast v1, Landroid/net/Uri;
 
-    .line 13
     invoke-interface {v0}, Lgfy;->o()Lgho;
 
     move-result-object v5
 
     const/4 v6, 0x0
 
-    .line 14
     invoke-interface {v4, v1, v5, v6}, Lghg;->a(Landroid/net/Uri;Lgho;Lepa;)V
 
-    .line 15
     iget-object v4, p0, Lggu;->a:Lghg;
 
     invoke-interface {v0}, Lgfy;->k()Landroid/net/Uri;
@@ -127,10 +110,8 @@
 
     invoke-interface {v4, v1, v5}, Lghg;->a(Landroid/net/Uri;I)V
 
-    .line 16
     iget-object v4, p0, Lggu;->a:Lghg;
 
-    .line 17
     invoke-interface {v0}, Lgfy;->k()Landroid/net/Uri;
 
     move-result-object v1
@@ -145,12 +126,10 @@
 
     move-result-object v0
 
-    .line 18
     invoke-interface {v4, v1, v0}, Lghg;->a(Landroid/net/Uri;Lgxk;)V
 
     goto :goto_0
 
-    .line 20
     :catchall_0
     move-exception v0
 

@@ -21,109 +21,88 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     new-instance v0, Lahi;
 
     invoke-direct {v0}, Lahi;-><init>()V
 
     iput-object v0, p0, Lahd;->a:Lahi;
 
-    .line 39
     new-instance v0, Lahm;
 
     invoke-direct {v0}, Lahm;-><init>()V
 
     iput-object v0, p0, Lahd;->b:Lahm;
 
-    .line 40
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lahd;->c:Ljava/util/Map;
 
-    .line 41
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lahd;->d:Ljava/util/Map;
 
-    .line 42
     const/high16 v0, 0x400000
 
     iput v0, p0, Lahd;->e:I
 
-    .line 43
     return-void
 .end method
 
 .method public constructor <init>(I)V
     .locals 1
 
-    .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     new-instance v0, Lahi;
 
     invoke-direct {v0}, Lahi;-><init>()V
 
     iput-object v0, p0, Lahd;->a:Lahi;
 
-    .line 46
     new-instance v0, Lahm;
 
     invoke-direct {v0}, Lahm;-><init>()V
 
     iput-object v0, p0, Lahd;->b:Lahm;
 
-    .line 47
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lahd;->c:Ljava/util/Map;
 
-    .line 48
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lahd;->d:Ljava/util/Map;
 
-    .line 49
     iput p1, p0, Lahd;->e:I
 
-    .line 50
     return-void
 .end method
 
 .method private final a(Lahl;Ljava/lang/Class;)Ljava/lang/Object;
     .locals 5
 
-    .prologue
-    .line 51
     invoke-direct {p0, p2}, Lahd;->c(Ljava/lang/Class;)Lahc;
 
     move-result-object v1
 
-    .line 53
     iget-object v0, p0, Lahd;->a:Lahi;
 
     invoke-virtual {v0, p1}, Lahi;->a(Lahq;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 55
     if-eqz v0, :cond_0
 
-    .line 56
     iget v2, p0, Lahd;->f:I
 
     invoke-interface {v1, v0}, Lahc;->a(Ljava/lang/Object;)I
@@ -140,18 +119,15 @@
 
     iput v2, p0, Lahd;->f:I
 
-    .line 57
     invoke-interface {v1, v0}, Lahc;->a(Ljava/lang/Object;)I
 
     move-result v2
 
     invoke-direct {p0, v2, p2}, Lahd;->b(ILjava/lang/Class;)V
 
-    .line 58
     :cond_0
     if-nez v0, :cond_2
 
-    .line 59
     invoke-interface {v1}, Lahc;->a()Ljava/lang/String;
 
     move-result-object v0
@@ -164,7 +140,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 60
     invoke-interface {v1}, Lahc;->a()Ljava/lang/String;
 
     move-result-object v0
@@ -199,7 +174,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
     :cond_1
     iget v0, p1, Lahl;->a:I
 
@@ -207,7 +181,6 @@
 
     move-result-object v0
 
-    .line 62
     :cond_2
     return-object v0
 .end method
@@ -215,8 +188,6 @@
 .method private final b(Ljava/lang/Class;)Ljava/util/NavigableMap;
     .locals 2
 
-    .prologue
-    .line 84
     iget-object v0, p0, Lahd;->c:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -225,20 +196,16 @@
 
     check-cast v0, Ljava/util/NavigableMap;
 
-    .line 85
     if-nez v0, :cond_0
 
-    .line 86
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
-    .line 87
     iget-object v1, p0, Lahd;->c:Ljava/util/Map;
 
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 88
     :cond_0
     return-object v0
 .end method
@@ -246,27 +213,22 @@
 .method private final b(I)V
     .locals 5
 
-    .prologue
-    .line 63
     :cond_0
     :goto_0
     iget v0, p0, Lahd;->f:I
 
     if-le v0, p1, :cond_1
 
-    .line 64
     iget-object v0, p0, Lahd;->a:Lahi;
 
     invoke-virtual {v0}, Lahi;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 66
     const-string v1, "Argument must not be null"
 
     invoke-static {v0, v1}, Lapw;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 68
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -275,7 +237,6 @@
 
     move-result-object v1
 
-    .line 70
     iget v2, p0, Lahd;->f:I
 
     invoke-interface {v1, v0}, Lahc;->a(Ljava/lang/Object;)I
@@ -292,7 +253,6 @@
 
     iput v2, p0, Lahd;->f:I
 
-    .line 71
     invoke-interface {v1, v0}, Lahc;->a(Ljava/lang/Object;)I
 
     move-result v2
@@ -303,7 +263,6 @@
 
     invoke-direct {p0, v2, v3}, Lahd;->b(ILjava/lang/Class;)V
 
-    .line 72
     invoke-interface {v1}, Lahc;->a()Ljava/lang/String;
 
     move-result-object v2
@@ -316,7 +275,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 73
     invoke-interface {v1}, Lahc;->a()Ljava/lang/String;
 
     move-result-object v2
@@ -349,7 +307,6 @@
 
     goto :goto_0
 
-    .line 75
     :cond_1
     return-void
 .end method
@@ -357,13 +314,10 @@
 .method private final b(ILjava/lang/Class;)V
     .locals 4
 
-    .prologue
-    .line 76
     invoke-direct {p0, p2}, Lahd;->b(Ljava/lang/Class;)Ljava/util/NavigableMap;
 
     move-result-object v1
 
-    .line 77
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -374,10 +328,8 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 78
     if-nez v0, :cond_0
 
-    .line 79
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -426,7 +378,6 @@
 
     throw v0
 
-    .line 80
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -436,18 +387,15 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 81
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     invoke-interface {v1, v0}, Ljava/util/NavigableMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 83
     :goto_0
     return-void
 
-    .line 82
     :cond_1
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -471,8 +419,6 @@
 .method private final c(Ljava/lang/Class;)Lahc;
     .locals 4
 
-    .prologue
-    .line 89
     iget-object v0, p0, Lahd;->d:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -481,10 +427,8 @@
 
     check-cast v0, Lahc;
 
-    .line 90
     if-nez v0, :cond_0
 
-    .line 91
     const-class v0, [I
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -493,22 +437,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 92
     new-instance v0, Lahk;
 
     invoke-direct {v0}, Lahk;-><init>()V
 
-    .line 97
     :goto_0
     iget-object v1, p0, Lahd;->d:Ljava/util/Map;
 
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 98
     :cond_0
     return-object v0
 
-    .line 93
     :cond_1
     const-class v0, [B
 
@@ -518,20 +458,17 @@
 
     if-eqz v0, :cond_2
 
-    .line 94
     new-instance v0, Lahh;
 
     invoke-direct {v0}, Lahh;-><init>()V
 
     goto :goto_0
 
-    .line 95
     :cond_2
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "No array pool found for: "
 
-    .line 96
     invoke-virtual {p1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
@@ -568,12 +505,10 @@
 .method public final declared-synchronized a(ILjava/lang/Class;)Ljava/lang/Object;
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 18
     monitor-enter p0
 
     :try_start_0
@@ -591,10 +526,8 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 20
     if-eqz v0, :cond_3
 
-    .line 22
     iget v3, p0, Lahd;->f:I
 
     if-eqz v3, :cond_0
@@ -612,7 +545,6 @@
     :cond_0
     move v3, v1
 
-    .line 23
     :goto_0
     if-nez v3, :cond_1
 
@@ -624,12 +556,10 @@
 
     if-gt v3, v4, :cond_3
 
-    .line 24
     :cond_1
     :goto_1
     if-eqz v1, :cond_4
 
-    .line 25
     iget-object v1, p0, Lahd;->b:Lahm;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -640,7 +570,6 @@
 
     move-result-object v0
 
-    .line 27
     :goto_2
     invoke-direct {p0, v0, p2}, Lahd;->a(Lahl;Ljava/lang/Class;)Ljava/lang/Object;
     :try_end_0
@@ -655,16 +584,13 @@
     :cond_2
     move v3, v2
 
-    .line 22
     goto :goto_0
 
     :cond_3
     move v1, v2
 
-    .line 23
     goto :goto_1
 
-    .line 26
     :cond_4
     :try_start_1
     iget-object v0, p0, Lahd;->b:Lahm;
@@ -677,7 +603,6 @@
 
     goto :goto_2
 
-    .line 18
     :catchall_0
     move-exception v0
 
@@ -689,8 +614,6 @@
 .method public final declared-synchronized a(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 28
     monitor-enter p0
 
     :try_start_0
@@ -702,7 +625,6 @@
 
     move-result-object v0
 
-    .line 29
     invoke-direct {p0, v0, p1}, Lahd;->a(Lahl;Ljava/lang/Class;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -713,7 +635,6 @@
 
     return-object v0
 
-    .line 28
     :catchall_0
     move-exception v0
 
@@ -725,8 +646,6 @@
 .method public final declared-synchronized a()V
     .locals 1
 
-    .prologue
-    .line 30
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -736,12 +655,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 31
     monitor-exit p0
 
     return-void
 
-    .line 30
     :catchall_0
     move-exception v0
 
@@ -753,34 +670,28 @@
 .method public final declared-synchronized a(I)V
     .locals 1
 
-    .prologue
-    .line 32
     monitor-enter p0
 
     const/16 v0, 0x28
 
     if-lt p1, v0, :cond_1
 
-    .line 33
     :try_start_0
     invoke-virtual {p0}, Lahd;->a()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 36
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 34
     :cond_1
     const/16 v0, 0x14
 
     if-lt p1, v0, :cond_0
 
-    .line 35
     :try_start_1
     iget v0, p0, Lahd;->e:I
 
@@ -792,7 +703,6 @@
 
     goto :goto_0
 
-    .line 32
     :catchall_0
     move-exception v0
 
@@ -804,10 +714,8 @@
 .method public final declared-synchronized a(Ljava/lang/Object;)V
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 1
     monitor-enter p0
 
     :try_start_0
@@ -815,24 +723,20 @@
 
     move-result-object v2
 
-    .line 2
     invoke-direct {p0, v2}, Lahd;->c(Ljava/lang/Class;)Lahc;
 
     move-result-object v0
 
-    .line 3
     invoke-interface {v0, p1}, Lahc;->a(Ljava/lang/Object;)I
 
     move-result v3
 
-    .line 4
     invoke-interface {v0}, Lahc;->b()I
 
     move-result v0
 
     mul-int v4, v3, v0
 
-    .line 6
     iget v0, p0, Lahd;->e:I
 
     div-int/lit8 v0, v0, 0x2
@@ -843,23 +747,19 @@
 
     move v0, v1
 
-    .line 7
     :goto_0
     if-nez v0, :cond_1
 
-    .line 17
     :goto_1
     monitor-exit p0
 
     return-void
 
-    .line 6
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 9
     :cond_1
     :try_start_1
     iget-object v0, p0, Lahd;->b:Lahm;
@@ -868,17 +768,14 @@
 
     move-result-object v3
 
-    .line 10
     iget-object v0, p0, Lahd;->a:Lahi;
 
     invoke-virtual {v0, v3, p1}, Lahi;->a(Lahq;Ljava/lang/Object;)V
 
-    .line 11
     invoke-direct {p0, v2}, Lahd;->b(Ljava/lang/Class;)Ljava/util/NavigableMap;
 
     move-result-object v2
 
-    .line 12
     iget v0, v3, Lahl;->a:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -891,7 +788,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 13
     iget v3, v3, Lahl;->a:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -909,14 +805,12 @@
 
     invoke-interface {v2, v3, v0}, Ljava/util/NavigableMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 14
     iget v0, p0, Lahd;->f:I
 
     add-int/2addr v0, v4
 
     iput v0, p0, Lahd;->f:I
 
-    .line 16
     iget v0, p0, Lahd;->e:I
 
     invoke-direct {p0, v0}, Lahd;->b(I)V
@@ -925,7 +819,6 @@
 
     goto :goto_1
 
-    .line 1
     :catchall_0
     move-exception v0
 
@@ -933,7 +826,6 @@
 
     throw v0
 
-    .line 13
     :cond_2
     :try_start_2
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I

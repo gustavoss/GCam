@@ -16,8 +16,6 @@
 .method constructor <init>(Ldzx;Lcmj;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldzp;->a:Ldzx;
 
     iput-object p2, p0, Ldzp;->b:Lcmj;
@@ -32,22 +30,17 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 2
     sget-object v0, Ldzl;->a:Ljava/lang/String;
 
-    .line 3
     const-string v1, "thumbnail clicked"
 
     invoke-static {v0, v1}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Ldzp;->a:Ldzx;
 
     iget-object v1, p0, Ldzp;->b:Lcmj;
 
     invoke-virtual {v0, v1}, Ldzx;->a(Lcmj;)V
 
-    .line 5
     return-void
 .end method

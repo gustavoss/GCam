@@ -39,44 +39,32 @@
 .method constructor <init>(Liiv;Landroid/os/Handler;Lijs;Liij;Lijg;Liii;Liid;)V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput-object p1, p0, Liim;->b:Liiv;
 
-    .line 42
     iput-object p2, p0, Liim;->l:Landroid/os/Handler;
 
-    .line 43
     iput-object p3, p0, Liim;->m:Lijs;
 
-    .line 44
     iput-object p4, p0, Liim;->a:Liij;
 
-    .line 45
     iput-object p5, p0, Liim;->c:Lijg;
 
-    .line 46
     iput-object p6, p0, Liim;->n:Liii;
 
-    .line 47
     iput-boolean v0, p0, Liim;->o:Z
 
-    .line 48
     iput-boolean v0, p0, Liim;->k:Z
 
-    .line 49
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Liim;->d:Ljava/lang/Object;
 
-    .line 50
     const-string v0, "CameraDeviceMgr"
 
     invoke-interface {p7, v0}, Liid;->a(Ljava/lang/String;)Liid;
@@ -85,52 +73,41 @@
 
     iput-object v0, p0, Liim;->e:Liid;
 
-    .line 51
     return-void
 .end method
 
 .method private final a(Liin;)V
     .locals 2
 
-    .prologue
-    .line 80
     iget-object v0, p0, Liim;->l:Landroid/os/Handler;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 81
     new-instance v1, Lijj;
 
     invoke-direct {v1, p1}, Lijj;-><init>(Liin;)V
 
-    .line 82
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 83
     return-void
 .end method
 
 .method private final c()V
     .locals 3
 
-    .prologue
-    .line 89
     iget-object v1, p0, Liim;->d:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 90
     :try_start_0
     iget-boolean v0, p0, Liim;->o:Z
 
     if-nez v0, :cond_0
 
-    .line 91
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Liim;->o:Z
 
-    .line 92
     iget-object v0, p0, Liim;->l:Landroid/os/Handler;
 
     new-instance v2, Lijl;
@@ -139,7 +116,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 93
     :cond_0
     monitor-exit v1
 
@@ -160,24 +136,19 @@
 .method final a()V
     .locals 3
 
-    .prologue
-    .line 84
     iget-object v1, p0, Liim;->d:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 85
     :try_start_0
     iget-boolean v0, p0, Liim;->k:Z
 
     if-nez v0, :cond_0
 
-    .line 86
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Liim;->k:Z
 
-    .line 87
     iget-object v0, p0, Liim;->l:Landroid/os/Handler;
 
     new-instance v2, Lijk;
@@ -186,7 +157,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 88
     :cond_0
     monitor-exit v1
 
@@ -205,15 +175,12 @@
 .method public final a(Lilr;Liin;)V
     .locals 6
 
-    .prologue
-    .line 1
     iget-object v0, p0, Liim;->n:Liii;
 
     const-string v1, "CameraDeviceManager#open"
 
     invoke-interface {v0, v1}, Liii;->a(Ljava/lang/String;)V
 
-    .line 2
     :try_start_0
     iget-object v2, p0, Liim;->d:Ljava/lang/Object;
 
@@ -221,7 +188,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3
     :try_start_1
     iget-object v0, p0, Liim;->c:Lijg;
 
@@ -231,68 +197,52 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     const/4 v0, -0x2
 
     invoke-interface {p2, v0}, Liin;->a(I)V
 
-    .line 5
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 6
     iget-object v0, p0, Liim;->n:Liii;
 
     invoke-interface {v0}, Liii;->a()V
 
-    .line 38
     :goto_0
     return-void
 
-    .line 8
     :cond_0
     :try_start_2
     iget-object v0, p0, Liim;->h:Lilr;
 
-    .line 9
     iget-object v1, p0, Liim;->g:Lijp;
 
-    .line 10
     new-instance v3, Lijp;
 
-    .line 11
     invoke-direct {v3}, Lijp;-><init>()V
 
-    .line 12
     iput-object v3, p0, Liim;->g:Lijp;
 
-    .line 13
     iget-object v3, p0, Liim;->g:Lijp;
 
     invoke-virtual {v3, p2}, Lijp;->a(Liin;)V
 
-    .line 14
     iput-object p1, p0, Liim;->f:Lilr;
 
-    .line 15
     if-eqz v1, :cond_2
 
-    .line 16
     iget-object v3, p0, Liim;->i:Liiz;
 
     if-eqz v3, :cond_1
 
-    .line 17
     iget-object v3, p0, Liim;->i:Liiz;
 
     invoke-virtual {v3, v1}, Liiz;->b(Liin;)V
 
-    .line 18
     :cond_1
     invoke-direct {p0, v1}, Liim;->a(Liin;)V
 
-    .line 19
     :cond_2
     if-eqz v0, :cond_3
 
@@ -300,16 +250,13 @@
 
     if-nez v1, :cond_5
 
-    .line 20
     :cond_3
     iget-object v1, p0, Liim;->e:Liid;
 
     const-string v3, "Opening camera "
 
-    .line 21
     iget-object v0, p1, Lilr;->b:Ljava/lang/String;
 
-    .line 22
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -327,23 +274,19 @@
     :goto_1
     invoke-interface {v1, v0}, Liid;->d(Ljava/lang/String;)V
 
-    .line 23
     invoke-virtual {p0}, Liim;->a()V
 
-    .line 36
     :goto_2
     monitor-exit v2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 37
     iget-object v0, p0, Liim;->n:Liii;
 
     invoke-interface {v0}, Liii;->a()V
 
     goto :goto_0
 
-    .line 22
     :cond_4
     :try_start_3
     new-instance v0, Ljava/lang/String;
@@ -352,7 +295,6 @@
 
     goto :goto_1
 
-    .line 36
     :catchall_0
     move-exception v0
 
@@ -365,7 +307,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 39
     :catchall_1
     move-exception v0
 
@@ -375,7 +316,6 @@
 
     throw v0
 
-    .line 24
     :cond_5
     :try_start_5
     invoke-virtual {v0, p1}, Lilr;->equals(Ljava/lang/Object;)Z
@@ -384,13 +324,10 @@
 
     if-eqz v1, :cond_6
 
-    .line 25
     iget-object v0, p0, Liim;->e:Liid;
 
-    .line 26
     iget-object v1, p1, Lilr;->b:Ljava/lang/String;
 
-    .line 27
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
@@ -427,7 +364,6 @@
 
     invoke-interface {v0, v1}, Liid;->d(Ljava/lang/String;)V
 
-    .line 28
     iget-object v0, p0, Liim;->i:Liiz;
 
     invoke-static {v0}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
@@ -448,17 +384,13 @@
 
     goto :goto_2
 
-    .line 29
     :cond_6
     iget-object v1, p0, Liim;->e:Liid;
 
-    .line 30
     iget-object v3, p1, Lilr;->b:Ljava/lang/String;
 
-    .line 32
     iget-object v0, v0, Lilr;->b:Ljava/lang/String;
 
-    .line 33
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
@@ -507,10 +439,8 @@
 
     move-result-object v0
 
-    .line 34
     invoke-interface {v1, v0}, Liid;->d(Ljava/lang/String;)V
 
-    .line 35
     invoke-direct {p0}, Liim;->c()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
@@ -521,39 +451,30 @@
 .method final a(Lilr;ZI)V
     .locals 5
 
-    .prologue
-    .line 107
     iget-object v1, p0, Liim;->d:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 108
     :try_start_0
     iget-object v0, p0, Liim;->h:Lilr;
 
-    .line 109
     iget-object v2, p0, Liim;->f:Lilr;
 
-    .line 110
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 111
     invoke-virtual {p0}, Liim;->b()V
 
-    .line 112
     iget-object v1, p0, Liim;->d:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 113
     :try_start_1
     iget-object v3, p0, Liim;->a:Liij;
 
     invoke-interface {v3, p1}, Liij;->b(Lilr;)V
 
-    .line 114
     iget-object v3, p0, Liim;->c:Lijg;
 
     invoke-virtual {v3}, Lijg;->b()Z
@@ -564,7 +485,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 115
     invoke-virtual {v0, p1}, Lilr;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -573,38 +493,30 @@
 
     if-eqz v2, :cond_2
 
-    .line 116
     invoke-virtual {v2, p1}, Lilr;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 117
     const/4 v0, 0x0
 
     iput-object v0, p0, Liim;->f:Lilr;
 
-    .line 118
     const/4 v0, 0x0
 
     iput-object v0, p0, Liim;->g:Lijp;
 
-    .line 119
     if-eqz p2, :cond_1
 
-    .line 120
     const/4 v0, -0x2
 
     if-ne p3, v0, :cond_0
 
-    .line 121
     iget-object v0, p0, Liim;->e:Liid;
 
-    .line 122
     iget-object v2, p1, Lilr;->b:Ljava/lang/String;
 
-    .line 123
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
@@ -641,16 +553,13 @@
 
     invoke-interface {v0, v2}, Liid;->f(Ljava/lang/String;)V
 
-    .line 124
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 137
     :goto_0
     return-void
 
-    .line 110
     :catchall_0
     move-exception v0
 
@@ -661,20 +570,16 @@
 
     throw v0
 
-    .line 125
     :cond_0
     const/4 v0, -0x1
 
     if-ne p3, v0, :cond_1
 
-    .line 126
     :try_start_3
     iget-object v0, p0, Liim;->e:Liid;
 
-    .line 127
     iget-object v2, p1, Lilr;->b:Ljava/lang/String;
 
-    .line 128
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
@@ -711,12 +616,10 @@
 
     invoke-interface {v0, v2}, Liid;->f(Ljava/lang/String;)V
 
-    .line 129
     monitor-exit v1
 
     goto :goto_0
 
-    .line 135
     :catchall_1
     move-exception v0
 
@@ -726,15 +629,12 @@
 
     throw v0
 
-    .line 130
     :cond_1
     :try_start_4
     iget-object v0, p0, Liim;->e:Liid;
 
-    .line 131
     iget-object v2, p1, Lilr;->b:Ljava/lang/String;
 
-    .line 132
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
@@ -775,7 +675,6 @@
 
     invoke-interface {v0, v2}, Liid;->c(Ljava/lang/String;)V
 
-    .line 133
     iget-object v0, p0, Liim;->m:Lijs;
 
     new-instance v2, Liji;
@@ -784,18 +683,15 @@
 
     invoke-interface {v0, v2}, Lijs;->a(Ljava/lang/Throwable;)V
 
-    .line 134
     monitor-exit v1
 
     goto :goto_0
 
-    .line 135
     :cond_2
     monitor-exit v1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 136
     invoke-virtual {p0}, Liim;->a()V
 
     goto :goto_0
@@ -804,65 +700,49 @@
 .method public final a(Z)V
     .locals 4
 
-    .prologue
-    .line 52
     iget-object v1, p0, Liim;->d:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 53
     :try_start_0
     iget-object v0, p0, Liim;->h:Lilr;
 
-    .line 54
     const/4 v2, 0x0
 
     iput-object v2, p0, Liim;->f:Lilr;
 
-    .line 55
     const/4 v2, 0x0
 
     iput-object v2, p0, Liim;->h:Lilr;
 
-    .line 56
     iget-object v2, p0, Liim;->g:Lijp;
 
-    .line 57
     if-eqz v2, :cond_1
 
-    .line 58
     iget-object v3, p0, Liim;->i:Liiz;
 
     if-eqz v3, :cond_0
 
-    .line 59
     iget-object v3, p0, Liim;->i:Liiz;
 
     invoke-virtual {v3, v2}, Liiz;->b(Liin;)V
 
-    .line 60
     :cond_0
     invoke-direct {p0, v2}, Liim;->a(Liin;)V
 
-    .line 61
     :cond_1
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 62
     if-eqz p1, :cond_4
 
-    .line 63
     if-eqz v0, :cond_2
 
-    .line 64
     iget-object v1, p0, Liim;->e:Liid;
 
-    .line 65
     iget-object v0, v0, Lilr;->b:Ljava/lang/String;
 
-    .line 66
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -899,40 +779,32 @@
 
     invoke-interface {v1, v0}, Liid;->d(Ljava/lang/String;)V
 
-    .line 68
     :cond_2
     iget-object v1, p0, Liim;->d:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 69
     :try_start_1
     iget-boolean v0, p0, Liim;->o:Z
 
     if-nez v0, :cond_3
 
-    .line 70
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Liim;->o:Z
 
-    .line 71
     invoke-virtual {p0}, Liim;->b()V
 
-    .line 72
     invoke-virtual {p0}, Liim;->a()V
 
-    .line 73
     :cond_3
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 79
     :goto_0
     return-void
 
-    .line 61
     :catchall_0
     move-exception v0
 
@@ -943,7 +815,6 @@
 
     throw v0
 
-    .line 73
     :catchall_1
     move-exception v0
 
@@ -954,17 +825,13 @@
 
     throw v0
 
-    .line 74
     :cond_4
     if-eqz v0, :cond_5
 
-    .line 75
     iget-object v1, p0, Liim;->e:Liid;
 
-    .line 76
     iget-object v0, v0, Lilr;->b:Ljava/lang/String;
 
-    .line 77
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -1001,7 +868,6 @@
 
     invoke-interface {v1, v0}, Liid;->d(Ljava/lang/String;)V
 
-    .line 78
     :cond_5
     invoke-direct {p0}, Liim;->c()V
 
@@ -1011,62 +877,47 @@
 .method final b()V
     .locals 4
 
-    .prologue
-    .line 94
     iget-object v1, p0, Liim;->d:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 95
     :try_start_0
     iget-object v0, p0, Liim;->i:Liiz;
 
-    .line 96
     iget-object v2, p0, Liim;->j:Liiq;
 
-    .line 97
     const/4 v3, 0x0
 
     iput-object v3, p0, Liim;->j:Liiq;
 
-    .line 98
     const/4 v3, 0x0
 
     iput-object v3, p0, Liim;->i:Liiz;
 
-    .line 99
     const/4 v3, 0x0
 
     iput-object v3, p0, Liim;->h:Lilr;
 
-    .line 100
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Liim;->o:Z
 
-    .line 101
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 102
     if-eqz v0, :cond_0
 
-    .line 103
     invoke-interface {v0}, Lihr;->close()V
 
-    .line 104
     :cond_0
     if-eqz v2, :cond_1
 
-    .line 105
     invoke-interface {v2}, Lihr;->close()V
 
-    .line 106
     :cond_1
     return-void
 
-    .line 101
     :catchall_0
     move-exception v0
 

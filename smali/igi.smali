@@ -29,21 +29,16 @@
 .method public final run()V
     .locals 8
 
-    .prologue
-    .line 1
     iget-object v0, p0, Ligi;->a:Lify;
 
     iget-object v1, p0, Ligi;->b:Landroid/media/MediaCodec$BufferInfo;
 
-    .line 2
     iget-object v0, v0, Lify;->d:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    .line 3
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableCollection(Ljava/util/Collection;)Ljava/util/Collection;
 
     move-result-object v0
 
-    .line 4
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -61,7 +56,6 @@
 
     check-cast v0, Lifz;
 
-    .line 5
     iget-wide v4, v1, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
     iget v3, v1, Landroid/media/MediaCodec$BufferInfo;->size:I
@@ -72,7 +66,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     return-void
 .end method

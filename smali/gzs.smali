@@ -25,21 +25,15 @@
 .method public final a(Z)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgzs;->a:Lgzn;
 
-    .line 2
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Lgzn;->b()V
 
-    .line 5
     :goto_0
     return-void
 
-    .line 4
     :cond_0
     const/4 v1, 0x0
 

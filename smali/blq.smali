@@ -7,8 +7,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 3
     const-string v0, "CameraDeviceMod"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -19,8 +17,6 @@
 .method public static a()Liij;
     .locals 1
 
-    .prologue
-    .line 1
     invoke-static {}, Lblh;->a()Liij;
 
     move-result-object v0
@@ -31,10 +27,8 @@
 .method public static b()Ljava/util/concurrent/Semaphore;
     .locals 2
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/Semaphore;
 
     invoke-direct {v0, v1, v1}, Ljava/util/concurrent/Semaphore;-><init>(IZ)V

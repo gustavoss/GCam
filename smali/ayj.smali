@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 1
     new-instance v0, Lbpw;
 
     const-string v1, "camera.advice"
@@ -25,7 +23,6 @@
 
     sput-object v0, Layj;->a:Lbpw;
 
-    .line 2
     new-instance v0, Lbpw;
 
     const-string v1, "camera.advice.dirtylens"
@@ -34,7 +31,6 @@
 
     sput-object v0, Layj;->b:Lbpw;
 
-    .line 3
     new-instance v0, Lbqe;
 
     const-string v1, "camera.advice.dld_log"

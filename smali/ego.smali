@@ -31,8 +31,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 19
     const-string v0, "PhotoVideoChart"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -47,38 +45,28 @@
 .method public constructor <init>(Lehb;Lida;Lida;Lbuq;)V
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lglg;-><init>([[[C)V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lego;->k:Z
 
-    .line 3
     iput-object p1, p0, Lego;->e:Lehb;
 
-    .line 4
     iput-object p2, p0, Lego;->a:Lida;
 
-    .line 5
     iput-object p3, p0, Lego;->b:Lida;
 
-    .line 6
     iput-object p4, p0, Lego;->f:Lbuq;
 
-    .line 7
     return-void
 .end method
 
 .method static synthetic a(Lego;)Lida;
     .locals 1
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lego;->b:Lida;
 
     return-object v0
@@ -87,8 +75,6 @@
 .method static synthetic b(Lego;)Lida;
     .locals 1
 
-    .prologue
-    .line 18
     iget-object v0, p0, Lego;->a:Lida;
 
     return-object v0
@@ -99,45 +85,33 @@
 .method public a()V
     .locals 1
 
-    .prologue
-    .line 13
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lego;->k:Z
 
-    .line 14
     return-void
 .end method
 
 .method public a(Lcom/google/android/apps/camera/bottombar/BottomBarController;Lgvn;Lhhj;Lgsi;)V
     .locals 0
 
-    .prologue
-    .line 8
     iput-object p4, p0, Lego;->g:Lgsi;
 
-    .line 9
     iput-object p1, p0, Lego;->h:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
-    .line 10
     iput-object p2, p0, Lego;->i:Lgvn;
 
-    .line 11
     iput-object p3, p0, Lego;->j:Lhhj;
 
-    .line 12
     return-void
 .end method
 
 .method public b()V
     .locals 1
 
-    .prologue
-    .line 15
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lego;->k:Z
 
-    .line 16
     return-void
 .end method

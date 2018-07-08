@@ -22,8 +22,6 @@
 .method constructor <init>(Lbgs;Linr;Lbhe;Lbhn;Lkfk;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbgw;->e:Lbgs;
 
     iput-object p2, p0, Lbgw;->a:Linr;
@@ -42,8 +40,6 @@
 .method private final a()Ljava/lang/Void;
     .locals 5
 
-    .prologue
-    .line 2
     :try_start_0
     iget-object v0, p0, Lbgw;->a:Linr;
 
@@ -57,7 +53,6 @@
 
     invoke-virtual {v0, v1, v2}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 3
     iget-object v0, p0, Lbgw;->b:Lbhe;
 
     sget-object v1, Lfhu;->a:Lfhu;
@@ -66,16 +61,12 @@
 
     iget-object v3, p0, Lbgw;->e:Lbgs;
 
-    .line 4
     iget-object v3, v3, Lbgs;->b:Lbhp;
 
-    .line 5
     iget-object v4, p0, Lbgw;->c:Lbhn;
 
-    .line 6
     invoke-virtual {v0, v1, v2, v3, v4}, Lbhe;->a(Lfhu;Linr;Lbhp;Lfhv;)V
 
-    .line 7
     iget-object v0, p0, Lbgw;->e:Lbgs;
 
     invoke-static {v0}, Lbgs;->a(Lbgs;)Lida;
@@ -92,17 +83,14 @@
     :try_end_0
     .catch Lijt; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 11
     :goto_0
     const/4 v0, 0x0
 
     return-object v0
 
-    .line 9
     :catch_0
     move-exception v0
 
-    .line 10
     iget-object v1, p0, Lbgw;->d:Lkfk;
 
     invoke-virtual {v1, v0}, Lkcy;->a(Ljava/lang/Throwable;)Z
@@ -115,8 +103,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 12
     invoke-direct {p0}, Lbgw;->a()Ljava/lang/Void;
 
     move-result-object v0

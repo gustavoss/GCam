@@ -28,8 +28,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 103
     const-string v0, "Port1CameraSelector"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -44,41 +42,28 @@
 .method public constructor <init>(Ldkz;Ldky;Lbka;Lhbv;Liii;Lbky;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldle;->b:Ldkz;
 
-    .line 3
     iput-object p2, p0, Ldle;->c:Ldky;
 
-    .line 4
     iput-object p3, p0, Ldle;->d:Lbka;
 
-    .line 5
     iput-object p4, p0, Ldle;->e:Lhbv;
 
-    .line 6
     iput-object p5, p0, Ldle;->f:Liii;
 
-    .line 7
     iput-object p6, p0, Ldle;->g:Lbky;
 
-    .line 8
     return-void
 .end method
 
 .method private static a(Lfga;)I
     .locals 1
 
-    .prologue
-    .line 94
-    .line 95
     iget v0, p0, Lfga;->c:I
 
-    .line 96
     add-int/lit8 v0, v0, 0x3
 
     add-int/lit8 v0, v0, 0x2
@@ -89,20 +74,16 @@
 .method private final a()Ldta;
     .locals 7
 
-    .prologue
     const/4 v6, 0x2
 
-    .line 86
     iget-object v0, p0, Ldle;->c:Ldky;
 
-    .line 87
     const-string v1, "persist.gcam.sm.denom"
 
     invoke-virtual {v0, v1}, Ldky;->a(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 89
     sget-object v1, Ldle;->a:Ljava/lang/String;
 
     const-string v2, "Smart metering configuration for auto-HDR+ decision:period = %d, max image count = %d"
@@ -111,7 +92,6 @@
 
     const/4 v4, 0x0
 
-    .line 90
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -126,15 +106,14 @@
 
     aput-object v5, v3, v4
 
-    .line 91
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    const/4 v4, 0x0
+
+    invoke-static {v4, v2, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 92
     invoke-static {v1, v2}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 93
     new-instance v1, Ldta;
 
     invoke-direct {v1, v0}, Ldta;-><init>(I)V
@@ -145,8 +124,6 @@
 .method private static a(Lfga;Lfea;)Lfnd;
     .locals 4
 
-    .prologue
-    .line 77
     const/4 v0, 0x3
 
     new-array v0, v0, [I
@@ -157,30 +134,24 @@
 
     move-result-object v0
 
-    .line 78
     invoke-static {v0}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 79
     new-instance v1, Lfnd;
 
-    .line 80
-    invoke-static {p0}, Ldle;->a(Lfga;)I
+    iget v2, p0, Lfga;->c:I
 
-    move-result v2
+    add-int/lit8 v2, v2, 0x3
 
-    .line 81
+    add-int/lit8 v2, v2, 0x2
+
     iget-object v3, v0, Limi;->b:Lihs;
 
-    .line 83
     iget v0, v0, Limi;->a:I
 
-    .line 84
     invoke-direct {v1, v2, v3, v0}, Lfnd;-><init>(ILihs;I)V
 
-    .line 85
     return-object v1
 
-    .line 77
     nop
 
     :array_0
@@ -191,59 +162,30 @@
     .end array-data
 .end method
 
-.method private static a(Lfea;Lftu;)Lfvb;
-    .locals 5
+.method private static a(Lfgb;Lfea;Lftu;)Lfvb;
+    .locals 8
 
-    .prologue
-    .line 68
-    .line 69
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
     :try_start_0
-    iget-object v0, p1, Lftu;->a:Lihs;
+    invoke-virtual {p0}, Lfgb;->ordinal()I
 
-    .line 70
-    const/16 v1, 0x25
+    move-result v2
 
-    .line 71
-    invoke-static {p0, v0, v1}, Lfuz;->a(Lfea;Lihs;I)Lfuz;
+    packed-switch v2, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Unknown capture support level"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
     :try_end_0
     .catch Lfuy; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v1
-
-    .line 75
-    sget-object v2, Ldle;->a:Ljava/lang/String;
-
-    const-string v3, "Selected picture configuration: "
-
-    invoke-virtual {v1}, Lfuz;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    invoke-virtual {v3, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-static {v2, v0}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 76
-    new-instance v0, Lfvb;
-
-    invoke-direct {v0, v1}, Lfvb;-><init>(Lfuz;)V
-
-    return-object v0
-
-    .line 74
     :catch_0
     move-exception v0
 
@@ -255,20 +197,220 @@
 
     throw v0
 
-    .line 75
+    :pswitch_0
+    :try_start_1
+    iget-object v0, p2, Lftu;->a:Lihs;
+
+    const/16 v1, 0x100
+
+    invoke-static {p1, v0, v1}, Lfuz;->a(Lfea;Lihs;I)Lfuz;
+    :try_end_1
+    .catch Lfuy; {:try_start_1 .. :try_end_1} :catch_0
+
+    move-result-object v0
+
+    :goto_0
+    sget-object v2, Ldle;->a:Ljava/lang/String;
+
+    const-string v3, "Selected picture configuration: "
+
+    invoke-virtual {v0}, Lfuz;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    :goto_1
+    invoke-static {v2, v1}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Lfvb;
+
+    invoke-direct {v1, v0}, Lfvb;-><init>(Lfuz;)V
+
+    return-object v1
+
+    :pswitch_1
+    :try_start_2
+    iget-object v0, p2, Lftu;->a:Lihs;
+
+    const/16 v1, 0x23
+
+    invoke-static {p1, v0, v1}, Lfuz;->a(Lfea;Lihs;I)Lfuz;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :pswitch_2
+    iget-object v4, p2, Lftu;->a:Lihs;
+
+    const/16 v2, 0x23
+
+    invoke-interface {p1, v2}, Lfea;->b(I)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    move v1, v0
+
     :cond_0
+    const-string v3, "No reprocessing input sizes supported for ImageFormat: "
+
+    const/16 v0, 0x23
+
+    invoke-static {v0}, Liih;->a(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    invoke-virtual {v3, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_2
+    invoke-static {v1, v0}, Ljiy;->b(ZLjava/lang/Object;)V
+
+    const/16 v0, 0x100
+
+    invoke-interface {p1, v0}, Lfea;->a(I)Ljava/util/List;
+
+    move-result-object v0
+
+    const-string v1, "TargetSize (%s) is not supported for ImageFormat (%s).  SupportedSizes = %s"
+
+    const/4 v3, 0x3
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v4}, Lihs;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    aput-object v6, v3, v5
+
+    const/4 v5, 0x1
+
+    const/16 v6, 0x100
+
+    invoke-static {v6}, Liih;->a(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    aput-object v6, v3, v5
+
+    const/4 v5, 0x2
+
+    aput-object v0, v3, v5
+
+    invoke-static {v1, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v4}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    invoke-static {v0, v1}, Ljiy;->b(ZLjava/lang/Object;)V
+
+    new-instance v1, Limi;
+
+    const/16 v0, 0x23
+
+    invoke-static {v2}, Liif;->a(Ljava/util/List;)Lihs;
+
+    move-result-object v2
+
+    invoke-direct {v1, v0, v2}, Limi;-><init>(ILihs;)V
+
+    new-instance v0, Limi;
+
+    const/16 v2, 0x100
+
+    invoke-direct {v0, v2, v4}, Limi;-><init>(ILihs;)V
+
+    invoke-static {v0}, Ljrw;->b(Ljava/lang/Object;)Ljrw;
+
+    move-result-object v3
+
+    new-instance v5, Landroid/graphics/Rect;
+
+    const/4 v0, 0x0
+
+    const/4 v2, 0x0
+
+    iget v6, v4, Lihs;->a:I
+
+    iget v7, v4, Lihs;->b:I
+
+    invoke-direct {v5, v0, v2, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    new-instance v0, Lfuz;
+
+    move-object v2, v1
+
+    invoke-direct/range {v0 .. v5}, Lfuz;-><init>(Limi;Limi;Ljrw;Lihs;Landroid/graphics/Rect;)V
+
+    goto/16 :goto_0
+
+    :cond_1
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, v3}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+    :try_end_2
+    .catch Lfuy; {:try_start_2 .. :try_end_2} :catch_0
 
-    goto :goto_0
+    goto :goto_2
+
+    :cond_2
+    new-instance v1, Ljava/lang/String;
+
+    invoke-direct {v1, v3}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    goto/16 :goto_1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_2
+        :pswitch_2
+    .end packed-switch
 .end method
 
 .method private static varargs a(Lfea;[I)Limi;
     .locals 5
 
-    .prologue
-    .line 97
     array-length v1, p1
 
     const/4 v0, 0x0
@@ -278,19 +420,16 @@
 
     aget v2, p1, v0
 
-    .line 98
     invoke-interface {p0, v2}, Lfea;->a(I)Ljava/util/List;
 
     move-result-object v3
 
-    .line 99
     invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 100
     new-instance v0, Limi;
 
     invoke-static {v3}, Liif;->a(Ljava/util/List;)Lihs;
@@ -299,17 +438,14 @@
 
     invoke-direct {v0, v2, v1}, Limi;-><init>(ILihs;)V
 
-    .line 102
     :goto_1
     return-object v0
 
-    .line 101
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 102
     :cond_1
     const/4 v0, 0x0
 
@@ -321,88 +457,68 @@
 .method public final a(Lkey;Lfea;Ldkf;Lfga;Lftu;Lcom/google/android/apps/camera/stats/CameraDeviceInstrumentationSession;)Ldkx;
     .locals 5
 
-    .prologue
-    .line 9
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10
     invoke-static {p2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 11
     invoke-static {p3}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 12
     invoke-static {p4}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 13
     invoke-static {p5}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 14
     iget-object v0, p0, Ldle;->f:Liii;
 
     const-string v1, "OneCameraDependencies#new"
 
     invoke-interface {v0, v1}, Liii;->a(Ljava/lang/String;)V
 
-    .line 15
     new-instance v0, Lfxk;
 
     invoke-direct {v0, p5}, Lfxk;-><init>(Lftu;)V
 
-    .line 18
-    new-instance v1, Ldlf;
+    new-instance v1, Ldlc;
 
-    invoke-direct {v1, p6}, Ldlf;-><init>(Lcom/google/android/apps/camera/stats/CameraDeviceInstrumentationSession;)V
+    invoke-direct {v1, p6}, Ldlc;-><init>(Lcom/google/android/apps/camera/stats/CameraDeviceInstrumentationSession;)V
 
-    .line 19
     sget-object v2, Lkfe;->a:Lkfe;
 
-    .line 21
     invoke-static {p1, v1, v2}, Lkdm;->a(Lkey;Ljrm;Ljava/util/concurrent/Executor;)Lkey;
 
     move-result-object v1
 
-    .line 23
     new-instance v2, Ldlv;
 
     invoke-direct {v2, v1, p2}, Ldlv;-><init>(Lkey;Lfea;)V
 
-    .line 26
     invoke-virtual {p4, p2}, Lfga;->a(Lfea;)Lfgb;
 
     move-result-object v1
 
-    .line 28
-    invoke-static {p2, p5}, Ldle;->a(Lfea;Lftu;)Lfvb;
+    invoke-static {v1, p2, p5}, Ldle;->a(Lfgb;Lfea;Lftu;)Lfvb;
 
     move-result-object v3
 
-    .line 29
     iget-object v4, p0, Ldle;->b:Ldkz;
 
-    .line 30
     invoke-interface {v4, v2, p3, v0, v3}, Ldkz;->a(Ldlv;Ldkf;Lfxk;Lfvb;)Ldlm;
 
     move-result-object v2
 
-    .line 31
     iget-object v0, p0, Ldle;->f:Liii;
 
     invoke-interface {v0}, Liii;->a()V
 
-    .line 32
     iget-object v0, p0, Ldle;->e:Lhbv;
 
     invoke-virtual {v0}, Lhbv;->c()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    .line 33
     iget-object v0, p0, Ldle;->d:Lbka;
 
-    .line 34
     invoke-virtual {v0}, Lbka;->d()Z
 
     move-result v0
@@ -411,14 +527,12 @@
 
     sget-object v0, Lfgb;->e:Lfgb;
 
-    .line 35
     invoke-virtual {v1, v0}, Lfgb;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 36
     invoke-interface {p2}, Lfea;->b()Lilt;
 
     move-result-object v0
@@ -427,19 +541,16 @@
 
     if-ne v0, v3, :cond_0
 
-    .line 37
     sget-object v0, Ldle;->a:Ljava/lang/String;
 
     const-string v1, "Selected Pixel 2017 Zsl Hdr PD OneCamera configuration."
 
     invoke-static {v0, v1}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 39
     invoke-static {p4, p2}, Ldle;->a(Lfga;Lfea;)Lfnd;
 
     move-result-object v1
 
-    .line 41
     const/4 v0, 0x1
 
     new-array v0, v0, [I
@@ -454,39 +565,29 @@
 
     move-result-object v0
 
-    .line 42
     invoke-static {v0}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 43
     new-instance v3, Lfmx;
 
-    .line 44
     invoke-static {p4}, Ldle;->a(Lfga;)I
 
     move-result v4
 
-    .line 45
     iget-object v0, v0, Limi;->b:Lihs;
 
-    .line 46
     invoke-direct {v3, v4, v0}, Lfmx;-><init>(ILihs;)V
 
-    .line 48
     invoke-direct {p0}, Ldle;->a()Ldta;
 
     move-result-object v4
 
-    .line 50
     new-instance v0, Ldlq;
 
-    .line 51
     invoke-direct {v0, v2, v1, v3, v4}, Ldlq;-><init>(Ldlm;Lfnd;Lfmx;Ldta;)V
 
-    .line 65
     :goto_0
     return-object v0
 
-    .line 53
     :cond_0
     iget-object v0, p0, Ldle;->e:Lhbv;
 
@@ -496,59 +597,34 @@
 
     if-eqz v0, :cond_1
 
-    .line 55
-    invoke-interface {p2}, Lfea;->b()Lilt;
-
-    move-result-object v0
-
-    sget-object v3, Lilt;->a:Lilt;
-
-    if-ne v0, v3, :cond_1
-
     iget-object v0, p0, Ldle;->d:Lbka;
 
-    .line 56
     invoke-virtual {v0}, Lbka;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lfgb;->e:Lfgb;
-
-    .line 57
-    invoke-virtual {v1, v0}, Lfgb;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 58
     sget-object v0, Ldle;->a:Ljava/lang/String;
 
     const-string v1, "Selected Pixel 2017 Zsl Hdr No PD OneCamera configuration."
 
     invoke-static {v0, v1}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 60
     invoke-static {p4, p2}, Ldle;->a(Lfga;Lfea;)Lfnd;
 
     move-result-object v1
 
-    .line 61
     invoke-direct {p0}, Ldle;->a()Ldta;
 
     move-result-object v3
 
-    .line 63
     new-instance v0, Ldlp;
 
-    .line 64
     invoke-direct {v0, v2, v1, v3}, Ldlp;-><init>(Ldlm;Lfnd;Ldta;)V
 
     goto :goto_0
 
-    .line 66
     :cond_1
     sget-object v0, Ldle;->a:Ljava/lang/String;
 
@@ -586,7 +662,6 @@
 
     invoke-static {v0, v1}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 67
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Unknown capture support level"

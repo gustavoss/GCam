@@ -11,18 +11,14 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
-    .line 36
     invoke-static {}, Ljsh;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 37
     sput-object v0, Ljsh;->a:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 38
     const-string v0, "getStackTraceElement"
 
     const/4 v1, 0x2
@@ -43,7 +39,6 @@
 
     invoke-static {v0, v1}, Ljsh;->a(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    .line 39
     :cond_0
     sget-object v0, Ljsh;->a:Ljava/lang/Object;
 
@@ -58,10 +53,8 @@
 .method private static a()Ljava/lang/Object;
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 19
     :try_start_0
     const-string v1, "sun.misc.SharedSecrets"
 
@@ -73,7 +66,6 @@
 
     move-result-object v1
 
-    .line 20
     const-string v2, "getJavaLangAccess"
 
     const/4 v3, 0x0
@@ -84,7 +76,6 @@
 
     move-result-object v1
 
-    .line 21
     const/4 v2, 0x0
 
     const/4 v3, 0x0
@@ -98,17 +89,14 @@
 
     move-result-object v0
 
-    .line 24
     :goto_0
     return-object v0
 
-    .line 22
     :catch_0
     move-exception v0
 
     throw v0
 
-    .line 24
     :catch_1
     move-exception v1
 
@@ -118,10 +106,8 @@
 .method private static varargs a(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 32
     :try_start_0
     const-string v1, "sun.misc.JavaLangAccess"
 
@@ -140,17 +126,14 @@
 
     move-result-object v0
 
-    .line 35
     :goto_0
     return-object v0
 
-    .line 33
     :catch_0
     move-exception v0
 
     throw v0
 
-    .line 35
     :catch_1
     move-exception v1
 
@@ -160,32 +143,25 @@
 .method public static a(Ljava/lang/Throwable;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-static {p0}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     instance-of v0, p0, Ljava/lang/RuntimeException;
 
     if-eqz v0, :cond_0
 
-    .line 3
     check-cast p0, Ljava/lang/RuntimeException;
 
     throw p0
 
-    .line 4
     :cond_0
     instance-of v0, p0, Ljava/lang/Error;
 
     if-eqz v0, :cond_1
 
-    .line 5
     check-cast p0, Ljava/lang/Error;
 
     throw p0
 
-    .line 6
     :cond_1
     return-void
 .end method
@@ -193,22 +169,16 @@
 .method public static a(Ljava/lang/Throwable;Ljava/lang/Class;)V
     .locals 1
 
-    .prologue
-    .line 7
-    .line 8
     if-eqz p0, :cond_0
 
-    .line 10
     invoke-static {p0}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 11
     invoke-virtual {p1, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 12
     invoke-virtual {p1, p0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -217,14 +187,11 @@
 
     throw v0
 
-    .line 14
     :cond_0
     if-eqz p0, :cond_1
 
-    .line 15
     invoke-static {p0}, Ljsh;->a(Ljava/lang/Throwable;)V
 
-    .line 16
     :cond_1
     return-void
 .end method
@@ -234,11 +201,8 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 17
     invoke-static {p0}, Ljsh;->a(Ljava/lang/Throwable;)V
 
-    .line 18
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -249,10 +213,8 @@
 .method private static b()Ljava/lang/reflect/Method;
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 25
     :try_start_0
     const-string v1, "getStackTraceDepth"
 
@@ -270,14 +232,11 @@
 
     move-result-object v1
 
-    .line 26
     if-nez v1, :cond_0
 
-    .line 31
     :goto_0
     return-object v0
 
-    .line 28
     :cond_0
     invoke-static {}, Ljsh;->a()Ljava/lang/Object;
 
@@ -303,10 +262,8 @@
 
     move-object v0, v1
 
-    .line 29
     goto :goto_0
 
-    .line 31
     :catch_0
     move-exception v1
 

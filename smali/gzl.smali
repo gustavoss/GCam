@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgzl;->a:Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,11 +26,8 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 3
 
-    .prologue
-    .line 2
     check-cast p1, Ljava/lang/Integer;
 
-    .line 3
     iget-object v0, p0, Lgzl;->a:Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -43,7 +38,6 @@
 
     move-result-object v1
 
-    .line 4
     iget-object v2, v0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->b:Lgrt;
 
     iget-object v0, v0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->a:Ljava/util/Map;
@@ -62,6 +56,5 @@
 
     invoke-virtual {v2, v0}, Lgrt;->a(Lgrg;)V
 
-    .line 5
     return-void
 .end method

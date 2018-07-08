@@ -14,8 +14,6 @@
 .method constructor <init>(Lirv;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Liqx;->a:Lirv;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final a(Ljava/lang/Object;Ljava/util/concurrent/Executor;)Lirp;
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Liqx;->a:Lirv;
 
     invoke-virtual {v0}, Lirv;->a()Lirs;

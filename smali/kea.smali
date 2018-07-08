@@ -13,45 +13,35 @@
 .method constructor <init>(Lkdz;Ljus;)V
     .locals 1
 
-    .prologue
-    .line 33
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, p2, v0}, Lkea;-><init>(Lkdz;Ljus;Z)V
 
-    .line 34
     return-void
 .end method
 
 .method private constructor <init>(Lkdz;Ljus;Z)V
     .locals 3
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lkea;->e:Lkdz;
 
-    .line 2
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, p2, v0}, Lkdq;-><init>(Lkdp;Ljus;Z)V
 
-    .line 4
     invoke-virtual {p2}, Ljus;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 5
     invoke-static {}, Ljuy;->d()Ljuy;
 
     move-result-object v0
 
-    .line 6
     :goto_0
     iput-object v0, p0, Lkea;->d:Ljava/util/List;
 
-    .line 7
     const/4 v0, 0x0
 
     :goto_1
@@ -61,19 +51,16 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 8
     iget-object v1, p0, Lkea;->d:Ljava/util/List;
 
     const/4 v2, 0x0
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 9
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 6
     :cond_0
     invoke-virtual {p2}, Ljus;->size()I
 
@@ -85,7 +72,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_1
     return-void
 .end method
@@ -95,31 +81,24 @@
 .method final a(ZILjava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lkea;->d:Ljava/util/List;
 
-    .line 12
     if-eqz v0, :cond_0
 
-    .line 13
     invoke-static {p3}, Ljrw;->c(Ljava/lang/Object;)Ljrw;
 
     move-result-object v1
 
     invoke-interface {v0, p2, v1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 17
     :goto_0
     return-void
 
-    .line 14
     :cond_0
     if-nez p1, :cond_1
 
     iget-object v0, p0, Lkea;->e:Lkdz;
 
-    .line 15
     invoke-virtual {v0}, Lkcy;->isCancelled()Z
 
     move-result v0
@@ -132,12 +111,10 @@
     :goto_1
     const-string v1, "Future was done before all dependencies completed"
 
-    .line 16
     invoke-static {v0, v1}, Ljiy;->b(ZLjava/lang/Object;)V
 
     goto :goto_0
 
-    .line 15
     :cond_2
     const/4 v0, 0x0
 
@@ -147,33 +124,24 @@
 .method final b()V
     .locals 1
 
-    .prologue
-    .line 30
     invoke-super {p0}, Lkdq;->b()V
 
-    .line 31
     const/4 v0, 0x0
 
     iput-object v0, p0, Lkea;->d:Ljava/util/List;
 
-    .line 32
     return-void
 .end method
 
 .method final c()V
     .locals 4
 
-    .prologue
-    .line 18
     iget-object v0, p0, Lkea;->d:Ljava/util/List;
 
-    .line 19
     if-eqz v0, :cond_2
 
-    .line 20
     iget-object v1, p0, Lkea;->e:Lkdz;
 
-    .line 22
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v2
@@ -182,7 +150,6 @@
 
     move-result-object v2
 
-    .line 23
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -200,7 +167,6 @@
 
     check-cast v0, Ljrw;
 
-    .line 24
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljrw;->c()Ljava/lang/Object;
@@ -217,20 +183,16 @@
 
     goto :goto_1
 
-    .line 26
     :cond_1
     invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 27
     invoke-virtual {v1, v0}, Lkdz;->a(Ljava/lang/Object;)Z
 
-    .line 29
     :goto_2
     return-void
 
-    .line 28
     :cond_2
     iget-object v0, p0, Lkea;->e:Lkdz;
 

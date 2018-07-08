@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 1
     const/16 v0, 0x9
 
     new-array v0, v0, [I
@@ -27,7 +25,6 @@
 
     sput-object v0, Laz;->a:[I
 
-    .line 2
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -36,7 +33,6 @@
 
     sput-object v0, Laz;->b:[I
 
-    .line 3
     const/16 v0, 0xe
 
     new-array v0, v0, [I
@@ -45,7 +41,6 @@
 
     sput-object v0, Laz;->c:[I
 
-    .line 4
     const/4 v0, 0x2
 
     new-array v0, v0, [I
@@ -54,10 +49,8 @@
 
     sput-object v0, Laz;->d:[I
 
-    .line 5
     return-void
 
-    .line 1
     :array_0
     .array-data 4
         0x1010003
@@ -71,7 +64,6 @@
         0x1010403
     .end array-data
 
-    .line 2
     :array_1
     .array-data 4
         0x1010003
@@ -84,7 +76,6 @@
         0x101045b
     .end array-data
 
-    .line 3
     :array_2
     .array-data 4
         0x1010003
@@ -103,7 +94,6 @@
         0x101051e
     .end array-data
 
-    .line 4
     :array_3
     .array-data 4
         0x1010003

@@ -16,25 +16,18 @@
 .method private constructor <init>(Lkhp;Lkhp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lddh;->a:Lkhp;
 
-    .line 3
     iput-object p2, p0, Lddh;->b:Lkhp;
 
-    .line 4
     return-void
 .end method
 
 .method public static a(Lkhp;Lkhp;)Lddh;
     .locals 1
 
-    .prologue
-    .line 5
     new-instance v0, Lddh;
 
     invoke-direct {v0, p0, p1}, Lddh;-><init>(Lkhp;Lkhp;)V
@@ -47,9 +40,6 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 6
-    .line 7
     new-instance v1, Lddg;
 
     iget-object v2, p0, Lddh;->a:Lkhp;
@@ -64,6 +54,5 @@
 
     invoke-direct {v1, v2, v0}, Lddg;-><init>(Lkhp;Lbqi;)V
 
-    .line 8
     return-object v1
 .end method

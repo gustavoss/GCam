@@ -20,8 +20,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 21
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -40,17 +38,12 @@
 .method constructor <init>(Landroid/content/Context;Landroid/net/Uri;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lakd;->b:Landroid/content/Context;
 
-    .line 3
     iput-object p2, p0, Lakd;->c:Landroid/net/Uri;
 
-    .line 4
     return-void
 .end method
 
@@ -59,8 +52,6 @@
 .method public final a()Ljava/lang/Class;
     .locals 1
 
-    .prologue
-    .line 19
     const-class v0, Ljava/io/File;
 
     return-object v0
@@ -69,10 +60,8 @@
 .method public final a(Lacn;Laeg;)V
     .locals 6
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 5
     iget-object v0, p0, Lakd;->b:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -91,10 +80,8 @@
 
     move-result-object v1
 
-    .line 7
     if-eqz v1, :cond_1
 
-    .line 8
     :try_start_0
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -102,7 +89,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 9
     const-string v0, "_data"
 
     invoke-interface {v1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -115,11 +101,9 @@
 
     move-result-object v3
 
-    .line 10
     :cond_0
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 13
     :cond_1
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -127,7 +111,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 14
     new-instance v0, Ljava/io/FileNotFoundException;
 
     iget-object v1, p0, Lakd;->c:Landroid/net/Uri;
@@ -168,11 +151,9 @@
 
     invoke-interface {p2, v0}, Laeg;->a(Ljava/lang/Exception;)V
 
-    .line 16
     :goto_0
     return-void
 
-    .line 12
     :catchall_0
     move-exception v0
 
@@ -180,7 +161,6 @@
 
     throw v0
 
-    .line 15
     :cond_2
     new-instance v0, Ljava/io/File;
 
@@ -194,24 +174,18 @@
 .method public final b()V
     .locals 0
 
-    .prologue
-    .line 17
     return-void
 .end method
 
 .method public final c()V
     .locals 0
 
-    .prologue
-    .line 18
     return-void
 .end method
 
 .method public final d()Ladm;
     .locals 1
 
-    .prologue
-    .line 20
     sget-object v0, Ladm;->a:Ladm;
 
     return-object v0

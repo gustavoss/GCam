@@ -24,8 +24,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,8 +32,6 @@
 .method public static a(I)I
     .locals 6
 
-    .prologue
-    .line 161
     const-wide/32 v0, 0x1b873593
 
     int-to-long v2, p0
@@ -64,20 +60,16 @@
 .method public static a(ID)I
     .locals 6
 
-    .prologue
-    .line 163
     const/4 v0, 0x2
 
     invoke-static {p0, v0}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
-    .line 164
     invoke-static {v1}, Ljava/lang/Integer;->highestOneBit(I)I
 
     move-result v0
 
-    .line 165
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
 
     int-to-double v4, v0
@@ -88,18 +80,14 @@
 
     if-le v1, v2, :cond_0
 
-    .line 166
     shl-int/lit8 v0, v0, 0x1
 
-    .line 167
     if-lez v0, :cond_1
 
-    .line 168
     :cond_0
     :goto_0
     return v0
 
-    .line 167
     :cond_1
     const/high16 v0, 0x40000000    # 2.0f
 
@@ -109,11 +97,8 @@
 .method public static a(ILjava/lang/String;)I
     .locals 3
 
-    .prologue
-    .line 154
     if-gez p0, :cond_0
 
-    .line 155
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -152,7 +137,6 @@
 
     throw v0
 
-    .line 156
     :cond_0
     return p0
 .end method
@@ -160,24 +144,18 @@
 .method public static a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 123
     if-eqz p0, :cond_0
 
-    .line 126
     :goto_0
     return-object p0
 
-    .line 125
     :cond_0
     if-eqz p1, :cond_1
 
     move-object p0, p1
 
-    .line 126
     goto :goto_0
 
-    .line 127
     :cond_1
     new-instance v0, Ljava/lang/NullPointerException;
 
@@ -191,17 +169,13 @@
 .method public static varargs a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 145
     if-eqz p0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 146
     :goto_0
     if-nez v0, :cond_1
 
-    .line 147
     new-instance v0, Ljsi;
 
     invoke-static {p1, p2}, Ljiy;->a(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -212,13 +186,11 @@
 
     throw v0
 
-    .line 145
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 148
     :cond_1
     return-object p0
 .end method
@@ -226,8 +198,6 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;JI)Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 62
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -236,27 +206,22 @@
 
     move-result-object v0
 
-    .line 63
     const v1, 0x7f0e0128
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getResourcePackageName(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 64
     const-string v2, "raw"
 
-    .line 65
     invoke-virtual {v0, p1, v2, v1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
-    .line 66
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
     move-result-object v0
 
-    .line 67
     invoke-static {v0, p2, p3, p4}, Ljid;->a(Ljava/io/InputStream;JI)Ljava/lang/String;
 
     move-result-object v0
@@ -267,25 +232,19 @@
 .method private static a(Ljava/io/InputStream;JI)Ljava/lang/String;
     .locals 5
 
-    .prologue
     const/16 v0, 0x400
 
-    .line 89
     new-array v0, v0, [B
 
-    .line 90
     new-instance v1, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 91
     :try_start_0
     invoke-virtual {p0, p1, p2}, Ljava/io/InputStream;->skip(J)J
 
-    .line 92
     if-lez p3, :cond_0
 
-    .line 93
     :goto_0
     if-lez p3, :cond_1
 
@@ -293,7 +252,6 @@
 
     const/16 v3, 0x400
 
-    .line 94
     invoke-static {p3, v3}, Ljava/lang/Math;->min(II)I
 
     move-result v3
@@ -306,29 +264,24 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 95
     const/4 v3, 0x0
 
     invoke-virtual {v1, v0, v3, v2}, Ljava/io/ByteArrayOutputStream;->write([BII)V
 
-    .line 96
     sub-int/2addr p3, v2
 
     goto :goto_0
 
-    .line 92
     :cond_0
     const p3, 0x7fffffff
 
     goto :goto_0
 
-    .line 97
     :cond_1
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 101
     :try_start_1
     const-string v0, "UTF-8"
 
@@ -340,11 +293,9 @@
 
     return-object v0
 
-    .line 99
     :catch_0
     move-exception v0
 
-    .line 100
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Failed to read license or metadata text."
@@ -353,11 +304,9 @@
 
     throw v1
 
-    .line 102
     :catch_1
     move-exception v0
 
-    .line 103
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Unsupported encoding UTF8. This should always be supported."
@@ -370,19 +319,15 @@
 .method public static a(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 110
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 111
     const/4 v0, 0x0
 
     :goto_0
     if-ge v0, v1, :cond_2
 
-    .line 112
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -393,49 +338,40 @@
 
     if-eqz v2, :cond_3
 
-    .line 113
     invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v2
 
-    .line 114
     :goto_1
     if-ge v0, v1, :cond_1
 
-    .line 115
     aget-char v3, v2, v0
 
-    .line 116
     invoke-static {v3}, Ljid;->a(C)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 117
     xor-int/lit8 v3, v3, 0x20
 
     int-to-char v3, v3
 
     aput-char v3, v2, v0
 
-    .line 118
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 119
     :cond_1
     invoke-static {v2}, Ljava/lang/String;->valueOf([C)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 121
     :cond_2
     return-object p0
 
-    .line 120
     :cond_3
     add-int/lit8 v0, v0, 0x1
 
@@ -445,11 +381,8 @@
 .method public static a(Ljava/lang/String;Ljava/lang/String;JI)Ljava/lang/String;
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 68
-    .line 69
     :try_start_0
     new-instance v1, Ljava/util/jar/JarFile;
 
@@ -458,7 +391,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 70
     :try_start_1
     invoke-virtual {v1, p0}, Ljava/util/jar/JarFile;->getJarEntry(Ljava/lang/String;)Ljava/util/jar/JarEntry;
     :try_end_1
@@ -467,27 +399,22 @@
 
     move-result-object v2
 
-    .line 71
     if-nez v2, :cond_0
 
-    .line 72
     :try_start_2
     invoke-virtual {v1}, Ljava/util/jar/JarFile;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 81
     :goto_0
     return-object v0
 
-    .line 76
     :cond_0
     :try_start_3
     invoke-virtual {v1, v2}, Ljava/util/jar/JarFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
 
     move-result-object v0
 
-    .line 77
     invoke-static {v0, p2, p3, p4}, Ljid;->a(Ljava/io/InputStream;JI)Ljava/lang/String;
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_4
@@ -495,7 +422,6 @@
 
     move-result-object v0
 
-    .line 78
     :try_start_4
     invoke-virtual {v1}, Ljava/util/jar/JarFile;->close()V
     :try_end_4
@@ -508,7 +434,6 @@
 
     goto :goto_0
 
-    .line 82
     :catch_1
     move-exception v1
 
@@ -518,7 +443,6 @@
 
     move-object v0, v4
 
-    .line 83
     :goto_1
     :try_start_5
     new-instance v2, Ljava/lang/RuntimeException;
@@ -531,20 +455,17 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 84
     :catchall_0
     move-exception v0
 
     :goto_2
     if-eqz v1, :cond_1
 
-    .line 85
     :try_start_6
     invoke-virtual {v1}, Ljava/util/jar/JarFile;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
 
-    .line 88
     :cond_1
     :goto_3
     throw v0
@@ -559,7 +480,6 @@
 
     goto :goto_3
 
-    .line 84
     :catchall_1
     move-exception v1
 
@@ -571,7 +491,6 @@
 
     goto :goto_2
 
-    .line 82
     :catch_4
     move-exception v0
 
@@ -581,26 +500,22 @@
 .method public static a(Ljava/lang/String;Ljava/lang/String;)Ljava/util/ArrayList;
     .locals 13
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v7, 0x0
 
-    .line 46
     const-string v0, "\n"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v9
 
-    .line 47
     new-instance v10, Ljava/util/ArrayList;
 
     array-length v0, v9
 
     invoke-direct {v10, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 48
     array-length v11, v9
 
     move v8, v7
@@ -610,14 +525,12 @@
 
     aget-object v5, v9, v8
 
-    .line 49
     const/16 v0, 0x20
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v12
 
-    .line 50
     invoke-virtual {v5, v7, v12}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
@@ -628,7 +541,6 @@
 
     move-result-object v4
 
-    .line 51
     array-length v0, v4
 
     const/4 v1, 0x2
@@ -656,11 +568,9 @@
 
     move-result-object v1
 
-    .line 52
     :goto_2
     if-nez v0, :cond_2
 
-    .line 53
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -674,7 +584,6 @@
     :cond_0
     move v0, v7
 
-    .line 51
     goto :goto_1
 
     :cond_1
@@ -684,7 +593,6 @@
 
     goto :goto_2
 
-    .line 54
     :cond_2
     aget-object v0, v4, v7
 
@@ -692,63 +600,51 @@
 
     move-result-wide v2
 
-    .line 55
     aget-object v0, v4, v6
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 56
     add-int/lit8 v0, v12, 0x1
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 57
     new-instance v0, Ljrd;
 
     move-object v5, p1
 
     invoke-direct/range {v0 .. v5}, Ljrd;-><init>(Ljava/lang/String;JILjava/lang/String;)V
 
-    .line 58
     invoke-virtual {v10, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 59
     add-int/lit8 v0, v8, 0x1
 
     move v8, v0
 
     goto :goto_0
 
-    .line 60
     :cond_3
     invoke-static {v10}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 61
     return-object v10
 .end method
 
 .method public static a(Ljava/lang/AutoCloseable;)Ljqr;
     .locals 1
 
-    .prologue
-    .line 43
     new-instance v0, Ljqu;
 
     invoke-direct {v0, p0}, Ljqu;-><init>(Ljava/lang/AutoCloseable;)V
 
-    .line 44
     return-object v0
 .end method
 
 .method public static a(Ljrc;)Ljrb;
     .locals 1
 
-    .prologue
-    .line 45
     new-instance v0, Ljqt;
 
     invoke-direct {v0, p0}, Ljqt;-><init>(Ljrc;)V
@@ -759,8 +655,6 @@
 .method public static a(Ljsd;)Ljsd;
     .locals 1
 
-    .prologue
-    .line 134
     instance-of v0, p0, Ljsf;
 
     if-nez v0, :cond_0
@@ -769,18 +663,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 139
     :cond_0
     :goto_0
     return-object p0
 
-    .line 136
     :cond_1
     instance-of v0, p0, Ljava/io/Serializable;
 
     if-eqz v0, :cond_2
 
-    .line 137
     new-instance v0, Ljse;
 
     invoke-direct {v0, p0}, Ljse;-><init>(Ljsd;)V
@@ -789,7 +680,6 @@
 
     goto :goto_0
 
-    .line 138
     :cond_2
     new-instance v0, Ljsf;
 
@@ -797,22 +687,18 @@
 
     move-object p0, v0
 
-    .line 139
     goto :goto_0
 .end method
 
 .method public static a(Ljdm;Ljpn;)V
     .locals 3
 
-    .prologue
-    .line 5
     const-string v0, "segmentation.txt"
 
     invoke-virtual {p1, v0}, Ljpn;->b(Ljava/lang/String;)Ljava/io/StringWriter;
 
     move-result-object v0
 
-    .line 6
     const-class v1, Ljle;
 
     new-instance v2, Ljoy;
@@ -821,7 +707,6 @@
 
     invoke-virtual {p0, v1, v2}, Ljdm;->a(Ljava/lang/Class;Ljdo;)V
 
-    .line 7
     const-class v0, Ljnj;
 
     new-instance v1, Ljoz;
@@ -830,14 +715,12 @@
 
     invoke-virtual {p0, v0, v1}, Ljdm;->a(Ljava/lang/Class;Ljdo;)V
 
-    .line 8
     const-string v0, "frame_sequence_distances.txt"
 
     invoke-virtual {p1, v0}, Ljpn;->b(Ljava/lang/String;)Ljava/io/StringWriter;
 
     move-result-object v0
 
-    .line 9
     const-class v1, Ljjn;
 
     new-instance v2, Ljpa;
@@ -846,14 +729,12 @@
 
     invoke-virtual {p0, v1, v2}, Ljdm;->a(Ljava/lang/Class;Ljdo;)V
 
-    .line 10
     const-string v0, "artifact_renderer.txt"
 
     invoke-virtual {p1, v0}, Ljpn;->b(Ljava/lang/String;)Ljava/io/StringWriter;
 
     move-result-object v0
 
-    .line 11
     const-class v1, Lizn;
 
     new-instance v2, Ljpb;
@@ -862,7 +743,6 @@
 
     invoke-virtual {p0, v1, v2}, Ljdm;->a(Ljava/lang/Class;Ljdo;)V
 
-    .line 12
     const-class v0, Ljog;
 
     new-instance v1, Ljpc;
@@ -871,35 +751,28 @@
 
     invoke-virtual {p0, v0, v1}, Ljdm;->a(Ljava/lang/Class;Ljdo;)V
 
-    .line 13
     invoke-virtual {p0}, Ljdm;->a()Ljpp;
 
     move-result-object v0
 
-    .line 14
     const-string v1, "post_process_config.txt"
 
     invoke-virtual {p1, v1, v0}, Ljpn;->a(Ljava/lang/String;Ljpp;)V
 
-    .line 15
     return-void
 .end method
 
 .method public static a(Z)V
     .locals 1
 
-    .prologue
-    .line 141
     if-nez p0, :cond_0
 
-    .line 142
     new-instance v0, Ljsi;
 
     invoke-direct {v0}, Ljsi;-><init>()V
 
     throw v0
 
-    .line 143
     :cond_0
     return-void
 .end method
@@ -907,8 +780,6 @@
 .method public static a()Z
     .locals 3
 
-    .prologue
-    .line 39
     :try_start_0
     invoke-static {}, Ljid;->c()Z
     :try_end_0
@@ -916,22 +787,18 @@
 
     move-result v0
 
-    .line 42
     :goto_0
     return v0
 
-    .line 40
     :catch_0
     move-exception v0
 
-    .line 41
     const-string v1, "IsEmulator"
 
     const-string v2, "Could not determine if emulator.  Assuming false."
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 42
     const/4 v0, 0x0
 
     goto :goto_0
@@ -940,8 +807,6 @@
 .method private static a(C)Z
     .locals 1
 
-    .prologue
-    .line 122
     const/16 v0, 0x41
 
     if-lt p0, v0, :cond_0
@@ -964,37 +829,30 @@
 .method public static a(Ljava/io/File;)Z
     .locals 7
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 16
     invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 17
     invoke-static {p0}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 18
     invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
 
     move-result v2
 
     invoke-static {v2}, Ljiy;->a(Z)V
 
-    .line 20
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v5
 
-    .line 21
     if-eqz v5, :cond_0
 
-    .line 22
     array-length v6, v5
 
     move v3, v1
@@ -1006,14 +864,12 @@
 
     aget-object v4, v5, v3
 
-    .line 23
     invoke-static {v4}, Ljid;->a(Ljava/io/File;)Z
 
     move-result v4
 
     and-int/2addr v4, v2
 
-    .line 24
     add-int/lit8 v2, v3, 0x1
 
     move v3, v2
@@ -1025,14 +881,12 @@
     :cond_0
     move v2, v0
 
-    .line 26
     :cond_1
     if-eqz v2, :cond_3
 
     :cond_2
     move v2, v0
 
-    .line 27
     :goto_1
     if-eqz v2, :cond_4
 
@@ -1048,24 +902,19 @@
     :cond_3
     move v2, v1
 
-    .line 26
     goto :goto_1
 
     :cond_4
     move v0, v1
 
-    .line 27
     goto :goto_2
 .end method
 
 .method public static a(Ljava/util/Collection;Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 157
     invoke-static {p0}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 158
     :try_start_0
     invoke-interface {p0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
     :try_end_0
@@ -1074,7 +923,6 @@
 
     move-result v0
 
-    .line 160
     :goto_0
     return v0
 
@@ -1095,8 +943,6 @@
 .method public static b(Ljava/io/File;)Ljava/io/OutputStream;
     .locals 3
 
-    .prologue
-    .line 28
     new-instance v0, Ljava/io/BufferedOutputStream;
 
     new-instance v1, Ljava/io/FileOutputStream;
@@ -1113,8 +959,6 @@
 .method public static b(Ljava/lang/Object;)Ljrt;
     .locals 2
 
-    .prologue
-    .line 128
     new-instance v0, Ljrt;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -1125,37 +969,28 @@
 
     move-result-object v1
 
-    .line 129
     invoke-direct {v0, v1}, Ljrt;-><init>(Ljava/lang/String;)V
 
-    .line 130
     return-object v0
 .end method
 
 .method public static b(Ljava/lang/String;)Ljrt;
     .locals 1
 
-    .prologue
-    .line 131
     new-instance v0, Ljrt;
 
-    .line 132
     invoke-direct {v0, p0}, Ljrt;-><init>(Ljava/lang/String;)V
 
-    .line 133
     return-object v0
 .end method
 
 .method public static b()V
     .locals 2
 
-    .prologue
-    .line 104
     sget-object v0, Ljid;->c:Ljava/lang/Thread;
 
     if-nez v0, :cond_0
 
-    .line 105
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -1166,7 +1001,6 @@
 
     sput-object v0, Ljid;->c:Ljava/lang/Thread;
 
-    .line 106
     :cond_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -1178,11 +1012,9 @@
 
     const/4 v0, 0x1
 
-    .line 107
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 108
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Must be called on a background thread"
@@ -1191,13 +1023,11 @@
 
     throw v0
 
-    .line 106
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 109
     :cond_2
     return-void
 .end method
@@ -1205,11 +1035,8 @@
 .method public static b(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 4
 
-    .prologue
-    .line 149
     if-nez p0, :cond_0
 
-    .line 150
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -1248,11 +1075,9 @@
 
     throw v0
 
-    .line 151
     :cond_0
     if-nez p1, :cond_1
 
-    .line 152
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -1297,7 +1122,6 @@
 
     throw v0
 
-    .line 153
     :cond_1
     return-void
 .end method
@@ -1305,8 +1129,6 @@
 .method public static c(Ljava/lang/Object;)Ljsd;
     .locals 1
 
-    .prologue
-    .line 140
     new-instance v0, Ljsg;
 
     invoke-direct {v0, p0}, Ljsg;-><init>(Ljava/lang/Object;)V
@@ -1317,35 +1139,28 @@
 .method private static c()Z
     .locals 2
 
-    .prologue
-    .line 29
     sget-object v0, Ljid;->a:Ljava/lang/Boolean;
 
     if-eqz v0, :cond_0
 
-    .line 30
     sget-object v0, Ljid;->a:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    .line 38
     :goto_0
     return v0
 
-    .line 31
     :cond_0
     sget-object v0, Ljid;->b:Ljava/lang/Exception;
 
     if-eqz v0, :cond_1
 
-    .line 32
     sget-object v0, Ljid;->b:Ljava/lang/Exception;
 
     throw v0
 
-    .line 33
     :cond_1
     :try_start_0
     sget-object v0, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
@@ -1364,7 +1179,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 38
     sget-object v0, Ljid;->a:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -1373,22 +1187,17 @@
 
     goto :goto_0
 
-    .line 35
     :catch_0
     move-exception v0
 
-    .line 36
     sput-object v0, Ljid;->b:Ljava/lang/Exception;
 
-    .line 37
     throw v0
 .end method
 
 .method public static d(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 144
     const-string v0, "expected a non-null reference"
 
     const/4 v1, 0x0
@@ -1405,8 +1214,6 @@
 .method public static e(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 162
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
@@ -1431,15 +1238,11 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 2
     check-cast p1, Ljrb;
 
-    .line 3
     invoke-interface {p1}, Ljrb;->B_()Ljrb;
 
     move-result-object v0
 
-    .line 4
     return-object v0
 .end method

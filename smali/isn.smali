@@ -16,8 +16,6 @@
 .method constructor <init>(Lisk;Lirv;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lisn;->b:Lisk;
 
     iput-object p2, p0, Lisn;->a:Lirv;
@@ -32,41 +30,32 @@
 .method public final synthetic a(Ljava/lang/Object;Ljava/util/concurrent/Executor;)Lirp;
     .locals 3
 
-    .prologue
-    .line 3
     check-cast p1, Lirr;
 
-    .line 4
     iget-object v0, p0, Lisn;->a:Lirv;
 
     invoke-virtual {v0}, Lirv;->a()Lirs;
 
     move-result-object v0
 
-    .line 5
     invoke-static {p1}, Liih;->a(Ljava/lang/Throwable;)Liqd;
 
     move-result-object v1
 
-    .line 6
     invoke-static {p1}, Liih;->b(Ljava/lang/Throwable;)Liqd;
 
     move-result-object v2
 
-    .line 7
     invoke-virtual {v0, p2, v1, v2}, Lirs;->a(Ljava/util/concurrent/Executor;Liqd;Liqd;)Lirp;
 
     move-result-object v0
 
-    .line 8
     return-object v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lisn;->b:Lisk;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

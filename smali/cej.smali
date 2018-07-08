@@ -16,8 +16,6 @@
 .method constructor <init>(Lcei;Lfgy;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcej;->b:Lcei;
 
     iput-object p2, p0, Lcej;->a:Lfgy;
@@ -32,8 +30,6 @@
 .method public final a()Lfgz;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcej;->a:Lfgy;
 
     invoke-interface {v0}, Lfgy;->a()Lfgz;
@@ -46,13 +42,10 @@
 .method public final b()Lfgz;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lcej;->b:Lcei;
 
     invoke-virtual {v0}, Lcei;->c()V
 
-    .line 4
     iget-object v0, p0, Lcej;->a:Lfgy;
 
     invoke-interface {v0}, Lfgy;->b()Lfgz;

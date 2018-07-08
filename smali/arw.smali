@@ -11,37 +11,28 @@
 .method public constructor <init>(Ljava/io/InputStream;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 2
     const/high16 v0, -0x80000000
 
     iput v0, p0, Larw;->a:I
 
-    .line 3
     return-void
 .end method
 
 .method private final a(J)J
     .locals 3
 
-    .prologue
-    .line 30
     iget v0, p0, Larw;->a:I
 
     if-nez v0, :cond_1
 
-    .line 31
     const-wide/16 p1, -0x1
 
-    .line 34
     :cond_0
     :goto_0
     return-wide p1
 
-    .line 32
     :cond_1
     iget v0, p0, Larw;->a:I
 
@@ -57,7 +48,6 @@
 
     if-lez v0, :cond_0
 
-    .line 33
     iget v0, p0, Larw;->a:I
 
     int-to-long p1, v0
@@ -68,8 +58,6 @@
 .method private final b(J)V
     .locals 3
 
-    .prologue
-    .line 35
     iget v0, p0, Larw;->a:I
 
     const/high16 v1, -0x80000000
@@ -82,7 +70,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 36
     iget v0, p0, Larw;->a:I
 
     int-to-long v0, v0
@@ -93,7 +80,6 @@
 
     iput v0, p0, Larw;->a:I
 
-    .line 37
     :cond_0
     return-void
 .end method
@@ -103,8 +89,6 @@
 .method public final available()I
     .locals 2
 
-    .prologue
-    .line 27
     iget v0, p0, Larw;->a:I
 
     const/high16 v1, -0x80000000
@@ -115,11 +99,9 @@
 
     move-result v0
 
-    .line 29
     :goto_0
     return v0
 
-    .line 28
     :cond_0
     iget v0, p0, Larw;->a:I
 
@@ -137,24 +119,19 @@
 .method public final declared-synchronized mark(I)V
     .locals 1
 
-    .prologue
-    .line 4
     monitor-enter p0
 
     :try_start_0
     invoke-super {p0, p1}, Ljava/io/FilterInputStream;->mark(I)V
 
-    .line 5
     iput p1, p0, Larw;->a:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6
     monitor-exit p0
 
     return-void
 
-    .line 4
     :catchall_0
     move-exception v0
 
@@ -166,10 +143,8 @@
 .method public final read()I
     .locals 6
 
-    .prologue
     const-wide/16 v4, 0x1
 
-    .line 7
     invoke-direct {p0, v4, v5}, Larw;->a(J)J
 
     move-result-wide v0
@@ -180,20 +155,16 @@
 
     if-nez v0, :cond_0
 
-    .line 8
     const/4 v0, -0x1
 
-    .line 11
     :goto_0
     return v0
 
-    .line 9
     :cond_0
     invoke-super {p0}, Ljava/io/FilterInputStream;->read()I
 
     move-result v0
 
-    .line 10
     invoke-direct {p0, v4, v5}, Larw;->b(J)V
 
     goto :goto_0
@@ -202,10 +173,8 @@
 .method public final read([BII)I
     .locals 4
 
-    .prologue
     const/4 v0, -0x1
 
-    .line 12
     int-to-long v2, p3
 
     invoke-direct {p0, v2, v3}, Larw;->a(J)J
@@ -214,20 +183,16 @@
 
     long-to-int v1, v2
 
-    .line 13
     if-ne v1, v0, :cond_0
 
-    .line 17
     :goto_0
     return v0
 
-    .line 15
     :cond_0
     invoke-super {p0, p1, p2, v1}, Ljava/io/FilterInputStream;->read([BII)I
 
     move-result v0
 
-    .line 16
     int-to-long v2, v0
 
     invoke-direct {p0, v2, v3}, Larw;->b(J)V
@@ -238,26 +203,21 @@
 .method public final declared-synchronized reset()V
     .locals 1
 
-    .prologue
-    .line 18
     monitor-enter p0
 
     :try_start_0
     invoke-super {p0}, Ljava/io/FilterInputStream;->reset()V
 
-    .line 19
     const/high16 v0, -0x80000000
 
     iput v0, p0, Larw;->a:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 20
     monitor-exit p0
 
     return-void
 
-    .line 18
     :catchall_0
     move-exception v0
 
@@ -269,33 +229,26 @@
 .method public final skip(J)J
     .locals 5
 
-    .prologue
-    .line 21
     invoke-direct {p0, p1, p2}, Larw;->a(J)J
 
     move-result-wide v0
 
-    .line 22
     const-wide/16 v2, -0x1
 
     cmp-long v2, v0, v2
 
     if-nez v2, :cond_0
 
-    .line 23
     const-wide/16 v0, 0x0
 
-    .line 26
     :goto_0
     return-wide v0
 
-    .line 24
     :cond_0
     invoke-super {p0, v0, v1}, Ljava/io/FilterInputStream;->skip(J)J
 
     move-result-wide v0
 
-    .line 25
     invoke-direct {p0, v0, v1}, Larw;->b(J)V
 
     goto :goto_0

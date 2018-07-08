@@ -43,19 +43,14 @@
 .method constructor <init>(I)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lmx;->a:I
 
-    .line 3
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lmx;->o:Z
 
-    .line 4
     return-void
 .end method
 
@@ -64,38 +59,30 @@
 .method final a(Lot;)V
     .locals 2
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lmx;->h:Lot;
 
     if-ne p1, v0, :cond_1
 
-    .line 11
     :cond_0
     :goto_0
     return-void
 
-    .line 6
     :cond_1
     iget-object v0, p0, Lmx;->h:Lot;
 
     if-eqz v0, :cond_2
 
-    .line 7
     iget-object v0, p0, Lmx;->h:Lot;
 
     iget-object v1, p0, Lmx;->i:Loq;
 
     invoke-virtual {v0, v1}, Lot;->b(Lpi;)V
 
-    .line 8
     :cond_2
     iput-object p1, p0, Lmx;->h:Lot;
 
-    .line 9
     if-eqz p1, :cond_0
 
-    .line 10
     iget-object v0, p0, Lmx;->i:Loq;
 
     if-eqz v0, :cond_0

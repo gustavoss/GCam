@@ -20,8 +20,6 @@
 .method private constructor <init>(Litg;Liqq;)V
     .locals 4
 
-    .prologue
-    .line 15
     const/4 v0, 0x4
 
     invoke-interface {p1}, Litg;->c()I
@@ -30,52 +28,42 @@
 
     shl-int/lit8 v1, v1, 0x2
 
-    .line 16
     iget-object v2, p2, Liqp;->a:[I
 
     const/4 v3, 0x0
 
     aget v2, v2, v3
 
-    .line 17
     mul-int/2addr v1, v2
 
     invoke-direct {p0, p1, p2, v0, v1}, Liuc;-><init>(Litg;Liqq;II)V
 
-    .line 18
     return-void
 .end method
 
 .method protected constructor <init>(Litg;Liqq;B)V
     .locals 0
 
-    .prologue
-    .line 33
     invoke-direct {p0, p1, p2}, Liuc;-><init>(Litg;Liqq;)V
 
-    .line 34
     return-void
 .end method
 
 .method private constructor <init>(Litg;Liqq;II)V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iget-object v0, p2, Liqp;->a:[I
 
     aget v0, v0, v2
 
-    .line 4
     shl-int/lit8 v0, v0, 0x2
 
     invoke-interface {p1}, Litg;->c()I
@@ -93,23 +81,18 @@
 
     invoke-static {v0, v3}, Ljiy;->a(ZLjava/lang/Object;)V
 
-    .line 5
     iput-object p1, p0, Liuc;->c:Litg;
 
-    .line 6
     iput-object p2, p0, Liuc;->a:Liqq;
 
-    .line 7
     iput p4, p0, Liuc;->d:I
 
-    .line 8
     iget-object v0, p0, Liuc;->c:Litg;
 
     invoke-interface {v0}, Litg;->c()I
 
     move-result v3
 
-    .line 9
     const/4 v0, 0x2
 
     new-array v4, v0, [I
@@ -122,18 +105,15 @@
 
     aput v0, v4, v1
 
-    .line 10
     new-array v0, v8, [Lite;
 
     iput-object v0, p0, Liuc;->b:[Lite;
 
     move v0, v2
 
-    .line 11
     :goto_1
     if-ge v0, v8, :cond_1
 
-    .line 12
     iget-object v1, p0, Liuc;->b:[Lite;
 
     new-instance v5, Lite;
@@ -146,7 +126,6 @@
 
     aput-object v5, v1, v0
 
-    .line 13
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -154,10 +133,8 @@
     :cond_0
     move v0, v2
 
-    .line 4
     goto :goto_0
 
-    .line 14
     :cond_1
     return-void
 .end method
@@ -167,20 +144,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 19
     if-ne p0, p1, :cond_1
 
-    .line 27
     :cond_0
     :goto_0
     return v0
 
-    .line 21
     :cond_1
     instance-of v2, p1, Liuc;
 
@@ -188,14 +161,11 @@
 
     move v0, v1
 
-    .line 22
     goto :goto_0
 
-    .line 23
     :cond_2
     check-cast p1, Liuc;
 
-    .line 24
     iget-object v2, p0, Liuc;->b:[Lite;
 
     array-length v2, v2
@@ -216,7 +186,6 @@
 
     iget-object v3, p1, Liuc;->a:Liqq;
 
-    .line 25
     invoke-virtual {v2, v3}, Liqq;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -227,7 +196,6 @@
 
     iget-object v3, p1, Liuc;->c:Litg;
 
-    .line 26
     invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -237,22 +205,18 @@
     :cond_3
     move v0, v1
 
-    .line 27
     goto :goto_0
 .end method
 
 .method public hashCode()I
     .locals 2
 
-    .prologue
-    .line 28
     iget-object v0, p0, Liuc;->a:Liqq;
 
     invoke-virtual {v0}, Liqq;->hashCode()I
 
     move-result v0
 
-    .line 29
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v1, p0, Liuc;->b:[Lite;
@@ -261,14 +225,12 @@
 
     add-int/2addr v0, v1
 
-    .line 30
     mul-int/lit8 v0, v0, 0x1f
 
     iget v1, p0, Liuc;->d:I
 
     add-int/2addr v0, v1
 
-    .line 31
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v1, p0, Liuc;->c:Litg;
@@ -279,6 +241,5 @@
 
     add-int/2addr v0, v1
 
-    .line 32
     return v0
 .end method

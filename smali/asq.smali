@@ -18,20 +18,14 @@
 .method public constructor <init>(Lkhp;Lkhp;Lkhp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lasq;->a:Lkhp;
 
-    .line 3
     iput-object p2, p0, Lasq;->b:Lkhp;
 
-    .line 4
     iput-object p3, p0, Lasq;->c:Lkhp;
 
-    .line 5
     return-void
 .end method
 
@@ -40,14 +34,10 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 6
-    .line 7
     new-instance v2, Lasp;
 
     iget-object v0, p0, Lasq;->a:Lkhp;
 
-    .line 8
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -56,7 +46,6 @@
 
     iget-object v1, p0, Lasq;->b:Lkhp;
 
-    .line 9
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -67,6 +56,5 @@
 
     invoke-direct {v2, v0, v1, v3}, Lasp;-><init>(Lbny;Lfar;Lkhp;)V
 
-    .line 10
     return-object v2
 .end method

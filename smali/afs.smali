@@ -23,7 +23,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -34,7 +33,6 @@
 
     const/4 v3, 0x0
 
-    .line 3
     new-instance v0, Lafs;
 
     const-string v1, "INITIALIZE"
@@ -43,7 +41,6 @@
 
     sput-object v0, Lafs;->a:Lafs;
 
-    .line 4
     new-instance v0, Lafs;
 
     const-string v1, "RESOURCE_CACHE"
@@ -52,7 +49,6 @@
 
     sput-object v0, Lafs;->b:Lafs;
 
-    .line 5
     new-instance v0, Lafs;
 
     const-string v1, "DATA_CACHE"
@@ -61,7 +57,6 @@
 
     sput-object v0, Lafs;->c:Lafs;
 
-    .line 6
     new-instance v0, Lafs;
 
     const-string v1, "SOURCE"
@@ -70,7 +65,6 @@
 
     sput-object v0, Lafs;->d:Lafs;
 
-    .line 7
     new-instance v0, Lafs;
 
     const-string v1, "ENCODE"
@@ -79,7 +73,6 @@
 
     sput-object v0, Lafs;->e:Lafs;
 
-    .line 8
     new-instance v0, Lafs;
 
     const-string v1, "FINISHED"
@@ -90,7 +83,6 @@
 
     sput-object v0, Lafs;->f:Lafs;
 
-    .line 9
     const/4 v0, 0x6
 
     new-array v0, v0, [Lafs;
@@ -129,8 +121,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -139,8 +129,6 @@
 .method public static values()[Lafs;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lafs;->g:[Lafs;
 
     invoke-virtual {v0}, [Lafs;->clone()Ljava/lang/Object;

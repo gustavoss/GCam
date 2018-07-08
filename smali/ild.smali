@@ -11,22 +11,16 @@
 .method constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lild;->a:Ljava/lang/Object;
 
-    .line 4
     return-void
 .end method
 
 .method public static a()Lild;
     .locals 2
 
-    .prologue
-    .line 1
     new-instance v0, Lild;
 
     const/4 v1, 0x0

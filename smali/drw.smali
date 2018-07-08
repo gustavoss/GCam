@@ -56,59 +56,42 @@
 .method public constructor <init>(Liii;Liie;Lfea;Lfla;Ljrw;Ldsu;Lfge;Lkey;Lfch;Lcqm;Ldrp;Lcrn;Lfdl;Lger;Ldrj;Lida;Lgmh;)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldrw;->b:Liii;
 
-    .line 3
     iput-object p3, p0, Ldrw;->c:Lfea;
 
-    .line 4
     iput-object p4, p0, Ldrw;->d:Lfla;
 
-    .line 5
     iput-object p5, p0, Ldrw;->e:Ljrw;
 
-    .line 6
     iput-object p6, p0, Ldrw;->f:Ldsu;
 
-    .line 7
     iput-object p7, p0, Ldrw;->g:Lfge;
 
-    .line 8
     iput-object p9, p0, Ldrw;->h:Lfch;
 
-    .line 9
     iput-object p8, p0, Ldrw;->i:Lkey;
 
-    .line 10
     iput-object p10, p0, Ldrw;->j:Lcqm;
 
-    .line 11
     iput-object p11, p0, Ldrw;->m:Ldrp;
 
-    .line 12
     iput-object p12, p0, Ldrw;->n:Lcrn;
 
-    .line 13
     move-object/from16 v0, p15
 
     iput-object v0, p0, Ldrw;->p:Lida;
 
-    .line 14
     move-object/from16 v0, p16
 
     iput-object v0, p0, Ldrw;->q:Lida;
 
-    .line 15
     move-object/from16 v0, p17
 
     iput-object v0, p0, Ldrw;->r:Lgmh;
 
-    .line 16
     invoke-interface {p3}, Lfea;->b()Lilt;
 
     move-result-object v1
@@ -122,7 +105,6 @@
     :goto_0
     iput-boolean v1, p0, Ldrw;->s:Z
 
-    .line 17
     iget-boolean v1, p0, Ldrw;->s:Z
 
     if-eqz v1, :cond_1
@@ -132,7 +114,6 @@
 
     iput-object v0, p0, Ldrw;->o:Lfdl;
 
-    .line 18
     const-string v1, "HdrPTImgCapCmd"
 
     invoke-interface {p2, v1}, Liie;->a(Ljava/lang/String;)Liid;
@@ -141,14 +122,12 @@
 
     iput-object v1, p0, Ldrw;->a:Liid;
 
-    .line 19
     iget-object v1, p0, Ldrw;->a:Liid;
 
     const-string v2, "Creating HdrPlusTorchImageCaptureCommand."
 
     invoke-interface {v1, v2}, Liid;->e(Ljava/lang/String;)V
 
-    .line 20
     invoke-interface {p10}, Lcqm;->a()Lcom/google/googlex/gcam/InitParams;
 
     move-result-object v1
@@ -159,7 +138,6 @@
 
     iput v1, p0, Ldrw;->k:I
 
-    .line 21
     invoke-interface {p10}, Lcqm;->a()Lcom/google/googlex/gcam/InitParams;
 
     move-result-object v1
@@ -170,7 +148,6 @@
 
     iput v1, p0, Ldrw;->l:I
 
-    .line 22
     invoke-virtual {p4}, Lfla;->a()I
 
     move-result v1
@@ -184,7 +161,6 @@
     :goto_2
     invoke-static {v1}, Ljiy;->b(Z)V
 
-    .line 23
     invoke-virtual {p4}, Lfla;->a()I
 
     move-result v1
@@ -198,10 +174,8 @@
     :goto_3
     invoke-static {v1}, Ljiy;->b(Z)V
 
-    .line 24
     return-void
 
-    .line 16
     :cond_0
     const/4 v1, 0x0
 
@@ -210,16 +184,13 @@
     :cond_1
     move-object/from16 p14, p13
 
-    .line 17
     goto :goto_1
 
-    .line 22
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_2
 
-    .line 23
     :cond_3
     const/4 v1, 0x0
 
@@ -229,8 +200,6 @@
 .method private static synthetic a(Ljava/lang/Throwable;Lfci;)V
     .locals 1
 
-    .prologue
-    .line 224
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -257,8 +226,6 @@
 .method private static synthetic a(Ljava/lang/Throwable;Lfdm;)V
     .locals 1
 
-    .prologue
-    .line 226
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -285,8 +252,6 @@
 .method private static synthetic a(Ljava/lang/Throwable;Lfgf;)V
     .locals 1
 
-    .prologue
-    .line 227
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -313,8 +278,6 @@
 .method private static synthetic a(Ljava/lang/Throwable;Libm;)V
     .locals 1
 
-    .prologue
-    .line 225
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -343,8 +306,6 @@
 .method public final a()Lida;
     .locals 1
 
-    .prologue
-    .line 218
     iget-object v0, p0, Ldrw;->q:Lida;
 
     return-object v0
@@ -353,43 +314,34 @@
 .method public final a(Lftd;Lfsr;)V
     .locals 23
 
-    .prologue
-    .line 25
     sget-object v2, Lfck;->a:Lfck;
 
-    .line 26
     new-instance v3, Lfcj;
 
     invoke-direct {v3, v2, v2, v2}, Lfcj;-><init>(Lfck;Lfck;Lfck;)V
 
-    .line 27
     sget-object v2, Lfck;->c:Lfck;
 
-    .line 28
     invoke-virtual {v3, v2}, Lfcj;->b(Lfck;)Lfcj;
 
     move-result-object v2
 
     sget-object v3, Lfck;->b:Lfck;
 
-    .line 29
     invoke-virtual {v2, v3}, Lfcj;->a(Lfck;)Lfcj;
 
     move-result-object v2
 
     sget-object v3, Lfck;->c:Lfck;
 
-    .line 30
     invoke-virtual {v2, v3}, Lfcj;->c(Lfck;)Lfcj;
 
     move-result-object v6
 
-    .line 31
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->i:Lkey;
 
-    .line 32
     invoke-static {v2}, Lijt;->a(Lkey;)Ljava/lang/Object;
 
     move-result-object v2
@@ -402,7 +354,6 @@
 
     check-cast v2, Lfhl;
 
-    .line 33
     move-object/from16 v0, p0
 
     iget-object v3, v0, Ldrw;->c:Lfea;
@@ -411,7 +362,6 @@
 
     move-result v3
 
-    .line 34
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ldrw;->j:Lcqm;
@@ -420,7 +370,6 @@
 
     move-result v3
 
-    .line 35
     if-ltz v3, :cond_4
 
     const/4 v4, 0x1
@@ -428,7 +377,6 @@
     :goto_0
     invoke-static {v4}, Ljiy;->a(Z)V
 
-    .line 36
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ldrw;->a:Liid;
@@ -437,7 +385,6 @@
 
     invoke-interface {v4, v5}, Liid;->d(Ljava/lang/String;)V
 
-    .line 37
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ldrw;->b:Liii;
@@ -446,7 +393,6 @@
 
     invoke-interface {v4, v5}, Liii;->a(Ljava/lang/String;)V
 
-    .line 38
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ldrw;->b:Liii;
@@ -455,10 +401,8 @@
 
     invoke-interface {v4, v5}, Liii;->a(Ljava/lang/String;)V
 
-    .line 39
     const/4 v8, 0x0
 
-    .line 40
     :try_start_0
     move-object/from16 v0, p0
 
@@ -472,7 +416,6 @@
 
     const/16 v17, 0x0
 
-    .line 41
     :try_start_1
     move-object/from16 v0, p0
 
@@ -485,10 +428,8 @@
 
     move-result-object v18
 
-    .line 42
     const/16 v16, 0x0
 
-    .line 43
     :try_start_2
     new-instance v19, Libm;
 
@@ -497,10 +438,8 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_9
 
-    .line 44
     const/4 v15, 0x0
 
-    .line 45
     :try_start_3
     move-object/from16 v0, p0
 
@@ -512,14 +451,12 @@
 
     check-cast v5, Lftv;
 
-    .line 46
     move-object/from16 v0, v18
 
     invoke-interface {v0, v2}, Lfdm;->a(Lfhl;)Lfhl;
 
     move-result-object v2
 
-    .line 47
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ldrw;->b:Liii;
@@ -528,7 +465,6 @@
 
     invoke-interface {v4, v7}, Liii;->b(Ljava/lang/String;)V
 
-    .line 48
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ldrw;->h:Lfch;
@@ -542,13 +478,11 @@
 
     const/4 v14, 0x0
 
-    .line 49
     :try_start_4
     invoke-interface/range {v20 .. v20}, Lfci;->a()J
 
     move-result-wide v6
 
-    .line 50
     new-instance v11, Lfhn;
 
     move-object/from16 v0, v20
@@ -562,13 +496,10 @@
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_5
 
-    .line 51
     const/4 v13, 0x0
 
-    .line 52
     const/4 v4, 0x0
 
-    .line 53
     :try_start_5
     move-object/from16 v0, p0
 
@@ -578,10 +509,8 @@
 
     invoke-interface {v2, v10}, Liii;->b(Ljava/lang/String;)V
 
-    .line 54
     const/4 v2, 0x0
 
-    .line 55
     move-object/from16 v0, p0
 
     iget-object v10, v0, Ldrw;->f:Ldsu;
@@ -590,24 +519,20 @@
 
     move-result v10
 
-    .line 56
     sget v12, Lep;->Z:I
 
     if-ne v10, v12, :cond_5
 
-    .line 57
     move-object/from16 v0, p0
 
     iget-object v6, v0, Ldrw;->n:Lcrn;
 
-    .line 58
     iget-object v7, v6, Lcrn;->a:Linu;
 
     move-object v6, v2
 
     move-object v12, v4
 
-    .line 80
     :cond_0
     move-object/from16 v0, p0
 
@@ -617,7 +542,6 @@
 
     invoke-interface {v2, v4}, Liii;->b(Ljava/lang/String;)V
 
-    .line 81
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->b:Liii;
@@ -626,21 +550,18 @@
 
     invoke-interface {v2, v4}, Liii;->a(Ljava/lang/String;)V
 
-    .line 82
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->j:Lcqm;
 
     move-object/from16 v4, p2
 
-    .line 83
     invoke-interface/range {v2 .. v7}, Lcqm;->a(ILfsr;Lftv;Lcom/google/googlex/gcam/AeResults;Linu;)Lcqw;
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_b
 
     move-result-object v3
 
-    .line 84
     :try_start_6
     move-object/from16 v0, p0
 
@@ -648,10 +569,8 @@
 
     invoke-interface {v2}, Liii;->a()V
 
-    .line 85
     if-nez v3, :cond_a
 
-    .line 86
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->a:Liid;
@@ -662,16 +581,13 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_6
 
-    .line 87
     if-eqz v3, :cond_9
 
-    .line 89
     :try_start_7
     move-object/from16 v0, p2
 
     iget-object v2, v0, Lfsr;->b:Lgfy;
 
-    .line 90
     invoke-interface {v2}, Lgab;->n()Lgmd;
 
     move-result-object v2
@@ -680,12 +596,10 @@
 
     invoke-interface {v2, v4}, Lgmd;->a(Z)V
 
-    .line 92
     move-object/from16 v0, p2
 
     iget-object v2, v0, Lfsr;->a:Lfav;
 
-    .line 93
     iget-object v2, v2, Lfav;->h:Lida;
 
     move-object/from16 v0, p0
@@ -698,13 +612,11 @@
 
     invoke-interface {v2, v4}, Lida;->a(Ljava/lang/Object;)V
 
-    .line 94
     invoke-virtual {v3}, Lcqw;->b()Z
     :try_end_7
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_0
     .catchall {:try_start_7 .. :try_end_7} :catchall_5
 
-    .line 96
     if-eqz v20, :cond_1
 
     const/4 v2, 0x0
@@ -717,7 +629,6 @@
     .catch Ljava/lang/Throwable; {:try_start_8 .. :try_end_8} :catch_1
     .catchall {:try_start_8 .. :try_end_8} :catchall_a
 
-    .line 97
     :cond_1
     const/4 v2, 0x0
 
@@ -751,7 +662,6 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_4
 
-    .line 98
     :cond_3
     move-object/from16 v0, p0
 
@@ -761,41 +671,34 @@
 
     invoke-interface {v2, v3}, Liid;->d(Ljava/lang/String;)V
 
-    .line 99
     invoke-virtual/range {p1 .. p1}, Lftd;->close()V
 
-    .line 100
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->o:Lfdl;
 
     invoke-interface {v2}, Lfdl;->a()V
 
-    .line 101
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->b:Liii;
 
     invoke-interface {v2}, Liii;->a()V
 
-    .line 102
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->b:Liii;
 
     invoke-interface {v2}, Liii;->a()V
 
-    .line 212
     :goto_1
     return-void
 
-    .line 35
     :cond_4
     const/4 v4, 0x0
 
     goto/16 :goto_0
 
-    .line 60
     :cond_5
     :try_start_c
     move-object/from16 v0, p0
@@ -810,7 +713,6 @@
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_b
 
-    .line 61
     :try_start_d
     move-object/from16 v0, p0
 
@@ -820,15 +722,12 @@
 
     move-result-object v4
 
-    .line 62
     move-object/from16 v0, v19
 
     invoke-virtual {v0, v4}, Libm;->a(Lihr;)Lihr;
 
-    .line 64
     iget-object v2, v4, Ldsv;->a:Lcom/google/googlex/gcam/AeResults;
 
-    .line 67
     iget-object v7, v4, Ldsv;->b:Linu;
     :try_end_d
     .catch Lijt; {:try_start_d .. :try_end_d} :catch_4
@@ -838,7 +737,6 @@
 
     move-object v12, v4
 
-    .line 76
     :goto_2
     :try_start_e
     move-object/from16 v0, p0
@@ -847,10 +745,8 @@
 
     invoke-interface {v2}, Liii;->a()V
 
-    .line 77
     if-nez v7, :cond_0
 
-    .line 78
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->a:Liid;
@@ -861,7 +757,6 @@
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_b
 
-    .line 79
     :try_start_f
     new-instance v2, Lijt;
 
@@ -874,7 +769,6 @@
     .catch Ljava/lang/Throwable; {:try_start_f .. :try_end_f} :catch_0
     .catchall {:try_start_f .. :try_end_f} :catchall_5
 
-    .line 198
     :catch_0
     move-exception v2
 
@@ -883,7 +777,6 @@
     :try_end_10
     .catchall {:try_start_10 .. :try_end_10} :catchall_0
 
-    .line 199
     :catchall_0
     move-exception v3
 
@@ -907,7 +800,6 @@
     .catch Ljava/lang/Throwable; {:try_start_11 .. :try_end_11} :catch_1
     .catchall {:try_start_11 .. :try_end_11} :catchall_a
 
-    .line 201
     :catch_1
     move-exception v2
 
@@ -916,7 +808,6 @@
     :try_end_12
     .catchall {:try_start_12 .. :try_end_12} :catchall_1
 
-    .line 202
     :catchall_1
     move-exception v3
 
@@ -937,7 +828,6 @@
     .catch Ljava/lang/Throwable; {:try_start_13 .. :try_end_13} :catch_2
     .catchall {:try_start_13 .. :try_end_13} :catchall_9
 
-    .line 203
     :catch_2
     move-exception v2
 
@@ -946,7 +836,6 @@
     :try_end_14
     .catchall {:try_start_14 .. :try_end_14} :catchall_2
 
-    .line 204
     :catchall_2
     move-exception v3
 
@@ -970,7 +859,6 @@
     .catch Ljava/lang/Throwable; {:try_start_15 .. :try_end_15} :catch_3
     .catchall {:try_start_15 .. :try_end_15} :catchall_8
 
-    .line 205
     :catch_3
     move-exception v2
 
@@ -979,7 +867,6 @@
     :try_end_16
     .catchall {:try_start_16 .. :try_end_16} :catchall_3
 
-    .line 206
     :catchall_3
     move-exception v3
 
@@ -1000,7 +887,6 @@
     :try_end_17
     .catchall {:try_start_17 .. :try_end_17} :catchall_4
 
-    .line 213
     :catchall_4
     move-exception v2
 
@@ -1012,24 +898,20 @@
 
     invoke-interface {v3, v4}, Liid;->d(Ljava/lang/String;)V
 
-    .line 214
     invoke-virtual/range {p1 .. p1}, Lftd;->close()V
 
-    .line 215
     move-object/from16 v0, p0
 
     iget-object v3, v0, Ldrw;->o:Lfdl;
 
     invoke-interface {v3}, Lfdl;->a()V
 
-    .line 216
     move-object/from16 v0, p0
 
     iget-object v3, v0, Ldrw;->b:Liii;
 
     invoke-interface {v3}, Liii;->a()V
 
-    .line 217
     move-object/from16 v0, p0
 
     iget-object v3, v0, Ldrw;->b:Liii;
@@ -1038,7 +920,6 @@
 
     throw v2
 
-    .line 71
     :catch_4
     move-exception v6
 
@@ -1051,15 +932,12 @@
 
     invoke-interface {v6, v7}, Liid;->f(Ljava/lang/String;)V
 
-    .line 72
     sget v10, Lep;->Z:I
 
-    .line 73
     move-object/from16 v0, p0
 
     iget-object v6, v0, Ldrw;->n:Lcrn;
 
-    .line 74
     iget-object v7, v6, Lcrn;->a:Linu;
     :try_end_18
     .catchall {:try_start_18 .. :try_end_18} :catchall_b
@@ -1068,10 +946,8 @@
 
     move-object v12, v4
 
-    .line 75
     goto/16 :goto_2
 
-    .line 95
     :cond_9
     :try_start_19
     new-instance v2, Lijt;
@@ -1085,7 +961,6 @@
     .catch Ljava/lang/Throwable; {:try_start_19 .. :try_end_19} :catch_0
     .catchall {:try_start_19 .. :try_end_19} :catchall_5
 
-    .line 199
     :catchall_5
     move-exception v2
 
@@ -1093,53 +968,44 @@
 
     goto :goto_3
 
-    .line 104
     :cond_a
     :try_start_1a
     move-object/from16 v0, v19
 
     invoke-virtual {v0, v3}, Libm;->a(Lihr;)Lihr;
 
-    .line 105
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->f:Ldsu;
 
-    .line 106
     invoke-interface {v2}, Ldsu;->b()Ljrw;
 
     move-result-object v4
 
-    .line 107
     sget v2, Lep;->aa:I
 
     if-ne v10, v2, :cond_1c
 
-    .line 108
     invoke-virtual {v4}, Ljrw;->a()Z
 
     move-result v2
 
     if-eqz v2, :cond_10
 
-    .line 109
     move-object/from16 v0, p0
 
     iget-object v5, v0, Ldrw;->j:Lcqm;
 
-    .line 110
     invoke-virtual {v4}, Ljrw;->b()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Liob;
 
-    .line 111
     invoke-interface {v5, v3, v7, v2}, Lcqm;->a(Lcqw;Linu;Liob;)Lcom/google/googlex/gcam/AeResults;
 
     move-result-object v6
 
-    .line 112
     invoke-virtual {v4}, Ljrw;->b()Ljava/lang/Object;
 
     move-result-object v2
@@ -1152,48 +1018,38 @@
 
     move v2, v10
 
-    .line 114
     :goto_7
     invoke-virtual/range {p1 .. p1}, Lftd;->close()V
 
-    .line 116
     move-object/from16 v0, p2
 
     iget-object v5, v0, Lfsr;->c:Lfsq;
 
-    .line 119
     const/4 v4, 0x2
 
     iput v4, v11, Lfhn;->a:I
 
-    .line 120
     invoke-virtual {v11}, Lfhn;->b()Lfhn;
 
-    .line 121
     const/4 v4, 0x0
 
-    .line 122
     sget v7, Lep;->Z:I
 
     if-eq v2, v7, :cond_b
 
-    .line 123
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ldrw;->j:Lcqm;
 
-    .line 124
     invoke-interface {v4, v3, v6}, Lcqm;->a(Lcqw;Lcom/google/googlex/gcam/AeResults;)Lcom/google/googlex/gcam/BurstSpec;
 
     move-result-object v4
 
-    .line 125
     :cond_b
     sget v6, Lep;->Z:I
 
     if-eq v2, v6, :cond_c
 
-    .line 126
     invoke-virtual {v4}, Lcom/google/googlex/gcam/BurstSpec;->getFrame_requests()Lcom/google/googlex/gcam/FrameRequestVector;
 
     move-result-object v2
@@ -1204,7 +1060,6 @@
 
     if-eqz v2, :cond_11
 
-    .line 127
     :cond_c
     move-object/from16 v0, p0
 
@@ -1214,7 +1069,6 @@
 
     invoke-interface {v2, v4}, Liid;->b(Ljava/lang/String;)V
 
-    .line 128
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->m:Ldrp;
@@ -1227,16 +1081,13 @@
 
     iget-object v6, v0, Ldrw;->d:Lfla;
 
-    .line 129
     invoke-virtual {v2, v3, v4, v6, v9}, Ldrp;->a(Lcqw;Lfhn;Lfla;Lfgf;)Lcom/google/googlex/gcam/BurstSpec;
 
     move-result-object v4
 
-    .line 131
     :goto_8
     if-nez v4, :cond_13
 
-    .line 132
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->a:Liid;
@@ -1245,21 +1096,17 @@
 
     invoke-interface {v2, v4}, Liid;->c(Ljava/lang/String;)V
 
-    .line 133
     invoke-virtual {v3}, Lcqw;->b()Z
     :try_end_1a
     .catchall {:try_start_1a .. :try_end_1a} :catchall_6
 
-    .line 134
     if-eqz v3, :cond_12
 
-    .line 136
     :try_start_1b
     move-object/from16 v0, p2
 
     iget-object v2, v0, Lfsr;->b:Lgfy;
 
-    .line 137
     invoke-interface {v2}, Lgab;->n()Lgmd;
 
     move-result-object v2
@@ -1268,12 +1115,10 @@
 
     invoke-interface {v2, v4}, Lgmd;->a(Z)V
 
-    .line 139
     move-object/from16 v0, p2
 
     iget-object v2, v0, Lfsr;->a:Lfav;
 
-    .line 140
     iget-object v2, v2, Lfav;->h:Lida;
 
     move-object/from16 v0, p0
@@ -1286,13 +1131,11 @@
 
     invoke-interface {v2, v4}, Lida;->a(Ljava/lang/Object;)V
 
-    .line 141
     invoke-virtual {v3}, Lcqw;->b()Z
     :try_end_1b
     .catch Ljava/lang/Throwable; {:try_start_1b .. :try_end_1b} :catch_0
     .catchall {:try_start_1b .. :try_end_1b} :catchall_5
 
-    .line 143
     if-eqz v20, :cond_d
 
     const/4 v2, 0x0
@@ -1305,7 +1148,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1c .. :try_end_1c} :catch_1
     .catchall {:try_start_1c .. :try_end_1c} :catchall_a
 
-    .line 144
     :cond_d
     const/4 v2, 0x0
 
@@ -1339,7 +1181,6 @@
     :try_end_1f
     .catchall {:try_start_1f .. :try_end_1f} :catchall_4
 
-    .line 145
     :cond_f
     move-object/from16 v0, p0
 
@@ -1349,24 +1190,20 @@
 
     invoke-interface {v2, v3}, Liid;->d(Ljava/lang/String;)V
 
-    .line 146
     invoke-virtual/range {p1 .. p1}, Lftd;->close()V
 
-    .line 147
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->o:Lfdl;
 
     invoke-interface {v2}, Lfdl;->a()V
 
-    .line 148
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->b:Liii;
 
     invoke-interface {v2}, Liii;->a()V
 
-    .line 149
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->b:Liii;
@@ -1375,14 +1212,12 @@
 
     goto/16 :goto_1
 
-    .line 113
     :cond_10
     :try_start_20
     sget v2, Lep;->Z:I
 
     goto/16 :goto_7
 
-    .line 130
     :cond_11
     move-object/from16 v0, p0
 
@@ -1396,7 +1231,6 @@
 
     goto :goto_8
 
-    .line 178
     :catchall_6
     move-exception v2
 
@@ -1407,13 +1241,11 @@
     :goto_9
     if-eqz v4, :cond_1b
 
-    .line 180
     :try_start_21
     move-object/from16 v0, p2
 
     iget-object v5, v0, Lfsr;->b:Lgfy;
 
-    .line 181
     invoke-interface {v5}, Lgab;->n()Lgmd;
 
     move-result-object v5
@@ -1422,12 +1254,10 @@
 
     invoke-interface {v5, v6}, Lgmd;->a(Z)V
 
-    .line 183
     move-object/from16 v0, p2
 
     iget-object v5, v0, Lfsr;->a:Lfav;
 
-    .line 184
     iget-object v5, v5, Lfav;->h:Lida;
 
     move-object/from16 v0, p0
@@ -1440,44 +1270,35 @@
 
     invoke-interface {v5, v6}, Lida;->a(Ljava/lang/Object;)V
 
-    .line 185
     if-eqz v3, :cond_1a
 
-    .line 188
     move-object/from16 v0, p2
 
     iget-object v3, v0, Lfsr;->b:Lgfy;
 
-    .line 189
     new-instance v5, Ldry;
 
     invoke-direct {v5, v4}, Ldry;-><init>(Lcqw;)V
 
-    .line 190
     invoke-interface {v3, v5}, Lgfy;->a(Lggr;)V
 
-    .line 191
     move-object/from16 v0, p0
 
     iget-object v3, v0, Ldrw;->r:Lgmh;
 
-    .line 192
     move-object/from16 v0, p2
 
     iget-object v4, v0, Lfsr;->b:Lgfy;
 
-    .line 193
     invoke-interface {v4}, Lgab;->n()Lgmd;
 
     move-result-object v4
 
     invoke-virtual {v3, v4}, Lgmh;->a(Lgmd;)V
 
-    .line 196
     :goto_a
     throw v2
 
-    .line 142
     :cond_12
     new-instance v2, Lijt;
 
@@ -1490,7 +1311,6 @@
     .catch Ljava/lang/Throwable; {:try_start_21 .. :try_end_21} :catch_0
     .catchall {:try_start_21 .. :try_end_21} :catchall_5
 
-    .line 152
     :cond_13
     :try_start_22
     new-instance v10, Ldrx;
@@ -1501,7 +1321,6 @@
 
     invoke-direct {v10, v0, v1, v9, v12}, Ldrx;-><init>(Lfci;Lfdm;Lfgf;Lihr;)V
 
-    .line 153
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->m:Ldrp;
@@ -1518,27 +1337,22 @@
 
     iget-object v8, v0, Ldrw;->e:Ljrw;
 
-    .line 154
     move-object/from16 v0, p2
 
     iget-object v11, v0, Lfsr;->b:Lgfy;
 
-    .line 155
     invoke-interface {v11}, Lgab;->n()Lgmd;
 
     move-result-object v11
 
-    .line 156
     invoke-virtual/range {v2 .. v12}, Ldrp;->a(Lcqw;Lcom/google/googlex/gcam/BurstSpec;Lfsq;Lfhn;Lfla;Ljrw;Lfgf;Lihr;Lgmd;Ldsv;)Z
     :try_end_22
     .catchall {:try_start_22 .. :try_end_22} :catchall_6
 
     move-result v4
 
-    .line 157
     if-nez v4, :cond_14
 
-    .line 158
     :try_start_23
     new-instance v2, Lijt;
 
@@ -1550,7 +1364,6 @@
     :try_end_23
     .catchall {:try_start_23 .. :try_end_23} :catchall_7
 
-    .line 178
     :catchall_7
     move-exception v2
 
@@ -1562,17 +1375,14 @@
 
     goto :goto_9
 
-    .line 159
     :cond_14
     if-eqz v3, :cond_19
 
-    .line 161
     :try_start_24
     move-object/from16 v0, p2
 
     iget-object v2, v0, Lfsr;->b:Lgfy;
 
-    .line 162
     invoke-interface {v2}, Lgab;->n()Lgmd;
 
     move-result-object v2
@@ -1581,12 +1391,10 @@
 
     invoke-interface {v2, v5}, Lgmd;->a(Z)V
 
-    .line 164
     move-object/from16 v0, p2
 
     iget-object v2, v0, Lfsr;->a:Lfav;
 
-    .line 165
     iget-object v2, v2, Lfav;->h:Lida;
 
     move-object/from16 v0, p0
@@ -1599,33 +1407,26 @@
 
     invoke-interface {v2, v5}, Lida;->a(Ljava/lang/Object;)V
 
-    .line 166
     if-eqz v4, :cond_18
 
-    .line 169
     move-object/from16 v0, p2
 
     iget-object v2, v0, Lfsr;->b:Lgfy;
 
-    .line 170
     new-instance v4, Ldry;
 
     invoke-direct {v4, v3}, Ldry;-><init>(Lcqw;)V
 
-    .line 171
     invoke-interface {v2, v4}, Lgfy;->a(Lggr;)V
 
-    .line 172
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->r:Lgmh;
 
-    .line 173
     move-object/from16 v0, p2
 
     iget-object v3, v0, Lfsr;->b:Lgfy;
 
-    .line 174
     invoke-interface {v3}, Lgab;->n()Lgmd;
 
     move-result-object v3
@@ -1635,7 +1436,6 @@
     .catch Ljava/lang/Throwable; {:try_start_24 .. :try_end_24} :catch_0
     .catchall {:try_start_24 .. :try_end_24} :catchall_5
 
-    .line 197
     :goto_b
     if-eqz v20, :cond_15
 
@@ -1649,7 +1449,6 @@
     .catch Ljava/lang/Throwable; {:try_start_25 .. :try_end_25} :catch_1
     .catchall {:try_start_25 .. :try_end_25} :catchall_a
 
-    .line 200
     :cond_15
     const/4 v2, 0x0
 
@@ -1661,7 +1460,6 @@
     .catch Ljava/lang/Throwable; {:try_start_26 .. :try_end_26} :catch_2
     .catchall {:try_start_26 .. :try_end_26} :catchall_9
 
-    .line 202
     if-eqz v18, :cond_16
 
     const/4 v2, 0x0
@@ -1674,7 +1472,6 @@
     .catch Ljava/lang/Throwable; {:try_start_27 .. :try_end_27} :catch_3
     .catchall {:try_start_27 .. :try_end_27} :catchall_8
 
-    .line 204
     :cond_16
     if-eqz v9, :cond_17
 
@@ -1685,7 +1482,6 @@
     :try_end_28
     .catchall {:try_start_28 .. :try_end_28} :catchall_4
 
-    .line 207
     :cond_17
     move-object/from16 v0, p0
 
@@ -1695,24 +1491,20 @@
 
     invoke-interface {v2, v3}, Liid;->d(Ljava/lang/String;)V
 
-    .line 208
     invoke-virtual/range {p1 .. p1}, Lftd;->close()V
 
-    .line 209
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->o:Lfdl;
 
     invoke-interface {v2}, Lfdl;->a()V
 
-    .line 210
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->b:Liii;
 
     invoke-interface {v2}, Liii;->a()V
 
-    .line 211
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldrw;->b:Liii;
@@ -1721,14 +1513,12 @@
 
     goto/16 :goto_1
 
-    .line 176
     :cond_18
     :try_start_29
     invoke-virtual {v3}, Lcqw;->b()Z
 
     goto :goto_b
 
-    .line 177
     :cond_19
     new-instance v2, Lijt;
 
@@ -1738,13 +1528,11 @@
 
     throw v2
 
-    .line 195
     :cond_1a
     invoke-virtual {v4}, Lcqw;->b()Z
 
     goto/16 :goto_a
 
-    .line 196
     :cond_1b
     new-instance v2, Lijt;
 
@@ -1757,7 +1545,6 @@
     .catch Ljava/lang/Throwable; {:try_start_29 .. :try_end_29} :catch_0
     .catchall {:try_start_29 .. :try_end_29} :catchall_5
 
-    .line 206
     :catchall_8
     move-exception v2
 
@@ -1765,7 +1552,6 @@
 
     goto/16 :goto_6
 
-    .line 204
     :catchall_9
     move-exception v2
 
@@ -1773,7 +1559,6 @@
 
     goto/16 :goto_5
 
-    .line 202
     :catchall_a
     move-exception v2
 
@@ -1781,7 +1566,6 @@
 
     goto/16 :goto_4
 
-    .line 178
     :catchall_b
     move-exception v2
 
@@ -1800,27 +1584,22 @@
 .method public final b()Lida;
     .locals 3
 
-    .prologue
-    .line 219
     sget-object v0, Lhkl;->a:Landroid/hardware/camera2/CaptureRequest$Key;
 
     if-eqz v0, :cond_0
 
-    .line 220
     new-instance v0, Lfhm;
 
     sget-object v1, Lhkl;->a:Landroid/hardware/camera2/CaptureRequest$Key;
 
     const/4 v2, 0x0
 
-    .line 221
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     invoke-direct {v0, v1, v2}, Lfhm;-><init>(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 222
     invoke-static {v0}, Lezo;->a(Lfhm;)Lfhr;
 
     move-result-object v0
@@ -1829,7 +1608,6 @@
 
     move-result-object v0
 
-    .line 223
     :goto_0
     return-object v0
 

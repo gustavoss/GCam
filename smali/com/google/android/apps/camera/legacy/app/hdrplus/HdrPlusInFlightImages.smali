@@ -30,8 +30,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 24
     const-string v0, "HdrPFrameReleaser"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -40,14 +38,12 @@
 
     sput-object v0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->b:Ljava/lang/String;
 
-    .line 25
     invoke-static {}, Lcom/google/googlex/gcam/GcamModule;->getKInvalidImageId()J
 
     move-result-wide v0
 
     sput-wide v0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->a:J
 
-    .line 26
     const-wide/16 v0, 0x0
 
     sput-wide v0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->e:J
@@ -58,42 +54,34 @@
 .method public constructor <init>()V
     .locals 4
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0}, Lcom/google/googlex/gcam/ImageReleaseCallback;-><init>()V
 
-    .line 3
     invoke-static {}, Ldky;->a()Ldky;
 
     move-result-object v2
 
-    .line 4
     const-string v3, "persist.gcam.sm.log"
 
     invoke-virtual {v2, v3, v0}, Ldky;->a(Ljava/lang/String;Z)Z
 
     move-result v2
 
-    .line 5
     if-nez v2, :cond_0
 
-    .line 6
     invoke-static {}, Ldky;->a()Ldky;
 
     move-result-object v2
 
-    .line 7
     const-string v3, "persist.gcam.sm.enabled"
 
     invoke-virtual {v2, v3, v1}, Ldky;->a(Ljava/lang/String;Z)Z
 
     move-result v2
 
-    .line 8
     if-nez v2, :cond_1
 
     :cond_0
@@ -102,7 +90,6 @@
     :cond_1
     iput-boolean v0, p0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->c:Z
 
-    .line 9
     new-instance v0, Landroid/util/LongSparseArray;
 
     invoke-direct {v0}, Landroid/util/LongSparseArray;-><init>()V
@@ -115,8 +102,6 @@
 .method private static declared-synchronized a()J
     .locals 6
 
-    .prologue
-    .line 13
     const-class v1, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;
 
     monitor-enter v1
@@ -149,8 +134,6 @@
 .method public declared-synchronized Run(J)V
     .locals 3
 
-    .prologue
-    .line 14
     monitor-enter p0
 
     :try_start_0
@@ -158,7 +141,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 15
     sget-object v0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->b:Ljava/lang/String;
 
     const/16 v1, 0x2d
@@ -183,7 +165,6 @@
 
     invoke-static {v0, v1}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 16
     :cond_0
     sget-wide v0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->a:J
 
@@ -191,7 +172,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 17
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->d:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
@@ -200,24 +180,19 @@
 
     check-cast v0, Liob;
 
-    .line 18
     if-eqz v0, :cond_1
 
-    .line 19
     invoke-interface {v0}, Liob;->close()V
 
-    .line 20
     :cond_1
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->d:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/LongSparseArray;->remove(J)V
 
-    .line 21
     iget-boolean v0, p0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->c:Z
 
     if-eqz v0, :cond_2
 
-    .line 22
     sget-object v0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->b:Ljava/lang/String;
 
     const/16 v1, 0x23
@@ -244,13 +219,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 23
     :cond_2
     monitor-exit p0
 
     return-void
 
-    .line 14
     :catchall_0
     move-exception v0
 
@@ -262,8 +235,6 @@
 .method public final declared-synchronized a(Liob;)J
     .locals 3
 
-    .prologue
-    .line 10
     monitor-enter p0
 
     :try_start_0
@@ -271,19 +242,16 @@
 
     move-result-wide v0
 
-    .line 11
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->d:Landroid/util/LongSparseArray;
 
     invoke-virtual {v2, v0, v1, p1}, Landroid/util/LongSparseArray;->append(JLjava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 12
     monitor-exit p0
 
     return-wide v0
 
-    .line 10
     :catchall_0
     move-exception v0
 

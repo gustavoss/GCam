@@ -11,21 +11,16 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 3
     const/4 v0, -0x1
 
     sput v0, Lmb;->a:I
 
-    .line 4
     return-void
 .end method
 
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,8 +29,6 @@
 .method static a(Landroid/content/Context;Landroid/view/Window;Lma;)Lmb;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Lme;
 
     invoke-direct {v0, p0, p1, p2}, Lme;-><init>(Landroid/content/Context;Landroid/view/Window;Lma;)V

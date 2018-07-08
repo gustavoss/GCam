@@ -34,8 +34,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 17
     const-string v0, "CdrRecReqStarter"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -50,30 +48,22 @@
 .method public constructor <init>(Lbhm;Lbhp;Libi;Landroid/view/Surface;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lbhx;->e:Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Lbhx;->b:Lbhm;
 
-    .line 4
     iput-object p2, p0, Lbhx;->c:Lbhp;
 
-    .line 5
     iput-object p3, p0, Lbhx;->g:Libi;
 
-    .line 6
     iput-object p4, p0, Lbhx;->d:Landroid/view/Surface;
 
-    .line 7
     return-void
 .end method
 
@@ -82,28 +72,22 @@
 .method public final a(Lbhe;Landroid/view/Surface;Lbhn;)Lkey;
     .locals 7
 
-    .prologue
-    .line 8
     if-nez p1, :cond_0
 
-    .line 9
     const/4 v0, 0x0
 
     invoke-static {v0}, Lkek;->a(Ljava/lang/Object;)Lkey;
 
     move-result-object v5
 
-    .line 13
     :goto_0
     return-object v5
 
-    .line 10
     :cond_0
     new-instance v5, Lkfk;
 
     invoke-direct {v5}, Lkfk;-><init>()V
 
-    .line 12
     iget-object v6, p0, Lbhx;->g:Libi;
 
     new-instance v0, Lbhy;
@@ -126,19 +110,15 @@
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 14
     iget-object v1, p0, Lbhx;->e:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 15
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Lbhx;->f:Z
 
-    .line 16
     monitor-exit v1
 
     return-void

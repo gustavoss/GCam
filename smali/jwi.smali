@@ -10,8 +10,6 @@
 .method protected constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public a(Ljava/lang/Iterable;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 7
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -38,8 +34,6 @@
 .method public a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 8
     invoke-virtual {p0, p1, p2}, Ljwi;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
     move-result v0
@@ -58,13 +52,10 @@
 .method public a(Ljava/util/Iterator;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 3
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 4
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -72,7 +63,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 5
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -83,7 +73,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     return-object v0
 .end method
@@ -91,8 +80,6 @@
 .method public a()Ljwi;
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Ljwu;
 
     invoke-direct {v0, p0}, Ljwu;-><init>(Ljwi;)V
@@ -103,8 +90,6 @@
 .method public b(Ljava/lang/Iterable;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 13
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -119,8 +104,6 @@
 .method public b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 14
     invoke-virtual {p0, p1, p2}, Ljwi;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
     move-result v0
@@ -139,13 +122,10 @@
 .method public b(Ljava/util/Iterator;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 9
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 10
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -153,7 +133,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 11
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -164,7 +143,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_0
     return-object v0
 .end method

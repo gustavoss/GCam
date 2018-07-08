@@ -24,8 +24,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 30
     const-string v0, "JpegImgBESaver"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -40,41 +38,30 @@
 .method constructor <init>(Laxo;Lgah;Lfuz;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldmr;->d:Laxo;
 
-    .line 3
     iput-object p2, p0, Ldmr;->e:Lgah;
 
-    .line 4
     const-string v0, "BckndJpegEx"
 
-    .line 5
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lhxj;->d(Ljava/lang/String;I)Ljava/util/concurrent/ThreadFactory;
 
     move-result-object v0
 
-    .line 6
     invoke-static {v0}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
-    .line 7
     iput-object v0, p0, Ldmr;->b:Ljava/util/concurrent/Executor;
 
-    .line 9
     iget-object v0, p3, Lfuz;->e:Landroid/graphics/Rect;
 
-    .line 10
     iput-object v0, p0, Ldmr;->c:Landroid/graphics/Rect;
 
-    .line 11
     return-void
 .end method
 
@@ -83,44 +70,32 @@
 .method public final a(Lfsr;)Lfro;
     .locals 7
 
-    .prologue
-    .line 12
     iget-object v0, p0, Ldmr;->d:Laxo;
 
     invoke-virtual {v0}, Laxo;->a()Lihp;
 
     move-result-object v3
 
-    .line 13
     iget-object v0, p0, Ldmr;->e:Lgah;
 
-    .line 14
     iget-object v0, v0, Lgah;->f:Lgaw;
 
-    .line 15
     new-instance v5, Ldmt;
 
-    .line 16
     iget-object v0, p1, Lfsr;->b:Lgfy;
 
-    .line 18
     iget-object v1, p1, Lfsr;->a:Lfav;
 
-    .line 19
     iget-object v1, v1, Lfav;->c:Lfax;
 
-    .line 20
     invoke-direct {v5, v0, v1}, Ldmt;-><init>(Lgfy;Lfax;)V
 
-    .line 22
     new-instance v6, Ldmy;
 
     new-instance v0, Ldms;
 
-    .line 23
     iget-object v2, p1, Lfsr;->b:Lgfy;
 
-    .line 24
     iget-object v4, p0, Ldmr;->e:Lgah;
 
     move-object v1, p0
@@ -129,15 +104,12 @@
 
     invoke-direct {v6, v0}, Ldmy;-><init>(Lfnx;)V
 
-    .line 25
     return-object v6
 .end method
 
 .method public final a()Lida;
     .locals 1
 
-    .prologue
-    .line 27
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -154,8 +126,6 @@
 .method public final b(Lfsr;)Lfro;
     .locals 1
 
-    .prologue
-    .line 26
     invoke-virtual {p0, p1}, Ldmr;->a(Lfsr;)Lfro;
 
     move-result-object v0
@@ -166,14 +136,11 @@
 .method public final b()Lfrp;
     .locals 2
 
-    .prologue
-    .line 28
     new-instance v0, Lfrp;
 
     sget v1, Lep;->ay:I
 
     invoke-direct {v0, v1}, Lfrp;-><init>(I)V
 
-    .line 29
     return-object v0
 .end method

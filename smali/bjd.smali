@@ -28,8 +28,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 10
     const-string v0, "CdrMediaRecStop"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -44,20 +42,14 @@
 .method public constructor <init>(Libi;Ljava/util/concurrent/Executor;Lbip;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbjd;->d:Libi;
 
-    .line 3
     iput-object p2, p0, Lbjd;->b:Ljava/util/concurrent/Executor;
 
-    .line 4
     iput-object p3, p0, Lbjd;->c:Lbip;
 
-    .line 5
     return-void
 .end method
 
@@ -66,13 +58,10 @@
 .method public final a(Lbhe;Z)Lkey;
     .locals 3
 
-    .prologue
-    .line 6
     new-instance v0, Lkfk;
 
     invoke-direct {v0}, Lkfk;-><init>()V
 
-    .line 8
     iget-object v1, p0, Lbjd;->d:Libi;
 
     new-instance v2, Lbje;
@@ -81,6 +70,5 @@
 
     invoke-virtual {v1, v2}, Libi;->execute(Ljava/lang/Runnable;)V
 
-    .line 9
     return-object v0
 .end method

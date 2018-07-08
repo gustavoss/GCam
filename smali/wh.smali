@@ -7,8 +7,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 2
     const-string v0, "UTC"
 
     invoke-static {v0}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
@@ -19,8 +17,6 @@
 .method public static a(Ljava/util/Calendar;)Lwg;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Lwx;
 
     invoke-direct {v0, p0}, Lwx;-><init>(Ljava/util/Calendar;)V

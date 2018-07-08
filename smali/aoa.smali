@@ -14,26 +14,20 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Laoa;->a:Landroid/content/Context;
 
-    .line 3
     return-void
 .end method
 
 .method private final a(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Context;
     .locals 5
 
-    .prologue
-    .line 11
     :try_start_0
     iget-object v0, p0, Laoa;->a:Landroid/content/Context;
 
@@ -47,11 +41,9 @@
 
     return-object v0
 
-    .line 12
     :catch_0
     move-exception v0
 
-    .line 13
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -94,20 +86,16 @@
 .method private final b(Landroid/net/Uri;)I
     .locals 6
 
-    .prologue
     const/4 v5, 0x1
 
     const/4 v4, 0x0
 
-    .line 14
     invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v2
 
-    .line 15
     const/4 v1, 0x0
 
-    .line 16
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v0
@@ -116,26 +104,22 @@
 
     if-ne v0, v3, :cond_0
 
-    .line 17
     invoke-virtual {p1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 18
     invoke-interface {v2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 19
     invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 20
     iget-object v2, p0, Laoa;->a:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -150,11 +134,9 @@
 
     move-result-object v0
 
-    .line 25
     :goto_0
     if-nez v0, :cond_2
 
-    .line 26
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -193,7 +175,6 @@
 
     throw v0
 
-    .line 21
     :cond_0
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -201,7 +182,6 @@
 
     if-ne v0, v5, :cond_1
 
-    .line 22
     const/4 v0, 0x0
 
     :try_start_0
@@ -227,7 +207,6 @@
 
     goto :goto_0
 
-    .line 27
     :cond_2
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -235,7 +214,6 @@
 
     if-nez v1, :cond_3
 
-    .line 28
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -274,7 +252,6 @@
 
     throw v0
 
-    .line 29
     :cond_3
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -288,18 +265,14 @@
 .method public final a(Landroid/net/Uri;)Lagw;
     .locals 3
 
-    .prologue
-    .line 4
     invoke-direct {p0, p1}, Laoa;->b(Landroid/net/Uri;)I
 
     move-result v1
 
-    .line 5
     invoke-virtual {p1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 6
     iget-object v2, p0, Laoa;->a:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -312,10 +285,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 7
     iget-object v0, p0, Laoa;->a:Landroid/content/Context;
 
-    .line 9
     :goto_0
     const/4 v2, 0x0
 
@@ -323,14 +294,12 @@
 
     move-result-object v0
 
-    .line 10
     invoke-static {v0}, Lanz;->a(Landroid/graphics/drawable/Drawable;)Lagw;
 
     move-result-object v0
 
     return-object v0
 
-    .line 7
     :cond_0
     invoke-direct {p0, p1, v0}, Laoa;->a(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Context;
 
@@ -342,8 +311,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;IILady;)Lagw;
     .locals 1
 
-    .prologue
-    .line 30
     check-cast p1, Landroid/net/Uri;
 
     invoke-virtual {p0, p1}, Laoa;->a(Landroid/net/Uri;)Lagw;
@@ -356,11 +323,8 @@
 .method public final synthetic a(Ljava/lang/Object;Lady;)Z
     .locals 2
 
-    .prologue
-    .line 31
     check-cast p1, Landroid/net/Uri;
 
-    .line 32
     invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v0
@@ -371,6 +335,5 @@
 
     move-result v0
 
-    .line 33
     return v0
 .end method

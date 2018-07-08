@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 5
     const-string v0, "LensStateHist"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -27,16 +25,11 @@
 .method constructor <init>(Lazx;Lbqi;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lazt;->a:Lazx;
 
-    .line 3
     iput-object p2, p0, Lazt;->b:Lbqi;
 
-    .line 4
     return-void
 .end method

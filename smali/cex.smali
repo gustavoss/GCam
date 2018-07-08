@@ -16,8 +16,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,21 +24,17 @@
 .method public static a(Ljdl;Ljia;Ljia;Lcom/google/android/libraries/smartburst/buffers/FeatureTable;Ljia;Landroid/content/Context;Ljhi;Lgmr;Ljava/util/UUID;Ldoj;Lkey;Lgfy;Lggs;Lcdi;IZLjpn;Ljava/util/concurrent/ExecutorService;ZLgnk;Liii;Liix;)Lcig;
     .locals 38
 
-    .prologue
-    .line 13
     const-string v1, "PostProcessingTaskFactory#createPostProcessingTask"
 
     move-object/from16 v0, p20
 
     invoke-interface {v0, v1}, Liii;->a(Ljava/lang/String;)V
 
-    .line 15
     :try_start_0
     invoke-static/range {p1 .. p1}, Ljid;->a(Ljava/lang/AutoCloseable;)Ljqr;
 
     move-result-object v1
 
-    .line 16
     new-instance v34, Ljqs;
 
     move-object/from16 v0, v34
@@ -49,16 +43,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
-    .line 17
     const/16 v33, 0x0
 
-    .line 19
     :try_start_1
     invoke-static/range {p2 .. p2}, Ljid;->a(Ljava/lang/AutoCloseable;)Ljqr;
 
     move-result-object v1
 
-    .line 20
     new-instance v35, Ljqs;
 
     move-object/from16 v0, v35
@@ -68,16 +59,13 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
-    .line 22
     const/16 v32, 0x0
 
-    .line 24
     :try_start_2
     invoke-static/range {p4 .. p4}, Ljid;->a(Ljava/lang/AutoCloseable;)Ljqr;
 
     move-result-object v1
 
-    .line 25
     new-instance v36, Ljqs;
 
     move-object/from16 v0, v36
@@ -87,23 +75,19 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_5
 
-    .line 27
     const/16 v31, 0x0
 
-    .line 28
     :try_start_3
     new-instance v1, Ljdm;
 
     invoke-direct {v1}, Ljdm;-><init>()V
 
-    .line 30
     invoke-virtual/range {p0 .. p0}, Ljdl;->a()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 31
     sget-object v4, Lizr;->a:[Ljava/lang/String;
 
     :goto_0
@@ -115,27 +99,22 @@
 
     move-object/from16 v6, p6
 
-    .line 34
     invoke-static/range {v1 .. v6}, Ljek;->a(Ljdm;Landroid/content/Context;Ljdl;[Ljava/lang/String;Ljava/util/concurrent/Executor;Ljhi;)V
 
-    .line 35
     invoke-static/range {p10 .. p10}, Lkek;->c(Ljava/util/concurrent/Future;)Ljava/lang/Object;
 
     move-result-object v9
 
     check-cast v9, Ljava/io/File;
 
-    .line 37
     const-class v2, Ljia;
 
-    .line 38
     const-string v3, "default"
 
     invoke-virtual {v1, v2, v3}, Ljdm;->b(Ljava/lang/Class;Ljava/lang/String;)Ljdp;
 
     move-result-object v2
 
-    .line 39
     new-instance v3, Ljhf;
 
     move-object/from16 v0, p1
@@ -144,17 +123,14 @@
 
     invoke-virtual {v2, v3}, Ljdp;->a(Ljej;)V
 
-    .line 40
     const-class v2, Lcom/google/android/libraries/smartburst/buffers/FeatureTable;
 
-    .line 41
     const-string v3, "default"
 
     invoke-virtual {v1, v2, v3}, Ljdm;->b(Ljava/lang/Class;Ljava/lang/String;)Ljdp;
 
     move-result-object v2
 
-    .line 42
     new-instance v3, Ljhg;
 
     move-object/from16 v0, p3
@@ -163,15 +139,12 @@
 
     invoke-virtual {v2, v3}, Ljdp;->a(Ljej;)V
 
-    .line 43
     if-eqz p15, :cond_0
 
-    .line 44
     move-object/from16 v0, p16
 
     invoke-static {v1, v0}, Ljid;->a(Ljdm;Ljpn;)V
 
-    .line 45
     :cond_0
     sget-object v2, Ljdl;->a:Ljdl;
 
@@ -179,24 +152,20 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 46
     new-instance v1, Lchx;
 
-    .line 47
     invoke-interface/range {v36 .. v36}, Ljqy;->d()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljia;
 
-    .line 48
     invoke-interface/range {v34 .. v34}, Ljqy;->d()Ljava/lang/Object;
 
     move-result-object v7
 
     check-cast v7, Ljia;
 
-    .line 49
     invoke-interface/range {v35 .. v35}, Ljqy;->d()Ljava/lang/Object;
 
     move-result-object v8
@@ -228,7 +197,6 @@
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_6
 
-    .line 50
     const/4 v2, 0x0
 
     :try_start_4
@@ -258,14 +226,11 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
-    .line 51
     invoke-interface/range {p20 .. p20}, Liii;->a()V
 
-    .line 68
     :goto_1
     return-object v1
 
-    .line 32
     :cond_1
     const/4 v2, 0x0
 
@@ -274,64 +239,51 @@
 
     goto/16 :goto_0
 
-    .line 53
     :cond_2
     const-class v2, Ljiw;
 
-    .line 54
     const-string v3, "default"
 
     invoke-virtual {v1, v2, v3}, Ljdm;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v11
 
-    .line 55
     check-cast v11, Ljiw;
 
-    .line 56
     const-class v2, Ljaa;
 
-    .line 57
     const-string v3, "default"
 
     invoke-virtual {v1, v2, v3}, Ljdm;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v13
 
-    .line 58
     check-cast v13, Ljaa;
 
-    .line 59
     const-class v2, Ljjq;
 
-    .line 60
     const-string v3, "default"
 
     invoke-virtual {v1, v2, v3}, Ljdm;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v12
 
-    .line 61
     check-cast v12, Ljjq;
 
-    .line 62
     new-instance v10, Lchk;
 
-    .line 63
     invoke-interface/range {v36 .. v36}, Ljqy;->d()Ljava/lang/Object;
 
     move-result-object v14
 
     check-cast v14, Ljia;
 
-    .line 64
     invoke-interface/range {v34 .. v34}, Ljqy;->d()Ljava/lang/Object;
 
     move-result-object v19
 
     check-cast v19, Ljia;
 
-    .line 65
     invoke-interface/range {v35 .. v35}, Ljqy;->d()Ljava/lang/Object;
 
     move-result-object v20
@@ -371,7 +323,6 @@
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_0
     .catchall {:try_start_7 .. :try_end_7} :catchall_6
 
-    .line 66
     const/4 v1, 0x0
 
     :try_start_8
@@ -401,15 +352,12 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_3
 
-    .line 67
     invoke-interface/range {p20 .. p20}, Liii;->a()V
 
     move-object v1, v10
 
-    .line 68
     goto :goto_1
 
-    .line 69
     :catch_0
     move-exception v1
 
@@ -418,7 +366,6 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_0
 
-    .line 70
     :catchall_0
     move-exception v2
 
@@ -439,7 +386,6 @@
     .catch Ljava/lang/Throwable; {:try_start_c .. :try_end_c} :catch_1
     .catchall {:try_start_c .. :try_end_c} :catchall_5
 
-    .line 71
     :catch_1
     move-exception v1
 
@@ -448,7 +394,6 @@
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_1
 
-    .line 72
     :catchall_1
     move-exception v2
 
@@ -469,7 +414,6 @@
     .catch Ljava/lang/Throwable; {:try_start_e .. :try_end_e} :catch_2
     .catchall {:try_start_e .. :try_end_e} :catchall_4
 
-    .line 73
     :catch_2
     move-exception v1
 
@@ -478,7 +422,6 @@
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_2
 
-    .line 74
     :catchall_2
     move-exception v2
 
@@ -498,7 +441,6 @@
     :try_end_10
     .catchall {:try_start_10 .. :try_end_10} :catchall_3
 
-    .line 75
     :catchall_3
     move-exception v1
 
@@ -506,7 +448,6 @@
 
     throw v1
 
-    .line 74
     :catchall_4
     move-exception v1
 
@@ -514,7 +455,6 @@
 
     goto :goto_4
 
-    .line 72
     :catchall_5
     move-exception v1
 
@@ -522,7 +462,6 @@
 
     goto :goto_3
 
-    .line 70
     :catchall_6
     move-exception v1
 
@@ -534,29 +473,24 @@
 .method public static a(Lfay;Lfga;Lcqx;Liii;Lbvy;Ldky;)Lcom/google/googlex/gcam/Gcam;
     .locals 9
 
-    .prologue
     const/4 v8, 0x2
 
     const/4 v7, 0x1
 
     const/4 v0, 0x0
 
-    .line 93
     const-string v1, "Gcam#provide"
 
     invoke-interface {p3, v1}, Liii;->a(Ljava/lang/String;)V
 
-    .line 94
     invoke-virtual {p2}, Lcqx;->a()Lcom/google/googlex/gcam/InitParams;
 
     move-result-object v2
 
-    .line 95
     new-instance v3, Lcom/google/googlex/gcam/StaticMetadataVector;
 
     invoke-direct {v3}, Lcom/google/googlex/gcam/StaticMetadataVector;-><init>()V
 
-    .line 96
     new-array v4, v8, [Lilt;
 
     sget-object v1, Lilt;->b:Lilt;
@@ -569,26 +503,21 @@
 
     move v1, v0
 
-    .line 97
     :goto_0
     if-ge v1, v8, :cond_2
 
     aget-object v0, v4, v1
 
-    .line 99
     iget v5, p1, Lfga;->a:I
 
-    .line 100
     sget v6, Lep;->aw:I
 
     if-eq v5, v6, :cond_1
 
-    .line 101
     invoke-virtual {p0, v0}, Lfay;->c(Lilt;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 102
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -607,31 +536,24 @@
 
     check-cast v0, Lilr;
 
-    .line 103
     if-eqz v0, :cond_0
 
-    .line 104
     iget-object v6, v0, Lilr;->b:Ljava/lang/String;
 
-    .line 105
     if-eqz v6, :cond_0
 
-    .line 107
     invoke-virtual {p0, v0}, Lfay;->a(Lilr;)Lfea;
 
     move-result-object v0
 
-    .line 108
     invoke-static {v0}, Lcqc;->b(Lfea;)Lcom/google/googlex/gcam/StaticMetadata;
 
     move-result-object v0
 
-    .line 109
     invoke-virtual {v3, v0}, Lcom/google/googlex/gcam/StaticMetadataVector;->add(Lcom/google/googlex/gcam/StaticMetadata;)V
 
     goto :goto_1
 
-    .line 111
     :cond_1
     add-int/lit8 v0, v1, 0x1
 
@@ -639,20 +561,17 @@
 
     goto :goto_0
 
-    .line 112
     :cond_2
     invoke-static {p5}, Lcpm;->a(Ldky;)Lcom/google/googlex/gcam/DebugParams;
 
     move-result-object v1
 
-    .line 113
     invoke-virtual {v2}, Lcom/google/googlex/gcam/InitParams;->getExecute_finish_on()I
 
     move-result v0
 
     if-ne v0, v7, :cond_3
 
-    .line 115
     :try_start_0
     iget-object v0, p4, Lbvy;->a:Liid;
 
@@ -660,14 +579,12 @@
 
     invoke-interface {v0, v4}, Liid;->d(Ljava/lang/String;)V
 
-    .line 116
     iget-object v0, p4, Lbvy;->a:Liid;
 
     const-string v4, "Loading libhalide_hexagon_host.so from the app"
 
     invoke-interface {v0, v4}, Liid;->d(Ljava/lang/String;)V
 
-    .line 117
     const-string v0, "halide_hexagon_host_app"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
@@ -675,7 +592,6 @@
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 122
     :try_start_1
     iget-object v0, p4, Lbvy;->b:Landroid/content/Context;
 
@@ -685,14 +601,12 @@
 
     iget-object v4, v0, Landroid/content/pm/ApplicationInfo;->dataDir:Ljava/lang/String;
 
-    .line 124
     iget-object v0, p4, Lbvy;->c:Liii;
 
     const-string v5, "HexagonEnvironment#copyHexagonRemoteToDisk"
 
     invoke-interface {v0, v5}, Liii;->a(Ljava/lang/String;)V
 
-    .line 125
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -703,7 +617,6 @@
 
     move-result-object v5
 
-    .line 126
     iget-object v6, p4, Lbvy;->a:Liid;
 
     const-string v7, "Writing libhalide_hexagon_remote_skel.so to "
@@ -725,7 +638,6 @@
     :goto_2
     invoke-interface {v6, v0}, Liid;->d(Ljava/lang/String;)V
 
-    .line 127
     iget-object v0, p4, Lbvy;->b:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -738,17 +650,14 @@
 
     move-result-object v0
 
-    .line 128
     new-instance v6, Ljava/io/FileOutputStream;
 
     invoke-direct {v6, v5}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
-    .line 130
     const/16 v5, 0x400
 
     new-array v5, v5, [B
 
-    .line 131
     :goto_3
     invoke-virtual {v0, v5}, Ljava/io/InputStream;->read([B)I
 
@@ -758,7 +667,6 @@
 
     if-eq v7, v8, :cond_5
 
-    .line 132
     const/4 v8, 0x0
 
     invoke-virtual {v6, v5, v8, v7}, Ljava/io/OutputStream;->write([BII)V
@@ -767,11 +675,9 @@
 
     goto :goto_3
 
-    .line 144
     :catch_0
     move-exception v0
 
-    .line 145
     iget-object v4, p4, Lbvy;->a:Liid;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -808,24 +714,19 @@
 
     invoke-interface {v4, v0}, Liid;->f(Ljava/lang/String;)V
 
-    .line 146
     :cond_3
     :goto_4
     invoke-static {v2, v3, v1}, Lcom/google/googlex/gcam/Gcam;->Create(Lcom/google/googlex/gcam/InitParams;Lcom/google/googlex/gcam/StaticMetadataVector;Lcom/google/googlex/gcam/DebugParams;)Lcom/google/googlex/gcam/Gcam;
 
     move-result-object v0
 
-    .line 147
     invoke-interface {p3}, Liii;->a()V
 
-    .line 148
     return-object v0
 
-    .line 119
     :catch_1
     move-exception v0
 
-    .line 120
     :try_start_2
     iget-object v4, p4, Lbvy;->a:Liid;
 
@@ -865,7 +766,6 @@
 
     goto :goto_4
 
-    .line 126
     :cond_4
     new-instance v0, Ljava/lang/String;
 
@@ -873,22 +773,17 @@
 
     goto/16 :goto_2
 
-    .line 133
     :cond_5
     invoke-virtual {v6}, Ljava/io/OutputStream;->flush()V
 
-    .line 134
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
-    .line 135
     invoke-virtual {v6}, Ljava/io/FileOutputStream;->close()V
 
-    .line 136
     iget-object v0, p4, Lbvy;->c:Liii;
 
     invoke-interface {v0}, Liii;->a()V
 
-    .line 137
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -901,7 +796,6 @@
 
     move-result-object v4
 
-    .line 138
     :try_start_3
     iget-object v5, p4, Lbvy;->a:Liid;
 
@@ -924,7 +818,6 @@
     :goto_5
     invoke-interface {v5, v0}, Liid;->d(Ljava/lang/String;)V
 
-    .line 139
     const-string v0, "ADSP_LIBRARY_PATH"
 
     const/4 v5, 0x1
@@ -936,11 +829,9 @@
 
     goto :goto_4
 
-    .line 141
     :catch_2
     move-exception v0
 
-    .line 142
     :try_start_4
     iget-object v4, p4, Lbvy;->a:Liid;
 
@@ -982,7 +873,6 @@
 
     goto/16 :goto_4
 
-    .line 138
     :cond_6
     :try_start_5
     new-instance v0, Ljava/lang/String;
@@ -998,8 +888,6 @@
 .method public static a(Ljava/lang/String;IILinu;)V
     .locals 3
 
-    .prologue
-    .line 77
     const/16 v0, 0x1a
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1020,50 +908,40 @@
 
     move-result-object v1
 
-    .line 79
     packed-switch p1, :pswitch_data_0
 
-    .line 88
     :pswitch_0
     const-string v0, "unknown_actual_hal3.txt"
 
-    .line 89
     :goto_0
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, p0, v0}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 91
     invoke-static {v1, p3, v2}, Laxh;->a(Ljava/lang/String;Linu;Ljava/io/File;)V
 
-    .line 92
     return-void
 
-    .line 80
     :pswitch_1
     const-string v0, "metering_burst_actual_hal3.txt"
 
     goto :goto_0
 
-    .line 82
     :pswitch_2
     const-string v0, "payload_burst_actual_hal3.txt"
 
     goto :goto_0
 
-    .line 84
     :pswitch_3
     const-string v0, "viewfinder_actual_hal3.txt"
 
     goto :goto_0
 
-    .line 86
     :pswitch_4
     const-string v0, "unknown_actual_hal3.txt"
 
     goto :goto_0
 
-    .line 79
     nop
 
     :pswitch_data_0
@@ -1079,8 +957,6 @@
 .method private static synthetic a(Ljava/lang/Throwable;Ljqy;)V
     .locals 1
 
-    .prologue
-    .line 76
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -1109,16 +985,12 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
-    .prologue
-    .line 2
     check-cast p1, Lizp;
 
-    .line 3
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 4
     invoke-virtual {p1}, Lizp;->b()Ljava/util/List;
 
     move-result-object v0
@@ -1141,27 +1013,22 @@
 
     check-cast v0, Lizm;
 
-    .line 6
     iget-object v3, v0, Lizm;->a:Ljava/lang/String;
 
-    .line 7
     invoke-static {v3}, Lizv;->a(Ljava/lang/String;)Lizv;
 
     move-result-object v3
 
-    .line 8
     invoke-interface {v1, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 9
     invoke-interface {v1, v3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 12
     :cond_1
     return-object v1
 .end method

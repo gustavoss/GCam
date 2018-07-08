@@ -39,8 +39,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 69
     const-string v0, "RGBZFcsCtrls"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -55,41 +53,32 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 5
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v4, -0x1
 
     const/4 v3, 0x0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->b:Landroid/graphics/RectF;
 
-    .line 3
     iput v3, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->d:I
 
-    .line 4
     iput-object v1, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->e:Lhkb;
 
-    .line 5
     iput-object v1, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->g:Lcom/google/android/apps/refocus/processing/EditingFinishedListener;
 
-    .line 6
     iput-boolean v3, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->h:Z
 
-    .line 7
     new-instance v0, Lhka;
 
     invoke-direct {v0, p0}, Lhka;-><init>(Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;)V
 
-    .line 8
     new-instance v1, Landroid/view/GestureDetector;
 
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->getContext()Landroid/content/Context;
@@ -100,10 +89,8 @@
 
     iput-object v1, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->i:Landroid/view/GestureDetector;
 
-    .line 9
     invoke-virtual {p0, v3}, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->setWillNotDraw(Z)V
 
-    .line 10
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -116,7 +103,6 @@
 
     iput v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->c:I
 
-    .line 12
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -129,15 +115,12 @@
 
     const/4 v2, 0x1
 
-    .line 13
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    .line 14
     if-eqz v0, :cond_0
 
-    .line 15
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     iget v1, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->c:I
@@ -146,24 +129,20 @@
 
     invoke-direct {v0, v1, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 16
     const/16 v1, 0x53
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    .line 17
     new-instance v1, Lhkb;
 
     invoke-direct {v1, p0, p1}, Lhkb;-><init>(Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;Landroid/content/Context;)V
 
     iput-object v1, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->e:Lhkb;
 
-    .line 18
     iget-object v1, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->e:Lhkb;
 
     invoke-virtual {p0, v1, v0}, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 19
     :cond_0
     new-instance v0, Lgqx;
 
@@ -171,7 +150,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->j:Lgqx;
 
-    .line 20
     iget-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->j:Lgqx;
 
     new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
@@ -180,7 +158,6 @@
 
     invoke-virtual {v0, v1}, Lgqx;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 21
     new-instance v0, Lgqz;
 
     iget-object v1, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->j:Lgqx;
@@ -193,12 +170,10 @@
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->k:Lgqz;
 
-    .line 22
     iget-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->j:Lgqx;
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->addView(Landroid/view/View;)V
 
-    .line 23
     return-void
 .end method
 
@@ -207,20 +182,16 @@
 .method public final a()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 32
     iget-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->f:Lhkj;
 
     if-nez v0, :cond_1
 
-    .line 38
     :cond_0
     :goto_0
     return-void
 
-    .line 34
     :cond_1
     iget-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->f:Lhkj;
 
@@ -230,17 +201,14 @@
 
     invoke-virtual {p0, v3, v0}, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->a(ZF)V
 
-    .line 35
     iget-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->f:Lhkj;
 
     invoke-virtual {v0}, Lhkj;->b()[F
 
     move-result-object v0
 
-    .line 36
     if-eqz v0, :cond_0
 
-    .line 37
     aget v1, v0, v3
 
     float-to-int v1, v1
@@ -259,16 +227,12 @@
 .method public final a(Landroid/graphics/RectF;)V
     .locals 3
 
-    .prologue
-    .line 65
     iget-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->b:Landroid/graphics/RectF;
 
     invoke-virtual {v0, p1}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-    .line 66
     iget-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->k:Lgqz;
 
-    .line 67
     iget-object v1, v0, Lgqz;->c:Libo;
 
     new-instance v2, Lgrc;
@@ -277,31 +241,26 @@
 
     invoke-virtual {v1, v2}, Libo;->execute(Ljava/lang/Runnable;)V
 
-    .line 68
     return-void
 .end method
 
 .method public final a(ZF)V
     .locals 5
 
-    .prologue
     const/4 v1, 0x0
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 39
     if-eqz p1, :cond_0
 
     iget-object v2, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->f:Lhkj;
 
     if-eqz v2, :cond_0
 
-    .line 40
     iget-object v2, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->f:Lhkj;
 
     invoke-virtual {v2, p2}, Lhkj;->a(F)V
 
-    .line 42
     :cond_0
     cmpg-float v2, p2, v1
 
@@ -311,7 +270,6 @@
 
     if-lez v2, :cond_2
 
-    .line 43
     :cond_1
     sget-object v2, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->a:Ljava/lang/String;
 
@@ -337,7 +295,6 @@
 
     invoke-static {v2, v3}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     cmpl-float v2, p2, v0
 
     if-lez v2, :cond_4
@@ -345,37 +302,31 @@
     :goto_0
     move p2, v0
 
-    .line 45
     :cond_2
     iget-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->j:Lgqx;
 
-    .line 46
     iget-object v0, v0, Lgqx;->b:Lgre;
 
     invoke-virtual {v0}, Lgre;->a()Z
 
     move-result v0
 
-    .line 47
     if-nez v0, :cond_3
 
     iget-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->j:Lgqx;
 
-    .line 48
     iget-object v0, v0, Lgqx;->a:Lgqp;
 
     invoke-virtual {v0}, Lgqp;->a()Z
 
     move-result v0
 
-    .line 49
     if-nez v0, :cond_3
 
     iget-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->l:Landroid/graphics/Point;
 
     if-eqz v0, :cond_3
 
-    .line 50
     iget-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->k:Lgqz;
 
     iget-object v1, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->l:Landroid/graphics/Point;
@@ -386,12 +337,10 @@
 
     iget v2, v2, Landroid/graphics/Point;->y:I
 
-    .line 51
     iget-boolean v3, v0, Lgqz;->d:Z
 
     if-eqz v3, :cond_3
 
-    .line 52
     iget-object v3, v0, Lgqz;->c:Libo;
 
     new-instance v4, Lgra;
@@ -400,11 +349,9 @@
 
     invoke-virtual {v3, v4}, Libo;->execute(Ljava/lang/Runnable;)V
 
-    .line 53
     :cond_3
     iget-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->k:Lgqz;
 
-    .line 54
     const/high16 v1, 0x3f000000    # 0.5f
 
     mul-float/2addr v1, p2
@@ -413,7 +360,6 @@
 
     add-float/2addr v1, v2
 
-    .line 56
     iget-object v2, v0, Lgqz;->c:Libo;
 
     new-instance v3, Lgrd;
@@ -422,43 +368,35 @@
 
     invoke-virtual {v2, v3}, Libo;->execute(Ljava/lang/Runnable;)V
 
-    .line 57
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->invalidate()V
 
-    .line 58
     return-void
 
     :cond_4
     move v0, v1
 
-    .line 44
     goto :goto_0
 .end method
 
 .method public final a(ZII)V
     .locals 5
 
-    .prologue
-    .line 59
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0, p2, p3}, Landroid/graphics/Point;-><init>(II)V
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->l:Landroid/graphics/Point;
 
-    .line 60
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->f:Lhkj;
 
     if-eqz v0, :cond_0
 
-    .line 61
     iget-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->f:Lhkj;
 
     invoke-virtual {v0, p2, p3}, Lhkj;->a(II)V
 
-    .line 62
     iget-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->k:Lgqz;
 
     iget-object v1, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->l:Landroid/graphics/Point;
@@ -469,7 +407,6 @@
 
     iget v2, v2, Landroid/graphics/Point;->y:I
 
-    .line 63
     iget-object v3, v0, Lgqz;->c:Libo;
 
     new-instance v4, Lgrb;
@@ -478,7 +415,6 @@
 
     invoke-virtual {v3, v4}, Libo;->execute(Ljava/lang/Runnable;)V
 
-    .line 64
     :cond_0
     return-void
 .end method
@@ -486,48 +422,36 @@
 .method public onDone()V
     .locals 0
 
-    .prologue
-    .line 27
     return-void
 .end method
 
 .method protected onLayout(ZIIII)V
     .locals 1
 
-    .prologue
-    .line 28
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 29
     sub-int v0, p4, p2
 
     iput v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->d:I
 
-    .line 30
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->a()V
 
-    .line 31
     return-void
 .end method
 
 .method public onProgress(F)V
     .locals 0
 
-    .prologue
-    .line 26
     return-void
 .end method
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->i:Landroid/view/GestureDetector;
 
     invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 25
     const/4 v0, 0x1
 
     return v0

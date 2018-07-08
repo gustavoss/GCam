@@ -16,32 +16,24 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 16
     invoke-direct {p0, v0, v0}, Lc;-><init>(Lb;Lb;)V
 
-    .line 17
     return-void
 .end method
 
 .method constructor <init>(Lb;Lb;)V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object v0, p0, Lc;->a:Lb;
 
-    .line 3
     iput-object v0, p0, Lc;->b:Lb;
 
-    .line 4
     return-void
 .end method
 
@@ -50,8 +42,6 @@
 .method a()Lb;
     .locals 1
 
-    .prologue
-    .line 6
     const/4 v0, 0x0
 
     return-object v0
@@ -60,8 +50,6 @@
 .method public hasNext()Z
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lc;->b:Lb;
 
     if-eqz v0, :cond_0
@@ -80,12 +68,8 @@
 .method public synthetic next()Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 7
-    .line 8
     iget-object v1, p0, Lc;->b:Lb;
 
-    .line 10
     iget-object v0, p0, Lc;->b:Lb;
 
     iget-object v2, p0, Lc;->a:Lb;
@@ -96,18 +80,14 @@
 
     if-nez v0, :cond_1
 
-    .line 11
     :cond_0
     const/4 v0, 0x0
 
-    .line 13
     :goto_0
     iput-object v0, p0, Lc;->b:Lb;
 
-    .line 15
     return-object v1
 
-    .line 12
     :cond_1
     invoke-virtual {p0}, Lc;->a()Lb;
 

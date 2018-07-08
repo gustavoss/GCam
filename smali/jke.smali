@@ -16,8 +16,6 @@
 .method constructor <init>(Ljkd;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljke;->b:Ljkd;
 
     iput-object p2, p0, Ljke;->a:Ljava/lang/String;
@@ -32,25 +30,18 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 2
-    .line 3
     iget-object v0, p0, Ljke;->b:Ljkd;
 
-    .line 4
     iget-object v0, v0, Ljkd;->a:Ljkf;
 
-    .line 5
     iget-object v1, p0, Ljke;->a:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Ljkf;->a(Ljava/lang/String;)Ljkp;
 
     move-result-object v0
 
-    .line 6
     if-nez v0, :cond_0
 
-    .line 7
     const-string v0, "ExplicitNonlinearScorer"
 
     iget-object v1, p0, Ljke;->a:Ljava/lang/String;
@@ -91,14 +82,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     new-instance v0, Ljkb;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Ljkb;-><init>(F)V
 
-    .line 10
     :cond_0
     return-object v0
 .end method

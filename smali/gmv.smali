@@ -14,8 +14,6 @@
 .method constructor <init>(Lgms;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgmv;->a:Lgms;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final run()V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgmv;->a:Lgms;
 
     invoke-static {v0}, Lgms;->a(Lgms;)Ldzj;
@@ -38,6 +34,5 @@
 
     invoke-virtual {v0}, Ldzj;->a()V
 
-    .line 3
     return-void
 .end method

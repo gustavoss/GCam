@@ -16,14 +16,10 @@
 .method public constructor <init>(Lida;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Liee;->a:Lida;
 
-    .line 3
     new-instance v0, Lief;
 
     invoke-direct {v0, p0}, Lief;-><init>(Liee;)V
@@ -34,7 +30,6 @@
 
     iput-object v0, p0, Liee;->b:Lida;
 
-    .line 4
     return-void
 .end method
 
@@ -43,8 +38,6 @@
 .method public final a(Lihw;Ljava/util/concurrent/Executor;)Lihr;
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Liee;->b:Lida;
 
     invoke-interface {v0, p1, p2}, Lida;->a(Lihw;Ljava/util/concurrent/Executor;)Lihr;
@@ -57,29 +50,22 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 5
 
-    .prologue
-    .line 7
     iget-object v0, p0, Liee;->a:Lida;
 
-    .line 8
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     invoke-virtual {p0, p1}, Liee;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 10
     if-nez v1, :cond_0
 
-    .line 11
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 12
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -140,11 +126,9 @@
 
     throw v0
 
-    .line 14
     :cond_0
     invoke-interface {v0, v1}, Lida;->a(Ljava/lang/Object;)V
 
-    .line 15
     return-void
 .end method
 
@@ -154,8 +138,6 @@
 .method public c()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Liee;->b:Lida;
 
     invoke-interface {v0}, Lida;->c()Ljava/lang/Object;

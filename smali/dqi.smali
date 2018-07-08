@@ -20,16 +20,12 @@
 .method public constructor <init>(Lfuu;Liie;Ldqt;Lcpo;)V
     .locals 10
 
-    .prologue
     const/4 v9, 0x1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldqi;->a:Lfuu;
 
-    .line 3
     const-string v0, "GoudaCptrCmd"
 
     invoke-interface {p2, v0}, Liie;->a(Ljava/lang/String;)Liid;
@@ -38,32 +34,26 @@
 
     iput-object v0, p0, Ldqi;->c:Liid;
 
-    .line 4
     invoke-static {}, Lcpo;->a()I
 
-    .line 5
     invoke-virtual {p4}, Lcpo;->b()I
 
     move-result v0
 
-    .line 7
     iget-object v1, p3, Ldqt;->c:Ldqm;
 
     iget-object v2, p3, Ldqt;->d:Lftc;
 
     iget-object v3, p3, Ldqt;->f:Lfeq;
 
-    .line 8
     invoke-virtual {v3, v0}, Lfeq;->a(I)Lfep;
 
     move-result-object v3
 
-    .line 9
     invoke-virtual {v1, v0, v2, v3}, Ldqm;->a(ILftc;Lfep;)Lftc;
 
     move-result-object v2
 
-    .line 10
     new-instance v7, Ldqb;
 
     iget-object v8, p3, Ldqt;->a:Liie;
@@ -84,10 +74,8 @@
 
     invoke-direct {v7, v8, v0}, Ldqb;-><init>(Liie;Lida;)V
 
-    .line 11
     iput-object v7, p0, Ldqi;->b:Lftc;
 
-    .line 13
     invoke-interface {p1}, Lfuu;->c()Lida;
 
     move-result-object v0
@@ -100,7 +88,6 @@
 
     move-result-object v0
 
-    .line 14
     const/4 v1, 0x2
 
     new-array v1, v1, [Lida;
@@ -109,7 +96,6 @@
 
     iget-object v3, p0, Ldqi;->b:Lftc;
 
-    .line 15
     invoke-interface {v3}, Lftc;->a()Lida;
 
     move-result-object v3
@@ -124,7 +110,6 @@
 
     iput-object v0, p0, Ldqi;->d:Lida;
 
-    .line 16
     return-void
 .end method
 
@@ -133,8 +118,6 @@
 .method public final a()Lida;
     .locals 1
 
-    .prologue
-    .line 26
     iget-object v0, p0, Ldqi;->d:Lida;
 
     return-object v0
@@ -143,15 +126,12 @@
 .method public final a(Lftd;Lfsr;)V
     .locals 5
 
-    .prologue
-    .line 17
     iget-object v0, p0, Ldqi;->a:Lfuu;
 
     invoke-interface {v0}, Lfuu;->d()Lfur;
 
     move-result-object v0
 
-    .line 18
     iget-object v1, p0, Ldqi;->c:Liid;
 
     iget-object v2, p0, Ldqi;->a:Lfuu;
@@ -198,27 +178,21 @@
 
     invoke-interface {v1, v2}, Liid;->b(Ljava/lang/String;)V
 
-    .line 19
     if-eqz v0, :cond_0
 
-    .line 21
     iget-object v1, p2, Lfsr;->a:Lfav;
 
-    .line 22
     iget-object v1, v1, Lfav;->g:Libm;
 
     invoke-virtual {v1, v0}, Libm;->a(Lihr;)Lihr;
 
-    .line 23
     iget-object v0, p0, Ldqi;->b:Lftc;
 
     invoke-interface {v0, p1, p2}, Lftc;->a(Lftd;Lfsr;)V
 
-    .line 25
     :goto_0
     return-void
 
-    .line 24
     :cond_0
     iget-object v0, p0, Ldqi;->c:Liid;
 
@@ -232,8 +206,6 @@
 .method public final b()Lida;
     .locals 1
 
-    .prologue
-    .line 27
     iget-object v0, p0, Ldqi;->b:Lftc;
 
     invoke-interface {v0}, Lftc;->b()Lida;

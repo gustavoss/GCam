@@ -10,8 +10,6 @@
 .method constructor <init>(Lhmd;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhmx;->a:Lhmd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

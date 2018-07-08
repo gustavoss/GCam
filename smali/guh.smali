@@ -16,8 +16,6 @@
 .method constructor <init>(Libo;Ljava/lang/Runnable;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lguh;->a:Libo;
 
     iput-object p2, p0, Lguh;->b:Ljava/lang/Runnable;
@@ -32,14 +30,11 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lguh;->a:Libo;
 
     iget-object v1, p0, Lguh;->b:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Libo;->execute(Ljava/lang/Runnable;)V
 
-    .line 3
     return-void
 .end method

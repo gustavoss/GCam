@@ -16,8 +16,6 @@
 .method constructor <init>(Lkw;Landroid/os/Handler;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfm;->a:Lkw;
 
     iput-object p2, p0, Lfm;->b:Landroid/os/Handler;
@@ -32,14 +30,10 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 3
 
-    .prologue
-    .line 2
     check-cast p1, Lfr;
 
-    .line 3
     if-nez p1, :cond_0
 
-    .line 4
     iget-object v0, p0, Lfm;->a:Lkw;
 
     const/4 v1, 0x1
@@ -48,17 +42,14 @@
 
     invoke-virtual {v0, v1, v2}, Lkw;->a(ILandroid/os/Handler;)V
 
-    .line 8
     :goto_0
     return-void
 
-    .line 5
     :cond_0
     iget v0, p1, Lfr;->b:I
 
     if-nez v0, :cond_1
 
-    .line 6
     iget-object v0, p0, Lfm;->a:Lkw;
 
     iget-object v1, p1, Lfr;->a:Landroid/graphics/Typeface;
@@ -69,7 +60,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     iget-object v0, p0, Lfm;->a:Lkw;
 

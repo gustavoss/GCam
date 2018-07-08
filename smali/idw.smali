@@ -21,14 +21,10 @@
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lidw;->b:Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Lidr;
 
     new-instance v1, Lidx;
@@ -39,7 +35,6 @@
 
     iput-object v0, p0, Lidw;->a:Lidr;
 
-    .line 4
     return-void
 .end method
 
@@ -48,8 +43,6 @@
 .method public final a(Lihw;Ljava/util/concurrent/Executor;)Lihr;
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lidw;->a:Lidr;
 
     invoke-virtual {v0, p1, p2}, Lidr;->a(Lihw;Ljava/util/concurrent/Executor;)Lihr;
@@ -62,8 +55,6 @@
 .method public final c()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lidw;->a:Lidr;
 
     invoke-virtual {v0}, Lidr;->c()Ljava/lang/Object;

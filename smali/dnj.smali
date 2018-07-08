@@ -24,8 +24,6 @@
 .method constructor <init>(Ldnc;IZLjava/lang/String;Lfzp;Lkfk;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldnj;->f:Ldnc;
 
     iput p2, p0, Ldnj;->a:I
@@ -48,13 +46,10 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 7
 
-    .prologue
-    .line 6
     move-object v1, p1
 
     check-cast v1, Lfnu;
 
-    .line 7
     :try_start_0
     iget-object v0, p0, Ldnj;->f:Ldnc;
 
@@ -70,7 +65,6 @@
 
     invoke-static/range {v0 .. v6}, Ldnc;->a(Ldnc;Lfnu;IZLjava/lang/String;Lcom/google/android/libraries/camera/exif/ExifInterface;Lfzp;)V
 
-    .line 8
     iget-object v0, p0, Ldnj;->e:Lkfk;
 
     const/4 v1, 0x1
@@ -83,18 +77,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 14
     :goto_0
     return-void
 
-    .line 10
     :catch_0
     move-exception v0
 
-    .line 11
     sget-object v1, Ldmz;->a:Ljava/lang/String;
 
-    .line 12
     const-string v2, "Error attaching jpeg image to the session: "
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -118,7 +108,6 @@
     :goto_1
     invoke-static {v1, v0}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
     iget-object v0, p0, Ldnj;->e:Lkfk;
 
     const/4 v1, 0x0
@@ -131,7 +120,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_0
     new-instance v0, Ljava/lang/String;
 
@@ -143,16 +131,12 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 2
 
-    .prologue
-    .line 2
     sget-object v0, Ldmz;->a:Ljava/lang/String;
 
-    .line 3
     const-string v1, "Error encoding jpeg image"
 
     invoke-static {v0, v1}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Ldnj;->e:Lkfk;
 
     const/4 v1, 0x0
@@ -163,6 +147,5 @@
 
     invoke-virtual {v0, v1}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 5
     return-void
 .end method

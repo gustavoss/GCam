@@ -11,8 +11,6 @@
 .method constructor <init>(Liuv;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Liuy;->a:Liuv;
 
     invoke-direct {p0}, Liqt;-><init>()V
@@ -25,29 +23,22 @@
 .method public final synthetic a_(Ljava/lang/Object;)V
     .locals 17
 
-    .prologue
-    .line 3
     check-cast p1, Livp;
 
-    .line 4
     invoke-interface/range {p1 .. p1}, Livp;->i()V
 
-    .line 5
     move-object/from16 v0, p0
 
     iget-object v1, v0, Liuy;->a:Liuv;
 
-    .line 6
     iget-object v1, v1, Liuv;->d:Livl;
 
-    .line 7
     invoke-virtual {v1}, Livl;->b()Livu;
 
     move-result-object v1
 
     check-cast v1, Livx;
 
-    .line 9
     const v2, 0x8b8d
 
     invoke-static {v2}, Livc;->a(I)I
@@ -58,21 +49,17 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 10
     iget v2, v1, Livx;->e:I
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 11
     :cond_0
     move-object/from16 v0, p0
 
     iget-object v2, v0, Liuy;->a:Liuv;
 
-    .line 12
     iget-object v2, v2, Liuv;->e:Ljava/util/Map;
 
-    .line 13
     invoke-interface {v2}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v2
@@ -94,24 +81,19 @@
 
     check-cast v2, Livb;
 
-    .line 14
     invoke-interface {v2, v1}, Livb;->a(Livx;)V
 
     goto :goto_0
 
-    .line 16
     :cond_1
     const/4 v2, 0x0
 
-    .line 17
     move-object/from16 v0, p0
 
     iget-object v3, v0, Liuy;->a:Liuv;
 
-    .line 18
     iget-object v3, v3, Liuv;->g:Ljava/util/Map;
 
-    .line 19
     invoke-interface {v3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v3
@@ -135,21 +117,18 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 20
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/String;
 
-    .line 21
     const v6, 0x84c0
 
     add-int/2addr v6, v4
 
     invoke-static {v6}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 22
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -164,34 +143,27 @@
 
     invoke-interface {v2}, Livw;->b()V
 
-    .line 23
     invoke-virtual {v1, v3}, Livx;->a(Ljava/lang/String;)I
 
     move-result v2
 
     invoke-static {v2, v4}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 24
     add-int/lit8 v2, v4, 0x1
 
     move v4, v2
 
-    .line 25
     goto :goto_1
 
-    .line 26
     :cond_2
     move-object/from16 v0, p0
 
     iget-object v2, v0, Liuy;->a:Liuv;
 
-    .line 27
     iget-object v2, v2, Liuv;->b:Liwf;
 
-    .line 28
     iget-object v2, v2, Liwf;->a:Liuh;
 
-    .line 29
     invoke-virtual {v2}, Liuh;->b()Livu;
 
     move-result-object v2
@@ -200,15 +172,12 @@
 
     invoke-virtual {v2}, Livo;->b()V
 
-    .line 30
     move-object/from16 v0, p0
 
     iget-object v2, v0, Liuy;->a:Liuv;
 
-    .line 31
     iget-object v2, v2, Liuv;->f:Ljava/util/Map;
 
-    .line 32
     invoke-interface {v2}, Ljava/util/Map;->size()I
 
     move-result v2
@@ -217,22 +186,17 @@
 
     move-result-object v10
 
-    .line 33
     const/4 v7, 0x0
 
-    .line 35
     :try_start_0
     iget v11, v1, Livv;->e:I
 
-    .line 37
     move-object/from16 v0, p0
 
     iget-object v1, v0, Liuy;->a:Liuv;
 
-    .line 38
     iget-object v1, v1, Liuv;->f:Ljava/util/Map;
 
-    .line 39
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v1
@@ -255,14 +219,12 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 40
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 41
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -273,42 +235,32 @@
 
     move-result v13
 
-    .line 42
     invoke-static {v11, v2}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
 
     move-result v1
 
-    .line 43
     const/4 v2, -0x1
 
     if-eq v1, v2, :cond_3
 
-    .line 44
     new-instance v2, Liuz;
 
-    .line 45
     invoke-direct {v2, v1}, Liuz;-><init>(I)V
 
-    .line 46
     invoke-interface {v10, v2}, Liqn;->add(Ljava/lang/Object;)Z
 
-    .line 47
     invoke-static {v1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 48
     move-object/from16 v0, p0
 
     iget-object v2, v0, Liuy;->a:Liuv;
 
-    .line 49
     iget-object v2, v2, Liuv;->b:Liwf;
 
-    .line 51
     iget-object v2, v2, Liwf;->b:[Litg;
 
     aget-object v2, v2, v13
 
-    .line 52
     invoke-interface {v2}, Litg;->b()I
 
     move-result v2
@@ -319,50 +271,41 @@
 
     const/4 v4, 0x1
 
-    .line 53
     :goto_3
     move-object/from16 v0, p0
 
     iget-object v2, v0, Liuy;->a:Liuv;
 
-    .line 54
     iget-object v2, v2, Liuv;->b:Liwf;
 
-    .line 55
     iget-object v2, v2, Liwf;->a:Liuh;
 
-    .line 56
     invoke-virtual {v2}, Liuh;->b()Livu;
 
     move-result-object v2
 
     check-cast v2, Livo;
 
-    .line 57
     iget v3, v2, Livo;->d:I
 
     and-int/lit8 v3, v3, 0x1
 
     if-eqz v3, :cond_5
 
-    .line 58
     iget-object v3, v2, Livo;->a:Liwe;
 
     sget-object v5, Liwe;->c:Liwe;
 
-    .line 59
     invoke-virtual {v3, v5}, Liwe;->a(Liwe;)Z
 
     move-result v3
 
     if-eqz v3, :cond_4
 
-    .line 60
     const/4 v3, 0x1
 
     invoke-static {v3}, Landroid/opengl/GLES31;->glMemoryBarrier(I)V
 
-    .line 61
     :cond_4
     iget v3, v2, Livo;->d:I
 
@@ -370,66 +313,52 @@
 
     iput v3, v2, Livo;->d:I
 
-    .line 62
     :cond_5
     move-object/from16 v0, p0
 
     iget-object v2, v0, Liuy;->a:Liuv;
 
-    .line 63
     iget-object v2, v2, Liuv;->b:Liwf;
 
-    .line 65
     iget-object v2, v2, Liwf;->c:[I
 
     aget v2, v2, v13
 
-    .line 66
     move-object/from16 v0, p0
 
     iget-object v3, v0, Liuy;->a:Liuv;
 
-    .line 67
     iget-object v3, v3, Liuv;->b:Liwf;
 
-    .line 70
     iget-object v3, v3, Liwf;->b:[Litg;
 
     aget-object v3, v3, v13
 
-    .line 72
     sget-object v5, Liti;->a:Litr;
 
     if-ne v3, v5, :cond_7
 
     const/16 v3, 0x1400
 
-    .line 81
     :goto_4
     move-object/from16 v0, p0
 
     iget-object v5, v0, Liuy;->a:Liuv;
 
-    .line 82
     iget-object v5, v5, Liuv;->b:Liwf;
 
-    .line 84
     invoke-virtual {v5, v13}, Liwf;->a(I)I
 
     move-result v5
 
-    .line 85
     move-object/from16 v0, p0
 
     iget-object v6, v0, Liuy;->a:Liuv;
 
-    .line 86
     iget-object v14, v6, Liuv;->b:Liwf;
 
-    .line 88
     const/4 v8, 0x0
 
-    .line 89
     const/4 v6, 0x0
 
     move/from16 v16, v6
@@ -441,7 +370,6 @@
     :goto_5
     if-ge v8, v13, :cond_f
 
-    .line 90
     invoke-virtual {v14, v8}, Liwf;->a(I)I
 
     move-result v9
@@ -452,7 +380,6 @@
 
     add-int/2addr v9, v6
 
-    .line 91
     add-int/lit8 v6, v8, 0x1
 
     move v8, v6
@@ -461,13 +388,11 @@
 
     goto :goto_5
 
-    .line 52
     :cond_6
     const/4 v4, 0x0
 
     goto :goto_3
 
-    .line 73
     :cond_7
     sget-object v5, Liti;->d:Liua;
 
@@ -477,7 +402,6 @@
 
     goto :goto_4
 
-    .line 74
     :cond_8
     sget-object v5, Liti;->b:Lito;
 
@@ -487,7 +411,6 @@
 
     goto :goto_4
 
-    .line 75
     :cond_9
     sget-object v5, Liti;->e:Litx;
 
@@ -497,7 +420,6 @@
 
     goto :goto_4
 
-    .line 76
     :cond_a
     sget-object v5, Liti;->c:Litp;
 
@@ -507,7 +429,6 @@
 
     goto :goto_4
 
-    .line 77
     :cond_b
     sget-object v5, Liti;->f:Lity;
 
@@ -517,7 +438,6 @@
 
     goto :goto_4
 
-    .line 78
     :cond_c
     sget-object v5, Liti;->h:Litk;
 
@@ -527,7 +447,6 @@
 
     goto :goto_4
 
-    .line 79
     :cond_d
     sget-object v5, Liti;->i:Litl;
 
@@ -537,7 +456,6 @@
 
     goto :goto_4
 
-    .line 80
     :cond_e
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -580,7 +498,6 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 106
     :catch_0
     move-exception v1
 
@@ -589,7 +506,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 107
     :catchall_0
     move-exception v2
 
@@ -610,14 +526,12 @@
     :goto_7
     throw v1
 
-    .line 93
     :cond_f
     :try_start_3
     invoke-static/range {v1 .. v6}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZII)V
 
     goto/16 :goto_2
 
-    .line 107
     :catchall_1
     move-exception v1
 
@@ -625,63 +539,49 @@
 
     goto :goto_6
 
-    .line 95
     :cond_10
     move-object/from16 v0, p0
 
     iget-object v1, v0, Liuy;->a:Liuv;
 
-    .line 96
     iget-object v1, v1, Liuv;->c:Livk;
 
-    .line 97
     if-eqz v1, :cond_11
 
-    .line 98
     new-instance v1, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v1}, Ljava/lang/NoSuchMethodError;-><init>()V
 
     throw v1
 
-    .line 99
     :cond_11
     move-object/from16 v0, p0
 
     iget-object v1, v0, Liuy;->a:Liuv;
 
-    .line 100
     iget v1, v1, Liuv;->a:I
 
-    .line 101
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iget-object v3, v0, Liuy;->a:Liuv;
 
-    .line 102
     iget-object v3, v3, Liuv;->b:Liwf;
 
-    .line 103
     iget v3, v3, Liwf;->d:I
 
-    .line 104
     invoke-static {v1, v2, v3}, Landroid/opengl/GLES20;->glDrawArrays(III)V
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 105
     invoke-interface {v10}, Liqn;->close()V
 
-    .line 108
     invoke-interface/range {p1 .. p1}, Livp;->j()V
 
-    .line 109
     return-void
 
-    .line 107
     :catch_1
     move-exception v3
 
@@ -698,8 +598,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 2
     const-string v0, "drawbuilder-draw-on-canvas"
 
     return-object v0

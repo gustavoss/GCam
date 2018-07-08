@@ -14,22 +14,16 @@
 .method private constructor <init>(Lkhp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lffh;->a:Lkhp;
 
-    .line 3
     return-void
 .end method
 
 .method public static a(Lkhp;)Lffh;
     .locals 1
 
-    .prologue
-    .line 4
     new-instance v0, Lffh;
 
     invoke-direct {v0, p0}, Lffh;-><init>(Lkhp;)V
@@ -42,52 +36,40 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 9
 
-    .prologue
     const/4 v8, 0x0
 
-    .line 5
-    .line 6
     iget-object v0, p0, Lffh;->a:Lkhp;
 
-    .line 7
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lfft;
 
-    .line 9
     iget-object v1, v0, Lfft;->a:Lihs;
 
     if-nez v1, :cond_0
 
-    .line 10
     const/4 v0, 0x0
 
-    .line 23
     :goto_0
     if-nez v0, :cond_3
 
-    .line 24
     invoke-static {}, Lezo;->a()Lfhr;
 
     move-result-object v0
 
-    .line 29
     :goto_1
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 30
     invoke-static {v0, v1}, Lkgh;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lfhr;
 
-    .line 31
     return-object v0
 
-    .line 11
     :cond_0
     iget-object v1, v0, Lfft;->a:Lihs;
 
@@ -95,15 +77,12 @@
 
     move-result-object v1
 
-    .line 12
     iget-object v0, v0, Lfft;->b:Ljava/util/List;
 
-    .line 13
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 14
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -122,7 +101,6 @@
 
     check-cast v0, Lihs;
 
-    .line 15
     invoke-virtual {v0}, Lihs;->b()J
 
     move-result-wide v4
@@ -133,7 +111,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 16
     invoke-static {v0}, Lihg;->a(Lihs;)Lihg;
 
     move-result-object v4
@@ -148,12 +125,10 @@
 
     if-eqz v4, :cond_1
 
-    .line 17
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 19
     :cond_2
     new-instance v0, Lihs;
 
@@ -161,7 +136,6 @@
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 21
     sget-object v0, Liht;->a:Liht;
 
     invoke-static {v2, v0}, Ljava/util/Collections;->max(Ljava/util/Collection;Ljava/util/Comparator;)Ljava/lang/Object;
@@ -172,7 +146,6 @@
 
     goto :goto_0
 
-    .line 25
     :cond_3
     const/4 v1, 0x2
 
@@ -184,7 +157,6 @@
 
     const/16 v4, 0x5a
 
-    .line 26
     invoke-static {v4}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v4
@@ -199,7 +171,6 @@
 
     sget-object v4, Landroid/hardware/camera2/CaptureRequest;->JPEG_THUMBNAIL_SIZE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 27
     invoke-static {v0}, Liif;->b(Lihs;)Landroid/util/Size;
 
     move-result-object v0
@@ -208,7 +179,6 @@
 
     aput-object v3, v1, v2
 
-    .line 28
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0

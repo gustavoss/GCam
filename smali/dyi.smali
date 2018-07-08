@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 2
     const-string v1, "Failed to compile shader:\n"
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -38,10 +34,8 @@
     :goto_0
     invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 3
     return-void
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/String;
 

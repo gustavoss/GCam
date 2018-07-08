@@ -18,28 +18,20 @@
 .method private constructor <init>(Lkhp;Lkhp;Lkhp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lftm;->a:Lkhp;
 
-    .line 3
     iput-object p2, p0, Lftm;->b:Lkhp;
 
-    .line 4
     iput-object p3, p0, Lftm;->c:Lkhp;
 
-    .line 5
     return-void
 .end method
 
 .method public static a(Lkhp;Lkhp;Lkhp;)Lftm;
     .locals 1
 
-    .prologue
-    .line 6
     new-instance v0, Lftm;
 
     invoke-direct {v0, p0, p1, p2}, Lftm;-><init>(Lkhp;Lkhp;Lkhp;)V
@@ -52,12 +44,8 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 7
-    .line 8
     iget-object v0, p0, Lftm;->a:Lkhp;
 
-    .line 9
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -80,14 +68,12 @@
 
     check-cast v2, Lftc;
 
-    .line 11
     const-string v3, "ImgCptrCmdReady"
 
     invoke-interface {v0, v3}, Liie;->a(Ljava/lang/String;)Liid;
 
     move-result-object v0
 
-    .line 12
     new-instance v3, Lfth;
 
     invoke-direct {v3, v1, v2, v0}, Lfth;-><init>(Libm;Lftc;Liid;)V
@@ -96,16 +82,13 @@
 
     move-result-object v0
 
-    .line 13
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 14
     invoke-static {v0, v1}, Lkgh;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lias;
 
-    .line 15
     return-object v0
 .end method

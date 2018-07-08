@@ -41,8 +41,6 @@
 .method public final run()V
     .locals 22
 
-    .prologue
-    .line 1
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lerh;->a:Leqy;
@@ -69,31 +67,24 @@
 
     move-object/from16 v20, v0
 
-    .line 2
     move-object/from16 v0, v18
 
     iget-object v14, v0, Leqy;->i:Lerx;
 
-    .line 3
     if-eqz v14, :cond_1
 
-    .line 4
     iget-object v2, v14, Lerx;->b:Lexi;
 
     if-eqz v2, :cond_0
 
-    .line 5
     iget-object v2, v14, Lerx;->b:Lexi;
 
-    .line 6
     iget-object v3, v2, Lexi;->c:Lewx;
 
     iget-wide v4, v2, Lexi;->d:J
 
-    .line 7
     invoke-virtual {v3, v4, v5}, Lewx;->a(J)V
 
-    .line 8
     :cond_0
     move-object/from16 v0, v18
 
@@ -103,7 +94,6 @@
 
     monitor-enter v21
 
-    .line 9
     :try_start_0
     move-object/from16 v0, v18
 
@@ -115,14 +105,12 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 10
     new-instance v2, Lerb;
 
     move-object/from16 v0, v18
 
     invoke-direct {v2, v0}, Lerb;-><init>(Leqy;)V
 
-    .line 11
     sget-object v2, Leqy;->a:Ljava/lang/String;
 
     invoke-static/range {v19 .. v19}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -159,14 +147,12 @@
 
     invoke-static {v2, v3}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     iget-object v12, v14, Lerx;->e:Lexx;
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 13
     invoke-virtual {v2, v10, v11, v3}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
 
     move-result-wide v4
@@ -175,14 +161,12 @@
 
     iget-object v7, v0, Leqy;->h:Leyi;
 
-    .line 16
     new-instance v2, Lexu;
 
     iget-object v3, v12, Lexx;->a:Lewd;
 
     iget-object v6, v12, Lexx;->b:Lkhp;
 
-    .line 17
     invoke-interface {v6}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -195,28 +179,22 @@
 
     invoke-direct/range {v2 .. v9}, Lexu;-><init>(Lewd;JLjava/util/List;Leyi;Ljava/util/concurrent/Executor;Lbky;)V
 
-    .line 18
     iget-object v3, v12, Lexx;->c:Lbky;
 
-    .line 19
     iget-object v3, v3, Lbky;->a:Lbqi;
 
-    .line 22
     invoke-interface {v2}, Lexs;->a()J
 
     move-result-wide v7
 
-    .line 23
     new-instance v12, Letv;
 
     invoke-direct {v12}, Letv;-><init>()V
 
-    .line 24
     new-instance v13, Lkfk;
 
     invoke-direct {v13}, Lkfk;-><init>()V
 
-    .line 27
     new-instance v4, Lerc;
 
     move-object/from16 v5, v18
@@ -227,12 +205,10 @@
 
     invoke-direct/range {v4 .. v14}, Lerc;-><init>(Leqy;Ljava/io/File;JIJLetv;Lkfk;Lerx;)V
 
-    .line 28
     new-instance v3, Lerd;
 
     invoke-direct {v3, v7, v8}, Lerd;-><init>(J)V
 
-    .line 29
     iget-object v6, v14, Lerx;->a:Letf;
 
     const-wide/16 v14, 0x0
@@ -247,20 +223,16 @@
 
     move-result-object v10
 
-    .line 31
     iget-object v3, v10, Letg;->g:Lkfk;
 
-    .line 32
     invoke-virtual {v3, v13}, Lkfk;->a(Lkey;)Z
 
-    .line 33
     new-instance v9, Lero;
 
     move-object/from16 v0, v18
 
     iget-wide v13, v0, Leqy;->j:J
 
-    .line 34
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v15
@@ -273,10 +245,8 @@
 
     move-object/from16 v11, v19
 
-    .line 35
     invoke-direct/range {v9 .. v17}, Lero;-><init>(Letg;Ljava/io/File;Letv;JJLeyi;)V
 
-    .line 37
     move-object/from16 v0, v18
 
     iget-object v3, v0, Leqy;->f:Ljava/util/Map;
@@ -285,7 +255,6 @@
 
     invoke-interface {v3, v0, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 38
     move-object/from16 v0, v18
 
     iget-wide v4, v0, Leqy;->j:J
@@ -298,25 +267,20 @@
 
     iput-wide v4, v0, Leqy;->k:J
 
-    .line 40
     new-instance v3, Lezk;
 
     move-object/from16 v0, v19
 
     invoke-direct {v3, v0, v10}, Lezk;-><init>(Ljava/io/File;Lext;)V
 
-    .line 41
     invoke-interface {v2, v3}, Lexs;->a(Lext;)V
 
-    .line 42
     monitor-exit v21
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 44
     iget-object v2, v10, Letg;->e:Lkfk;
 
-    .line 45
     sget-object v3, Lere;->a:Ljava/lang/Runnable;
 
     move-object/from16 v0, v18
@@ -325,11 +289,9 @@
 
     invoke-interface {v2, v3, v4}, Lkey;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    .line 46
     :cond_1
     return-void
 
-    .line 42
     :catchall_0
     move-exception v2
 

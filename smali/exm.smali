@@ -18,11 +18,8 @@
 .method public constructor <init>(Lkhp;Lkhp;Lkhp;)V
     .locals 1
 
-    .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lexm;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -33,7 +30,6 @@
 
     iput-object v0, p0, Lexm;->a:Lkhp;
 
-    .line 13
     const/4 v0, 0x2
 
     invoke-static {p2, v0}, Lexm;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -44,10 +40,8 @@
 
     iput-object v0, p0, Lexm;->b:Lkhp;
 
-    .line 14
     const/4 v0, 0x3
 
-    .line 15
     invoke-static {p3, v0}, Lexm;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -56,18 +50,14 @@
 
     iput-object v0, p0, Lexm;->c:Lkhp;
 
-    .line 16
     return-void
 .end method
 
 .method private static a(Ljava/lang/Object;I)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 17
     if-nez p0, :cond_0
 
-    .line 18
     new-instance v0, Ljava/lang/NullPointerException;
 
     const/16 v1, 0x5d
@@ -94,7 +84,6 @@
 
     throw v0
 
-    .line 19
     :cond_0
     return-object p0
 .end method
@@ -104,8 +93,6 @@
 .method public final a()J
     .locals 2
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     invoke-virtual {v0}, Lexu;->a()J
@@ -118,13 +105,10 @@
 .method public final a(Landroid/net/Uri;JLjava/lang/String;Lgho;)Lepd;
     .locals 10
 
-    .prologue
-    .line 4
     new-instance v1, Lepd;
 
     iget-object v0, p0, Lexm;->a:Lkhp;
 
-    .line 5
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -141,7 +125,6 @@
 
     iget-object v0, p0, Lexm;->b:Lkhp;
 
-    .line 6
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -160,7 +143,6 @@
 
     const/4 v0, 0x4
 
-    .line 7
     invoke-static {p1, v0}, Lexm;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v5
@@ -169,7 +151,6 @@
 
     const/4 v0, 0x6
 
-    .line 8
     invoke-static {p4, v0}, Lexm;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v8
@@ -178,7 +159,6 @@
 
     const/4 v0, 0x7
 
-    .line 9
     invoke-static {p5, v0}, Lexm;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v9
@@ -189,15 +169,12 @@
 
     invoke-direct/range {v1 .. v9}, Lepd;-><init>(Landroid/content/ContentResolver;Landroid/net/Uri;Lkhp;Landroid/net/Uri;JLjava/lang/String;Lgho;)V
 
-    .line 10
     return-object v1
 .end method
 
 .method public final a(Lext;)V
     .locals 2
 
-    .prologue
-    .line 2
     const/4 v0, 0x0
 
     new-instance v1, Lexn;
@@ -206,6 +183,5 @@
 
     invoke-virtual {v0, v1}, Lexu;->a(Lext;)V
 
-    .line 3
     return-void
 .end method

@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method public static a(Lacj;Lapi;Lapp;Landroid/content/Context;)Lact;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Lact;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lact;-><init>(Lacj;Lapi;Lapp;Landroid/content/Context;)V

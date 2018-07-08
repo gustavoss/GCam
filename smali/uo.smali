@@ -14,8 +14,6 @@
 .method constructor <init>(Lun;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Luo;->a:Lun;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final a()I
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Luo;->a:Lun;
 
     invoke-virtual {v0}, Lun;->r()I
@@ -42,21 +38,16 @@
 .method public final a(Landroid/view/View;)I
     .locals 3
 
-    .prologue
-    .line 7
-    .line 8
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Lur;
 
-    .line 10
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v2
 
-    .line 11
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
@@ -67,10 +58,8 @@
 
     iget v1, v1, Landroid/graphics/Rect;->left:I
 
-    .line 12
     sub-int v1, v2, v1
 
-    .line 13
     iget v0, v0, Lur;->leftMargin:I
 
     sub-int v0, v1, v0
@@ -81,8 +70,6 @@
 .method public final a(I)Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Luo;->a:Lun;
 
     invoke-virtual {v0, p1}, Lun;->f(I)Landroid/view/View;
@@ -95,14 +82,10 @@
 .method public final b()I
     .locals 2
 
-    .prologue
-    .line 4
     iget-object v0, p0, Luo;->a:Lun;
 
-    .line 5
     iget v0, v0, Lun;->q:I
 
-    .line 6
     iget-object v1, p0, Luo;->a:Lun;
 
     invoke-virtual {v1}, Lun;->t()I
@@ -117,21 +100,16 @@
 .method public final b(Landroid/view/View;)I
     .locals 3
 
-    .prologue
-    .line 14
-    .line 15
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Lur;
 
-    .line 17
     invoke-virtual {p1}, Landroid/view/View;->getRight()I
 
     move-result v2
 
-    .line 18
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
@@ -142,10 +120,8 @@
 
     iget v1, v1, Landroid/graphics/Rect;->right:I
 
-    .line 19
     add-int/2addr v1, v2
 
-    .line 20
     iget v0, v0, Lur;->rightMargin:I
 
     add-int/2addr v0, v1

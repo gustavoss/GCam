@@ -34,32 +34,22 @@
 .method constructor <init>(Lipw;Lipw;Lipw;Lipw;Lipw;IJ)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lipm;->a:Lipw;
 
-    .line 3
     iput-object p2, p0, Lipm;->b:Lipw;
 
-    .line 4
     iput-object p3, p0, Lipm;->c:Lipw;
 
-    .line 5
     iput-object p4, p0, Lipm;->d:Lipw;
 
-    .line 6
     iput-object p5, p0, Lipm;->e:Lipw;
 
-    .line 7
     iput p6, p0, Lipm;->f:I
 
-    .line 8
     iput-wide p7, p0, Lipm;->g:J
 
-    .line 9
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -68,19 +58,16 @@
 
     iput-object v0, p0, Lipm;->h:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 10
     return-void
 .end method
 
 .method private final a()Ljava/lang/Void;
     .locals 15
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v4, 0x0
 
-    .line 11
     iget-object v0, p0, Lipm;->h:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
@@ -89,7 +76,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 12
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Executed command more than once. This is unexpected"
@@ -98,7 +84,6 @@
 
     throw v0
 
-    .line 13
     :cond_0
     iget-object v0, p0, Lipm;->d:Lipw;
 
@@ -108,7 +93,6 @@
 
     check-cast v0, Lwk;
 
-    .line 14
     iget-object v1, p0, Lipm;->c:Lipw;
 
     invoke-virtual {v1}, Lipw;->a()Ljava/lang/Object;
@@ -121,54 +105,45 @@
 
     move-result v5
 
-    .line 15
     iget-object v6, p0, Lipm;->a:Lipw;
 
-    .line 16
     :try_start_0
     iget-object v7, p0, Lipm;->b:Lipw;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_5
 
-    .line 18
     :try_start_1
     iget-object v8, p0, Lipm;->e:Lipw;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_6
 
-    .line 20
     :try_start_2
     iget-object v9, p0, Lipm;->d:Lipw;
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_7
 
-    .line 22
     :try_start_3
     iget-object v10, p0, Lipm;->c:Lipw;
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_8
 
-    .line 24
     :try_start_4
     iget v1, p0, Lipm;->f:I
 
     iget-wide v2, p0, Lipm;->g:J
 
-    .line 25
     sget-object v11, Lwl;->a:Lwn;
 
-    .line 26
     const-string v12, "http://ns.google.com/photos/1.0/camera/"
 
     const-string v13, "GCamera"
 
     invoke-virtual {v11, v12, v13}, Lwn;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 27
     const-string v11, "http://ns.google.com/photos/1.0/camera/"
 
     const-string v12, "MicroVideo"
@@ -181,7 +156,6 @@
 
     invoke-interface {v0, v11, v12, v13}, Lwk;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 28
     const-string v11, "http://ns.google.com/photos/1.0/camera/"
 
     const-string v12, "MicroVideoVersion"
@@ -192,7 +166,6 @@
 
     invoke-interface {v0, v11, v12, v1}, Lwk;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 29
     const-string v1, "http://ns.google.com/photos/1.0/camera/"
 
     const-string v11, "MicroVideoOffset"
@@ -203,7 +176,6 @@
 
     invoke-interface {v0, v1, v11, v12}, Lwk;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 30
     const-string v1, "http://ns.google.com/photos/1.0/camera/"
 
     const-string v11, "MicroVideoPresentationTimestampUs"
@@ -214,7 +186,6 @@
 
     invoke-interface {v0, v1, v11, v2}, Lwk;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 31
     iget-object v1, p0, Lipm;->b:Lipw;
 
     invoke-virtual {v1}, Lipw;->a()Ljava/lang/Object;
@@ -223,7 +194,6 @@
 
     check-cast v1, Ljava/io/InputStream;
 
-    .line 32
     iget-object v2, p0, Lipm;->a:Lipw;
 
     invoke-virtual {v2}, Lipw;->a()Ljava/lang/Object;
@@ -232,7 +202,6 @@
 
     check-cast v2, Ljava/io/InputStream;
 
-    .line 33
     iget-object v3, p0, Lipm;->e:Lipw;
 
     invoke-virtual {v3}, Lipw;->a()Ljava/lang/Object;
@@ -241,14 +210,12 @@
 
     check-cast v3, Ljava/io/OutputStream;
 
-    .line 34
     invoke-static {v2, v3, v0}, Liih;->a(Ljava/io/InputStream;Ljava/io/OutputStream;Lwk;)Z
 
     move-result v0
 
     if-nez v0, :cond_6
 
-    .line 35
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "Could not embed xmp into JPEG stream."
@@ -260,7 +227,6 @@
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_9
 
-    .line 39
     :catch_0
     move-exception v0
 
@@ -269,7 +235,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 40
     :catchall_0
     move-exception v1
 
@@ -291,7 +256,6 @@
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_1
     .catchall {:try_start_6 .. :try_end_6} :catchall_8
 
-    .line 41
     :catch_1
     move-exception v0
 
@@ -300,7 +264,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 42
     :catchall_1
     move-exception v1
 
@@ -322,7 +285,6 @@
     .catch Ljava/lang/Throwable; {:try_start_8 .. :try_end_8} :catch_2
     .catchall {:try_start_8 .. :try_end_8} :catchall_7
 
-    .line 43
     :catch_2
     move-exception v0
 
@@ -331,7 +293,6 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
-    .line 44
     :catchall_2
     move-exception v1
 
@@ -353,7 +314,6 @@
     .catch Ljava/lang/Throwable; {:try_start_a .. :try_end_a} :catch_3
     .catchall {:try_start_a .. :try_end_a} :catchall_6
 
-    .line 45
     :catch_3
     move-exception v0
 
@@ -362,7 +322,6 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_3
 
-    .line 46
     :catchall_3
     move-exception v1
 
@@ -384,7 +343,6 @@
     .catch Ljava/lang/Throwable; {:try_start_c .. :try_end_c} :catch_4
     .catchall {:try_start_c .. :try_end_c} :catchall_5
 
-    .line 47
     :catch_4
     move-exception v0
 
@@ -393,7 +351,6 @@
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_4
 
-    .line 48
     :catchall_4
     move-exception v1
 
@@ -409,7 +366,6 @@
     :cond_5
     throw v0
 
-    .line 36
     :cond_6
     int-to-long v12, v5
 
@@ -420,13 +376,11 @@
 
     invoke-static {v0, v3}, Lcom/google/common/io/ByteStreams;->copy(Ljava/io/InputStream;Ljava/io/OutputStream;)J
 
-    .line 37
     invoke-virtual {v3}, Ljava/io/OutputStream;->flush()V
     :try_end_e
     .catch Ljava/lang/Throwable; {:try_start_e .. :try_end_e} :catch_0
     .catchall {:try_start_e .. :try_end_e} :catchall_9
 
-    .line 38
     if-eqz v10, :cond_7
 
     const/4 v0, 0x0
@@ -437,7 +391,6 @@
     .catch Ljava/lang/Throwable; {:try_start_f .. :try_end_f} :catch_1
     .catchall {:try_start_f .. :try_end_f} :catchall_8
 
-    .line 40
     :cond_7
     if-eqz v9, :cond_8
 
@@ -449,7 +402,6 @@
     .catch Ljava/lang/Throwable; {:try_start_10 .. :try_end_10} :catch_2
     .catchall {:try_start_10 .. :try_end_10} :catchall_7
 
-    .line 42
     :cond_8
     if-eqz v8, :cond_9
 
@@ -461,7 +413,6 @@
     .catch Ljava/lang/Throwable; {:try_start_11 .. :try_end_11} :catch_3
     .catchall {:try_start_11 .. :try_end_11} :catchall_6
 
-    .line 44
     :cond_9
     if-eqz v7, :cond_a
 
@@ -473,23 +424,19 @@
     .catch Ljava/lang/Throwable; {:try_start_12 .. :try_end_12} :catch_4
     .catchall {:try_start_12 .. :try_end_12} :catchall_5
 
-    .line 46
     :cond_a
     if-eqz v6, :cond_b
 
     invoke-static {v4, v6}, Lipm;->a(Ljava/lang/Throwable;Ljava/lang/AutoCloseable;)V
 
-    .line 49
     :cond_b
     return-object v4
 
-    .line 48
     :catchall_5
     move-exception v0
 
     goto :goto_4
 
-    .line 46
     :catchall_6
     move-exception v0
 
@@ -497,7 +444,6 @@
 
     goto :goto_3
 
-    .line 44
     :catchall_7
     move-exception v0
 
@@ -505,7 +451,6 @@
 
     goto :goto_2
 
-    .line 42
     :catchall_8
     move-exception v0
 
@@ -513,7 +458,6 @@
 
     goto :goto_1
 
-    .line 40
     :catchall_9
     move-exception v0
 
@@ -525,8 +469,6 @@
 .method private static synthetic a(Ljava/lang/Throwable;Ljava/lang/AutoCloseable;)V
     .locals 1
 
-    .prologue
-    .line 51
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -555,8 +497,6 @@
 .method public final synthetic call()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 50
     invoke-direct {p0}, Lipm;->a()Ljava/lang/Void;
 
     move-result-object v0

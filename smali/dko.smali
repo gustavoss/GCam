@@ -32,8 +32,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 36
     const-string v0, "McdlOneCameraOpnr"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -48,26 +46,18 @@
 .method constructor <init>(Lijg;Lfga;Lfay;Liim;Liii;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldko;->f:Lijg;
 
-    .line 3
     iput-object p2, p0, Ldko;->b:Lfga;
 
-    .line 4
     iput-object p3, p0, Ldko;->c:Lfay;
 
-    .line 5
     iput-object p4, p0, Ldko;->d:Liim;
 
-    .line 6
     iput-object p5, p0, Ldko;->e:Liii;
 
-    .line 7
     return-void
 .end method
 
@@ -76,8 +66,6 @@
 .method public final a(Lilr;Lihr;Ldkf;Lftu;Ldla;)Lfau;
     .locals 8
 
-    .prologue
-    .line 8
     sget-object v0, Ldko;->a:Ljava/lang/String;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -114,36 +102,30 @@
 
     invoke-static {v0, v1}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9
     iget-object v0, p0, Ldko;->e:Liii;
 
     const-string v1, "OneCamera#open"
 
     invoke-interface {v0, v1}, Liii;->a(Ljava/lang/String;)V
 
-    .line 10
     iget-object v0, p0, Ldko;->e:Liii;
 
     const-string v1, "CameraDevice#future"
 
     invoke-interface {v0, v1}, Liii;->a(Ljava/lang/String;)V
 
-    .line 11
     iget-object v0, p0, Ldko;->f:Lijg;
 
     invoke-virtual {v0}, Lijg;->c()Libm;
 
     move-result-object v7
 
-    .line 12
     invoke-virtual {v7, p2}, Libm;->a(Lihr;)Lihr;
 
-    .line 13
     new-instance v0, Liil;
 
     invoke-direct {v0, p1, v7}, Liil;-><init>(Lilr;Lihr;)V
 
-    .line 14
     invoke-static {}, Lcom/google/android/apps/camera/stats/Instrumentation;->instance()Lcom/google/android/apps/camera/stats/Instrumentation;
 
     move-result-object v1
@@ -158,64 +140,50 @@
 
     check-cast v6, Lcom/google/android/apps/camera/stats/CameraDeviceInstrumentationSession;
 
-    .line 16
     iget-object v1, v0, Liil;->a:Lkfk;
 
-    .line 17
     new-instance v2, Ldkp;
 
     invoke-direct {v2, v6}, Ldkp;-><init>(Lcom/google/android/apps/camera/stats/CameraDeviceInstrumentationSession;)V
 
-    .line 18
     sget-object v3, Lkfe;->a:Lkfe;
 
-    .line 19
     invoke-static {v1, v2, v3}, Lkek;->a(Lkey;Lkej;Ljava/util/concurrent/Executor;)V
 
-    .line 20
     invoke-virtual {v6}, Lcom/google/android/apps/camera/stats/CameraDeviceInstrumentationSession;->b()V
 
-    .line 21
     iget-object v1, p0, Ldko;->d:Liim;
 
     invoke-virtual {v1, p1, v0}, Liim;->a(Lilr;Liin;)V
 
-    .line 22
     iget-object v1, p0, Ldko;->e:Liii;
 
     invoke-interface {v1}, Liii;->a()V
 
-    .line 23
     iget-object v1, p0, Ldko;->e:Liii;
 
     const-string v2, "OneCharacteristics#get"
 
     invoke-interface {v1, v2}, Liii;->a(Ljava/lang/String;)V
 
-    .line 24
     iget-object v1, p0, Ldko;->c:Lfay;
 
-    .line 25
     invoke-virtual {v1, p1}, Lfay;->a(Lilr;)Lfea;
 
     move-result-object v2
 
-    .line 26
     iget-object v1, p0, Ldko;->e:Liii;
 
     invoke-interface {v1}, Liii;->a()V
 
-    .line 27
     iget-object v1, p0, Ldko;->e:Liii;
 
     const-string v3, "OneCamera#select"
 
     invoke-interface {v1, v3}, Liii;->a(Ljava/lang/String;)V
 
-    .line 29
     iget-object v1, v0, Liil;->a:Lkfk;
 
-    .line 30
     iget-object v4, p0, Ldko;->b:Lfga;
 
     move-object v0, p5
@@ -224,17 +192,14 @@
 
     move-object v5, p4
 
-    .line 31
     invoke-interface/range {v0 .. v6}, Ldla;->a(Lkey;Lfea;Ldkf;Lfga;Lftu;Lcom/google/android/apps/camera/stats/CameraDeviceInstrumentationSession;)Ldkx;
 
     move-result-object v0
 
-    .line 32
     iget-object v1, p0, Ldko;->e:Liii;
 
     invoke-interface {v1}, Liii;->a()V
 
-    .line 33
     invoke-interface {v0}, Ldkx;->a()Lfau;
 
     move-result-object v0
@@ -245,11 +210,9 @@
 
     check-cast v0, Lfau;
 
-    .line 34
     iget-object v1, p0, Ldko;->e:Liii;
 
     invoke-interface {v1}, Liii;->a()V
 
-    .line 35
     return-object v0
 .end method

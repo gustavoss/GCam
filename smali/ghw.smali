@@ -16,8 +16,6 @@
 .method constructor <init>(Lghs;Lkfk;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lghw;->b:Lghs;
 
     iput-object p2, p0, Lghw;->a:Lkfk;
@@ -32,28 +30,20 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 4
 
-    .prologue
-    .line 5
     check-cast p1, Landroid/net/Uri;
 
-    .line 6
     iget-object v0, p0, Lghw;->b:Lghs;
 
-    .line 7
     invoke-virtual {v0}, Lghs;->r()Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 9
     invoke-static {v1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10
     iget-object v0, p0, Lghw;->b:Lghs;
 
-    .line 11
     iget-object v2, v0, Lgga;->r:Lgnk;
 
-    .line 12
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -62,13 +52,10 @@
 
     invoke-interface {v2, v0, v1}, Lgnk;->a(Landroid/net/Uri;Landroid/net/Uri;)V
 
-    .line 13
     iget-object v0, p0, Lghw;->b:Lghs;
 
-    .line 14
     iget-object v0, v0, Lgga;->t:Lghl;
 
-    .line 15
     iget-object v2, p0, Lghw;->b:Lghs;
 
     iget v2, v2, Lghs;->C:I
@@ -77,19 +64,14 @@
 
     iget v3, v3, Lghs;->D:I
 
-    .line 16
     invoke-virtual {v0, v2, v3}, Lghl;->onCapturePersisted(II)V
 
-    .line 17
     iget-object v0, p0, Lghw;->b:Lghs;
 
-    .line 18
     iget-object v0, v0, Lgga;->x:Lgmd;
 
-    .line 19
     invoke-interface {v0}, Lgmd;->b()V
 
-    .line 20
     iget-object v0, p0, Lghw;->b:Lghs;
 
     new-instance v2, Ljava/util/ArrayList;
@@ -98,14 +80,12 @@
 
     invoke-virtual {v0, v1, v2}, Lghs;->a(Landroid/net/Uri;Ljava/util/List;)V
 
-    .line 21
     iget-object v0, p0, Lghw;->b:Lghs;
 
     const-string v2, "capturePersisted"
 
     invoke-virtual {v0, v2}, Lghs;->a(Ljava/lang/String;)V
 
-    .line 22
     iget-object v0, p0, Lghw;->a:Lkfk;
 
     invoke-static {v1}, Ljrw;->b(Ljava/lang/Object;)Ljrw;
@@ -114,16 +94,12 @@
 
     invoke-virtual {v0, v1}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 23
     iget-object v0, p0, Lghw;->b:Lghs;
 
-    .line 24
     iget-object v0, v0, Lgga;->k:Lbcr;
 
-    .line 25
     invoke-virtual {v0, p1}, Lbcr;->a(Landroid/net/Uri;)V
 
-    .line 26
     iget-object v0, p0, Lghw;->b:Lghs;
 
     invoke-virtual {v0}, Lghs;->C()Lbks;
@@ -132,26 +108,20 @@
 
     iget-object v1, p0, Lghw;->b:Lghs;
 
-    .line 27
     iget-object v1, v1, Lgga;->j:Ljava/lang/String;
 
-    .line 28
     invoke-interface {v0, v1}, Lbks;->b(Ljava/lang/String;)V
 
-    .line 29
     return-void
 .end method
 
 .method public final a(Ljava/lang/Throwable;)V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lghw;->a:Lkfk;
 
     invoke-virtual {v0, p1}, Lkcy;->a(Ljava/lang/Throwable;)Z
 
-    .line 3
     iget-object v0, p0, Lghw;->b:Lghs;
 
     invoke-static {}, Lgvs;->a()Lgxk;
@@ -166,6 +136,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lghs;->a(Lgxk;ZLjava/lang/String;)V
 
-    .line 4
     return-void
 .end method

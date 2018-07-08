@@ -16,17 +16,12 @@
 .method public constructor <init>(Liwe;Liuf;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Liuu;->a:Liwe;
 
-    .line 3
     iput-object p2, p0, Liuu;->b:Liuf;
 
-    .line 4
     return-void
 .end method
 
@@ -35,9 +30,6 @@
 .method public final synthetic call()Ljava/lang/Object;
     .locals 11
 
-    .prologue
-    .line 5
-    .line 6
     iget-object v9, p0, Liuu;->a:Liwe;
 
     iget-object v8, p0, Liuu;->b:Liuf;
@@ -46,29 +38,24 @@
 
     const/4 v1, 0x1
 
-    .line 7
     invoke-static {v0, v1}, Liqp;->a(II)Liqq;
 
     move-result-object v10
 
-    .line 9
     const/4 v0, 0x0
 
     invoke-static {v0}, Landroid/opengl/EGL14;->eglGetDisplay(I)Landroid/opengl/EGLDisplay;
 
     move-result-object v0
 
-    .line 11
     sget-object v1, Landroid/opengl/EGL14;->EGL_NO_DISPLAY:Landroid/opengl/EGLDisplay;
 
     if-ne v0, v1, :cond_1
 
-    .line 12
     new-instance v1, Liug;
 
     const-string v2, "EGL Error: Bad display: "
 
-    .line 13
     invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
 
     move-result v0
@@ -77,7 +64,6 @@
 
     move-result-object v0
 
-    .line 14
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -104,13 +90,11 @@
 
     goto :goto_0
 
-    .line 16
     :cond_1
     sget-object v1, Livq;->a:[I
 
     monitor-enter v1
 
-    .line 17
     :try_start_0
     sget-object v2, Livq;->a:[I
 
@@ -120,7 +104,6 @@
 
     if-nez v2, :cond_3
 
-    .line 18
     sget-object v2, Livq;->a:[I
 
     const/4 v3, 0x0
@@ -135,12 +118,10 @@
 
     if-nez v2, :cond_3
 
-    .line 19
     new-instance v2, Liug;
 
     const-string v3, "EGL Error: eglInitialize failed: "
 
-    .line 20
     invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
 
     move-result v0
@@ -149,7 +130,6 @@
 
     move-result-object v0
 
-    .line 21
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -169,7 +149,6 @@
 
     throw v2
 
-    .line 22
     :catchall_0
     move-exception v0
 
@@ -179,7 +158,6 @@
 
     throw v0
 
-    .line 21
     :cond_2
     :try_start_1
     new-instance v0, Ljava/lang/String;
@@ -188,43 +166,33 @@
 
     goto :goto_1
 
-    .line 22
     :cond_3
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 26
     const/4 v1, 0x1
 
     new-array v6, v1, [I
 
-    .line 27
     const/4 v1, 0x1
 
     new-array v3, v1, [Landroid/opengl/EGLConfig;
 
-    .line 29
     iget-object v1, v8, Liuf;->a:Liuc;
 
-    .line 30
     iget-object v1, v1, Liuc;->c:Litg;
 
-    .line 31
     invoke-interface {v1}, Litg;->c()I
 
     move-result v4
 
-    .line 32
     iget-object v1, v8, Liuf;->a:Liuc;
 
-    .line 33
     iget-object v1, v1, Liuc;->b:[Lite;
 
-    .line 34
     array-length v5, v1
 
-    .line 35
     const/16 v1, 0xf
 
     new-array v1, v1, [I
@@ -259,7 +227,6 @@
 
     const/4 v7, 0x5
 
-    .line 36
     const/4 v2, 0x2
 
     if-lt v5, v2, :cond_4
@@ -277,7 +244,6 @@
 
     const/4 v7, 0x7
 
-    .line 37
     const/4 v2, 0x3
 
     if-lt v5, v2, :cond_5
@@ -295,7 +261,6 @@
 
     const/16 v2, 0x9
 
-    .line 38
     const/4 v7, 0x4
 
     if-lt v5, v7, :cond_6
@@ -333,7 +298,6 @@
 
     aput v4, v1, v2
 
-    .line 40
     const/4 v2, 0x0
 
     const/4 v4, 0x0
@@ -348,7 +312,6 @@
 
     if-nez v1, :cond_7
 
-    .line 41
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "EGL Error: eglChooseConfig failed!"
@@ -357,25 +320,21 @@
 
     throw v0
 
-    .line 36
     :cond_4
     const/4 v2, 0x0
 
     goto :goto_2
 
-    .line 37
     :cond_5
     const/4 v2, 0x0
 
     goto :goto_3
 
-    .line 38
     :cond_6
     const/4 v4, 0x0
 
     goto :goto_4
 
-    .line 42
     :cond_7
     const/4 v1, 0x0
 
@@ -383,7 +342,6 @@
 
     if-nez v1, :cond_8
 
-    .line 43
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Could not find suitable EGLConfig!"
@@ -392,13 +350,11 @@
 
     throw v0
 
-    .line 44
     :cond_8
     const/4 v1, 0x0
 
     aget-object v6, v3, v1
 
-    .line 47
     const/4 v1, 0x3
 
     new-array v1, v1, [I
@@ -421,7 +377,6 @@
 
     aput v3, v1, v2
 
-    .line 48
     sget-object v2, Landroid/opengl/EGL14;->EGL_NO_CONTEXT:Landroid/opengl/EGLContext;
 
     const/4 v3, 0x0
@@ -430,14 +385,12 @@
 
     move-result-object v5
 
-    .line 49
     if-eqz v5, :cond_9
 
     sget-object v1, Landroid/opengl/EGL14;->EGL_NO_CONTEXT:Landroid/opengl/EGLContext;
 
     if-ne v5, v1, :cond_a
 
-    .line 50
     :cond_9
     invoke-static {v9}, Liug;->a(Liwe;)Liug;
 
@@ -445,7 +398,6 @@
 
     throw v0
 
-    .line 54
     :cond_a
     const/4 v1, 0x5
 
@@ -459,14 +411,12 @@
 
     const/4 v2, 0x1
 
-    .line 55
     iget-object v3, v10, Liqp;->a:[I
 
     const/4 v4, 0x0
 
     aget v3, v3, v4
 
-    .line 56
     aput v3, v1, v2
 
     const/4 v2, 0x2
@@ -477,7 +427,6 @@
 
     const/4 v2, 0x3
 
-    .line 57
     invoke-virtual {v10}, Liqq;->a()I
 
     move-result v3
@@ -490,24 +439,20 @@
 
     aput v3, v1, v2
 
-    .line 58
     const/4 v2, 0x0
 
     invoke-static {v0, v6, v1, v2}, Landroid/opengl/EGL14;->eglCreatePbufferSurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;[II)Landroid/opengl/EGLSurface;
 
     move-result-object v4
 
-    .line 60
     sget-object v1, Landroid/opengl/EGL14;->EGL_NO_SURFACE:Landroid/opengl/EGLSurface;
 
     if-ne v4, v1, :cond_c
 
-    .line 61
     new-instance v1, Liug;
 
     const-string v2, "EGL Error: Bad surface: "
 
-    .line 62
     invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
 
     move-result v0
@@ -516,7 +461,6 @@
 
     move-result-object v0
 
-    .line 63
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -543,18 +487,15 @@
 
     goto :goto_5
 
-    .line 66
     :cond_c
     invoke-static {v0, v4, v4, v5}, Landroid/opengl/EGL14;->eglMakeCurrent(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;Landroid/opengl/EGLSurface;Landroid/opengl/EGLContext;)Z
 
-    .line 67
     new-instance v1, Livr;
 
     invoke-static {}, Livq;->a()Liwe;
 
     move-result-object v2
 
-    .line 70
     iget-object v3, v8, Liuf;->a:Liuc;
 
     invoke-static {v3, v10}, Litc;->a(Litf;Liqp;)Litf;
@@ -567,30 +508,24 @@
 
     move-object v8, v0
 
-    .line 71
     invoke-direct/range {v1 .. v8}, Livr;-><init>(Liwe;Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;Landroid/opengl/EGLContext;Landroid/opengl/EGLConfig;Liuc;Landroid/opengl/EGLDisplay;)V
 
-    .line 73
     iget-object v0, v1, Livh;->a:Liwe;
 
-    .line 74
     invoke-virtual {v0, v9}, Liwe;->b(Liwe;)I
 
     move-result v0
 
     if-gez v0, :cond_d
 
-    .line 75
     const-string v0, "GLRootCanvasCore"
 
     invoke-static {v9}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 76
     iget-object v3, v1, Livh;->a:Liwe;
 
-    .line 77
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
@@ -645,17 +580,14 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     invoke-virtual {v1}, Livh;->close()V
 
-    .line 79
     invoke-static {v9}, Liug;->a(Liwe;)Liug;
 
     move-result-object v0
 
     throw v0
 
-    .line 81
     :cond_d
     return-object v1
 .end method

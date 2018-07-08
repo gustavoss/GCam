@@ -19,7 +19,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x2
 
     const/4 v6, 0x1
@@ -28,7 +27,6 @@
 
     const/4 v4, 0x3
 
-    .line 50
     const/16 v0, 0x31
 
     new-array v0, v0, [I
@@ -41,7 +39,6 @@
 
     sput-object v0, Livi;->b:Liys;
 
-    .line 51
     const/16 v0, 0x1c
 
     new-array v0, v0, [I
@@ -50,7 +47,6 @@
 
     invoke-static {v0}, Liys;->a([I)Liys;
 
-    .line 52
     const/16 v0, 0x14
 
     new-array v0, v0, [I
@@ -63,7 +59,6 @@
 
     sput-object v0, Livi;->c:Liys;
 
-    .line 53
     const/4 v0, 0x4
 
     new-array v0, v0, [[[[I
@@ -216,7 +211,6 @@
 
     return-void
 
-    .line 50
     :array_0
     .array-data 4
         0x8229
@@ -270,7 +264,6 @@
         0x8d70
     .end array-data
 
-    .line 51
     :array_1
     .array-data 4
         0x8229
@@ -303,7 +296,6 @@
         0x8d70
     .end array-data
 
-    .line 52
     :array_2
     .array-data 4
         0x8229
@@ -328,7 +320,6 @@
         0x881a
     .end array-data
 
-    .line 53
     :array_3
     .array-data 4
         0x8231
@@ -445,11 +436,8 @@
 .method private constructor <init>(I)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget-object v0, Livi;->b:Liys;
 
     invoke-virtual {v0, p1}, Liys;->a(I)Z
@@ -478,32 +466,24 @@
 
     invoke-static {v0, v1}, Ljiy;->a(ZLjava/lang/Object;)V
 
-    .line 3
     iput p1, p0, Livi;->a:I
 
-    .line 4
     return-void
 .end method
 
 .method public static a(Liuc;)Livi;
     .locals 7
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 5
-    .line 6
     iget-object v4, p0, Liuc;->c:Litg;
 
-    .line 8
     iget-object v0, p0, Liuc;->b:[Lite;
 
-    .line 9
     array-length v5, v0
 
-    .line 10
     invoke-interface {v4}, Litg;->b()I
 
     move-result v0
@@ -512,7 +492,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 25
     new-instance v0, Livj;
 
     invoke-interface {v4}, Litg;->a()Ljava/lang/String;
@@ -557,7 +536,6 @@
 
     throw v0
 
-    .line 12
     :pswitch_0
     invoke-interface {v4}, Litg;->c()I
 
@@ -567,10 +545,8 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 13
     packed-switch v5, :pswitch_data_1
 
-    .line 18
     new-instance v0, Livj;
 
     const/16 v1, 0x28
@@ -603,7 +579,6 @@
 
     throw v0
 
-    .line 14
     :pswitch_1
     new-instance v0, Livi;
 
@@ -611,11 +586,9 @@
 
     invoke-direct {v0, v1}, Livi;-><init>(I)V
 
-    .line 40
     :goto_0
     return-object v0
 
-    .line 15
     :pswitch_2
     new-instance v0, Livi;
 
@@ -625,7 +598,6 @@
 
     goto :goto_0
 
-    .line 16
     :pswitch_3
     new-instance v0, Livi;
 
@@ -635,7 +607,6 @@
 
     goto :goto_0
 
-    .line 17
     :pswitch_4
     new-instance v0, Livi;
 
@@ -645,11 +616,9 @@
 
     goto :goto_0
 
-    .line 19
     :cond_0
     new-instance v0, Livj;
 
-    .line 20
     invoke-interface {v4}, Litg;->c()I
 
     move-result v1
@@ -687,7 +656,6 @@
     :pswitch_5
     move v0, v1
 
-    .line 26
     :goto_1
     invoke-interface {v4}, Litg;->d()Z
 
@@ -697,24 +665,19 @@
 
     move v3, v2
 
-    .line 27
     :goto_2
     invoke-interface {v4}, Litg;->c()I
 
     move-result v6
 
-    .line 28
     sparse-switch v6, :sswitch_data_0
 
-    .line 32
     const/4 v1, -0x1
 
-    .line 34
     :goto_3
     :sswitch_0
     if-ltz v1, :cond_1
 
-    .line 35
     sget-object v2, Livi;->d:[[[[I
 
     add-int/lit8 v5, v5, -0x1
@@ -727,11 +690,9 @@
 
     aget v2, v0, v1
 
-    .line 37
     :cond_1
     if-nez v2, :cond_3
 
-    .line 38
     new-instance v0, Livj;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -779,28 +740,23 @@
     :pswitch_6
     move v0, v2
 
-    .line 24
     goto :goto_1
 
     :cond_2
     move v3, v1
 
-    .line 26
     goto :goto_2
 
     :sswitch_1
     move v1, v2
 
-    .line 29
     goto :goto_3
 
-    .line 31
     :sswitch_2
     const/4 v1, 0x2
 
     goto :goto_3
 
-    .line 39
     :cond_3
     new-instance v0, Livi;
 
@@ -808,7 +764,6 @@
 
     goto/16 :goto_0
 
-    .line 10
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_6
@@ -816,7 +771,6 @@
         :pswitch_0
     .end packed-switch
 
-    .line 13
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_1
@@ -825,7 +779,6 @@
         :pswitch_4
     .end packed-switch
 
-    .line 28
     :sswitch_data_0
     .sparse-switch
         0x8 -> :sswitch_1
@@ -839,8 +792,6 @@
 .method public final a()Z
     .locals 2
 
-    .prologue
-    .line 41
     sget-object v0, Livi;->c:Liys;
 
     iget v1, p0, Livi;->a:I
@@ -855,20 +806,16 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 42
     if-ne p0, p1, :cond_1
 
-    .line 47
     :cond_0
     :goto_0
     return v0
 
-    .line 44
     :cond_1
     instance-of v2, p1, Livi;
 
@@ -876,14 +823,11 @@
 
     move v0, v1
 
-    .line 45
     goto :goto_0
 
-    .line 46
     :cond_2
     check-cast p1, Livi;
 
-    .line 47
     iget v2, p0, Livi;->a:I
 
     iget v3, p1, Livi;->a:I
@@ -898,8 +842,6 @@
 .method public final hashCode()I
     .locals 1
 
-    .prologue
-    .line 48
     iget v0, p0, Livi;->a:I
 
     return v0
@@ -908,8 +850,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 49
     iget v0, p0, Livi;->a:I
 
     const/16 v1, 0x15

@@ -13,8 +13,6 @@
 .method public constructor <init>(Ldnc;Lfss;)V
     .locals 0
 
-    .prologue
-    .line 91
     iput-object p1, p0, Lfzm;->b:Ldnc;
 
     iput-object p2, p0, Lfzm;->a:Lfss;
@@ -29,44 +27,34 @@
 .method public final a(JLhcc;Lfzp;Ljava/lang/String;)V
     .locals 15
 
-    .prologue
-    .line 1
-    .line 2
     move-object/from16 v0, p3
 
     iget-object v2, v0, Lhcc;->a:Ljrw;
 
-    .line 3
     invoke-virtual {v2}, Ljrw;->a()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 5
     move-object/from16 v0, p3
 
     iget-object v2, v0, Lhcc;->a:Ljrw;
 
-    .line 6
     invoke-virtual {v2}, Ljrw;->b()Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Lcom/google/googlex/gcam/InterleavedImageU8;
 
-    .line 7
     iget-object v2, p0, Lfzm;->b:Ldnc;
 
-    .line 8
     iget-object v2, v2, Ldnc;->b:Lhce;
 
-    .line 9
     invoke-virtual {v2}, Lhce;->a()Lhcf;
 
     move-result-object v12
 
-    .line 10
     invoke-virtual {v6}, Lcom/google/googlex/gcam/InterleavedImageU8;->width()I
 
     move-result v2
@@ -79,15 +67,12 @@
 
     if-lez v2, :cond_0
 
-    .line 11
     sget-object v2, Ldmz;->a:Ljava/lang/String;
 
-    .line 12
     const-string v3, "Received a valid primary image, saving"
 
     invoke-static {v2, v3}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
     iget-object v3, p0, Lfzm;->b:Ldnc;
 
     const/16 v8, 0x64
@@ -104,60 +89,47 @@
 
     invoke-static/range {v3 .. v12}, Ldnc;->a(Ldnc;JLcom/google/googlex/gcam/InterleavedImageU8;Lfzp;IZLdnb;Ljava/lang/String;Lhcf;)V
 
-    .line 90
     :goto_0
     return-void
 
-    .line 14
     :cond_0
     sget-object v2, Ldmz;->a:Ljava/lang/String;
 
-    .line 15
     const-string v3, "Received an invalid primary image, ignoring"
 
     invoke-static {v2, v3}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 16
     iget-object v2, p0, Lfzm;->b:Ldnc;
 
-    .line 18
     invoke-static {v6}, Lcom/google/googlex/gcam/BufferUtils;->deleteNativeImage(Lcom/google/googlex/gcam/InterleavedImageU8;)V
 
-    .line 19
     invoke-virtual {v12}, Lhcf;->close()V
 
-    .line 20
     move-wide/from16 v0, p1
 
     invoke-virtual {v2, v0, v1}, Ldnc;->a(J)V
 
     goto :goto_0
 
-    .line 23
     :cond_1
     move-object/from16 v0, p3
 
     iget-object v2, v0, Lhcc;->b:Ljrw;
 
-    .line 24
     invoke-virtual {v2}, Ljrw;->b()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/google/googlex/gcam/YuvImage;
 
-    .line 25
     iget-object v3, p0, Lfzm;->b:Ldnc;
 
-    .line 26
     iget-object v3, v3, Ldnc;->b:Lhce;
 
-    .line 27
     invoke-virtual {v3}, Lhce;->a()Lhcf;
 
     move-result-object v10
 
-    .line 28
     invoke-virtual {v2}, Lcom/google/googlex/gcam/YuvImage;->width()I
 
     move-result v3
@@ -170,11 +142,9 @@
 
     if-gtz v3, :cond_3
 
-    .line 29
     :cond_2
     sget-object v3, Ldmz;->a:Ljava/lang/String;
 
-    .line 30
     const/16 v4, 0x49
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -199,7 +169,6 @@
 
     invoke-static {v3, v4}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 31
     iget-object v3, p0, Lfzm;->b:Ldnc;
 
     move-wide/from16 v0, p1
@@ -208,32 +177,25 @@
 
     goto :goto_0
 
-    .line 33
     :cond_3
     iget-object v3, p0, Lfzm;->b:Ldnc;
 
-    .line 34
     iget-object v3, v3, Ldnc;->l:Lcro;
 
-    .line 35
     iget-object v9, v3, Lcro;->h:Ljrw;
 
-    .line 37
     invoke-virtual {v9}, Ljrw;->a()Z
 
     move-result v3
 
     if-nez v3, :cond_4
 
-    .line 38
     sget-object v3, Ldmz;->a:Ljava/lang/String;
 
-    .line 39
     const-string v4, "Received a YUV image without FxImageSaver associated with it. Ignoring."
 
     invoke-static {v3, v4}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 40
     iget-object v3, p0, Lfzm;->b:Ldnc;
 
     move-wide/from16 v0, p1
@@ -242,23 +204,18 @@
 
     goto :goto_0
 
-    .line 42
     :cond_4
     :try_start_0
     iget-object v3, p0, Lfzm;->b:Ldnc;
 
-    .line 43
     iget-object v3, v3, Ldnc;->l:Lcro;
 
-    .line 44
     iget-object v3, v3, Lcro;->m:Lkfk;
 
-    .line 45
     const-wide/16 v4, 0x64
 
     sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 46
     invoke-virtual {v3, v4, v5, v6}, Lkfk;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
     move-result-object v3
@@ -273,36 +230,27 @@
 
     move-result v3
 
-    .line 58
     :goto_1
     iget-object v4, p0, Lfzm;->b:Ldnc;
 
-    .line 59
     iget-object v4, v4, Ldnc;->l:Lcro;
 
-    .line 60
     invoke-virtual {v4, v3}, Lcro;->a(I)Linu;
 
     move-result-object v5
 
-    .line 61
     iget-object v4, p0, Lfzm;->b:Ldnc;
 
-    .line 62
     iget-object v4, v4, Ldnc;->l:Lcro;
 
-    .line 63
     invoke-virtual {v4, v3}, Lcro;->b(I)J
 
     move-result-wide v12
 
-    .line 64
     if-nez v5, :cond_5
 
-    .line 65
     sget-object v4, Ldmz;->a:Ljava/lang/String;
 
-    .line 66
     const/16 v5, 0x39
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -331,7 +279,6 @@
 
     invoke-static {v4, v3}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 67
     iget-object v3, p0, Lfzm;->b:Ldnc;
 
     move-wide/from16 v0, p1
@@ -340,7 +287,6 @@
 
     goto/16 :goto_0
 
-    .line 49
     :catch_0
     move-exception v3
 
@@ -350,37 +296,30 @@
 
     invoke-virtual {v3}, Ljava/lang/Thread;->interrupt()V
 
-    .line 50
     const/4 v3, 0x0
 
-    .line 51
     sget-object v4, Ldmz;->a:Ljava/lang/String;
 
-    .line 52
     const-string v5, "Could not retrieve baseframe from shot!"
 
     invoke-static {v4, v5}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 55
     :catch_1
     move-exception v3
 
     :goto_2
     const/4 v3, 0x0
 
-    .line 56
     sget-object v4, Ldmz;->a:Ljava/lang/String;
 
-    .line 57
     const-string v5, "Could not retrieve baseframe from shot!"
 
     invoke-static {v4, v5}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 70
     :cond_5
     invoke-virtual {v2}, Lcom/google/googlex/gcam/YuvImage;->width()I
 
@@ -392,36 +331,28 @@
 
     iget-object v6, p0, Lfzm;->b:Ldnc;
 
-    .line 71
     iget-object v6, v6, Ldnc;->f:Lcom/google/googlex/gcam/ExifMetadata;
 
-    .line 72
     invoke-static {v3, v4, v6}, Lcpm;->a(IILcom/google/googlex/gcam/ExifMetadata;)Lcom/google/android/libraries/camera/exif/ExifInterface;
 
     move-result-object v7
 
-    .line 73
     new-instance v3, Lcrs;
 
     invoke-direct {v3, v2, v12, v13}, Lcrs;-><init>(Lcom/google/googlex/gcam/YuvImage;J)V
 
-    .line 74
     new-instance v2, Lgbe;
 
     iget-object v4, p0, Lfzm;->b:Ldnc;
 
-    .line 75
     iget-object v4, v4, Ldnc;->l:Lcro;
 
-    .line 76
     iget v4, v4, Lcro;->c:I
 
-    .line 77
     invoke-static {v4}, Lihp;->a(I)Lihp;
 
     move-result-object v4
 
-    .line 78
     invoke-static {v5}, Lkek;->a(Ljava/lang/Object;)Lkey;
 
     move-result-object v5
@@ -432,7 +363,6 @@
 
     const/4 v11, 0x0
 
-    .line 79
     invoke-interface {v3}, Liob;->c()I
 
     move-result v12
@@ -445,31 +375,24 @@
 
     iget-object v8, p0, Lfzm;->b:Ldnc;
 
-    .line 80
     iget-object v8, v8, Ldnc;->l:Lcro;
 
-    .line 81
     iget-object v8, v8, Lcro;->a:Lfsr;
 
-    .line 82
     iget-object v8, v8, Lfsr;->b:Lgfy;
 
-    .line 83
     invoke-interface {v8}, Lgab;->n()Lgmd;
 
     move-result-object v8
 
     invoke-direct/range {v2 .. v8}, Lgbe;-><init>(Liob;Lihp;Lkey;Landroid/graphics/Rect;Lcom/google/android/libraries/camera/exif/ExifInterface;Lgmd;)V
 
-    .line 84
     iget-object v4, p0, Lfzm;->b:Ldnc;
 
     iget-object v4, v4, Ldnc;->m:Ldmz;
 
-    .line 85
     iget-object v4, v4, Ldmz;->c:Lfnq;
 
-    .line 86
     new-instance v5, Ldnd;
 
     invoke-direct {v5, v9, v2}, Ldnd;-><init>(Ljrw;Lgbe;)V
@@ -478,7 +401,6 @@
 
     move-result-object v2
 
-    .line 87
     new-instance v4, Ldne;
 
     move-object v5, p0
@@ -497,15 +419,12 @@
 
     iget-object v3, v3, Ldnc;->m:Ldmz;
 
-    .line 88
     iget-object v3, v3, Ldmz;->f:Ljava/util/concurrent/Executor;
 
-    .line 89
     invoke-static {v2, v4, v3}, Lkek;->a(Lkey;Lkej;Ljava/util/concurrent/Executor;)V
 
     goto/16 :goto_0
 
-    .line 55
     :catch_2
     move-exception v3
 

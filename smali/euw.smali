@@ -35,13 +35,9 @@
 .method public final a(Lixu;)Liwz;
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     new-instance v0, Liwz;
 
     invoke-direct {v0, p1}, Liwz;-><init>(Lixu;)V
 
-    .line 3
     return-object v0
 .end method

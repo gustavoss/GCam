@@ -14,8 +14,6 @@
 .method constructor <init>(Lrn;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lro;->a:Lrn;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lro;->a:Lrn;
 
     iget-object v0, v0, Lrn;->d:Lrk;
 
     invoke-virtual {v0, p3}, Lrk;->setSelection(I)V
 
-    .line 3
     iget-object v0, p0, Lro;->a:Lrn;
 
     iget-object v0, v0, Lrn;->d:Lrk;
@@ -47,7 +42,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lro;->a:Lrn;
 
     iget-object v0, v0, Lrn;->d:Lrk;
@@ -56,19 +50,16 @@
 
     iget-object v1, v1, Lrn;->b:Landroid/widget/ListAdapter;
 
-    .line 5
     invoke-interface {v1, p3}, Landroid/widget/ListAdapter;->getItemId(I)J
 
     move-result-wide v2
 
     invoke-virtual {v0, p2, p3, v2, v3}, Lrk;->performItemClick(Landroid/view/View;IJ)Z
 
-    .line 6
     :cond_0
     iget-object v0, p0, Lro;->a:Lrn;
 
     invoke-virtual {v0}, Lrn;->c()V
 
-    .line 7
     return-void
 .end method

@@ -18,11 +18,8 @@
 .method public constructor <init>(Lfrn;Laxo;Layd;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -31,7 +28,6 @@
 
     iput-object v0, p0, Lazf;->a:Laxo;
 
-    .line 3
     invoke-static {p3}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -40,7 +36,6 @@
 
     iput-object v0, p0, Lazf;->b:Layd;
 
-    .line 4
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -49,7 +44,6 @@
 
     iput-object v0, p0, Lazf;->c:Lfrn;
 
-    .line 5
     return-void
 .end method
 
@@ -58,8 +52,6 @@
 .method public final a(Lfsr;)Lfro;
     .locals 4
 
-    .prologue
-    .line 6
     new-instance v0, Lazg;
 
     iget-object v1, p0, Lazf;->a:Laxo;
@@ -68,22 +60,18 @@
 
     iget-object v3, p0, Lazf;->c:Lfrn;
 
-    .line 7
     invoke-interface {v3, p1}, Lfrn;->a(Lfsr;)Lfro;
 
     move-result-object v3
 
     invoke-direct {v0, v1, v2, v3}, Lazg;-><init>(Laxo;Layd;Lfro;)V
 
-    .line 8
     return-object v0
 .end method
 
 .method public final a()Lida;
     .locals 1
 
-    .prologue
-    .line 13
     iget-object v0, p0, Lazf;->c:Lfrn;
 
     invoke-interface {v0}, Lfrn;->a()Lida;
@@ -96,21 +84,16 @@
 .method public final b(Lfsr;)Lfro;
     .locals 4
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lazf;->c:Lfrn;
 
     invoke-interface {v0, p1}, Lfrn;->b(Lfsr;)Lfro;
 
     move-result-object v1
 
-    .line 10
     if-nez v1, :cond_0
 
-    .line 11
     const/4 v0, 0x0
 
-    .line 12
     :goto_0
     return-object v0
 
@@ -129,8 +112,6 @@
 .method public final b()Lfrp;
     .locals 1
 
-    .prologue
-    .line 14
     iget-object v0, p0, Lazf;->c:Lfrn;
 
     invoke-interface {v0}, Lfrn;->b()Lfrp;

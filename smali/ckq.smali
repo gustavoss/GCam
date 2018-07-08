@@ -7,11 +7,8 @@
 .method public constructor <init>(Landroid/net/Uri;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Leqo;-><init>(Landroid/net/Uri;)V
 
-    .line 2
     return-void
 .end method
 
@@ -20,8 +17,6 @@
 .method public final a()Lckp;
     .locals 19
 
-    .prologue
-    .line 3
     new-instance v3, Lckp;
 
     move-object/from16 v0, p0
@@ -78,8 +73,6 @@
 .method protected final bridge synthetic b()Leqo;
     .locals 1
 
-    .prologue
-    .line 4
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
@@ -93,8 +86,6 @@
 .method public final synthetic c()Leqm;
     .locals 1
 
-    .prologue
-    .line 5
     invoke-virtual {p0}, Lckq;->a()Lckp;
 
     move-result-object v0

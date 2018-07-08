@@ -32,8 +32,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 39
     const-string v0, "HeadingSensor"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -48,60 +46,46 @@
 .method public constructor <init>(Landroid/hardware/SensorManager;)V
     .locals 1
 
-    .prologue
-    .line 11
-    .line 12
     sget-object v0, Lkfe;->a:Lkfe;
 
-    .line 13
     invoke-direct {p0, p1, v0}, Lgfl;-><init>(Landroid/hardware/SensorManager;Ljava/util/concurrent/Executor;)V
 
-    .line 14
     return-void
 .end method
 
 .method public constructor <init>(Landroid/hardware/SensorManager;Ljava/util/concurrent/Executor;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, -0x1
 
     iput v0, p0, Lgfl;->a:I
 
-    .line 3
     new-array v0, v1, [F
 
     iput-object v0, p0, Lgfl;->g:[F
 
-    .line 4
     new-array v0, v1, [F
 
     iput-object v0, p0, Lgfl;->h:[F
 
-    .line 5
     const/16 v0, 0x10
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Lgfl;->i:[F
 
-    .line 6
     iput-object p1, p0, Lgfl;->b:Landroid/hardware/SensorManager;
 
-    .line 7
     new-instance v0, Lgfp;
 
     invoke-direct {v0, p2}, Lgfp;-><init>(Ljava/util/concurrent/Executor;)V
 
     iput-object v0, p0, Lgfl;->f:Lgfp;
 
-    .line 8
     iget-object v0, p0, Lgfl;->b:Landroid/hardware/SensorManager;
 
     const/4 v1, 0x1
@@ -112,7 +96,6 @@
 
     iput-object v0, p0, Lgfl;->c:Landroid/hardware/Sensor;
 
-    .line 9
     iget-object v0, p0, Lgfl;->b:Landroid/hardware/SensorManager;
 
     const/4 v1, 0x2
@@ -123,7 +106,6 @@
 
     iput-object v0, p0, Lgfl;->d:Landroid/hardware/Sensor;
 
-    .line 10
     return-void
 .end method
 
@@ -132,8 +114,6 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lgfl;->f:Lgfp;
 
     new-instance v1, Lgfm;
@@ -142,15 +122,12 @@
 
     invoke-virtual {v0, v1}, Lgfp;->execute(Ljava/lang/Runnable;)V
 
-    .line 16
     return-void
 .end method
 
 .method public final b()V
     .locals 2
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lgfl;->f:Lgfp;
 
     new-instance v1, Lgfn;
@@ -159,72 +136,59 @@
 
     invoke-virtual {v0, v1}, Lgfp;->execute(Ljava/lang/Runnable;)V
 
-    .line 18
     return-void
 .end method
 
 .method public final onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
 
-    .prologue
-    .line 38
     return-void
 .end method
 
 .method public final onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 6
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v4, 0x3
 
     const/4 v2, 0x0
 
-    .line 19
     iget-object v0, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
     invoke-virtual {v0}, Landroid/hardware/Sensor;->getType()I
 
     move-result v0
 
-    .line 20
     if-ne v0, v3, :cond_0
 
-    .line 21
     iget-object v0, p0, Lgfl;->g:[F
 
     :goto_0
     move v1, v2
 
-    .line 28
     :goto_1
     if-ge v1, v4, :cond_3
 
-    .line 29
     iget-object v3, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v3, v3, v1
 
     aput v3, v0, v1
 
-    .line 30
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 22
     :cond_0
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_1
 
-    .line 23
     iget-object v0, p0, Lgfl;->h:[F
 
     goto :goto_0
 
-    .line 24
     :cond_1
     sget-object v0, Lgfl;->e:Ljava/lang/String;
 
@@ -240,26 +204,21 @@
 
     aput-object v4, v3, v2
 
-    .line 25
     const/4 v2, 0x0
 
     invoke-static {v2, v1, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 26
     invoke-static {v0, v1}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 37
     :cond_2
     :goto_2
     return-void
 
-    .line 31
     :cond_3
     new-array v0, v4, [F
 
-    .line 32
     iget-object v1, p0, Lgfl;->i:[F
 
     new-array v3, v4, [F
@@ -270,12 +229,10 @@
 
     invoke-static {v1, v3, v4, v5}, Landroid/hardware/SensorManager;->getRotationMatrix([F[F[F[F)Z
 
-    .line 33
     iget-object v1, p0, Lgfl;->i:[F
 
     invoke-static {v1, v0}, Landroid/hardware/SensorManager;->getOrientation([F[F)[F
 
-    .line 34
     aget v0, v0, v2
 
     const/high16 v1, 0x43340000    # 180.0f
@@ -294,12 +251,10 @@
 
     iput v0, p0, Lgfl;->a:I
 
-    .line 35
     iget v0, p0, Lgfl;->a:I
 
     if-gez v0, :cond_2
 
-    .line 36
     iget v0, p0, Lgfl;->a:I
 
     add-int/lit16 v0, v0, 0x168

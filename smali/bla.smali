@@ -25,31 +25,25 @@
 .method public final onPreferenceClick(Landroid/preference/Preference;)Z
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lbla;->a:Lbsu;
 
-    .line 2
     iget-object v0, v1, Lbsu;->b:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0}, Landroid/preference/PreferenceScreen;->getPreferenceCount()I
 
     move-result v2
 
-    .line 3
     iget-object v0, v1, Lbsu;->a:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v3
 
-    .line 4
     const/4 v0, 0x0
 
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 5
     iget-object v4, v1, Lbsu;->b:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v4, v0}, Landroid/preference/PreferenceScreen;->getPreference(I)Landroid/preference/Preference;
@@ -62,28 +56,22 @@
 
     invoke-interface {v3, v4}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 6
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 7
     :cond_0
     invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 8
     iget-object v0, v1, Lbsu;->b:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0}, Landroid/preference/PreferenceScreen;->removeAll()V
 
-    .line 9
     iget-object v0, v1, Lbsu;->b:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v0}, Lbsu;->a(Landroid/preference/PreferenceScreen;)V
 
-    .line 10
     const/4 v0, 0x1
 
-    .line 11
     return v0
 .end method

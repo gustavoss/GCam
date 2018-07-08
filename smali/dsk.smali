@@ -14,18 +14,14 @@
 .method public constructor <init>(Ljava/util/Map;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Ljvd;->a(Ljava/util/Map;)Ljvd;
 
     move-result-object v0
 
     iput-object v0, p0, Ldsk;->a:Ljava/util/Map;
 
-    .line 3
     return-void
 .end method
 
@@ -34,8 +30,6 @@
 .method public final a(Ljava/util/List;)Ljava/util/List;
     .locals 6
 
-    .prologue
-    .line 4
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -44,7 +38,6 @@
 
     invoke-direct {v3, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 5
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -62,7 +55,6 @@
 
     check-cast v0, Linu;
 
-    .line 7
     iget-object v1, p0, Ldsk;->a:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -86,7 +78,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 8
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -107,10 +98,8 @@
 
     if-nez v1, :cond_0
 
-    .line 9
     const/4 v0, 0x0
 
-    .line 12
     :goto_1
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -120,13 +109,11 @@
 
     goto :goto_0
 
-    .line 11
     :cond_1
     const/4 v0, 0x1
 
     goto :goto_1
 
-    .line 14
     :cond_2
     return-object v3
 .end method

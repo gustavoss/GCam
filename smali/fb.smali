@@ -23,13 +23,10 @@
 .method public constructor <init>()V
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Lfa;-><init>()V
 
-    .line 2
     :try_start_0
     const-string v0, "android.graphics.FontFamily"
 
@@ -37,7 +34,6 @@
 
     move-result-object v7
 
-    .line 5
     const/4 v0, 0x0
 
     new-array v0, v0, [Ljava/lang/Class;
@@ -46,7 +42,6 @@
 
     move-result-object v6
 
-    .line 8
     const-string v0, "addFontFromAssetManager"
 
     const/16 v2, 0x8
@@ -105,7 +100,6 @@
 
     move-result-object v5
 
-    .line 11
     const-string v0, "addFontFromBuffer"
 
     const/4 v2, 0x5
@@ -146,7 +140,6 @@
 
     move-result-object v4
 
-    .line 14
     const-string v0, "freeze"
 
     const/4 v2, 0x0
@@ -157,7 +150,6 @@
 
     move-result-object v3
 
-    .line 17
     const-string v0, "abortCreation"
 
     const/4 v2, 0x0
@@ -168,7 +160,6 @@
 
     move-result-object v2
 
-    .line 19
     invoke-virtual {p0, v7}, Lfb;->a(Ljava/lang/Class;)Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -188,36 +179,26 @@
 
     move-object v6, v7
 
-    .line 30
     :goto_0
     iput-object v6, p0, Lfb;->a:Ljava/lang/Class;
 
-    .line 31
     iput-object v5, p0, Lfb;->c:Ljava/lang/reflect/Constructor;
 
-    .line 32
     iput-object v4, p0, Lfb;->d:Ljava/lang/reflect/Method;
 
-    .line 33
     iput-object v3, p0, Lfb;->e:Ljava/lang/reflect/Method;
 
-    .line 34
     iput-object v2, p0, Lfb;->f:Ljava/lang/reflect/Method;
 
-    .line 35
     iput-object v1, p0, Lfb;->g:Ljava/lang/reflect/Method;
 
-    .line 36
     iput-object v0, p0, Lfb;->b:Ljava/lang/reflect/Method;
 
-    .line 37
     return-void
 
-    .line 21
     :catch_0
     move-exception v0
 
-    .line 22
     :goto_1
     const-string v2, "TypefaceCompatApi26Impl"
 
@@ -257,10 +238,8 @@
 
     move-object v6, v1
 
-    .line 29
     goto :goto_0
 
-    .line 21
     :catch_1
     move-exception v0
 
@@ -270,8 +249,6 @@
 .method private final a(Landroid/content/Context;Ljava/lang/Object;Ljava/lang/String;III[Landroid/graphics/fonts/FontVariationAxis;)Z
     .locals 4
 
-    .prologue
-    .line 44
     :try_start_0
     iget-object v0, p0, Lfb;->d:Ljava/lang/reflect/Method;
 
@@ -281,7 +258,6 @@
 
     const/4 v2, 0x0
 
-    .line 45
     invoke-virtual {p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v3
@@ -322,7 +298,6 @@
 
     const/4 v2, 0x5
 
-    .line 46
     invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -341,14 +316,12 @@
 
     aput-object p7, v1, v2
 
-    .line 47
     invoke-virtual {v0, p2, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Boolean;
 
-    .line 48
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
     :try_end_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
@@ -358,11 +331,9 @@
 
     return v0
 
-    .line 49
     :catch_0
     move-exception v0
 
-    .line 50
     :goto_0
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -370,7 +341,6 @@
 
     throw v1
 
-    .line 49
     :catch_1
     move-exception v0
 
@@ -380,8 +350,6 @@
 .method private final a(Ljava/lang/Object;Ljava/nio/ByteBuffer;III)Z
     .locals 4
 
-    .prologue
-    .line 51
     :try_start_0
     iget-object v0, p0, Lfb;->e:Ljava/lang/reflect/Method;
 
@@ -395,7 +363,6 @@
 
     const/4 v2, 0x1
 
-    .line 52
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -424,14 +391,12 @@
 
     aput-object v3, v1, v2
 
-    .line 53
     invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Boolean;
 
-    .line 54
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
     :try_end_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
@@ -441,11 +406,9 @@
 
     return v0
 
-    .line 55
     :catch_0
     move-exception v0
 
-    .line 56
     :goto_0
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -453,7 +416,6 @@
 
     throw v1
 
-    .line 55
     :catch_1
     move-exception v0
 
@@ -463,20 +425,16 @@
 .method private final c()Z
     .locals 2
 
-    .prologue
-    .line 38
     iget-object v0, p0, Lfb;->d:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_0
 
-    .line 39
     const-string v0, "TypefaceCompatApi26Impl"
 
     const-string v1, "Unable to collect necessary private methods. Fallback to legacy implementation."
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 40
     :cond_0
     iget-object v0, p0, Lfb;->d:Ljava/lang/reflect/Method;
 
@@ -496,8 +454,6 @@
 .method private final c(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 64
     :try_start_0
     iget-object v0, p0, Lfb;->f:Ljava/lang/reflect/Method;
 
@@ -511,7 +467,6 @@
 
     check-cast v0, Ljava/lang/Boolean;
 
-    .line 65
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
     :try_end_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
@@ -521,11 +476,9 @@
 
     return v0
 
-    .line 66
     :catch_0
     move-exception v0
 
-    .line 67
     :goto_0
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -533,7 +486,6 @@
 
     throw v1
 
-    .line 66
     :catch_1
     move-exception v0
 
@@ -543,8 +495,6 @@
 .method private final d()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 41
     :try_start_0
     iget-object v0, p0, Lfb;->c:Ljava/lang/reflect/Constructor;
 
@@ -562,11 +512,9 @@
 
     return-object v0
 
-    .line 42
     :catch_0
     move-exception v0
 
-    .line 43
     :goto_0
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -574,7 +522,6 @@
 
     throw v1
 
-    .line 42
     :catch_1
     move-exception v0
 
@@ -589,8 +536,6 @@
 .method private final d(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 68
     :try_start_0
     iget-object v0, p0, Lfb;->g:Ljava/lang/reflect/Method;
 
@@ -603,14 +548,11 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 69
     return-void
 
-    .line 70
     :catch_0
     move-exception v0
 
-    .line 71
     :goto_0
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -618,7 +560,6 @@
 
     throw v1
 
-    .line 70
     :catch_1
     move-exception v0
 
@@ -630,35 +571,29 @@
 .method public final a(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
     .locals 8
 
-    .prologue
     const/4 v5, -0x1
 
     const/4 v7, 0x0
 
-    .line 145
     invoke-direct {p0}, Lfb;->c()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 146
     invoke-super/range {p0 .. p5}, Lsv;->a(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
 
     move-result-object v7
 
-    .line 153
     :cond_0
     :goto_0
     return-object v7
 
-    .line 147
     :cond_1
     invoke-direct {p0}, Lfb;->d()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 148
     const/4 v4, 0x0
 
     move-object v0, p0
@@ -675,12 +610,10 @@
 
     if-nez v0, :cond_2
 
-    .line 149
     invoke-direct {p0, v2}, Lfb;->d(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 151
     :cond_2
     invoke-direct {p0, v2}, Lfb;->c(Ljava/lang/Object;)Z
 
@@ -688,7 +621,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 153
     invoke-virtual {p0, v2}, Lfb;->a(Ljava/lang/Object;)Landroid/graphics/Typeface;
 
     move-result-object v7
@@ -699,33 +631,26 @@
 .method public final a(Landroid/content/Context;Les;Landroid/content/res/Resources;I)Landroid/graphics/Typeface;
     .locals 11
 
-    .prologue
-    .line 72
     invoke-direct {p0}, Lfb;->c()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 73
     invoke-super {p0, p1, p2, p3, p4}, Lsv;->a(Landroid/content/Context;Les;Landroid/content/res/Resources;I)Landroid/graphics/Typeface;
 
     move-result-object v0
 
-    .line 95
     :goto_0
     return-object v0
 
-    .line 74
     :cond_0
     invoke-direct {p0}, Lfb;->d()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 76
     iget-object v9, p2, Les;->a:[Let;
 
-    .line 77
     array-length v10, v9
 
     const/4 v0, 0x0
@@ -737,28 +662,21 @@
 
     aget-object v0, v9, v8
 
-    .line 79
     iget-object v3, v0, Let;->a:Ljava/lang/String;
 
-    .line 81
     iget v4, v0, Let;->e:I
 
-    .line 83
     iget v5, v0, Let;->b:I
 
-    .line 85
     iget-boolean v1, v0, Let;->c:Z
 
-    .line 86
     if-eqz v1, :cond_1
 
     const/4 v6, 0x1
 
-    .line 87
     :goto_2
     iget-object v0, v0, Let;->d:Ljava/lang/String;
 
-    .line 88
     invoke-static {v0}, Landroid/graphics/fonts/FontVariationAxis;->fromFontVariationSettings(Ljava/lang/String;)[Landroid/graphics/fonts/FontVariationAxis;
 
     move-result-object v7
@@ -767,28 +685,23 @@
 
     move-object v1, p1
 
-    .line 89
     invoke-direct/range {v0 .. v7}, Lfb;->a(Landroid/content/Context;Ljava/lang/Object;Ljava/lang/String;III[Landroid/graphics/fonts/FontVariationAxis;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 90
     invoke-direct {p0, v2}, Lfb;->d(Ljava/lang/Object;)V
 
-    .line 91
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 86
     :cond_1
     const/4 v6, 0x0
 
     goto :goto_2
 
-    .line 92
     :cond_2
     add-int/lit8 v0, v8, 0x1
 
@@ -796,7 +709,6 @@
 
     goto :goto_1
 
-    .line 93
     :cond_3
     invoke-direct {p0, v2}, Lfb;->c(Ljava/lang/Object;)Z
 
@@ -804,12 +716,10 @@
 
     if-nez v0, :cond_4
 
-    .line 94
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 95
     :cond_4
     invoke-virtual {p0, v2}, Lfb;->a(Ljava/lang/Object;)Landroid/graphics/Typeface;
 
@@ -821,21 +731,16 @@
 .method public final a(Landroid/content/Context;[Lfq;I)Landroid/graphics/Typeface;
     .locals 10
 
-    .prologue
-    .line 96
     array-length v0, p2
 
     if-gtz v0, :cond_1
 
-    .line 97
     const/4 v0, 0x0
 
-    .line 144
     :cond_0
     :goto_0
     return-object v0
 
-    .line 98
     :cond_1
     invoke-direct {p0}, Lfb;->c()Z
 
@@ -843,21 +748,17 @@
 
     if-nez v0, :cond_6
 
-    .line 99
     invoke-static {p2, p3}, Lsv;->a([Lfq;I)Lfq;
 
     move-result-object v0
 
-    .line 100
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 102
     :try_start_0
     iget-object v2, v0, Lfq;->a:Landroid/net/Uri;
 
-    .line 103
     const-string v3, "r"
 
     const/4 v4, 0x0
@@ -866,13 +767,10 @@
 
     move-result-object v2
 
-    .line 104
     const/4 v1, 0x0
 
-    .line 105
     if-nez v2, :cond_3
 
-    .line 106
     if-eqz v2, :cond_2
 
     invoke-virtual {v2}, Landroid/os/ParcelFileDescriptor;->close()V
@@ -884,7 +782,6 @@
 
     goto :goto_0
 
-    .line 107
     :cond_3
     :try_start_1
     new-instance v3, Landroid/graphics/Typeface$Builder;
@@ -895,23 +792,18 @@
 
     invoke-direct {v3, v4}, Landroid/graphics/Typeface$Builder;-><init>(Ljava/io/FileDescriptor;)V
 
-    .line 108
     iget v4, v0, Lfq;->c:I
 
-    .line 109
     invoke-virtual {v3, v4}, Landroid/graphics/Typeface$Builder;->setWeight(I)Landroid/graphics/Typeface$Builder;
 
     move-result-object v3
 
-    .line 110
     iget-boolean v0, v0, Lfq;->d:Z
 
-    .line 111
     invoke-virtual {v3, v0}, Landroid/graphics/Typeface$Builder;->setItalic(Z)Landroid/graphics/Typeface$Builder;
 
     move-result-object v0
 
-    .line 112
     invoke-virtual {v0}, Landroid/graphics/Typeface$Builder;->build()Landroid/graphics/Typeface;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
@@ -919,7 +811,6 @@
 
     move-result-object v0
 
-    .line 113
     if-eqz v2, :cond_0
 
     :try_start_2
@@ -929,7 +820,6 @@
 
     goto :goto_0
 
-    .line 116
     :catch_0
     move-exception v0
 
@@ -937,7 +827,6 @@
 
     goto :goto_0
 
-    .line 114
     :catch_1
     move-exception v0
 
@@ -946,7 +835,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 115
     :catchall_0
     move-exception v1
 
@@ -986,7 +874,6 @@
 
     goto :goto_2
 
-    .line 117
     :cond_6
     const/4 v0, 0x0
 
@@ -994,15 +881,12 @@
 
     move-result-object v7
 
-    .line 118
     invoke-direct {p0}, Lfb;->d()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 119
     const/4 v2, 0x0
 
-    .line 120
     array-length v8, p2
 
     const/4 v0, 0x0
@@ -1016,29 +900,22 @@
 
     aget-object v5, p2, v6
 
-    .line 122
     iget-object v2, v5, Lfq;->a:Landroid/net/Uri;
 
-    .line 123
     invoke-interface {v7, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/nio/ByteBuffer;
 
-    .line 124
     if-eqz v2, :cond_9
 
-    .line 126
     iget v3, v5, Lfq;->b:I
 
-    .line 128
     iget v4, v5, Lfq;->c:I
 
-    .line 130
     iget-boolean v0, v5, Lfq;->d:Z
 
-    .line 131
     if-eqz v0, :cond_7
 
     const/4 v5, 0x1
@@ -1046,33 +923,26 @@
     :goto_4
     move-object v0, p0
 
-    .line 132
     invoke-direct/range {v0 .. v5}, Lfb;->a(Ljava/lang/Object;Ljava/nio/ByteBuffer;III)Z
 
     move-result v0
 
-    .line 133
     if-nez v0, :cond_8
 
-    .line 134
     invoke-direct {p0, v1}, Lfb;->d(Ljava/lang/Object;)V
 
-    .line 135
     const/4 v0, 0x0
 
     goto/16 :goto_0
 
-    .line 131
     :cond_7
     const/4 v5, 0x0
 
     goto :goto_4
 
-    .line 136
     :cond_8
     const/4 v0, 0x1
 
-    .line 137
     :cond_9
     add-int/lit8 v2, v6, 0x1
 
@@ -1080,19 +950,15 @@
 
     goto :goto_3
 
-    .line 138
     :cond_a
     if-nez v0, :cond_b
 
-    .line 139
     invoke-direct {p0, v1}, Lfb;->d(Ljava/lang/Object;)V
 
-    .line 140
     const/4 v0, 0x0
 
     goto/16 :goto_0
 
-    .line 141
     :cond_b
     invoke-direct {p0, v1}, Lfb;->c(Ljava/lang/Object;)Z
 
@@ -1100,25 +966,21 @@
 
     if-nez v0, :cond_c
 
-    .line 142
     const/4 v0, 0x0
 
     goto/16 :goto_0
 
-    .line 143
     :cond_c
     invoke-virtual {p0, v1}, Lfb;->a(Ljava/lang/Object;)Landroid/graphics/Typeface;
 
     move-result-object v0
 
-    .line 144
     invoke-static {v0, p3}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
 
     move-result-object v0
 
     goto/16 :goto_0
 
-    .line 115
     :catchall_1
     move-exception v0
 
@@ -1128,8 +990,6 @@
 .method protected a(Ljava/lang/Object;)Landroid/graphics/Typeface;
     .locals 5
 
-    .prologue
-    .line 57
     :try_start_0
     iget-object v0, p0, Lfb;->a:Ljava/lang/Class;
 
@@ -1139,12 +999,10 @@
 
     move-result-object v0
 
-    .line 58
     const/4 v1, 0x0
 
     invoke-static {v0, v1, p1}, Ljava/lang/reflect/Array;->set(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    .line 59
     iget-object v1, p0, Lfb;->b:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
@@ -1161,7 +1019,6 @@
 
     const/4 v4, -0x1
 
-    .line 60
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -1178,7 +1035,6 @@
 
     aput-object v4, v3, v0
 
-    .line 61
     invoke-virtual {v1, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1190,11 +1046,9 @@
 
     return-object v0
 
-    .line 62
     :catch_0
     move-exception v0
 
-    .line 63
     :goto_0
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1202,7 +1056,6 @@
 
     throw v1
 
-    .line 62
     :catch_1
     move-exception v0
 
@@ -1212,15 +1065,12 @@
 .method protected a(Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 6
 
-    .prologue
     const/4 v5, 0x1
 
-    .line 154
     invoke-static {p1, v5}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 155
     const-class v1, Landroid/graphics/Typeface;
 
     const-string v2, "createFromFamiliesWithDefault"
@@ -1231,7 +1081,6 @@
 
     const/4 v4, 0x0
 
-    .line 156
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -1248,14 +1097,11 @@
 
     aput-object v4, v3, v0
 
-    .line 157
     invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    .line 158
     invoke-virtual {v0, v5}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 159
     return-object v0
 .end method

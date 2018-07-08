@@ -11,14 +11,10 @@
 .method public constructor <init>(Ljlh;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljlh;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljmk;->a:Ljlh;
 
-    .line 3
     return-void
 .end method
 
@@ -27,8 +23,6 @@
 .method public final a(Ljlb;)Z
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Ljmk;->a:Ljlh;
 
     invoke-virtual {v0, p1}, Ljlh;->a(Ljlb;)Z
@@ -51,8 +45,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 5
     const-string v0, "NotSegmentSelector"
 
     return-object v0

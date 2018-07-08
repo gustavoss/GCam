@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 1
     const/16 v0, 0x400
 
     const/16 v1, 0x300
@@ -27,7 +25,6 @@
 
     sput-object v0, Levz;->a:Lihs;
 
-    .line 2
     const/16 v0, 0x500
 
     const/16 v1, 0x2d0
@@ -38,7 +35,6 @@
 
     sput-object v0, Levz;->b:Lihs;
 
-    .line 3
     const/16 v0, 0xf00
 
     const/16 v1, 0x870

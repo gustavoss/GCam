@@ -29,17 +29,13 @@
 .method public final a()Lkey;
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lftq;->a:Lfed;
 
     iget-object v1, p0, Lftq;->b:Lfto;
 
-    .line 2
     invoke-virtual {v0, v1}, Lfed;->a(Lfec;)Lkey;
 
     move-result-object v0
 
-    .line 3
     return-object v0
 .end method

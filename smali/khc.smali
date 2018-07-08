@@ -11,8 +11,6 @@
 .method constructor <init>(Lkgx;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lkhc;->a:Lkgx;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -25,44 +23,32 @@
 .method public final onDoubleTap(Landroid/view/MotionEvent;)Z
     .locals 6
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 18
-    .line 19
     iget-object v0, p0, Lkhc;->a:Lkgx;
 
-    .line 20
     iget v0, v0, Lkgx;->c:I
 
-    .line 21
     sget v1, Lep;->bY:I
 
     if-ne v0, v1, :cond_0
 
-    .line 22
     iget-object v0, p0, Lkhc;->a:Lkgx;
 
-    .line 23
     iget v0, v0, Lkgx;->a:F
 
-    .line 24
     iget-object v1, p0, Lkhc;->a:Lkgx;
 
-    .line 25
     iget v1, v1, Lkgx;->d:F
 
-    .line 26
     cmpl-float v0, v0, v1
 
     if-nez v0, :cond_1
 
     iget-object v0, p0, Lkhc;->a:Lkgx;
 
-    .line 27
     iget v2, v0, Lkgx;->e:F
 
-    .line 31
     :goto_0
     new-instance v0, Lkha;
 
@@ -78,24 +64,18 @@
 
     invoke-direct/range {v0 .. v5}, Lkha;-><init>(Lkgx;FFFZ)V
 
-    .line 32
     iget-object v1, p0, Lkhc;->a:Lkgx;
 
-    .line 34
     invoke-virtual {v1, v0}, Lkgx;->postOnAnimation(Ljava/lang/Runnable;)V
 
-    .line 35
     const/4 v5, 0x1
 
-    .line 36
     :cond_0
     return v5
 
-    .line 28
     :cond_1
     iget-object v0, p0, Lkhc;->a:Lkgx;
 
-    .line 29
     iget v2, v0, Lkgx;->d:F
 
     goto :goto_0
@@ -104,8 +84,6 @@
 .method public final onDoubleTapEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .prologue
-    .line 37
     const/4 v0, 0x0
 
     return v0
@@ -114,26 +92,18 @@
 .method public final onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
     .locals 5
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lkhc;->a:Lkgx;
 
-    .line 6
     iget-object v0, v0, Lkgx;->h:Lkhb;
 
-    .line 7
     if-eqz v0, :cond_0
 
-    .line 8
     iget-object v0, p0, Lkhc;->a:Lkgx;
 
-    .line 9
     iget-object v0, v0, Lkgx;->h:Lkhb;
 
-    .line 10
     invoke-virtual {v0}, Lkhb;->a()V
 
-    .line 11
     :cond_0
     iget-object v0, p0, Lkhc;->a:Lkgx;
 
@@ -147,21 +117,16 @@
 
     invoke-direct {v1, v2, v3, v4}, Lkhb;-><init>(Lkgx;II)V
 
-    .line 12
     iput-object v1, v0, Lkgx;->h:Lkhb;
 
-    .line 13
     iget-object v0, p0, Lkhc;->a:Lkgx;
 
     iget-object v1, p0, Lkhc;->a:Lkgx;
 
-    .line 14
     iget-object v1, v1, Lkgx;->h:Lkhb;
 
-    .line 16
     invoke-virtual {v0, v1}, Lkgx;->postOnAnimation(Ljava/lang/Runnable;)V
 
-    .line 17
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/GestureDetector$SimpleOnGestureListener;->onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
 
     move-result v0
@@ -172,21 +137,16 @@
 .method public final onLongPress(Landroid/view/MotionEvent;)V
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lkhc;->a:Lkgx;
 
     invoke-virtual {v0}, Lkgx;->performLongClick()Z
 
-    .line 4
     return-void
 .end method
 
 .method public final onSingleTapConfirmed(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lkhc;->a:Lkgx;
 
     invoke-virtual {v0}, Lkgx;->performClick()Z

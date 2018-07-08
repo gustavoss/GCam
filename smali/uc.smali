@@ -14,8 +14,6 @@
 .method public constructor <init>(Landroid/support/v7/widget/RecyclerView;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Luc;->a:Landroid/support/v7/widget/RecyclerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,22 +26,18 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Luc;->a:Landroid/support/v7/widget/RecyclerView;
 
     iget-object v0, v0, Landroid/support/v7/widget/RecyclerView;->x:Lui;
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Luc;->a:Landroid/support/v7/widget/RecyclerView;
 
     iget-object v0, v0, Landroid/support/v7/widget/RecyclerView;->x:Lui;
 
     invoke-virtual {v0}, Lui;->a()V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Luc;->a:Landroid/support/v7/widget/RecyclerView;
 
@@ -51,6 +45,5 @@
 
     iput-boolean v1, v0, Landroid/support/v7/widget/RecyclerView;->E:Z
 
-    .line 5
     return-void
 .end method

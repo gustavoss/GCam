@@ -7,8 +7,6 @@
 .method protected constructor <init>(II)V
     .locals 2
 
-    .prologue
-    .line 1
     const/4 v0, 0x2
 
     new-array v0, v0, [I
@@ -23,7 +21,6 @@
 
     invoke-direct {p0, v0}, Liqp;-><init>([I)V
 
-    .line 2
     return-void
 .end method
 
@@ -32,10 +29,8 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 3
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const-string v1, "Size(%d, %d)"
@@ -44,12 +39,10 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 4
     iget-object v3, p0, Liqp;->a:[I
 
     aget v3, v3, v4
 
-    .line 5
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3

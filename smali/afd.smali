@@ -14,8 +14,6 @@
 .method constructor <init>(Lafc;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lafd;->a:Lafc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public final handleMessage(Landroid/os/Message;)Z
     .locals 3
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 2
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-ne v0, v1, :cond_0
 
-    .line 3
     iget-object v2, p0, Lafd;->a:Lafc;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -47,7 +42,6 @@
 
     move v0, v1
 
-    .line 5
     :goto_0
     return v0
 

@@ -48,41 +48,32 @@
 .method public final synthetic a(Lcom/google/android/gms/common/api/Status;)Lhmh;
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 9
-    .line 10
     iput-object v0, p0, Lhzi;->a:Lhxt;
 
     iput-object v0, p0, Lhzi;->b:Lhvo;
 
     iput-object v0, p0, Lhzi;->c:[Landroid/content/IntentFilter;
 
-    .line 11
     return-object p1
 .end method
 
 .method protected final synthetic a(Lhlz;)V
     .locals 8
 
-    .prologue
     const/4 v7, 0x0
 
-    .line 1
     check-cast p1, Lhzv;
 
-    .line 2
     iget-object v1, p0, Lhzi;->a:Lhxt;
 
     iget-object v0, p0, Lhzi;->b:Lhvo;
 
     iget-object v2, p0, Lhzi;->c:[Landroid/content/IntentFilter;
 
-    .line 3
     iget-object v3, p1, Lhzv;->h:Lhze;
 
-    .line 4
     new-instance v4, Lhzx;
 
     invoke-direct {v4, v2}, Lhzx;-><init>([Landroid/content/IntentFilter;)V
@@ -95,7 +86,6 @@
 
     iput-object v0, v4, Lhzx;->a:Lhvo;
 
-    .line 6
     iget-object v2, v3, Lhze;->a:Ljava/util/Map;
 
     monitor-enter v2
@@ -121,7 +111,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7
     :goto_0
     iput-object v7, p0, Lhzi;->a:Lhxt;
 
@@ -129,10 +118,8 @@
 
     iput-object v7, p0, Lhzi;->c:[Landroid/content/IntentFilter;
 
-    .line 8
     return-void
 
-    .line 6
     :cond_0
     :try_start_1
     iget-object v0, v3, Lhze;->a:Ljava/util/Map;

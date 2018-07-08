@@ -16,26 +16,20 @@
 .method public constructor <init>(Lfih;Lfuu;)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lfjr;->b:Lfih;
 
-    .line 3
     new-instance v0, Lgas;
 
     new-instance v1, Lfty;
 
-    .line 4
     invoke-interface {p1}, Lfih;->a()I
 
     move-result v2
 
     invoke-direct {v1, v2}, Lfty;-><init>(I)V
 
-    .line 5
     invoke-static {p2, v1}, Ljuy;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljuy;
 
     move-result-object v1
@@ -44,7 +38,6 @@
 
     iput-object v0, p0, Lfjr;->a:Lfuu;
 
-    .line 6
     return-void
 .end method
 
@@ -53,8 +46,6 @@
 .method public final a()I
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lfjr;->b:Lfih;
 
     invoke-interface {v0}, Lfih;->a()I
@@ -67,15 +58,12 @@
 .method public final varargs a([Lfih;)Lfif;
     .locals 6
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 8
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 9
     array-length v4, p1
 
     move v3, v2
@@ -85,24 +73,20 @@
 
     aget-object v0, p1, v3
 
-    .line 10
     instance-of v5, v0, Lfjr;
 
     invoke-static {v5}, Ljiy;->a(Z)V
 
-    .line 11
     check-cast v0, Lfjr;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 12
     add-int/lit8 v0, v3, 0x1
 
     move v3, v0
 
     goto :goto_0
 
-    .line 13
     :cond_0
     new-instance v4, Ljava/util/ArrayList;
 
@@ -110,7 +94,6 @@
 
     move-object v0, v1
 
-    .line 14
     check-cast v0, Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -130,18 +113,15 @@
 
     check-cast v2, Lfjr;
 
-    .line 15
     iget-object v2, v2, Lfjr;->b:Lfih;
 
     invoke-interface {v4, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 17
     :cond_1
     iget-object v2, p0, Lfjr;->b:Lfih;
 
-    .line 18
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v0
@@ -154,24 +134,19 @@
 
     check-cast v0, [Lfih;
 
-    .line 19
     invoke-interface {v2, v0}, Lfih;->a([Lfih;)Lfif;
 
     move-result-object v0
 
-    .line 20
     invoke-interface {v1, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 21
     new-instance v2, Lfjs;
 
     invoke-static {v1}, Ljvf;->a(Ljava/util/Collection;)Ljvf;
 
     move-result-object v1
 
-    .line 22
     invoke-direct {v2, v1, v0}, Lfjs;-><init>(Ljava/util/Set;Lfif;)V
 
-    .line 23
     return-object v2
 .end method

@@ -16,8 +16,6 @@
 .method constructor <init>(Lieb;Lida;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Liec;->a:Lieb;
 
     iput-object p2, p0, Liec;->b:Lida;
@@ -32,8 +30,6 @@
 .method public final a(Lihw;Ljava/util/concurrent/Executor;)Lihr;
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Liec;->b:Lida;
 
     new-instance v1, Lied;
@@ -50,8 +46,6 @@
 .method public final c()Ljava/lang/Object;
     .locals 5
 
-    .prologue
-    .line 3
     iget-object v0, p0, Liec;->a:Lieb;
 
     iget-object v1, p0, Liec;->b:Lida;
@@ -60,10 +54,8 @@
 
     move-result-object v1
 
-    .line 5
     if-nez v1, :cond_0
 
-    .line 6
     new-instance v1, Ljava/lang/NullPointerException;
 
     iget-object v0, v0, Lieb;->a:Lida;
@@ -110,23 +102,19 @@
 
     throw v1
 
-    .line 7
     :cond_0
     invoke-virtual {v0, v1}, Lieb;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 8
     if-nez v2, :cond_1
 
-    .line 9
     new-instance v2, Ljava/lang/NullPointerException;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 10
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -187,7 +175,6 @@
 
     throw v2
 
-    .line 12
     :cond_1
     return-object v2
 .end method

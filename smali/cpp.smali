@@ -23,7 +23,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -34,7 +33,6 @@
 
     const/4 v3, 0x0
 
-    .line 3
     new-instance v0, Lcpp;
 
     const-string v1, "POSTVIEW"
@@ -43,7 +41,6 @@
 
     sput-object v0, Lcpp;->a:Lcpp;
 
-    .line 4
     new-instance v0, Lcpp;
 
     const-string v1, "JPEG"
@@ -52,7 +49,6 @@
 
     sput-object v0, Lcpp;->b:Lcpp;
 
-    .line 5
     new-instance v0, Lcpp;
 
     const-string v1, "YUV"
@@ -61,7 +57,6 @@
 
     sput-object v0, Lcpp;->c:Lcpp;
 
-    .line 6
     new-instance v0, Lcpp;
 
     const-string v1, "RGB"
@@ -70,7 +65,6 @@
 
     sput-object v0, Lcpp;->d:Lcpp;
 
-    .line 7
     new-instance v0, Lcpp;
 
     const-string v1, "MERGED_DNG"
@@ -79,7 +73,6 @@
 
     sput-object v0, Lcpp;->e:Lcpp;
 
-    .line 8
     new-instance v0, Lcpp;
 
     const-string v1, "MERGED_PD"
@@ -90,7 +83,6 @@
 
     sput-object v0, Lcpp;->f:Lcpp;
 
-    .line 9
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcpp;
@@ -129,8 +121,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -139,8 +129,6 @@
 .method public static values()[Lcpp;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lcpp;->g:[Lcpp;
 
     invoke-virtual {v0}, [Lcpp;->clone()Ljava/lang/Object;

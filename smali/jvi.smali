@@ -13,8 +13,6 @@
 .method public constructor <init>(Ljava/lang/Iterable;Ljrz;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljvi;->a:Ljava/lang/Iterable;
 
     iput-object p2, p0, Ljvi;->b:Ljrz;
@@ -29,8 +27,6 @@
 .method public final iterator()Ljava/util/Iterator;
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ljvi;->a:Ljava/lang/Iterable;
 
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -39,17 +35,13 @@
 
     iget-object v1, p0, Ljvi;->b:Ljrz;
 
-    .line 3
     invoke-static {v0}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-static {v1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     new-instance v2, Ljvl;
 
     invoke-direct {v2, v0, v1}, Ljvl;-><init>(Ljava/util/Iterator;Ljrz;)V
 
-    .line 6
     return-object v2
 .end method

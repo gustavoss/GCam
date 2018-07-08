@@ -17,29 +17,20 @@
 .method public constructor <init>([BLihs;ILcom/google/android/libraries/camera/exif/ExifInterface;Lhby;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lfst;->a:[B
 
-    .line 3
     iput-object p2, p0, Lfst;->b:Lihs;
 
-    .line 4
     iput p3, p0, Lfst;->c:I
 
-    .line 5
     if-eqz p5, :cond_0
 
-    .line 6
     invoke-static {p4}, Lhby;->a(Lcom/google/android/libraries/camera/exif/ExifInterface;)V
 
-    .line 7
     :cond_0
     iput-object p4, p0, Lfst;->d:Lcom/google/android/libraries/camera/exif/ExifInterface;
 
-    .line 8
     return-void
 .end method

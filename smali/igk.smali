@@ -25,24 +25,18 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v1, p0, Ligk;->a:Lify;
 
-    .line 2
     iget-boolean v0, v1, Lify;->j:Z
 
     if-nez v0, :cond_1
 
-    .line 3
     iget-object v0, v1, Lify;->d:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    .line 4
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableCollection(Ljava/util/Collection;)Ljava/util/Collection;
 
     move-result-object v0
 
-    .line 5
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -60,18 +54,15 @@
 
     check-cast v0, Lifz;
 
-    .line 6
     invoke-interface {v0}, Lifz;->f()V
 
     goto :goto_0
 
-    .line 8
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, v1, Lify;->j:Z
 
-    .line 9
     :cond_1
     return-void
 .end method

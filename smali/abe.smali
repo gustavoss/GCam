@@ -14,8 +14,6 @@
 .method constructor <init>(Labd;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Labe;->a:Labd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Labe;->a:Labd;
 
     iget-object v1, v0, Labd;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Labe;->a:Labd;
 
@@ -44,7 +39,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 4
     monitor-exit v1
 
     return-void

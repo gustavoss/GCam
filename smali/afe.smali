@@ -14,8 +14,6 @@
 .method constructor <init>(Lafc;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lafe;->a:Lafc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,20 +26,15 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 2
     const/16 v0, 0xa
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 3
     iget-object v1, p0, Lafe;->a:Lafc;
 
-    .line 4
     :goto_0
     iget-boolean v0, v1, Lafc;->e:Z
 
-    .line 5
     :try_start_0
     iget-object v0, v1, Lafc;->d:Ljava/lang/ref/ReferenceQueue;
 
@@ -51,7 +44,6 @@
 
     check-cast v0, Lafg;
 
-    .line 6
     iget-object v2, v1, Lafc;->a:Landroid/os/Handler;
 
     const/4 v3, 0x1
@@ -62,14 +54,12 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 7
     iget-object v0, v1, Lafc;->f:Laff;
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 10
     :catch_0
     move-exception v0
 

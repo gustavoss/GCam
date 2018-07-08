@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 1
     new-instance v0, Lbqf;
 
     const-string v1, "camera.iris.enable_iris"

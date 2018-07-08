@@ -7,21 +7,16 @@
 .method public constructor <init>(Lcxt;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Lcxt;-><init>(Lbsa;)V
 
-    .line 3
     new-instance v0, Lcxz;
 
     invoke-direct {v0, p0}, Lcxz;-><init>(Lcxy;)V
 
-    .line 4
     const-class v1, Lcwx;
 
     invoke-virtual {p0, v1, v0}, Lbsa;->a(Ljava/lang/Class;Lbrz;)V
 
-    .line 5
     return-void
 .end method
 
@@ -30,8 +25,6 @@
 .method public final synthetic b()Lbsa;
     .locals 1
 
-    .prologue
-    .line 7
     invoke-virtual {p0}, Lcxy;->e()Lcxt;
 
     move-result-object v0
@@ -42,8 +35,6 @@
 .method public final e()Lcxt;
     .locals 1
 
-    .prologue
-    .line 6
     new-instance v0, Lcya;
 
     invoke-direct {v0, p0}, Lcya;-><init>(Lcxt;)V

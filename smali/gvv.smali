@@ -23,38 +23,30 @@
 .method public constructor <init>(Landroid/view/GestureDetector$SimpleOnGestureListener;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lgvv;->a:Ljava/lang/Object;
 
-    .line 3
     const/4 v0, 0x0
 
     iput-object v0, p0, Lgvv;->f:Landroid/view/MotionEvent;
 
-    .line 4
     new-instance v0, Lgvw;
 
     invoke-direct {v0, p0}, Lgvw;-><init>(Lgvv;)V
 
     iput-object v0, p0, Lgvv;->g:Ljava/lang/Runnable;
 
-    .line 5
     iput-object p1, p0, Lgvv;->b:Landroid/view/GestureDetector$SimpleOnGestureListener;
 
-    .line 6
     const-wide/16 v0, 0x15e
 
     iput-wide v0, p0, Lgvv;->c:J
 
-    .line 7
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -65,11 +57,9 @@
 
     iput-object v0, p0, Lgvv;->d:Landroid/os/Handler;
 
-    .line 8
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lgvv;->e:Z
 
-    .line 9
     return-void
 .end method

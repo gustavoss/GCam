@@ -16,8 +16,6 @@
 .method constructor <init>(Ldzx;Lcmj;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldzz;->b:Ldzx;
 
     iput-object p2, p0, Ldzz;->a:Lcmj;
@@ -32,45 +30,34 @@
 .method public final a()V
     .locals 0
 
-    .prologue
-    .line 2
     return-void
 .end method
 
 .method public final b()V
     .locals 2
 
-    .prologue
-    .line 3
     sget-object v0, Ldzx;->a:Ljava/lang/String;
 
-    .line 4
     const-string v1, "onTransitionCancel"
 
     invoke-static {v0, v1}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     return-void
 .end method
 
 .method public final c()V
     .locals 5
 
-    .prologue
-    .line 6
     sget-object v0, Ldzx;->a:Ljava/lang/String;
 
-    .line 7
     const-string v1, "onTransitionEnd"
 
     invoke-static {v0, v1}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8
     iget-object v1, p0, Ldzz;->b:Ldzx;
 
     iget-object v2, p0, Ldzz;->a:Lcmj;
 
-    .line 10
     iget-object v0, v1, Ldzx;->b:Lkhg;
 
     invoke-interface {v0}, Lkhg;->a()Ljava/lang/Object;
@@ -79,33 +66,27 @@
 
     check-cast v0, Lgzd;
 
-    .line 11
     invoke-virtual {v1, v0}, Ldzx;->a(Lgzd;)Leqi;
 
     move-result-object v3
 
-    .line 12
     if-nez v3, :cond_0
 
-    .line 13
     sget-object v3, Ldzx;->a:Ljava/lang/String;
 
     const-string v4, "no item found at index 0, requestLoad"
 
     invoke-static {v3, v4}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
     new-instance v3, Ldzy;
 
     invoke-direct {v3, v1, v0, v2}, Ldzy;-><init>(Ldzx;Lgzd;Lcmj;)V
 
     invoke-interface {v0, v3}, Lgzd;->a(Lihi;)V
 
-    .line 16
     :goto_0
     return-void
 
-    .line 15
     :cond_0
     invoke-virtual {v1, v2, v0, v3}, Ldzx;->a(Lcmj;Lgzd;Leqi;)V
 

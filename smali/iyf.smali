@@ -35,11 +35,8 @@
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 1
     check-cast p1, Ljava/io/File;
 
-    .line 2
     new-instance v0, Lixt;
 
     invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -48,6 +45,5 @@
 
     invoke-direct {v0, v1}, Lixt;-><init>(Ljava/lang/String;)V
 
-    .line 3
     return-object v0
 .end method

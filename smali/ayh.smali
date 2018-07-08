@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,13 +20,10 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 2
     check-cast p1, Ljava/util/List;
 
-    .line 3
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -37,28 +32,23 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     :cond_0
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 8
     :goto_0
     return-object v0
 
-    .line 5
     :cond_1
     sget-object v0, Ljwh;->a:Ljwh;
 
-    .line 6
     invoke-virtual {v0, p1}, Ljwi;->a(Ljava/lang/Iterable;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 7
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0

@@ -23,26 +23,18 @@
 .method public constructor <init>(Ljia;Ljog;Lcom/google/android/libraries/smartburst/buffers/FeatureTable;Ljit;Ljit;Ljjz;I)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-static {p3}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-static {p4}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     invoke-static {p5}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     invoke-static {p6}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     if-lez p7, :cond_0
 
     const/4 v0, 0x1
@@ -50,31 +42,22 @@
     :goto_0
     invoke-static {v0}, Ljiy;->a(Z)V
 
-    .line 8
     iput-object p1, p0, Ljjq;->d:Ljia;
 
-    .line 9
     iput-object p2, p0, Ljjq;->e:Ljog;
 
-    .line 10
     iput-object p3, p0, Ljjq;->g:Lcom/google/android/libraries/smartburst/buffers/FeatureTable;
 
-    .line 11
     iput-object p4, p0, Ljjq;->a:Ljit;
 
-    .line 12
     iput-object p5, p0, Ljjq;->b:Ljit;
 
-    .line 13
     iput-object p6, p0, Ljjq;->c:Ljjz;
 
-    .line 14
     iput p7, p0, Ljjq;->f:I
 
-    .line 15
     return-void
 
-    .line 7
     :cond_0
     const/4 v0, 0x0
 
@@ -86,8 +69,6 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 16
     iget-object v0, p0, Ljjq;->a:Ljit;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

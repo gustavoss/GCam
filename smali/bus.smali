@@ -7,8 +7,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 3
     new-instance v0, Lbqe;
 
     const-string v1, "camera.enable_imax"
@@ -17,7 +15,6 @@
 
     invoke-direct {v0, v1, v2}, Lbqe;-><init>(Ljava/lang/String;Z)V
 
-    .line 4
     new-instance v0, Lbqe;
 
     const-string v1, "camera.imax_keep_models"
@@ -32,10 +29,7 @@
 .method public static a()Ljrw;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Ljrk;->a:Ljrk;
 
-    .line 2
     return-object v0
 .end method

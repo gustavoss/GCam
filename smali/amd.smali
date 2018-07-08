@@ -20,25 +20,20 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 60
     const-string v0, "com.bumptech.glide.load.resource.bitmap.BitmapEncoder.CompressionQuality"
 
     const/16 v1, 0x5a
 
-    .line 61
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 62
     invoke-static {v0, v1}, Ladv;->a(Ljava/lang/String;Ljava/lang/Object;)Ladv;
 
     move-result-object v0
 
     sput-object v0, Lamd;->a:Ladv;
 
-    .line 63
     const-string v0, "com.bumptech.glide.load.resource.bitmap.BitmapEncoder.CompressionFormat"
 
     invoke-static {v0}, Ladv;->a(Ljava/lang/String;)Ladv;
@@ -55,45 +50,34 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     const/4 v0, 0x0
 
     iput-object v0, p0, Lamd;->c:Lahd;
 
-    .line 6
     return-void
 .end method
 
 .method public constructor <init>(Lahd;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lamd;->c:Lahd;
 
-    .line 3
     return-void
 .end method
 
 .method private final a(Lagw;Ljava/io/File;Lady;)Z
     .locals 10
 
-    .prologue
-    .line 7
     invoke-interface {p1}, Lagw;->b()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/graphics/Bitmap;
 
-    .line 9
     sget-object v1, Lamd;->b:Ladv;
 
     invoke-virtual {p3, v1}, Lady;->a(Ladv;)Ljava/lang/Object;
@@ -102,12 +86,10 @@
 
     check-cast v1, Landroid/graphics/Bitmap$CompressFormat;
 
-    .line 10
     if-eqz v1, :cond_2
 
     move-object v2, v1
 
-    .line 17
     :goto_0
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -169,16 +151,13 @@
 
     move-result-object v1
 
-    .line 18
     invoke-static {v1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 19
     :try_start_0
     invoke-static {}, Laru;->a()J
 
     move-result-wide v6
 
-    .line 20
     sget-object v1, Lamd;->a:Ladv;
 
     invoke-virtual {p3, v1}, Lady;->a(Ladv;)Ljava/lang/Object;
@@ -193,13 +172,10 @@
 
     move-result v8
 
-    .line 21
     const/4 v5, 0x0
 
-    .line 22
     const/4 v4, 0x0
 
-    .line 23
     :try_start_1
     new-instance v3, Ljava/io/FileOutputStream;
 
@@ -208,13 +184,11 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 24
     :try_start_2
     iget-object v1, p0, Lamd;->c:Lahd;
 
     if-eqz v1, :cond_0
 
-    .line 25
     new-instance v1, Laee;
 
     iget-object v4, p0, Lamd;->c:Lahd;
@@ -223,27 +197,22 @@
 
     move-object v3, v1
 
-    .line 26
     :cond_0
     invoke-virtual {v0, v2, v8, v3}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 27
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_4
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 28
     const/4 v1, 0x1
 
-    .line 29
     :try_start_3
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 46
     :goto_1
     :try_start_4
     const-string v3, "BitmapEncoder"
@@ -256,7 +225,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 47
     const-string v3, "BitmapEncoder"
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -267,14 +235,12 @@
 
     move-result v4
 
-    .line 48
     invoke-static {v6, v7}, Laru;->a(J)D
 
     move-result-wide v6
 
     sget-object v5, Lamd;->b:Ladv;
 
-    .line 49
     invoke-virtual {p3, v5}, Lady;->a(Ladv;)Ljava/lang/Object;
 
     move-result-object v5
@@ -283,7 +249,6 @@
 
     move-result-object v5
 
-    .line 50
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->hasAlpha()Z
 
     move-result v0
@@ -366,19 +331,15 @@
 
     move-result-object v0
 
-    .line 51
     invoke-static {v3, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 53
     :cond_1
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 54
     return v1
 
-    .line 12
     :cond_2
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->hasAlpha()Z
 
@@ -386,14 +347,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 13
     sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
     move-object v2, v1
 
     goto/16 :goto_0
 
-    .line 14
     :cond_3
     sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -401,13 +360,11 @@
 
     goto/16 :goto_0
 
-    .line 33
     :catch_0
     move-exception v1
 
     move-object v3, v4
 
-    .line 34
     :goto_2
     :try_start_5
     const-string v4, "BitmapEncoder"
@@ -420,7 +377,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 35
     const-string v4, "BitmapEncoder"
 
     const-string v8, "Failed to encode Bitmap"
@@ -429,11 +385,9 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 36
     :cond_4
     if-eqz v3, :cond_6
 
-    .line 37
     :try_start_6
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
     :try_end_6
@@ -442,10 +396,8 @@
 
     move v1, v5
 
-    .line 38
     goto/16 :goto_1
 
-    .line 40
     :catch_1
     move-exception v1
 
@@ -453,7 +405,6 @@
 
     goto/16 :goto_1
 
-    .line 41
     :catchall_0
     move-exception v0
 
@@ -462,14 +413,12 @@
     :goto_3
     if-eqz v3, :cond_5
 
-    .line 42
     :try_start_7
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_3
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 45
     :cond_5
     :goto_4
     :try_start_8
@@ -477,17 +426,13 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 55
     :catchall_1
     move-exception v0
 
-    .line 56
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 57
     throw v0
 
-    .line 32
     :catch_2
     move-exception v3
 
@@ -498,13 +443,11 @@
 
     goto :goto_4
 
-    .line 41
     :catchall_2
     move-exception v0
 
     goto :goto_3
 
-    .line 33
     :catch_4
     move-exception v1
 
@@ -521,8 +464,6 @@
 .method public final a(Lady;)Lado;
     .locals 1
 
-    .prologue
-    .line 58
     sget-object v0, Lado;->b:Lado;
 
     return-object v0
@@ -531,8 +472,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;Ljava/io/File;Lady;)Z
     .locals 1
 
-    .prologue
-    .line 59
     check-cast p1, Lagw;
 
     invoke-direct {p0, p1, p2, p3}, Lamd;->a(Lagw;Ljava/io/File;Lady;)Z

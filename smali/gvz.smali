@@ -33,15 +33,12 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgvz;->a:Lgwg;
 
     iget-object v1, p0, Lgvz;->b:Lgvx;
 
     iget-object v2, p0, Lgvz;->c:Lgwi;
 
-    .line 3
     iget-object v3, v0, Lgwg;->g:Landroid/os/Handler;
 
     new-instance v4, Lgwd;
@@ -50,6 +47,5 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 4
     return-void
 .end method

@@ -21,28 +21,19 @@
 .method constructor <init>(Letg;Ljava/io/File;Letv;JJLeyi;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lero;->a:Letg;
 
-    .line 3
     iput-object p2, p0, Lero;->b:Ljava/io/File;
 
-    .line 4
     iput-object p3, p0, Lero;->c:Letv;
 
-    .line 5
     iput-wide p4, p0, Lero;->d:J
 
-    .line 6
     iput-wide p6, p0, Lero;->e:J
 
-    .line 7
     iput-object p8, p0, Lero;->f:Leyi;
 
-    .line 8
     return-void
 .end method

@@ -21,48 +21,36 @@
 .method constructor <init>(Landroid/widget/CompoundButton;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object v1, p0, Lqu;->b:Landroid/content/res/ColorStateList;
 
-    .line 3
     iput-object v1, p0, Lqu;->c:Landroid/graphics/PorterDuff$Mode;
 
-    .line 4
     iput-boolean v0, p0, Lqu;->d:Z
 
-    .line 5
     iput-boolean v0, p0, Lqu;->e:Z
 
-    .line 6
     iput-object p1, p0, Lqu;->a:Landroid/widget/CompoundButton;
 
-    .line 7
     return-void
 .end method
 
 .method private final b()V
     .locals 2
 
-    .prologue
-    .line 43
     iget-object v0, p0, Lqu;->a:Landroid/widget/CompoundButton;
 
-    .line 44
     sget-object v1, Ljz;->a:Lkc;
 
     invoke-virtual {v1, v0}, Lkc;->a(Landroid/widget/CompoundButton;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 46
     if-eqz v0, :cond_4
 
     iget-boolean v1, p0, Lqu;->d:Z
@@ -73,36 +61,28 @@
 
     if-eqz v1, :cond_4
 
-    .line 48
     :cond_0
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 49
     iget-boolean v1, p0, Lqu;->d:Z
 
     if-eqz v1, :cond_1
 
-    .line 50
     iget-object v1, p0, Lqu;->b:Landroid/content/res/ColorStateList;
 
-    .line 51
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setTintList(Landroid/content/res/ColorStateList;)V
 
-    .line 52
     :cond_1
     iget-boolean v1, p0, Lqu;->e:Z
 
     if-eqz v1, :cond_2
 
-    .line 53
     iget-object v1, p0, Lqu;->c:Landroid/graphics/PorterDuff$Mode;
 
-    .line 54
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
-    .line 55
     :cond_2
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
 
@@ -110,7 +90,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 56
     iget-object v1, p0, Lqu;->a:Landroid/widget/CompoundButton;
 
     invoke-virtual {v1}, Landroid/widget/CompoundButton;->getDrawableState()[I
@@ -119,13 +98,11 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 57
     :cond_3
     iget-object v1, p0, Lqu;->a:Landroid/widget/CompoundButton;
 
     invoke-virtual {v1, v0}, Landroid/widget/CompoundButton;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 58
     :cond_4
     return-void
 .end method
@@ -135,28 +112,22 @@
 .method final a()V
     .locals 1
 
-    .prologue
-    .line 37
     iget-boolean v0, p0, Lqu;->f:Z
 
     if-eqz v0, :cond_0
 
-    .line 38
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lqu;->f:Z
 
-    .line 42
     :goto_0
     return-void
 
-    .line 40
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lqu;->f:Z
 
-    .line 41
     invoke-direct {p0}, Lqu;->b()V
 
     goto :goto_0
@@ -165,48 +136,36 @@
 .method final a(Landroid/content/res/ColorStateList;)V
     .locals 1
 
-    .prologue
-    .line 29
     iput-object p1, p0, Lqu;->b:Landroid/content/res/ColorStateList;
 
-    .line 30
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lqu;->d:Z
 
-    .line 31
     invoke-direct {p0}, Lqu;->b()V
 
-    .line 32
     return-void
 .end method
 
 .method final a(Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
 
-    .prologue
-    .line 33
     iput-object p1, p0, Lqu;->c:Landroid/graphics/PorterDuff$Mode;
 
-    .line 34
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lqu;->e:Z
 
-    .line 35
     invoke-direct {p0}, Lqu;->b()V
 
-    .line 36
     return-void
 .end method
 
 .method final a(Landroid/util/AttributeSet;I)V
     .locals 4
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 8
     iget-object v0, p0, Lqu;->a:Landroid/widget/CompoundButton;
 
     invoke-virtual {v0}, Landroid/widget/CompoundButton;->getContext()Landroid/content/Context;
@@ -219,7 +178,6 @@
 
     move-result-object v1
 
-    .line 9
     :try_start_0
     sget v0, Lnm;->aB:I
 
@@ -229,7 +187,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 10
     sget v0, Lnm;->aB:I
 
     const/4 v2, 0x0
@@ -238,15 +195,12 @@
 
     move-result v0
 
-    .line 11
     if-eqz v0, :cond_0
 
-    .line 12
     iget-object v2, p0, Lqu;->a:Landroid/widget/CompoundButton;
 
     iget-object v3, p0, Lqu;->a:Landroid/widget/CompoundButton;
 
-    .line 13
     invoke-virtual {v3}, Landroid/widget/CompoundButton;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -255,10 +209,8 @@
 
     move-result-object v0
 
-    .line 14
     invoke-virtual {v2, v0}, Landroid/widget/CompoundButton;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 15
     :cond_0
     sget v0, Lnm;->aC:I
 
@@ -268,22 +220,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 16
     iget-object v0, p0, Lqu;->a:Landroid/widget/CompoundButton;
 
     sget v2, Lnm;->aC:I
 
-    .line 17
     invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
-    .line 19
     sget-object v3, Ljz;->a:Lkc;
 
     invoke-virtual {v3, v0, v2}, Lkc;->a(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
 
-    .line 20
     :cond_1
     sget v0, Lnm;->aD:I
 
@@ -293,40 +241,33 @@
 
     if-eqz v0, :cond_2
 
-    .line 21
     iget-object v0, p0, Lqu;->a:Landroid/widget/CompoundButton;
 
     sget v2, Lnm;->aD:I
 
     const/4 v3, -0x1
 
-    .line 22
     invoke-virtual {v1, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v2
 
     const/4 v3, 0x0
 
-    .line 23
     invoke-static {v2, v3}, Lsm;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
 
     move-result-object v2
 
-    .line 25
     sget-object v3, Ljz;->a:Lkc;
 
     invoke-virtual {v3, v0, v2}, Lkc;->a(Landroid/widget/CompoundButton;Landroid/graphics/PorterDuff$Mode;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 26
     :cond_2
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 27
     return-void
 
-    .line 28
     :catchall_0
     move-exception v0
 

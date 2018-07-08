@@ -24,39 +24,30 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lahz;
 
     invoke-direct {v0}, Lahz;-><init>()V
 
     iput-object v0, p0, Laid;->d:Lahz;
 
-    .line 3
     iput-object p1, p0, Laid;->b:Ljava/io/File;
 
-    .line 4
     iput-wide p2, p0, Laid;->c:J
 
-    .line 5
     new-instance v0, Laik;
 
     invoke-direct {v0}, Laik;-><init>()V
 
     iput-object v0, p0, Laid;->a:Laik;
 
-    .line 6
     return-void
 .end method
 
 .method private final declared-synchronized a()Lacy;
     .locals 4
 
-    .prologue
-    .line 7
     monitor-enter p0
 
     :try_start_0
@@ -64,7 +55,6 @@
 
     if-nez v0, :cond_0
 
-    .line 8
     iget-object v0, p0, Laid;->b:Ljava/io/File;
 
     iget-wide v2, p0, Laid;->c:J
@@ -75,7 +65,6 @@
 
     iput-object v0, p0, Laid;->e:Lacy;
 
-    .line 9
     :cond_0
     iget-object v0, p0, Laid;->e:Lacy;
     :try_end_0
@@ -85,7 +74,6 @@
 
     return-object v0
 
-    .line 7
     :catchall_0
     move-exception v0
 
@@ -99,15 +87,12 @@
 .method public final a(Ladu;)Ljava/io/File;
     .locals 5
 
-    .prologue
-    .line 10
     iget-object v0, p0, Laid;->a:Laik;
 
     invoke-virtual {v0, p1}, Laik;->a(Ladu;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 11
     const-string v0, "DiskLruCacheWrapper"
 
     const/4 v2, 0x2
@@ -118,7 +103,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 12
     const-string v0, "DiskLruCacheWrapper"
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -175,11 +159,9 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13
     :cond_0
     const/4 v0, 0x0
 
-    .line 14
     :try_start_0
     invoke-direct {p0}, Laid;->a()Lacy;
 
@@ -189,10 +171,8 @@
 
     move-result-object v1
 
-    .line 15
     if-eqz v1, :cond_1
 
-    .line 17
     iget-object v1, v1, Ladc;->a:[Ljava/io/File;
 
     const/4 v2, 0x0
@@ -201,16 +181,13 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 23
     :cond_1
     :goto_0
     return-object v0
 
-    .line 20
     :catch_0
     move-exception v1
 
-    .line 21
     const-string v2, "DiskLruCacheWrapper"
 
     const/4 v3, 0x5
@@ -221,7 +198,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 22
     const-string v2, "DiskLruCacheWrapper"
 
     const-string v3, "Unable to get from disk cache"
@@ -234,21 +210,16 @@
 .method public final a(Ladu;Lahx;)V
     .locals 6
 
-    .prologue
-    .line 24
     iget-object v0, p0, Laid;->a:Laik;
 
     invoke-virtual {v0, p1}, Laik;->a(Ladu;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 25
     iget-object v2, p0, Laid;->d:Lahz;
 
-    .line 26
     monitor-enter v2
 
-    .line 27
     :try_start_0
     iget-object v0, v2, Lahz;->a:Ljava/util/Map;
 
@@ -258,22 +229,18 @@
 
     check-cast v0, Laia;
 
-    .line 28
     if-nez v0, :cond_0
 
-    .line 29
     iget-object v0, v2, Lahz;->b:Laib;
 
     invoke-virtual {v0}, Laib;->a()Laia;
 
     move-result-object v0
 
-    .line 30
     iget-object v3, v2, Lahz;->a:Ljava/util/Map;
 
     invoke-interface {v3, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 31
     :cond_0
     iget v3, v0, Laia;->b:I
 
@@ -281,17 +248,14 @@
 
     iput v3, v0, Laia;->b:I
 
-    .line 32
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 33
     iget-object v0, v0, Laia;->a:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    .line 34
     :try_start_1
     const-string v0, "DiskLruCacheWrapper"
 
@@ -303,7 +267,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 35
     const-string v0, "DiskLruCacheWrapper"
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -362,14 +325,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 36
     :cond_1
     :try_start_2
     invoke-direct {p0}, Laid;->a()Lacy;
 
     move-result-object v0
 
-    .line 37
     invoke-virtual {v0, v1}, Lacy;->a(Ljava/lang/String;)Ladc;
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
@@ -377,19 +338,15 @@
 
     move-result-object v2
 
-    .line 38
     if-eqz v2, :cond_2
 
-    .line 39
     iget-object v0, p0, Laid;->d:Lahz;
 
     invoke-virtual {v0, v1}, Lahz;->a(Ljava/lang/String;)V
 
-    .line 58
     :goto_0
     return-void
 
-    .line 32
     :catchall_0
     move-exception v0
 
@@ -400,17 +357,14 @@
 
     throw v0
 
-    .line 42
     :cond_2
     :try_start_4
     invoke-virtual {v0, v1}, Lacy;->b(Ljava/lang/String;)Ladt;
 
     move-result-object v2
 
-    .line 44
     if-nez v2, :cond_5
 
-    .line 45
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "Had two simultaneous puts for: "
@@ -437,11 +391,9 @@
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 54
     :catch_0
     move-exception v0
 
-    .line 55
     :try_start_5
     const-string v2, "DiskLruCacheWrapper"
 
@@ -453,7 +405,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 56
     const-string v2, "DiskLruCacheWrapper"
 
     const-string v3, "Unable to put to disk cache"
@@ -462,7 +413,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 57
     :cond_3
     :goto_2
     iget-object v0, p0, Laid;->d:Lahz;
@@ -471,7 +421,6 @@
 
     goto :goto_0
 
-    .line 45
     :cond_4
     :try_start_6
     new-instance v0, Ljava/lang/String;
@@ -483,7 +432,6 @@
 
     goto :goto_1
 
-    .line 59
     :catchall_1
     move-exception v0
 
@@ -493,14 +441,12 @@
 
     throw v0
 
-    .line 46
     :cond_5
     :try_start_7
     invoke-virtual {v2}, Ladt;->a()Ljava/io/File;
 
     move-result-object v0
 
-    .line 48
     iget-object v3, p2, Lahx;->a:Ladp;
 
     iget-object v4, p2, Lahx;->b:Ljava/lang/Object;
@@ -511,22 +457,18 @@
 
     move-result v0
 
-    .line 49
     if-eqz v0, :cond_6
 
-    .line 50
     invoke-virtual {v2}, Ladt;->b()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 51
     :cond_6
     :try_start_8
     invoke-virtual {v2}, Ladt;->d()V
 
     goto :goto_2
 
-    .line 53
     :catchall_2
     move-exception v0
 

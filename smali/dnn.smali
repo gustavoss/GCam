@@ -29,15 +29,12 @@
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v2, p0, Ldnn;->a:Ldnm;
 
     iget-object v3, p0, Ldnn;->b:Ljava/util/List;
 
     check-cast p1, Ljava/lang/Integer;
 
-    .line 2
     const/4 v0, 0x0
 
     move v1, v0
@@ -49,14 +46,12 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
     if-eq v1, v0, :cond_0
 
-    .line 4
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -65,7 +60,6 @@
 
     invoke-virtual {v0}, Lfjl;->close()V
 
-    .line 5
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -73,7 +67,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
@@ -91,24 +84,19 @@
 
     iget-object v1, v2, Ldnm;->e:Ldnl;
 
-    .line 7
     iget-object v1, v1, Ldnl;->c:Ljava/util/Set;
 
-    .line 8
     invoke-virtual {v0, v1}, Lfoa;->a(Ljava/util/Collection;)Lfoa;
 
     move-result-object v0
 
     iget-object v1, v2, Ldnm;->d:Lihp;
 
-    .line 10
     iput-object v1, v0, Lfoa;->a:Lihp;
 
-    .line 12
     invoke-virtual {v0}, Lfoa;->a()Lfnz;
 
     move-result-object v0
 
-    .line 13
     return-object v0
 .end method

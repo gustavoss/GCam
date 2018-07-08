@@ -13,12 +13,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 19
     new-array v0, v3, [I
 
     const v1, 0x7f0100c1
@@ -27,7 +25,6 @@
 
     sput-object v0, Lt;->a:[I
 
-    .line 20
     new-array v0, v3, [I
 
     const v1, 0x7f01001c
@@ -42,40 +39,30 @@
 .method public static a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
     .locals 3
 
-    .prologue
-    .line 1
-    .line 2
     sget-object v0, Ls;->h:[I
 
-    .line 3
     invoke-virtual {p0, p1, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 4
     sget v1, Ls;->i:I
 
     const/4 v2, 0x0
 
-    .line 5
     invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v1
 
-    .line 6
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 7
     if-eqz v1, :cond_0
 
-    .line 9
     sget-object v0, Lt;->b:[I
 
     const-string v1, "Theme.MaterialComponents"
 
     invoke-static {p0, v0, v1}, Lt;->a(Landroid/content/Context;[ILjava/lang/String;)V
 
-    .line 11
     :cond_0
     sget-object v0, Lt;->a:[I
 
@@ -83,7 +70,6 @@
 
     invoke-static {p0, v0, v1}, Lt;->a(Landroid/content/Context;[ILjava/lang/String;)V
 
-    .line 12
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
@@ -94,15 +80,12 @@
 .method private static a(Landroid/content/Context;[ILjava/lang/String;)V
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 13
     invoke-virtual {p0, p1}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
 
     move-result-object v1
 
-    .line 14
     invoke-virtual {v1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v2
@@ -111,14 +94,11 @@
 
     const/4 v0, 0x1
 
-    .line 15
     :cond_0
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 16
     if-eqz v0, :cond_1
 
-    .line 17
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -159,7 +139,6 @@
 
     throw v0
 
-    .line 18
     :cond_1
     return-void
 .end method

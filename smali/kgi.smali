@@ -27,43 +27,32 @@
 .method private constructor <init>([BII)V
     .locals 1
 
-    .prologue
-    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 96
     const v0, 0x7fffffff
 
     iput v0, p0, Lkgi;->g:I
 
-    .line 97
     const/16 v0, 0x40
 
     iput v0, p0, Lkgi;->i:I
 
-    .line 98
     iput-object p1, p0, Lkgi;->a:[B
 
-    .line 99
     iput p2, p0, Lkgi;->b:I
 
-    .line 100
     add-int v0, p2, p3
 
     iput v0, p0, Lkgi;->c:I
 
-    .line 101
     iput p2, p0, Lkgi;->e:I
 
-    .line 102
     return-void
 .end method
 
 .method public static a([BII)Lkgi;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Lkgi;
 
     invoke-direct {v0, p0, p1, p2}, Lkgi;-><init>([BII)V
@@ -74,18 +63,14 @@
 .method private final f(I)V
     .locals 2
 
-    .prologue
-    .line 145
     if-gez p1, :cond_0
 
-    .line 146
     invoke-static {}, Lkgq;->b()Lkgq;
 
     move-result-object v0
 
     throw v0
 
-    .line 147
     :cond_0
     iget v0, p0, Lkgi;->e:I
 
@@ -95,7 +80,6 @@
 
     if-le v0, v1, :cond_1
 
-    .line 148
     iget v0, p0, Lkgi;->g:I
 
     iget v1, p0, Lkgi;->e:I
@@ -104,14 +88,12 @@
 
     invoke-direct {p0, v0}, Lkgi;->f(I)V
 
-    .line 149
     invoke-static {}, Lkgq;->a()Lkgq;
 
     move-result-object v0
 
     throw v0
 
-    .line 150
     :cond_1
     iget v0, p0, Lkgi;->c:I
 
@@ -121,7 +103,6 @@
 
     if-gt p1, v0, :cond_2
 
-    .line 151
     iget v0, p0, Lkgi;->e:I
 
     add-int/2addr v0, p1
@@ -130,7 +111,6 @@
 
     return-void
 
-    .line 152
     :cond_2
     invoke-static {}, Lkgq;->a()Lkgq;
 
@@ -142,8 +122,6 @@
 .method private final j()V
     .locals 2
 
-    .prologue
-    .line 112
     iget v0, p0, Lkgi;->c:I
 
     iget v1, p0, Lkgi;->d:I
@@ -152,22 +130,18 @@
 
     iput v0, p0, Lkgi;->c:I
 
-    .line 113
     iget v0, p0, Lkgi;->c:I
 
-    .line 114
     iget v1, p0, Lkgi;->g:I
 
     if-le v0, v1, :cond_0
 
-    .line 115
     iget v1, p0, Lkgi;->g:I
 
     sub-int/2addr v0, v1
 
     iput v0, p0, Lkgi;->d:I
 
-    .line 116
     iget v0, p0, Lkgi;->c:I
 
     iget v1, p0, Lkgi;->d:I
@@ -176,11 +150,9 @@
 
     iput v0, p0, Lkgi;->c:I
 
-    .line 118
     :goto_0
     return-void
 
-    .line 117
     :cond_0
     const/4 v0, 0x0
 
@@ -194,25 +166,19 @@
 .method public final a()I
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 2
-    .line 3
     iget v1, p0, Lkgi;->e:I
 
     iget v2, p0, Lkgi;->c:I
 
     if-ne v1, v2, :cond_0
 
-    .line 4
     iput v0, p0, Lkgi;->f:I
 
-    .line 10
     :goto_0
     return v0
 
-    .line 6
     :cond_0
     invoke-virtual {p0}, Lkgi;->d()I
 
@@ -220,22 +186,18 @@
 
     iput v0, p0, Lkgi;->f:I
 
-    .line 7
     iget v0, p0, Lkgi;->f:I
 
     if-nez v0, :cond_1
 
-    .line 8
     new-instance v0, Lkgq;
 
     const-string v1, "Protocol message contained an invalid tag (zero)."
 
     invoke-direct {v0, v1}, Lkgq;-><init>(Ljava/lang/String;)V
 
-    .line 9
     throw v0
 
-    .line 10
     :cond_1
     iget v0, p0, Lkgi;->f:I
 
@@ -245,23 +207,18 @@
 .method public final a(I)V
     .locals 2
 
-    .prologue
-    .line 11
     iget v0, p0, Lkgi;->f:I
 
     if-eq v0, p1, :cond_0
 
-    .line 12
     new-instance v0, Lkgq;
 
     const-string v1, "Protocol message end-group tag did not match expected tag."
 
     invoke-direct {v0, v1}, Lkgq;-><init>(Ljava/lang/String;)V
 
-    .line 13
     throw v0
 
-    .line 14
     :cond_0
     return-void
 .end method
@@ -269,88 +226,69 @@
 .method public final a(Lkgr;)V
     .locals 3
 
-    .prologue
-    .line 49
     invoke-virtual {p0}, Lkgi;->d()I
 
     move-result v0
 
-    .line 50
     iget v1, p0, Lkgi;->h:I
 
     iget v2, p0, Lkgi;->i:I
 
     if-lt v1, v2, :cond_0
 
-    .line 51
     new-instance v0, Lkgq;
 
     const-string v1, "Protocol message had too many levels of nesting.  May be malicious.  Use CodedInputStream.setRecursionLimit() to increase the depth limit."
 
     invoke-direct {v0, v1}, Lkgq;-><init>(Ljava/lang/String;)V
 
-    .line 52
     throw v0
 
-    .line 53
     :cond_0
     invoke-virtual {p0, v0}, Lkgi;->c(I)I
 
     move-result v0
 
-    .line 54
     iget v1, p0, Lkgi;->h:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lkgi;->h:I
 
-    .line 55
     invoke-virtual {p1, p0}, Lkgr;->mergeFrom(Lkgi;)Lkgr;
 
-    .line 56
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Lkgi;->a(I)V
 
-    .line 57
     iget v1, p0, Lkgi;->h:I
 
     add-int/lit8 v1, v1, -0x1
 
     iput v1, p0, Lkgi;->h:I
 
-    .line 58
     invoke-virtual {p0, v0}, Lkgi;->d(I)V
 
-    .line 59
     return-void
 .end method
 
 .method public final a(II)[B
     .locals 4
 
-    .prologue
-    .line 127
     if-nez p2, :cond_0
 
-    .line 128
     sget-object v0, Lkgt;->i:[B
 
-    .line 132
     :goto_0
     return-object v0
 
-    .line 129
     :cond_0
     new-array v0, p2, [B
 
-    .line 130
     iget v1, p0, Lkgi;->b:I
 
     add-int/2addr v1, p1
 
-    .line 131
     iget-object v2, p0, Lkgi;->a:[B
 
     const/4 v3, 0x0
@@ -363,8 +301,6 @@
 .method final b(II)V
     .locals 4
 
-    .prologue
-    .line 135
     iget v0, p0, Lkgi;->e:I
 
     iget v1, p0, Lkgi;->b:I
@@ -373,7 +309,6 @@
 
     if-le p1, v0, :cond_0
 
-    .line 136
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     iget v1, p0, Lkgi;->e:I
@@ -416,11 +351,9 @@
 
     throw v0
 
-    .line 137
     :cond_0
     if-gez p1, :cond_1
 
-    .line 138
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const/16 v1, 0x18
@@ -447,7 +380,6 @@
 
     throw v0
 
-    .line 139
     :cond_1
     iget v0, p0, Lkgi;->b:I
 
@@ -455,18 +387,14 @@
 
     iput v0, p0, Lkgi;->e:I
 
-    .line 140
     iput p2, p0, Lkgi;->f:I
 
-    .line 141
     return-void
 .end method
 
 .method public final b()Z
     .locals 1
 
-    .prologue
-    .line 40
     invoke-virtual {p0}, Lkgi;->d()I
 
     move-result v0
@@ -487,41 +415,31 @@
 .method public final b(I)Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 15
-    .line 16
     and-int/lit8 v1, p1, 0x7
 
-    .line 17
     packed-switch v1, :pswitch_data_0
 
-    .line 38
     new-instance v0, Lkgq;
 
     const-string v1, "Protocol message tag had invalid wire type."
 
     invoke-direct {v0, v1}, Lkgq;-><init>(Ljava/lang/String;)V
 
-    .line 39
     throw v0
 
-    .line 19
     :pswitch_0
     invoke-virtual {p0}, Lkgi;->d()I
 
-    .line 37
     :goto_0
     return v0
 
-    .line 21
     :pswitch_1
     invoke-virtual {p0}, Lkgi;->f()J
 
     goto :goto_0
 
-    .line 23
     :pswitch_2
     invoke-virtual {p0}, Lkgi;->d()I
 
@@ -531,14 +449,12 @@
 
     goto :goto_0
 
-    .line 26
     :cond_0
     :pswitch_3
     invoke-virtual {p0}, Lkgi;->a()I
 
     move-result v1
 
-    .line 27
     if-eqz v1, :cond_1
 
     invoke-virtual {p0, v1}, Lkgi;->b(I)Z
@@ -547,33 +463,27 @@
 
     if-nez v1, :cond_0
 
-    .line 31
     :cond_1
     ushr-int/lit8 v1, p1, 0x3
 
-    .line 32
     shl-int/lit8 v1, v1, 0x3
 
     or-int/lit8 v1, v1, 0x4
 
-    .line 33
     invoke-virtual {p0, v1}, Lkgi;->a(I)V
 
     goto :goto_0
 
-    .line 35
     :pswitch_4
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 36
     :pswitch_5
     invoke-virtual {p0}, Lkgi;->e()I
 
     goto :goto_0
 
-    .line 17
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -588,67 +498,52 @@
 .method public final c(I)I
     .locals 2
 
-    .prologue
-    .line 103
     if-gez p1, :cond_0
 
-    .line 104
     invoke-static {}, Lkgq;->b()Lkgq;
 
     move-result-object v0
 
     throw v0
 
-    .line 105
     :cond_0
     iget v0, p0, Lkgi;->e:I
 
     add-int/2addr v0, p1
 
-    .line 106
     iget v1, p0, Lkgi;->g:I
 
-    .line 107
     if-le v0, v1, :cond_1
 
-    .line 108
     invoke-static {}, Lkgq;->a()Lkgq;
 
     move-result-object v0
 
     throw v0
 
-    .line 109
     :cond_1
     iput v0, p0, Lkgi;->g:I
 
-    .line 110
     invoke-direct {p0}, Lkgi;->j()V
 
-    .line 111
     return v1
 .end method
 
 .method public final c()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 41
     invoke-virtual {p0}, Lkgi;->d()I
 
     move-result v0
 
-    .line 42
     if-gez v0, :cond_0
 
-    .line 43
     invoke-static {}, Lkgq;->b()Lkgq;
 
     move-result-object v0
 
     throw v0
 
-    .line 44
     :cond_0
     iget v1, p0, Lkgi;->c:I
 
@@ -658,14 +553,12 @@
 
     if-le v0, v1, :cond_1
 
-    .line 45
     invoke-static {}, Lkgq;->a()Lkgq;
 
     move-result-object v0
 
     throw v0
 
-    .line 46
     :cond_1
     new-instance v1, Ljava/lang/String;
 
@@ -677,53 +570,43 @@
 
     invoke-direct {v1, v2, v3, v0, v4}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
 
-    .line 47
     iget v2, p0, Lkgi;->e:I
 
     add-int/2addr v0, v2
 
     iput v0, p0, Lkgi;->e:I
 
-    .line 48
     return-object v1
 .end method
 
 .method public final d()I
     .locals 3
 
-    .prologue
-    .line 60
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v0
 
-    .line 61
     if-ltz v0, :cond_1
 
-    .line 80
     :cond_0
     :goto_0
     return v0
 
-    .line 63
     :cond_1
     and-int/lit8 v0, v0, 0x7f
 
-    .line 64
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v1
 
     if-ltz v1, :cond_2
 
-    .line 65
     shl-int/lit8 v1, v1, 0x7
 
     or-int/2addr v0, v1
 
     goto :goto_0
 
-    .line 66
     :cond_2
     and-int/lit8 v1, v1, 0x7f
 
@@ -731,21 +614,18 @@
 
     or-int/2addr v0, v1
 
-    .line 67
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v1
 
     if-ltz v1, :cond_3
 
-    .line 68
     shl-int/lit8 v1, v1, 0xe
 
     or-int/2addr v0, v1
 
     goto :goto_0
 
-    .line 69
     :cond_3
     and-int/lit8 v1, v1, 0x7f
 
@@ -753,21 +633,18 @@
 
     or-int/2addr v0, v1
 
-    .line 70
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v1
 
     if-ltz v1, :cond_4
 
-    .line 71
     shl-int/lit8 v1, v1, 0x15
 
     or-int/2addr v0, v1
 
     goto :goto_0
 
-    .line 72
     :cond_4
     and-int/lit8 v1, v1, 0x7f
 
@@ -775,7 +652,6 @@
 
     or-int/2addr v0, v1
 
-    .line 73
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v1
@@ -784,10 +660,8 @@
 
     or-int/2addr v0, v2
 
-    .line 74
     if-gez v1, :cond_0
 
-    .line 75
     const/4 v1, 0x0
 
     :goto_1
@@ -795,19 +669,16 @@
 
     if-ge v1, v2, :cond_5
 
-    .line 76
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v2
 
     if-gez v2, :cond_0
 
-    .line 78
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 79
     :cond_5
     invoke-static {}, Lkgq;->c()Lkgq;
 
@@ -819,42 +690,32 @@
 .method public final d(I)V
     .locals 0
 
-    .prologue
-    .line 119
     iput p1, p0, Lkgi;->g:I
 
-    .line 120
     invoke-direct {p0}, Lkgi;->j()V
 
-    .line 121
     return-void
 .end method
 
 .method public final e()I
     .locals 4
 
-    .prologue
-    .line 81
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v0
 
-    .line 82
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v1
 
-    .line 83
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v2
 
-    .line 84
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v3
 
-    .line 85
     and-int/lit16 v0, v0, 0xff
 
     and-int/lit16 v1, v1, 0xff
@@ -881,63 +742,50 @@
 .method public final e(I)V
     .locals 1
 
-    .prologue
-    .line 133
     iget v0, p0, Lkgi;->f:I
 
     invoke-virtual {p0, p1, v0}, Lkgi;->b(II)V
 
-    .line 134
     return-void
 .end method
 
 .method public final f()J
     .locals 14
 
-    .prologue
     const-wide/16 v12, 0xff
 
-    .line 86
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v0
 
-    .line 87
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v1
 
-    .line 88
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v2
 
-    .line 89
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v3
 
-    .line 90
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v4
 
-    .line 91
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v5
 
-    .line 92
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v6
 
-    .line 93
     invoke-virtual {p0}, Lkgi;->i()B
 
     move-result v7
 
-    .line 94
     int-to-long v8, v0
 
     and-long/2addr v8, v12
@@ -1018,26 +866,20 @@
 .method public final g()I
     .locals 2
 
-    .prologue
-    .line 122
     iget v0, p0, Lkgi;->g:I
 
     const v1, 0x7fffffff
 
     if-ne v0, v1, :cond_0
 
-    .line 123
     const/4 v0, -0x1
 
-    .line 125
     :goto_0
     return v0
 
-    .line 124
     :cond_0
     iget v0, p0, Lkgi;->e:I
 
-    .line 125
     iget v1, p0, Lkgi;->g:I
 
     sub-int v0, v1, v0
@@ -1048,8 +890,6 @@
 .method public final h()I
     .locals 2
 
-    .prologue
-    .line 126
     iget v0, p0, Lkgi;->e:I
 
     iget v1, p0, Lkgi;->b:I
@@ -1062,22 +902,18 @@
 .method public final i()B
     .locals 3
 
-    .prologue
-    .line 142
     iget v0, p0, Lkgi;->e:I
 
     iget v1, p0, Lkgi;->c:I
 
     if-ne v0, v1, :cond_0
 
-    .line 143
     invoke-static {}, Lkgq;->a()Lkgq;
 
     move-result-object v0
 
     throw v0
 
-    .line 144
     :cond_0
     iget-object v0, p0, Lkgi;->a:[B
 

@@ -12,8 +12,6 @@
 .method constructor <init>(Lhue;Lhtr;)V
     .locals 0
 
-    .prologue
-    .line 4
     iput-object p1, p0, Lhvn;->b:Lhue;
 
     iput-object p2, p0, Lhvn;->a:Lhtr;
@@ -28,14 +26,10 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhvn;->b:Lhue;
 
-    .line 2
     iget-object v0, v0, Lhue;->a:Ljava/util/Map;
 
-    .line 3
     iget-object v1, p0, Lhvn;->a:Lhtr;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;

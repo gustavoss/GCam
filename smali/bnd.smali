@@ -22,8 +22,6 @@
 .method constructor <init>(Lawt;Lbno;Lbnj;Libo;Lemk;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbnd;->a:Lawt;
 
     iput-object p2, p0, Lbnd;->b:Lbno;
@@ -44,11 +42,8 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbnd;->a:Lawt;
 
-    .line 3
     invoke-interface {v0}, Lawt;->b()Liaq;
 
     move-result-object v0
@@ -57,23 +52,18 @@
 
     iget-object v2, p0, Lbnd;->c:Lbnj;
 
-    .line 5
     invoke-static {v2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     iget-object v3, v1, Lbno;->a:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 7
     new-instance v3, Lbnp;
 
     invoke-direct {v3, v1, v2}, Lbnp;-><init>(Lbno;Lijs;)V
 
-    .line 8
     invoke-interface {v0, v3}, Liaq;->a(Lihr;)Lihr;
 
-    .line 9
     iget-object v0, p0, Lbnd;->d:Libo;
 
     iget-object v1, p0, Lbnd;->e:Lemk;
@@ -82,6 +72,5 @@
 
     invoke-static {v0, v1, v2}, Ldzj;->a(Libo;Lemk;Lene;)V
 
-    .line 10
     return-void
 .end method

@@ -16,16 +16,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;ILhng;Lhmd;Lhme;)V
     .locals 9
 
-    .prologue
-    .line 1
     invoke-static {p1}, Lhno;->a(Landroid/content/Context;)Lhno;
 
     move-result-object v3
 
-    .line 2
     sget-object v4, Lhlq;->a:Lhlq;
 
-    .line 3
     invoke-static {p5}, Lhqx;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v7
@@ -56,20 +52,15 @@
 .method private constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lhno;Lhlq;ILhng;Lhmd;Lhme;)V
     .locals 10
 
-    .prologue
-    .line 4
-    .line 5
     if-nez p7, :cond_1
 
     const/4 v7, 0x0
 
-    .line 7
     :goto_0
     if-nez p8, :cond_2
 
     const/4 v8, 0x0
 
-    .line 9
     :goto_1
     move-object/from16 v0, p6
 
@@ -87,23 +78,18 @@
 
     move v6, p5
 
-    .line 10
     invoke-direct/range {v1 .. v9}, Lhmv;-><init>(Landroid/content/Context;Landroid/os/Looper;Lhno;Lhls;ILhmx;Lhmy;Ljava/lang/String;)V
 
-    .line 11
     move-object/from16 v0, p6
 
     iget-object v1, v0, Lhng;->a:Landroid/accounts/Account;
 
-    .line 12
     iput-object v1, p0, Lhnl;->h:Landroid/accounts/Account;
 
-    .line 13
     move-object/from16 v0, p6
 
     iget-object v2, v0, Lhng;->c:Ljava/util/Set;
 
-    .line 16
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -135,7 +121,6 @@
 
     throw v1
 
-    .line 5
     :cond_1
     new-instance v7, Lhmx;
 
@@ -145,7 +130,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_2
     new-instance v8, Lhmy;
 
@@ -155,7 +139,6 @@
 
     goto :goto_1
 
-    .line 17
     :cond_3
     iput-object v2, p0, Lhnl;->g:Ljava/util/Set;
 

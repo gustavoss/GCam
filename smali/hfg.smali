@@ -35,13 +35,10 @@
 .method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 2
 
-    .prologue
-    .line 1
     check-cast p1, Lhey;
 
     check-cast p2, Lhey;
 
-    .line 2
     invoke-virtual {p1}, Lhey;->c()Lhfb;
 
     move-result-object v0
@@ -54,6 +51,5 @@
 
     move-result v0
 
-    .line 3
     return v0
 .end method

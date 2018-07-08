@@ -24,13 +24,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
-    .line 29
     const-string v0, "com.bumptech.glide.load.resource.bitmap.VideoBitmapDecode.TargetFrame"
 
     const-wide/16 v2, -0x1
 
-    .line 30
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -39,19 +36,16 @@
 
     invoke-direct {v2}, Lano;-><init>()V
 
-    .line 31
     invoke-static {v0, v1, v2}, Ladv;->a(Ljava/lang/String;Ljava/lang/Object;Ladx;)Ladv;
 
     move-result-object v0
 
     sput-object v0, Lann;->a:Ladv;
 
-    .line 32
     const-string v0, "com.bumptech.glide.load.resource.bitmap.VideoBitmapDecode.FrameOption"
 
     const/4 v1, 0x2
 
-    .line 33
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -60,14 +54,12 @@
 
     invoke-direct {v2}, Lanp;-><init>()V
 
-    .line 34
     invoke-static {v0, v1, v2}, Ladv;->a(Ljava/lang/String;Ljava/lang/Object;Ladx;)Ladv;
 
     move-result-object v0
 
     sput-object v0, Lann;->b:Ladv;
 
-    .line 35
     new-instance v0, Lanr;
 
     invoke-direct {v0}, Lanr;-><init>()V
@@ -80,30 +72,22 @@
 .method public constructor <init>(Lahf;Lans;)V
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lann;-><init>(Lahf;Lans;B)V
 
-    .line 2
     return-void
 .end method
 
 .method private constructor <init>(Lahf;Lans;B)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     iput-object p1, p0, Lann;->e:Lahf;
 
-    .line 5
     iput-object p2, p0, Lann;->d:Lans;
 
-    .line 6
     return-void
 .end method
 
@@ -112,10 +96,8 @@
 .method public final a(Ljava/lang/Object;IILady;)Lagw;
     .locals 7
 
-    .prologue
     const/high16 v6, -0x80000000
 
-    .line 8
     sget-object v0, Lann;->a:Ladv;
 
     invoke-virtual {p4, v0}, Lady;->a(Ladv;)Ljava/lang/Object;
@@ -128,7 +110,6 @@
 
     move-result-wide v2
 
-    .line 9
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -141,7 +122,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 10
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const/16 v1, 0x53
@@ -168,7 +148,6 @@
 
     throw v0
 
-    .line 11
     :cond_0
     sget-object v0, Lann;->b:Ladv;
 
@@ -178,34 +157,28 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 12
     if-nez v0, :cond_1
 
-    .line 13
     const/4 v0, 0x2
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 14
     :cond_1
     new-instance v1, Landroid/media/MediaMetadataRetriever;
 
     invoke-direct {v1}, Landroid/media/MediaMetadataRetriever;-><init>()V
 
-    .line 16
     :try_start_0
     iget-object v4, p0, Lann;->d:Lans;
 
     invoke-interface {v4, v1, p1}, Lans;->a(Landroid/media/MediaMetadataRetriever;Ljava/lang/Object;)V
 
-    .line 18
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
 
-    .line 19
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v5, 0x1b
@@ -220,7 +193,6 @@
 
     move v6, p3
 
-    .line 20
     invoke-virtual/range {v1 .. v6}, Landroid/media/MediaMetadataRetriever;->getScaledFrameAtTime(JIII)Landroid/graphics/Bitmap;
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
@@ -228,11 +200,9 @@
 
     move-result-object v0
 
-    .line 23
     :goto_0
     invoke-virtual {v1}, Landroid/media/MediaMetadataRetriever;->release()V
 
-    .line 28
     iget-object v1, p0, Lann;->e:Lahf;
 
     invoke-static {v0, v1}, Lame;->a(Landroid/graphics/Bitmap;Lahf;)Lame;
@@ -241,7 +211,6 @@
 
     return-object v0
 
-    .line 21
     :cond_2
     :try_start_1
     invoke-virtual {v1, v2, v3, v4}, Landroid/media/MediaMetadataRetriever;->getFrameAtTime(JI)Landroid/graphics/Bitmap;
@@ -253,11 +222,9 @@
 
     goto :goto_0
 
-    .line 25
     :catch_0
     move-exception v0
 
-    .line 26
     :try_start_2
     new-instance v2, Ljava/io/IOException;
 
@@ -267,7 +234,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 27
     :catchall_0
     move-exception v0
 
@@ -279,8 +245,6 @@
 .method public final a(Ljava/lang/Object;Lady;)Z
     .locals 1
 
-    .prologue
-    .line 7
     const/4 v0, 0x1
 
     return v0

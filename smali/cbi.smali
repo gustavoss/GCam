@@ -11,8 +11,6 @@
 .method constructor <init>(Lcbb;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcbi;->a:Lcbb;
 
     invoke-direct {p0}, Liqt;-><init>()V
@@ -25,31 +23,23 @@
 .method public final synthetic a_(Ljava/lang/Object;)V
     .locals 5
 
-    .prologue
-    .line 2
     check-cast p1, Ljhm;
 
-    .line 3
     iget-object v0, p0, Lcbi;->a:Lcbb;
 
-    .line 4
     iget-object v0, v0, Lcbb;->q:Ljhi;
 
-    .line 5
     invoke-interface {p1, v0}, Ljhm;->a(Ljhi;)Ljhl;
 
     move-result-object v2
 
     const/4 v1, 0x0
 
-    .line 6
     :try_start_0
     iget-object v0, p0, Lcbi;->a:Lcbb;
 
-    .line 7
     iget-object v3, v0, Lcbb;->d:Lgfy;
 
-    .line 8
     invoke-interface {v2}, Ljhl;->d()Ljava/lang/Object;
 
     move-result-object v0
@@ -61,16 +51,13 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 9
     if-eqz v2, :cond_0
 
     invoke-interface {v2}, Ljhl;->close()V
 
-    .line 12
     :cond_0
     return-void
 
-    .line 10
     :catch_0
     move-exception v0
 
@@ -79,7 +66,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 11
     :catchall_0
     move-exception v1
 

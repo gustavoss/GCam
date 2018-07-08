@@ -18,11 +18,8 @@
 .method public constructor <init>(Ljava/lang/String;JI)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     if-nez p1, :cond_0
 
     const-string p1, ""
@@ -30,13 +27,10 @@
     :cond_0
     iput-object p1, p0, Larm;->b:Ljava/lang/String;
 
-    .line 3
     iput-wide p2, p0, Larm;->c:J
 
-    .line 4
     iput p4, p0, Larm;->d:I
 
-    .line 5
     return-void
 .end method
 
@@ -45,8 +39,6 @@
 .method public final a(Ljava/security/MessageDigest;)V
     .locals 4
 
-    .prologue
-    .line 22
     const/16 v0, 0xc
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
@@ -69,10 +61,8 @@
 
     move-result-object v0
 
-    .line 23
     invoke-virtual {p1, v0}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 24
     iget-object v0, p0, Larm;->b:Ljava/lang/String;
 
     sget-object v1, Larm;->a:Ljava/nio/charset/Charset;
@@ -83,27 +73,22 @@
 
     invoke-virtual {p1, v0}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 25
     return-void
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 6
     if-ne p0, p1, :cond_1
 
-    .line 17
     :cond_0
     :goto_0
     return v0
 
-    .line 8
     :cond_1
     if-eqz p1, :cond_2
 
@@ -120,14 +105,11 @@
     :cond_2
     move v0, v1
 
-    .line 9
     goto :goto_0
 
-    .line 10
     :cond_3
     check-cast p1, Larm;
 
-    .line 11
     iget-wide v2, p0, Larm;->c:J
 
     iget-wide v4, p1, Larm;->c:J
@@ -138,10 +120,8 @@
 
     move v0, v1
 
-    .line 12
     goto :goto_0
 
-    .line 13
     :cond_4
     iget v2, p0, Larm;->d:I
 
@@ -151,10 +131,8 @@
 
     move v0, v1
 
-    .line 14
     goto :goto_0
 
-    .line 15
     :cond_5
     iget-object v2, p0, Larm;->b:Ljava/lang/String;
 
@@ -168,22 +146,18 @@
 
     move v0, v1
 
-    .line 16
     goto :goto_0
 .end method
 
 .method public final hashCode()I
     .locals 6
 
-    .prologue
-    .line 18
     iget-object v0, p0, Larm;->b:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    .line 19
     mul-int/lit8 v0, v0, 0x1f
 
     iget-wide v2, p0, Larm;->c:J
@@ -200,13 +174,11 @@
 
     add-int/2addr v0, v1
 
-    .line 20
     mul-int/lit8 v0, v0, 0x1f
 
     iget v1, p0, Larm;->d:I
 
     add-int/2addr v0, v1
 
-    .line 21
     return v0
 .end method

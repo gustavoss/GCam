@@ -33,24 +33,19 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lggj;->a:Lgga;
 
     iget-object v1, p0, Lggj;->b:Landroid/net/Uri;
 
     iget-object v2, p0, Lggj;->c:Ljava/util/List;
 
-    .line 2
     iget-object v3, v0, Lgga;->s:Lgiy;
 
     invoke-virtual {v3, v1, v2}, Lgiy;->a(Landroid/net/Uri;Ljava/util/List;)V
 
-    .line 3
     const/4 v1, 0x0
 
     iput-object v1, v0, Lgga;->z:Lkey;
 
-    .line 4
     return-void
 .end method

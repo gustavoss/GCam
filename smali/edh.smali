@@ -27,38 +27,26 @@
 .method public constructor <init>(Lebt;Lida;Lbny;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lgvn;Lgqh;Lgsi;Lfwm;Lgwv;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ledh;->a:Lebt;
 
-    .line 3
     iput-object p2, p0, Ledh;->b:Lida;
 
-    .line 4
     iput-object p3, p0, Ledh;->c:Lbny;
 
-    .line 5
     iput-object p4, p0, Ledh;->d:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
-    .line 6
     iput-object p5, p0, Ledh;->e:Lgvn;
 
-    .line 7
     iput-object p6, p0, Ledh;->f:Lgqh;
 
-    .line 8
     iput-object p7, p0, Ledh;->g:Lgsi;
 
-    .line 9
     iput-object p8, p0, Ledh;->h:Lfwm;
 
-    .line 10
     iput-object p9, p0, Ledh;->i:Lgwv;
 
-    .line 11
     return-void
 .end method
 
@@ -67,8 +55,6 @@
 .method public final a()V
     .locals 9
 
-    .prologue
-    .line 12
     iget-object v0, p0, Ledh;->a:Lebt;
 
     iget-object v1, p0, Ledh;->b:Lida;
@@ -89,6 +75,5 @@
 
     invoke-virtual/range {v0 .. v8}, Lebt;->a(Lida;Lbny;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lgvn;Lgqh;Lgsi;Lfwm;Lgwv;)V
 
-    .line 13
     return-void
 .end method

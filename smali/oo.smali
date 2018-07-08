@@ -20,8 +20,6 @@
 .method constructor <init>(Lon;Lop;Landroid/view/MenuItem;Lot;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Loo;->d:Lon;
 
     iput-object p2, p0, Loo;->a:Lop;
@@ -40,15 +38,12 @@
 .method public final run()V
     .locals 4
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 2
     iget-object v0, p0, Loo;->a:Lop;
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Loo;->d:Lon;
 
     iget-object v0, v0, Lon;->a:Lok;
@@ -57,21 +52,18 @@
 
     iput-boolean v1, v0, Lok;->f:Z
 
-    .line 4
     iget-object v0, p0, Loo;->a:Lop;
 
     iget-object v0, v0, Lop;->b:Lot;
 
     invoke-virtual {v0, v2}, Lot;->a(Z)V
 
-    .line 5
     iget-object v0, p0, Loo;->d:Lon;
 
     iget-object v0, v0, Lon;->a:Lok;
 
     iput-boolean v2, v0, Lok;->f:Z
 
-    .line 6
     :cond_0
     iget-object v0, p0, Loo;->b:Landroid/view/MenuItem;
 
@@ -89,19 +81,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 7
     iget-object v0, p0, Loo;->c:Lot;
 
     iget-object v1, p0, Loo;->b:Landroid/view/MenuItem;
 
-    .line 8
     const/4 v2, 0x0
 
     const/4 v3, 0x4
 
     invoke-virtual {v0, v1, v2, v3}, Lot;->a(Landroid/view/MenuItem;Lpi;I)Z
 
-    .line 9
     :cond_1
     return-void
 .end method

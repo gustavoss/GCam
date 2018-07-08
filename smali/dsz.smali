@@ -18,32 +18,24 @@
 .method constructor <init>(Ldsx;Ldtp;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldsz;->c:Ldsx;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p2, p0, Ldsz;->b:Ldtp;
 
-    .line 4
     new-instance v0, Lkfk;
 
     invoke-direct {v0}, Lkfk;-><init>()V
 
-    .line 5
     iput-object v0, p0, Ldsz;->a:Lkfk;
 
-    .line 6
     return-void
 .end method
 
 .method private static synthetic a(Ljava/lang/Throwable;Lfgf;)V
     .locals 1
 
-    .prologue
-    .line 75
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -69,46 +61,104 @@
 
 
 # virtual methods
+.method public a()I
+    .locals 3
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "potter"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "OnePlus5"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "OnePlus5T"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "sagit"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v1, "chiron"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v1, "jason"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    :cond_0
+    return v2
+.end method
+
 .method public final a()V
     .locals 13
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 7
     :try_start_0
     iget-object v0, p0, Ldsz;->c:Ldsx;
 
-    .line 8
     iget-object v0, v0, Ldsx;->a:Lfla;
 
-    .line 9
+    invoke-virtual {p0}, Ldsz;->a()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
     iget-object v1, p0, Ldsz;->c:Ldsx;
 
-    .line 10
     iget v1, v1, Ldsx;->h:I
 
-    .line 11
+    :cond_0
     invoke-virtual {v0, v1}, Lfla;->a(I)Lfjk;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
     move-result-object v3
 
-    .line 13
     :goto_0
     :try_start_1
     new-instance v1, Lfte;
 
     invoke-direct {v1}, Lfte;-><init>()V
 
-    .line 14
     iget-object v0, p0, Ldsz;->c:Ldsx;
 
-    .line 15
     iget-object v0, v0, Ldsx;->b:Lfge;
 
-    .line 16
     invoke-interface {v0}, Lfge;->a()Lfgf;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
@@ -116,16 +166,13 @@
 
     move-result-object v4
 
-    .line 17
     :try_start_2
     new-instance v5, Lfhn;
 
     iget-object v0, p0, Ldsz;->c:Ldsx;
 
-    .line 18
     iget-object v0, v0, Ldsx;->c:Lkey;
 
-    .line 19
     invoke-static {v0}, Lijt;->a(Lkey;)Ljava/lang/Object;
 
     move-result-object v0
@@ -140,31 +187,24 @@
 
     invoke-direct {v5, v0}, Lfhn;-><init>(Lfhl;)V
 
-    .line 20
     invoke-virtual {v5, v3}, Lfhn;->a(Lfgx;)Lfhn;
 
-    .line 21
     invoke-virtual {v5, v1}, Lfhn;->a(Lfhv;)Lfhn;
 
-    .line 22
     iget-object v0, p0, Ldsz;->c:Ldsx;
 
-    .line 23
     iget-object v0, v0, Ldsx;->d:Lffq;
 
-    .line 24
     invoke-virtual {v0}, Lffq;->a()J
 
     move-result-wide v6
 
-    .line 25
     const/4 v0, 0x1
 
     new-array v0, v0, [Lfhl;
 
     const/4 v8, 0x0
 
-    .line 26
     invoke-virtual {v5}, Lfhn;->c()Lfhl;
 
     move-result-object v5
@@ -177,22 +217,19 @@
 
     sget-object v5, Lfhu;->b:Lfhu;
 
-    .line 27
     invoke-interface {v4, v0, v5}, Lfgf;->a(Ljava/util/List;Lfhu;)V
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_6
 
-    .line 28
-    if-eqz v4, :cond_0
+    if-eqz v4, :cond_1
 
     const/4 v0, 0x0
 
     :try_start_3
     invoke-static {v0, v4}, Ldsz;->a(Ljava/lang/Throwable;Lfgf;)V
 
-    .line 31
-    :cond_0
+    :cond_1
     invoke-interface {v3}, Lfjk;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -202,21 +239,17 @@
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_4
 
-    .line 33
     :try_start_4
     iget-object v1, v1, Lfte;->a:Lkfk;
 
-    .line 34
     invoke-interface {v1}, Lkey;->get()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Linu;
 
-    .line 35
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 37
     invoke-virtual {v0}, Lfjl;->f()J
 
     move-result-wide v4
@@ -231,19 +264,16 @@
 
     move-result-object v5
 
-    .line 38
     invoke-static {v4, v5}, Ljrv;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
-    .line 39
     invoke-virtual {v0}, Lfjl;->f()J
 
     move-result-wide v8
 
     sget-object v5, Landroid/hardware/camera2/CaptureResult;->SENSOR_TIMESTAMP:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 40
     invoke-interface {v1, v5}, Linu;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v5
@@ -290,18 +320,15 @@
 
     move-result-object v5
 
-    .line 41
     invoke-static {v4, v5}, Ljiy;->b(ZLjava/lang/Object;)V
 
-    .line 42
-    :cond_1
+    :cond_2
     invoke-static {v1}, Ldsp;->a(Linu;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_4
+    if-eqz v4, :cond_5
 
-    .line 43
     iget-object v4, p0, Ldsz;->b:Ldtp;
 
     invoke-interface {v4, v0, v1}, Ldtp;->a(Lfjl;Linu;)V
@@ -311,34 +338,26 @@
 
     move-object v0, v2
 
-    .line 48
     :goto_1
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
-    .line 49
     :try_start_5
     invoke-virtual {v0}, Lfjl;->close()V
 
-    .line 58
-    :cond_2
+    :cond_3
     :goto_2
     iget-object v0, p0, Ldsz;->c:Ldsx;
 
-    .line 59
     iget-object v1, v0, Ldsx;->d:Lffq;
 
-    .line 60
     iget-object v0, p0, Ldsz;->c:Ldsx;
 
-    .line 61
     iget v0, v0, Ldsx;->g:I
 
-    .line 62
     int-to-long v4, v0
 
     add-long/2addr v4, v6
 
-    .line 63
     iget-object v0, v1, Lffq;->a:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
@@ -346,16 +365,14 @@
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_4
 
-    .line 64
     :goto_3
     :try_start_6
     iget-wide v6, v1, Lffq;->c:J
 
     cmp-long v0, v6, v4
 
-    if-gez v0, :cond_6
+    if-gez v0, :cond_7
 
-    .line 65
     iget-object v0, v1, Lffq;->b:Ljava/util/concurrent/locks/Condition;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Condition;->await()V
@@ -364,7 +381,6 @@
 
     goto :goto_3
 
-    .line 68
     :catchall_0
     move-exception v0
 
@@ -378,7 +394,6 @@
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_0
     .catchall {:try_start_7 .. :try_end_7} :catchall_4
 
-    .line 69
     :catch_0
     move-exception v0
 
@@ -387,7 +402,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 70
     :catchall_1
     move-exception v1
 
@@ -397,9 +411,8 @@
 
     move-object v0, v12
 
-    .line 71
     :goto_4
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_8
 
     :try_start_9
     invoke-interface {v3}, Lfjk;->close()V
@@ -407,14 +420,12 @@
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_3
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
-    .line 72
     :goto_5
     :try_start_a
     throw v0
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_2
 
-    .line 73
     :catchall_2
     move-exception v0
 
@@ -424,7 +435,6 @@
 
     throw v0
 
-    .line 29
     :catch_1
     move-exception v0
 
@@ -433,7 +443,6 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_3
 
-    .line 30
     :catchall_3
     move-exception v1
 
@@ -444,18 +453,17 @@
     move-object v0, v12
 
     :goto_6
-    if-eqz v4, :cond_3
+    if-eqz v4, :cond_4
 
     :try_start_c
     invoke-static {v1, v4}, Ldsz;->a(Ljava/lang/Throwable;Lfgf;)V
 
-    :cond_3
+    :cond_4
     throw v0
     :try_end_c
     .catch Ljava/lang/Throwable; {:try_start_c .. :try_end_c} :catch_0
     .catchall {:try_start_c .. :try_end_c} :catchall_4
 
-    .line 70
     :catchall_4
     move-exception v0
 
@@ -463,15 +471,12 @@
 
     goto :goto_4
 
-    .line 45
-    :cond_4
+    :cond_5
     :try_start_d
     iget-object v1, p0, Ldsz;->c:Ldsx;
 
-    .line 46
     iget-object v1, v1, Ldsx;->e:Liid;
 
-    .line 47
     const-string v4, "skipping smart metering frame due to touch to expose / focus"
 
     invoke-interface {v1, v4}, Liid;->b(Ljava/lang/String;)V
@@ -481,46 +486,38 @@
 
     goto :goto_1
 
-    .line 51
     :catch_2
     move-exception v1
 
     :try_start_e
     iget-object v1, p0, Ldsz;->c:Ldsx;
 
-    .line 52
     iget-object v1, v1, Ldsx;->e:Liid;
 
-    .line 53
     const-string v4, "Metadata never arrived for metering frame"
 
     invoke-interface {v1, v4}, Liid;->f(Ljava/lang/String;)V
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_5
 
-    .line 54
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
-    .line 55
     :try_start_f
     invoke-virtual {v0}, Lfjl;->close()V
 
     goto :goto_2
 
-    .line 56
     :catchall_5
     move-exception v1
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
-    .line 57
     invoke-virtual {v0}, Lfjl;->close()V
 
-    :cond_5
+    :cond_6
     throw v1
 
-    .line 66
-    :cond_6
+    :cond_7
     iget-object v0, v1, Lffq;->a:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
@@ -530,7 +527,6 @@
 
     goto/16 :goto_0
 
-    .line 71
     :catch_3
     move-exception v3
 
@@ -539,14 +535,13 @@
 
     goto :goto_5
 
-    :cond_7
+    :cond_8
     invoke-interface {v3}, Lfjk;->close()V
     :try_end_10
     .catchall {:try_start_10 .. :try_end_10} :catchall_2
 
     goto :goto_5
 
-    .line 30
     :catchall_6
     move-exception v0
 
@@ -558,8 +553,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 74
     const-string v0, "BackgroundMeteringLoop"
 
     return-object v0

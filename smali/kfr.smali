@@ -13,13 +13,10 @@
 .method constructor <init>(Lkfp;Ljava/util/concurrent/Callable;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lkfr;->d:Lkfp;
 
     invoke-direct {p0}, Lkew;-><init>()V
 
-    .line 2
     invoke-static {p2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -28,7 +25,6 @@
 
     iput-object v0, p0, Lkfr;->c:Ljava/util/concurrent/Callable;
 
-    .line 3
     return-void
 .end method
 
@@ -37,20 +33,15 @@
 .method final a(Ljava/lang/Object;Ljava/lang/Throwable;)V
     .locals 1
 
-    .prologue
-    .line 6
     if-nez p2, :cond_0
 
-    .line 7
     iget-object v0, p0, Lkfr;->d:Lkfp;
 
     invoke-virtual {v0, p1}, Lkfp;->a(Ljava/lang/Object;)Z
 
-    .line 9
     :goto_0
     return-void
 
-    .line 8
     :cond_0
     iget-object v0, p0, Lkfr;->d:Lkfp;
 
@@ -62,8 +53,6 @@
 .method final a()Z
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lkfr;->d:Lkfp;
 
     invoke-virtual {v0}, Lkcy;->isDone()Z
@@ -76,8 +65,6 @@
 .method final b()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lkfr;->c:Ljava/util/concurrent/Callable;
 
     invoke-interface {v0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
@@ -90,8 +77,6 @@
 .method final c()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lkfr;->c:Ljava/util/concurrent/Callable;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

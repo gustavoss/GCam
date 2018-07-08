@@ -22,10 +22,8 @@
 .method public final handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 1
     iget v1, p1, Landroid/os/Message;->what:I
 
     if-ne v1, v0, :cond_0
@@ -39,7 +37,6 @@
 
     check-cast v0, Lhvr;
 
-    .line 2
     iget-object v1, v1, Lhvo;->a:Ljava/lang/Object;
 
     if-nez v1, :cond_1
@@ -49,13 +46,11 @@
     :goto_1
     return-void
 
-    .line 1
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 2
     :cond_1
     :try_start_0
     invoke-interface {v0, v1}, Lhvr;->a(Ljava/lang/Object;)V

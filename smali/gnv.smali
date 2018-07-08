@@ -14,8 +14,6 @@
 .method constructor <init>(Lgnu;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgnv;->a:Lgnu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,13 +26,9 @@
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgnv;->a:Lgnu;
 
-    .line 3
     invoke-virtual {v0}, Lgnu;->a()V
 
-    .line 4
     return-void
 .end method

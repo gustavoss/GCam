@@ -15,14 +15,10 @@
 .method public constructor <init>(Landroid/content/res/AssetManager;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Laix;->a:Landroid/content/res/AssetManager;
 
-    .line 3
     return-void
 .end method
 
@@ -31,8 +27,6 @@
 .method public final a(Landroid/content/res/AssetManager;Ljava/lang/String;)Laef;
     .locals 1
 
-    .prologue
-    .line 5
     new-instance v0, Laen;
 
     invoke-direct {v0, p1, p2}, Laen;-><init>(Landroid/content/res/AssetManager;Ljava/lang/String;)V
@@ -43,8 +37,6 @@
 .method public final a(Lakq;)Laki;
     .locals 2
 
-    .prologue
-    .line 4
     new-instance v0, Laiv;
 
     iget-object v1, p0, Laix;->a:Landroid/content/res/AssetManager;

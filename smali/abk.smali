@@ -47,7 +47,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -58,7 +57,6 @@
 
     const/4 v3, 0x0
 
-    .line 4
     new-instance v0, Labk;
 
     const-string v1, "NO_SCENE_MODE"
@@ -67,7 +65,6 @@
 
     sput-object v0, Labk;->a:Labk;
 
-    .line 5
     new-instance v0, Labk;
 
     const-string v1, "AUTO"
@@ -76,7 +73,6 @@
 
     sput-object v0, Labk;->b:Labk;
 
-    .line 6
     new-instance v0, Labk;
 
     const-string v1, "ACTION"
@@ -85,7 +81,6 @@
 
     sput-object v0, Labk;->c:Labk;
 
-    .line 7
     new-instance v0, Labk;
 
     const-string v1, "BARCODE"
@@ -94,7 +89,6 @@
 
     sput-object v0, Labk;->d:Labk;
 
-    .line 8
     new-instance v0, Labk;
 
     const-string v1, "BEACH"
@@ -103,7 +97,6 @@
 
     sput-object v0, Labk;->e:Labk;
 
-    .line 9
     new-instance v0, Labk;
 
     const-string v1, "CANDLELIGHT"
@@ -114,7 +107,6 @@
 
     sput-object v0, Labk;->f:Labk;
 
-    .line 10
     new-instance v0, Labk;
 
     const-string v1, "FIREWORKS"
@@ -125,7 +117,6 @@
 
     sput-object v0, Labk;->g:Labk;
 
-    .line 11
     new-instance v0, Labk;
 
     const-string v1, "HDR"
@@ -136,7 +127,6 @@
 
     sput-object v0, Labk;->h:Labk;
 
-    .line 12
     new-instance v0, Labk;
 
     const-string v1, "LANDSCAPE"
@@ -147,7 +137,6 @@
 
     sput-object v0, Labk;->i:Labk;
 
-    .line 13
     new-instance v0, Labk;
 
     const-string v1, "NIGHT"
@@ -158,7 +147,6 @@
 
     sput-object v0, Labk;->j:Labk;
 
-    .line 14
     new-instance v0, Labk;
 
     const-string v1, "NIGHT_PORTRAIT"
@@ -169,7 +157,6 @@
 
     sput-object v0, Labk;->k:Labk;
 
-    .line 15
     new-instance v0, Labk;
 
     const-string v1, "PARTY"
@@ -180,7 +167,6 @@
 
     sput-object v0, Labk;->l:Labk;
 
-    .line 16
     new-instance v0, Labk;
 
     const-string v1, "PORTRAIT"
@@ -191,7 +177,6 @@
 
     sput-object v0, Labk;->m:Labk;
 
-    .line 17
     new-instance v0, Labk;
 
     const-string v1, "SNOW"
@@ -202,7 +187,6 @@
 
     sput-object v0, Labk;->n:Labk;
 
-    .line 18
     new-instance v0, Labk;
 
     const-string v1, "SPORTS"
@@ -213,7 +197,6 @@
 
     sput-object v0, Labk;->o:Labk;
 
-    .line 19
     new-instance v0, Labk;
 
     const-string v1, "STEADYPHOTO"
@@ -224,7 +207,6 @@
 
     sput-object v0, Labk;->p:Labk;
 
-    .line 20
     new-instance v0, Labk;
 
     const-string v1, "SUNSET"
@@ -235,7 +217,6 @@
 
     sput-object v0, Labk;->q:Labk;
 
-    .line 21
     new-instance v0, Labk;
 
     const-string v1, "THEATRE"
@@ -246,7 +227,6 @@
 
     sput-object v0, Labk;->r:Labk;
 
-    .line 22
     const/16 v0, 0x12
 
     new-array v0, v0, [Labk;
@@ -357,8 +337,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -367,8 +345,6 @@
 .method public static a(Ljava/lang/String;)Labk;
     .locals 1
 
-    .prologue
-    .line 2
     const-class v0, Labk;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -383,8 +359,6 @@
 .method public static values()[Labk;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Labk;->s:[Labk;
 
     invoke-virtual {v0}, [Labk;->clone()Ljava/lang/Object;

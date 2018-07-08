@@ -19,8 +19,6 @@
 .method public constructor <init>(Lfkm;Lfks;I)V
     .locals 0
 
-    .prologue
-    .line 2
     iput-object p1, p0, Lflq;->c:Lfkm;
 
     iput-object p2, p0, Lflq;->a:Lfks;
@@ -37,8 +35,6 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -49,16 +45,12 @@
 .method public final b()Z
     .locals 3
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 3
     iget-object v0, p0, Lflq;->c:Lfkm;
 
-    .line 4
     iget-object v0, v0, Lfkm;->a:Lfuu;
 
-    .line 5
     invoke-interface {v0}, Lfuu;->c()Lida;
 
     move-result-object v0
@@ -73,13 +65,10 @@
 
     move-result v2
 
-    .line 6
     iget-object v0, p0, Lflq;->a:Lfks;
 
-    .line 7
     iget-object v0, v0, Lfks;->a:Lidr;
 
-    .line 8
     invoke-interface {v0}, Lida;->c()Ljava/lang/Object;
 
     move-result-object v0
@@ -90,16 +79,13 @@
 
     move-result v0
 
-    .line 9
     if-le v2, v0, :cond_0
 
     move v0, v1
 
-    .line 13
     :goto_0
     return v0
 
-    .line 11
     :cond_0
     iget v2, p0, Lflq;->b:I
 
@@ -107,10 +93,8 @@
 
     move v0, v1
 
-    .line 12
     goto :goto_0
 
-    .line 13
     :cond_1
     const/4 v0, 0x0
 

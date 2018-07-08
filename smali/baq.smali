@@ -32,8 +32,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 31
     const-string v0, "CameraAssistant"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -42,7 +40,6 @@
 
     sput-object v0, Lbaq;->a:Ljava/lang/String;
 
-    .line 32
     new-instance v0, Lbql;
 
     const-string v1, "camera.bind_assistant"
@@ -59,23 +56,16 @@
 .method public constructor <init>(Landroid/content/Context;Lbqi;Lemk;Libo;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbaq;->d:Landroid/content/Context;
 
-    .line 3
     iput-object p2, p0, Lbaq;->e:Lbqi;
 
-    .line 4
     iput-object p3, p0, Lbaq;->f:Lemk;
 
-    .line 5
     iput-object p4, p0, Lbaq;->g:Libo;
 
-    .line 6
     return-void
 .end method
 
@@ -84,33 +74,26 @@
 .method public final j()V
     .locals 2
 
-    .prologue
-    .line 25
-    .line 26
     iget-boolean v0, p0, Lbaq;->c:Z
 
     if-eqz v0, :cond_0
 
-    .line 27
     iget-object v0, p0, Lbaq;->d:Landroid/content/Context;
 
     iget-object v1, p0, Lbaq;->h:Landroid/content/ServiceConnection;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 28
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lbaq;->c:Z
 
-    .line 29
     sget-object v0, Lbaq;->a:Ljava/lang/String;
 
     const-string v1, "unbound photos service"
 
     invoke-static {v0, v1}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 30
     :cond_0
     return-void
 .end method
@@ -118,8 +101,6 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lbaq;->e:Lbqi;
 
     sget-object v1, Lbaq;->b:Lbql;
@@ -130,24 +111,20 @@
 
     if-nez v0, :cond_0
 
-    .line 8
     sget-object v0, Lbaq;->a:Ljava/lang/String;
 
     const-string v1, "binding disabled by flags"
 
     invoke-static {v0, v1}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 24
     :goto_0
     return-void
 
-    .line 10
     :cond_0
     iget-boolean v0, p0, Lbaq;->c:Z
 
     if-eqz v0, :cond_1
 
-    .line 11
     sget-object v0, Lbaq;->a:Ljava/lang/String;
 
     const-string v1, "already bound"
@@ -156,7 +133,6 @@
 
     goto :goto_0
 
-    .line 13
     :cond_1
     iget-object v0, p0, Lbaq;->g:Libo;
 
@@ -164,7 +140,6 @@
 
     invoke-static {v0, v1, p0}, Ldzj;->a(Libo;Lemk;Lene;)V
 
-    .line 15
     :try_start_0
     new-instance v0, Lbar;
 
@@ -172,33 +147,28 @@
 
     iput-object v0, p0, Lbaq;->h:Landroid/content/ServiceConnection;
 
-    .line 16
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 17
     const-string v1, "com.google.android.apps.photos"
 
     const-string v2, "com.google.android.apps.photos.cameraassistant.CameraAssistantService"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 18
     iget-object v1, p0, Lbaq;->d:Landroid/content/Context;
 
     iget-object v2, p0, Lbaq;->h:Landroid/content/ServiceConnection;
 
     const/4 v3, 0x5
 
-    .line 19
     invoke-virtual {v1, v0, v2, v3}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lbaq;->c:Z
 
-    .line 20
     sget-object v0, Lbaq;->a:Ljava/lang/String;
 
     iget-boolean v1, p0, Lbaq;->c:Z
@@ -229,11 +199,9 @@
 
     goto :goto_0
 
-    .line 22
     :catch_0
     move-exception v0
 
-    .line 23
     sget-object v1, Lbaq;->a:Ljava/lang/String;
 
     const-string v2, "Either Photos service does not exist or does not have permission to connect."

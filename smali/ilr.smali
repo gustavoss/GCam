@@ -13,33 +13,24 @@
 .method private constructor <init>(Ljava/lang/String;Ljava/lang/Integer;)V
     .locals 0
 
-    .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
     iput-object p1, p0, Lilr;->b:Ljava/lang/String;
 
-    .line 10
     iput-object p2, p0, Lilr;->a:Ljava/lang/Integer;
 
-    .line 11
     return-void
 .end method
 
 .method public static a(I)Lilr;
     .locals 3
 
-    .prologue
-    .line 1
     new-instance v0, Lilr;
 
-    .line 2
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 3
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -52,8 +43,6 @@
 .method public static a(Ljava/lang/String;)Lilr;
     .locals 2
 
-    .prologue
-    .line 4
     new-instance v0, Lilr;
 
     invoke-static {p0}, Lilr;->b(Ljava/lang/String;)Ljava/lang/Integer;
@@ -68,8 +57,6 @@
 .method private static b(Ljava/lang/String;)Ljava/lang/Integer;
     .locals 1
 
-    .prologue
-    .line 5
     :try_start_0
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -81,7 +68,6 @@
 
     move-result-object v0
 
-    .line 7
     :goto_0
     return-object v0
 
@@ -98,13 +84,10 @@
 .method public final a()I
     .locals 4
 
-    .prologue
-    .line 12
     iget-object v0, p0, Lilr;->a:Ljava/lang/Integer;
 
     if-nez v0, :cond_1
 
-    .line 13
     new-instance v1, Ljava/lang/UnsupportedOperationException;
 
     const-string v2, "Attempted to access a camera id that is not supported on legacy camera API\'s: "
@@ -137,7 +120,6 @@
 
     goto :goto_0
 
-    .line 14
     :cond_1
     iget-object v0, p0, Lilr;->a:Ljava/lang/Integer;
 
@@ -151,18 +133,13 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 15
     if-ne p0, p1, :cond_0
 
-    .line 16
     const/4 v0, 0x1
 
-    .line 20
     :goto_0
     return v0
 
-    .line 17
     :cond_0
     if-eqz p1, :cond_1
 
@@ -176,17 +153,14 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 18
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 19
     :cond_2
     check-cast p1, Lilr;
 
-    .line 20
     iget-object v0, p0, Lilr;->b:Ljava/lang/String;
 
     iget-object v1, p1, Lilr;->b:Ljava/lang/String;
@@ -201,8 +175,6 @@
 .method public final hashCode()I
     .locals 3
 
-    .prologue
-    .line 21
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -213,20 +185,16 @@
 
     aput-object v2, v0, v1
 
-    .line 22
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 23
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lilr;->b:Ljava/lang/String;
 
     iget-object v1, p0, Lilr;->a:Ljava/lang/Integer;

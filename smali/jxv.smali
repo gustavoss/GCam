@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 3
     new-instance v0, Ljxw;
 
     const-string v1, "SIZE"
@@ -25,7 +23,6 @@
 
     sput-object v0, Ljxv;->a:Ljxv;
 
-    .line 4
     new-instance v0, Ljxx;
 
     const-string v1, "DISTINCT"
@@ -34,7 +31,6 @@
 
     sput-object v0, Ljxv;->b:Ljxv;
 
-    .line 5
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljxv;
@@ -59,8 +55,6 @@
 .method constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -69,8 +63,6 @@
 .method public static values()[Ljxv;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Ljxv;->c:[Ljxv;
 
     invoke-virtual {v0}, [Ljxv;->clone()Ljava/lang/Object;

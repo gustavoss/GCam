@@ -16,8 +16,6 @@
 .method constructor <init>(Lgms;Leoi;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgmw;->b:Lgms;
 
     iput-object p2, p0, Lgmw;->a:Leoi;
@@ -32,8 +30,6 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgmw;->b:Lgms;
 
     iget-object v1, p0, Lgmw;->a:Leoi;
@@ -44,15 +40,11 @@
 
     move-result-object v2
 
-    .line 3
     invoke-virtual {v2}, Ldzj;->c()Leog;
 
-    .line 4
     iget-object v1, v1, Leoi;->b:Lcom/google/common/logging/nano/eventprotos$CameraEvent;
 
-    .line 5
     invoke-virtual {v0, v1}, Lgms;->a(Lcom/google/common/logging/nano/eventprotos$CameraEvent;)V
 
-    .line 6
     return-void
 .end method

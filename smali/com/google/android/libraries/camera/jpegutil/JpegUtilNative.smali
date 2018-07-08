@@ -7,21 +7,16 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 44
     const-string v0, "jni_jpegutil"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 45
     return-void
 .end method
 
 .method public static a(Liob;Ljava/nio/ByteBuffer;ILandroid/graphics/Rect;)I
     .locals 19
 
-    .prologue
-    .line 1
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->isDirect()Z
 
     move-result v1
@@ -30,7 +25,6 @@
 
     invoke-static {v1, v2}, Ljiy;->b(ZLjava/lang/Object;)V
 
-    .line 2
     move-object/from16 v0, p3
 
     iget v1, v0, Landroid/graphics/Rect;->left:I
@@ -67,7 +61,6 @@
     :goto_1
     invoke-static {v1, v2}, Ljiy;->b(ZLjava/lang/Object;)V
 
-    .line 3
     move-object/from16 v0, p3
 
     iget v1, v0, Landroid/graphics/Rect;->top:I
@@ -104,19 +97,16 @@
     :goto_3
     invoke-static {v1, v2}, Ljiy;->b(ZLjava/lang/Object;)V
 
-    .line 4
     move-object/from16 v0, p3
 
     iget v1, v0, Landroid/graphics/Rect;->left:I
 
-    .line 5
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
-    .line 6
     invoke-interface/range {p0 .. p0}, Liob;->c()I
 
     move-result v2
@@ -127,19 +117,16 @@
 
     move-result v15
 
-    .line 7
     move-object/from16 v0, p3
 
     iget v1, v0, Landroid/graphics/Rect;->right:I
 
-    .line 8
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
-    .line 9
     invoke-interface/range {p0 .. p0}, Liob;->c()I
 
     move-result v2
@@ -148,19 +135,16 @@
 
     move-result v17
 
-    .line 10
     move-object/from16 v0, p3
 
     iget v1, v0, Landroid/graphics/Rect;->top:I
 
-    .line 11
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
-    .line 12
     invoke-interface/range {p0 .. p0}, Liob;->d()I
 
     move-result v2
@@ -171,19 +155,16 @@
 
     move-result v16
 
-    .line 13
     move-object/from16 v0, p3
 
     iget v1, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 14
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
-    .line 15
     invoke-interface/range {p0 .. p0}, Liob;->d()I
 
     move-result v2
@@ -192,7 +173,6 @@
 
     move-result v18
 
-    .line 17
     invoke-interface/range {p0 .. p0}, Liob;->b()I
 
     move-result v1
@@ -203,7 +183,6 @@
 
     const/4 v1, 0x1
 
-    .line 18
     :goto_4
     invoke-interface/range {p0 .. p0}, Liob;->b()I
 
@@ -229,15 +208,12 @@
 
     move-result-object v2
 
-    .line 19
     invoke-static {v1, v2}, Ljiy;->b(ZLjava/lang/Object;)V
 
-    .line 20
     invoke-interface/range {p0 .. p0}, Liob;->e()Ljava/util/List;
 
     move-result-object v2
 
-    .line 21
     const/4 v1, 0x0
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -248,7 +224,6 @@
 
     check-cast v5, Lioc;
 
-    .line 22
     const/4 v1, 0x1
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -259,7 +234,6 @@
 
     check-cast v8, Lioc;
 
-    .line 23
     const/4 v1, 0x2
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -270,7 +244,6 @@
 
     check-cast v11, Lioc;
 
-    .line 24
     invoke-interface {v5}, Lioc;->c()Ljava/nio/ByteBuffer;
 
     move-result-object v1
@@ -281,7 +254,6 @@
 
     invoke-static {v1}, Ljiy;->b(Z)V
 
-    .line 25
     invoke-interface {v5}, Lioc;->c()Ljava/nio/ByteBuffer;
 
     move-result-object v1
@@ -292,7 +264,6 @@
 
     invoke-static {v1}, Ljiy;->b(Z)V
 
-    .line 26
     invoke-interface {v5}, Lioc;->c()Ljava/nio/ByteBuffer;
 
     move-result-object v1
@@ -303,65 +274,52 @@
 
     invoke-static {v1}, Ljiy;->b(Z)V
 
-    .line 27
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 29
     invoke-interface/range {p0 .. p0}, Liob;->c()I
 
     move-result v1
 
-    .line 30
     invoke-interface/range {p0 .. p0}, Liob;->d()I
 
     move-result v2
 
-    .line 31
     invoke-interface {v5}, Lioc;->c()Ljava/nio/ByteBuffer;
 
     move-result-object v3
 
-    .line 32
     invoke-interface {v5}, Lioc;->b()I
 
     move-result v4
 
-    .line 33
     invoke-interface {v5}, Lioc;->a()I
 
     move-result v5
 
-    .line 34
     invoke-interface {v8}, Lioc;->c()Ljava/nio/ByteBuffer;
 
     move-result-object v6
 
-    .line 35
     invoke-interface {v8}, Lioc;->b()I
 
     move-result v7
 
-    .line 36
     invoke-interface {v8}, Lioc;->a()I
 
     move-result v8
 
-    .line 37
     invoke-interface {v11}, Lioc;->c()Ljava/nio/ByteBuffer;
 
     move-result-object v9
 
-    .line 38
     invoke-interface {v11}, Lioc;->b()I
 
     move-result v10
 
-    .line 39
     invoke-interface {v11}, Lioc;->a()I
 
     move-result v11
 
-    .line 40
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result v13
@@ -370,20 +328,16 @@
 
     move/from16 v14, p2
 
-    .line 41
     invoke-static/range {v1 .. v18}, Lcom/google/android/libraries/camera/jpegutil/JpegUtilNative;->compressJpegFromYUV420pNative(IILjava/lang/Object;IILjava/lang/Object;IILjava/lang/Object;IILjava/lang/Object;IIIIII)I
 
     move-result v1
 
-    .line 42
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 43
     return v1
 
-    .line 2
     :cond_0
     const/4 v1, 0x0
 
@@ -396,7 +350,6 @@
 
     goto/16 :goto_1
 
-    .line 3
     :cond_2
     const/4 v1, 0x0
 
@@ -409,7 +362,6 @@
 
     goto/16 :goto_3
 
-    .line 17
     :cond_4
     const/4 v1, 0x0
 

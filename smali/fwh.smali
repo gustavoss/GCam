@@ -11,8 +11,6 @@
 .method constructor <init>(Lfwa;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfwh;->a:Lfwa;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -25,18 +23,13 @@
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lfwh;->a:Lfwa;
 
-    .line 3
     iget-object v0, v0, Lfwa;->b:Lfxm;
 
-    .line 4
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lfxm;->b:Z
 
-    .line 5
     return-void
 .end method

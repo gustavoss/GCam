@@ -35,8 +35,5 @@
 .method public final a(Lgbe;)Lgbe;
     .locals 0
 
-    .prologue
-    .line 1
-    .line 2
     return-object p1
 .end method

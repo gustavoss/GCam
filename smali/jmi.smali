@@ -11,14 +11,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljlh;-><init>()V
 
-    .line 2
     iput p1, p0, Ljmi;->a:I
 
-    .line 3
     return-void
 .end method
 
@@ -27,8 +23,6 @@
 .method public final a(Ljlb;)Z
     .locals 2
 
-    .prologue
-    .line 4
     invoke-virtual {p1}, Ljlb;->a()I
 
     move-result v0
@@ -51,8 +45,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 5
     iget v0, p0, Ljmi;->a:I
 
     const/16 v1, 0x2d

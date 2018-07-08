@@ -25,7 +25,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -36,7 +35,6 @@
 
     const/4 v3, 0x0
 
-    .line 5
     new-instance v0, Lhio;
 
     const-string v1, "BADGE"
@@ -47,7 +45,6 @@
 
     sput-object v0, Lhio;->a:Lhio;
 
-    .line 6
     new-instance v0, Lhio;
 
     const-string v1, "INTERACT"
@@ -58,7 +55,6 @@
 
     sput-object v0, Lhio;->b:Lhio;
 
-    .line 7
     new-instance v0, Lhio;
 
     const-string v1, "DIALOG"
@@ -69,7 +65,6 @@
 
     sput-object v0, Lhio;->c:Lhio;
 
-    .line 8
     new-instance v0, Lhio;
 
     const-string v1, "SEARCH"
@@ -80,7 +75,6 @@
 
     sput-object v0, Lhio;->e:Lhio;
 
-    .line 9
     new-instance v0, Lhio;
 
     const-string v1, "EDITOR"
@@ -91,7 +85,6 @@
 
     sput-object v0, Lhio;->f:Lhio;
 
-    .line 10
     const/4 v0, 0x5
 
     new-array v0, v0, [Lhio;
@@ -124,22 +117,16 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput p3, p0, Lhio;->d:I
 
-    .line 4
     return-void
 .end method
 
 .method public static values()[Lhio;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lhio;->g:[Lhio;
 
     invoke-virtual {v0}, [Lhio;->clone()Ljava/lang/Object;

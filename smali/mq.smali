@@ -14,8 +14,6 @@
 .method constructor <init>(Lmn;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lmq;->a:Lmn;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,12 +26,10 @@
 .method public final run()V
     .locals 5
 
-    .prologue
     const/high16 v4, 0x3f800000    # 1.0f
 
     const/4 v3, 0x0
 
-    .line 2
     iget-object v0, p0, Lmq;->a:Lmn;
 
     iget-object v0, v0, Lmn;->r:Landroid/widget/PopupWindow;
@@ -46,12 +42,10 @@
 
     invoke-virtual {v0, v1, v2, v3, v3}, Landroid/widget/PopupWindow;->showAtLocation(Landroid/view/View;III)V
 
-    .line 3
     iget-object v0, p0, Lmq;->a:Lmn;
 
     invoke-virtual {v0}, Lmn;->p()V
 
-    .line 4
     iget-object v0, p0, Lmq;->a:Lmn;
 
     invoke-virtual {v0}, Lmn;->o()Z
@@ -60,7 +54,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lmq;->a:Lmn;
 
     iget-object v0, v0, Lmn;->q:Landroid/support/v7/widget/ActionBarContextView;
@@ -69,7 +62,6 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/ActionBarContextView;->setAlpha(F)V
 
-    .line 6
     iget-object v0, p0, Lmq;->a:Lmn;
 
     iget-object v1, p0, Lmq;->a:Lmn;
@@ -86,7 +78,6 @@
 
     iput-object v1, v0, Lmn;->t:Ljd;
 
-    .line 7
     iget-object v0, p0, Lmq;->a:Lmn;
 
     iget-object v0, v0, Lmn;->t:Ljd;
@@ -97,11 +88,9 @@
 
     invoke-virtual {v0, v1}, Ljd;->a(Ljg;)Ljd;
 
-    .line 10
     :goto_0
     return-void
 
-    .line 8
     :cond_0
     iget-object v0, p0, Lmq;->a:Lmn;
 
@@ -109,7 +98,6 @@
 
     invoke-virtual {v0, v4}, Landroid/support/v7/widget/ActionBarContextView;->setAlpha(F)V
 
-    .line 9
     iget-object v0, p0, Lmq;->a:Lmn;
 
     iget-object v0, v0, Lmn;->q:Landroid/support/v7/widget/ActionBarContextView;

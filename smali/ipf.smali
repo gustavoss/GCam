@@ -29,18 +29,14 @@
 .method public final onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lipf;->a:Lipe;
 
     iget-object v1, p0, Lipf;->b:Lium;
 
-    .line 2
     iget-object v2, v0, Lipe;->j:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 3
     :try_start_0
     iget-boolean v3, v0, Lipe;->m:Z
 
@@ -54,14 +50,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 4
     new-instance v3, Liph;
 
     invoke-direct {v3, v0, p1}, Liph;-><init>(Lipe;Landroid/graphics/SurfaceTexture;)V
 
     invoke-interface {v1, v3}, Lium;->execute(Ljava/lang/Runnable;)V
 
-    .line 5
     :cond_0
     monitor-exit v2
 

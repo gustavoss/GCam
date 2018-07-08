@@ -29,26 +29,20 @@
 .method public final call()Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Ligw;->a:Ligc;
 
     iget-wide v2, p0, Ligw;->b:J
 
-    .line 2
     iget-object v1, v0, Ligc;->g:Lifr;
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v0, v0, Ligc;->g:Lifr;
 
     invoke-virtual {v0, v2, v3}, Lifr;->a(J)V
 
-    .line 4
     :cond_0
     const/4 v0, 0x0
 
-    .line 5
     return-object v0
 .end method

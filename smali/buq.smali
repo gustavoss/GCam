@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 14
     const-string v0, "HdrPCpuPriority"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -33,25 +31,20 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lbuq;->b:Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lbuq;->c:Ljava/util/List;
 
-    .line 4
     return-void
 .end method
 
@@ -60,33 +53,26 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 5
     sget-object v0, Lbuq;->a:Ljava/lang/String;
 
     const-string v1, "Setting HDR+ low processing priority"
 
     invoke-static {v0, v1}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
     const/high16 v0, 0x3f000000    # 0.5f
 
     invoke-virtual {p0, v0}, Lbuq;->a(F)V
 
-    .line 7
     return-void
 .end method
 
 .method public final a(F)V
     .locals 7
 
-    .prologue
-    .line 8
     iget-object v1, p0, Lbuq;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 9
     :try_start_0
     iget-object v0, p0, Lbuq;->c:Ljava/util/List;
 
@@ -107,7 +93,6 @@
 
     check-cast v0, Lcom/google/googlex/gcam/IShot;
 
-    .line 10
     sget-object v3, Lbuq;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -154,12 +139,10 @@
 
     invoke-static {v3, v4}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11
     invoke-virtual {v0, p1}, Lcom/google/googlex/gcam/IShot;->LimitCpuUsage(F)V
 
     goto :goto_0
 
-    .line 13
     :catchall_0
     move-exception v0
 

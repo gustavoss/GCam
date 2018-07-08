@@ -12,14 +12,10 @@
 .method public constructor <init>(Lhui;Ljava/util/ArrayList;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhuo;->b:Lhui;
 
-    .line 2
     invoke-direct {p0, p1}, Lhus;-><init>(Lhui;)V
 
-    .line 3
     iput-object p2, p0, Lhuo;->a:Ljava/util/ArrayList;
 
     return-void
@@ -30,19 +26,14 @@
 .method public final a()V
     .locals 8
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lhuo;->b:Lhui;
 
-    .line 5
     iget-object v0, v0, Lhui;->a:Lhuy;
 
-    .line 6
     iget-object v2, v0, Lhuy;->m:Lhuu;
 
     iget-object v3, p0, Lhuo;->b:Lhui;
 
-    .line 8
     iget-object v0, v3, Lhui;->j:Lhng;
 
     if-nez v0, :cond_0
@@ -51,7 +42,6 @@
 
     move-result-object v0
 
-    .line 13
     :goto_0
     iput-object v0, v2, Lhuu;->f:Ljava/util/Set;
 
@@ -80,16 +70,12 @@
 
     iget-object v4, p0, Lhuo;->b:Lhui;
 
-    .line 14
     iget-object v4, v4, Lhui;->g:Lhnt;
 
-    .line 15
     iget-object v5, p0, Lhuo;->b:Lhui;
 
-    .line 16
     iget-object v5, v5, Lhui;->a:Lhuy;
 
-    .line 17
     iget-object v5, v5, Lhuy;->m:Lhuu;
 
     iget-object v5, v5, Lhuu;->f:Ljava/util/Set;
@@ -98,24 +84,19 @@
 
     goto :goto_1
 
-    .line 8
     :cond_0
     new-instance v1, Ljava/util/HashSet;
 
     iget-object v0, v3, Lhui;->j:Lhng;
 
-    .line 9
     iget-object v0, v0, Lhng;->b:Ljava/util/Set;
 
-    .line 10
     invoke-direct {v1, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
     iget-object v0, v3, Lhui;->j:Lhng;
 
-    .line 11
     iget-object v4, v0, Lhng;->d:Ljava/util/Map;
 
-    .line 12
     invoke-interface {v4}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -165,7 +146,6 @@
 
     goto :goto_0
 
-    .line 17
     :cond_3
     return-void
 .end method

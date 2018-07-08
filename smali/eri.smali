@@ -29,16 +29,12 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v0, p0, Leri;->a:Leqy;
 
     iget-object v1, p0, Leri;->b:Lero;
 
-    .line 3
     if-eqz v1, :cond_0
 
-    .line 4
     :try_start_0
     iget-object v0, v0, Leqy;->d:Lgng;
 
@@ -48,16 +44,13 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8
     :cond_0
     :goto_0
     return-void
 
-    .line 6
     :catch_0
     move-exception v0
 
-    .line 7
     sget-object v2, Leqy;->a:Ljava/lang/String;
 
     iget-object v1, v1, Lero;->b:Ljava/io/File;

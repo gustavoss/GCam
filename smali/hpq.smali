@@ -35,16 +35,12 @@
 .method public final a()Lhmf;
     .locals 6
 
-    .prologue
-    .line 1
     sget-object v0, Lhqq;->b:Lhqo;
 
     iget-object v1, p0, Lhpq;->c:Lhpp;
 
-    .line 2
     iget-object v1, v1, Lhpp;->b:Lhmc;
 
-    .line 3
     iget-object v2, p0, Lhpq;->c:Lhpp;
 
     iget-object v2, v2, Lhpp;->a:Landroid/app/Activity;
@@ -53,13 +49,10 @@
 
     iget-object v4, p0, Lhpq;->b:Ljava/util/List;
 
-    .line 4
     iget-object v5, p0, Lhpq;->c:Lhpp;
 
-    .line 5
     iget-object v5, v5, Lhpp;->c:Ljava/io/File;
 
-    .line 6
     invoke-interface/range {v0 .. v5}, Lhqo;->a(Lhmc;Landroid/app/Activity;Landroid/content/Intent;Ljava/util/List;Ljava/io/File;)Lhmf;
 
     move-result-object v0

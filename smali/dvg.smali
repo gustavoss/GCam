@@ -11,8 +11,6 @@
 .method constructor <init>(Ldva;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldvg;->a:Ldva;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -25,12 +23,10 @@
 .method public final onSingleTapUp(Landroid/view/MotionEvent;)Z
     .locals 9
 
-    .prologue
     const/4 v8, 0x0
 
     const/4 v7, 0x1
 
-    .line 2
     iget-object v0, p0, Ldvg;->a:Ldva;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
@@ -45,17 +41,14 @@
 
     float-to-int v2, v2
 
-    .line 3
     iget v3, v0, Ldva;->w:I
 
     sget v4, Lep;->ae:I
 
     if-ne v3, v4, :cond_0
 
-    .line 4
     iget-object v3, v0, Ldva;->r:Lgqq;
 
-    .line 5
     iget-boolean v0, v3, Lgqq;->f:Z
 
     if-eqz v0, :cond_0
@@ -66,12 +59,10 @@
 
     if-ne v0, v4, :cond_1
 
-    .line 42
     :cond_0
     :goto_0
     return v7
 
-    .line 7
     :cond_1
     iget-object v0, v3, Lgqq;->k:Ljava/util/List;
 
@@ -93,11 +84,9 @@
 
     if-ne v0, v4, :cond_3
 
-    .line 8
     :cond_2
     invoke-virtual {v3}, Lgqq;->b()V
 
-    .line 9
     :cond_3
     iget-object v0, v3, Lgqq;->r:Landroid/graphics/Rect;
 
@@ -115,24 +104,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 11
     iget-boolean v0, v3, Lgqq;->g:Z
 
     if-eqz v0, :cond_5
 
-    .line 13
     iget-object v0, v3, Lgqq;->k:Ljava/util/List;
 
     if-nez v0, :cond_4
 
-    .line 14
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, v3, Lgqq;->k:Ljava/util/List;
 
-    .line 15
     iget-object v0, v3, Lgqq;->k:Ljava/util/List;
 
     new-instance v4, Landroid/hardware/Camera$Area;
@@ -145,7 +130,6 @@
 
     invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 16
     :cond_4
     iget-object v0, v3, Lgqq;->k:Ljava/util/List;
 
@@ -155,7 +139,6 @@
 
     check-cast v0, Landroid/hardware/Camera$Area;
 
-    .line 17
     iget-object v4, v3, Lgqq;->r:Landroid/graphics/Rect;
 
     invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
@@ -180,32 +163,27 @@
 
     float-to-int v4, v4
 
-    .line 18
     invoke-virtual {v3, v1, v2, v4}, Lgqq;->a(III)Landroid/graphics/Rect;
 
     move-result-object v4
 
     iput-object v4, v0, Landroid/hardware/Camera$Area;->rect:Landroid/graphics/Rect;
 
-    .line 19
     :cond_5
     iget-boolean v0, v3, Lgqq;->h:Z
 
     if-eqz v0, :cond_7
 
-    .line 21
     iget-object v0, v3, Lgqq;->l:Ljava/util/List;
 
     if-nez v0, :cond_6
 
-    .line 22
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, v3, Lgqq;->l:Ljava/util/List;
 
-    .line 23
     iget-object v0, v3, Lgqq;->l:Ljava/util/List;
 
     new-instance v4, Landroid/hardware/Camera$Area;
@@ -218,7 +196,6 @@
 
     invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 24
     :cond_6
     iget-object v0, v3, Lgqq;->l:Ljava/util/List;
 
@@ -228,7 +205,6 @@
 
     check-cast v0, Landroid/hardware/Camera$Area;
 
-    .line 25
     iget-object v4, v3, Lgqq;->r:Landroid/graphics/Rect;
 
     invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
@@ -253,14 +229,12 @@
 
     float-to-int v4, v4
 
-    .line 26
     invoke-virtual {v3, v1, v2, v4}, Lgqq;->a(III)Landroid/graphics/Rect;
 
     move-result-object v4
 
     iput-object v4, v0, Landroid/hardware/Camera$Area;->rect:Landroid/graphics/Rect;
 
-    .line 27
     :cond_7
     iget-object v0, v3, Lgqq;->q:Latf;
 
@@ -272,12 +246,10 @@
 
     invoke-direct {v4, v5, v6}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 28
     invoke-interface {v0, v4}, Latf;->a(Landroid/graphics/PointF;)Lhbk;
 
     move-result-object v0
 
-    .line 29
     invoke-interface {v0}, Lhbk;->a()Lkey;
 
     move-result-object v0
@@ -286,15 +258,12 @@
 
     invoke-direct {v4, v3}, Lgqs;-><init>(Lgqq;)V
 
-    .line 30
     invoke-static {}, Lhxj;->a()Ljava/util/concurrent/Executor;
 
     move-result-object v5
 
-    .line 31
     invoke-static {v0, v4, v5}, Lkek;->a(Lkey;Lkej;Ljava/util/concurrent/Executor;)V
 
-    .line 32
     new-instance v0, Lhkn;
 
     int-to-float v1, v1
@@ -321,40 +290,33 @@
 
     iput-object v0, v3, Lgqq;->s:Lhkn;
 
-    .line 33
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, v3, Lgqq;->t:J
 
-    .line 34
     iget-object v0, v3, Lgqq;->o:Lgqt;
 
     invoke-interface {v0}, Lgqt;->t()V
 
-    .line 35
     iget-object v0, v3, Lgqq;->o:Lgqt;
 
     invoke-interface {v0}, Lgqt;->u()V
 
-    .line 36
     iget-boolean v0, v3, Lgqq;->g:Z
 
     if-eqz v0, :cond_8
 
-    .line 38
     invoke-virtual {v3, v7}, Lgqq;->a(I)V
 
     goto/16 :goto_0
 
-    .line 40
     :cond_8
     iget-object v0, v3, Lgqq;->n:Landroid/os/Handler;
 
     invoke-virtual {v0, v8}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 41
     iget-object v0, v3, Lgqq;->n:Landroid/os/Handler;
 
     sget v1, Lgqq;->b:I

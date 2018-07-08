@@ -18,8 +18,6 @@
 .method constructor <init>(Lfxx;Ljava/util/concurrent/Executor;Lihw;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfya;->c:Lfxx;
 
     iput-object p2, p0, Lfya;->b:Ljava/util/concurrent/Executor;
@@ -36,17 +34,12 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lfya;->c:Lfxx;
 
-    .line 3
     iget-object v0, v0, Lfxx;->a:Lfxo;
 
-    .line 5
     iget-object v0, v0, Lfxo;->e:Lihp;
 
-    .line 7
     iget-object v1, p0, Lfya;->b:Ljava/util/concurrent/Executor;
 
     new-instance v2, Lfyb;
@@ -55,6 +48,5 @@
 
     invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 8
     return-void
 .end method

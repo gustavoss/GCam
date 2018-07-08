@@ -14,8 +14,6 @@
 .method constructor <init>(Lbzd;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbzw;->a:Lbzd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,122 +26,96 @@
 .method public final run()V
     .locals 30
 
-    .prologue
-    .line 2
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lbzw;->a:Lbzd;
 
-    .line 3
     iget-object v14, v2, Lbzd;->j:Lepx;
 
-    .line 5
     iget-object v2, v14, Lepx;->b:Landroid/app/ActivityManager;
 
     invoke-virtual {v2}, Landroid/app/ActivityManager;->getMemoryClass()I
 
     move-result v15
 
-    .line 6
     iget-object v2, v14, Lepx;->b:Landroid/app/ActivityManager;
 
     invoke-virtual {v2}, Landroid/app/ActivityManager;->getLargeMemoryClass()I
 
     move-result v16
 
-    .line 7
     new-instance v2, Landroid/app/ActivityManager$MemoryInfo;
 
     invoke-direct {v2}, Landroid/app/ActivityManager$MemoryInfo;-><init>()V
 
-    .line 8
     iget-object v3, v14, Lepx;->b:Landroid/app/ActivityManager;
 
     invoke-virtual {v3, v2}, Landroid/app/ActivityManager;->getMemoryInfo(Landroid/app/ActivityManager$MemoryInfo;)V
 
-    .line 9
     iget-wide v4, v2, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
 
     const-wide/32 v6, 0x100000
 
     div-long v18, v4, v6
 
-    .line 10
     iget-wide v4, v2, Landroid/app/ActivityManager$MemoryInfo;->totalMem:J
 
     const-wide/32 v6, 0x100000
 
     div-long v20, v4, v6
 
-    .line 11
     iget-wide v4, v2, Landroid/app/ActivityManager$MemoryInfo;->threshold:J
 
     const-wide/32 v6, 0x100000
 
     div-long v22, v4, v6
 
-    .line 12
     iget-boolean v0, v2, Landroid/app/ActivityManager$MemoryInfo;->lowMemory:Z
 
     move/from16 v17, v0
 
-    .line 13
     new-instance v24, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
     invoke-direct/range {v24 .. v24}, Landroid/app/ActivityManager$RunningAppProcessInfo;-><init>()V
 
-    .line 14
     invoke-static/range {v24 .. v24}, Landroid/app/ActivityManager;->getMyMemoryState(Landroid/app/ActivityManager$RunningAppProcessInfo;)V
 
-    .line 15
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v25
 
-    .line 16
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v26
 
-    .line 17
     const-wide/16 v12, 0x0
 
-    .line 18
     const-wide/16 v10, 0x0
 
-    .line 19
     const-wide/16 v8, 0x0
 
-    .line 20
     const-wide/16 v6, 0x0
 
-    .line 21
     const-wide/16 v4, 0x0
 
-    .line 22
     const-wide/16 v2, 0x0
 
-    .line 23
     if-eqz v25, :cond_0
 
-    .line 24
     const/4 v2, 0x1
 
     new-array v2, v2, [I
 
-    .line 25
     const/4 v3, 0x0
 
     aput v25, v2, v3
 
-    .line 26
     iget-object v3, v14, Lepx;->b:Landroid/app/ActivityManager;
 
     invoke-virtual {v3, v2}, Landroid/app/ActivityManager;->getProcessMemoryInfo([I)[Landroid/os/Debug$MemoryInfo;
 
     move-result-object v2
 
-    .line 27
     const/4 v3, 0x0
 
     aget-object v3, v2, v3
@@ -158,7 +130,6 @@
 
     div-long v12, v4, v6
 
-    .line 28
     const/4 v3, 0x0
 
     aget-object v3, v2, v3
@@ -173,7 +144,6 @@
 
     div-long v10, v4, v6
 
-    .line 29
     const/4 v3, 0x0
 
     aget-object v3, v2, v3
@@ -188,7 +158,6 @@
 
     div-long v8, v4, v6
 
-    .line 30
     const/4 v3, 0x0
 
     aget-object v3, v2, v3
@@ -201,7 +170,6 @@
 
     div-long v6, v4, v6
 
-    .line 31
     const/4 v3, 0x0
 
     aget-object v3, v2, v3
@@ -214,7 +182,6 @@
 
     div-long v4, v4, v28
 
-    .line 32
     const/4 v3, 0x0
 
     aget-object v2, v2, v3
@@ -227,13 +194,11 @@
 
     div-long v2, v2, v28
 
-    .line 33
     :cond_0
     new-instance v14, Ljava/util/HashMap;
 
     invoke-direct {v14}, Ljava/util/HashMap;-><init>()V
 
-    .line 34
     const-string v25, "timestamp"
 
     invoke-static/range {v26 .. v27}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -246,7 +211,6 @@
 
     invoke-virtual {v14, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 35
     const-string v25, "availMem"
 
     invoke-static/range {v18 .. v19}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -259,7 +223,6 @@
 
     invoke-virtual {v14, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 36
     const-string v25, "totalMem"
 
     invoke-static/range {v20 .. v21}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -272,7 +235,6 @@
 
     invoke-virtual {v14, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 37
     const-string v25, "totalPSS"
 
     invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -285,7 +247,6 @@
 
     invoke-virtual {v14, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 38
     const-string v25, "lastTrimLevel"
 
     move-object/from16 v0, v24
@@ -304,7 +265,6 @@
 
     invoke-virtual {v14, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 39
     const-string v25, "totalPrivateDirty"
 
     invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -315,7 +275,6 @@
 
     invoke-virtual {v14, v0, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 40
     const-string v12, "totalSharedDirty"
 
     invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -324,7 +283,6 @@
 
     invoke-virtual {v14, v12, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 41
     const-string v10, "memoryClass"
 
     invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -333,7 +291,6 @@
 
     invoke-virtual {v14, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 42
     const-string v10, "largeMemoryClass"
 
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -342,7 +299,6 @@
 
     invoke-virtual {v14, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 43
     const-string v10, "nativePSS"
 
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -351,7 +307,6 @@
 
     invoke-virtual {v14, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 44
     const-string v10, "dalvikPSS"
 
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -360,7 +315,6 @@
 
     invoke-virtual {v14, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 45
     const-string v10, "otherPSS"
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -369,7 +323,6 @@
 
     invoke-virtual {v14, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
     const-string v10, "threshold"
 
     invoke-static/range {v22 .. v23}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -378,7 +331,6 @@
 
     invoke-virtual {v14, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 47
     const-string v10, "lowMemory"
 
     invoke-static/range {v17 .. v17}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -387,7 +339,6 @@
 
     invoke-virtual {v14, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 48
     sget-object v10, Lepx;->a:Ljava/lang/String;
 
     sget-object v11, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -400,7 +351,6 @@
 
     const/4 v15, 0x0
 
-    .line 49
     invoke-static/range {v26 .. v27}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v25
@@ -409,7 +359,6 @@
 
     const/4 v15, 0x1
 
-    .line 50
     invoke-static/range {v18 .. v19}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v18
@@ -418,7 +367,6 @@
 
     const/4 v15, 0x2
 
-    .line 51
     invoke-static/range {v20 .. v21}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v18
@@ -427,7 +375,6 @@
 
     const/4 v15, 0x3
 
-    .line 52
     invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v8
@@ -440,7 +387,6 @@
 
     iget v9, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->lastTrimLevel:I
 
-    .line 53
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v9
@@ -449,7 +395,6 @@
 
     const/4 v8, 0x5
 
-    .line 54
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v9
@@ -458,7 +403,6 @@
 
     const/4 v8, 0x6
 
-    .line 55
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v6
@@ -467,7 +411,6 @@
 
     const/4 v6, 0x7
 
-    .line 56
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v4
@@ -476,7 +419,6 @@
 
     const/16 v4, 0x8
 
-    .line 57
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
@@ -485,7 +427,6 @@
 
     const/16 v2, 0x9
 
-    .line 58
     invoke-static/range {v22 .. v23}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
@@ -494,22 +435,18 @@
 
     const/16 v2, 0xa
 
-    .line 59
     invoke-static/range {v17 .. v17}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v3
 
     aput-object v3, v13, v2
 
-    .line 60
     invoke-static {v11, v12, v13}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 61
     invoke-static {v10, v2}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 64
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lbzw;->a:Lbzd;
@@ -522,6 +459,5 @@
 
     invoke-interface {v2, v14, v3}, Liix;->a(Ljava/util/HashMap;Ljava/lang/String;)V
 
-    .line 65
     return-void
 .end method

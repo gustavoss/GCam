@@ -38,8 +38,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 80
     new-instance v0, Laql;
 
     invoke-direct {v0}, Laql;-><init>()V
@@ -52,48 +50,36 @@
 .method public constructor <init>(Landroid/os/Handler;II)V
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Laqk;-><init>(Landroid/os/Handler;IIB)V
 
-    .line 2
     return-void
 .end method
 
 .method private constructor <init>(Landroid/os/Handler;IIB)V
     .locals 1
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     iput-object p1, p0, Laqk;->b:Landroid/os/Handler;
 
-    .line 5
     iput p2, p0, Laqk;->c:I
 
-    .line 6
     iput p3, p0, Laqk;->d:I
 
-    .line 7
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Laqk;->e:Z
 
-    .line 8
     return-void
 .end method
 
 .method private final declared-synchronized a(Ljava/lang/Long;)Ljava/lang/Object;
     .locals 5
 
-    .prologue
     const-wide/16 v2, 0x0
 
-    .line 34
     monitor-enter p0
 
     :try_start_0
@@ -107,14 +93,12 @@
 
     if-nez v0, :cond_0
 
-    .line 35
     invoke-static {}, Lary;->c()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 36
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "You must call this method on a background thread"
@@ -125,7 +109,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 34
     :catchall_0
     move-exception v0
 
@@ -133,27 +116,23 @@
 
     throw v0
 
-    .line 37
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Laqk;->h:Z
 
     if-eqz v0, :cond_1
 
-    .line 38
     new-instance v0, Ljava/util/concurrent/CancellationException;
 
     invoke-direct {v0}, Ljava/util/concurrent/CancellationException;-><init>()V
 
     throw v0
 
-    .line 39
     :cond_1
     iget-boolean v0, p0, Laqk;->j:Z
 
     if-eqz v0, :cond_2
 
-    .line 40
     new-instance v0, Ljava/util/concurrent/ExecutionException;
 
     iget-object v1, p0, Laqk;->k:Lagp;
@@ -162,34 +141,28 @@
 
     throw v0
 
-    .line 41
     :cond_2
     iget-boolean v0, p0, Laqk;->i:Z
 
     if-eqz v0, :cond_3
 
-    .line 42
     iget-object v0, p0, Laqk;->f:Ljava/lang/Object;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 62
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 43
     :cond_3
     if-nez p1, :cond_5
 
-    .line 45
     const-wide/16 v0, 0x0
 
     :try_start_2
     invoke-virtual {p0, v0, v1}, Ljava/lang/Object;->wait(J)V
 
-    .line 54
     :cond_4
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
@@ -197,14 +170,12 @@
 
     if-eqz v0, :cond_6
 
-    .line 55
     new-instance v0, Ljava/lang/InterruptedException;
 
     invoke-direct {v0}, Ljava/lang/InterruptedException;-><init>()V
 
     throw v0
 
-    .line 47
     :cond_5
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
@@ -214,19 +185,16 @@
 
     if-lez v0, :cond_4
 
-    .line 48
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 49
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v2
 
     add-long/2addr v2, v0
 
-    .line 50
     :goto_1
     invoke-virtual {p0}, Laqk;->isDone()Z
 
@@ -238,26 +206,21 @@
 
     if-gez v4, :cond_4
 
-    .line 51
     sub-long v0, v2, v0
 
-    .line 52
     invoke-virtual {p0, v0, v1}, Ljava/lang/Object;->wait(J)V
 
-    .line 53
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     goto :goto_1
 
-    .line 56
     :cond_6
     iget-boolean v0, p0, Laqk;->j:Z
 
     if-eqz v0, :cond_7
 
-    .line 57
     new-instance v0, Ljava/util/concurrent/ExecutionException;
 
     iget-object v1, p0, Laqk;->k:Lagp;
@@ -266,33 +229,28 @@
 
     throw v0
 
-    .line 58
     :cond_7
     iget-boolean v0, p0, Laqk;->h:Z
 
     if-eqz v0, :cond_8
 
-    .line 59
     new-instance v0, Ljava/util/concurrent/CancellationException;
 
     invoke-direct {v0}, Ljava/util/concurrent/CancellationException;-><init>()V
 
     throw v0
 
-    .line 60
     :cond_8
     iget-boolean v0, p0, Laqk;->i:Z
 
     if-nez v0, :cond_9
 
-    .line 61
     new-instance v0, Ljava/util/concurrent/TimeoutException;
 
     invoke-direct {v0}, Ljava/util/concurrent/TimeoutException;-><init>()V
 
     throw v0
 
-    .line 62
     :cond_9
     iget-object v0, p0, Laqk;->f:Ljava/lang/Object;
     :try_end_2
@@ -306,8 +264,6 @@
 .method public final a()Laqi;
     .locals 1
 
-    .prologue
-    .line 29
     iget-object v0, p0, Laqk;->g:Laqi;
 
     return-object v0
@@ -316,42 +272,32 @@
 .method public final a(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .prologue
-    .line 30
     return-void
 .end method
 
 .method public final a(Laqi;)V
     .locals 0
 
-    .prologue
-    .line 27
     iput-object p1, p0, Laqk;->g:Laqi;
 
-    .line 28
     return-void
 .end method
 
 .method public final a(Laqy;)V
     .locals 2
 
-    .prologue
-    .line 24
     iget v0, p0, Laqk;->c:I
 
     iget v1, p0, Laqk;->d:I
 
     invoke-interface {p1, v0, v1}, Laqy;->a(II)V
 
-    .line 25
     return-void
 .end method
 
 .method public final declared-synchronized a(Ljava/lang/Object;Lari;)V
     .locals 0
 
-    .prologue
-    .line 33
     monitor-enter p0
 
     monitor-exit p0
@@ -362,8 +308,6 @@
 .method public final declared-synchronized a(Lagp;)Z
     .locals 1
 
-    .prologue
-    .line 70
     monitor-enter p0
 
     const/4 v0, 0x1
@@ -371,22 +315,18 @@
     :try_start_0
     iput-boolean v0, p0, Laqk;->j:Z
 
-    .line 71
     iput-object p1, p0, Laqk;->k:Lagp;
 
-    .line 73
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 74
     const/4 v0, 0x0
 
     monitor-exit p0
 
     return v0
 
-    .line 70
     :catchall_0
     move-exception v0
 
@@ -398,8 +338,6 @@
 .method public final declared-synchronized a(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 75
     monitor-enter p0
 
     const/4 v0, 0x1
@@ -407,22 +345,18 @@
     :try_start_0
     iput-boolean v0, p0, Laqk;->i:Z
 
-    .line 76
     iput-object p1, p0, Laqk;->f:Ljava/lang/Object;
 
-    .line 78
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 79
     const/4 v0, 0x0
 
     monitor-exit p0
 
     return v0
 
-    .line 75
     :catchall_0
     move-exception v0
 
@@ -434,40 +368,30 @@
 .method public final b()V
     .locals 0
 
-    .prologue
-    .line 67
     return-void
 .end method
 
 .method public final b(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .prologue
-    .line 31
     return-void
 .end method
 
 .method public final b(Laqy;)V
     .locals 0
 
-    .prologue
-    .line 26
     return-void
 .end method
 
 .method public final c()V
     .locals 0
 
-    .prologue
-    .line 68
     return-void
 .end method
 
 .method public final declared-synchronized c(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .prologue
-    .line 32
     monitor-enter p0
 
     monitor-exit p0
@@ -478,10 +402,8 @@
 .method public final declared-synchronized cancel(Z)Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 9
     monitor-enter p0
 
     :try_start_0
@@ -493,30 +415,24 @@
 
     if-eqz v1, :cond_1
 
-    .line 10
     const/4 v0, 0x0
 
-    .line 17
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 11
     :cond_1
     const/4 v1, 0x1
 
     :try_start_1
     iput-boolean v1, p0, Laqk;->h:Z
 
-    .line 13
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 14
     if-eqz p1, :cond_0
 
-    .line 16
     iget-object v1, p0, Laqk;->b:Landroid/os/Handler;
 
     invoke-virtual {v1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
@@ -525,7 +441,6 @@
 
     goto :goto_0
 
-    .line 9
     :catchall_0
     move-exception v0
 
@@ -537,16 +452,12 @@
 .method public final d()V
     .locals 0
 
-    .prologue
-    .line 69
     return-void
 .end method
 
 .method public final get()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 20
     const/4 v0, 0x0
 
     :try_start_0
@@ -558,11 +469,9 @@
 
     return-object v0
 
-    .line 21
     :catch_0
     move-exception v0
 
-    .line 22
     new-instance v1, Ljava/lang/AssertionError;
 
     invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -573,8 +482,6 @@
 .method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 23
     invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide v0
@@ -593,8 +500,6 @@
 .method public final declared-synchronized isCancelled()Z
     .locals 1
 
-    .prologue
-    .line 18
     monitor-enter p0
 
     :try_start_0
@@ -617,8 +522,6 @@
 .method public final declared-synchronized isDone()Z
     .locals 1
 
-    .prologue
-    .line 19
     monitor-enter p0
 
     :try_start_0
@@ -660,23 +563,18 @@
 .method public final run()V
     .locals 1
 
-    .prologue
-    .line 63
     iget-object v0, p0, Laqk;->g:Laqi;
 
     if-eqz v0, :cond_0
 
-    .line 64
     iget-object v0, p0, Laqk;->g:Laqi;
 
     invoke-interface {v0}, Laqi;->d()V
 
-    .line 65
     const/4 v0, 0x0
 
     iput-object v0, p0, Laqk;->g:Laqi;
 
-    .line 66
     :cond_0
     return-void
 .end method

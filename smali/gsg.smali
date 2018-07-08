@@ -13,8 +13,6 @@
 .method constructor <init>(Lgsi;Z)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgsg;->b:Lgsi;
 
     iput-boolean p2, p0, Lgsg;->a:Z
@@ -29,61 +27,44 @@
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgsg;->b:Lgsi;
 
-    .line 3
     iget-object v0, v0, Lgsi;->b:Lcom/google/android/apps/camera/ui/modeswitch/ViewfinderCover;
 
-    .line 4
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/ui/modeswitch/ViewfinderCover;->setVisibility(I)V
 
-    .line 5
     iget-boolean v0, p0, Lgsg;->a:Z
 
     if-eqz v0, :cond_0
 
-    .line 6
     iget-object v0, p0, Lgsg;->b:Lgsi;
 
-    .line 7
     iget-object v0, v0, Lgsi;->d:Lgsj;
 
-    .line 8
     invoke-virtual {v0}, Lgsj;->d()V
 
-    .line 12
     :goto_0
     iget-object v0, p0, Lgsg;->b:Lgsi;
 
-    .line 13
     iget-object v0, v0, Lgsi;->c:Lgsh;
 
-    .line 14
     invoke-interface {v0}, Lgsh;->t()V
 
-    .line 15
     iget-object v0, p0, Lgsg;->b:Lgsi;
 
-    .line 16
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lgsi;->e:Z
 
-    .line 17
     return-void
 
-    .line 9
     :cond_0
     iget-object v0, p0, Lgsg;->b:Lgsi;
 
-    .line 10
     iget-object v0, v0, Lgsi;->d:Lgsj;
 
-    .line 11
     invoke-virtual {v0}, Lgsj;->c()V
 
     goto :goto_0

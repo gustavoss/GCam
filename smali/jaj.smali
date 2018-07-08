@@ -18,20 +18,14 @@
 .method public constructor <init>(Ljia;Ljhi;Ljava/util/List;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljaj;->a:Ljia;
 
-    .line 3
     iput-object p2, p0, Ljaj;->b:Ljhi;
 
-    .line 4
     iput-object p3, p0, Ljaj;->c:Ljava/util/List;
 
-    .line 5
     return-void
 .end method
 
@@ -40,13 +34,10 @@
 .method public final synthetic a(Ljava/lang/Object;Ljava/util/concurrent/Executor;)Lirp;
     .locals 10
 
-    .prologue
     const/4 v3, -0x1
 
-    .line 6
     check-cast p1, Landroid/util/Pair;
 
-    .line 7
     iget-object v0, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Long;
@@ -55,10 +46,8 @@
 
     move-result-wide v4
 
-    .line 8
     iget-object v6, p0, Ljaj;->c:Ljava/util/List;
 
-    .line 11
     const/4 v0, 0x0
 
     move v1, v0
@@ -72,7 +61,6 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 12
     invoke-interface {v6, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -87,7 +75,6 @@
 
     move v2, v1
 
-    .line 14
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -95,11 +82,9 @@
 
     goto :goto_0
 
-    .line 15
     :cond_1
     if-ne v2, v3, :cond_2
 
-    .line 16
     new-instance v0, Ljava/lang/RuntimeException;
 
     const/16 v1, 0x3a
@@ -126,7 +111,6 @@
 
     throw v0
 
-    .line 17
     :cond_2
     invoke-interface {v6, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -134,10 +118,8 @@
 
     check-cast v0, Ljai;
 
-    .line 18
     iget-object v1, v0, Ljai;->b:Ljava/util/List;
 
-    .line 19
     iget-object v0, p0, Ljaj;->a:Ljia;
 
     invoke-virtual {v0, v4, v5}, Ljia;->b(J)Lirp;
@@ -150,7 +132,6 @@
 
     invoke-direct {v2, v3}, Ljak;-><init>(Ljhi;)V
 
-    .line 20
     invoke-interface {v0, p2, v2}, Lirp;->a(Ljava/util/concurrent/Executor;Liqd;)Lirp;
 
     move-result-object v2
@@ -163,11 +144,9 @@
 
     invoke-direct {v3, v0, v1}, Ljal;-><init>(Ljhl;Ljava/util/List;)V
 
-    .line 21
     invoke-interface {v2, p2, v3}, Lirp;->a(Ljava/util/concurrent/Executor;Liqd;)Lirp;
 
     move-result-object v0
 
-    .line 22
     return-object v0
 .end method

@@ -13,8 +13,6 @@
 .method constructor <init>(Ldd;Landroid/view/View;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldt;->a:Ldd;
 
     iput-object p2, p0, Ldt;->b:Landroid/view/View;
@@ -29,14 +27,11 @@
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ldt;->a:Ldd;
 
     iget-object v1, p0, Ldt;->b:Landroid/view/View;
 
     invoke-interface {v0, v1}, Ldd;->b(Landroid/view/View;)V
 
-    .line 3
     return-void
 .end method

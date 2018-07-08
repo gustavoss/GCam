@@ -27,33 +27,24 @@
 .method constructor <init>(Ljava/util/List;Ljava/util/UUID;Ldoj;Ljava/util/concurrent/Executor;Lchs;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcic;
 
     invoke-direct {v0}, Lcic;-><init>()V
 
     iput-object v0, p0, Lcib;->b:Liqd;
 
-    .line 3
     iput-object p1, p0, Lcib;->d:Ljava/util/List;
 
-    .line 4
     iput-object p3, p0, Lcib;->e:Ldoj;
 
-    .line 5
     iput-object p2, p0, Lcib;->c:Ljava/util/UUID;
 
-    .line 6
     iput-object p4, p0, Lcib;->a:Ljava/util/concurrent/Executor;
 
-    .line 7
     iput-object p5, p0, Lcib;->f:Lchs;
 
-    .line 8
     return-void
 .end method
 
@@ -62,8 +53,6 @@
 .method final a(Ljia;Lihg;I)Ljava/util/List;
     .locals 17
 
-    .prologue
-    .line 9
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-virtual/range {p1 .. p1}, Ljia;->f()I
@@ -72,7 +61,6 @@
 
     invoke-direct {v10, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 10
     invoke-virtual/range {p1 .. p1}, Ljia;->c()Ljava/util/Set;
 
     move-result-object v2
@@ -99,7 +87,6 @@
 
     move-result-wide v2
 
-    .line 12
     :try_start_0
     move-object/from16 v0, p1
 
@@ -119,10 +106,8 @@
     :try_end_0
     .catch Ljhu; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 13
     const/4 v9, 0x0
 
-    .line 14
     :try_start_1
     invoke-interface {v8}, Ljqy;->e()Ljava/lang/Object;
 
@@ -130,30 +115,25 @@
 
     check-cast v2, Lceh;
 
-    .line 15
     iget-object v2, v2, Lceh;->b:Lcbk;
 
     if-eqz v2, :cond_2
 
     const/4 v2, 0x1
 
-    .line 16
     :goto_1
     if-eqz v2, :cond_4
 
-    .line 17
     invoke-interface {v8}, Ljqy;->e()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lceh;
 
-    .line 19
     iget-object v3, v2, Lceh;->b:Lcbk;
 
     if-nez v3, :cond_3
 
-    .line 20
     new-instance v2, Ljava/lang/NullPointerException;
 
     const-string v3, "Attempting to get disk image, which is in memory!"
@@ -165,7 +145,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 58
     :catch_0
     move-exception v2
 
@@ -174,7 +153,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 59
     :catchall_0
     move-exception v3
 
@@ -202,27 +180,22 @@
     :try_end_4
     .catch Ljhu; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 62
     :catch_1
     move-exception v2
 
     goto :goto_0
 
-    .line 15
     :cond_2
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 21
     :cond_3
     :try_start_5
     iget-object v3, v2, Lceh;->b:Lcbk;
 
-    .line 23
     iget-object v2, v3, Lcbk;->b:Lkey;
 
-    .line 24
     invoke-static {v2}, Lkek;->c(Ljava/util/concurrent/Future;)Ljava/lang/Object;
 
     move-result-object v2
@@ -233,13 +206,10 @@
 
     move-result-object v2
 
-    .line 25
     iget-wide v4, v3, Lcbk;->a:J
 
-    .line 26
     new-instance v3, Lcie;
 
-    .line 28
     new-instance v6, Ljqv;
 
     invoke-static {v2}, Ljid;->a(Ljava/lang/AutoCloseable;)Ljqr;
@@ -248,26 +218,22 @@
 
     invoke-direct {v6, v2}, Ljqv;-><init>(Ljqr;)V
 
-    .line 29
     invoke-static {v6}, Ljid;->a(Ljrc;)Ljrb;
 
     move-result-object v2
 
-    .line 30
     invoke-direct {v3, v2, v4, v5}, Lcie;-><init>(Ljrb;J)V
 
     invoke-static {v3}, Liih;->b(Ljava/lang/Object;)Lirp;
 
     move-result-object v2
 
-    .line 56
     :goto_4
     invoke-interface {v10, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_5
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 57
     if-eqz v8, :cond_0
 
     :try_start_6
@@ -277,7 +243,6 @@
 
     goto :goto_0
 
-    .line 32
     :cond_4
     :try_start_7
     invoke-interface {v8}, Ljqy;->d()Ljava/lang/Object;
@@ -286,12 +251,10 @@
 
     check-cast v2, Lceh;
 
-    .line 34
     iget-object v3, v2, Lceh;->a:Lfjl;
 
     if-nez v3, :cond_5
 
-    .line 35
     new-instance v2, Ljava/lang/NullPointerException;
 
     const-string v3, "Attempting to get memory image, which is on disk!"
@@ -300,7 +263,6 @@
 
     throw v2
 
-    .line 59
     :catchall_1
     move-exception v2
 
@@ -308,11 +270,9 @@
 
     goto :goto_2
 
-    .line 36
     :cond_5
     iget-object v3, v2, Lceh;->a:Lfjl;
 
-    .line 39
     invoke-virtual {v3}, Lfjl;->a()Landroid/graphics/Rect;
 
     move-result-object v2
@@ -323,12 +283,10 @@
 
     move-result-object v4
 
-    .line 41
     invoke-virtual {v3}, Lfjl;->f()J
 
     move-result-wide v6
 
-    .line 42
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcib;->d:Ljava/util/List;
@@ -354,14 +312,12 @@
 
     move-object v5, v0
 
-    .line 43
     iget-wide v14, v5, Lcik;->a:J
 
     cmp-long v2, v14, v6
 
     if-nez v2, :cond_6
 
-    .line 48
     new-instance v12, Lbcx;
 
     move-object/from16 v0, p0
@@ -372,7 +328,6 @@
 
     invoke-direct {v12, v2, v6}, Lbcx;-><init>(Ljava/util/UUID;Z)V
 
-    .line 49
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcib;->e:Ldoj;
@@ -393,17 +348,14 @@
 
     move/from16 v5, p3
 
-    .line 50
     invoke-virtual/range {v2 .. v7}, Ldoj;->a(Lfjl;Landroid/graphics/Rect;ILgab;Ljrm;)Lkey;
 
     move-result-object v2
 
-    .line 51
     invoke-static {v2}, Liih;->a(Lkey;)Lirp;
 
     move-result-object v2
 
-    .line 52
     invoke-virtual {v3}, Lfjl;->f()J
 
     move-result-wide v4
@@ -412,13 +364,10 @@
 
     iget-object v3, v0, Lcib;->a:Ljava/util/concurrent/Executor;
 
-    .line 53
     invoke-static {v2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 54
     invoke-static {v3}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 55
     new-instance v6, Lcif;
 
     invoke-direct {v6, v4, v5}, Lcif;-><init>(J)V
@@ -429,7 +378,6 @@
 
     goto/16 :goto_4
 
-    .line 46
     :cond_7
     new-instance v2, Ljava/util/NoSuchElementException;
 
@@ -466,7 +414,6 @@
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_0
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 59
     :catch_2
     move-exception v4
 
@@ -482,7 +429,6 @@
 
     goto/16 :goto_3
 
-    .line 63
     :cond_9
     return-object v10
 .end method

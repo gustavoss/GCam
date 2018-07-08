@@ -20,8 +20,6 @@
 .method constructor <init>(Lfci;Lfdm;Lfgf;Lihr;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldrx;->a:Lfci;
 
     iput-object p2, p0, Ldrx;->b:Lfdm;
@@ -40,33 +38,26 @@
 .method public final close()V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ldrx;->a:Lfci;
 
     invoke-interface {v0}, Lfci;->close()V
 
-    .line 3
     iget-object v0, p0, Ldrx;->b:Lfdm;
 
     invoke-interface {v0}, Lfdm;->close()V
 
-    .line 4
     iget-object v0, p0, Ldrx;->c:Lfgf;
 
     invoke-interface {v0}, Lfgf;->close()V
 
-    .line 5
     iget-object v0, p0, Ldrx;->d:Lihr;
 
     if-eqz v0, :cond_0
 
-    .line 6
     iget-object v0, p0, Ldrx;->d:Lihr;
 
     invoke-interface {v0}, Lihr;->close()V
 
-    .line 7
     :cond_0
     return-void
 .end method

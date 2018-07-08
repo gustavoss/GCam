@@ -35,7 +35,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -46,7 +45,6 @@
 
     const/4 v4, 0x0
 
-    .line 5
     new-instance v0, Lifb;
 
     const-string v1, "DEFAULT"
@@ -55,7 +53,6 @@
 
     sput-object v0, Lifb;->c:Lifb;
 
-    .line 6
     new-instance v0, Lifb;
 
     const-string v1, "MIC"
@@ -64,7 +61,6 @@
 
     sput-object v0, Lifb;->d:Lifb;
 
-    .line 7
     new-instance v0, Lifb;
 
     const-string v1, "VOICE_UPLINK"
@@ -73,7 +69,6 @@
 
     sput-object v0, Lifb;->e:Lifb;
 
-    .line 8
     new-instance v0, Lifb;
 
     const-string v1, "VOICE_DOWNLINK"
@@ -82,7 +77,6 @@
 
     sput-object v0, Lifb;->f:Lifb;
 
-    .line 9
     new-instance v0, Lifb;
 
     const-string v1, "VOICE_CALL"
@@ -91,7 +85,6 @@
 
     sput-object v0, Lifb;->g:Lifb;
 
-    .line 10
     new-instance v0, Lifb;
 
     const-string v1, "CAMCORDER"
@@ -104,7 +97,6 @@
 
     sput-object v0, Lifb;->a:Lifb;
 
-    .line 11
     new-instance v0, Lifb;
 
     const-string v1, "VOICE_RECOGNITION"
@@ -117,7 +109,6 @@
 
     sput-object v0, Lifb;->h:Lifb;
 
-    .line 12
     new-instance v0, Lifb;
 
     const-string v1, "VOICE_COMMUNICATION"
@@ -130,7 +121,6 @@
 
     sput-object v0, Lifb;->i:Lifb;
 
-    .line 13
     new-instance v0, Lifb;
 
     const-string v1, "REMOTE_SUBMIX"
@@ -143,7 +133,6 @@
 
     sput-object v0, Lifb;->j:Lifb;
 
-    .line 14
     new-instance v0, Lifb;
 
     const-string v1, "UNPROCESSED"
@@ -156,7 +145,6 @@
 
     sput-object v0, Lifb;->k:Lifb;
 
-    .line 15
     const/16 v0, 0xa
 
     new-array v0, v0, [Lifb;
@@ -219,22 +207,16 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput p3, p0, Lifb;->b:I
 
-    .line 4
     return-void
 .end method
 
 .method public static values()[Lifb;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lifb;->l:[Lifb;
 
     invoke-virtual {v0}, [Lifb;->clone()Ljava/lang/Object;

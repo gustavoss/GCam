@@ -18,20 +18,14 @@
 .method public constructor <init>(Ljava/lang/Object;Ljava/lang/Runnable;Lisk;Litc;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Liro;->a:Ljava/lang/Object;
 
-    .line 3
     iput-object p3, p0, Liro;->b:Lisk;
 
-    .line 4
     iput-object p2, p0, Liro;->c:Ljava/lang/Runnable;
 
-    .line 5
     return-void
 .end method
 
@@ -40,40 +34,31 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 6
     iget-object v0, p0, Liro;->a:Ljava/lang/Object;
 
     iget-object v1, p0, Liro;->c:Ljava/lang/Runnable;
 
     iget-object v2, p0, Liro;->b:Lisk;
 
-    .line 8
     :try_start_0
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    .line 9
     invoke-virtual {v2, v0}, Lisk;->a(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 16
     :goto_0
     return-void
 
-    .line 11
     :catch_0
     move-exception v0
 
-    .line 13
     invoke-static {v0}, Lirr;->a(Ljava/lang/Throwable;)Lirr;
 
     move-result-object v0
 
-    .line 14
     check-cast v0, Lirr;
 
-    .line 15
     invoke-virtual {v2, v0}, Lisk;->a(Lirr;)Z
 
     goto :goto_0
@@ -82,8 +67,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 17
     iget-object v0, p0, Liro;->c:Ljava/lang/Runnable;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

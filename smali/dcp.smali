@@ -108,8 +108,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 117
     const-string v0, "GoudaModule"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -124,11 +122,8 @@
 .method public constructor <init>(Liii;Ldya;Lcst;Lbza;Lcvm;Libo;Lcvr;Lgkk;Ljrw;Lfar;Lasy;Lhgl;Lgwv;Lgya;Ljrw;Landroid/content/Context;Leaf;Lbky;Lbqi;Lfyd;Landroid/view/accessibility/AccessibilityManager;Lbov;Lbpk;Lfzc;Lgpj;Lhhj;Lida;Lelt;)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v1, Licm;
 
     const/4 v2, 0x0
@@ -141,7 +136,6 @@
 
     iput-object v1, p0, Ldcp;->n:Licm;
 
-    .line 3
     new-instance v1, Licm;
 
     const/4 v2, 0x0
@@ -154,160 +148,126 @@
 
     iput-object v1, p0, Ldcp;->y:Licm;
 
-    .line 4
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Ldcp;->z:Z
 
-    .line 5
     new-instance v1, Ldcw;
 
     invoke-direct {v1, p0}, Ldcw;-><init>(Ldcp;)V
 
     iput-object v1, p0, Ldcp;->I:Lcom/google/android/apps/camera/bottombar/BottomBarListener;
 
-    .line 6
     new-instance v1, Ldcx;
 
     invoke-direct {v1, p0}, Ldcx;-><init>(Ldcp;)V
 
     iput-object v1, p0, Ldcp;->J:Lfaw;
 
-    .line 7
     new-instance v1, Ldcq;
 
     invoke-direct {v1, p0}, Ldcq;-><init>(Ldcp;)V
 
     iput-object v1, p0, Ldcp;->K:Lihw;
 
-    .line 8
     sget-object v1, Ldcr;->a:Lfax;
 
     iput-object v1, p0, Ldcp;->L:Lfax;
 
-    .line 9
     new-instance v1, Ldcz;
 
     invoke-direct {v1, p0}, Ldcz;-><init>(Ldcp;)V
 
     iput-object v1, p0, Ldcp;->M:Lhgm;
 
-    .line 10
     iput-object p1, p0, Ldcp;->b:Liii;
 
-    .line 11
     iput-object p3, p0, Ldcp;->N:Lcst;
 
-    .line 12
     iput-object p2, p0, Ldcp;->c:Ldya;
 
-    .line 13
     iput-object p4, p0, Ldcp;->d:Lbza;
 
-    .line 14
     iput-object p5, p0, Ldcp;->O:Lcvm;
 
-    .line 15
     iput-object p6, p0, Ldcp;->e:Libo;
 
-    .line 16
     iput-object p7, p0, Ldcp;->g:Lcvr;
 
-    .line 17
     iput-object p8, p0, Ldcp;->h:Lgkk;
 
-    .line 18
     iput-object p10, p0, Ldcp;->P:Lfar;
 
-    .line 19
     iput-object p11, p0, Ldcp;->j:Lasy;
 
-    .line 20
     iput-object p12, p0, Ldcp;->k:Lhgl;
 
-    .line 21
     move-object/from16 v0, p13
 
     iput-object v0, p0, Ldcp;->l:Lgwv;
 
-    .line 22
     move-object/from16 v0, p14
 
     iput-object v0, p0, Ldcp;->Q:Lgya;
 
-    .line 23
     move-object/from16 v0, p15
 
     iput-object v0, p0, Ldcp;->m:Ljrw;
 
-    .line 24
     move-object/from16 v0, p16
 
     iput-object v0, p0, Ldcp;->o:Landroid/content/Context;
 
-    .line 25
     move-object/from16 v0, p17
 
     iput-object v0, p0, Ldcp;->p:Leaf;
 
-    .line 26
     move-object/from16 v0, p18
 
     iput-object v0, p0, Ldcp;->q:Lbky;
 
-    .line 27
     move-object/from16 v0, p19
 
     iput-object v0, p0, Ldcp;->r:Lbqi;
 
-    .line 28
     move-object/from16 v0, p20
 
     iput-object v0, p0, Ldcp;->s:Lfyd;
 
-    .line 29
     move-object/from16 v0, p21
 
     iput-object v0, p0, Ldcp;->t:Landroid/view/accessibility/AccessibilityManager;
 
-    .line 30
     move-object/from16 v0, p22
 
     iput-object v0, p0, Ldcp;->u:Lbov;
 
-    .line 31
     move-object/from16 v0, p23
 
     iput-object v0, p0, Ldcp;->v:Lbpk;
 
-    .line 32
     move-object/from16 v0, p24
 
     iput-object v0, p0, Ldcp;->w:Lfzc;
 
-    .line 33
     move-object/from16 v0, p25
 
     iput-object v0, p0, Ldcp;->R:Lgpj;
 
-    .line 34
     move-object/from16 v0, p26
 
     iput-object v0, p0, Ldcp;->x:Lhhj;
 
-    .line 35
     move-object/from16 v0, p27
 
     iput-object v0, p0, Ldcp;->T:Lida;
 
-    .line 36
     invoke-virtual {p9}, Ljrw;->a()Z
 
     move-result v1
 
     invoke-static {v1}, Ljiy;->a(Z)V
 
-    .line 37
     invoke-virtual {p9}, Ljrw;->b()Ljava/lang/Object;
 
     move-result-object v1
@@ -316,7 +276,6 @@
 
     iput-object v1, p0, Ldcp;->i:Lfzj;
 
-    .line 38
     new-instance v1, Ldde;
 
     iget-object v2, p0, Ldcp;->i:Lfzj;
@@ -325,29 +284,24 @@
 
     iput-object v1, p0, Ldcp;->U:Ldde;
 
-    .line 39
     iget-object v1, p0, Ldcp;->U:Ldde;
 
     move-object/from16 v0, p28
 
     invoke-virtual {v0, v1}, Lelt;->a(Lene;)Lene;
 
-    .line 40
     new-instance v1, Ldda;
 
     invoke-direct {v1, p0}, Ldda;-><init>(Ldcp;)V
 
     iput-object v1, p0, Ldcp;->f:Lgvr;
 
-    .line 41
     return-void
 .end method
 
 .method static final synthetic f()V
     .locals 0
 
-    .prologue
-    .line 116
     return-void
 .end method
 
@@ -356,8 +310,6 @@
 .method public final J()Z
     .locals 1
 
-    .prologue
-    .line 97
     const/4 v0, 0x0
 
     return v0
@@ -366,28 +318,23 @@
 .method public final a()V
     .locals 7
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 46
     iget-boolean v2, p0, Ldcp;->z:Z
 
     if-nez v2, :cond_0
 
-    .line 47
     sget-object v0, Ldcp;->a:Ljava/lang/String;
 
     const-string v1, "Attempting to start GoudaModule while it is already started."
 
     invoke-static {v0, v1}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 75
     :goto_0
     return-void
 
-    .line 49
     :cond_0
     iget-object v2, p0, Ldcp;->T:Lida;
 
@@ -397,44 +344,36 @@
 
     invoke-interface {v2, v3}, Lida;->a(Ljava/lang/Object;)V
 
-    .line 50
     sget-object v2, Ldcp;->a:Ljava/lang/String;
 
     const-string v3, "Starting Camera..."
 
     invoke-static {v2, v3}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 51
     iput-boolean v1, p0, Ldcp;->z:Z
 
-    .line 52
     new-instance v2, Libm;
 
     invoke-direct {v2}, Libm;-><init>()V
 
     iput-object v2, p0, Ldcp;->C:Libm;
 
-    .line 53
     iget-object v2, p0, Ldcp;->b:Liii;
 
     const-string v3, "GoudaModule#start"
 
     invoke-interface {v2, v3}, Liii;->a(Ljava/lang/String;)V
 
-    .line 54
     invoke-virtual {p0}, Ldcp;->e()V
 
-    .line 55
     invoke-virtual {p0, v0}, Ldcp;->a(Z)V
 
-    .line 56
     iget-object v2, p0, Ldcp;->D:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     iget-object v3, p0, Ldcp;->I:Lcom/google/android/apps/camera/bottombar/BottomBarListener;
 
     invoke-virtual {v2, v3}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->addListener(Lcom/google/android/apps/camera/bottombar/BottomBarListener;)V
 
-    .line 57
     iget-object v2, p0, Ldcp;->C:Libm;
 
     new-instance v3, Ldcs;
@@ -443,7 +382,6 @@
 
     invoke-virtual {v2, v3}, Libm;->a(Lihr;)Lihr;
 
-    .line 58
     iget-object v2, p0, Ldcp;->C:Libm;
 
     iget-object v3, p0, Ldcp;->E:Lgvn;
@@ -456,12 +394,10 @@
 
     invoke-virtual {v2, v3}, Libm;->a(Lihr;)Lihr;
 
-    .line 59
     iget-object v2, p0, Ldcp;->v:Lbpk;
 
     invoke-virtual {v2}, Lbpk;->a()V
 
-    .line 61
     iget-object v2, p0, Ldcp;->o:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -474,7 +410,6 @@
 
     iget v2, v2, Landroid/content/res/Configuration;->fontScale:F
 
-    .line 62
     iget-object v3, p0, Ldcp;->o:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -485,7 +420,6 @@
 
     move-result-object v3
 
-    .line 63
     const/high16 v4, 0x3f800000    # 1.0f
 
     cmpl-float v2, v2, v4
@@ -501,7 +435,6 @@
     :cond_1
     move v6, v1
 
-    .line 67
     :goto_1
     new-instance v0, Lfze;
 
@@ -521,21 +454,18 @@
 
     iput-object v0, p0, Ldcp;->F:Lfze;
 
-    .line 68
     iget-object v0, p0, Ldcp;->C:Libm;
 
     iget-object v1, p0, Ldcp;->F:Lfze;
 
     invoke-virtual {v0, v1}, Libm;->a(Lihr;)Lihr;
 
-    .line 69
     iget-object v0, p0, Ldcp;->k:Lhgl;
 
     iget-object v1, p0, Ldcp;->M:Lhgm;
 
     invoke-virtual {v0, v1}, Lhgl;->a(Lhgm;)V
 
-    .line 70
     iget-object v0, p0, Ldcp;->C:Libm;
 
     new-instance v1, Ldct;
@@ -544,7 +474,6 @@
 
     invoke-virtual {v0, v1}, Libm;->a(Lihr;)Lihr;
 
-    .line 71
     iget-object v0, p0, Ldcp;->i:Lfzj;
 
     new-instance v1, Lfzl;
@@ -553,15 +482,12 @@
 
     invoke-interface {v0, v1}, Lfzj;->a(Lfzl;)V
 
-    .line 72
     if-eqz v6, :cond_2
 
-    .line 73
     iget-object v0, p0, Ldcp;->i:Lfzj;
 
     invoke-interface {v0}, Lfzj;->b()V
 
-    .line 74
     :cond_2
     iget-object v0, p0, Ldcp;->b:Liii;
 
@@ -569,7 +495,6 @@
 
     goto/16 :goto_0
 
-    .line 65
     :cond_3
     iget-object v2, p0, Ldcp;->R:Lgpj;
 
@@ -592,36 +517,27 @@
 .method public final a(Lcom/google/android/apps/camera/bottombar/BottomBarController;Lgvn;)V
     .locals 1
 
-    .prologue
-    .line 42
     iput-object p1, p0, Ldcp;->D:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
-    .line 43
     iput-object p2, p0, Ldcp;->E:Lgvn;
 
-    .line 44
     iget-object v0, p0, Ldcp;->i:Lfzj;
 
     invoke-interface {v0}, Lfzj;->a()V
 
-    .line 45
     return-void
 .end method
 
 .method final a(Z)V
     .locals 1
 
-    .prologue
-    .line 100
     iget-boolean v0, p0, Ldcp;->z:Z
 
     if-eqz v0, :cond_0
 
-    .line 104
     :goto_0
     return-void
 
-    .line 102
     :cond_0
     iget-object v0, p0, Ldcp;->d:Lbza;
 
@@ -631,7 +547,6 @@
 
     invoke-virtual {v0, p1}, Ldzl;->b(Z)V
 
-    .line 103
     iget-object v0, p0, Ldcp;->d:Lbza;
 
     invoke-interface {v0}, Lbza;->v()Ldzl;
@@ -646,61 +561,48 @@
 .method public final b()V
     .locals 0
 
-    .prologue
-    .line 76
     return-void
 .end method
 
 .method public final c()V
     .locals 0
 
-    .prologue
-    .line 77
     return-void
 .end method
 
 .method public final close()V
     .locals 1
 
-    .prologue
-    .line 98
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Ldcp;->a(Z)V
 
-    .line 99
     return-void
 .end method
 
 .method public final d()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v1, 0x1
 
-    .line 78
     iget-boolean v0, p0, Ldcp;->z:Z
 
     if-eqz v0, :cond_0
 
-    .line 79
     sget-object v0, Ldcp;->a:Ljava/lang/String;
 
     const-string v1, "Attempting to stop GoudaModule while it is already stopped."
 
     invoke-static {v0, v1}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 96
     :goto_0
     return-void
 
-    .line 81
     :cond_0
     iput-boolean v1, p0, Ldcp;->z:Z
 
-    .line 82
     iget-object v0, p0, Ldcp;->S:Lcsm;
 
     invoke-virtual {v0}, Lcsm;->isDone()Z
@@ -709,27 +611,22 @@
 
     if-eqz v0, :cond_3
 
-    .line 83
     iget-object v0, p0, Ldcp;->B:Lcsl;
 
     if-eqz v0, :cond_1
 
-    .line 84
     iget-object v0, p0, Ldcp;->B:Lcsl;
 
     invoke-virtual {v0}, Lcsl;->close()V
 
-    .line 85
     iput-object v2, p0, Ldcp;->B:Lcsl;
 
-    .line 87
     :cond_1
     :goto_1
     iget-object v0, p0, Ldcp;->O:Lcvm;
 
     invoke-virtual {v0}, Lcvm;->a()V
 
-    .line 88
     iget-object v0, p0, Ldcp;->m:Ljrw;
 
     invoke-virtual {v0}, Ljrw;->a()Z
@@ -738,7 +635,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 89
     iget-object v0, p0, Ldcp;->m:Ljrw;
 
     invoke-virtual {v0}, Ljrw;->b()Ljava/lang/Object;
@@ -749,19 +645,15 @@
 
     invoke-virtual {v0}, Lfao;->a()V
 
-    .line 90
     :cond_2
     iget-object v0, p0, Ldcp;->v:Lbpk;
 
     invoke-virtual {v0}, Lbpk;->b()V
 
-    .line 91
     iget-object v0, p0, Ldcp;->O:Lcvm;
 
-    .line 92
     iget-object v0, v0, Lcvm;->d:Lida;
 
-    .line 93
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -770,19 +662,16 @@
 
     invoke-interface {v0, v1}, Lida;->a(Ljava/lang/Object;)V
 
-    .line 94
     iget-object v0, p0, Ldcp;->i:Lfzj;
 
     invoke-interface {v0, v2}, Lfzj;->a(Lfzl;)V
 
-    .line 95
     iget-object v0, p0, Ldcp;->C:Libm;
 
     invoke-virtual {v0}, Libm;->close()V
 
     goto :goto_0
 
-    .line 86
     :cond_3
     iget-object v0, p0, Ldcp;->S:Lcsm;
 
@@ -794,60 +683,64 @@
 .method final e()V
     .locals 3
 
-    .prologue
-    .line 105
+    const-string/jumbo v2, "pref_disable_zoom_key"
+
+    invoke-static {v2}, Lbka;->a(Ljava/lang/String;)I
+
+    move-result v2
+
     iget-object v0, p0, Ldcp;->c:Ldya;
 
     invoke-virtual {v0}, Ldya;->a()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 106
     iget-object v0, p0, Ldcp;->x:Lhhj;
+
+    if-nez v2, :cond_0
 
     const/high16 v1, 0x3fc00000    # 1.5f
 
+    goto/16 :goto_0
+
+    :cond_0
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    :goto_0
     invoke-interface {v0, v1}, Lhhj;->b(F)V
 
-    .line 108
-    :goto_0
+    :goto_1
     iget-object v0, p0, Ldcp;->x:Lhhj;
 
     invoke-interface {v0}, Lhhj;->f()V
 
-    .line 109
     iget-object v0, p0, Ldcp;->F:Lfze;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 110
     iget-object v0, p0, Ldcp;->F:Lfze;
 
     invoke-virtual {v0}, Lfze;->a()V
 
-    .line 111
-    :cond_0
+    :cond_1
     const/4 v0, 0x0
 
     iput-object v0, p0, Ldcp;->B:Lcsl;
 
-    .line 112
     iget-object v0, p0, Ldcp;->N:Lcst;
 
     iget-object v1, p0, Ldcp;->c:Ldya;
 
     iget-object v2, p0, Ldcp;->O:Lcvm;
 
-    .line 113
     invoke-interface {v0, v1, v2}, Lcst;->a(Ldya;Lcvm;)Lcsm;
 
     move-result-object v0
 
     iput-object v0, p0, Ldcp;->S:Lcsm;
 
-    .line 114
     iget-object v0, p0, Ldcp;->S:Lcsm;
 
     new-instance v1, Lddb;
@@ -858,16 +751,22 @@
 
     invoke-static {v0, v1, v2}, Lkek;->a(Lkey;Lkej;Ljava/util/concurrent/Executor;)V
 
-    .line 115
     return-void
 
-    .line 107
-    :cond_1
+    :cond_2
     iget-object v0, p0, Ldcp;->x:Lhhj;
+
+    if-nez v2, :cond_3
 
     const v1, 0x3f99999a    # 1.2f
 
+    goto/16 :goto_2
+
+    :cond_3
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    :goto_2
     invoke-interface {v0, v1}, Lhhj;->b(F)V
 
-    goto :goto_0
+    goto/16 :goto_1
 .end method

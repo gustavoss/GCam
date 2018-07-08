@@ -11,8 +11,6 @@
 .method constructor <init>(Liwe;Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;Landroid/opengl/EGLContext;Landroid/opengl/EGLConfig;Liuc;Landroid/opengl/EGLDisplay;)V
     .locals 8
 
-    .prologue
-    .line 1
     iput-object p7, p0, Livr;->e:Landroid/opengl/EGLDisplay;
 
     const/4 v6, 0x0
@@ -41,8 +39,6 @@
 .method public final c()Lirs;
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Livr;->e:Landroid/opengl/EGLDisplay;
 
     sget-object v1, Landroid/opengl/EGL14;->EGL_NO_SURFACE:Landroid/opengl/EGLSurface;
@@ -53,25 +49,18 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/opengl/EGL14;->eglMakeCurrent(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;Landroid/opengl/EGLSurface;Landroid/opengl/EGLContext;)Z
 
-    .line 4
     iget-object v0, p0, Livh;->b:Landroid/opengl/EGLDisplay;
 
-    .line 6
     iget-object v1, p0, Livh;->d:Landroid/opengl/EGLContext;
 
-    .line 7
     invoke-static {v0, v1}, Landroid/opengl/EGL14;->eglDestroyContext(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLContext;)Z
 
-    .line 9
     iget-object v0, p0, Livh;->b:Landroid/opengl/EGLDisplay;
 
-    .line 11
     iget-object v1, p0, Livh;->c:Landroid/opengl/EGLSurface;
 
-    .line 12
     invoke-static {v0, v1}, Landroid/opengl/EGL14;->eglDestroySurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)Z
 
-    .line 13
     invoke-static {}, Lirs;->d()Lirs;
 
     move-result-object v0

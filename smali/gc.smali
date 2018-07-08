@@ -15,28 +15,24 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 9
     new-instance v0, Lgb;
 
     invoke-direct {v0, v1, v2}, Lgb;-><init>(Lgf;Z)V
 
     sput-object v0, Lgc;->a:Lgb;
 
-    .line 10
     new-instance v0, Lgb;
 
     invoke-direct {v0, v1, v3}, Lgb;-><init>(Lgf;Z)V
 
     sput-object v0, Lgc;->b:Lgb;
 
-    .line 11
     new-instance v0, Lgb;
 
     sget-object v1, Lge;->a:Lge;
@@ -45,50 +41,41 @@
 
     sput-object v0, Lgc;->c:Lgb;
 
-    .line 12
     new-instance v0, Lgb;
 
     sget-object v1, Lge;->a:Lge;
 
     invoke-direct {v0, v1, v3}, Lgb;-><init>(Lgf;Z)V
 
-    .line 13
     new-instance v0, Lgb;
 
     sget-object v1, Lgd;->a:Lgd;
 
     invoke-direct {v0, v1, v2}, Lgb;-><init>(Lgf;Z)V
 
-    .line 14
     return-void
 .end method
 
 .method static a(I)I
     .locals 1
 
-    .prologue
-    .line 1
     packed-switch p0, :pswitch_data_0
 
-    .line 4
     const/4 v0, 0x2
 
     :goto_0
     return v0
 
-    .line 2
     :pswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 3
     :pswitch_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1
     nop
 
     :pswitch_data_0
@@ -102,29 +89,23 @@
 .method static b(I)I
     .locals 1
 
-    .prologue
-    .line 5
     sparse-switch p0, :sswitch_data_0
 
-    .line 8
     const/4 v0, 0x2
 
     :goto_0
     return v0
 
-    .line 6
     :sswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 7
     :sswitch_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 5
     nop
 
     :sswitch_data_0

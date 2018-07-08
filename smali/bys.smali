@@ -32,41 +32,28 @@
 .method public constructor <init>(Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbys;->a:Lkhp;
 
-    .line 3
     iput-object p2, p0, Lbys;->b:Lkhp;
 
-    .line 4
     iput-object p3, p0, Lbys;->c:Lkhp;
 
-    .line 5
     iput-object p4, p0, Lbys;->d:Lkhp;
 
-    .line 6
     iput-object p5, p0, Lbys;->e:Lkhp;
 
-    .line 7
     iput-object p6, p0, Lbys;->f:Lkhp;
 
-    .line 8
     iput-object p7, p0, Lbys;->g:Lkhp;
 
-    .line 9
     iput-object p8, p0, Lbys;->h:Lkhp;
 
-    .line 10
     iput-object p9, p0, Lbys;->i:Lkhp;
 
-    .line 11
     iput-object p10, p0, Lbys;->j:Lkhp;
 
-    .line 12
     return-void
 .end method
 
@@ -75,14 +62,10 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 11
 
-    .prologue
-    .line 13
-    .line 14
     new-instance v0, Lbyr;
 
     iget-object v1, p0, Lbys;->a:Lkhp;
 
-    .line 15
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -101,7 +84,6 @@
 
     iget-object v7, p0, Lbys;->g:Lkhp;
 
-    .line 16
     invoke-interface {v7}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v7
@@ -110,7 +92,6 @@
 
     iget-object v8, p0, Lbys;->h:Lkhp;
 
-    .line 17
     invoke-interface {v8}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v8
@@ -119,7 +100,6 @@
 
     iget-object v9, p0, Lbys;->i:Lkhp;
 
-    .line 18
     invoke-interface {v9}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v9
@@ -128,7 +108,6 @@
 
     iget-object v10, p0, Lbys;->j:Lkhp;
 
-    .line 19
     invoke-interface {v10}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v10
@@ -137,6 +116,5 @@
 
     invoke-direct/range {v0 .. v10}, Lbyr;-><init>(Licb;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Ljava/util/concurrent/Executor;Liie;Licd;Liii;)V
 
-    .line 20
     return-object v0
 .end method

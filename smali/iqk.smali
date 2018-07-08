@@ -14,14 +14,10 @@
 .method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Liqk;->a:Ljava/util/List;
 
-    .line 3
     return-void
 .end method
 
@@ -30,21 +26,16 @@
 .method public add(ILjava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 5
     return-void
 .end method
 
 .method public add(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -57,8 +48,6 @@
 .method public addAll(ILjava/util/Collection;)Z
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->addAll(ILjava/util/Collection;)Z
@@ -71,8 +60,6 @@
 .method public addAll(Ljava/util/Collection;)Z
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
@@ -85,21 +72,16 @@
 .method public clear()V
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 10
     return-void
 .end method
 
 .method public contains(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -112,8 +94,6 @@
 .method public containsAll(Ljava/util/Collection;)Z
     .locals 1
 
-    .prologue
-    .line 12
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->containsAll(Ljava/util/Collection;)Z
@@ -126,8 +106,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 13
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
@@ -140,8 +118,6 @@
 .method public get(I)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 14
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -154,8 +130,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 15
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->hashCode()I
@@ -168,8 +142,6 @@
 .method public indexOf(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 16
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
@@ -182,8 +154,6 @@
 .method public isEmpty()Z
     .locals 1
 
-    .prologue
-    .line 17
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -196,8 +166,6 @@
 .method public iterator()Ljava/util/Iterator;
     .locals 1
 
-    .prologue
-    .line 18
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -210,8 +178,6 @@
 .method public lastIndexOf(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 19
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->lastIndexOf(Ljava/lang/Object;)I
@@ -224,8 +190,6 @@
 .method public listIterator()Ljava/util/ListIterator;
     .locals 1
 
-    .prologue
-    .line 20
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->listIterator()Ljava/util/ListIterator;
@@ -238,8 +202,6 @@
 .method public listIterator(I)Ljava/util/ListIterator;
     .locals 1
 
-    .prologue
-    .line 21
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
@@ -252,8 +214,6 @@
 .method public remove(I)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 22
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -266,8 +226,6 @@
 .method public remove(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 23
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
@@ -280,8 +238,6 @@
 .method public removeAll(Ljava/util/Collection;)Z
     .locals 1
 
-    .prologue
-    .line 24
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
@@ -294,8 +250,6 @@
 .method public retainAll(Ljava/util/Collection;)Z
     .locals 1
 
-    .prologue
-    .line 25
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->retainAll(Ljava/util/Collection;)Z
@@ -308,8 +262,6 @@
 .method public set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 26
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
@@ -322,8 +274,6 @@
 .method public size()I
     .locals 1
 
-    .prologue
-    .line 27
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -336,8 +286,6 @@
 .method public subList(II)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 28
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->subList(II)Ljava/util/List;
@@ -350,8 +298,6 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 29
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->toArray()[Ljava/lang/Object;
@@ -364,8 +310,6 @@
 .method public toArray([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 30
     iget-object v0, p0, Liqk;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;

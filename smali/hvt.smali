@@ -6,8 +6,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,13 +14,10 @@
 .method public static a(Lhmc;)Landroid/location/Location;
     .locals 1
 
-    .prologue
-    .line 1
     invoke-static {p0}, Lhvw;->a(Lhmc;)Lhwn;
 
     move-result-object v0
 
-    .line 2
     :try_start_0
     iget-object v0, v0, Lhwn;->h:Lhwj;
 
@@ -32,7 +27,6 @@
 
     move-result-object v0
 
-    .line 3
     :goto_0
     return-object v0
 

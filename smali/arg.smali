@@ -16,15 +16,12 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 3
     new-instance v0, Larg;
 
     invoke-direct {v0}, Larg;-><init>()V
 
     sput-object v0, Larg;->a:Larg;
 
-    .line 4
     new-instance v0, Larh;
 
     invoke-direct {v0}, Larh;-><init>()V
@@ -37,8 +34,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,8 +44,6 @@
 .method public final a(Ljava/lang/Object;Larj;)Z
     .locals 1
 
-    .prologue
-    .line 2
     const/4 v0, 0x0
 
     return v0

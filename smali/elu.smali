@@ -14,8 +14,6 @@
 .method constructor <init>(Lelt;Landroid/os/Bundle;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p2, p0, Lelu;->a:Landroid/os/Bundle;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,23 +26,18 @@
 .method public final a(Lene;)V
     .locals 1
 
-    .prologue
-    .line 2
     instance-of v0, p1, Lell;
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lelu;->a:Landroid/os/Bundle;
 
     invoke-static {p1, v0}, Lelt;->a(Lene;Landroid/os/Bundle;)Landroid/os/Bundle;
 
-    .line 4
     check-cast p1, Lell;
 
     invoke-interface {p1}, Lell;->a()V
 
-    .line 5
     :cond_0
     return-void
 .end method

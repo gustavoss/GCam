@@ -20,8 +20,6 @@
 .method constructor <init>(Lerq;Lgrk;Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p2, p0, Lerv;->a:Lgrk;
 
     iput-object p3, p0, Lerv;->b:Landroid/view/View;
@@ -40,13 +38,10 @@
 .method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 5
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lerv;->a:Lgrk;
 
     invoke-virtual {v0}, Lgrk;->a()V
 
-    .line 3
     iget-object v0, p0, Lerv;->a:Lgrk;
 
     iget-object v1, p0, Lerv;->b:Landroid/view/View;
@@ -57,14 +52,11 @@
 
     iget-object v4, p0, Lerv;->b:Landroid/view/View;
 
-    .line 5
     invoke-static {v2, v3, v4}, Lerq;->a(Landroid/view/View;Landroid/view/View;Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v2
 
-    .line 6
     invoke-virtual {v0, v1, v2}, Lgrk;->a(Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 7
     return-void
 .end method

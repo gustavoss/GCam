@@ -61,8 +61,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 377
     const-string v0, "CdrMgrImpl"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -77,32 +75,26 @@
 .method public constructor <init>(Lbew;Liex;Ljava/util/concurrent/ExecutorService;Lgoa;Landroid/os/HandlerThread;Lbik;Lkhp;Lfay;Lgpa;Lbie;Lbis;Lbju;Liii;Lbjm;Lifp;Lifn;)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Lbfh;->g:Ljava/lang/Object;
 
-    .line 3
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lbfh;->h:Ljava/util/Map;
 
-    .line 4
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lbfh;->w:Ljava/util/Map;
 
-    .line 5
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -111,7 +103,6 @@
 
     iput-object v1, p0, Lbfh;->l:Lbew;
 
-    .line 6
     invoke-static {p2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -120,7 +111,6 @@
 
     iput-object v1, p0, Lbfh;->m:Liex;
 
-    .line 7
     invoke-static {p3}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -129,7 +119,6 @@
 
     iput-object v1, p0, Lbfh;->b:Ljava/util/concurrent/ExecutorService;
 
-    .line 8
     invoke-static {p4}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -138,7 +127,6 @@
 
     iput-object v1, p0, Lbfh;->c:Lgoa;
 
-    .line 9
     invoke-static {p5}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -147,7 +135,6 @@
 
     iput-object v1, p0, Lbfh;->n:Landroid/os/HandlerThread;
 
-    .line 10
     invoke-static {p6}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -156,7 +143,6 @@
 
     iput-object v1, p0, Lbfh;->o:Lbik;
 
-    .line 11
     invoke-static {p7}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -165,7 +151,6 @@
 
     iput-object v1, p0, Lbfh;->p:Lkhp;
 
-    .line 12
     invoke-static {p8}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -174,7 +159,6 @@
 
     iput-object v1, p0, Lbfh;->q:Lfay;
 
-    .line 13
     invoke-static {p9}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -183,7 +167,6 @@
 
     iput-object v1, p0, Lbfh;->r:Lgpa;
 
-    .line 14
     invoke-static {p10}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -192,7 +175,6 @@
 
     iput-object v1, p0, Lbfh;->d:Lbie;
 
-    .line 15
     invoke-static {p11}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -201,7 +183,6 @@
 
     iput-object v1, p0, Lbfh;->s:Lbis;
 
-    .line 16
     invoke-static {p12}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -210,7 +191,6 @@
 
     iput-object v1, p0, Lbfh;->t:Lbju;
 
-    .line 17
     invoke-static/range {p13 .. p13}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -219,7 +199,6 @@
 
     iput-object v1, p0, Lbfh;->e:Liii;
 
-    .line 18
     invoke-static/range {p14 .. p14}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -228,22 +207,18 @@
 
     iput-object v1, p0, Lbfh;->k:Lbjm;
 
-    .line 19
     move-object/from16 v0, p15
 
     iput-object v0, p0, Lbfh;->u:Lifp;
 
-    .line 20
     move-object/from16 v0, p16
 
     iput-object v0, p0, Lbfh;->v:Lifn;
 
-    .line 21
     iget-object v1, p0, Lbfh;->n:Landroid/os/HandlerThread;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
-    .line 22
     new-instance v1, Landroid/os/Handler;
 
     iget-object v2, p0, Lbfh;->n:Landroid/os/HandlerThread;
@@ -256,7 +231,6 @@
 
     iput-object v1, p0, Lbfh;->i:Landroid/os/Handler;
 
-    .line 23
     new-instance v1, Libi;
 
     iget-object v2, p0, Lbfh;->i:Landroid/os/Handler;
@@ -265,15 +239,12 @@
 
     iput-object v1, p0, Lbfh;->j:Libi;
 
-    .line 25
     new-instance v1, Lkfk;
 
     invoke-direct {v1}, Lkfk;-><init>()V
 
-    .line 26
     iput-object v1, p0, Lbfh;->f:Lkfk;
 
-    .line 27
     iget-object v1, p0, Lbfh;->f:Lkfk;
 
     const/4 v2, 0x1
@@ -284,32 +255,26 @@
 
     invoke-virtual {v1, v2}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 28
     return-void
 .end method
 
 .method private final a(Lien;Lifj;)Liew;
     .locals 10
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 336
     invoke-virtual {p1}, Lien;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 338
     invoke-interface {p2}, Lifj;->d()I
 
     move-result v1
 
-    .line 339
     new-instance v0, Liew;
 
-    .line 340
     invoke-interface {p2}, Lifj;->c()I
 
     move-result v2
@@ -318,42 +283,34 @@
 
     move-result-object v2
 
-    .line 341
     invoke-interface {p2}, Lifj;->a()I
 
     move-result v3
 
-    .line 342
     invoke-interface {p2}, Lifj;->b()I
 
     move-result v4
 
     invoke-direct {v0, v2, v3, v1, v4}, Liew;-><init>(Liek;III)V
 
-    .line 372
     :goto_0
     return-object v0
 
-    .line 344
     :cond_0
     iget-object v1, p0, Lbfh;->m:Liex;
 
-    .line 346
     invoke-interface {p2}, Lifj;->d()I
 
     move-result v0
 
-    .line 347
     iget v3, p1, Lien;->e:I
 
     iget v4, p1, Lien;->f:I
 
     div-int/2addr v3, v4
 
-    .line 348
     div-int v4, v0, v3
 
-    .line 349
     invoke-interface {p2}, Lifj;->c()I
 
     move-result v0
@@ -362,13 +319,10 @@
 
     move-result-object v5
 
-    .line 351
     iget-object v3, v5, Liek;->b:Liem;
 
-    .line 353
     iget-object v0, v1, Liex;->a:Lies;
 
-    .line 354
     iget-object v0, v0, Lies;->a:Ljava/util/Map;
 
     invoke-virtual {v3}, Liem;->toString()Ljava/lang/String;
@@ -381,10 +335,8 @@
 
     check-cast v0, Landroid/media/MediaCodecInfo;
 
-    .line 356
     invoke-static {v0}, Ljid;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 358
     invoke-virtual {v3}, Liem;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -393,18 +345,14 @@
 
     move-result-object v0
 
-    .line 359
     invoke-static {v0}, Ljid;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 360
     invoke-virtual {v0}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getAudioCapabilities()Landroid/media/MediaCodecInfo$AudioCapabilities;
 
     move-result-object v6
 
-    .line 361
     invoke-static {v6}, Ljid;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 363
     iget-object v7, v1, Liex;->b:[I
 
     array-length v8, v7
@@ -418,17 +366,14 @@
 
     aget v0, v7, v3
 
-    .line 364
     invoke-virtual {v6, v0}, Landroid/media/MediaCodecInfo$AudioCapabilities;->isSampleRateSupported(I)Z
 
     move-result v9
 
     if-eqz v9, :cond_4
 
-    .line 366
     if-ge v0, v4, :cond_1
 
-    .line 367
     :goto_2
     add-int/lit8 v1, v3, 0x1
 
@@ -441,7 +386,6 @@
     :cond_1
     move v1, v0
 
-    .line 368
     :cond_2
     if-lez v1, :cond_3
 
@@ -450,15 +394,12 @@
     :goto_3
     invoke-static {v0}, Ljid;->a(Z)V
 
-    .line 369
     new-instance v0, Liew;
 
-    .line 370
     invoke-interface {p2}, Lifj;->a()I
 
     move-result v2
 
-    .line 371
     invoke-interface {p2}, Lifj;->b()I
 
     move-result v3
@@ -470,7 +411,6 @@
     :cond_3
     move v0, v2
 
-    .line 368
     goto :goto_3
 
     :cond_4
@@ -482,36 +422,28 @@
 .method private final a(Lien;Lifj;Liep;)Liez;
     .locals 6
 
-    .prologue
-    .line 304
     invoke-virtual {p1}, Lien;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 307
     invoke-static {p2, p1, p3}, Liex;->a(Lifj;Lien;Liep;)Z
 
     move-result v0
 
-    .line 308
     invoke-static {v0}, Ljiy;->a(Z)V
 
-    .line 309
     invoke-interface {p2}, Lifj;->l()I
 
     move-result v1
 
-    .line 311
     iget v2, p1, Lien;->e:I
 
-    .line 314
     invoke-interface {p2}, Lifj;->g()I
 
     move-result v0
 
-    .line 315
     const/16 v3, 0x1e
 
     if-ne v2, v3, :cond_0
@@ -520,7 +452,6 @@
 
     if-ne v1, v3, :cond_0
 
-    .line 316
     int-to-double v0, v0
 
     const-wide/high16 v4, 0x3ff8000000000000L    # 1.5
@@ -529,59 +460,47 @@
 
     double-to-int v0, v0
 
-    .line 317
     :cond_0
     invoke-static {p2, p3, v0, v2, v2}, Liex;->a(Lifj;Liep;III)Liez;
 
     move-result-object v0
 
-    .line 335
     :goto_0
     return-object v0
 
-    .line 321
     :cond_1
     invoke-static {p2, p1, p3}, Liex;->b(Lifj;Lien;Liep;)Z
 
     move-result v0
 
-    .line 322
     invoke-static {v0}, Ljiy;->a(Z)V
 
-    .line 323
     invoke-interface {p2}, Lifj;->l()I
 
     move-result v1
 
-    .line 325
     iget v2, p1, Lien;->e:I
 
-    .line 328
     iget v3, p1, Lien;->f:I
 
-    .line 330
     invoke-interface {p2}, Lifj;->g()I
 
     move-result v0
 
-    .line 331
     if-ge v2, v1, :cond_2
 
-    .line 332
     int-to-float v4, v2
 
     int-to-float v1, v1
 
     div-float v1, v4, v1
 
-    .line 333
     int-to-float v0, v0
 
     mul-float/2addr v0, v1
 
     float-to-int v0, v0
 
-    .line 334
     :cond_2
     invoke-static {p2, p3, v0, v2, v3}, Liex;->a(Lifj;Liep;III)Liez;
 
@@ -593,7 +512,6 @@
 .method private final a(Lien;ZLiep;Lilr;)Lifj;
     .locals 8
 
-    .prologue
     const v7, 0x8000
 
     const/16 v6, 0x8
@@ -604,33 +522,26 @@
 
     const/4 v3, 0x1
 
-    .line 228
     invoke-virtual {p1}, Lien;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 229
     iget-object v1, p0, Lbfh;->u:Lifp;
 
-    .line 231
     invoke-static {p3}, Lifk;->a(Liep;)Lifk;
 
     move-result-object v0
 
-    .line 233
     invoke-static {p4, v0}, Lifg;->a(Lilr;Lifk;)Lifj;
 
     move-result-object v0
 
-    .line 234
     if-nez v0, :cond_0
 
-    .line 235
     sget-object v0, Ljrk;->a:Ljrk;
 
-    .line 298
     :goto_0
     invoke-virtual {v0}, Ljrw;->a()Z
 
@@ -638,14 +549,12 @@
 
     if-nez v1, :cond_a
 
-    .line 299
     sget-object v0, Lbfh;->a:Ljava/lang/String;
 
     const-string v1, "immediateFailedFuture: No supported CamcorderProfile"
 
     invoke-static {v0, v1}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 300
     new-instance v0, Lbdt;
 
     const-string v1, "no supported CamcorderProfile"
@@ -654,55 +563,42 @@
 
     throw v0
 
-    .line 237
     :cond_0
     iget-object v2, v1, Lifp;->a:Linc;
 
-    .line 238
     iget-boolean v2, v2, Linc;->j:Z
 
-    .line 239
     if-nez v2, :cond_1
 
     iget-object v2, v1, Lifp;->a:Linc;
 
-    .line 240
     iget-boolean v2, v2, Linc;->h:Z
 
-    .line 241
     if-nez v2, :cond_1
 
     iget-object v2, v1, Lifp;->a:Linc;
 
-    .line 242
     iget-boolean v2, v2, Linc;->i:Z
 
-    .line 243
     if-nez v2, :cond_1
 
     iget-object v2, v1, Lifp;->a:Linc;
 
-    .line 244
     iget-boolean v2, v2, Linc;->g:Z
 
-    .line 245
     if-nez v2, :cond_1
 
     iget-object v1, v1, Lifp;->a:Linc;
 
-    .line 246
     iget-boolean v1, v1, Linc;->f:Z
 
-    .line 247
     if-eqz v1, :cond_3
 
-    .line 248
     :cond_1
     invoke-interface {v0}, Lifj;->g()I
 
     move-result v1
 
-    .line 249
     sget-object v2, Liep;->h:Liep;
 
     invoke-virtual {p3, v2}, Liep;->equals(Ljava/lang/Object;)Z
@@ -711,46 +607,37 @@
 
     if-eqz v2, :cond_2
 
-    .line 250
     const v1, 0x2dc6c00
 
-    .line 251
     :cond_2
     if-eqz p2, :cond_4
 
-    .line 252
     invoke-static {v0}, Lifl;->a(Lifj;)Lifm;
 
     move-result-object v0
 
-    .line 253
     invoke-virtual {v0, v5}, Lifm;->g(I)Lifm;
 
     move-result-object v0
 
-    .line 254
     invoke-virtual {v0, v3}, Lifm;->h(I)Lifm;
 
     move-result-object v0
 
     const/high16 v2, 0x10000
 
-    .line 255
     invoke-virtual {v0, v2}, Lifm;->i(I)Lifm;
 
     move-result-object v0
 
-    .line 256
     invoke-virtual {v0, v1}, Lifm;->f(I)Lifm;
 
     move-result-object v0
 
-    .line 257
     invoke-virtual {v0}, Lifm;->a()Lifl;
 
     move-result-object v0
 
-    .line 264
     :cond_3
     :goto_1
     invoke-static {v0}, Ljrw;->b(Ljava/lang/Object;)Ljrw;
@@ -759,135 +646,106 @@
 
     goto :goto_0
 
-    .line 258
     :cond_4
     invoke-static {v0}, Lifl;->a(Lifj;)Lifm;
 
     move-result-object v0
 
-    .line 259
     invoke-virtual {v0, v4}, Lifm;->g(I)Lifm;
 
     move-result-object v0
 
-    .line 260
     invoke-virtual {v0, v6}, Lifm;->h(I)Lifm;
 
     move-result-object v0
 
-    .line 261
     invoke-virtual {v0, v7}, Lifm;->i(I)Lifm;
 
     move-result-object v0
 
-    .line 262
     invoke-virtual {v0, v1}, Lifm;->f(I)Lifm;
 
     move-result-object v0
 
-    .line 263
     invoke-virtual {v0}, Lifm;->a()Lifl;
 
     move-result-object v0
 
     goto :goto_1
 
-    .line 266
     :cond_5
     iget-object v1, p0, Lbfh;->v:Lifn;
 
-    .line 268
     invoke-static {p3}, Lifi;->a(Liep;)Lifi;
 
     move-result-object v0
 
-    .line 270
     invoke-static {p4, v0}, Lifg;->b(Lilr;Lifi;)Lifj;
 
     move-result-object v0
 
-    .line 271
     if-nez v0, :cond_6
 
-    .line 272
     sget-object v0, Ljrk;->a:Ljrk;
 
     goto/16 :goto_0
 
-    .line 274
     :cond_6
     iget-object v2, v1, Lifn;->a:Linc;
 
-    .line 275
     iget-boolean v2, v2, Linc;->j:Z
 
-    .line 276
     if-nez v2, :cond_7
 
     iget-object v2, v1, Lifn;->a:Linc;
 
-    .line 277
     iget-boolean v2, v2, Linc;->h:Z
 
-    .line 278
     if-nez v2, :cond_7
 
     iget-object v2, v1, Lifn;->a:Linc;
 
-    .line 279
     iget-boolean v2, v2, Linc;->i:Z
 
-    .line 280
     if-nez v2, :cond_7
 
     iget-object v2, v1, Lifn;->a:Linc;
 
-    .line 281
     iget-boolean v2, v2, Linc;->g:Z
 
-    .line 282
     if-nez v2, :cond_7
 
     iget-object v1, v1, Lifn;->a:Linc;
 
-    .line 283
     iget-boolean v1, v1, Linc;->f:Z
 
-    .line 284
     if-eqz v1, :cond_8
 
-    .line 285
     :cond_7
     if-eqz p2, :cond_9
 
-    .line 286
     invoke-static {v0}, Lifl;->a(Lifj;)Lifm;
 
     move-result-object v0
 
-    .line 287
     invoke-virtual {v0, v5}, Lifm;->g(I)Lifm;
 
     move-result-object v0
 
-    .line 288
     invoke-virtual {v0, v3}, Lifm;->h(I)Lifm;
 
     move-result-object v0
 
     const/high16 v1, 0x10000
 
-    .line 289
     invoke-virtual {v0, v1}, Lifm;->i(I)Lifm;
 
     move-result-object v0
 
-    .line 290
     invoke-virtual {v0}, Lifm;->a()Lifl;
 
     move-result-object v0
 
-    .line 296
     :cond_8
     :goto_2
     invoke-static {v0}, Ljrw;->b(Ljava/lang/Object;)Ljrw;
@@ -896,35 +754,29 @@
 
     goto/16 :goto_0
 
-    .line 291
     :cond_9
     invoke-static {v0}, Lifl;->a(Lifj;)Lifm;
 
     move-result-object v0
 
-    .line 292
     invoke-virtual {v0, v4}, Lifm;->g(I)Lifm;
 
     move-result-object v0
 
-    .line 293
     invoke-virtual {v0, v6}, Lifm;->h(I)Lifm;
 
     move-result-object v0
 
-    .line 294
     invoke-virtual {v0, v7}, Lifm;->i(I)Lifm;
 
     move-result-object v0
 
-    .line 295
     invoke-virtual {v0}, Lifm;->a()Lifl;
 
     move-result-object v0
 
     goto :goto_2
 
-    .line 301
     :cond_a
     invoke-virtual {v0}, Ljrw;->b()Ljava/lang/Object;
 
@@ -932,7 +784,6 @@
 
     check-cast v0, Lifj;
 
-    .line 302
     sget-object v1, Lbfh;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -969,39 +820,30 @@
 
     invoke-static {v1, v2}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 303
     return-object v0
 .end method
 
 .method private final a(Lkey;Ljuy;)V
     .locals 2
 
-    .prologue
-    .line 211
     new-instance v0, Lbfk;
 
     invoke-direct {v0, p0, p2}, Lbfk;-><init>(Lbfh;Ljuy;)V
 
-    .line 212
     sget-object v1, Lkfe;->a:Lkfe;
 
-    .line 213
     invoke-static {p1, v0, v1}, Lkek;->a(Lkey;Lkej;Ljava/util/concurrent/Executor;)V
 
-    .line 214
     return-void
 .end method
 
 .method private final c(Lilr;)Z
     .locals 5
 
-    .prologue
-    .line 215
     iget-object v1, p0, Lbfh;->g:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 216
     :try_start_0
     iget-object v0, p0, Lbfh;->h:Ljava/util/Map;
 
@@ -1011,7 +853,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 217
     sget-object v0, Lbfh;->a:Ljava/lang/String;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -1048,14 +889,12 @@
 
     invoke-static {v0, v2}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 218
     iget-object v0, p0, Lbfh;->h:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 219
     :cond_0
     :try_start_1
     iget-object v0, p0, Lbfh;->f:Lkfk;
@@ -1070,27 +909,22 @@
 
     move-result v0
 
-    .line 221
     new-instance v2, Lkfk;
 
     invoke-direct {v2}, Lkfk;-><init>()V
 
-    .line 222
     iput-object v2, p0, Lbfh;->f:Lkfk;
     :try_end_1
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 223
     :try_start_2
     monitor-exit v1
 
-    .line 226
     :goto_0
     return v0
 
-    .line 225
     :catch_0
     move-exception v0
 
@@ -1101,14 +935,12 @@
 
     invoke-static {v0, v2}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 226
     const/4 v0, 0x0
 
     monitor-exit v1
 
     goto :goto_0
 
-    .line 227
     :catchall_0
     move-exception v0
 
@@ -1118,7 +950,6 @@
 
     throw v0
 
-    .line 225
     :catch_1
     move-exception v0
 
@@ -1130,8 +961,6 @@
 .method public final a()Lfay;
     .locals 1
 
-    .prologue
-    .line 210
     iget-object v0, p0, Lbfh;->q:Lfay;
 
     return-object v0
@@ -1140,15 +969,12 @@
 .method public final a(Lien;Lihc;Liep;Lilr;Ljrw;Lida;Lida;Ljrw;ZZIILjrw;)Lkey;
     .locals 23
 
-    .prologue
-    .line 126
     sget-object v4, Lbfh;->a:Ljava/lang/String;
 
     const-string v5, "openFastCamcorder"
 
     invoke-static {v4, v5}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 127
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lbfh;->g:Ljava/lang/Object;
@@ -1157,7 +983,6 @@
 
     monitor-enter v21
 
-    .line 128
     :try_start_0
     move-object/from16 v0, p0
 
@@ -1169,7 +994,6 @@
 
     if-nez v4, :cond_0
 
-    .line 129
     new-instance v4, Ljava/lang/IllegalStateException;
 
     const-string v5, "CamcorderManager has been closed."
@@ -1182,11 +1006,9 @@
 
     monitor-exit v21
 
-    .line 168
     :goto_0
     return-object v4
 
-    .line 131
     :cond_0
     invoke-static/range {p6 .. p6}, Lidb;->b(Lida;)Lida;
     :try_end_0
@@ -1194,7 +1016,6 @@
 
     move-result-object v13
 
-    .line 132
     const/4 v4, 0x0
 
     :try_start_1
@@ -1213,7 +1034,6 @@
 
     move-result-object v4
 
-    .line 136
     :try_start_2
     move-object/from16 v0, p0
 
@@ -1225,7 +1045,6 @@
 
     move-result-object v22
 
-    .line 138
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -1234,7 +1053,6 @@
 
     move-result-object v7
 
-    .line 139
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lbfh;->p:Lkhp;
@@ -1249,7 +1067,6 @@
 
     move-object v5, v0
 
-    .line 140
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lbfh;->o:Lbik;
@@ -1272,12 +1089,10 @@
 
     move-object/from16 v16, v0
 
-    .line 142
     new-instance v4, Lbil;
 
     iget-object v6, v8, Lbik;->a:Lkhp;
 
-    .line 143
     invoke-interface {v6}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -1290,7 +1105,6 @@
 
     iget-object v6, v8, Lbik;->b:Lkhp;
 
-    .line 144
     invoke-interface {v6}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -1303,7 +1117,6 @@
 
     const/4 v6, 0x3
 
-    .line 145
     invoke-static {v5, v6}, Lbik;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v5
@@ -1312,7 +1125,6 @@
 
     const/4 v6, 0x4
 
-    .line 146
     invoke-static {v9, v6}, Lbik;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v6
@@ -1321,7 +1133,6 @@
 
     const/4 v8, 0x5
 
-    .line 147
     invoke-static {v7, v8}, Lbik;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v7
@@ -1330,7 +1141,6 @@
 
     const/4 v8, 0x6
 
-    .line 148
     move-object/from16 v0, v22
 
     invoke-static {v0, v8}, Lbik;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -1341,7 +1151,6 @@
 
     const/4 v9, 0x7
 
-    .line 149
     move-object/from16 v0, p2
 
     invoke-static {v0, v9}, Lbik;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -1352,14 +1161,12 @@
 
     const/16 v12, 0x8
 
-    .line 150
     move-object/from16 v0, p2
 
     invoke-static {v0, v12}, Lbik;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     const/16 v12, 0x9
 
-    .line 151
     invoke-static {v10, v12}, Lbik;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v10
@@ -1368,7 +1175,6 @@
 
     const/16 v12, 0xa
 
-    .line 152
     invoke-static {v11, v12}, Lbik;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v11
@@ -1377,7 +1183,6 @@
 
     const/16 v12, 0xb
 
-    .line 153
     move-object/from16 v0, p5
 
     invoke-static {v0, v12}, Lbik;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -1388,7 +1193,6 @@
 
     const/16 v14, 0xc
 
-    .line 154
     invoke-static {v13, v14}, Lbik;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v13
@@ -1397,7 +1201,6 @@
 
     const/16 v14, 0xd
 
-    .line 155
     move-object/from16 v0, p7
 
     invoke-static {v0, v14}, Lbik;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -1408,7 +1211,6 @@
 
     const/16 v15, 0xe
 
-    .line 156
     move-object/from16 v0, p8
 
     invoke-static {v0, v15}, Lbik;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -1419,7 +1221,6 @@
 
     const/16 v17, 0x12
 
-    .line 157
     move-object/from16 v0, p13
 
     move/from16 v1, v17
@@ -1432,7 +1233,6 @@
 
     const/16 v17, 0x13
 
-    .line 158
     invoke-static/range {v16 .. v17}, Lbik;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v20
@@ -1447,12 +1247,10 @@
 
     invoke-direct/range {v4 .. v20}, Lbil;-><init>(Lihf;Ljava/util/concurrent/Executor;Liew;Liez;Lihc;Lgoa;Lgpa;Ljrw;Lida;Lida;Ljrw;ZIILjrw;Liii;)V
 
-    .line 161
     invoke-interface {v4}, Lbij;->a()Lkey;
 
     move-result-object v14
 
-    .line 162
     new-instance v5, Lbfi;
 
     move-object/from16 v6, p0
@@ -1473,15 +1271,12 @@
 
     invoke-direct/range {v5 .. v13}, Lbfi;-><init>(Lbfh;Lien;Liez;Lilr;Lbij;Lida;Lida;Ljrw;)V
 
-    .line 163
     sget-object v6, Lkfe;->a:Lkfe;
 
-    .line 165
     invoke-static {v14, v5, v6}, Lkdm;->a(Lkey;Lkdx;Ljava/util/concurrent/Executor;)Lkey;
 
     move-result-object v5
 
-    .line 167
     invoke-static {v4}, Ljuy;->a(Ljava/lang/Object;)Ljuy;
 
     move-result-object v4
@@ -1490,14 +1285,12 @@
 
     invoke-direct {v0, v5, v4}, Lbfh;->a(Lkey;Ljuy;)V
 
-    .line 168
     monitor-exit v21
 
     move-object v4, v5
 
     goto/16 :goto_0
 
-    .line 134
     :catch_0
     move-exception v4
 
@@ -1509,7 +1302,6 @@
 
     goto/16 :goto_0
 
-    .line 169
     :catchall_0
     move-exception v4
 
@@ -1523,13 +1315,10 @@
 .method public final a(Lilr;)V
     .locals 5
 
-    .prologue
-    .line 41
     iget-object v1, p0, Lbfh;->g:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 42
     :try_start_0
     invoke-virtual {p0}, Lbfh;->c()Z
 
@@ -1537,14 +1326,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 43
     monitor-exit v1
 
-    .line 46
     :goto_0
     return-void
 
-    .line 44
     :cond_0
     sget-object v0, Lbfh;->a:Ljava/lang/String;
 
@@ -1582,12 +1368,10 @@
 
     invoke-static {v0, v2}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 45
     iget-object v0, p0, Lbfh;->h:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
     monitor-exit v1
 
     goto :goto_0
@@ -1605,8 +1389,6 @@
 .method public final b()Libi;
     .locals 1
 
-    .prologue
-    .line 373
     iget-object v0, p0, Lbfh;->j:Libi;
 
     return-object v0
@@ -1615,13 +1397,10 @@
 .method public final b(Lilr;)Ljrw;
     .locals 14
 
-    .prologue
-    .line 47
     iget-object v3, p0, Lbfh;->g:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 48
     :try_start_0
     invoke-virtual {p0}, Lbfh;->c()Z
 
@@ -1629,24 +1408,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 49
     sget-object v0, Lbfh;->a:Ljava/lang/String;
 
     const-string v1, "Manager has been closed"
 
     invoke-static {v0, v1}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 50
     sget-object v0, Ljrk;->a:Ljrk;
 
-    .line 51
     monitor-exit v3
 
-    .line 124
     :goto_0
     return-object v0
 
-    .line 52
     :cond_0
     iget-object v0, p0, Lbfh;->w:Ljava/util/Map;
 
@@ -1656,7 +1430,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 53
     iget-object v0, p0, Lbfh;->w:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1673,7 +1446,6 @@
 
     goto :goto_0
 
-    .line 125
     :catchall_0
     move-exception v0
 
@@ -1683,56 +1455,44 @@
 
     throw v0
 
-    .line 54
     :cond_1
     :try_start_1
     iget-object v4, p0, Lbfh;->l:Lbew;
 
-    .line 56
     iget-object v0, v4, Lbew;->d:Lfay;
 
-    .line 57
     invoke-virtual {v0, p1}, Lfay;->a(Lilr;)Lfea;
 
     move-result-object v5
 
-    .line 58
     new-instance v6, Ljava/util/HashMap;
 
     invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
 
-    .line 59
     sget-object v0, Lien;->a:Lien;
 
     sget-object v1, Lien;->a:Lien;
 
-    .line 60
     invoke-static {p1, v1}, Lbew;->a(Lilr;Lien;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 61
     invoke-interface {v6, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 62
     sget-object v0, Lien;->b:Lien;
 
     sget-object v1, Lien;->b:Lien;
 
-    .line 63
     invoke-static {p1, v1}, Lbew;->a(Lilr;Lien;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 64
     invoke-interface {v6, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 66
     new-instance v7, Ljava/util/HashMap;
 
     invoke-direct {v7}, Ljava/util/HashMap;-><init>()V
 
-    .line 67
     invoke-static {}, Lien;->a()Ljava/util/Collection;
 
     move-result-object v0
@@ -1754,7 +1514,6 @@
 
     check-cast v0, Lien;
 
-    .line 68
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
@@ -1763,7 +1522,6 @@
 
     goto :goto_1
 
-    .line 70
     :cond_2
     invoke-interface {v5}, Lfea;->r()Z
 
@@ -1771,12 +1529,10 @@
 
     if-eqz v0, :cond_9
 
-    .line 72
     invoke-interface {v5}, Lfea;->t_()Ljava/util/List;
 
     move-result-object v0
 
-    .line 73
     sget-object v1, Lbew;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -1813,7 +1569,6 @@
 
     invoke-static {v1, v2}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 74
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
@@ -1832,15 +1587,12 @@
 
     check-cast v0, Liep;
 
-    .line 76
     invoke-static {v0}, Lifi;->a(Liep;)Lifi;
 
     move-result-object v9
 
-    .line 77
     if-eqz v9, :cond_3
 
-    .line 78
     iget-object v1, v4, Lbew;->c:Lifg;
 
     invoke-static {p1, v9}, Lifg;->a(Lilr;Lifi;)Z
@@ -1849,7 +1601,6 @@
 
     if-nez v1, :cond_4
 
-    .line 79
     sget-object v0, Lbew;->a:Ljava/lang/String;
 
     invoke-static {v9}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -1888,18 +1639,15 @@
 
     goto :goto_2
 
-    .line 82
     :cond_4
     invoke-virtual {v0}, Liep;->b()Lihs;
 
     move-result-object v1
 
-    .line 83
     invoke-interface {v5, v1}, Lfea;->a(Lihs;)Ljava/util/List;
 
     move-result-object v10
 
-    .line 84
     sget-object v1, Lbew;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -1960,7 +1708,6 @@
 
     invoke-static {v1, v2}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 85
     invoke-static {}, Lien;->a()Ljava/util/Collection;
 
     move-result-object v1
@@ -1983,7 +1730,6 @@
 
     check-cast v1, Lien;
 
-    .line 86
     iget-object v2, v4, Lbew;->c:Lifg;
 
     invoke-static {p1, v9}, Lifg;->a(Lilr;Lifi;)Z
@@ -1992,18 +1738,14 @@
 
     if-eqz v2, :cond_5
 
-    .line 87
     iget-object v2, v4, Lbew;->c:Lifg;
 
-    .line 88
     invoke-static {p1, v9}, Lifg;->b(Lilr;Lifi;)Lifj;
 
     move-result-object v2
 
-    .line 89
     invoke-static {v2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 90
     iget-object v12, v4, Lbew;->b:Liex;
 
     invoke-static {v2, v1, v0}, Liex;->b(Lifj;Lien;Liep;)Z
@@ -2012,7 +1754,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 91
     invoke-interface {v10}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v12
@@ -2030,10 +1771,8 @@
 
     check-cast v2, Landroid/util/Range;
 
-    .line 93
     iget v13, v1, Lien;->e:I
 
-    .line 94
     invoke-virtual {v2}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
 
     move-result-object v2
@@ -2046,26 +1785,21 @@
 
     if-ne v13, v2, :cond_6
 
-    .line 95
     invoke-interface {v7, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/List;
 
-    .line 96
     invoke-static {v1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 97
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
-    .line 102
     :cond_7
     const/4 v0, 0x0
 
-    .line 103
     invoke-static {}, Lifi;->values()[Lifi;
 
     move-result-object v2
@@ -2079,7 +1813,6 @@
 
     aget-object v9, v2, v1
 
-    .line 104
     iget-object v10, v4, Lbew;->c:Lifg;
 
     invoke-static {p1, v9}, Lifg;->a(Lilr;Lifi;)Z
@@ -2088,18 +1821,14 @@
 
     if-eqz v10, :cond_a
 
-    .line 105
     iget-object v10, v4, Lbew;->c:Lifg;
 
-    .line 106
     invoke-static {p1, v9}, Lifg;->b(Lilr;Lifi;)Lifj;
 
     move-result-object v9
 
-    .line 107
     invoke-static {v9}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 108
     invoke-interface {v9}, Lifj;->l()I
 
     move-result v9
@@ -2108,14 +1837,11 @@
 
     if-ne v9, v10, :cond_a
 
-    .line 109
     const/4 v0, 0x1
 
-    .line 112
     :cond_8
     if-nez v0, :cond_9
 
-    .line 113
     sget-object v0, Lien;->d:Lien;
 
     new-instance v1, Ljava/util/ArrayList;
@@ -2124,11 +1850,9 @@
 
     invoke-interface {v7, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 115
     :cond_9
     invoke-interface {v6, v7}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 116
     invoke-interface {v6}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -2150,14 +1874,12 @@
 
     check-cast v0, Lien;
 
-    .line 117
     invoke-interface {v6, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/List;
 
-    .line 118
     invoke-static {}, Liep;->a()Ljava/util/Comparator;
 
     move-result-object v2
@@ -2166,13 +1888,11 @@
 
     goto :goto_5
 
-    .line 111
     :cond_a
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_4
 
-    .line 120
     :cond_b
     new-instance v0, Lbev;
 
@@ -2182,14 +1902,12 @@
 
     move-result-object v1
 
-    .line 122
     invoke-virtual {v1}, Ljrw;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_c
 
-    .line 123
     iget-object v2, p0, Lbfh;->w:Ljava/util/Map;
 
     invoke-virtual {v1}, Ljrw;->b()Ljava/lang/Object;
@@ -2200,7 +1918,6 @@
 
     invoke-interface {v2, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 124
     :cond_c
     monitor-exit v3
     :try_end_1
@@ -2214,15 +1931,12 @@
 .method public final b(Lien;Lihc;Liep;Lilr;Ljrw;Lida;Lida;Ljrw;ZZIILjrw;)Lkey;
     .locals 22
 
-    .prologue
-    .line 170
     sget-object v4, Lbfh;->a:Ljava/lang/String;
 
     const-string v5, "openCamcorder with mediacodec"
 
     invoke-static {v4, v5}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 171
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lbfh;->g:Ljava/lang/Object;
@@ -2231,7 +1945,6 @@
 
     monitor-enter v20
 
-    .line 172
     :try_start_0
     move-object/from16 v0, p0
 
@@ -2243,7 +1956,6 @@
 
     if-nez v4, :cond_0
 
-    .line 173
     new-instance v4, Ljava/lang/IllegalStateException;
 
     const-string v5, "CamcorderManager has been closed."
@@ -2258,11 +1970,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 208
     :goto_0
     return-object v4
 
-    .line 174
     :cond_0
     const/4 v4, 0x0
 
@@ -2282,7 +1992,6 @@
 
     move-result-object v4
 
-    .line 178
     :try_start_2
     move-object/from16 v0, p0
 
@@ -2294,7 +2003,6 @@
 
     move-result-object v21
 
-    .line 180
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -2303,7 +2011,6 @@
 
     move-result-object v6
 
-    .line 181
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lbfh;->t:Lbju;
@@ -2334,12 +2041,10 @@
 
     move-object/from16 v16, v0
 
-    .line 183
     new-instance v4, Lige;
 
     iget-object v5, v5, Lbju;->a:Lkhp;
 
-    .line 184
     invoke-interface {v5}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v5
@@ -2352,7 +2057,6 @@
 
     const/4 v5, 0x2
 
-    .line 185
     invoke-static {v6, v5}, Lbju;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v5
@@ -2361,7 +2065,6 @@
 
     const/4 v6, 0x3
 
-    .line 186
     move-object/from16 v0, v21
 
     invoke-static {v0, v6}, Lbju;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -2372,7 +2075,6 @@
 
     const/4 v9, 0x4
 
-    .line 187
     invoke-static {v7, v9}, Lbju;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v7
@@ -2381,7 +2083,6 @@
 
     const/4 v9, 0x5
 
-    .line 188
     invoke-static {v8, v9}, Lbju;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v8
@@ -2390,7 +2091,6 @@
 
     const/4 v9, 0x6
 
-    .line 189
     move-object/from16 v0, p2
 
     invoke-static {v0, v9}, Lbju;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -2401,14 +2101,12 @@
 
     const/4 v10, 0x7
 
-    .line 190
     move-object/from16 v0, p6
 
     invoke-static {v0, v10}, Lbju;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     const/16 v10, 0x8
 
-    .line 191
     move-object/from16 v0, p7
 
     invoke-static {v0, v10}, Lbju;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -2419,7 +2117,6 @@
 
     const/16 v11, 0x9
 
-    .line 192
     move-object/from16 v0, p8
 
     invoke-static {v0, v11}, Lbju;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -2432,7 +2129,6 @@
 
     const/16 v17, 0xb
 
-    .line 193
     move/from16 v0, v17
 
     invoke-static {v13, v0}, Lbju;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -2443,7 +2139,6 @@
 
     const/16 v17, 0xc
 
-    .line 194
     move/from16 v0, v17
 
     invoke-static {v14, v0}, Lbju;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -2454,7 +2149,6 @@
 
     const/16 v17, 0xd
 
-    .line 195
     move/from16 v0, v17
 
     invoke-static {v15, v0}, Lbju;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -2465,7 +2159,6 @@
 
     const/16 v17, 0x11
 
-    .line 196
     move-object/from16 v0, p5
 
     move/from16 v1, v17
@@ -2478,7 +2171,6 @@
 
     const/16 v18, 0x12
 
-    .line 197
     move-object/from16 v0, p13
 
     move/from16 v1, v18
@@ -2491,7 +2183,6 @@
 
     const/16 v19, 0x13
 
-    .line 198
     move-object/from16 v0, v16
 
     move/from16 v1, v19
@@ -2506,12 +2197,10 @@
 
     invoke-direct/range {v4 .. v19}, Lige;-><init>(Liew;Liez;Ljava/util/concurrent/Executor;Landroid/os/Handler;Lier;Lida;Ljrw;ZLgpa;Lgoa;Lbis;ILjrw;Ljrw;Liii;)V
 
-    .line 201
     invoke-virtual {v4}, Lige;->a()Lkey;
 
     move-result-object v14
 
-    .line 202
     new-instance v5, Lbfj;
 
     move-object/from16 v6, p0
@@ -2532,15 +2221,12 @@
 
     invoke-direct/range {v5 .. v13}, Lbfj;-><init>(Lbfh;Lien;Liez;Lilr;Lige;Lida;Lida;Ljrw;)V
 
-    .line 203
     sget-object v4, Lkfe;->a:Lkfe;
 
-    .line 205
     invoke-static {v14, v5, v4}, Lkdm;->a(Lkey;Lkdx;Ljava/util/concurrent/Executor;)Lkey;
 
     move-result-object v4
 
-    .line 207
     invoke-static {}, Ljuy;->d()Ljuy;
 
     move-result-object v5
@@ -2549,12 +2235,10 @@
 
     invoke-direct {v0, v4, v5}, Lbfh;->a(Lkey;Ljuy;)V
 
-    .line 208
     monitor-exit v20
 
     goto/16 :goto_0
 
-    .line 209
     :catchall_0
     move-exception v4
 
@@ -2564,7 +2248,6 @@
 
     throw v4
 
-    .line 176
     :catch_0
     move-exception v4
 
@@ -2583,13 +2266,10 @@
 .method final c()Z
     .locals 2
 
-    .prologue
-    .line 374
     iget-object v1, p0, Lbfh;->g:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 375
     :try_start_0
     iget-object v0, p0, Lbfh;->f:Lkfk;
 
@@ -2625,7 +2305,6 @@
 
     goto :goto_0
 
-    .line 376
     :catchall_0
     move-exception v0
 
@@ -2639,13 +2318,10 @@
 .method public final close()V
     .locals 3
 
-    .prologue
-    .line 29
     iget-object v1, p0, Lbfh;->g:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 30
     :try_start_0
     invoke-virtual {p0}, Lbfh;->c()Z
 
@@ -2653,21 +2329,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 31
     sget-object v0, Lbfh;->a:Ljava/lang/String;
 
     const-string v2, "Manager has been closed"
 
     invoke-static {v0, v2}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 32
     monitor-exit v1
 
-    .line 40
     :goto_0
     return-void
 
-    .line 33
     :cond_0
     iget-object v0, p0, Lbfh;->f:Lkfk;
 
@@ -2679,14 +2351,12 @@
 
     invoke-virtual {v0, v2}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 34
     sget-object v0, Lbfh;->a:Ljava/lang/String;
 
     const-string v2, "close"
 
     invoke-static {v0, v2}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 35
     iget-object v0, p0, Lbfh;->h:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -2710,12 +2380,10 @@
 
     check-cast v0, Lbfa;
 
-    .line 36
     invoke-interface {v0}, Lbfa;->close()V
 
     goto :goto_1
 
-    .line 40
     :catchall_0
     move-exception v0
 
@@ -2725,19 +2393,16 @@
 
     throw v0
 
-    .line 38
     :cond_1
     :try_start_1
     iget-object v0, p0, Lbfh;->b:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
 
-    .line 39
     iget-object v0, p0, Lbfh;->n:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quit()Z
 
-    .line 40
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

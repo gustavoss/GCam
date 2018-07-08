@@ -25,11 +25,8 @@
 .method public final call()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lbjw;->a:Ligd;
 
-    .line 4
     iget-object v0, v1, Ligd;->k:Ljava/io/File;
 
     if-nez v0, :cond_0
@@ -38,7 +35,6 @@
 
     if-nez v0, :cond_0
 
-    .line 5
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Either Output video file path or descriptor is required"
@@ -47,16 +43,12 @@
 
     throw v0
 
-    .line 6
     :cond_0
     new-instance v0, Ligc;
 
-    .line 7
     invoke-direct {v0, v1}, Ligc;-><init>(Ligd;)V
 
-    .line 8
     check-cast v0, Ligc;
 
-    .line 9
     return-object v0
 .end method

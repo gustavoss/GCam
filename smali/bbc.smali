@@ -18,8 +18,6 @@
 .method constructor <init>(Lbau;Ljava/lang/String;Lkhp;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbbc;->c:Lbau;
 
     iput-object p2, p0, Lbbc;->a:Ljava/lang/String;
@@ -36,18 +34,14 @@
 .method public final synthetic a(Ljava/lang/Object;)Lkey;
     .locals 4
 
-    .prologue
-    .line 2
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 4
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -58,27 +52,20 @@
 
     move-result-object v0
 
-    .line 21
     :goto_0
     return-object v0
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lbbc;->c:Lbau;
 
-    .line 6
     iget-object v0, v0, Lbau;->b:Liii;
 
-    .line 7
     if-eqz v0, :cond_1
 
-    .line 8
     iget-object v0, p0, Lbbc;->c:Lbau;
 
-    .line 9
     iget-object v0, v0, Lbau;->b:Liii;
 
-    .line 10
     iget-object v1, p0, Lbbc;->a:Ljava/lang/String;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -93,7 +80,6 @@
 
     invoke-interface {v0, v1}, Liii;->a(Ljava/lang/String;)V
 
-    .line 11
     iget-object v0, p0, Lbbc;->b:Lkhp;
 
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
@@ -102,13 +88,10 @@
 
     check-cast v0, Lias;
 
-    .line 12
     iget-object v1, p0, Lbbc;->c:Lbau;
 
-    .line 13
     iget-object v1, v1, Lbau;->b:Liii;
 
-    .line 14
     iget-object v2, p0, Lbbc;->a:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -123,23 +106,18 @@
 
     invoke-interface {v1, v2}, Liii;->b(Ljava/lang/String;)V
 
-    .line 15
     invoke-interface {v0}, Lias;->a()Lkey;
 
     move-result-object v0
 
-    .line 16
     iget-object v1, p0, Lbbc;->c:Lbau;
 
-    .line 17
     iget-object v1, v1, Lbau;->b:Liii;
 
-    .line 18
     invoke-interface {v1}, Liii;->a()V
 
     goto :goto_0
 
-    .line 20
     :cond_1
     iget-object v0, p0, Lbbc;->b:Lkhp;
 

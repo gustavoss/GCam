@@ -16,8 +16,6 @@
 .method public constructor <init>(Lium;Liud;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Livg;->a:Lium;
 
     iput-object p2, p0, Livg;->b:Liud;
@@ -32,9 +30,6 @@
 .method public final synthetic call()Ljava/lang/Object;
     .locals 6
 
-    .prologue
-    .line 2
-    .line 3
     iget-object v0, p0, Livg;->a:Lium;
 
     invoke-interface {v0}, Lium;->d()Liwe;
@@ -43,10 +38,8 @@
 
     iget-object v4, p0, Livg;->b:Liud;
 
-    .line 4
     new-instance v0, Livz;
 
-    .line 5
     invoke-static {}, Livz;->f()I
 
     move-result v2
@@ -57,6 +50,5 @@
 
     invoke-direct/range {v0 .. v5}, Livz;-><init>(Liwe;IILiuc;B)V
 
-    .line 6
     return-object v0
 .end method

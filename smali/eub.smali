@@ -25,11 +25,8 @@
 .method public final run()V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Leub;->a:Leua;
 
-    .line 2
     iget-object v0, v0, Leua;->b:Landroid/os/Handler;
 
     invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -38,6 +35,5 @@
 
     invoke-virtual {v0}, Landroid/os/Looper;->quitSafely()V
 
-    .line 3
     return-void
 .end method

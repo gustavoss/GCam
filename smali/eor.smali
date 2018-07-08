@@ -31,39 +31,28 @@
 .method public constructor <init>(Leoo;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object v2, p0, Leor;->a:Ljava/io/File;
 
-    .line 3
     iput-object v2, p0, Leor;->b:Ljrw;
 
-    .line 4
     iput-object v2, p0, Leor;->e:Lioy;
 
-    .line 5
     iput-object v2, p0, Leor;->c:Lihp;
 
-    .line 6
     iput-object v2, p0, Leor;->f:Lihs;
 
-    .line 7
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Leor;->g:J
 
-    .line 8
     iput-object v2, p0, Leor;->h:Ljava/lang/String;
 
-    .line 9
     iput-object p1, p0, Leor;->d:Leoo;
 
-    .line 10
     return-void
 .end method
 
@@ -72,13 +61,10 @@
 .method public final a()Leon;
     .locals 6
 
-    .prologue
-    .line 29
     iget-object v0, p0, Leor;->a:Ljava/io/File;
 
     if-nez v0, :cond_0
 
-    .line 30
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "image file is not set."
@@ -87,13 +73,11 @@
 
     throw v0
 
-    .line 31
     :cond_0
     iget-object v0, p0, Leor;->b:Ljrw;
 
     if-nez v0, :cond_1
 
-    .line 32
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "image location optional is not set."
@@ -102,13 +86,11 @@
 
     throw v0
 
-    .line 33
     :cond_1
     iget-object v0, p0, Leor;->e:Lioy;
 
     if-nez v0, :cond_2
 
-    .line 34
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "image MIME type is not set."
@@ -117,13 +99,11 @@
 
     throw v0
 
-    .line 35
     :cond_2
     iget-object v0, p0, Leor;->c:Lihp;
 
     if-nez v0, :cond_3
 
-    .line 36
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "image orientation is not set."
@@ -132,13 +112,11 @@
 
     throw v0
 
-    .line 37
     :cond_3
     iget-object v0, p0, Leor;->f:Lihs;
 
     if-nez v0, :cond_4
 
-    .line 38
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "image size is not set."
@@ -147,7 +125,6 @@
 
     throw v0
 
-    .line 39
     :cond_4
     iget-wide v0, p0, Leor;->g:J
 
@@ -157,7 +134,6 @@
 
     if-gez v0, :cond_5
 
-    .line 40
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "image taken time is not set."
@@ -166,13 +142,11 @@
 
     throw v0
 
-    .line 41
     :cond_5
     iget-object v0, p0, Leor;->h:Ljava/lang/String;
 
     if-nez v0, :cond_6
 
-    .line 42
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "image title is not set."
@@ -181,7 +155,6 @@
 
     throw v0
 
-    .line 43
     :cond_6
     iget-object v0, p0, Leor;->d:Leoo;
 
@@ -189,20 +162,16 @@
 
     move-result-object v1
 
-    .line 44
     const-string v0, "media_type"
 
     const/4 v2, 0x1
 
-    .line 45
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    .line 46
     invoke-virtual {v1, v0, v2}, Leon;->a(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 47
     const-string v0, "_data"
 
     iget-object v2, p0, Leor;->a:Ljava/io/File;
@@ -213,7 +182,6 @@
 
     invoke-virtual {v1, v0, v2}, Leon;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 48
     const-string v0, "_size"
 
     iget-object v2, p0, Leor;->a:Ljava/io/File;
@@ -228,7 +196,6 @@
 
     invoke-virtual {v1, v0, v2}, Leon;->a(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 49
     const-string v0, "_display_name"
 
     iget-object v2, p0, Leor;->a:Ljava/io/File;
@@ -239,14 +206,12 @@
 
     invoke-virtual {v1, v0, v2}, Leon;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 50
     const-string v0, "title"
 
     iget-object v2, p0, Leor;->h:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v2}, Leon;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 51
     const-string v0, "date_added"
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
@@ -263,7 +228,6 @@
 
     invoke-virtual {v1, v0, v2}, Leon;->a(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 52
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     iget-object v2, p0, Leor;->a:Ljava/io/File;
@@ -276,7 +240,6 @@
 
     move-result-wide v2
 
-    .line 53
     const-string v0, "date_modified"
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -285,48 +248,38 @@
 
     invoke-virtual {v1, v0, v2}, Leon;->a(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 54
     const-string v0, "mime_type"
 
     iget-object v2, p0, Leor;->e:Lioy;
 
-    .line 55
     iget-object v2, v2, Lioy;->i:Ljava/lang/String;
 
-    .line 56
     invoke-virtual {v1, v0, v2}, Leon;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 57
     const-string v0, "width"
 
     iget-object v2, p0, Leor;->f:Lihs;
 
-    .line 58
     iget v2, v2, Lihs;->a:I
 
-    .line 59
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     invoke-virtual {v1, v0, v2}, Leon;->a(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 60
     const-string v0, "height"
 
     iget-object v2, p0, Leor;->f:Lihs;
 
-    .line 61
     iget v2, v2, Lihs;->b:I
 
-    .line 62
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     invoke-virtual {v1, v0, v2}, Leon;->a(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 63
     iget-object v0, p0, Leor;->b:Ljrw;
 
     invoke-virtual {v0}, Ljrw;->a()Z
@@ -335,7 +288,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 64
     const-string v2, "latitude"
 
     iget-object v0, p0, Leor;->b:Ljrw;
@@ -356,7 +308,6 @@
 
     invoke-virtual {v1, v2, v0}, Leon;->a(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 65
     const-string v2, "longitude"
 
     iget-object v0, p0, Leor;->b:Ljrw;
@@ -377,7 +328,6 @@
 
     invoke-virtual {v1, v2, v0}, Leon;->a(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 66
     :cond_7
     const-string v0, "datetaken"
 
@@ -389,37 +339,30 @@
 
     invoke-virtual {v1, v0, v2}, Leon;->a(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 67
     const-string v0, "orientation"
 
     iget-object v2, p0, Leor;->c:Lihp;
 
-    .line 68
     iget v2, v2, Lihp;->e:I
 
-    .line 69
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     invoke-virtual {v1, v0, v2}, Leon;->a(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 70
     return-object v1
 .end method
 
 .method public final a(J)Leor;
     .locals 3
 
-    .prologue
-    .line 21
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
 
     if-gtz v0, :cond_0
 
-    .line 22
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const/16 v1, 0x2d
@@ -446,19 +389,15 @@
 
     throw v0
 
-    .line 23
     :cond_0
     iput-wide p1, p0, Leor;->g:J
 
-    .line 24
     return-object p0
 .end method
 
 .method public final a(Lihs;)Leor;
     .locals 4
 
-    .prologue
-    .line 17
     invoke-virtual {p1}, Lihs;->b()J
 
     move-result-wide v0
@@ -469,7 +408,6 @@
 
     if-gtz v0, :cond_0
 
-    .line 18
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -508,30 +446,23 @@
 
     throw v0
 
-    .line 19
     :cond_0
     iput-object p1, p0, Leor;->f:Lihs;
 
-    .line 20
     return-object p0
 .end method
 
 .method public final a(Lioy;)Leor;
     .locals 4
 
-    .prologue
-    .line 11
-    .line 12
     sget-object v0, Lioy;->h:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 13
     if-nez v0, :cond_0
 
-    .line 14
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -570,26 +501,21 @@
 
     throw v0
 
-    .line 15
     :cond_0
     iput-object p1, p0, Leor;->e:Lioy;
 
-    .line 16
     return-object p0
 .end method
 
 .method public final a(Ljava/lang/String;)Leor;
     .locals 2
 
-    .prologue
-    .line 25
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 26
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "empty image title"
@@ -598,10 +524,8 @@
 
     throw v0
 
-    .line 27
     :cond_0
     iput-object p1, p0, Leor;->h:Ljava/lang/String;
 
-    .line 28
     return-object p0
 .end method

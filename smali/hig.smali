@@ -17,8 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lhif;-><init>()V
 
     return-void
@@ -29,31 +27,25 @@
 .method public a(Lcom/google/android/apps/camera/zoomui/ZoomUi;)V
     .locals 1
 
-    .prologue
-    .line 2
     iput-object p1, p0, Lhig;->d:Lcom/google/android/apps/camera/zoomui/ZoomUi;
 
-    .line 3
     invoke-virtual {p1}, Lcom/google/android/apps/camera/zoomui/ZoomUi;->a()Landroid/widget/LinearLayout;
 
     move-result-object v0
 
     iput-object v0, p0, Lhig;->e:Landroid/widget/LinearLayout;
 
-    .line 4
     invoke-virtual {p1}, Lcom/google/android/apps/camera/zoomui/ZoomUi;->c()Lcom/google/android/apps/camera/zoomui/ZoomMarkerView;
 
     move-result-object v0
 
     iput-object v0, p0, Lhig;->g:Lcom/google/android/apps/camera/zoomui/ZoomMarkerView;
 
-    .line 5
     invoke-virtual {p1}, Lcom/google/android/apps/camera/zoomui/ZoomUi;->b()Landroid/widget/SeekBar;
 
     move-result-object v0
 
     iput-object v0, p0, Lhig;->f:Landroid/widget/SeekBar;
 
-    .line 6
     return-void
 .end method

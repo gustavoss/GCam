@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljwx;-><init>()V
 
     return-void
@@ -22,23 +20,18 @@
 .method public clear()V
     .locals 1
 
-    .prologue
-    .line 2
     invoke-virtual {p0}, Ljwc;->a()Ljvy;
 
     move-result-object v0
 
     invoke-interface {v0}, Ljvy;->clear()V
 
-    .line 3
     return-void
 .end method
 
 .method public contains(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 4
     invoke-virtual {p0}, Ljwc;->a()Ljvy;
 
     move-result-object v0
@@ -53,8 +46,6 @@
 .method public containsAll(Ljava/util/Collection;)Z
     .locals 1
 
-    .prologue
-    .line 5
     invoke-virtual {p0}, Ljwc;->a()Ljvy;
 
     move-result-object v0
@@ -69,8 +60,6 @@
 .method public isEmpty()Z
     .locals 1
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Ljwc;->a()Ljvy;
 
     move-result-object v0
@@ -85,8 +74,6 @@
 .method public remove(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 7
     invoke-virtual {p0}, Ljwc;->a()Ljvy;
 
     move-result-object v0
@@ -113,8 +100,6 @@
 .method public size()I
     .locals 1
 
-    .prologue
-    .line 8
     invoke-virtual {p0}, Ljwc;->a()Ljvy;
 
     move-result-object v0

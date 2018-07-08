@@ -24,29 +24,20 @@
 .method public constructor <init>(Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lehl;->a:Lkhp;
 
-    .line 3
     iput-object p2, p0, Lehl;->b:Lkhp;
 
-    .line 4
     iput-object p3, p0, Lehl;->c:Lkhp;
 
-    .line 5
     iput-object p4, p0, Lehl;->d:Lkhp;
 
-    .line 6
     iput-object p5, p0, Lehl;->e:Lkhp;
 
-    .line 7
     iput-object p6, p0, Lehl;->f:Lkhp;
 
-    .line 8
     return-void
 .end method
 
@@ -55,12 +46,8 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 7
 
-    .prologue
-    .line 9
-    .line 10
     iget-object v0, p0, Lehl;->a:Lkhp;
 
-    .line 11
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -69,7 +56,6 @@
 
     iget-object v0, p0, Lehl;->b:Lkhp;
 
-    .line 12
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -78,7 +64,6 @@
 
     iget-object v0, p0, Lehl;->c:Lkhp;
 
-    .line 13
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -89,7 +74,6 @@
 
     iget-object v0, p0, Lehl;->d:Lkhp;
 
-    .line 14
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -98,7 +82,6 @@
 
     iget-object v4, p0, Lehl;->e:Lkhp;
 
-    .line 15
     invoke-interface {v4}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v4
@@ -107,44 +90,37 @@
 
     iget-object v5, p0, Lehl;->f:Lkhp;
 
-    .line 16
     invoke-interface {v5}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lhbv;
 
-    .line 19
     invoke-interface {v0}, Lawt;->b()Liaq;
 
     move-result-object v6
 
     new-instance v0, Lhhk;
 
-    .line 20
     invoke-virtual {v3}, Lgpj;->a()Z
 
     move-result v3
 
     invoke-direct/range {v0 .. v5}, Lhhk;-><init>(Lida;Lida;ZLiix;Lhbv;)V
 
-    .line 21
     invoke-interface {v6, v0}, Liaq;->a(Lihr;)Lihr;
 
     move-result-object v0
 
     check-cast v0, Lhhj;
 
-    .line 22
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 23
     invoke-static {v0, v1}, Lkgh;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lhhj;
 
-    .line 24
     return-object v0
 .end method

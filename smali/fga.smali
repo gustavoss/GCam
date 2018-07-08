@@ -23,23 +23,16 @@
 .method public constructor <init>(Ljrm;III)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lfga;->d:Ljrm;
 
-    .line 3
     iput p2, p0, Lfga;->a:I
 
-    .line 4
     iput p3, p0, Lfga;->b:I
 
-    .line 5
     iput p4, p0, Lfga;->c:I
 
-    .line 6
     return-void
 .end method
 
@@ -48,8 +41,6 @@
 .method public final a(Lfea;)Lfgb;
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lfga;->d:Ljrm;
 
     invoke-interface {v0, p1}, Ljrm;->a(Ljava/lang/Object;)Ljava/lang/Object;

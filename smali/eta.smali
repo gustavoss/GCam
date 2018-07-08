@@ -29,53 +29,40 @@
 .method public constructor <init>(Ljava/util/List;Lete;Letn;Ljava/util/concurrent/Executor;)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Leta;->a:Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Leta;->f:Ljava/util/Map;
 
-    .line 5
     new-instance v0, Lkfk;
 
     invoke-direct {v0}, Lkfk;-><init>()V
 
-    .line 6
     iput-object v0, p0, Leta;->i:Lkfk;
 
-    .line 7
     iput-boolean v4, p0, Leta;->g:Z
 
-    .line 8
     iput-boolean v4, p0, Leta;->j:Z
 
-    .line 9
     iput-object p1, p0, Leta;->d:Ljava/util/List;
 
-    .line 10
     iput-object p2, p0, Leta;->e:Lete;
 
-    .line 11
     iput-object p3, p0, Leta;->b:Letn;
 
-    .line 12
     iput-object p4, p0, Leta;->c:Ljava/util/concurrent/Executor;
 
-    .line 13
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -93,7 +80,6 @@
 
     check-cast v0, Letw;
 
-    .line 14
     iget-object v2, p0, Leta;->f:Ljava/util/Map;
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -104,7 +90,6 @@
 
     goto :goto_0
 
-    .line 16
     :cond_0
     return-void
 .end method
@@ -114,13 +99,10 @@
 .method public final a()V
     .locals 5
 
-    .prologue
-    .line 17
     iget-object v1, p0, Leta;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 18
     :try_start_0
     iget-object v0, p0, Leta;->d:Ljava/util/List;
 
@@ -141,7 +123,6 @@
 
     check-cast v0, Letw;
 
-    .line 19
     iget-object v3, p0, Leta;->f:Ljava/util/Map;
 
     const/4 v4, 0x1
@@ -152,12 +133,10 @@
 
     invoke-interface {v3, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 20
     invoke-interface {v0}, Letw;->a()V
 
     goto :goto_0
 
-    .line 22
     :catchall_0
     move-exception v0
 
@@ -179,35 +158,28 @@
 .method public final b()Lkey;
     .locals 2
 
-    .prologue
-    .line 23
     iget-object v1, p0, Leta;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 24
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Leta;->g:Z
 
-    .line 25
     invoke-virtual {p0}, Leta;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 26
     invoke-virtual {p0}, Leta;->c()V
 
-    .line 27
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 28
     iget-object v0, p0, Leta;->d:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -227,12 +199,10 @@
 
     check-cast v0, Letw;
 
-    .line 29
     invoke-interface {v0}, Letw;->b()V
 
     goto :goto_0
 
-    .line 27
     :catchall_0
     move-exception v0
 
@@ -243,7 +213,6 @@
 
     throw v0
 
-    .line 31
     :cond_1
     iget-object v0, p0, Leta;->i:Lkfk;
 
@@ -253,28 +222,22 @@
 .method final c()V
     .locals 3
 
-    .prologue
-    .line 32
     iget-boolean v0, p0, Leta;->j:Z
 
     if-eqz v0, :cond_0
 
-    .line 39
     :goto_0
     return-void
 
-    .line 34
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Leta;->j:Z
 
-    .line 35
     iget-object v0, p0, Leta;->h:Liwz;
 
     if-eqz v0, :cond_1
 
-    .line 36
     iget-object v0, p0, Leta;->i:Lkfk;
 
     iget-object v1, p0, Leta;->h:Liwz;
@@ -285,7 +248,6 @@
 
     invoke-virtual {v0, v1}, Lkfk;->a(Lkey;)Z
 
-    .line 38
     :goto_1
     iget-object v0, p0, Leta;->i:Lkfk;
 
@@ -299,7 +261,6 @@
 
     goto :goto_0
 
-    .line 37
     :cond_1
     iget-object v0, p0, Leta;->i:Lkfk;
 
@@ -313,8 +274,6 @@
 .method final d()Z
     .locals 4
 
-    .prologue
-    .line 40
     iget-object v0, p0, Leta;->d:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -334,7 +293,6 @@
 
     check-cast v0, Letw;
 
-    .line 41
     iget-object v1, p0, Leta;->f:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -343,10 +301,8 @@
 
     check-cast v1, Ljava/lang/Boolean;
 
-    .line 42
     if-nez v1, :cond_1
 
-    .line 43
     new-instance v1, Ljava/lang/AssertionError;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -385,7 +341,6 @@
 
     throw v1
 
-    .line 44
     :cond_1
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -393,10 +348,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 45
     const/4 v0, 0x0
 
-    .line 47
     :goto_0
     return v0
 

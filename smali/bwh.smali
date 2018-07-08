@@ -22,34 +22,24 @@
 .method private constructor <init>(Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbwh;->a:Lkhp;
 
-    .line 3
     iput-object p2, p0, Lbwh;->b:Lkhp;
 
-    .line 4
     iput-object p3, p0, Lbwh;->c:Lkhp;
 
-    .line 5
     iput-object p4, p0, Lbwh;->d:Lkhp;
 
-    .line 6
     iput-object p5, p0, Lbwh;->e:Lkhp;
 
-    .line 7
     return-void
 .end method
 
 .method public static a(Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;)Lbwh;
     .locals 6
 
-    .prologue
-    .line 8
     new-instance v0, Lbwh;
 
     move-object v1, p0
@@ -72,27 +62,19 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 9
-    .line 10
     iget-object v0, p0, Lbwh;->e:Lkhp;
 
-    .line 11
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
 
-    .line 12
     sget-object v0, Ljws;->a:Ljws;
 
-    .line 13
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 14
     invoke-static {v0, v1}, Lkgh;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Set;
 
-    .line 15
     return-object v0
 .end method

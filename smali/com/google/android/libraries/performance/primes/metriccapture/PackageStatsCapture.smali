@@ -11,7 +11,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x3
 
     const/4 v7, 0x2
@@ -20,7 +19,6 @@
 
     const/4 v5, 0x0
 
-    .line 44
     new-array v0, v8, [Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsInvocation;
 
     new-instance v1, Liyu;
@@ -93,8 +91,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -103,12 +99,10 @@
 .method private static a()Z
     .locals 7
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 2
     :try_start_0
     const-class v2, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsCallback;
 
@@ -130,7 +124,6 @@
 
     aput-object v6, v4, v5
 
-    .line 3
     invoke-virtual {v2, v3, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
@@ -139,7 +132,6 @@
 
     move-result v2
 
-    .line 4
     invoke-static {v2}, Ljava/lang/reflect/Modifier;->isAbstract(I)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -149,21 +141,17 @@
 
     if-nez v2, :cond_0
 
-    .line 7
     :goto_0
     return v0
 
     :cond_0
     move v0, v1
 
-    .line 4
     goto :goto_0
 
-    .line 5
     :catch_0
     move-exception v0
 
-    .line 6
     :goto_1
     const-string v2, "PackageStatsCapture"
 
@@ -175,10 +163,8 @@
 
     move v0, v1
 
-    .line 7
     goto :goto_0
 
-    .line 5
     :catch_1
     move-exception v0
 
@@ -188,22 +174,17 @@
 .method public static getPackageStats(Landroid/content/Context;)Landroid/content/pm/PackageStats;
     .locals 1
 
-    .prologue
-    .line 40
     :try_start_0
     invoke-static {}, Ljid;->b()V
 
-    .line 41
     invoke-static {p0}, Litc;->a(Landroid/content/Context;)Landroid/content/pm/PackageStats;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 42
     return-object v0
 
-    .line 43
     :catchall_0
     move-exception v0
 
@@ -213,63 +194,51 @@
 .method static varargs getPackageStatsUsingInternalAPI(Landroid/content/Context;J[Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsInvocation;)Landroid/content/pm/PackageStats;
     .locals 9
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v4, 0x5
 
     const/4 v1, 0x0
 
-    .line 8
     invoke-static {}, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture;->a()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 9
     const-string v2, "PackageStatsCapture"
 
     const-string v3, "Callback implementation stripped by proguard."
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 10
     invoke-static {v4, v2, v3, v1}, Litc;->a(ILjava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 39
     :goto_0
     return-object v0
 
-    .line 12
     :cond_0
     new-instance v2, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsCallback;
 
-    .line 13
     invoke-direct {v2}, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsCallback;-><init>()V
 
-    .line 16
     :try_start_0
     iget-object v3, v2, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsCallback;->a:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v3}, Ljava/util/concurrent/Semaphore;->acquire()V
 
-    .line 17
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
-    .line 18
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 19
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v5
 
-    .line 20
     array-length v6, p3
 
     :goto_1
@@ -277,14 +246,12 @@
 
     aget-object v7, p3, v1
 
-    .line 21
     invoke-virtual {v7, v3, v4, v5, v2}, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsInvocation;->invoke(Landroid/content/pm/PackageManager;Ljava/lang/String;ILandroid/content/pm/IPackageStatsObserver;)Z
 
     move-result v7
 
     if-eqz v7, :cond_2
 
-    .line 22
     const-string v1, "PackageStatsCapture"
 
     const-string v3, "Success invoking PackageStats capture."
@@ -293,12 +260,10 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    .line 23
     const/4 v5, 0x4
 
     invoke-static {v5, v1, v3, v4}, Litc;->a(ILjava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 26
     iget-object v1, v2, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsCallback;->a:Ljava/util/concurrent/Semaphore;
 
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
@@ -307,15 +272,12 @@
 
     move-result v1
 
-    .line 27
     if-eqz v1, :cond_1
 
-    .line 28
     iget-object v0, v2, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsCallback;->b:Landroid/content/pm/PackageStats;
 
     goto :goto_0
 
-    .line 29
     :cond_1
     const-string v1, "PackageStatsCapture"
 
@@ -325,7 +287,6 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 30
     const/4 v4, 0x5
 
     invoke-static {v4, v1, v2, v3}, Litc;->a(ILjava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
@@ -334,7 +295,6 @@
 
     goto :goto_0
 
-    .line 38
     :catch_0
     move-exception v1
 
@@ -346,13 +306,11 @@
 
     goto :goto_0
 
-    .line 33
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 34
     :cond_3
     :try_start_1
     const-string v1, "PackageStatsCapture"
@@ -363,7 +321,6 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 35
     const/4 v4, 0x5
 
     invoke-static {v4, v1, v2, v3}, Litc;->a(ILjava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V

@@ -27,8 +27,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 10
     new-instance v0, Lacx;
 
     const/4 v1, 0x0
@@ -43,33 +41,24 @@
 .method public constructor <init>(Landroid/content/Context;Lahd;Laco;Laqn;Ljava/util/Map;Lagb;I)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
-    .line 2
     iput-object p2, p0, Lacl;->c:Lahd;
 
-    .line 3
     iput-object p3, p0, Lacl;->d:Laco;
 
-    .line 4
     iput-object p4, p0, Lacl;->e:Laqn;
 
-    .line 5
     iput-object p5, p0, Lacl;->f:Ljava/util/Map;
 
-    .line 6
     iput-object p6, p0, Lacl;->g:Lagb;
 
-    .line 7
     iput p7, p0, Lacl;->h:I
 
-    .line 8
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -80,6 +69,5 @@
 
     iput-object v0, p0, Lacl;->b:Landroid/os/Handler;
 
-    .line 9
     return-void
 .end method

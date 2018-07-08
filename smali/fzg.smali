@@ -19,10 +19,8 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 8
     new-instance v0, Lbql;
 
     const-string v1, "camera.gouda_sec_img"
@@ -31,7 +29,6 @@
 
     sput-object v0, Lfzg;->a:Lbql;
 
-    .line 9
     new-instance v0, Lbql;
 
     const-string v1, "camera.gouda_debug_img"
@@ -40,7 +37,6 @@
 
     sput-object v0, Lfzg;->b:Lbql;
 
-    .line 10
     new-instance v0, Lbql;
 
     const-string v1, "camera.gouda.raw"
@@ -49,7 +45,6 @@
 
     sput-object v0, Lfzg;->c:Lbql;
 
-    .line 11
     new-instance v0, Lbql;
 
     const-string v1, "camera.gouda.front"
@@ -60,7 +55,6 @@
 
     sput-object v0, Lfzg;->d:Lbql;
 
-    .line 12
     new-instance v0, Lbql;
 
     const-string v1, "camera.gouda.depthdata"
@@ -75,11 +69,8 @@
 .method public static a(Lbka;)Lfuu;
     .locals 4
 
-    .prologue
-    .line 5
     new-instance v0, Lfty;
 
-    .line 6
     iget-object v1, p0, Lbka;->a:Landroid/content/ContentResolver;
 
     const-string v2, "camera:max_gouda_inflight_shots"
@@ -90,7 +81,6 @@
 
     move-result v1
 
-    .line 7
     invoke-direct {v0, v1}, Lfty;-><init>(I)V
 
     return-object v0
@@ -99,8 +89,6 @@
 .method public static a(Lkhp;Lhbv;)Ljrw;
     .locals 1
 
-    .prologue
-    .line 1
     invoke-virtual {p1}, Lhbv;->c()Z
 
     move-result v0
@@ -111,18 +99,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {p0}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljrw;
 
-    .line 4
     :goto_0
     return-object v0
 
-    .line 3
     :cond_0
     sget-object v0, Ljrk;->a:Ljrk;
 

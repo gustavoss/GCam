@@ -15,8 +15,6 @@
 .method public constructor <init>(Leui;Letj;Ljrw;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leuf;->a:Leui;
 
     iput-object p2, p0, Leuf;->b:Letj;

@@ -23,8 +23,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 5
     new-instance v0, Laxt;
 
     invoke-direct {v0}, Laxt;-><init>()V
@@ -37,20 +35,15 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget-object v0, Laxs;->f:Laxu;
 
     iput-object v0, p0, Laxs;->c:Laxu;
 
-    .line 3
     const v0, 0x3fffffff    # 1.9999999f
 
     iput v0, p0, Laxs;->e:I
 
-    .line 4
     return-void
 .end method

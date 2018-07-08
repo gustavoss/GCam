@@ -14,11 +14,8 @@
 .method protected constructor <init>(Ljava/util/Map;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Ljsl;-><init>(Ljava/util/Map;)V
 
-    .line 2
     return-void
 .end method
 
@@ -27,8 +24,6 @@
 .method final a(Ljava/lang/Object;Ljava/util/Collection;)Ljava/util/Collection;
     .locals 1
 
-    .prologue
-    .line 3
     check-cast p2, Ljava/util/List;
 
     const/4 v0, 0x0
@@ -46,8 +41,6 @@
 .method public a(Ljava/lang/Object;)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 4
     invoke-super {p0, p1}, Ljsl;->b(Ljava/lang/Object;)Ljava/util/Collection;
 
     move-result-object v0
@@ -60,8 +53,6 @@
 .method synthetic b()Ljava/util/Collection;
     .locals 1
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Ljsk;->a()Ljava/util/List;
 
     move-result-object v0
@@ -72,8 +63,6 @@
 .method public synthetic b(Ljava/lang/Object;)Ljava/util/Collection;
     .locals 1
 
-    .prologue
-    .line 5
     invoke-virtual {p0, p1}, Ljsk;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0

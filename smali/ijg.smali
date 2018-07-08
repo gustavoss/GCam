@@ -17,28 +17,22 @@
 .method public constructor <init>(Ljava/util/concurrent/ScheduledExecutorService;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lijg;->b:Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Lijg;->a:Ljava/util/concurrent/ScheduledExecutorService;
 
-    .line 4
     new-instance v0, Libm;
 
     invoke-direct {v0}, Libm;-><init>()V
 
     iput-object v0, p0, Lijg;->c:Libm;
 
-    .line 5
     iget-object v0, p0, Lijg;->c:Libm;
 
     invoke-direct {p0, v0}, Lijg;->a(Libm;)Liat;
@@ -47,27 +41,21 @@
 
     iput-object v0, p0, Lijg;->d:Liat;
 
-    .line 6
     return-void
 .end method
 
 .method private final a(Libm;)Liat;
     .locals 9
 
-    .prologue
-    .line 25
     iget-object v1, p0, Lijg;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 26
     :try_start_0
     new-instance v0, Liat;
 
-    .line 27
     sget-object v2, Lkfe;->a:Lkfe;
 
-    .line 28
     new-instance v3, Licb;
 
     new-instance v4, Lica;
@@ -86,10 +74,8 @@
 
     monitor-exit v1
 
-    .line 29
     return-object v0
 
-    .line 30
     :catchall_0
     move-exception v0
 
@@ -105,13 +91,10 @@
 .method public final a()Lihr;
     .locals 2
 
-    .prologue
-    .line 7
     iget-object v1, p0, Lijg;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 8
     :try_start_0
     iget-object v0, p0, Lijg;->d:Liat;
 
@@ -119,17 +102,14 @@
 
     move-result-object v0
 
-    .line 9
     if-nez v0, :cond_0
 
-    .line 10
     new-instance v0, Libm;
 
     invoke-direct {v0}, Libm;-><init>()V
 
     iput-object v0, p0, Lijg;->c:Libm;
 
-    .line 11
     iget-object v0, p0, Lijg;->c:Libm;
 
     invoke-direct {p0, v0}, Lijg;->a(Libm;)Liat;
@@ -138,23 +118,19 @@
 
     iput-object v0, p0, Lijg;->d:Liat;
 
-    .line 12
     iget-object v0, p0, Lijg;->d:Liat;
 
     invoke-virtual {v0}, Liat;->a()Lihr;
 
     move-result-object v0
 
-    .line 13
     invoke-static {v0}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 14
     :cond_0
     monitor-exit v1
 
     return-object v0
 
-    .line 15
     :catchall_0
     move-exception v0
 
@@ -168,13 +144,10 @@
 .method public final a(Lihr;)Lihr;
     .locals 2
 
-    .prologue
-    .line 22
     iget-object v1, p0, Lijg;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 23
     :try_start_0
     iget-object v0, p0, Lijg;->c:Libm;
 
@@ -186,7 +159,6 @@
 
     return-object v0
 
-    .line 24
     :catchall_0
     move-exception v0
 
@@ -200,13 +172,10 @@
 .method public final b()Z
     .locals 2
 
-    .prologue
-    .line 16
     iget-object v1, p0, Lijg;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 17
     :try_start_0
     iget-object v0, p0, Lijg;->c:Libm;
 
@@ -218,7 +187,6 @@
 
     return v0
 
-    .line 18
     :catchall_0
     move-exception v0
 
@@ -232,13 +200,10 @@
 .method public final c()Libm;
     .locals 2
 
-    .prologue
-    .line 19
     iget-object v1, p0, Lijg;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 20
     :try_start_0
     iget-object v0, p0, Lijg;->c:Libm;
 
@@ -250,7 +215,6 @@
 
     return-object v0
 
-    .line 21
     :catchall_0
     move-exception v0
 

@@ -41,8 +41,6 @@
 .method public final run()V
     .locals 20
 
-    .prologue
-    .line 1
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lggn;->a:Lggm;
@@ -65,31 +63,25 @@
 
     move-object/from16 v16, v0
 
-    .line 2
     :try_start_0
     iget-object v4, v15, Lggm;->e:Lgii;
 
-    .line 4
     iget-object v14, v10, Lghr;->b:Lioy;
 
-    .line 7
     iget-object v13, v10, Lghr;->a:Lihs;
 
-    .line 9
     invoke-virtual {v14}, Lioy;->a()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 10
     iget-object v2, v4, Lgii;->b:Lgnk;
 
     iget-object v3, v6, Lgij;->b:Landroid/net/Uri;
 
     iget-object v4, v4, Lgii;->a:Landroid/content/Context;
 
-    .line 11
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
@@ -98,13 +90,10 @@
 
     iget-wide v6, v6, Lgij;->c:J
 
-    .line 12
     iget-object v8, v10, Lghr;->f:Ljrw;
 
-    .line 14
     iget-object v9, v10, Lghr;->e:Ljrw;
 
-    .line 15
     const-wide/16 v18, 0x0
 
     invoke-static/range {v18 .. v19}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -121,33 +110,25 @@
 
     move-result-wide v9
 
-    .line 16
     iget v12, v13, Lihs;->a:I
 
-    .line 18
     iget v13, v13, Lihs;->b:I
 
-    .line 20
     invoke-interface/range {v2 .. v14}, Lgnk;->a(Landroid/net/Uri;Landroid/content/ContentResolver;Ljava/lang/String;JLjrw;JLjava/io/InputStream;IILioy;)Landroid/net/Uri;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 37
     :goto_0
     iget-object v2, v15, Lggm;->g:Landroid/net/Uri;
 
     if-eqz v2, :cond_1
 
-    .line 38
     invoke-virtual {v15}, Lggm;->q()V
 
-    .line 40
     iget-object v2, v15, Lggm;->i:Lgmd;
 
-    .line 41
     invoke-interface {v2}, Lgmd;->b()V
 
-    .line 42
     iget-object v3, v15, Lggm;->d:Lgiy;
 
     iget-object v2, v15, Lggm;->g:Landroid/net/Uri;
@@ -164,12 +145,10 @@
 
     invoke-virtual {v3, v2, v4}, Lgiy;->a(Landroid/net/Uri;Ljava/util/List;)V
 
-    .line 43
     const-string v2, "capturePersisted"
 
     invoke-virtual {v15, v2}, Lggm;->a(Ljava/lang/String;)V
 
-    .line 47
     :goto_1
     iget-object v2, v15, Lggm;->g:Landroid/net/Uri;
 
@@ -181,10 +160,8 @@
 
     invoke-virtual {v0, v2}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 48
     return-void
 
-    .line 21
     :cond_0
     :try_start_1
     iget-object v2, v4, Lgii;->b:Lgnk;
@@ -193,7 +170,6 @@
 
     iget-object v4, v4, Lgii;->a:Landroid/content/Context;
 
-    .line 22
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
@@ -202,13 +178,10 @@
 
     iget-wide v6, v6, Lgij;->c:J
 
-    .line 23
     iget-object v8, v10, Lghr;->f:Ljrw;
 
-    .line 25
     iget-object v9, v10, Lghr;->c:Ljrw;
 
-    .line 26
     const/4 v12, 0x0
 
     invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -225,27 +198,21 @@
 
     move-result v9
 
-    .line 27
     iget-object v10, v10, Lghr;->d:Ljrw;
 
-    .line 29
     iget v12, v13, Lihs;->a:I
 
-    .line 31
     iget v13, v13, Lihs;->b:I
 
-    .line 33
     invoke-interface/range {v2 .. v14}, Lgnk;->a(Landroid/net/Uri;Landroid/content/ContentResolver;Ljava/lang/String;JLjrw;ILjrw;Ljava/io/InputStream;IILioy;)Landroid/net/Uri;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
 
-    .line 35
     :catch_0
     move-exception v2
 
-    .line 36
     sget-object v3, Lggm;->a:Ljava/lang/String;
 
     const-string v4, "Failed to persist image!"
@@ -254,16 +221,13 @@
 
     goto :goto_0
 
-    .line 44
     :cond_1
     invoke-virtual {v15}, Lggm;->r()V
 
-    .line 45
     const-string v2, "captureFailed"
 
     invoke-virtual {v15, v2}, Lggm;->a(Ljava/lang/String;)V
 
-    .line 46
     invoke-static {}, Lgvs;->a()Lgxk;
 
     move-result-object v2

@@ -7,34 +7,26 @@
 .method private constructor <init>(Lium;Lirp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Liur;-><init>(Lium;Lirp;)V
 
-    .line 2
     return-void
 .end method
 
 .method public static a(Lium;Liuc;)Liwc;
     .locals 2
 
-    .prologue
-    .line 3
     new-instance v0, Liwc;
 
     new-instance v1, Liwd;
 
     invoke-direct {v1, p0, p1}, Liwd;-><init>(Lium;Liuc;)V
 
-    .line 4
     invoke-static {p0, v1}, Liur;->a(Lium;Ljava/util/concurrent/Callable;)Lirp;
 
     move-result-object v1
 
-    .line 5
     invoke-direct {v0, p0, v1}, Liwc;-><init>(Lium;Lirp;)V
 
-    .line 6
     return-object v0
 .end method
 
@@ -43,8 +35,6 @@
 .method public final d()Liuc;
     .locals 1
 
-    .prologue
-    .line 7
     invoke-virtual {p0}, Liwc;->c()Livu;
 
     move-result-object v0
@@ -61,8 +51,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 8
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0

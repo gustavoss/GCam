@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 13
     const-string v0, "StackSaverFactory"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -37,11 +35,8 @@
 .method public constructor <init>(Landroid/content/ContentResolver;Lgns;Lgob;Lgng;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -50,7 +45,6 @@
 
     iput-object v0, p0, Lgjd;->b:Landroid/content/ContentResolver;
 
-    .line 3
     invoke-static {p2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -59,7 +53,6 @@
 
     iput-object v0, p0, Lgjd;->c:Lgns;
 
-    .line 4
     invoke-static {p3}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -68,7 +61,6 @@
 
     iput-object v0, p0, Lgjd;->d:Lgob;
 
-    .line 5
     invoke-static {p4}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -77,7 +69,6 @@
 
     iput-object v0, p0, Lgjd;->e:Lgng;
 
-    .line 6
     return-void
 .end method
 
@@ -86,14 +77,11 @@
 .method public final a(Lgfy;Ljava/lang/String;Ljrw;)Lgjc;
     .locals 6
 
-    .prologue
-    .line 7
     :try_start_0
     iget-object v0, p0, Lgjd;->d:Lgob;
 
     iget-object v1, p0, Lgjd;->c:Lgns;
 
-    .line 8
     invoke-interface {v1, p2}, Lgns;->a(Ljava/lang/String;)Lgns;
 
     move-result-object v1
@@ -102,7 +90,6 @@
 
     move-result-object v2
 
-    .line 9
     new-instance v0, Lgje;
 
     iget-object v3, p0, Lgjd;->e:Lgng;
@@ -117,15 +104,12 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 12
     :goto_0
     return-object v0
 
-    .line 10
     :catch_0
     move-exception v0
 
-    .line 11
     sget-object v1, Lgjd;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -162,7 +146,6 @@
 
     invoke-static {v1, v0}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     const/4 v0, 0x0
 
     goto :goto_0

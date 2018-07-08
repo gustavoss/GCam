@@ -37,8 +37,6 @@
 .method public final call()Ljava/lang/Object;
     .locals 6
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lghu;->a:Lghs;
 
     iget-object v1, p0, Lghu;->b:Lioy;
@@ -47,35 +45,27 @@
 
     iget-object v3, p0, Lghu;->d:Ljrw;
 
-    .line 3
     invoke-virtual {v0}, Lghs;->B()Lgoa;
 
     move-result-object v4
 
-    .line 4
     iget-object v5, v0, Lgga;->j:Ljava/lang/String;
 
-    .line 5
     invoke-virtual {v4, v5, v1}, Lgoa;->a(Ljava/lang/String;Lioy;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 7
     invoke-virtual {v0}, Lghs;->E()Lgnd;
 
     move-result-object v4
 
-    .line 8
     invoke-interface {v4, v1, v2, v3}, Lgnd;->a(Ljava/io/File;Ljava/io/InputStream;Ljrw;)J
 
     move-result-wide v2
 
-    .line 10
     iget-object v0, v0, Lgga;->x:Lgmd;
 
-    .line 11
     invoke-interface {v0, v2, v3}, Lgmd;->b(J)V
 
-    .line 13
     return-object v1
 .end method

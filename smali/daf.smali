@@ -14,8 +14,6 @@
 .method constructor <init>(Ldae;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldaf;->a:Ldae;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,9 +26,6 @@
 .method public final synthetic a(Ljava/lang/Object;)Lbsa;
     .locals 3
 
-    .prologue
-    .line 2
-    .line 3
     new-instance v0, Lcxt;
 
     iget-object v1, p0, Ldaf;->a:Ldae;
@@ -39,6 +34,5 @@
 
     invoke-direct {v0, v1, v2}, Lcxt;-><init>(Lcxt;B)V
 
-    .line 4
     return-object v0
 .end method

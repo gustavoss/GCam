@@ -29,17 +29,13 @@
 .method public final run()V
     .locals 7
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lcao;->a:Lcan;
 
     iget v2, p0, Lcao;->b:I
 
-    .line 3
     :try_start_0
     iput v2, v1, Lcan;->i:I
 
-    .line 4
     iget-object v0, v1, Lcan;->e:Liij;
 
     invoke-static {v2}, Lilr;->a(I)Lilr;
@@ -48,40 +44,32 @@
 
     invoke-interface {v0, v3}, Liij;->a(Lilr;)V
 
-    .line 5
     iget-object v0, v1, Lcan;->d:Lzz;
 
-    .line 6
     iget-object v3, v1, Lcan;->c:Lzz;
 
-    .line 7
     iget-object v0, v1, Lcan;->h:Laao;
 
     if-nez v0, :cond_0
 
-    .line 8
     iget-object v0, v1, Lcan;->b:Landroid/os/Handler;
 
     invoke-virtual {v1, v3, v2, v0, v1}, Lcan;->a(Lzz;ILandroid/os/Handler;Laaf;)V
 
-    .line 23
     :goto_0
     const/4 v0, 0x0
 
     iput-boolean v0, v1, Lcan;->j:Z
 
-    .line 24
     invoke-virtual {v3}, Lzz;->b()Labn;
 
     move-result-object v0
 
     iput-object v0, v1, Lcan;->g:Labn;
 
-    .line 28
     :goto_1
     return-void
 
-    .line 9
     :cond_0
     iget-object v0, v1, Lcan;->h:Laao;
 
@@ -93,21 +81,18 @@
 
     iget-boolean v0, v1, Lcan;->j:Z
 
-    .line 16
     sget-object v0, Lcan;->a:Ljava/lang/String;
 
     const-string v4, "reconnecting to use the existing camera"
 
     invoke-static {v0, v4}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 17
     iget-object v4, v1, Lcan;->h:Laao;
 
     iget-object v0, v1, Lcan;->b:Landroid/os/Handler;
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 18
     :try_start_1
     invoke-virtual {v4}, Laao;->i()Labz;
 
@@ -122,7 +107,6 @@
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 22
     :goto_2
     const/4 v0, 0x0
 
@@ -133,7 +117,6 @@
 
     goto :goto_0
 
-    .line 27
     :catch_0
     move-exception v0
 
@@ -147,7 +130,6 @@
 
     goto :goto_1
 
-    .line 10
     :cond_1
     :try_start_3
     sget-object v0, Lcan;->a:Ljava/lang/String;
@@ -156,31 +138,25 @@
 
     invoke-static {v0, v4}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11
     iget-boolean v0, v1, Lcan;->j:Z
 
-    .line 12
     iget-object v0, v1, Lcan;->c:Lzz;
 
     const/4 v4, 0x0
 
     invoke-virtual {v0, v4}, Lzz;->a(Z)V
 
-    .line 13
     invoke-virtual {v1}, Lcan;->c()V
 
-    .line 14
     iget-object v0, v1, Lcan;->b:Landroid/os/Handler;
 
     invoke-virtual {v1, v3, v2, v0, v1}, Lcan;->a(Lzz;ILandroid/os/Handler;Laaf;)V
 
     goto :goto_0
 
-    .line 20
     :catch_1
     move-exception v0
 
-    .line 21
     invoke-virtual {v4}, Laao;->d()Lzz;
 
     move-result-object v4

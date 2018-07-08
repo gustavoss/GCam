@@ -17,26 +17,20 @@
 .method private constructor <init>(Lipb;)V
     .locals 1
 
-    .prologue
-    .line 4
     const-string v0, "CameraApp"
 
     invoke-direct {p0, p1, v0}, Lcom/google/android/apps/camera/stats/InstrumentationSession;-><init>(Lipb;Ljava/lang/String;)V
 
-    .line 5
     return-void
 .end method
 
 .method public static a()Lgly;
     .locals 2
 
-    .prologue
-    .line 1
     sget-object v0, Lgly;->c:Lgly;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lgly;
 
     new-instance v1, Lipb;
@@ -47,7 +41,6 @@
 
     sput-object v0, Lgly;->c:Lgly;
 
-    .line 3
     :cond_0
     sget-object v0, Lgly;->c:Lgly;
 

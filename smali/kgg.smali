@@ -13,8 +13,6 @@
 .method public constructor <init>(Lgru;J)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lkgg;->b:Lgru;
 
     iput-wide p2, p0, Lkgg;->a:J

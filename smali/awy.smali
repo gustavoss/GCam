@@ -25,13 +25,9 @@
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lawy;->a:Lawx;
 
-    .line 2
     invoke-virtual {v0}, Lawx;->b()V
 
-    .line 3
     return-void
 .end method

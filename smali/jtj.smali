@@ -15,12 +15,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 5
     new-instance v0, Ljtj;
 
     const-string v1, "OPEN"
@@ -29,7 +27,6 @@
 
     sput-object v0, Ljtj;->a:Ljtj;
 
-    .line 6
     new-instance v0, Ljtj;
 
     const-string v1, "CLOSED"
@@ -38,7 +35,6 @@
 
     sput-object v0, Ljtj;->b:Ljtj;
 
-    .line 7
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljtj;
@@ -59,19 +55,14 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     return-void
 .end method
 
 .method static a(Z)Ljtj;
     .locals 1
 
-    .prologue
-    .line 4
     if-eqz p0, :cond_0
 
     sget-object v0, Ljtj;->b:Ljtj;
@@ -88,8 +79,6 @@
 .method public static values()[Ljtj;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Ljtj;->c:[Ljtj;
 
     invoke-virtual {v0}, [Ljtj;->clone()Ljava/lang/Object;

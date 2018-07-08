@@ -21,43 +21,34 @@
 .method protected constructor <init>(JLandroid/support/v8/renderscript/RenderScript;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Landroid/support/v8/renderscript/ScriptIntrinsic;-><init>(JLandroid/support/v8/renderscript/RenderScript;)V
 
-    .line 2
     new-instance v0, Landroid/support/v8/renderscript/Matrix4f;
 
     invoke-direct {v0}, Landroid/support/v8/renderscript/Matrix4f;-><init>()V
 
     iput-object v0, p0, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mMatrix:Landroid/support/v8/renderscript/Matrix4f;
 
-    .line 3
     const/16 v0, 0x400
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mCache:[B
 
-    .line 4
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mDirty:Z
 
-    .line 5
     return-void
 .end method
 
 .method public static create(Landroid/support/v8/renderscript/RenderScript;Landroid/support/v8/renderscript/Element;)Landroid/support/v8/renderscript/ScriptIntrinsicLUT;
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 6
     invoke-virtual {p0}, Landroid/support/v8/renderscript/RenderScript;->isUseNative()Z
 
-    .line 7
     const/4 v0, 0x3
 
     invoke-virtual {p1, p0}, Landroid/support/v8/renderscript/Element;->getID(Landroid/support/v8/renderscript/RenderScript;)J
@@ -68,15 +59,12 @@
 
     move-result-wide v2
 
-    .line 8
     new-instance v4, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;
 
     invoke-direct {v4, v2, v3, p0}, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;-><init>(JLandroid/support/v8/renderscript/RenderScript;)V
 
-    .line 9
     invoke-virtual {v4, v1}, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->setIncSupp(Z)V
 
-    .line 10
     invoke-static {p0}, Landroid/support/v8/renderscript/Element;->U8(Landroid/support/v8/renderscript/RenderScript;)Landroid/support/v8/renderscript/Element;
 
     move-result-object v0
@@ -91,20 +79,17 @@
 
     move v0, v1
 
-    .line 11
     :goto_0
     const/16 v2, 0x100
 
     if-ge v0, v2, :cond_0
 
-    .line 12
     iget-object v2, v4, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mCache:[B
 
     int-to-byte v3, v0
 
     aput-byte v3, v2, v0
 
-    .line 13
     iget-object v2, v4, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mCache:[B
 
     add-int/lit16 v3, v0, 0x100
@@ -113,7 +98,6 @@
 
     aput-byte v5, v2, v3
 
-    .line 14
     iget-object v2, v4, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mCache:[B
 
     add-int/lit16 v3, v0, 0x200
@@ -122,7 +106,6 @@
 
     aput-byte v5, v2, v3
 
-    .line 15
     iget-object v2, v4, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mCache:[B
 
     add-int/lit16 v3, v0, 0x300
@@ -131,33 +114,27 @@
 
     aput-byte v5, v2, v3
 
-    .line 16
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 17
     :cond_0
     iget-object v0, v4, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mTables:Landroid/support/v8/renderscript/Allocation;
 
     invoke-virtual {v4, v1, v0}, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->setVar(ILandroid/support/v8/renderscript/BaseObj;)V
 
-    .line 18
     return-object v4
 .end method
 
 .method private validate(II)V
     .locals 2
 
-    .prologue
     const/16 v0, 0xff
 
-    .line 19
     if-ltz p1, :cond_0
 
     if-le p1, v0, :cond_1
 
-    .line 20
     :cond_0
     new-instance v0, Landroid/support/v8/renderscript/RSIllegalArgumentException;
 
@@ -167,13 +144,11 @@
 
     throw v0
 
-    .line 21
     :cond_1
     if-ltz p2, :cond_2
 
     if-le p2, v0, :cond_3
 
-    .line 22
     :cond_2
     new-instance v0, Landroid/support/v8/renderscript/RSIllegalArgumentException;
 
@@ -183,7 +158,6 @@
 
     throw v0
 
-    .line 23
     :cond_3
     return-void
 .end method
@@ -193,41 +167,33 @@
 .method public forEach(Landroid/support/v8/renderscript/Allocation;Landroid/support/v8/renderscript/Allocation;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 40
     iget-boolean v0, p0, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mDirty:Z
 
     if-eqz v0, :cond_0
 
-    .line 41
     iput-boolean v2, p0, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mDirty:Z
 
-    .line 42
     iget-object v0, p0, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mTables:Landroid/support/v8/renderscript/Allocation;
 
     iget-object v1, p0, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mCache:[B
 
     invoke-virtual {v0, v1}, Landroid/support/v8/renderscript/Allocation;->copyFromUnchecked([B)V
 
-    .line 43
     :cond_0
     const/4 v0, 0x0
 
     invoke-virtual {p0, v2, p1, p2, v0}, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->forEach(ILandroid/support/v8/renderscript/Allocation;Landroid/support/v8/renderscript/Allocation;Landroid/support/v8/renderscript/FieldPacker;)V
 
-    .line 44
     return-void
 .end method
 
 .method public getKernelID()Landroid/support/v8/renderscript/Script$KernelID;
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 45
     const/4 v0, 0x0
 
     const/4 v1, 0x3
@@ -242,11 +208,8 @@
 .method public setAlpha(II)V
     .locals 3
 
-    .prologue
-    .line 36
     invoke-direct {p0, p1, p2}, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->validate(II)V
 
-    .line 37
     iget-object v0, p0, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mCache:[B
 
     add-int/lit16 v1, p1, 0x300
@@ -255,23 +218,18 @@
 
     aput-byte v2, v0, v1
 
-    .line 38
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mDirty:Z
 
-    .line 39
     return-void
 .end method
 
 .method public setBlue(II)V
     .locals 3
 
-    .prologue
-    .line 32
     invoke-direct {p0, p1, p2}, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->validate(II)V
 
-    .line 33
     iget-object v0, p0, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mCache:[B
 
     add-int/lit16 v1, p1, 0x200
@@ -280,23 +238,18 @@
 
     aput-byte v2, v0, v1
 
-    .line 34
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mDirty:Z
 
-    .line 35
     return-void
 .end method
 
 .method public setGreen(II)V
     .locals 3
 
-    .prologue
-    .line 28
     invoke-direct {p0, p1, p2}, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->validate(II)V
 
-    .line 29
     iget-object v0, p0, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mCache:[B
 
     add-int/lit16 v1, p1, 0x100
@@ -305,34 +258,27 @@
 
     aput-byte v2, v0, v1
 
-    .line 30
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mDirty:Z
 
-    .line 31
     return-void
 .end method
 
 .method public setRed(II)V
     .locals 2
 
-    .prologue
-    .line 24
     invoke-direct {p0, p1, p2}, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->validate(II)V
 
-    .line 25
     iget-object v0, p0, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mCache:[B
 
     int-to-byte v1, p2
 
     aput-byte v1, v0, p1
 
-    .line 26
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v8/renderscript/ScriptIntrinsicLUT;->mDirty:Z
 
-    .line 27
     return-void
 .end method

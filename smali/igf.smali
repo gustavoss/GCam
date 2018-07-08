@@ -11,8 +11,6 @@
 .method public constructor <init>(Lifr;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ligf;->a:Lifr;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
@@ -25,28 +23,23 @@
 .method public final run()V
     .locals 12
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 2
     const-string v0, "AudioEncoder"
 
     const-string v1, "starting"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
     iget-object v4, p0, Ligf;->a:Lifr;
 
-    .line 5
     new-instance v5, Landroid/media/MediaCodec$BufferInfo;
 
     invoke-direct {v5}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
 
-    .line 8
     iget-object v0, v4, Lifr;->d:Landroid/media/MediaCodec;
 
     const-wide/16 v6, 0x2710
@@ -55,17 +48,14 @@
 
     move-result v6
 
-    .line 9
     const/4 v0, -0x1
 
     if-eq v6, v0, :cond_f
 
-    .line 10
     const/4 v0, -0x2
 
     if-ne v6, v0, :cond_4
 
-    .line 11
     iget-object v0, v4, Lifr;->e:Lify;
 
     invoke-virtual {v0}, Lify;->c()Z
@@ -74,7 +64,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 12
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "format changed twice"
@@ -83,7 +72,6 @@
 
     throw v0
 
-    .line 13
     :cond_1
     iget-object v0, v4, Lifr;->d:Landroid/media/MediaCodec;
 
@@ -91,7 +79,6 @@
 
     move-result-object v0
 
-    .line 14
     const-string v1, "AudioEncoder"
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -128,15 +115,12 @@
 
     invoke-static {v1, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     iget-object v1, v4, Lifr;->e:Lify;
 
-    .line 16
     iget-object v5, v1, Lify;->c:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 17
     :try_start_0
     iget-object v6, v1, Lify;->e:Ligp;
 
@@ -144,19 +128,16 @@
 
     if-eq v6, v7, :cond_2
 
-    .line 18
     const-string v0, "MediaMuxerMul"
 
     const-string v1, "already started, cannot add audio track."
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 30
     :goto_0
     iget-object v0, v4, Lifr;->e:Lify;
 
@@ -164,44 +145,35 @@
 
     move v0, v2
 
-    .line 72
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 73
     const-string v0, "AudioEncoder"
 
     const-string v1, "stopping"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     return-void
 
-    .line 20
     :cond_2
     :try_start_1
     iget-object v6, v1, Lify;->f:Liga;
 
-    .line 21
     iget-boolean v6, v6, Liga;->a:Z
 
-    .line 22
     if-nez v6, :cond_3
 
-    .line 23
     const-string v0, "MediaMuxerMul"
 
     const-string v1, "Audio track is not supported"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 24
     monitor-exit v5
 
     goto :goto_0
 
-    .line 29
     :catchall_0
     move-exception v0
 
@@ -211,7 +183,6 @@
 
     throw v0
 
-    .line 25
     :cond_3
     :try_start_2
     iget-object v6, v1, Lify;->f:Liga;
@@ -224,13 +195,10 @@
 
     invoke-virtual {v6, v7}, Liga;->a(I)V
 
-    .line 26
     iget-object v6, v1, Lify;->f:Liga;
 
-    .line 27
     iput-object v0, v6, Liga;->d:Landroid/media/MediaFormat;
 
-    .line 28
     const-string v0, "MediaMuxerMul"
 
     iget-object v1, v1, Lify;->f:Liga;
@@ -261,30 +229,25 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     monitor-exit v5
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_0
 
-    .line 31
     :cond_4
     const/4 v0, -0x3
 
     if-eq v6, v0, :cond_f
 
-    .line 32
     iget v0, v5, Landroid/media/MediaCodec$BufferInfo;->flags:I
 
     and-int/lit8 v0, v0, 0x2
 
     if-eqz v0, :cond_5
 
-    .line 33
     iput v2, v5, Landroid/media/MediaCodec$BufferInfo;->size:I
 
-    .line 34
     :cond_5
     iget v0, v5, Landroid/media/MediaCodec$BufferInfo;->size:I
 
@@ -294,7 +257,6 @@
 
     iget-wide v8, v5, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
-    .line 36
     :goto_2
     invoke-interface {v7}, Ljava/util/Queue;->isEmpty()Z
 
@@ -302,7 +264,6 @@
 
     if-nez v0, :cond_c
 
-    .line 37
     invoke-interface {v7}, Ljava/util/Queue;->peek()Ljava/lang/Object;
 
     move-result-object v0
@@ -315,7 +276,6 @@
 
     check-cast v0, Ljwj;
 
-    .line 38
     invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -328,11 +288,9 @@
 
     move v0, v3
 
-    .line 51
     :goto_3
     if-nez v0, :cond_7
 
-    .line 52
     iget-object v0, v4, Lifr;->e:Lify;
 
     invoke-virtual {v0}, Lify;->c()Z
@@ -341,14 +299,12 @@
 
     if-nez v0, :cond_6
 
-    .line 53
     iget-object v0, v4, Lifr;->e:Lify;
 
     const-wide/16 v8, 0x7d0
 
     invoke-virtual {v0, v8, v9}, Lify;->a(J)V
 
-    .line 54
     :cond_6
     iget-object v0, v4, Lifr;->d:Landroid/media/MediaCodec;
 
@@ -356,12 +312,10 @@
 
     move-result-object v0
 
-    .line 55
     iget v1, v5, Landroid/media/MediaCodec$BufferInfo;->offset:I
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 56
     iget v1, v5, Landroid/media/MediaCodec$BufferInfo;->offset:I
 
     iget v7, v5, Landroid/media/MediaCodec$BufferInfo;->size:I
@@ -370,7 +324,6 @@
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 57
     iget-object v1, v4, Lifr;->e:Lify;
 
     iget-wide v8, v4, Lifr;->h:J
@@ -383,21 +336,18 @@
 
     div-long/2addr v8, v10
 
-    .line 58
     const-wide/16 v10, 0x0
 
     cmp-long v7, v8, v10
 
     if-gez v7, :cond_d
 
-    .line 59
     const-string v1, "MediaMuxerMul"
 
     const-string v7, "The duration of record cannot be shorter than existing one."
 
     invoke-static {v1, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
     :goto_4
     iget-wide v8, v5, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
@@ -407,7 +357,6 @@
 
     iput-wide v8, v5, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
-    .line 64
     iget-wide v8, v4, Lifr;->k:J
 
     iget-wide v10, v5, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
@@ -416,24 +365,20 @@
 
     if-gez v1, :cond_e
 
-    .line 65
     iget-wide v8, v5, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
     iput-wide v8, v4, Lifr;->k:J
 
-    .line 66
     iget-object v1, v4, Lifr;->e:Lify;
 
     invoke-virtual {v1, v0, v5}, Lify;->b(Ljava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
 
-    .line 68
     :cond_7
     :goto_5
     iget-object v0, v4, Lifr;->d:Landroid/media/MediaCodec;
 
     invoke-virtual {v0, v6, v2}, Landroid/media/MediaCodec;->releaseOutputBuffer(IZ)V
 
-    .line 69
     iget-wide v0, v5, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
     iget-wide v6, v4, Lifr;->i:J
@@ -451,33 +396,26 @@
     :cond_8
     move v0, v3
 
-    .line 70
     goto/16 :goto_1
 
-    .line 41
     :cond_9
     iget-object v1, v0, Ljwj;->a:Ljty;
 
-    .line 42
     sget-object v10, Ljub;->b:Ljub;
 
-    .line 43
     if-eq v1, v10, :cond_b
 
     move v1, v3
 
-    .line 44
     :goto_6
     if-eqz v1, :cond_a
 
-    .line 45
     iget-object v1, v0, Ljwj;->a:Ljty;
 
     invoke-virtual {v1}, Ljty;->a()Ljava/lang/Comparable;
 
     move-result-object v1
 
-    .line 46
     check-cast v1, Ljava/lang/Long;
 
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
@@ -488,7 +426,6 @@
 
     if-gtz v1, :cond_c
 
-    .line 47
     :cond_a
     const-string v1, "AudioEncoder"
 
@@ -526,7 +463,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
     invoke-interface {v7}, Ljava/util/Queue;->poll()Ljava/lang/Object;
 
     goto/16 :goto_2
@@ -534,20 +470,16 @@
     :cond_b
     move v1, v2
 
-    .line 43
     goto :goto_6
 
     :cond_c
     move v0, v2
 
-    .line 50
     goto/16 :goto_3
 
-    .line 61
     :cond_d
     iget-object v1, v1, Lify;->i:Lifv;
 
-    .line 62
     iget-wide v10, v1, Lifv;->d:J
 
     add-long/2addr v8, v10
@@ -556,7 +488,6 @@
 
     goto :goto_4
 
-    .line 67
     :cond_e
     const-string v0, "AudioEncoder"
 

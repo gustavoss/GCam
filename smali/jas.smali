@@ -15,26 +15,18 @@
 .method public constructor <init>(Ljava/lang/String;I[Lizs;Ljog;Ljkp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Ljan;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     invoke-static {p3}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-static {p4}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     iput-object p3, p0, Ljas;->d:[Lizs;
 
-    .line 5
     iput-object p4, p0, Ljas;->c:Ljog;
 
-    .line 6
     iput-object p5, p0, Ljas;->e:Ljkp;
 
-    .line 7
     return-void
 .end method
 
@@ -43,11 +35,8 @@
 .method public final a(Ljlb;Ljava/util/concurrent/Executor;)Lirp;
     .locals 32
 
-    .prologue
-    .line 8
     invoke-static/range {p1 .. p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     invoke-virtual/range {p1 .. p1}, Ljlb;->a()I
 
     move-result v4
@@ -59,7 +48,6 @@
     :goto_0
     invoke-static {v4}, Ljiy;->a(Z)V
 
-    .line 10
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ljas;->c:Ljog;
@@ -72,7 +60,6 @@
 
     move-result-object v4
 
-    .line 11
     sget-object v5, Ljnu;->b:Ljoc;
 
     invoke-virtual {v4, v5}, Ljnu;->a(Ljoc;)Ljava/lang/Object;
@@ -81,15 +68,12 @@
 
     check-cast v4, Ljqj;
 
-    .line 12
     iget v5, v4, Ljqj;->a:I
 
     iget v6, v4, Ljqj;->b:I
 
-    .line 13
     invoke-static/range {p1 .. p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 14
     invoke-virtual/range {p1 .. p1}, Ljlb;->a()I
 
     move-result v4
@@ -101,15 +85,12 @@
     :goto_1
     invoke-static {v4}, Ljiy;->a(Z)V
 
-    .line 15
     if-ge v5, v6, :cond_2
 
-    .line 16
     sget-object v4, Lizt;->a:Lizt;
 
     move-object v12, v4
 
-    .line 18
     :goto_2
     int-to-float v4, v5
 
@@ -117,7 +98,6 @@
 
     div-float v20, v4, v5
 
-    .line 21
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-virtual/range {p1 .. p1}, Ljlb;->a()I
@@ -126,7 +106,6 @@
 
     invoke-direct {v5, v4}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 23
     move-object/from16 v0, p1
 
     iget-object v4, v0, Ljlb;->a:Ljava/util/List;
@@ -135,7 +114,6 @@
 
     move-result-object v7
 
-    .line 25
     const/4 v4, 0x0
 
     move v6, v4
@@ -147,7 +125,6 @@
 
     if-ge v6, v4, :cond_3
 
-    .line 26
     invoke-interface {v7, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -158,7 +135,6 @@
 
     move-result-wide v8
 
-    .line 27
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ljas;->e:Ljkp;
@@ -171,33 +147,28 @@
 
     move-result v4
 
-    .line 28
     new-instance v8, Ljau;
 
     invoke-direct {v8, v4, v6}, Ljau;-><init>(FI)V
 
     invoke-interface {v5, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 29
     add-int/lit8 v4, v6, 0x1
 
     move v6, v4
 
     goto :goto_3
 
-    .line 9
     :cond_0
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 14
     :cond_1
     const/4 v4, 0x0
 
     goto :goto_1
 
-    .line 17
     :cond_2
     sget-object v4, Lizt;->b:Lizt;
 
@@ -205,11 +176,9 @@
 
     goto :goto_2
 
-    .line 30
     :cond_3
     invoke-static {v5}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 31
     new-instance v21, Ljava/util/ArrayList;
 
     invoke-virtual/range {p1 .. p1}, Ljlb;->a()I
@@ -222,7 +191,6 @@
 
     move-object v4, v5
 
-    .line 32
     check-cast v4, Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
@@ -244,7 +212,6 @@
 
     check-cast v5, Ljau;
 
-    .line 33
     iget v5, v5, Ljau;->a:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -257,14 +224,11 @@
 
     goto :goto_4
 
-    .line 37
     :cond_4
     const/4 v5, 0x0
 
-    .line 38
     const/4 v14, 0x0
 
-    .line 39
     const/4 v4, 0x0
 
     move-object/from16 v0, v21
@@ -279,7 +243,6 @@
 
     move-result v22
 
-    .line 40
     move-object/from16 v0, p0
 
     iget-object v0, v0, Ljas;->d:[Lizs;
@@ -307,12 +270,10 @@
 
     aget-object v13, v23, v19
 
-    .line 41
     invoke-virtual/range {p1 .. p1}, Ljlb;->a()I
 
     move-result v6
 
-    .line 42
     const/4 v5, 0x5
 
     if-gt v6, v5, :cond_6
@@ -322,7 +283,6 @@
     :goto_6
     invoke-static {v5}, Ljiy;->a(Z)V
 
-    .line 43
     iget-object v5, v13, Lizs;->f:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->size()I
@@ -337,7 +297,6 @@
 
     iget-object v5, v13, Lizs;->e:Ljava/util/List;
 
-    .line 44
     invoke-static/range {v22 .. v22}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -350,11 +309,9 @@
 
     const/4 v5, 0x1
 
-    .line 45
     :goto_7
     if-eqz v5, :cond_16
 
-    .line 47
     iget-object v4, v13, Lizs;->f:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
@@ -368,10 +325,8 @@
     :goto_8
     invoke-static {v4}, Ljiy;->a(Z)V
 
-    .line 48
     iget-object v6, v13, Lizs;->f:Ljava/util/List;
 
-    .line 49
     new-instance v7, Ljava/util/TreeMap;
 
     invoke-static {}, Ljava/util/Collections;->reverseOrder()Ljava/util/Comparator;
@@ -380,7 +335,6 @@
 
     invoke-direct {v7, v4}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
 
-    .line 50
     const/4 v4, 0x0
 
     move v5, v4
@@ -392,21 +346,18 @@
 
     if-ge v5, v4, :cond_9
 
-    .line 51
     invoke-interface {v6, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lizu;
 
-    .line 52
     iget v8, v4, Lizu;->c:I
 
     iget v4, v4, Lizu;->d:I
 
     mul-int/2addr v8, v4
 
-    .line 54
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -417,22 +368,18 @@
 
     check-cast v4, Ljava/util/List;
 
-    .line 55
     if-nez v4, :cond_5
 
-    .line 56
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 57
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
 
     invoke-virtual {v7, v8, v4}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 58
     :cond_5
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -440,32 +387,27 @@
 
     invoke-interface {v4, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 59
     add-int/lit8 v4, v5, 0x1
 
     move v5, v4
 
     goto :goto_9
 
-    .line 42
     :cond_6
     const/4 v5, 0x0
 
     goto :goto_6
 
-    .line 44
     :cond_7
     const/4 v5, 0x0
 
     goto :goto_7
 
-    .line 47
     :cond_8
     const/4 v4, 0x0
 
     goto :goto_8
 
-    .line 60
     :cond_9
     new-instance v5, Ljava/util/ArrayList;
 
@@ -475,7 +417,6 @@
 
     invoke-direct {v5, v4}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 61
     invoke-virtual {v7}, Ljava/util/TreeMap;->entrySet()Ljava/util/Set;
 
     move-result-object v4
@@ -497,7 +438,6 @@
 
     check-cast v4, Ljava/util/Map$Entry;
 
-    .line 62
     invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v4
@@ -508,7 +448,6 @@
 
     goto :goto_a
 
-    .line 66
     :cond_a
     new-instance v15, Ljava/util/ArrayList;
 
@@ -518,12 +457,10 @@
 
     invoke-direct {v15, v4}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 67
     const/16 v17, 0x0
 
     move-object v10, v5
 
-    .line 68
     check-cast v10, Ljava/util/ArrayList;
 
     invoke-virtual {v10}, Ljava/util/ArrayList;->size()I
@@ -551,12 +488,10 @@
 
     check-cast v11, Ljava/util/List;
 
-    .line 69
     invoke-interface {v11}, Ljava/util/List;->size()I
 
     move-result v26
 
-    .line 70
     new-instance v27, Ljava/util/ArrayList;
 
     move-object/from16 v0, v27
@@ -565,7 +500,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 71
     const/4 v4, 0x0
 
     move/from16 v17, v5
@@ -577,7 +511,6 @@
 
     if-ge v5, v0, :cond_b
 
-    .line 72
     add-int/lit8 v6, v17, 0x1
 
     move-object/from16 v0, v21
@@ -594,7 +527,6 @@
 
     invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 73
     add-int/lit8 v4, v5, 0x1
 
     move v5, v4
@@ -603,11 +535,9 @@
 
     goto :goto_c
 
-    .line 74
     :cond_b
     invoke-static/range {v27 .. v27}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 75
     const/4 v4, 0x0
 
     move/from16 v16, v4
@@ -619,7 +549,6 @@
 
     if-ge v0, v1, :cond_14
 
-    .line 76
     move/from16 v0, v16
 
     invoke-interface {v11, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -632,7 +561,6 @@
 
     move-result v5
 
-    .line 77
     move-object/from16 v0, v27
 
     move/from16 v1, v16
@@ -647,7 +575,6 @@
 
     move-result v4
 
-    .line 79
     move-object/from16 v0, p1
 
     iget-object v6, v0, Ljlb;->a:Ljava/util/List;
@@ -656,7 +583,6 @@
 
     move-result-object v6
 
-    .line 80
     invoke-interface {v6, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -667,7 +593,6 @@
 
     move-result-wide v6
 
-    .line 81
     iget-object v4, v13, Lizs;->f:Ljava/util/List;
 
     invoke-interface {v4, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -676,7 +601,6 @@
 
     check-cast v4, Lizu;
 
-    .line 83
     iget v5, v4, Lizu;->c:I
 
     int-to-float v5, v5
@@ -687,19 +611,16 @@
 
     div-float v9, v5, v8
 
-    .line 85
     cmpl-float v5, v20, v9
 
     if-lez v5, :cond_12
 
-    .line 86
     sub-float v5, v20, v9
 
     const/high16 v8, 0x40000000    # 2.0f
 
     div-float v8, v5, v8
 
-    .line 87
     new-instance v5, Landroid/graphics/RectF;
 
     div-float v28, v8, v20
@@ -724,7 +645,6 @@
 
     move-object v8, v5
 
-    .line 93
     :goto_e
     move-object/from16 v0, p0
 
@@ -734,7 +654,6 @@
 
     move-result-object v5
 
-    .line 94
     sget-object v28, Ljnu;->p:Ljoc;
 
     move-object/from16 v0, v28
@@ -759,7 +678,6 @@
 
     if-lez v9, :cond_11
 
-    .line 95
     sget-object v9, Ljnu;->p:Ljoc;
 
     invoke-virtual {v5, v9}, Ljnu;->a(Ljoc;)Ljava/lang/Object;
@@ -768,7 +686,6 @@
 
     check-cast v5, Landroid/graphics/RectF;
 
-    .line 97
     iget v9, v8, Landroid/graphics/RectF;->left:F
 
     iget v0, v5, Landroid/graphics/RectF;->left:F
@@ -779,7 +696,6 @@
 
     if-lez v9, :cond_c
 
-    .line 98
     iget v9, v8, Landroid/graphics/RectF;->left:F
 
     iget v0, v5, Landroid/graphics/RectF;->left:F
@@ -788,7 +704,6 @@
 
     sub-float v9, v9, v28
 
-    .line 99
     iget v0, v8, Landroid/graphics/RectF;->left:F
 
     move/from16 v28, v0
@@ -799,7 +714,6 @@
 
     iput v0, v8, Landroid/graphics/RectF;->left:F
 
-    .line 100
     iget v0, v8, Landroid/graphics/RectF;->right:F
 
     move/from16 v28, v0
@@ -808,7 +722,6 @@
 
     iput v9, v8, Landroid/graphics/RectF;->right:F
 
-    .line 101
     :cond_c
     iget v9, v8, Landroid/graphics/RectF;->right:F
 
@@ -820,7 +733,6 @@
 
     if-gez v9, :cond_d
 
-    .line 102
     iget v9, v5, Landroid/graphics/RectF;->right:F
 
     iget v0, v8, Landroid/graphics/RectF;->right:F
@@ -829,7 +741,6 @@
 
     sub-float v9, v9, v28
 
-    .line 103
     iget v0, v8, Landroid/graphics/RectF;->left:F
 
     move/from16 v28, v0
@@ -840,7 +751,6 @@
 
     iput v0, v8, Landroid/graphics/RectF;->left:F
 
-    .line 104
     iget v0, v8, Landroid/graphics/RectF;->right:F
 
     move/from16 v28, v0
@@ -849,7 +759,6 @@
 
     iput v9, v8, Landroid/graphics/RectF;->right:F
 
-    .line 105
     :cond_d
     iget v9, v8, Landroid/graphics/RectF;->top:F
 
@@ -861,7 +770,6 @@
 
     if-lez v9, :cond_e
 
-    .line 106
     iget v9, v8, Landroid/graphics/RectF;->top:F
 
     iget v0, v5, Landroid/graphics/RectF;->top:F
@@ -870,7 +778,6 @@
 
     sub-float v9, v9, v28
 
-    .line 107
     iget v0, v8, Landroid/graphics/RectF;->top:F
 
     move/from16 v28, v0
@@ -881,7 +788,6 @@
 
     iput v0, v8, Landroid/graphics/RectF;->top:F
 
-    .line 108
     iget v0, v8, Landroid/graphics/RectF;->bottom:F
 
     move/from16 v28, v0
@@ -890,7 +796,6 @@
 
     iput v9, v8, Landroid/graphics/RectF;->bottom:F
 
-    .line 109
     :cond_e
     iget v9, v8, Landroid/graphics/RectF;->bottom:F
 
@@ -902,7 +807,6 @@
 
     if-gez v9, :cond_f
 
-    .line 110
     iget v9, v5, Landroid/graphics/RectF;->bottom:F
 
     iget v0, v8, Landroid/graphics/RectF;->bottom:F
@@ -911,7 +815,6 @@
 
     sub-float v9, v9, v28
 
-    .line 111
     iget v0, v8, Landroid/graphics/RectF;->top:F
 
     move/from16 v28, v0
@@ -922,7 +825,6 @@
 
     iput v0, v8, Landroid/graphics/RectF;->top:F
 
-    .line 112
     iget v0, v8, Landroid/graphics/RectF;->bottom:F
 
     move/from16 v28, v0
@@ -931,7 +833,6 @@
 
     iput v9, v8, Landroid/graphics/RectF;->bottom:F
 
-    .line 113
     :cond_f
     iget v9, v8, Landroid/graphics/RectF;->left:F
 
@@ -951,18 +852,14 @@
 
     if-lez v5, :cond_11
 
-    .line 114
     :cond_10
     const/4 v8, 0x0
 
-    .line 119
     :cond_11
     if-nez v8, :cond_13
 
-    .line 120
     const/4 v4, 0x0
 
-    .line 131
     :goto_f
     if-eqz v4, :cond_16
 
@@ -970,18 +867,15 @@
 
     move-object v4, v13
 
-    .line 135
     :goto_10
     if-nez v4, :cond_17
 
-    .line 136
     const-string v4, "CollageArtifactRenderer"
 
     move-object/from16 v0, p0
 
     iget-object v5, v0, Ljas;->a:Ljava/lang/String;
 
-    .line 137
     invoke-virtual/range {p1 .. p1}, Ljlb;->a()I
 
     move-result v6
@@ -1048,10 +942,8 @@
 
     move-result-object v5
 
-    .line 138
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 139
     new-instance v4, Ljava/lang/IllegalStateException;
 
     const-string v5, "There should always be a valid layout."
@@ -1060,7 +952,6 @@
 
     throw v4
 
-    .line 89
     :cond_12
     sub-float v5, v9, v20
 
@@ -1068,7 +959,6 @@
 
     div-float v8, v5, v8
 
-    .line 90
     new-instance v5, Landroid/graphics/RectF;
 
     const/16 v28, 0x0
@@ -1095,7 +985,6 @@
 
     goto/16 :goto_e
 
-    .line 121
     :cond_13
     iget v5, v4, Lizu;->a:I
 
@@ -1113,7 +1002,6 @@
 
     div-float/2addr v5, v9
 
-    .line 122
     iget v9, v4, Lizu;->b:I
 
     int-to-float v9, v9
@@ -1142,7 +1030,6 @@
 
     div-float v28, v9, v28
 
-    .line 123
     iget v9, v4, Lizu;->a:I
 
     int-to-float v9, v9
@@ -1183,7 +1070,6 @@
 
     div-float v29, v9, v29
 
-    .line 124
     iget v9, v4, Lizu;->b:I
 
     int-to-float v9, v9
@@ -1212,7 +1098,6 @@
 
     div-float/2addr v4, v9
 
-    .line 125
     new-instance v9, Landroid/graphics/RectF;
 
     move/from16 v0, v28
@@ -1221,7 +1106,6 @@
 
     invoke-direct {v9, v5, v0, v1, v4}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 126
     new-instance v4, Ljbm;
 
     iget-object v5, v13, Lizs;->f:Ljava/util/List;
@@ -1238,7 +1122,6 @@
 
     invoke-interface {v15, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 127
     add-int/lit8 v4, v16, 0x1
 
     move/from16 v16, v4
@@ -1250,16 +1133,13 @@
 
     move/from16 v5, v17
 
-    .line 128
     goto/16 :goto_b
 
     :cond_15
     move-object v4, v15
 
-    .line 129
     goto/16 :goto_f
 
-    .line 134
     :cond_16
     add-int/lit8 v5, v19, 0x1
 
@@ -1267,14 +1147,11 @@
 
     goto/16 :goto_5
 
-    .line 140
     :cond_17
     new-instance v7, Ljat;
 
-    .line 141
     invoke-direct {v7, v4, v5}, Ljat;-><init>(Lizs;Ljava/util/List;)V
 
-    .line 143
     new-instance v5, Ljao;
 
     iget-object v6, v7, Ljat;->a:Lizs;
@@ -1289,14 +1166,12 @@
 
     iget v9, v0, Ljas;->b:I
 
-    .line 144
     invoke-virtual/range {p1 .. p1}, Ljlb;->c()J
 
     move-result-wide v10
 
     invoke-direct/range {v5 .. v11}, Ljao;-><init>(Lizs;Ljava/util/List;Ljava/lang/String;IJ)V
 
-    .line 145
     invoke-static {v5}, Liih;->b(Ljava/lang/Object;)Lirp;
 
     move-result-object v4

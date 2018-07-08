@@ -99,8 +99,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
-    .line 29
     new-instance v0, Ljpu;
 
     const-string v1, "SHARPNESS"
@@ -119,7 +117,6 @@
 
     sput-object v0, Ljpu;->E:Ljpu;
 
-    .line 30
     new-instance v0, Ljpu;
 
     const-string v1, "SHARPNESS_MEAN"
@@ -138,7 +135,6 @@
 
     sput-object v0, Ljpu;->F:Ljpu;
 
-    .line 31
     new-instance v0, Ljpu;
 
     const-string v1, "SHARPNESS_STDEV"
@@ -157,7 +153,6 @@
 
     sput-object v0, Ljpu;->G:Ljpu;
 
-    .line 32
     new-instance v0, Ljpu;
 
     const-string v1, "MASKED_SHARPNESS"
@@ -176,7 +171,6 @@
 
     sput-object v0, Ljpu;->H:Ljpu;
 
-    .line 33
     new-instance v0, Ljpu;
 
     const-string v1, "MASKED_SHARPNESS_MEAN"
@@ -195,7 +189,6 @@
 
     sput-object v0, Ljpu;->I:Ljpu;
 
-    .line 34
     new-instance v0, Ljpu;
 
     const-string v1, "MASKED_SHARPNESS_STDEV"
@@ -214,7 +207,6 @@
 
     sput-object v0, Ljpu;->J:Ljpu;
 
-    .line 35
     new-instance v0, Ljpu;
 
     const-string v1, "PERCEPTUAL_SHARPNESS"
@@ -233,7 +225,6 @@
 
     sput-object v0, Ljpu;->a:Ljpu;
 
-    .line 36
     new-instance v0, Ljpu;
 
     const-string v1, "FACE_COUNT"
@@ -252,7 +243,6 @@
 
     sput-object v0, Ljpu;->b:Ljpu;
 
-    .line 37
     new-instance v0, Ljpu;
 
     const-string v1, "COLORFULNESS"
@@ -271,7 +261,6 @@
 
     sput-object v0, Ljpu;->K:Ljpu;
 
-    .line 38
     new-instance v0, Ljpu;
 
     const-string v1, "TIMESTAMP"
@@ -290,7 +279,6 @@
 
     sput-object v0, Ljpu;->c:Ljpu;
 
-    .line 39
     new-instance v0, Ljpu;
 
     const-string v1, "MOTION_SALIENCY"
@@ -309,7 +297,6 @@
 
     sput-object v0, Ljpu;->d:Ljpu;
 
-    .line 40
     new-instance v0, Ljpu;
 
     const-string v1, "MOTION_ESTIMATION_SALIENCY"
@@ -328,7 +315,6 @@
 
     sput-object v0, Ljpu;->e:Ljpu;
 
-    .line 41
     new-instance v0, Ljpu;
 
     const-string v1, "HUE_SAT_HISTOGRAM"
@@ -351,7 +337,6 @@
 
     sput-object v0, Ljpu;->f:Ljpu;
 
-    .line 42
     new-instance v0, Ljpu;
 
     const-string v1, "VALUE_HISTOGRAM"
@@ -370,7 +355,6 @@
 
     sput-object v0, Ljpu;->g:Ljpu;
 
-    .line 43
     new-instance v0, Ljpu;
 
     const-string v1, "IMAGE_SALIENCY"
@@ -389,7 +373,6 @@
 
     sput-object v0, Ljpu;->L:Ljpu;
 
-    .line 44
     new-instance v0, Ljpu;
 
     const-string v1, "FACE_ILLUMINATION_SCORE"
@@ -408,7 +391,6 @@
 
     sput-object v0, Ljpu;->M:Ljpu;
 
-    .line 45
     new-instance v0, Ljpu;
 
     const-string v1, "FACE_FRAMING_SCORE"
@@ -427,7 +409,6 @@
 
     sput-object v0, Ljpu;->N:Ljpu;
 
-    .line 46
     new-instance v0, Ljpu;
 
     const-string v1, "FACE_IS_SMILING_AGGREGATE_SCORE"
@@ -446,7 +427,6 @@
 
     sput-object v0, Ljpu;->h:Ljpu;
 
-    .line 47
     new-instance v0, Ljpu;
 
     const-string v1, "FACE_IS_LEFT_EYE_OPEN_AGGREGATE_SCORE"
@@ -465,7 +445,6 @@
 
     sput-object v0, Ljpu;->i:Ljpu;
 
-    .line 48
     new-instance v0, Ljpu;
 
     const-string v1, "FACE_IS_RIGHT_EYE_OPEN_AGGREGATE_SCORE"
@@ -484,7 +463,6 @@
 
     sput-object v0, Ljpu;->j:Ljpu;
 
-    .line 49
     new-instance v0, Ljpu;
 
     const-string v1, "FACE_SHARPNESS_AGGREGATE_SCORE"
@@ -503,7 +481,6 @@
 
     sput-object v0, Ljpu;->k:Ljpu;
 
-    .line 50
     new-instance v0, Ljpu;
 
     const-string v1, "IMAGE_SATURATION"
@@ -522,7 +499,6 @@
 
     sput-object v0, Ljpu;->O:Ljpu;
 
-    .line 51
     new-instance v0, Ljpu;
 
     const-string v1, "IMAGE_ENTROPY"
@@ -541,7 +517,6 @@
 
     sput-object v0, Ljpu;->P:Ljpu;
 
-    .line 52
     new-instance v0, Ljpu;
 
     const-string v1, "INTERFRAME_HOMOGRAPHY"
@@ -560,7 +535,6 @@
 
     sput-object v0, Ljpu;->l:Ljpu;
 
-    .line 53
     new-instance v0, Ljpu;
 
     const-string v1, "CAMERA_MOTION"
@@ -579,7 +553,6 @@
 
     sput-object v0, Ljpu;->m:Ljpu;
 
-    .line 54
     new-instance v0, Ljpu;
 
     const-string v1, "EXPOSURE"
@@ -598,7 +571,6 @@
 
     sput-object v0, Ljpu;->n:Ljpu;
 
-    .line 55
     new-instance v0, Ljpu;
 
     const-string v1, "MAX_GRID_SHARPNESS"
@@ -617,7 +589,6 @@
 
     sput-object v0, Ljpu;->o:Ljpu;
 
-    .line 56
     new-instance v0, Ljpu;
 
     const-string v1, "BRIGHTNESS_MEAN"
@@ -636,7 +607,6 @@
 
     sput-object v0, Ljpu;->p:Ljpu;
 
-    .line 57
     new-instance v0, Ljpu;
 
     const-string v1, "BRIGHTNESS_VARIANCE"
@@ -655,7 +625,6 @@
 
     sput-object v0, Ljpu;->q:Ljpu;
 
-    .line 58
     new-instance v0, Ljpu;
 
     const-string v1, "MAX_BLOCK_BRIGHTNESS_MEAN"
@@ -674,7 +643,6 @@
 
     sput-object v0, Ljpu;->r:Ljpu;
 
-    .line 59
     new-instance v0, Ljpu;
 
     const-string v1, "MIN_BLOCK_BRIGHTNESS_MEAN"
@@ -693,7 +661,6 @@
 
     sput-object v0, Ljpu;->s:Ljpu;
 
-    .line 60
     new-instance v0, Ljpu;
 
     const-string v1, "MAX_BLOCK_BRIGHTNESS_VARIANCE"
@@ -712,7 +679,6 @@
 
     sput-object v0, Ljpu;->t:Ljpu;
 
-    .line 61
     new-instance v0, Ljpu;
 
     const-string v1, "MIN_BLOCK_BRIGHTNESS_VARIANCE"
@@ -731,7 +697,6 @@
 
     sput-object v0, Ljpu;->u:Ljpu;
 
-    .line 62
     new-instance v0, Ljpu;
 
     const-string v1, "VIDEO_PRESENTATION_TIME"
@@ -750,7 +715,6 @@
 
     sput-object v0, Ljpu;->v:Ljpu;
 
-    .line 63
     new-instance v0, Ljpu;
 
     const-string v1, "TEST_FEATURE_1"
@@ -769,7 +733,6 @@
 
     sput-object v0, Ljpu;->w:Ljpu;
 
-    .line 64
     new-instance v0, Ljpu;
 
     const-string v1, "TEST_FEATURE_2"
@@ -788,7 +751,6 @@
 
     sput-object v0, Ljpu;->x:Ljpu;
 
-    .line 65
     new-instance v0, Ljpu;
 
     const-string v1, "TEST_MULTIDIMENSIONAL_FEATURE"
@@ -811,7 +773,6 @@
 
     sput-object v0, Ljpu;->y:Ljpu;
 
-    .line 66
     const/16 v0, 0x25
 
     new-array v0, v0, [Ljpu;
@@ -1040,7 +1001,6 @@
 
     sput-object v0, Ljpu;->R:[Ljpu;
 
-    .line 67
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -1049,7 +1009,6 @@
 
     return-void
 
-    .line 41
     nop
 
     :array_0
@@ -1058,7 +1017,6 @@
         0x3
     .end array-data
 
-    .line 65
     :array_1
     .array-data 4
         0x2
@@ -1070,8 +1028,6 @@
 .method private constructor <init>(Ljava/lang/String;IIILjqa;J)V
     .locals 8
 
-    .prologue
-    .line 20
     const/4 v0, 0x1
 
     new-array v4, v0, [I
@@ -1094,22 +1050,18 @@
 
     invoke-direct/range {v0 .. v7}, Ljpu;-><init>(Ljava/lang/String;II[ILjqa;J)V
 
-    .line 21
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;II[ILjqa;J)V
     .locals 6
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 4
     if-ltz p3, :cond_0
 
     move v0, v1
@@ -1117,10 +1069,8 @@
     :goto_0
     invoke-static {v0}, Ljiy;->a(Z)V
 
-    .line 5
     invoke-static {p4}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     array-length v0, p4
 
     if-lez v0, :cond_1
@@ -1130,19 +1080,14 @@
     :goto_1
     invoke-static {v0}, Ljiy;->a(Z)V
 
-    .line 7
     iput p3, p0, Ljpu;->z:I
 
-    .line 8
     iput-object p5, p0, Ljpu;->B:Ljqa;
 
-    .line 9
     iput-object p4, p0, Ljpu;->C:[I
 
-    .line 10
     iput-wide p6, p0, Ljpu;->D:J
 
-    .line 12
     iget-object v0, p0, Ljpu;->C:[I
 
     array-length v3, v0
@@ -1152,15 +1097,12 @@
 
     aget v4, v0, v2
 
-    .line 13
     if-gtz v4, :cond_3
 
-    .line 14
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Invalid value of feature dimension:"
 
-    .line 15
     invoke-static {p4}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v0
@@ -1187,16 +1129,13 @@
     :cond_0
     move v0, v2
 
-    .line 4
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 6
     goto :goto_1
 
-    .line 15
     :cond_2
     new-instance v0, Ljava/lang/String;
 
@@ -1204,28 +1143,22 @@
 
     goto :goto_3
 
-    .line 16
     :cond_3
     mul-int/2addr v1, v4
 
-    .line 17
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 18
     :cond_4
     iput v1, p0, Ljpu;->A:I
 
-    .line 19
     return-void
 .end method
 
 .method public static a(I)Ljpu;
     .locals 6
 
-    .prologue
-    .line 22
     sget-object v0, Ljpu;->Q:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
@@ -1234,7 +1167,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 23
     invoke-static {}, Ljpu;->values()[Ljpu;
 
     move-result-object v1
@@ -1248,25 +1180,20 @@
 
     aget-object v3, v1, v0
 
-    .line 24
     sget-object v4, Ljpu;->Q:Ljava/util/Map;
 
-    .line 25
     iget v5, v3, Ljpu;->z:I
 
-    .line 26
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
     invoke-interface {v4, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 27
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 28
     :cond_0
     sget-object v0, Ljpu;->Q:Ljava/util/Map;
 
@@ -1286,8 +1213,6 @@
 .method public static a(Ljava/lang/String;)Ljpu;
     .locals 1
 
-    .prologue
-    .line 2
     const-class v0, Ljpu;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -1302,8 +1227,6 @@
 .method public static values()[Ljpu;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Ljpu;->R:[Ljpu;
 
     invoke-virtual {v0}, [Ljpu;->clone()Ljava/lang/Object;

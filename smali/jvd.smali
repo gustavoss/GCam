@@ -19,8 +19,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,22 +27,16 @@
 .method public static a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljvd;
     .locals 3
 
-    .prologue
     const/4 v2, 0x4
 
-    .line 8
     invoke-static {p0, p1}, Ljid;->b(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 9
     invoke-static {p2, p3}, Ljid;->b(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 10
     invoke-static {p4, p5}, Ljid;->b(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 11
     invoke-static {p6, p7}, Ljid;->b(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 12
     const/16 v0, 0x8
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -89,8 +81,6 @@
 .method public static a(Ljava/util/Map;)Ljvd;
     .locals 3
 
-    .prologue
-    .line 13
     instance-of v0, p0, Ljvd;
 
     if-eqz v0, :cond_0
@@ -99,53 +89,43 @@
 
     if-nez v0, :cond_0
 
-    .line 14
     check-cast p0, Ljvd;
 
-    .line 15
     invoke-virtual {p0}, Ljvd;->i()Z
 
-    .line 24
     :goto_0
     return-object p0
 
-    .line 17
     :cond_0
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v1
 
-    .line 18
     instance-of v0, v1, Ljava/util/Collection;
 
     if-eqz v0, :cond_1
 
     move-object v0, v1
 
-    .line 19
     check-cast v0, Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->size()I
 
     move-result v0
 
-    .line 21
     :goto_1
     new-instance v2, Ljxf;
 
     invoke-direct {v2, v0}, Ljxf;-><init>(I)V
 
-    .line 22
     invoke-virtual {v2, v1}, Ljxf;->a(Ljava/lang/Iterable;)Ljxf;
 
-    .line 23
     invoke-virtual {v2}, Ljxf;->a()Ljvd;
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 20
     :cond_1
     const/4 v0, 0x4
 
@@ -155,16 +135,12 @@
 .method public static b(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljvd;
     .locals 3
 
-    .prologue
     const/4 v2, 0x2
 
-    .line 1
     invoke-static {p0, p1}, Ljid;->b(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 2
     invoke-static {p2, p3}, Ljid;->b(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 3
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -193,19 +169,14 @@
 .method public static b(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljvd;
     .locals 3
 
-    .prologue
     const/4 v2, 0x3
 
-    .line 4
     invoke-static {p0, p1}, Ljid;->b(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 5
     invoke-static {p2, p3}, Ljid;->b(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 6
     invoke-static {p4, p5}, Ljid;->b(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 7
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -249,8 +220,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 29
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -261,8 +230,6 @@
 .method public containsKey(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 31
     invoke-virtual {p0, p1}, Ljvd;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -283,8 +250,6 @@
 .method public containsValue(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 32
     invoke-virtual {p0}, Ljvd;->d()Ljus;
 
     move-result-object v0
@@ -299,11 +264,8 @@
 .method public d()Ljus;
     .locals 1
 
-    .prologue
-    .line 39
     iget-object v0, p0, Ljvd;->c:Ljus;
 
-    .line 40
     if-nez v0, :cond_0
 
     invoke-virtual {p0}, Ljvd;->c()Ljus;
@@ -319,11 +281,8 @@
 .method public final e()Ljvf;
     .locals 1
 
-    .prologue
-    .line 35
     iget-object v0, p0, Ljvd;->a:Ljvf;
 
-    .line 36
     if-nez v0, :cond_0
 
     invoke-virtual {p0}, Ljvd;->f()Ljvf;
@@ -339,8 +298,6 @@
 .method public synthetic entrySet()Ljava/util/Set;
     .locals 1
 
-    .prologue
-    .line 65
     invoke-virtual {p0}, Ljvd;->e()Ljvf;
 
     move-result-object v0
@@ -351,28 +308,20 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 41
-    .line 42
     if-ne p0, p1, :cond_0
 
-    .line 43
     const/4 v0, 0x1
 
-    .line 48
     :goto_0
     return v0
 
-    .line 44
     :cond_0
     instance-of v0, p1, Ljava/util/Map;
 
     if-eqz v0, :cond_1
 
-    .line 45
     check-cast p1, Ljava/util/Map;
 
-    .line 46
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -387,11 +336,9 @@
 
     goto :goto_0
 
-    .line 47
     :cond_1
     const/4 v0, 0x0
 
-    .line 48
     goto :goto_0
 .end method
 
@@ -401,11 +348,8 @@
 .method public final g()Ljvf;
     .locals 1
 
-    .prologue
-    .line 37
     iget-object v0, p0, Ljvd;->b:Ljvf;
 
-    .line 38
     if-nez v0, :cond_0
 
     invoke-virtual {p0}, Ljvd;->h()Ljvf;
@@ -424,13 +368,10 @@
 .method public final getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 33
     invoke-virtual {p0, p1}, Ljvd;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 34
     if-eqz v0, :cond_0
 
     move-object p2, v0
@@ -445,8 +386,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 49
     invoke-virtual {p0}, Ljvd;->e()Ljvf;
 
     move-result-object v0
@@ -464,8 +403,6 @@
 .method public isEmpty()Z
     .locals 1
 
-    .prologue
-    .line 30
     invoke-virtual {p0}, Ljvd;->size()I
 
     move-result v0
@@ -486,8 +423,6 @@
 .method public synthetic keySet()Ljava/util/Set;
     .locals 1
 
-    .prologue
-    .line 67
     invoke-virtual {p0}, Ljvd;->g()Ljvf;
 
     move-result-object v0
@@ -500,8 +435,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 26
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -514,8 +447,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 28
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -528,8 +459,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 27
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -540,19 +469,14 @@
 .method public toString()Ljava/lang/String;
     .locals 6
 
-    .prologue
-    .line 50
-    .line 51
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
     move-result v0
 
-    .line 52
     const-string v1, "size"
 
     invoke-static {v0, v1}, Ljid;->a(ILjava/lang/String;)I
 
-    .line 53
     new-instance v1, Ljava/lang/StringBuilder;
 
     int-to-long v2, v0
@@ -571,17 +495,14 @@
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 54
     const/16 v0, 0x7b
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 55
     const/4 v0, 0x1
 
-    .line 56
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v1
@@ -605,19 +526,15 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 57
     if-nez v1, :cond_0
 
-    .line 58
     const-string v1, ", "
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 59
     :cond_0
     const/4 v1, 0x0
 
-    .line 60
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
@@ -640,7 +557,6 @@
 
     goto :goto_0
 
-    .line 62
     :cond_1
     const/16 v0, 0x7d
 
@@ -652,15 +568,12 @@
 
     move-result-object v0
 
-    .line 63
     return-object v0
 .end method
 
 .method public synthetic values()Ljava/util/Collection;
     .locals 1
 
-    .prologue
-    .line 66
     invoke-virtual {p0}, Ljvd;->d()Ljus;
 
     move-result-object v0
@@ -671,8 +584,6 @@
 .method writeReplace()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 64
     new-instance v0, Ljve;
 
     invoke-direct {v0, p0}, Ljve;-><init>(Ljvd;)V

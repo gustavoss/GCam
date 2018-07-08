@@ -13,23 +13,16 @@
 .method public constructor <init>(Ljle;Lizn;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-static {p2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     iput-object p1, p0, Lizo;->a:Ljle;
 
-    .line 5
     iput-object p2, p0, Lizo;->b:Lizn;
 
-    .line 6
     return-void
 .end method
 
@@ -38,8 +31,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lizo;->a:Ljle;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

@@ -35,10 +35,8 @@
 .method public constructor <init>(Lhvc;Lhld;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     iput-object p1, p0, Lhvd;->h:Lhvc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -85,11 +83,9 @@
 
     invoke-static {}, Lhmu;->i()Lhmb;
 
-    .line 2
     :cond_0
     iget-object v0, p2, Lhld;->d:Lhtk;
 
-    .line 3
     iput-object v0, p0, Lhvd;->j:Lhtk;
 
     new-instance v0, Lhue;
@@ -98,10 +94,8 @@
 
     iput-object v0, p0, Lhvd;->b:Lhue;
 
-    .line 4
     iget v0, p2, Lhld;->f:I
 
-    .line 5
     iput v0, p0, Lhvd;->e:I
 
     iget-object v0, p0, Lhvd;->a:Lhma;
@@ -209,8 +203,6 @@
 .method final a()V
     .locals 3
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Lhvd;->d()V
 
     sget-object v0, Lcom/google/android/gms/common/ConnectionResult;->a:Lcom/google/android/gms/common/ConnectionResult;
@@ -263,7 +255,6 @@
 
     invoke-interface {v0}, Lhma;->c()V
 
-    .line 7
     :cond_0
     :goto_1
     iget-object v0, p0, Lhvd;->a:Lhma;
@@ -294,13 +285,11 @@
 
     goto :goto_1
 
-    .line 8
     :cond_1
     invoke-virtual {p0}, Lhvd;->g()V
 
     return-void
 
-    .line 6
     :catch_1
     move-exception v1
 
@@ -390,8 +379,6 @@
 .method public final a(Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 5
 
-    .prologue
-    .line 12
     iget-object v0, p0, Lhvd;->h:Lhvc;
 
     invoke-static {v0}, Lhvc;->a(Lhvc;)Landroid/os/Handler;
@@ -406,12 +393,10 @@
 
     iget-object v0, p0, Lhvd;->f:Lhqz;
 
-    .line 13
     iget-object v0, v0, Lhqz;->g:Lhsb;
 
     invoke-interface {v0}, Lhsb;->c()V
 
-    .line 14
     :cond_0
     invoke-virtual {p0}, Lhvd;->d()V
 
@@ -423,26 +408,20 @@
 
     invoke-direct {p0, p1}, Lhvd;->b(Lcom/google/android/gms/common/ConnectionResult;)V
 
-    .line 15
     iget v0, p1, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 16
     const/4 v1, 0x4
 
     if-ne v0, v1, :cond_2
 
-    .line 17
     sget-object v0, Lhvc;->b:Lcom/google/android/gms/common/api/Status;
 
-    .line 18
     invoke-virtual {p0, v0}, Lhvd;->a(Lcom/google/android/gms/common/api/Status;)V
 
-    .line 26
     :cond_1
     :goto_0
     return-void
 
-    .line 18
     :cond_2
     iget-object v0, p0, Lhvd;->i:Ljava/util/Queue;
 
@@ -456,17 +435,14 @@
 
     goto :goto_0
 
-    .line 19
     :cond_3
     sget-object v1, Lhvc;->c:Ljava/lang/Object;
 
-    .line 20
     monitor-enter v1
 
     :try_start_0
     invoke-static {}, Lhvc;->b()Lhtq;
 
-    .line 21
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -481,10 +457,8 @@
 
     if-nez v0, :cond_1
 
-    .line 22
     iget v0, p1, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 23
     const/16 v1, 0x12
 
     if-ne v0, v1, :cond_4
@@ -528,7 +502,6 @@
 
     goto :goto_0
 
-    .line 21
     :catchall_0
     move-exception v0
 
@@ -539,7 +512,6 @@
 
     throw v0
 
-    .line 23
     :cond_5
     new-instance v0, Lcom/google/android/gms/common/api/Status;
 
@@ -547,13 +519,10 @@
 
     iget-object v2, p0, Lhvd;->j:Lhtk;
 
-    .line 24
     iget-object v2, v2, Lhtk;->a:Lhnh;
 
-    .line 25
     iget-object v2, v2, Lhnh;->a:Ljava/lang/String;
 
-    .line 26
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -739,22 +708,18 @@
 .method final b()V
     .locals 4
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 9
     invoke-virtual {p0}, Lhvd;->d()V
 
     iput-boolean v2, p0, Lhvd;->g:Z
 
     iget-object v0, p0, Lhvd;->b:Lhue;
 
-    .line 10
     sget-object v1, Lhre;->a:Lcom/google/android/gms/common/api/Status;
 
     invoke-virtual {v0, v2, v1}, Lhue;->a(ZLcom/google/android/gms/common/api/Status;)V
 
-    .line 11
     iget-object v0, p0, Lhvd;->h:Lhvc;
 
     invoke-static {v0}, Lhvc;->a(Lhvc;)Landroid/os/Handler;
@@ -823,8 +788,6 @@
 .method public final c()V
     .locals 4
 
-    .prologue
-    .line 27
     iget-object v0, p0, Lhvd;->h:Lhvc;
 
     invoke-static {v0}, Lhvc;->a(Lhvc;)Landroid/os/Handler;
@@ -839,14 +802,12 @@
 
     iget-object v0, p0, Lhvd;->b:Lhue;
 
-    .line 28
     const/4 v1, 0x0
 
     sget-object v2, Lhvc;->a:Lcom/google/android/gms/common/api/Status;
 
     invoke-virtual {v0, v1, v2}, Lhue;->a(ZLcom/google/android/gms/common/api/Status;)V
 
-    .line 29
     iget-object v0, p0, Lhvd;->d:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -1018,10 +979,8 @@
 .method public final h()V
     .locals 9
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 30
     iget-object v0, p0, Lhvd;->h:Lhvc;
 
     invoke-static {v0}, Lhvc;->a(Lhvc;)Landroid/os/Handler;
@@ -1046,12 +1005,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 36
     :cond_0
     :goto_0
     return-void
 
-    .line 30
     :cond_1
     iget-object v0, p0, Lhvd;->a:Lhma;
 
@@ -1130,7 +1087,6 @@
 
     iget-object v8, p0, Lhvd;->f:Lhqz;
 
-    .line 31
     iget-object v0, v8, Lhqz;->g:Lhsb;
 
     if-eqz v0, :cond_3
@@ -1150,7 +1106,6 @@
 
     move-result-object v0
 
-    .line 32
     const-string v2, "defaultGoogleSignInAccount"
 
     invoke-virtual {v0, v2}, Lhku;->c(Ljava/lang/String;)Ljava/lang/String;
@@ -1161,7 +1116,6 @@
 
     move-result-object v2
 
-    .line 33
     if-nez v2, :cond_6
 
     new-instance v0, Ljava/util/HashSet;
@@ -1202,14 +1156,12 @@
 
     iget-object v4, v8, Lhqz;->f:Lhng;
 
-    .line 34
     iget-object v4, v4, Lhng;->g:Lhsc;
 
     move-object v5, v8
 
     move-object v6, v8
 
-    .line 35
     invoke-virtual/range {v0 .. v6}, Lhly;->a(Landroid/content/Context;Landroid/os/Looper;Lhng;Ljava/lang/Object;Lhmd;Lhme;)Lhma;
 
     move-result-object v0
@@ -1224,7 +1176,6 @@
 
     invoke-interface {v0}, Lhsb;->j()V
 
-    .line 36
     :cond_5
     iget-object v0, p0, Lhvd;->a:Lhma;
 
@@ -1232,7 +1183,6 @@
 
     goto/16 :goto_0
 
-    .line 33
     :cond_6
     new-instance v0, Ljava/util/HashSet;
 

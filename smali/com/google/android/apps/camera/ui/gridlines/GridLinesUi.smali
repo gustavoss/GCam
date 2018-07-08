@@ -29,21 +29,18 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v3, 0x2
 
     const/4 v2, 0x0
 
-    .line 33
     new-instance v0, Lgrf;
 
     invoke-direct {v0}, Lgrf;-><init>()V
 
     sput-object v0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->c:Lgrg;
 
-    .line 34
     new-instance v0, Lgri;
 
     new-array v1, v3, [F
@@ -54,7 +51,6 @@
 
     sput-object v0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->d:Lgrg;
 
-    .line 35
     new-instance v0, Lgri;
 
     new-array v1, v3, [F
@@ -65,7 +61,6 @@
 
     sput-object v0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->e:Lgrg;
 
-    .line 36
     new-instance v0, Lgri;
 
     const/4 v1, 0x3
@@ -78,7 +73,6 @@
 
     sput-object v0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->f:Lgrg;
 
-    .line 37
     new-instance v0, Lgri;
 
     new-array v1, v3, [F
@@ -91,21 +85,18 @@
 
     return-void
 
-    .line 34
     :array_0
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 35
     :array_1
     .array-data 4
         0x3eaaaaab
         0x3f2aaaaa
     .end array-data
 
-    .line 36
     :array_2
     .array-data 4
         0x3e800000    # 0.25f
@@ -113,7 +104,6 @@
         0x3f400000    # 0.75f
     .end array-data
 
-    .line 37
     :array_3
     .array-data 4
         0x3ec3910d
@@ -124,17 +114,14 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 11
 
-    .prologue
     const/4 v10, 0x0
 
     const v9, 0x7f0d00d2
 
     const v8, 0x7f0c0066
 
-    .line 1
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 2
     sget-object v0, Lgrh;->a:Lgrh;
 
     sget-object v1, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->d:Lgrg;
@@ -151,28 +138,24 @@
 
     sget-object v7, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->g:Lgrg;
 
-    .line 3
     invoke-static/range {v0 .. v7}, Ljvd;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljvd;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->a:Ljava/util/Map;
 
-    .line 4
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->h:Landroid/graphics/Paint;
 
-    .line 5
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->i:Landroid/graphics/Paint;
 
-    .line 6
     iget-object v0, p0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->h:Landroid/graphics/Paint;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -187,25 +170,20 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 7
     iget-object v0, p0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->h:Landroid/graphics/Paint;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 8
     invoke-virtual {v1, v8, v10}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
 
     move-result v1
 
-    .line 9
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 10
     iget-object v0, p0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->i:Landroid/graphics/Paint;
 
-    .line 11
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -216,25 +194,20 @@
 
     int-to-float v1, v1
 
-    .line 12
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 13
     iget-object v0, p0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->i:Landroid/graphics/Paint;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 14
     invoke-virtual {v1, v8, v10}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
 
     move-result v1
 
-    .line 15
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 16
     new-instance v0, Lgrt;
 
     iget-object v1, p0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->h:Landroid/graphics/Paint;
@@ -245,14 +218,12 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->b:Lgrt;
 
-    .line 17
     iget-object v0, p0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->b:Lgrt;
 
     sget-object v1, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->c:Lgrg;
 
     invoke-virtual {v0, v1}, Lgrt;->a(Lgrg;)V
 
-    .line 18
     return-void
 .end method
 
@@ -261,60 +232,50 @@
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 3
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->b:Lgrt;
 
-    .line 25
     iget-object v1, v0, Lgrt;->b:Lgrg;
 
     iget-boolean v1, v1, Lgrg;->g:Z
 
     if-nez v1, :cond_0
 
-    .line 26
     iget-object v1, v0, Lgrt;->d:Lgrj;
 
     iget-object v2, v0, Lgrt;->a:Landroid/graphics/RectF;
 
     invoke-virtual {v1, p1, v2}, Lgrj;->a(Landroid/graphics/Canvas;Landroid/graphics/RectF;)V
 
-    .line 27
     iget-object v1, v0, Lgrt;->e:Lgrj;
 
     iget-object v2, v0, Lgrt;->a:Landroid/graphics/RectF;
 
     invoke-virtual {v1, p1, v2}, Lgrj;->a(Landroid/graphics/Canvas;Landroid/graphics/RectF;)V
 
-    .line 28
     iget-object v1, v0, Lgrt;->f:Lgtf;
 
     iget-object v2, v0, Lgrt;->a:Landroid/graphics/RectF;
 
     invoke-virtual {v1, p1, v2}, Lgtf;->a(Landroid/graphics/Canvas;Landroid/graphics/RectF;)V
 
-    .line 29
     iget-object v1, v0, Lgrt;->g:Lgtf;
 
     iget-object v2, v0, Lgrt;->a:Landroid/graphics/RectF;
 
     invoke-virtual {v1, p1, v2}, Lgtf;->a(Landroid/graphics/Canvas;Landroid/graphics/RectF;)V
 
-    .line 30
     iget-object v1, v0, Lgrt;->h:Lgrj;
 
     iget-object v2, v0, Lgrt;->a:Landroid/graphics/RectF;
 
     invoke-virtual {v1, p1, v2}, Lgrj;->a(Landroid/graphics/Canvas;Landroid/graphics/RectF;)V
 
-    .line 31
     iget-object v1, v0, Lgrt;->i:Lgtf;
 
     iget-object v0, v0, Lgrt;->a:Landroid/graphics/RectF;
 
     invoke-virtual {v1, p1, v0}, Lgtf;->a(Landroid/graphics/Canvas;Landroid/graphics/RectF;)V
 
-    .line 32
     :cond_0
     return-void
 .end method
@@ -322,11 +283,8 @@
 .method protected onLayout(ZIIII)V
     .locals 6
 
-    .prologue
-    .line 19
     iget-object v0, p0, Lcom/google/android/apps/camera/ui/gridlines/GridLinesUi;->b:Lgrt;
 
-    .line 20
     iget-object v1, v0, Lgrt;->a:Landroid/graphics/RectF;
 
     int-to-float v2, p2
@@ -339,14 +297,11 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 21
     invoke-virtual {v0}, Lgrt;->a()V
 
-    .line 22
     iget-object v0, v0, Lgrt;->c:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 23
     return-void
 .end method

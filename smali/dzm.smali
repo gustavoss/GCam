@@ -25,15 +25,11 @@
 .method public final a(II)V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Ldzm;->a:Ldzl;
 
-    .line 2
     iget-object v0, v0, Ldzl;->A:Lgrs;
 
     invoke-virtual {v0, p1, p2}, Lgrs;->a(II)V
 
-    .line 3
     return-void
 .end method

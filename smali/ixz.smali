@@ -25,11 +25,8 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v2, p0, Lixz;->a:Lixw;
 
-    .line 2
     iget-object v0, v2, Lixw;->f:Lkfk;
 
     invoke-static {v0}, Lkek;->c(Ljava/util/concurrent/Future;)Ljava/lang/Object;
@@ -38,7 +35,6 @@
 
     check-cast v0, Landroid/media/MediaMuxer;
 
-    .line 3
     :try_start_0
     iget-object v1, v2, Lixw;->g:Lkfk;
 
@@ -50,7 +46,6 @@
 
     iget-object v1, v2, Lixw;->g:Lkfk;
 
-    .line 4
     invoke-virtual {v1}, Lkcy;->isCancelled()Z
 
     move-result v1
@@ -59,7 +54,6 @@
 
     iget-object v1, v2, Lixw;->g:Lkfk;
 
-    .line 5
     invoke-static {v1}, Lkek;->b(Ljava/util/concurrent/Future;)Ljava/lang/Object;
 
     move-result-object v1
@@ -72,13 +66,11 @@
 
     if-eqz v1, :cond_2
 
-    .line 6
     invoke-virtual {v0}, Landroid/media/MediaMuxer;->stop()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 14
     :cond_0
     :goto_0
     :try_start_1
@@ -87,7 +79,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 15
     iget-object v0, v2, Lixw;->h:Lkfk;
 
     invoke-virtual {v0}, Lkcy;->isDone()Z
@@ -96,19 +87,16 @@
 
     if-nez v0, :cond_1
 
-    .line 16
     iget-object v0, v2, Lixw;->h:Lkfk;
 
     const-class v1, Lixw;
 
     invoke-virtual {v0, v1}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 35
     :cond_1
     :goto_1
     return-void
 
-    .line 7
     :cond_2
     :try_start_2
     const-string v1, "MuxerImpl"
@@ -117,14 +105,12 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     iget-object v1, v2, Lixw;->h:Lkfk;
 
     const/4 v3, 0x0
 
     invoke-virtual {v1, v3}, Lkcy;->cancel(Z)Z
 
-    .line 9
     iget-object v1, v2, Lixw;->b:Lkey;
 
     invoke-interface {v1}, Lkey;->isDone()Z
@@ -141,7 +127,6 @@
 
     if-nez v1, :cond_0
 
-    .line 10
     iget-object v1, v2, Lixw;->b:Lkey;
 
     invoke-static {v1}, Lkek;->c(Ljava/util/concurrent/Future;)Ljava/lang/Object;
@@ -150,7 +135,6 @@
 
     check-cast v1, Lixt;
 
-    .line 11
     iget-object v3, v1, Lixt;->a:Ljrw;
 
     invoke-virtual {v3}, Ljrw;->a()Z
@@ -159,7 +143,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 12
     new-instance v3, Ljava/io/File;
 
     iget-object v1, v1, Lixt;->a:Ljrw;
@@ -172,7 +155,6 @@
 
     invoke-direct {v3, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 13
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
@@ -180,11 +162,9 @@
 
     goto :goto_0
 
-    .line 24
     :catch_0
     move-exception v1
 
-    .line 25
     :try_start_3
     iget-object v3, v2, Lixw;->h:Lkfk;
 
@@ -192,14 +172,12 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 26
     :try_start_4
     invoke-virtual {v0}, Landroid/media/MediaMuxer;->release()V
     :try_end_4
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_2
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 27
     iget-object v0, v2, Lixw;->h:Lkfk;
 
     invoke-virtual {v0}, Lkcy;->isDone()Z
@@ -208,7 +186,6 @@
 
     if-nez v0, :cond_1
 
-    .line 28
     iget-object v0, v2, Lixw;->h:Lkfk;
 
     const-class v1, Lixw;
@@ -217,11 +194,9 @@
 
     goto :goto_1
 
-    .line 17
     :catch_1
     move-exception v0
 
-    .line 18
     :try_start_5
     iget-object v1, v2, Lixw;->h:Lkfk;
 
@@ -229,7 +204,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 19
     iget-object v0, v2, Lixw;->h:Lkfk;
 
     invoke-virtual {v0}, Lkcy;->isDone()Z
@@ -238,7 +212,6 @@
 
     if-nez v0, :cond_1
 
-    .line 20
     iget-object v0, v2, Lixw;->h:Lkfk;
 
     const-class v1, Lixw;
@@ -247,7 +220,6 @@
 
     goto :goto_1
 
-    .line 21
     :catchall_0
     move-exception v0
 
@@ -259,7 +231,6 @@
 
     if-nez v1, :cond_3
 
-    .line 22
     iget-object v1, v2, Lixw;->h:Lkfk;
 
     const-class v2, Lixw;
@@ -269,11 +240,9 @@
     :cond_3
     throw v0
 
-    .line 29
     :catch_2
     move-exception v0
 
-    .line 30
     :try_start_6
     iget-object v1, v2, Lixw;->h:Lkfk;
 
@@ -281,7 +250,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 31
     iget-object v0, v2, Lixw;->h:Lkfk;
 
     invoke-virtual {v0}, Lkcy;->isDone()Z
@@ -290,7 +258,6 @@
 
     if-nez v0, :cond_1
 
-    .line 32
     iget-object v0, v2, Lixw;->h:Lkfk;
 
     const-class v1, Lixw;
@@ -299,7 +266,6 @@
 
     goto/16 :goto_1
 
-    .line 33
     :catchall_1
     move-exception v0
 
@@ -311,7 +277,6 @@
 
     if-nez v1, :cond_4
 
-    .line 34
     iget-object v1, v2, Lixw;->h:Lkfk;
 
     const-class v2, Lixw;
@@ -321,18 +286,15 @@
     :cond_4
     throw v0
 
-    .line 36
     :catchall_2
     move-exception v1
 
-    .line 37
     :try_start_7
     invoke-virtual {v0}, Landroid/media/MediaMuxer;->release()V
     :try_end_7
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_3
     .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
-    .line 38
     iget-object v0, v2, Lixw;->h:Lkfk;
 
     invoke-virtual {v0}, Lkcy;->isDone()Z
@@ -341,23 +303,19 @@
 
     if-nez v0, :cond_5
 
-    .line 39
     iget-object v0, v2, Lixw;->h:Lkfk;
 
     const-class v2, Lixw;
 
     invoke-virtual {v0, v2}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 45
     :cond_5
     :goto_2
     throw v1
 
-    .line 40
     :catch_3
     move-exception v0
 
-    .line 41
     :try_start_8
     iget-object v3, v2, Lixw;->h:Lkfk;
 
@@ -365,7 +323,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_3
 
-    .line 42
     iget-object v0, v2, Lixw;->h:Lkfk;
 
     invoke-virtual {v0}, Lkcy;->isDone()Z
@@ -374,7 +331,6 @@
 
     if-nez v0, :cond_5
 
-    .line 43
     iget-object v0, v2, Lixw;->h:Lkfk;
 
     const-class v2, Lixw;
@@ -383,7 +339,6 @@
 
     goto :goto_2
 
-    .line 44
     :catchall_3
     move-exception v0
 
@@ -395,7 +350,6 @@
 
     if-nez v1, :cond_6
 
-    .line 45
     iget-object v1, v2, Lixw;->h:Lkfk;
 
     const-class v2, Lixw;

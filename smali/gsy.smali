@@ -13,7 +13,6 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/high16 v4, 0x3f800000    # 1.0f
 
     const v3, 0x3ecccccd    # 0.4f
@@ -22,26 +21,22 @@
 
     const/4 v1, 0x0
 
-    .line 4
     new-instance v0, Lgsx;
 
     invoke-direct {v0, v3, v2}, Lgsx;-><init>(FF)V
 
     sput-object v0, Lgsy;->a:Lgsx;
 
-    .line 5
     new-instance v0, Lgsx;
 
     invoke-direct {v0, v1, v2}, Lgsx;-><init>(FF)V
 
-    .line 6
     new-instance v0, Lgsx;
 
     invoke-direct {v0, v3, v4}, Lgsx;-><init>(FF)V
 
     sput-object v0, Lgsy;->b:Lgsx;
 
-    .line 7
     new-instance v0, Lgsx;
 
     invoke-direct {v0, v1, v4}, Lgsx;-><init>(FF)V
@@ -52,8 +47,6 @@
 .method public static a(Lgsx;Lgsx;F)F
     .locals 3
 
-    .prologue
-    .line 1
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-virtual {p0, p2}, Lgsx;->a(F)F
@@ -62,7 +55,6 @@
 
     sub-float/2addr v0, v1
 
-    .line 2
     iget-object v1, p1, Lgsx;->a:Lgsw;
 
     iget-object v2, p1, Lgsx;->b:Lgsw;
@@ -75,6 +67,5 @@
 
     move-result v0
 
-    .line 3
     return v0
 .end method

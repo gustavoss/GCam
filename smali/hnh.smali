@@ -14,8 +14,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,8 +22,6 @@
 .method public constructor <init>(Ljava/lang/String;Lhly;Lhqx;)V
     .locals 1
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "Cannot construct an Api with a null ClientBuilder"
@@ -50,8 +46,6 @@
 .method public final a()Lhly;
     .locals 2
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lhnh;->b:Lhly;
 
     if-eqz v0, :cond_0
@@ -76,8 +70,6 @@
 .method public final b()Lhqx;
     .locals 2
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lhnh;->c:Lhqx;
 
     if-eqz v0, :cond_0

@@ -21,18 +21,14 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10
     new-instance v0, Lbop;
 
     invoke-direct {v0}, Lbop;-><init>()V
 
     iput-object v0, p0, Lbny;->b:Lbog;
 
-    .line 11
     new-instance v0, Lbol;
 
     iget-object v1, p0, Lbny;->b:Lbog;
@@ -41,7 +37,6 @@
 
     iput-object v0, p0, Lbny;->a:Lboc;
 
-    .line 12
     return-void
 .end method
 
@@ -50,21 +45,16 @@
 .method public final a(IIF)V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lbny;->a:Lboc;
 
     invoke-virtual {v0, p1, p2, p3}, Lglg;->a(IIF)V
 
-    .line 2
     return-void
 .end method
 
 .method public final a(Landroid/view/View$OnClickListener;)V
     .locals 3
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lbny;->c:Lbot;
 
     const-string v1, "EvCompViewController must be first initialized"
@@ -79,18 +69,14 @@
 
     check-cast v0, Lbot;
 
-    .line 7
     invoke-virtual {v0, p1}, Lbot;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 8
     return-void
 .end method
 
 .method public final a(Z)V
     .locals 3
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lbny;->c:Lbot;
 
     const-string v1, "EvCompViewController must be first initialized"
@@ -105,9 +91,7 @@
 
     check-cast v0, Lbot;
 
-    .line 4
     invoke-virtual {v0, p1}, Lbot;->a(Z)V
 
-    .line 5
     return-void
 .end method

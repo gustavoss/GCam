@@ -16,8 +16,6 @@
 .method constructor <init>(Lfrc;Lfqs;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfrd;->b:Lfrc;
 
     iput-object p2, p0, Lfrd;->a:Lfqs;
@@ -32,36 +30,27 @@
 .method public final run()V
     .locals 14
 
-    .prologue
-    .line 2
     iget-object v3, p0, Lfrd;->b:Lfrc;
 
     iget-object v4, p0, Lfrd;->a:Lfqs;
 
-    .line 4
     new-instance v5, Ljava/util/ArrayList;
 
-    .line 5
     iget-object v0, v4, Lfqs;->e:Ljava/util/Set;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v0
 
-    .line 6
     invoke-direct {v5, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 7
     invoke-static {v5}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 8
     :try_start_0
     iget-object v0, v3, Lfrc;->b:Lfqg;
 
-    .line 9
     iget-object v1, v4, Lfqs;->a:Ljava/lang/String;
 
-    .line 10
     const-string v2, "txt"
 
     invoke-virtual {v0, v1, v2}, Lfqg;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/io/OutputStream;
@@ -72,7 +61,6 @@
 
     const/4 v2, 0x0
 
-    .line 11
     :try_start_1
     new-instance v7, Ljava/io/PrintStream;
 
@@ -81,24 +69,19 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
-    .line 12
     const/4 v1, 0x0
 
-    .line 14
     :try_start_2
     iget-object v0, v4, Lfqs;->g:Ljrw;
 
-    .line 15
     invoke-virtual {v0}, Ljrw;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 17
     iget-object v0, v4, Lfqs;->g:Ljrw;
 
-    .line 18
     invoke-virtual {v0}, Ljrw;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -107,10 +90,8 @@
 
     move-result v0
 
-    .line 19
     add-int/lit8 v0, v0, 0x1
 
-    .line 20
     const/16 v8, 0x18
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -133,14 +114,11 @@
 
     invoke-virtual {v7, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 21
     :cond_0
     const-string v8, "npf parameters = "
 
-    .line 22
     iget-object v0, v4, Lfqs;->f:Ljrw;
 
-    .line 23
     const-string v9, "none"
 
     invoke-virtual {v0, v9}, Ljrw;->a(Ljava/lang/Object;)Ljava/lang/Object;
@@ -169,7 +147,6 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_5
 
-    .line 24
     const/4 v0, 0x0
 
     :try_start_3
@@ -178,7 +155,6 @@
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_4
 
-    .line 26
     const/4 v0, 0x0
 
     :try_start_4
@@ -186,41 +162,33 @@
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 31
     const/4 v0, 0x0
 
     move v1, v0
 
-    .line 32
     :goto_1
     iget-object v0, v4, Lfqs;->h:Ljava/util/List;
 
-    .line 33
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
     if-ge v1, v0, :cond_2
 
-    .line 35
     iget-object v0, v4, Lfqs;->h:Ljava/util/List;
 
-    .line 36
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [B
 
-    .line 37
     invoke-static {v0}, Ljrw;->b(Ljava/lang/Object;)Ljrw;
 
     move-result-object v0
 
-    .line 38
     iget-object v2, v4, Lfqs;->a:Ljava/lang/String;
 
-    .line 39
     add-int/lit8 v6, v1, 0x1
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -259,24 +227,20 @@
 
     invoke-virtual {v3, v0, v2, v6}, Lfrc;->a(Ljrw;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 40
     iget-object v0, v3, Lfrc;->c:Lblf;
 
     const-string v2, "Saved YUV reprocessing input"
 
-    .line 41
     const/4 v6, 0x0
 
     invoke-virtual {v0, v2, v6}, Lblf;->a(Ljava/lang/String;I)V
 
-    .line 42
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_1
 
-    .line 23
     :cond_1
     :try_start_5
     new-instance v0, Ljava/lang/String;
@@ -288,7 +252,6 @@
 
     goto :goto_0
 
-    .line 25
     :catch_0
     move-exception v0
 
@@ -297,7 +260,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 26
     :catchall_0
     move-exception v1
 
@@ -316,7 +278,6 @@
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_1
     .catchall {:try_start_7 .. :try_end_7} :catchall_4
 
-    .line 27
     :catch_1
     move-exception v0
 
@@ -325,7 +286,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 28
     :catchall_1
     move-exception v1
 
@@ -343,24 +303,20 @@
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_2
 
-    .line 29
     :catch_2
     move-exception v0
 
-    .line 30
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 43
     :cond_2
     const/4 v0, 0x0
 
     move v1, v0
 
-    .line 44
     :goto_4
     iget-object v0, v4, Lfqs;->i:Ljava/util/List;
 
@@ -368,38 +324,32 @@
 
     move-result-object v0
 
-    .line 45
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
     if-ge v1, v0, :cond_3
 
-    .line 46
     iget-object v0, v3, Lfrc;->a:Liid;
 
     const-string v2, "Waiting for reprocessing metadata..."
 
     invoke-interface {v0, v2}, Liid;->e(Ljava/lang/String;)V
 
-    .line 48
     iget-object v0, v4, Lfqs;->i:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 49
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lkey;
 
-    .line 51
     iget-object v2, v4, Lfqs;->a:Ljava/lang/String;
 
-    .line 52
     add-int/lit8 v6, v1, 0x1
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -436,14 +386,12 @@
 
     invoke-virtual {v3, v0, v2}, Lfrc;->a(Lkey;Ljava/lang/String;)V
 
-    .line 53
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_4
 
-    .line 54
     :cond_3
     const/4 v0, 0x0
 
@@ -456,7 +404,6 @@
 
     if-ge v1, v0, :cond_7
 
-    .line 55
     invoke-interface {v5, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -467,10 +414,8 @@
 
     move-result-wide v6
 
-    .line 57
     iget-object v0, v4, Lfqs;->a:Ljava/lang/String;
 
-    .line 58
     add-int/lit8 v2, v1, 0x1
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -505,28 +450,24 @@
 
     move-result-object v8
 
-    .line 60
     iget-object v0, v4, Lfqs;->b:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
-    .line 61
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    .line 63
     iget-object v0, v4, Lfqs;->b:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
-    .line 64
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
@@ -537,14 +478,12 @@
 
     invoke-static {v0}, Ljiy;->b(Z)V
 
-    .line 66
     iget-object v0, v4, Lfqs;->b:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
-    .line 67
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
@@ -561,7 +500,6 @@
 
     check-cast v0, [B
 
-    .line 68
     :try_start_a
     iget-object v2, v3, Lfrc;->b:Lfqg;
 
@@ -575,11 +513,9 @@
 
     const/4 v2, 0x0
 
-    .line 69
     :try_start_b
     invoke-virtual {v9, v0}, Ljava/io/OutputStream;->write([B)V
 
-    .line 70
     iget-object v0, v3, Lfrc;->c:Lblf;
 
     add-int/lit8 v10, v1, 0x1
@@ -604,7 +540,6 @@
 
     move-result-object v10
 
-    .line 71
     const/4 v11, 0x0
 
     invoke-virtual {v0, v10, v11}, Lblf;->a(Ljava/lang/String;I)V
@@ -612,7 +547,6 @@
     .catch Ljava/lang/Throwable; {:try_start_b .. :try_end_b} :catch_3
     .catchall {:try_start_b .. :try_end_b} :catchall_3
 
-    .line 72
     const/4 v0, 0x0
 
     :try_start_c
@@ -620,7 +554,6 @@
     :try_end_c
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_4
 
-    .line 78
     :cond_4
     iget-object v0, v4, Lfqs;->c:Ljava/util/Map;
 
@@ -628,21 +561,18 @@
 
     move-result-object v0
 
-    .line 79
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_5
 
-    .line 81
     iget-object v0, v4, Lfqs;->c:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
-    .line 82
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
@@ -653,14 +583,12 @@
 
     invoke-static {v0}, Ljiy;->b(Z)V
 
-    .line 84
     iget-object v0, v4, Lfqs;->c:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
-    .line 85
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
@@ -671,7 +599,6 @@
 
     check-cast v0, [B
 
-    .line 86
     invoke-static {v0}, Ljrw;->c(Ljava/lang/Object;)Ljrw;
 
     move-result-object v0
@@ -680,7 +607,6 @@
 
     invoke-virtual {v3, v0, v8, v2}, Lfrc;->a(Ljrw;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 87
     iget-object v0, v3, Lfrc;->c:Lblf;
 
     add-int/lit8 v2, v1, 0x1
@@ -705,12 +631,10 @@
 
     move-result-object v2
 
-    .line 88
     const/4 v9, 0x0
 
     invoke-virtual {v0, v2, v9}, Lblf;->a(Ljava/lang/String;I)V
 
-    .line 90
     :cond_5
     iget-object v0, v4, Lfqs;->d:Ljava/util/Map;
 
@@ -718,21 +642,18 @@
 
     move-result-object v0
 
-    .line 91
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_6
 
-    .line 93
     iget-object v0, v4, Lfqs;->d:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
-    .line 94
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
@@ -743,14 +664,12 @@
 
     invoke-static {v0}, Ljiy;->b(Z)V
 
-    .line 97
     iget-object v0, v4, Lfqs;->d:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
-    .line 98
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
@@ -767,10 +686,8 @@
 
     check-cast v0, Lkey;
 
-    .line 99
     invoke-virtual {v3, v0, v8}, Lfrc;->a(Lkey;Ljava/lang/String;)V
 
-    .line 100
     :cond_6
     add-int/lit8 v0, v1, 0x1
 
@@ -778,7 +695,6 @@
 
     goto/16 :goto_5
 
-    .line 73
     :catch_3
     move-exception v0
 
@@ -787,7 +703,6 @@
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_2
 
-    .line 74
     :catchall_2
     move-exception v1
 
@@ -805,22 +720,18 @@
     :try_end_e
     .catch Ljava/io/IOException; {:try_start_e .. :try_end_e} :catch_4
 
-    .line 75
     :catch_4
     move-exception v0
 
-    .line 76
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 101
     :cond_7
     return-void
 
-    .line 74
     :catchall_3
     move-exception v0
 
@@ -828,7 +739,6 @@
 
     goto :goto_6
 
-    .line 28
     :catchall_4
     move-exception v0
 
@@ -836,7 +746,6 @@
 
     goto/16 :goto_3
 
-    .line 26
     :catchall_5
     move-exception v0
 

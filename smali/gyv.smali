@@ -11,8 +11,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgyv;->a:Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -25,69 +23,55 @@
 .method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lgyv;->a:Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;
 
     sget v1, Lep;->by:I
 
     invoke-static {v0, v1}, Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;->a(Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;I)I
 
-    .line 8
     iget-object v0, p0, Lgyv;->a:Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;->setVisibility(I)V
 
-    .line 9
     return-void
 .end method
 
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lgyv;->a:Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;
 
     sget v1, Lep;->by:I
 
     invoke-static {v0, v1}, Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;->a(Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;I)I
 
-    .line 11
     iget-object v0, p0, Lgyv;->a:Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;->setVisibility(I)V
 
-    .line 12
     return-void
 .end method
 
 .method public final onAnimationStart(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgyv;->a:Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;
 
     iget-object v1, p0, Lgyv;->a:Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;
 
-    .line 3
     iget v1, v1, Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;->b:I
 
-    .line 4
     iput v1, v0, Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;->g:I
 
-    .line 5
     iget-object v0, p0, Lgyv;->a:Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;
 
     sget v1, Lep;->bA:I
 
     invoke-static {v0, v1}, Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;->a(Lcom/google/android/apps/camera/ui/views/DeterministicProgressOverlay;I)I
 
-    .line 6
     return-void
 .end method

@@ -11,8 +11,6 @@
 .method public constructor <init>(Lifr;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ligg;->a:Lifr;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
@@ -25,25 +23,21 @@
 .method public final run()V
     .locals 15
 
-    .prologue
     const/4 v14, 0x3
 
     const/4 v8, 0x1
 
     const/4 v2, 0x0
 
-    .line 2
     const-string v0, "AudioEncoder"
 
     const-string v1, "starting"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
     iget-object v9, p0, Ligg;->a:Lifr;
 
-    .line 5
     iget-object v0, v9, Lifr;->c:Landroid/media/AudioRecord;
 
     invoke-virtual {v0}, Landroid/media/AudioRecord;->getRecordingState()I
@@ -52,7 +46,6 @@
 
     if-eq v0, v14, :cond_1
 
-    .line 6
     const-string v0, "AudioEncoder"
 
     const-string v1, "Receive stopping signal from AudioRecord."
@@ -61,21 +54,17 @@
 
     move v7, v8
 
-    .line 29
     :goto_0
     if-eqz v7, :cond_0
 
-    .line 30
     const-string v0, "AudioEncoder"
 
     const-string v1, "stopping"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 31
     return-void
 
-    .line 10
     :cond_1
     iget-object v0, v9, Lifr;->d:Landroid/media/MediaCodec;
 
@@ -85,29 +74,24 @@
 
     move-result v1
 
-    .line 11
     if-ltz v1, :cond_6
 
-    .line 12
     iget-object v0, v9, Lifr;->d:Landroid/media/MediaCodec;
 
     invoke-virtual {v0, v1}, Landroid/media/MediaCodec;->getInputBuffer(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 13
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v3
 
-    .line 14
     iget-object v4, v9, Lifr;->c:Landroid/media/AudioRecord;
 
     invoke-virtual {v4, v0, v3}, Landroid/media/AudioRecord;->read(Ljava/nio/ByteBuffer;I)I
 
     move-result v3
 
-    .line 15
     const-wide/32 v4, 0xf4240
 
     iget v0, v9, Lifr;->b:I
@@ -132,13 +116,10 @@
 
     div-long v10, v4, v6
 
-    .line 16
     if-gtz v3, :cond_5
 
-    .line 17
     if-gez v3, :cond_3
 
-    .line 18
     const-string v0, "AudioEncoder"
 
     const/16 v4, 0x34
@@ -163,13 +144,11 @@
 
     invoke-static {v0, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 22
     :goto_1
     const/4 v6, 0x4
 
     move v7, v8
 
-    .line 24
     :goto_2
     iget-wide v4, v9, Lifr;->h:J
 
@@ -179,7 +158,6 @@
 
     if-gez v0, :cond_2
 
-    .line 25
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
@@ -190,7 +168,6 @@
 
     iput-wide v4, v9, Lifr;->h:J
 
-    .line 26
     :cond_2
     iget-object v0, v9, Lifr;->d:Landroid/media/MediaCodec;
 
@@ -198,7 +175,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/media/MediaCodec;->queueInputBuffer(IIIJI)V
 
-    .line 27
     iget-wide v0, v9, Lifr;->h:J
 
     add-long/2addr v0, v10
@@ -207,7 +183,6 @@
 
     goto :goto_0
 
-    .line 19
     :cond_3
     iget-object v0, v9, Lifr;->c:Landroid/media/AudioRecord;
 
@@ -217,7 +192,6 @@
 
     if-ne v0, v14, :cond_4
 
-    .line 20
     const-string v0, "AudioEncoder"
 
     const-string v4, "Read buffer from AudioRecord, but buffer size is 0."
@@ -226,7 +200,6 @@
 
     goto :goto_1
 
-    .line 21
     :cond_4
     const-string v0, "AudioEncoder"
 

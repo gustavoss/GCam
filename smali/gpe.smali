@@ -34,8 +34,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 25
     const-string v0, "SysUiFlag"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -50,38 +48,30 @@
 .method public constructor <init>(Libo;Landroid/view/Window;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lgpe;->c:Z
 
-    .line 3
     const/16 v0, 0x705
 
     iput v0, p0, Lgpe;->d:I
 
-    .line 4
     new-instance v0, Lgpg;
 
     invoke-direct {v0, p0}, Lgpg;-><init>(Lgpe;)V
 
     iput-object v0, p0, Lgpe;->e:Landroid/view/View$OnSystemUiVisibilityChangeListener;
 
-    .line 5
     iput-object p2, p0, Lgpe;->b:Landroid/view/Window;
 
-    .line 6
     new-instance v0, Lgpf;
 
     invoke-direct {v0, p0, p2}, Lgpf;-><init>(Lgpe;Landroid/view/Window;)V
 
     invoke-virtual {p1, v0}, Libo;->execute(Ljava/lang/Runnable;)V
 
-    .line 7
     return-void
 .end method
 
@@ -90,8 +80,6 @@
 .method public final a()V
     .locals 4
 
-    .prologue
-    .line 8
     iget v0, p0, Lgpe;->d:I
 
     const/4 v1, -0x1
@@ -102,7 +90,6 @@
 
     if-nez v0, :cond_0
 
-    .line 9
     sget-object v0, Lgpe;->a:Ljava/lang/String;
 
     iget v1, p0, Lgpe;->d:I
@@ -129,7 +116,6 @@
 
     invoke-static {v0, v1}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     iget-object v0, p0, Lgpe;->b:Landroid/view/Window;
 
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
@@ -140,7 +126,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
-    .line 11
     :cond_0
     return-void
 .end method
@@ -148,8 +133,6 @@
 .method public final a(I)V
     .locals 3
 
-    .prologue
-    .line 12
     sget-object v0, Lgpe;->a:Ljava/lang/String;
 
     const/16 v1, 0x21
@@ -174,10 +157,8 @@
 
     invoke-static {v0, v1}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
     iput p1, p0, Lgpe;->d:I
 
-    .line 14
     iget-object v0, p0, Lgpe;->b:Landroid/view/Window;
 
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
@@ -186,15 +167,12 @@
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
-    .line 15
     return-void
 .end method
 
 .method public final a(Z)V
     .locals 3
 
-    .prologue
-    .line 21
     sget-object v0, Lgpe;->a:Ljava/lang/String;
 
     const/16 v1, 0x1c
@@ -219,17 +197,14 @@
 
     invoke-static {v0, v1}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 22
     iget-boolean v0, p0, Lgpe;->c:Z
 
     if-nez v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 23
     invoke-virtual {p0}, Lgpe;->a()V
 
-    .line 24
     :cond_0
     return-void
 .end method
@@ -237,28 +212,21 @@
 .method public final g()V
     .locals 1
 
-    .prologue
-    .line 16
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lgpe;->c:Z
 
-    .line 17
     invoke-virtual {p0}, Lgpe;->a()V
 
-    .line 18
     return-void
 .end method
 
 .method public final h()V
     .locals 1
 
-    .prologue
-    .line 19
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lgpe;->c:Z
 
-    .line 20
     return-void
 .end method

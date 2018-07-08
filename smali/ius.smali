@@ -16,8 +16,6 @@
 .method constructor <init>(Liur;Liqd;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lius;->b:Liur;
 
     iput-object p2, p0, Lius;->a:Liqd;
@@ -32,8 +30,6 @@
 .method public final call()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 2
     :try_start_0
     iget-object v0, p0, Lius;->a:Liqd;
 
@@ -52,17 +48,14 @@
 
     return-object v0
 
-    .line 3
     :catch_0
     move-exception v0
 
     throw v0
 
-    .line 4
     :catch_1
     move-exception v0
 
-    .line 5
     new-instance v1, Ljava/lang/Error;
 
     invoke-direct {v1, v0}, Ljava/lang/Error;-><init>(Ljava/lang/Throwable;)V

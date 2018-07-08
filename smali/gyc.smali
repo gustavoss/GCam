@@ -27,8 +27,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 9
     const-string v0, "CameraUiInflater"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -43,14 +41,10 @@
 .method public constructor <init>(Landroid/app/Activity;Lhcu;Landroid/view/Window;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgyc;->d:Landroid/app/Activity;
 
-    .line 3
     iget-object v0, p0, Lgyc;->d:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
@@ -59,21 +53,16 @@
 
     iput-object v0, p0, Lgyc;->e:Landroid/view/LayoutInflater;
 
-    .line 4
     iput-object p2, p0, Lgyc;->c:Lhcu;
 
-    .line 5
     iput-object p3, p0, Lgyc;->b:Landroid/view/Window;
 
-    .line 6
     return-void
 .end method
 
 .method public static a(Landroid/view/Window;)V
     .locals 2
 
-    .prologue
-    .line 7
     invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object v0
@@ -82,6 +71,5 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
-    .line 8
     return-void
 .end method

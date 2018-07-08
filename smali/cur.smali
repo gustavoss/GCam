@@ -14,8 +14,6 @@
 .method constructor <init>(Lcty;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcur;->a:Lcty;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,18 +26,13 @@
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcur;->a:Lcty;
 
-    .line 3
     iget-object v0, v0, Lcty;->o:Lawj;
 
-    .line 4
     const-string v1, "CaptureModule: Out of storage space on device."
 
     invoke-virtual {v0, v1}, Lawj;->a(Ljava/lang/String;)V
 
-    .line 5
     return-void
 .end method

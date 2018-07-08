@@ -29,22 +29,17 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lggh;->a:Lgga;
 
     iget-object v1, p0, Lggh;->b:Landroid/net/Uri;
 
-    .line 2
     iget-object v2, v0, Lgga;->s:Lgiy;
 
     invoke-virtual {v2, v1}, Lgiy;->a(Landroid/net/Uri;)V
 
-    .line 3
     const/4 v1, 0x0
 
     iput-object v1, v0, Lgga;->z:Lkey;
 
-    .line 4
     return-void
 .end method

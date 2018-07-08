@@ -14,14 +14,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lbvt;->a:Landroid/content/Context;
 
-    .line 4
     return-void
 .end method
 
@@ -30,8 +26,6 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -42,8 +36,6 @@
 .method public final b()Landroid/view/WindowManager;
     .locals 2
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lbvt;->a:Landroid/content/Context;
 
     const-string v1, "window"

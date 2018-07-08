@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,8 +18,6 @@
 .method private constructor <init>([Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     invoke-static {p1}, Lhqx;->b(Ljava/lang/Object;)Ljava/lang/Object;
@@ -40,12 +36,8 @@
 .method public constructor <init>([Ljava/lang/String;B)V
     .locals 0
 
-    .prologue
-    .line 7
-    .line 8
     invoke-direct {p0, p1}, Lhev;-><init>([Ljava/lang/String;)V
 
-    .line 9
     return-void
 .end method
 
@@ -54,22 +46,16 @@
 .method public final synthetic a(Landroid/view/Surface;Landroid/util/Size;)Lhfi;
     .locals 1
 
-    .prologue
-    .line 3
-    .line 4
     new-instance v0, Lhew;
 
     invoke-direct {v0, p1}, Lhew;-><init>(Landroid/view/Surface;)V
 
-    .line 5
     return-object v0
 .end method
 
 .method public final a(Landroid/content/Context;)Lhfk;
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Lhex;
 
     invoke-direct {v0, p1}, Lhex;-><init>(Landroid/content/Context;)V

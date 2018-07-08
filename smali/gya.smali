@@ -23,14 +23,10 @@
 .method constructor <init>(Lhct;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgya;->g:Lhct;
 
-    .line 3
     const v0, 0x7f0e00eb
 
     invoke-virtual {p1, v0}, Lhct;->a(I)Ljava/lang/Object;
@@ -41,7 +37,6 @@
 
     iput-object v0, p0, Lgya;->a:Landroid/widget/FrameLayout;
 
-    .line 4
     const v0, 0x7f0e00fb
 
     invoke-virtual {p1, v0}, Lhct;->a(I)Ljava/lang/Object;
@@ -52,7 +47,6 @@
 
     iput-object v0, p0, Lgya;->d:Landroid/widget/FrameLayout;
 
-    .line 5
     const v0, 0x7f0e0115
 
     invoke-virtual {p1, v0}, Lhct;->a(I)Ljava/lang/Object;
@@ -63,7 +57,6 @@
 
     iput-object v0, p0, Lgya;->b:Landroid/widget/FrameLayout;
 
-    .line 6
     const v0, 0x7f0e0108
 
     invoke-virtual {p1, v0}, Lhct;->a(I)Ljava/lang/Object;
@@ -74,7 +67,6 @@
 
     iput-object v0, p0, Lgya;->c:Landroid/widget/FrameLayout;
 
-    .line 7
     const v0, 0x7f0e00b9
 
     invoke-virtual {p1, v0}, Lhct;->a(I)Ljava/lang/Object;
@@ -85,7 +77,6 @@
 
     iput-object v0, p0, Lgya;->f:Landroid/view/View;
 
-    .line 8
     const v0, 0x7f0e00f5
 
     invoke-virtual {p1, v0}, Lhct;->a(I)Ljava/lang/Object;
@@ -96,6 +87,5 @@
 
     iput-object v0, p0, Lgya;->e:Landroid/widget/FrameLayout;
 
-    .line 9
     return-void
 .end method

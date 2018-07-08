@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,20 +20,16 @@
 .method public a(C)Ljyj;
     .locals 1
 
-    .prologue
-    .line 2
     int-to-byte v0, p1
 
     invoke-virtual {p0, v0}, Ljyj;->b(B)Ljyj;
 
-    .line 3
     ushr-int/lit8 v0, p1, 0x8
 
     int-to-byte v0, v0
 
     invoke-virtual {p0, v0}, Ljyj;->b(B)Ljyj;
 
-    .line 4
     return-object p0
 .end method
 

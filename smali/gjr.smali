@@ -18,20 +18,14 @@
 .method constructor <init>(Lgjv;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgjr;->a:Lgjv;
 
-    .line 3
     iput-object p2, p0, Lgjr;->b:Ljava/lang/String;
 
-    .line 4
     iput-object p3, p0, Lgjr;->c:Ljava/lang/String;
 
-    .line 5
     return-void
 .end method
 
@@ -40,30 +34,22 @@
 .method public final a(Lihw;Ljava/util/concurrent/Executor;)Lihr;
     .locals 2
 
-    .prologue
-    .line 6
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     invoke-static {p2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     new-instance v0, Lgjs;
 
-    .line 9
     invoke-direct {v0, p0, p1, p2}, Lgjs;-><init>(Lgjr;Lihw;Ljava/util/concurrent/Executor;)V
 
-    .line 11
     iget-object v1, p0, Lgjr;->a:Lgjv;
 
     invoke-virtual {v1, v0}, Lgjv;->a(Lgjo;)V
 
-    .line 12
     iget-object v1, p0, Lgjr;->c:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lgjs;->a(Ljava/lang/String;)V
 
-    .line 13
     return-object v0
 .end method
 
@@ -73,16 +59,12 @@
 .method public final c()Ljava/lang/Object;
     .locals 5
 
-    .prologue
-    .line 14
     invoke-virtual {p0}, Lgjr;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 15
     if-nez v0, :cond_0
 
-    .line 16
     new-instance v0, Ljava/lang/NullPointerException;
 
     iget-object v1, p0, Lgjr;->b:Ljava/lang/String;
@@ -141,7 +123,6 @@
 
     throw v0
 
-    .line 17
     :cond_0
     return-object v0
 .end method

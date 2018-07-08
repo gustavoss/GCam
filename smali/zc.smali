@@ -18,8 +18,6 @@
 .method constructor <init>(Lzb;Landroid/os/Handler;Laan;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lzc;->c:Lzb;
 
     iput-object p2, p0, Lzc;->a:Landroid/os/Handler;
@@ -36,16 +34,12 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lzc;->c:Lzb;
 
     iget-object v0, v0, Lzb;->a:Lyv;
 
-    .line 3
     iget-object v0, v0, Lyv;->d:Lzm;
 
-    .line 4
     const/16 v1, 0x6b
 
     iget-object v2, p0, Lzc;->a:Landroid/os/Handler;
@@ -64,6 +58,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 5
     return-void
 .end method

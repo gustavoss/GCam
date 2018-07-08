@@ -13,15 +13,12 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 18
     new-instance v0, Lwn;
 
     invoke-direct {v0}, Lwn;-><init>()V
 
     sput-object v0, Lwl;->a:Lwn;
 
-    .line 19
     const/4 v0, 0x0
 
     sput-object v0, Lwl;->b:Lwo;
@@ -32,8 +29,6 @@
 .method public static a()Lwk;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Lxa;
 
     invoke-direct {v0}, Lxa;-><init>()V
@@ -44,42 +39,30 @@
 .method public static a(Ljava/lang/String;)Lwk;
     .locals 1
 
-    .prologue
-    .line 2
-    .line 3
     invoke-static {p0}, Lxc;->a(Ljava/lang/Object;)Lwk;
 
     move-result-object v0
 
-    .line 4
     return-object v0
 .end method
 
 .method public static a([B)Lwk;
     .locals 1
 
-    .prologue
-    .line 5
-    .line 6
     invoke-static {p0}, Lxc;->a(Ljava/lang/Object;)Lwk;
 
     move-result-object v0
 
-    .line 7
     return-object v0
 .end method
 
 .method public static a(Lwk;Lxr;)[B
     .locals 2
 
-    .prologue
-    .line 8
-    .line 9
     instance-of v0, p0, Lxa;
 
     if-nez v0, :cond_0
 
-    .line 10
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "The serializing service works onlywith the XMPMeta implementation of this library"
@@ -88,7 +71,6 @@
 
     throw v0
 
-    .line 11
     :cond_0
     check-cast p0, Lxa;
 
@@ -102,8 +84,6 @@
 .method public static declared-synchronized b()Lwo;
     .locals 3
 
-    .prologue
-    .line 12
     const-class v1, Lwl;
 
     monitor-enter v1
@@ -115,7 +95,6 @@
 
     if-nez v0, :cond_0
 
-    .line 13
     :try_start_1
     new-instance v0, Lwm;
 
@@ -126,7 +105,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 17
     :cond_0
     :goto_0
     :try_start_2
@@ -138,11 +116,9 @@
 
     return-object v0
 
-    .line 15
     :catch_0
     move-exception v0
 
-    .line 16
     :try_start_3
     sget-object v2, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -152,7 +128,6 @@
 
     goto :goto_0
 
-    .line 12
     :catchall_0
     move-exception v0
 

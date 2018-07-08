@@ -16,17 +16,12 @@
 .method public constructor <init>(Lahf;Laea;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lamb;->a:Lahf;
 
-    .line 3
     iput-object p2, p0, Lamb;->b:Laea;
 
-    .line 4
     return-void
 .end method
 
@@ -35,8 +30,6 @@
 .method public final a(Lady;)Lado;
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lamb;->b:Laea;
 
     invoke-interface {v0, p1}, Laea;->a(Lady;)Lado;
@@ -49,11 +42,8 @@
 .method public final synthetic a(Ljava/lang/Object;Ljava/io/File;Lady;)Z
     .locals 4
 
-    .prologue
-    .line 6
     check-cast p1, Lagw;
 
-    .line 7
     iget-object v1, p0, Lamb;->b:Laea;
 
     new-instance v2, Lame;
@@ -76,6 +66,5 @@
 
     move-result v0
 
-    .line 8
     return v0
 .end method

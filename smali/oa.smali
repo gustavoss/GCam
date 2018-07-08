@@ -73,40 +73,30 @@
 .method public constructor <init>(Lny;Landroid/view/Menu;)V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 1
     iput-object p1, p0, Loa;->F:Lny;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object v0, p0, Loa;->D:Landroid/content/res/ColorStateList;
 
-    .line 3
     iput-object v0, p0, Loa;->E:Landroid/graphics/PorterDuff$Mode;
 
-    .line 4
     iput-object p2, p0, Loa;->a:Landroid/view/Menu;
 
-    .line 5
     invoke-virtual {p0}, Loa;->a()V
 
-    .line 6
     return-void
 .end method
 
 .method static a(Ljava/lang/String;)C
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 14
     if-nez p0, :cond_0
 
-    .line 16
     :goto_0
     return v0
 
@@ -123,8 +113,6 @@
 .method final a(Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 77
     :try_start_0
     iget-object v0, p0, Loa;->F:Lny;
 
@@ -138,32 +126,26 @@
 
     move-result-object v0
 
-    .line 78
     invoke-virtual {v0, p2}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v0
 
-    .line 79
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
-    .line 80
     invoke-virtual {v0, p3}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    .line 83
     :goto_0
     return-object v0
 
-    .line 81
     :catch_0
     move-exception v0
 
-    .line 82
     const-string v1, "SupportMenuInflater"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -182,7 +164,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 83
     const/4 v0, 0x0
 
     goto :goto_0
@@ -191,42 +172,32 @@
 .method public final a()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 7
     iput v0, p0, Loa;->b:I
 
-    .line 8
     iput v0, p0, Loa;->c:I
 
-    .line 9
     iput v0, p0, Loa;->d:I
 
-    .line 10
     iput v0, p0, Loa;->e:I
 
-    .line 11
     iput-boolean v1, p0, Loa;->f:Z
 
-    .line 12
     iput-boolean v1, p0, Loa;->g:Z
 
-    .line 13
     return-void
 .end method
 
 .method final a(Landroid/view/MenuItem;)V
     .locals 8
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v2, 0x1
 
-    .line 17
     iget-boolean v0, p0, Loa;->s:Z
 
     invoke-interface {p1, v0}, Landroid/view/MenuItem;->setChecked(Z)Landroid/view/MenuItem;
@@ -235,14 +206,12 @@
 
     iget-boolean v1, p0, Loa;->t:Z
 
-    .line 18
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     move-result-object v0
 
     iget-boolean v1, p0, Loa;->u:Z
 
-    .line 19
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
     move-result-object v1
@@ -253,7 +222,6 @@
 
     move v0, v2
 
-    .line 20
     :goto_0
     invoke-interface {v1, v0}, Landroid/view/MenuItem;->setCheckable(Z)Landroid/view/MenuItem;
 
@@ -261,33 +229,27 @@
 
     iget-object v1, p0, Loa;->l:Ljava/lang/CharSequence;
 
-    .line 21
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setTitleCondensed(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
 
     move-result-object v0
 
     iget v1, p0, Loa;->m:I
 
-    .line 22
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
 
-    .line 23
     iget v0, p0, Loa;->v:I
 
     if-ltz v0, :cond_0
 
-    .line 24
     iget v0, p0, Loa;->v:I
 
     invoke-interface {p1, v0}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
-    .line 25
     :cond_0
     iget-object v0, p0, Loa;->z:Ljava/lang/String;
 
     if-eqz v0, :cond_5
 
-    .line 26
     iget-object v0, p0, Loa;->F:Lny;
 
     iget-object v0, v0, Lny;->c:Landroid/content/Context;
@@ -298,7 +260,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 27
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "The android:onClick attribute cannot be used within a restricted context"
@@ -310,35 +271,28 @@
     :cond_1
     move v0, v3
 
-    .line 19
     goto :goto_0
 
-    .line 28
     :cond_2
     new-instance v1, Lnz;
 
     iget-object v4, p0, Loa;->F:Lny;
 
-    .line 30
     iget-object v0, v4, Lny;->d:Ljava/lang/Object;
 
     if-nez v0, :cond_4
 
-    .line 31
     iget-object v0, v4, Lny;->c:Landroid/content/Context;
 
-    .line 32
     :goto_1
     instance-of v5, v0, Landroid/app/Activity;
 
     if-nez v5, :cond_3
 
-    .line 33
     instance-of v5, v0, Landroid/content/ContextWrapper;
 
     if-eqz v5, :cond_3
 
-    .line 34
     check-cast v0, Landroid/content/ContextWrapper;
 
     invoke-virtual {v0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
@@ -347,23 +301,18 @@
 
     goto :goto_1
 
-    .line 36
     :cond_3
     iput-object v0, v4, Lny;->d:Ljava/lang/Object;
 
-    .line 37
     :cond_4
     iget-object v0, v4, Lny;->d:Ljava/lang/Object;
 
-    .line 38
     iget-object v4, p0, Loa;->z:Ljava/lang/String;
 
     invoke-direct {v1, v0, v4}, Lnz;-><init>(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 39
     invoke-interface {p1, v1}, Landroid/view/MenuItem;->setOnMenuItemClickListener(Landroid/view/MenuItem$OnMenuItemClickListener;)Landroid/view/MenuItem;
 
-    .line 40
     :cond_5
     iget v0, p0, Loa;->r:I
 
@@ -371,26 +320,22 @@
 
     if-lt v0, v1, :cond_6
 
-    .line 41
     instance-of v0, p1, Lox;
 
     if-eqz v0, :cond_b
 
     move-object v0, p1
 
-    .line 42
     check-cast v0, Lox;
 
     invoke-virtual {v0, v2}, Lox;->a(Z)V
 
-    .line 53
     :cond_6
     :goto_2
     iget-object v0, p0, Loa;->x:Ljava/lang/String;
 
     if-eqz v0, :cond_e
 
-    .line 54
     iget-object v0, p0, Loa;->x:Ljava/lang/String;
 
     sget-object v1, Lny;->a:[Ljava/lang/Class;
@@ -405,86 +350,70 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 55
     invoke-interface {p1, v0}, Landroid/view/MenuItem;->setActionView(Landroid/view/View;)Landroid/view/MenuItem;
 
-    .line 57
     :goto_3
     iget v0, p0, Loa;->w:I
 
     if-lez v0, :cond_7
 
-    .line 58
     if-nez v2, :cond_d
 
-    .line 59
     iget v0, p0, Loa;->w:I
 
     invoke-interface {p1, v0}, Landroid/view/MenuItem;->setActionView(I)Landroid/view/MenuItem;
 
-    .line 62
     :cond_7
     :goto_4
     iget-object v0, p0, Loa;->A:Lhj;
 
     if-eqz v0, :cond_8
 
-    .line 63
     iget-object v0, p0, Loa;->A:Lhj;
 
     invoke-static {p1, v0}, Lho;->a(Landroid/view/MenuItem;Lhj;)Landroid/view/MenuItem;
 
-    .line 64
     :cond_8
     iget-object v0, p0, Loa;->B:Ljava/lang/CharSequence;
 
     invoke-static {p1, v0}, Lho;->a(Landroid/view/MenuItem;Ljava/lang/CharSequence;)V
 
-    .line 65
     iget-object v0, p0, Loa;->C:Ljava/lang/CharSequence;
 
     invoke-static {p1, v0}, Lho;->b(Landroid/view/MenuItem;Ljava/lang/CharSequence;)V
 
-    .line 66
     iget-char v0, p0, Loa;->n:C
 
     iget v1, p0, Loa;->o:I
 
     invoke-static {p1, v0, v1}, Lho;->b(Landroid/view/MenuItem;CI)V
 
-    .line 67
     iget-char v0, p0, Loa;->p:C
 
     iget v1, p0, Loa;->q:I
 
     invoke-static {p1, v0, v1}, Lho;->a(Landroid/view/MenuItem;CI)V
 
-    .line 68
     iget-object v0, p0, Loa;->E:Landroid/graphics/PorterDuff$Mode;
 
     if-eqz v0, :cond_9
 
-    .line 69
     iget-object v0, p0, Loa;->E:Landroid/graphics/PorterDuff$Mode;
 
     invoke-static {p1, v0}, Lho;->a(Landroid/view/MenuItem;Landroid/graphics/PorterDuff$Mode;)V
 
-    .line 70
     :cond_9
     iget-object v0, p0, Loa;->D:Landroid/content/res/ColorStateList;
 
     if-eqz v0, :cond_a
 
-    .line 71
     iget-object v0, p0, Loa;->D:Landroid/content/res/ColorStateList;
 
     invoke-static {p1, v0}, Lho;->a(Landroid/view/MenuItem;Landroid/content/res/ColorStateList;)V
 
-    .line 72
     :cond_a
     return-void
 
-    .line 43
     :cond_b
     instance-of v0, p1, Loy;
 
@@ -492,16 +421,13 @@
 
     move-object v0, p1
 
-    .line 44
     check-cast v0, Loy;
 
-    .line 45
     :try_start_0
     iget-object v1, v0, Loy;->e:Ljava/lang/reflect/Method;
 
     if-nez v1, :cond_c
 
-    .line 46
     iget-object v1, v0, Loy;->d:Ljava/lang/Object;
 
     check-cast v1, Lfg;
@@ -522,14 +448,12 @@
 
     aput-object v7, v5, v6
 
-    .line 47
     invoke-virtual {v1, v4, v5}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
 
     iput-object v1, v0, Loy;->e:Ljava/lang/reflect/Method;
 
-    .line 48
     :cond_c
     iget-object v1, v0, Loy;->e:Ljava/lang/reflect/Method;
 
@@ -555,11 +479,9 @@
 
     goto/16 :goto_2
 
-    .line 50
     :catch_0
     move-exception v0
 
-    .line 51
     const-string v1, "MenuItemWrapper"
 
     const-string v4, "Error while calling setExclusiveCheckable"
@@ -568,7 +490,6 @@
 
     goto/16 :goto_2
 
-    .line 61
     :cond_d
     const-string v0, "SupportMenuInflater"
 
@@ -587,13 +508,10 @@
 .method public final b()Landroid/view/SubMenu;
     .locals 5
 
-    .prologue
-    .line 73
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Loa;->h:Z
 
-    .line 74
     iget-object v0, p0, Loa;->a:Landroid/view/Menu;
 
     iget v1, p0, Loa;->b:I
@@ -608,13 +526,11 @@
 
     move-result-object v0
 
-    .line 75
     invoke-interface {v0}, Landroid/view/SubMenu;->getItem()Landroid/view/MenuItem;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Loa;->a(Landroid/view/MenuItem;)V
 
-    .line 76
     return-object v0
 .end method

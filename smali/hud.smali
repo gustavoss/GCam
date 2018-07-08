@@ -39,8 +39,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/HashSet;
@@ -71,10 +69,8 @@
 
     iput v0, p0, Lhud;->k:I
 
-    .line 3
     sget-object v0, Lhlq;->a:Lhlq;
 
-    .line 4
     iput-object v0, p0, Lhud;->m:Lhlq;
 
     sget-object v0, Lhrx;->a:Lhly;
@@ -123,8 +119,6 @@
 .method public constructor <init>(Landroid/content/Context;Lhmd;Lhme;)V
     .locals 1
 
-    .prologue
-    .line 5
     invoke-direct {p0, p1}, Lhud;-><init>(Landroid/content/Context;)V
 
     const-string v0, "Must provide a connected listener"
@@ -151,8 +145,6 @@
 .method public final a()Lhng;
     .locals 7
 
-    .prologue
-    .line 9
     sget-object v6, Lhsc;->a:Lhsc;
 
     iget-object v0, p0, Lhud;->j:Ljava/util/Map;
@@ -198,8 +190,6 @@
 .method public final a(Lhnh;)Lhud;
     .locals 2
 
-    .prologue
-    .line 6
     const-string v0, "Api must not be null"
 
     invoke-static {p1, v0}, Lhqx;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -210,12 +200,10 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 8
     iget-object v1, p0, Lhud;->e:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
@@ -230,8 +218,6 @@
 .method public final a(Lhxd;)V
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -242,8 +228,6 @@
 .method public final b()Lhmc;
     .locals 19
 
-    .prologue
-    .line 10
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lhud;->j:Ljava/util/Map;
@@ -261,15 +245,12 @@
 
     invoke-static {v1, v2}, Lhqx;->b(ZLjava/lang/Object;)V
 
-    .line 11
     invoke-virtual/range {p0 .. p0}, Lhud;->a()Lhng;
 
     move-result-object v4
 
-    .line 12
     iget-object v9, v4, Lhng;->d:Ljava/util/Map;
 
-    .line 13
     new-instance v12, Lgh;
 
     invoke-direct {v12}, Lgh;-><init>()V
@@ -354,12 +335,10 @@
 
     move-object v7, v6
 
-    .line 14
     invoke-virtual/range {v1 .. v7}, Lhly;->a(Landroid/content/Context;Landroid/os/Looper;Lhng;Ljava/lang/Object;Lhmd;Lhme;)Lhma;
 
     move-result-object v1
 
-    .line 15
     invoke-virtual {v8}, Lhnh;->b()Lhqx;
 
     move-result-object v2
@@ -368,19 +347,16 @@
 
     goto :goto_1
 
-    .line 10
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 13
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_2
 
-    .line 15
     :cond_2
     invoke-interface {v15}, Ljava/util/Map;->values()Ljava/util/Collection;
 
@@ -430,17 +406,13 @@
 
     invoke-direct/range {v5 .. v18}, Lhuu;-><init>(Landroid/content/Context;Ljava/util/concurrent/locks/Lock;Landroid/os/Looper;Lhng;Lhlq;Lhly;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/util/Map;IILjava/util/ArrayList;)V
 
-    .line 17
     sget-object v2, Lhmc;->a:Ljava/util/Set;
 
-    .line 18
     monitor-enter v2
 
-    .line 19
     :try_start_0
     sget-object v1, Lhmc;->a:Ljava/util/Set;
 
-    .line 20
     invoke-interface {v1, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     monitor-exit v2
@@ -453,14 +425,12 @@
 
     if-ltz v1, :cond_3
 
-    .line 21
     new-instance v1, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v1}, Ljava/lang/NoSuchMethodError;-><init>()V
 
     throw v1
 
-    .line 20
     :catchall_0
     move-exception v1
 
@@ -471,7 +441,6 @@
 
     throw v1
 
-    .line 22
     :cond_3
     return-object v5
 .end method

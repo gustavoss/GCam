@@ -16,8 +16,6 @@
 .method public constructor <init>(Lhmc;B)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Lhvy;-><init>(Lhmc;)V
 
     return-void
@@ -28,9 +26,6 @@
 .method public final synthetic a(Lcom/google/android/gms/common/api/Status;)Lhmh;
     .locals 0
 
-    .prologue
-    .line 2
-    .line 3
     return-object p1
 .end method
 

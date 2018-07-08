@@ -16,8 +16,6 @@
 .method constructor <init>(Lsb;Ljava/util/ArrayList;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lsd;->b:Lsb;
 
     iput-object p2, p0, Lsd;->a:Ljava/util/ArrayList;
@@ -32,12 +30,10 @@
 .method public final run()V
     .locals 13
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v12, 0x0
 
-    .line 2
     iget-object v0, p0, Lsd;->a:Ljava/util/ArrayList;
 
     check-cast v0, Ljava/util/ArrayList;
@@ -61,51 +57,40 @@
 
     check-cast v1, Lsk;
 
-    .line 3
     iget-object v7, p0, Lsd;->b:Lsb;
 
-    .line 4
     iget-object v2, v1, Lsk;->a:Lve;
 
-    .line 5
     if-nez v2, :cond_2
 
     move-object v2, v3
 
-    .line 6
     :goto_1
     iget-object v4, v1, Lsk;->b:Lve;
 
-    .line 7
     if-eqz v4, :cond_3
 
     iget-object v4, v4, Lve;->a:Landroid/view/View;
 
-    .line 8
     :goto_2
     if-eqz v2, :cond_0
 
-    .line 9
     invoke-virtual {v2}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v8
 
-    .line 10
     iget-wide v10, v7, Lui;->l:J
 
-    .line 11
     invoke-virtual {v8, v10, v11}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v8
 
-    .line 12
     iget-object v9, v7, Lsb;->g:Ljava/util/ArrayList;
 
     iget-object v10, v1, Lsk;->a:Lve;
 
     invoke-virtual {v9, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 13
     iget v9, v1, Lsk;->e:I
 
     iget v10, v1, Lsk;->c:I
@@ -116,7 +101,6 @@
 
     invoke-virtual {v8, v9}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
 
-    .line 14
     iget v9, v1, Lsk;->f:I
 
     iget v10, v1, Lsk;->d:I
@@ -127,7 +111,6 @@
 
     invoke-virtual {v8, v9}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
 
-    .line 15
     invoke-virtual {v8, v12}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v9
@@ -140,26 +123,21 @@
 
     move-result-object v2
 
-    .line 16
     invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 17
     :cond_0
     if-eqz v4, :cond_1
 
-    .line 18
     invoke-virtual {v4}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v2
 
-    .line 19
     iget-object v8, v7, Lsb;->g:Ljava/util/ArrayList;
 
     iget-object v9, v1, Lsk;->b:Lve;
 
     invoke-virtual {v8, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 20
     invoke-virtual {v2, v12}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v8
@@ -168,17 +146,14 @@
 
     move-result-object v8
 
-    .line 21
     iget-wide v10, v7, Lui;->l:J
 
-    .line 22
     invoke-virtual {v8, v10, v11}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v8
 
     const/high16 v9, 0x3f800000    # 1.0f
 
-    .line 23
     invoke-virtual {v8, v9}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v8
@@ -191,16 +166,13 @@
 
     move-result-object v1
 
-    .line 24
     invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     :cond_1
     move v2, v5
 
-    .line 25
     goto :goto_0
 
-    .line 5
     :cond_2
     iget-object v2, v2, Lve;->a:Landroid/view/View;
 
@@ -209,16 +181,13 @@
     :cond_3
     move-object v4, v3
 
-    .line 7
     goto :goto_2
 
-    .line 26
     :cond_4
     iget-object v0, p0, Lsd;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 27
     iget-object v0, p0, Lsd;->b:Lsb;
 
     iget-object v0, v0, Lsb;->c:Ljava/util/ArrayList;
@@ -227,6 +196,5 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 28
     return-void
 .end method

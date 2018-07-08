@@ -13,8 +13,6 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
-    .line 20
     invoke-static {}, Lcom/google/googlex/gcam/GcamModuleJNI;->new_InterleavedReadViewU8__SWIG_3()J
 
     move-result-wide v0
@@ -23,15 +21,12 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/InterleavedReadViewU8;-><init>(JZ)V
 
-    .line 21
     return-void
 .end method
 
 .method public constructor <init>(IIILcom/google/googlex/gcam/SWIGTYPE_p_unsigned_char;J)V
     .locals 9
 
-    .prologue
-    .line 22
     invoke-static {p4}, Lcom/google/googlex/gcam/SWIGTYPE_p_unsigned_char;->getCPtr(Lcom/google/googlex/gcam/SWIGTYPE_p_unsigned_char;)J
 
     move-result-wide v4
@@ -52,32 +47,24 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/InterleavedReadViewU8;-><init>(JZ)V
 
-    .line 23
     return-void
 .end method
 
 .method protected constructor <init>(JZ)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-boolean p3, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCMemOwn:Z
 
-    .line 3
     iput-wide p1, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
 
-    .line 4
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/googlex/gcam/InterleavedReadViewU8;)V
     .locals 3
 
-    .prologue
-    .line 14
     invoke-static {p1}, Lcom/google/googlex/gcam/InterleavedReadViewU8;->getCPtr(Lcom/google/googlex/gcam/InterleavedReadViewU8;)J
 
     move-result-wide v0
@@ -90,15 +77,12 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/InterleavedReadViewU8;-><init>(JZ)V
 
-    .line 15
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/googlex/gcam/InterleavedReadViewU8;IIII)V
     .locals 7
 
-    .prologue
-    .line 18
     invoke-static {p1}, Lcom/google/googlex/gcam/InterleavedReadViewU8;->getCPtr(Lcom/google/googlex/gcam/InterleavedReadViewU8;)J
 
     move-result-wide v0
@@ -121,15 +105,12 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/InterleavedReadViewU8;-><init>(JZ)V
 
-    .line 19
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/googlex/gcam/InterleavedReadViewU8;IIIIII)V
     .locals 9
 
-    .prologue
-    .line 16
     invoke-static {p1}, Lcom/google/googlex/gcam/InterleavedReadViewU8;->getCPtr(Lcom/google/googlex/gcam/InterleavedReadViewU8;)J
 
     move-result-wide v0
@@ -156,15 +137,12 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/InterleavedReadViewU8;-><init>(JZ)V
 
-    .line 17
     return-void
 .end method
 
 .method protected static getCPtr(Lcom/google/googlex/gcam/InterleavedReadViewU8;)J
     .locals 2
 
-    .prologue
-    .line 5
     if-nez p0, :cond_0
 
     const-wide/16 v0, 0x0
@@ -181,8 +159,6 @@
 .method public static sample_layout()I
     .locals 1
 
-    .prologue
-    .line 27
     invoke-static {}, Lcom/google/googlex/gcam/GcamModuleJNI;->InterleavedReadViewU8_sample_layout()I
 
     move-result v0
@@ -195,8 +171,6 @@
 .method public Empty()Z
     .locals 2
 
-    .prologue
-    .line 29
     iget-wide v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InterleavedReadViewU8_Empty(JLcom/google/googlex/gcam/InterleavedReadViewU8;)Z
@@ -209,8 +183,6 @@
 .method public FastCrop(IIII)V
     .locals 7
 
-    .prologue
-    .line 42
     iget-wide v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
 
     move-object v2, p0
@@ -225,15 +197,12 @@
 
     invoke-static/range {v0 .. v6}, Lcom/google/googlex/gcam/GcamModuleJNI;->InterleavedReadViewU8_FastCrop__SWIG_1(JLcom/google/googlex/gcam/InterleavedReadViewU8;IIII)V
 
-    .line 43
     return-void
 .end method
 
 .method public FastCrop(IIIIII)V
     .locals 9
 
-    .prologue
-    .line 40
     iget-wide v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
 
     move-object v2, p0
@@ -252,15 +221,12 @@
 
     invoke-static/range {v0 .. v8}, Lcom/google/googlex/gcam/GcamModuleJNI;->InterleavedReadViewU8_FastCrop__SWIG_0(JLcom/google/googlex/gcam/InterleavedReadViewU8;IIIIII)V
 
-    .line 41
     return-void
 .end method
 
 .method public SamplesAreCompact()Z
     .locals 2
 
-    .prologue
-    .line 44
     iget-wide v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InterleavedReadViewU8_SamplesAreCompact(JLcom/google/googlex/gcam/InterleavedReadViewU8;)Z
@@ -273,8 +239,6 @@
 .method public at(III)S
     .locals 6
 
-    .prologue
-    .line 28
     iget-wide v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
 
     move-object v2, p0
@@ -295,15 +259,12 @@
 .method public base_pointer()Lcom/google/googlex/gcam/SWIGTYPE_p_unsigned_char;
     .locals 4
 
-    .prologue
-    .line 30
     iget-wide v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InterleavedReadViewU8_base_pointer(JLcom/google/googlex/gcam/InterleavedReadViewU8;)J
 
     move-result-wide v2
 
-    .line 31
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -328,8 +289,6 @@
 .method public c_stride()J
     .locals 2
 
-    .prologue
-    .line 34
     iget-wide v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InterleavedReadViewU8_c_stride(JLcom/google/googlex/gcam/InterleavedReadViewU8;)J
@@ -342,10 +301,8 @@
 .method public declared-synchronized delete()V
     .locals 4
 
-    .prologue
     const-wide/16 v2, 0x0
 
-    .line 8
     monitor-enter p0
 
     :try_start_0
@@ -355,22 +312,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 9
     iget-boolean v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCMemOwn:Z
 
     if-eqz v0, :cond_0
 
-    .line 10
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCMemOwn:Z
 
-    .line 11
     iget-wide v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
 
     invoke-static {v0, v1}, Lcom/google/googlex/gcam/GcamModuleJNI;->delete_InterleavedReadViewU8(J)V
 
-    .line 12
     :cond_0
     const-wide/16 v0, 0x0
 
@@ -378,13 +331,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 8
     :catchall_0
     move-exception v0
 
@@ -396,19 +347,14 @@
 .method protected finalize()V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Lcom/google/googlex/gcam/InterleavedReadViewU8;->delete()V
 
-    .line 7
     return-void
 .end method
 
 .method public height()I
     .locals 2
 
-    .prologue
-    .line 25
     iget-wide v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InterleavedReadViewU8_height(JLcom/google/googlex/gcam/InterleavedReadViewU8;)I
@@ -421,8 +367,6 @@
 .method public num_channels()I
     .locals 2
 
-    .prologue
-    .line 26
     iget-wide v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InterleavedReadViewU8_num_channels(JLcom/google/googlex/gcam/InterleavedReadViewU8;)I
@@ -435,8 +379,6 @@
 .method public row_padding()I
     .locals 2
 
-    .prologue
-    .line 36
     iget-wide v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InterleavedReadViewU8_row_padding(JLcom/google/googlex/gcam/InterleavedReadViewU8;)I
@@ -449,8 +391,6 @@
 .method public sample_array_size()J
     .locals 2
 
-    .prologue
-    .line 37
     iget-wide v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InterleavedReadViewU8_sample_array_size(JLcom/google/googlex/gcam/InterleavedReadViewU8;)J
@@ -463,8 +403,6 @@
 .method public sample_iterator()Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__TImageSampleIteratorT_unsigned_char_const_gcam__kPixelContiguous_t;
     .locals 4
 
-    .prologue
-    .line 38
     new-instance v0, Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__TImageSampleIteratorT_unsigned_char_const_gcam__kPixelContiguous_t;
 
     iget-wide v2, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
@@ -483,8 +421,6 @@
 .method public sample_iterator(I)Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__TImageSampleIteratorT_unsigned_char_const_gcam__kPixelContiguous_t;
     .locals 4
 
-    .prologue
-    .line 39
     new-instance v0, Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__TImageSampleIteratorT_unsigned_char_const_gcam__kPixelContiguous_t;
 
     iget-wide v2, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
@@ -503,8 +439,6 @@
 .method public sizeof_sample_type()J
     .locals 2
 
-    .prologue
-    .line 35
     iget-wide v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InterleavedReadViewU8_sizeof_sample_type(JLcom/google/googlex/gcam/InterleavedReadViewU8;)J
@@ -517,8 +451,6 @@
 .method public width()I
     .locals 2
 
-    .prologue
-    .line 24
     iget-wide v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InterleavedReadViewU8_width(JLcom/google/googlex/gcam/InterleavedReadViewU8;)I
@@ -531,8 +463,6 @@
 .method public x_stride()J
     .locals 2
 
-    .prologue
-    .line 32
     iget-wide v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InterleavedReadViewU8_x_stride(JLcom/google/googlex/gcam/InterleavedReadViewU8;)J
@@ -545,8 +475,6 @@
 .method public y_stride()J
     .locals 2
 
-    .prologue
-    .line 33
     iget-wide v0, p0, Lcom/google/googlex/gcam/InterleavedReadViewU8;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InterleavedReadViewU8_y_stride(JLcom/google/googlex/gcam/InterleavedReadViewU8;)J

@@ -10,33 +10,25 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     return-void
 .end method
 
 .method public static a(Landroid/content/Context;Ljava/io/InputStream;)Landroid/graphics/Typeface;
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 16
     invoke-static {p0}, Lsv;->a(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 17
     if-nez v1, :cond_0
 
-    .line 24
     :goto_0
     return-object v0
 
-    .line 19
     :cond_0
     :try_start_0
     invoke-static {v1, p1}, Lsv;->a(Ljava/io/File;Ljava/io/InputStream;)Z
@@ -48,12 +40,10 @@
 
     if-nez v2, :cond_1
 
-    .line 20
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
     goto :goto_0
 
-    .line 21
     :cond_1
     :try_start_1
     invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -67,12 +57,10 @@
 
     move-result-object v0
 
-    .line 22
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
     goto :goto_0
 
-    .line 24
     :catch_0
     move-exception v2
 
@@ -91,8 +79,6 @@
 .method public static a(Landroid/content/Context;Lff;)Landroid/view/Menu;
     .locals 1
 
-    .prologue
-    .line 119
     new-instance v0, Lpm;
 
     invoke-direct {v0, p0, p1}, Lpm;-><init>(Landroid/content/Context;Lff;)V
@@ -103,8 +89,6 @@
 .method public static a(Landroid/content/Context;Lfg;)Landroid/view/MenuItem;
     .locals 1
 
-    .prologue
-    .line 120
     new-instance v0, Lpd;
 
     invoke-direct {v0, p0, p1}, Lpd;-><init>(Landroid/content/Context;Lfg;)V
@@ -115,31 +99,25 @@
 .method static a(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;Landroid/view/View;)Landroid/view/inputmethod/InputConnection;
     .locals 2
 
-    .prologue
-    .line 121
     if-eqz p0, :cond_0
 
     iget-object v0, p1, Landroid/view/inputmethod/EditorInfo;->hintText:Ljava/lang/CharSequence;
 
     if-nez v0, :cond_0
 
-    .line 122
     invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    .line 123
     :goto_0
     instance-of v1, v0, Landroid/view/View;
 
     if-eqz v1, :cond_0
 
-    .line 124
     instance-of v1, v0, Lwf;
 
     if-eqz v1, :cond_1
 
-    .line 125
     check-cast v0, Lwf;
 
     invoke-interface {v0}, Lwf;->a()Ljava/lang/CharSequence;
@@ -148,11 +126,9 @@
 
     iput-object v0, p1, Landroid/view/inputmethod/EditorInfo;->hintText:Ljava/lang/CharSequence;
 
-    .line 128
     :cond_0
     return-object p0
 
-    .line 127
     :cond_1
     invoke-interface {v0}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
 
@@ -164,8 +140,6 @@
 .method public static a([Lfq;I)Lfq;
     .locals 2
 
-    .prologue
-    .line 15
     new-instance v0, Lqw;
 
     const/4 v1, 0x0
@@ -184,8 +158,6 @@
 .method private static a(Landroid/content/Context;)Ljava/io/File;
     .locals 5
 
-    .prologue
-    .line 58
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, ".font"
@@ -224,7 +196,6 @@
 
     move-result-object v2
 
-    .line 59
     const/4 v0, 0x0
 
     move v1, v0
@@ -234,7 +205,6 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 60
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
@@ -259,7 +229,6 @@
 
     invoke-direct {v0, v3, v4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 61
     :try_start_0
     invoke-virtual {v0}, Ljava/io/File;->createNewFile()Z
     :try_end_0
@@ -269,14 +238,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 66
     :goto_1
     return-object v0
 
     :catch_0
     move-exception v0
 
-    .line 65
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -284,7 +251,6 @@
 
     goto :goto_0
 
-    .line 66
     :cond_1
     const/4 v0, 0x0
 
@@ -294,12 +260,10 @@
 .method private static a([Ljava/lang/Object;ILfd;)Ljava/lang/Object;
     .locals 11
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 3
     and-int/lit8 v0, p1, 0x1
 
     if-nez v0, :cond_1
@@ -308,7 +272,6 @@
 
     move v8, v0
 
-    .line 4
     :goto_0
     and-int/lit8 v0, p1, 0x2
 
@@ -316,14 +279,11 @@
 
     move v0, v1
 
-    .line 5
     :goto_1
     const/4 v5, 0x0
 
-    .line 6
     const v3, 0x7fffffff
 
-    .line 7
     array-length v9, p0
 
     move v7, v2
@@ -333,7 +293,6 @@
 
     aget-object v6, p0, v7
 
-    .line 8
     invoke-interface {p2, v6}, Lfd;->a(Ljava/lang/Object;)I
 
     move-result v4
@@ -346,7 +305,6 @@
 
     shl-int/lit8 v10, v4, 0x1
 
-    .line 9
     invoke-interface {p2, v6}, Lfd;->b(Ljava/lang/Object;)Z
 
     move-result v4
@@ -358,7 +316,6 @@
     :goto_3
     add-int/2addr v4, v10
 
-    .line 10
     if-eqz v5, :cond_0
 
     if-le v3, v4, :cond_5
@@ -368,7 +325,6 @@
 
     move-object v4, v6
 
-    .line 13
     :goto_4
     add-int/lit8 v5, v7, 0x1
 
@@ -378,7 +334,6 @@
 
     goto :goto_2
 
-    .line 3
     :cond_1
     const/16 v0, 0x2bc
 
@@ -389,16 +344,13 @@
     :cond_2
     move v0, v2
 
-    .line 4
     goto :goto_1
 
     :cond_3
     move v4, v1
 
-    .line 9
     goto :goto_3
 
-    .line 14
     :cond_4
     return-object v5
 
@@ -411,15 +363,12 @@
 .method public static a(Landroid/content/Context;Landroid/os/CancellationSignal;Landroid/net/Uri;)Ljava/nio/ByteBuffer;
     .locals 10
 
-    .prologue
     const/4 v6, 0x0
 
-    .line 67
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 68
     :try_start_0
     const-string v1, "r"
 
@@ -427,10 +376,8 @@
 
     move-result-object v7
 
-    .line 69
     if-nez v7, :cond_2
 
-    .line 70
     if-eqz v7, :cond_0
 
     invoke-virtual {v7}, Landroid/os/ParcelFileDescriptor;->close()V
@@ -440,12 +387,10 @@
     :cond_0
     move-object v0, v6
 
-    .line 81
     :cond_1
     :goto_0
     return-object v0
 
-    .line 71
     :cond_2
     :try_start_1
     new-instance v8, Ljava/io/FileInputStream;
@@ -459,18 +404,15 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 72
     :try_start_2
     invoke-virtual {v8}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v0
 
-    .line 73
     invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->size()J
 
     move-result-wide v4
 
-    .line 74
     sget-object v1, Ljava/nio/channels/FileChannel$MapMode;->READ_ONLY:Ljava/nio/channels/FileChannel$MapMode;
 
     const-wide/16 v2, 0x0
@@ -482,14 +424,12 @@
 
     move-result-object v0
 
-    .line 75
     :try_start_3
     invoke-virtual {v8}, Ljava/io/FileInputStream;->close()V
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_2
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 76
     if-eqz v7, :cond_1
 
     :try_start_4
@@ -499,7 +439,6 @@
 
     goto :goto_0
 
-    .line 81
     :catch_0
     move-exception v0
 
@@ -507,7 +446,6 @@
 
     goto :goto_0
 
-    .line 77
     :catch_1
     move-exception v0
 
@@ -516,7 +454,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 78
     :catchall_0
     move-exception v1
 
@@ -542,7 +479,6 @@
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_2
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 79
     :catch_2
     move-exception v0
 
@@ -551,7 +487,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 80
     :catchall_1
     move-exception v1
 
@@ -579,7 +514,6 @@
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_0
 
-    .line 78
     :catch_3
     move-exception v2
 
@@ -588,7 +522,6 @@
 
     goto :goto_2
 
-    .line 80
     :catchall_2
     move-exception v0
 
@@ -596,7 +529,6 @@
 
     goto :goto_3
 
-    .line 78
     :cond_4
     invoke-virtual {v8}, Ljava/io/FileInputStream;->close()V
     :try_end_b
@@ -605,7 +537,6 @@
 
     goto :goto_2
 
-    .line 80
     :catch_4
     move-exception v2
 
@@ -621,7 +552,6 @@
 
     goto :goto_4
 
-    .line 78
     :catchall_3
     move-exception v0
 
@@ -633,28 +563,21 @@
 .method public static a(Landroid/graphics/drawable/Drawable;IIII)V
     .locals 0
 
-    .prologue
-    .line 100
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->setHotspotBounds(IIII)V
 
-    .line 101
     return-void
 .end method
 
 .method private static a(Ljava/io/Closeable;)V
     .locals 1
 
-    .prologue
-    .line 95
     if-eqz p0, :cond_0
 
-    .line 96
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 99
     :cond_0
     :goto_0
     return-void
@@ -668,20 +591,15 @@
 .method public static a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
     .locals 2
 
-    .prologue
-    .line 104
     if-nez p0, :cond_0
 
-    .line 105
     const-string v0, "null"
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 115
     :goto_0
     return-void
 
-    .line 106
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -691,7 +609,6 @@
 
     move-result-object v0
 
-    .line 107
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -700,7 +617,6 @@
 
     if-gtz v1, :cond_2
 
-    .line 108
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -710,33 +626,27 @@
 
     move-result-object v0
 
-    .line 109
     const/16 v1, 0x2e
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result v1
 
-    .line 110
     if-lez v1, :cond_2
 
-    .line 111
     add-int/lit8 v1, v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 112
     :cond_2
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 113
     const/16 v0, 0x7b
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 114
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v0
@@ -755,8 +665,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 102
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1b
@@ -777,24 +685,19 @@
 .method private static a(Ljava/io/File;Landroid/content/res/Resources;I)Z
     .locals 2
 
-    .prologue
-    .line 91
     const/4 v1, 0x0
 
-    .line 92
     :try_start_0
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
     move-result-object v1
 
-    .line 93
     invoke-static {p0, v1}, Lsv;->a(Ljava/io/File;Ljava/io/InputStream;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v0
 
-    .line 94
     invoke-static {v1}, Lsv;->a(Ljava/io/Closeable;)V
 
     return v0
@@ -810,13 +713,10 @@
 .method private static a(Ljava/io/File;Ljava/io/InputStream;)Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 82
     const/4 v3, 0x0
 
-    .line 83
     :try_start_0
     new-instance v2, Ljava/io/FileOutputStream;
 
@@ -827,13 +727,11 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 84
     const/16 v1, 0x400
 
     :try_start_1
     new-array v1, v1, [B
 
-    .line 85
     :goto_0
     invoke-virtual {p1, v1}, Ljava/io/InputStream;->read([B)I
 
@@ -843,7 +741,6 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 86
     const/4 v4, 0x0
 
     invoke-virtual {v2, v1, v4, v3}, Ljava/io/FileOutputStream;->write([BII)V
@@ -853,11 +750,9 @@
 
     goto :goto_0
 
-    .line 88
     :catch_0
     move-exception v1
 
-    .line 89
     :goto_1
     :try_start_2
     const-string v3, "TypefaceCompatUtil"
@@ -884,13 +779,11 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 90
     invoke-static {v2}, Lsv;->a(Ljava/io/Closeable;)V
 
     :goto_2
     return v0
 
-    .line 87
     :cond_0
     invoke-static {v2}, Lsv;->a(Ljava/io/Closeable;)V
 
@@ -898,7 +791,6 @@
 
     goto :goto_2
 
-    .line 90
     :catchall_0
     move-exception v0
 
@@ -914,7 +806,6 @@
 
     goto :goto_3
 
-    .line 88
     :catch_1
     move-exception v1
 
@@ -926,18 +817,14 @@
 .method public static b(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 116
     if-nez p0, :cond_0
 
-    .line 117
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 118
     :cond_0
     return-object p0
 .end method
@@ -945,8 +832,6 @@
 .method public static b()Z
     .locals 2
 
-    .prologue
-    .line 103
     sget-object v0, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
 
     const-string v1, "P"
@@ -963,22 +848,17 @@
 .method public a(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 49
     invoke-static {p1}, Lsv;->a(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 50
     if-nez v1, :cond_0
 
-    .line 57
     :goto_0
     return-object v0
 
-    .line 52
     :cond_0
     :try_start_0
     invoke-static {v1, p2, p3}, Lsv;->a(Ljava/io/File;Landroid/content/res/Resources;I)Z
@@ -990,12 +870,10 @@
 
     if-nez v2, :cond_1
 
-    .line 53
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
     goto :goto_0
 
-    .line 54
     :cond_1
     :try_start_1
     invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -1009,12 +887,10 @@
 
     move-result-object v0
 
-    .line 55
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
     goto :goto_0
 
-    .line 57
     :catch_0
     move-exception v2
 
@@ -1033,12 +909,8 @@
 .method public a(Landroid/content/Context;Les;Landroid/content/res/Resources;I)Landroid/graphics/Typeface;
     .locals 3
 
-    .prologue
-    .line 36
-    .line 38
     iget-object v0, p2, Les;->a:[Let;
 
-    .line 39
     new-instance v1, Lqy;
 
     const/4 v2, 0x0
@@ -1051,24 +923,18 @@
 
     check-cast v0, Let;
 
-    .line 41
     if-nez v0, :cond_0
 
-    .line 42
     const/4 v0, 0x0
 
-    .line 48
     :goto_0
     return-object v0
 
-    .line 44
     :cond_0
     iget v1, v0, Let;->f:I
 
-    .line 46
     iget-object v0, v0, Let;->a:Ljava/lang/String;
 
-    .line 48
     invoke-static {p1, p3, v1, v0, p4}, Ley;->a(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
 
     move-result-object v0
@@ -1079,34 +945,27 @@
 .method public a(Landroid/content/Context;[Lfq;I)Landroid/graphics/Typeface;
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 25
     array-length v1, p2
 
     if-gtz v1, :cond_0
 
-    .line 35
     :goto_0
     return-object v0
 
-    .line 27
     :cond_0
     invoke-static {p2, p3}, Lsv;->a([Lfq;I)Lfq;
 
     move-result-object v1
 
-    .line 29
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    .line 30
     iget-object v1, v1, Lfq;->a:Landroid/net/Uri;
 
-    .line 31
     invoke-virtual {v2, v1}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1114,7 +973,6 @@
 
     move-result-object v1
 
-    .line 32
     :try_start_1
     invoke-static {p1, v1}, Lsv;->a(Landroid/content/Context;Ljava/io/InputStream;)Landroid/graphics/Typeface;
     :try_end_1
@@ -1123,12 +981,10 @@
 
     move-result-object v0
 
-    .line 33
     invoke-static {v1}, Lsv;->a(Ljava/io/Closeable;)V
 
     goto :goto_0
 
-    .line 35
     :catch_0
     move-exception v1
 

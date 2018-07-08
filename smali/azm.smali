@@ -29,18 +29,14 @@
 .method public final run()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 1
     iget-object v0, p0, Lazm;->a:Lazl;
 
     iget-object v1, p0, Lazm;->b:Layr;
 
-    .line 2
     iput-boolean v2, v0, Lazl;->b:Z
 
-    .line 4
     iget-object v0, v1, Layr;->b:Lida;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -49,7 +45,6 @@
 
     invoke-interface {v0, v2}, Lida;->a(Ljava/lang/Object;)V
 
-    .line 5
     iget-object v0, v1, Layr;->a:Lida;
 
     const/16 v1, 0xf
@@ -60,6 +55,5 @@
 
     invoke-interface {v0, v1}, Lida;->a(Ljava/lang/Object;)V
 
-    .line 6
     return-void
 .end method

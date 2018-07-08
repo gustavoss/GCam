@@ -33,20 +33,16 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v2, p0, Levk;->a:Liii;
 
     iget-object v0, p0, Levk;->b:Lkhp;
 
     iget-object v1, p0, Levk;->c:Lkhp;
 
-    .line 2
     const-string v3, "MICRO_GyroModule#runGyroStartupTask"
 
     invoke-interface {v2, v3}, Liii;->a(Ljava/lang/String;)V
 
-    .line 3
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -69,9 +65,7 @@
 
     invoke-virtual {v0, v1}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 4
     invoke-interface {v2}, Liii;->a()V
 
-    .line 5
     return-void
 .end method

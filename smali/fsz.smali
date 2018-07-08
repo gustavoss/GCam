@@ -16,8 +16,6 @@
 .method constructor <init>(Lfsu;F)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfsz;->b:Lfsu;
 
     iput p2, p0, Lfsz;->a:F
@@ -32,14 +30,10 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lfsz;->b:Lfsu;
 
-    .line 3
     iget-object v0, v0, Lfsu;->b:Lgfy;
 
-    .line 4
     iget v1, p0, Lfsz;->a:F
 
     const/high16 v2, 0x42c80000    # 100.0f
@@ -50,6 +44,5 @@
 
     invoke-interface {v0, v1}, Lgfy;->a(I)V
 
-    .line 5
     return-void
 .end method

@@ -16,8 +16,6 @@
 .method constructor <init>(Ldlz;Lkfk;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldmd;->b:Ldlz;
 
     iput-object p2, p0, Ldmd;->a:Lkfk;
@@ -32,60 +30,45 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 2
     sget-object v0, Ldlz;->a:Ljava/lang/String;
 
-    .line 3
     const-string v1, "secondary onSuccess"
 
     invoke-static {v0, v1}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Ldmd;->b:Ldlz;
 
     iget-object v1, p0, Ldmd;->a:Lkfk;
 
-    .line 5
     invoke-virtual {v0, p1, v1}, Ldlz;->b(Ljava/lang/Object;Lkfk;)V
 
-    .line 6
     return-void
 .end method
 
 .method public final a(Ljava/lang/Throwable;)V
     .locals 4
 
-    .prologue
-    .line 7
     iget-object v0, p0, Ldmd;->b:Ldlz;
 
-    .line 8
     iget-object v1, v0, Ldlz;->b:Ljava/lang/Object;
 
-    .line 9
     monitor-enter v1
 
-    .line 10
     :try_start_0
     iget-object v0, p0, Ldmd;->b:Ldlz;
 
-    .line 11
     iget v2, v0, Ldlz;->d:I
 
     add-int/lit8 v2, v2, -0x1
 
     iput v2, v0, Ldlz;->d:I
 
-    .line 12
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     sget-object v0, Ldlz;->a:Ljava/lang/String;
 
-    .line 14
     iget-object v1, p0, Ldmd;->b:Ldlz;
 
     invoke-static {v1}, Ldlz;->b(Ldlz;)Lfnv;
@@ -132,24 +115,18 @@
 
     invoke-static {v0, v1, p1}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 15
     iget-object v0, p0, Ldmd;->a:Lkfk;
 
     invoke-virtual {v0, p1}, Lkcy;->a(Ljava/lang/Throwable;)Z
 
-    .line 16
     iget-object v0, p0, Ldmd;->b:Ldlz;
 
-    .line 17
     iget-object v0, v0, Ldlz;->c:Lidr;
 
-    .line 18
     invoke-virtual {v0}, Lidr;->a()V
 
-    .line 19
     return-void
 
-    .line 12
     :catchall_0
     move-exception v0
 

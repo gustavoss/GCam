@@ -15,8 +15,6 @@
 .method constructor <init>(Liun;)V
     .locals 0
 
-    .prologue
-    .line 2
     iput-object p1, p0, Liuw;->a:Liun;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,30 +27,22 @@
 .method public final synthetic a(Ljava/lang/Object;Ljava/util/concurrent/Executor;)Lirp;
     .locals 2
 
-    .prologue
-    .line 3
-    .line 4
     iget-object v0, p0, Liuw;->a:Liun;
 
-    .line 5
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Liun;->b:Z
 
-    .line 6
     invoke-static {}, Liun;->g()Lirs;
 
     move-result-object v0
 
-    .line 7
     return-object v0
 .end method
 
 .method public final a(Livx;)V
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V

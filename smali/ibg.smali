@@ -13,8 +13,6 @@
 .method public constructor <init>(Ldif;Liep;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Libg;->b:Ldif;
 
     iput-object p2, p0, Libg;->a:Liep;

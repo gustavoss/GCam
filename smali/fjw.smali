@@ -7,11 +7,8 @@
 .method constructor <init>(JLkey;Ljava/util/List;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lfjy;-><init>(JLkey;Ljava/util/List;)V
 
-    .line 2
     return-void
 .end method
 
@@ -20,8 +17,6 @@
 .method public final declared-synchronized close()V
     .locals 1
 
-    .prologue
-    .line 41
     monitor-enter p0
 
     :try_start_0
@@ -29,12 +24,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 42
     monitor-exit p0
 
     return-void
 
-    .line 41
     :catchall_0
     move-exception v0
 
@@ -46,21 +39,15 @@
 .method public final g()Lfie;
     .locals 6
 
-    .prologue
-    .line 3
-    .line 4
     iget-object v1, p0, Lfjy;->b:Ljava/lang/Object;
 
-    .line 5
     monitor-enter v1
 
-    .line 6
     :try_start_0
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 7
     invoke-virtual {p0}, Lfjw;->b()Ljava/util/LinkedList;
 
     move-result-object v0
@@ -83,23 +70,18 @@
 
     check-cast v0, Liob;
 
-    .line 8
     check-cast v0, Limd;
 
-    .line 9
     invoke-virtual {v0}, Limd;->i()Liob;
 
     move-result-object v0
 
-    .line 10
     if-eqz v0, :cond_0
 
-    .line 11
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 16
     :catchall_0
     move-exception v0
 
@@ -109,7 +91,6 @@
 
     throw v0
 
-    .line 13
     :cond_1
     :try_start_1
     new-instance v0, Lfjy;
@@ -118,10 +99,8 @@
 
     move-result-wide v4
 
-    .line 14
     iget-object v3, p0, Lfjy;->a:Lkey;
 
-    .line 15
     invoke-direct {v0, v4, v5, v3, v2}, Lfjy;-><init>(JLkey;Ljava/util/List;)V
 
     monitor-exit v1
@@ -134,17 +113,12 @@
 .method public final h()Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 17
-    .line 19
     iget-object v3, p0, Lfjy;->b:Ljava/lang/Object;
 
-    .line 20
     monitor-enter v3
 
-    .line 21
     :try_start_0
     invoke-virtual {p0}, Lfjw;->b()Ljava/util/LinkedList;
 
@@ -169,10 +143,8 @@
 
     check-cast v0, Liob;
 
-    .line 22
     check-cast v0, Limd;
 
-    .line 23
     invoke-virtual {v0}, Limd;->h()I
 
     move-result v0
@@ -186,23 +158,18 @@
 
     move v2, v0
 
-    .line 24
     goto :goto_0
 
-    .line 23
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 25
     :cond_1
     monitor-exit v3
 
-    .line 26
     return v2
 
-    .line 25
     :catchall_0
     move-exception v0
 
@@ -216,23 +183,17 @@
 .method public final i()Z
     .locals 5
 
-    .prologue
-    .line 27
     const/4 v0, 0x1
 
-    .line 29
     iget-object v2, p0, Lfjy;->b:Ljava/lang/Object;
 
-    .line 30
     monitor-enter v2
 
-    .line 31
     :try_start_0
     invoke-virtual {p0}, Lfjw;->b()Ljava/util/LinkedList;
 
     move-result-object v3
 
-    .line 32
     invoke-virtual {p0}, Lfjw;->b()Ljava/util/LinkedList;
 
     move-result-object v1
@@ -256,10 +217,8 @@
 
     check-cast v0, Liob;
 
-    .line 33
     check-cast v0, Limd;
 
-    .line 34
     invoke-virtual {v0}, Limd;->j()Z
 
     move-result v0
@@ -268,29 +227,22 @@
 
     move v1, v0
 
-    .line 35
     goto :goto_0
 
-    .line 36
     :cond_0
     invoke-virtual {v3}, Ljava/util/LinkedList;->clear()V
 
-    .line 37
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 38
     if-eqz v1, :cond_1
 
-    .line 39
     invoke-super {p0}, Lfjy;->close()V
 
-    .line 40
     :cond_1
     return v1
 
-    .line 37
     :catchall_0
     move-exception v0
 

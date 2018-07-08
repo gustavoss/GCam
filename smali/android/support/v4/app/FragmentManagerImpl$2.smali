@@ -17,8 +17,6 @@
 .method constructor <init>(Landroid/support/v4/app/FragmentManagerImpl;Landroid/view/animation/Animation$AnimationListener;Landroid/view/ViewGroup;Landroid/view/View;Landroid/support/v4/app/Fragment;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Landroid/support/v4/app/FragmentManagerImpl$2;->this$0:Landroid/support/v4/app/FragmentManagerImpl;
 
     iput-object p3, p0, Landroid/support/v4/app/FragmentManagerImpl$2;->val$container:Landroid/view/ViewGroup;
@@ -39,11 +37,8 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 2
 
-    .prologue
-    .line 2
     invoke-super {p0, p1}, Landroid/support/v4/app/FragmentManagerImpl$AnimationListenerWrapper;->onAnimationEnd(Landroid/view/animation/Animation;)V
 
-    .line 3
     iget-object v0, p0, Landroid/support/v4/app/FragmentManagerImpl$2;->val$container:Landroid/view/ViewGroup;
 
     new-instance v1, Landroid/support/v4/app/FragmentManagerImpl$2$1;
@@ -52,6 +47,5 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->post(Ljava/lang/Runnable;)Z
 
-    .line 4
     return-void
 .end method

@@ -22,8 +22,6 @@
 .method public constructor <init>(Liws;Landroid/media/Image;II)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Liwo;->e:Liws;
 
     iput-object p2, p0, Liwo;->b:Landroid/media/Image;
@@ -34,10 +32,8 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     sget-object v0, Ljrk;->a:Ljrk;
 
-    .line 4
     iput-object v0, p0, Liwo;->a:Ljrw;
 
     return-void
@@ -48,20 +44,14 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 13
-    .line 14
     iget-object v0, p0, Liwo;->b:Landroid/media/Image;
 
-    .line 15
     return-object v0
 .end method
 
 .method public final a(J)V
     .locals 1
 
-    .prologue
-    .line 5
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -72,17 +62,14 @@
 
     iput-object v0, p0, Liwo;->a:Ljrw;
 
-    .line 6
     return-void
 .end method
 
 .method public final close()V
     .locals 7
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 7
     iget-object v0, p0, Liwo;->a:Ljrw;
 
     invoke-virtual {v0}, Ljrw;->a()Z
@@ -93,7 +80,6 @@
 
     iget v3, p0, Liwo;->c:I
 
-    .line 8
     :goto_0
     iget-object v0, p0, Liwo;->a:Ljrw;
 
@@ -113,25 +99,20 @@
 
     move-result-wide v4
 
-    .line 9
     iget-object v0, p0, Liwo;->e:Liws;
 
-    .line 10
     iget-object v0, v0, Liws;->a:Landroid/media/MediaCodec;
 
-    .line 11
     iget v1, p0, Liwo;->d:I
 
     move v6, v2
 
     invoke-virtual/range {v0 .. v6}, Landroid/media/MediaCodec;->queueInputBuffer(IIIJI)V
 
-    .line 12
     return-void
 
     :cond_0
     move v3, v2
 
-    .line 7
     goto :goto_0
 .end method

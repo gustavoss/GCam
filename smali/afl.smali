@@ -45,18 +45,14 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lafl;->a:Ljava/util/List;
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -71,36 +67,28 @@
 .method final a()Ljava/util/List;
     .locals 8
 
-    .prologue
-    .line 24
     iget-boolean v0, p0, Lafl;->l:Z
 
     if-nez v0, :cond_1
 
-    .line 25
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lafl;->l:Z
 
-    .line 26
     iget-object v0, p0, Lafl;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 27
     iget-object v0, p0, Lafl;->c:Lacl;
 
-    .line 28
     iget-object v0, v0, Lacl;->d:Laco;
 
-    .line 29
     iget-object v1, p0, Lafl;->d:Ljava/lang/Object;
 
     invoke-virtual {v0, v1}, Laco;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 30
     const/4 v0, 0x0
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -112,14 +100,12 @@
     :goto_0
     if-ge v1, v3, :cond_1
 
-    .line 31
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Laki;
 
-    .line 32
     iget-object v4, p0, Lafl;->d:Ljava/lang/Object;
 
     iget v5, p0, Lafl;->e:I
@@ -128,20 +114,16 @@
 
     iget-object v7, p0, Lafl;->i:Lady;
 
-    .line 33
     invoke-interface {v0, v4, v5, v6, v7}, Laki;->a(Ljava/lang/Object;IILady;)Lakj;
 
     move-result-object v0
 
-    .line 34
     if-eqz v0, :cond_0
 
-    .line 35
     iget-object v4, p0, Lafl;->a:Ljava/util/List;
 
     invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 36
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -149,7 +131,6 @@
 
     goto :goto_0
 
-    .line 37
     :cond_1
     iget-object v0, p0, Lafl;->a:Ljava/util/List;
 
@@ -159,14 +140,10 @@
 .method final a(Ljava/io/File;)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 21
     iget-object v0, p0, Lafl;->c:Lacl;
 
-    .line 22
     iget-object v0, v0, Lacl;->d:Laco;
 
-    .line 23
     invoke-virtual {v0, p1}, Laco;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -177,8 +154,6 @@
 .method final a(Ljava/lang/Class;)Z
     .locals 1
 
-    .prologue
-    .line 4
     invoke-virtual {p0, p1}, Lafl;->b(Ljava/lang/Class;)Lagt;
 
     move-result-object v0
@@ -199,14 +174,10 @@
 .method final b(Ljava/lang/Class;)Lagt;
     .locals 3
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lafl;->c:Lacl;
 
-    .line 6
     iget-object v0, v0, Lacl;->d:Laco;
 
-    .line 7
     iget-object v1, p0, Lafl;->g:Ljava/lang/Class;
 
     iget-object v2, p0, Lafl;->k:Ljava/lang/Class;
@@ -221,30 +192,24 @@
 .method final b()Ljava/util/List;
     .locals 8
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 38
     iget-boolean v0, p0, Lafl;->m:Z
 
     if-nez v0, :cond_3
 
-    .line 39
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lafl;->m:Z
 
-    .line 40
     iget-object v0, p0, Lafl;->b:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 41
     invoke-virtual {p0}, Lafl;->a()Ljava/util/List;
 
     move-result-object v5
 
-    .line 42
     invoke-interface {v5}, Ljava/util/List;->size()I
 
     move-result v6
@@ -254,14 +219,12 @@
     :goto_0
     if-ge v4, v6, :cond_3
 
-    .line 43
     invoke-interface {v5, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lakj;
 
-    .line 44
     iget-object v1, p0, Lafl;->b:Ljava/util/List;
 
     iget-object v2, v0, Lakj;->a:Ladu;
@@ -272,7 +235,6 @@
 
     if-nez v1, :cond_0
 
-    .line 45
     iget-object v1, p0, Lafl;->b:Ljava/util/List;
 
     iget-object v2, v0, Lakj;->a:Ladu;
@@ -282,7 +244,6 @@
     :cond_0
     move v2, v3
 
-    .line 46
     :goto_1
     iget-object v1, v0, Lakj;->b:Ljava/util/List;
 
@@ -292,7 +253,6 @@
 
     if-ge v2, v1, :cond_2
 
-    .line 47
     iget-object v1, p0, Lafl;->b:Ljava/util/List;
 
     iget-object v7, v0, Lakj;->b:Ljava/util/List;
@@ -307,7 +267,6 @@
 
     if-nez v1, :cond_1
 
-    .line 48
     iget-object v7, p0, Lafl;->b:Ljava/util/List;
 
     iget-object v1, v0, Lakj;->b:Ljava/util/List;
@@ -320,7 +279,6 @@
 
     invoke-interface {v7, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 49
     :cond_1
     add-int/lit8 v1, v2, 0x1
 
@@ -328,7 +286,6 @@
 
     goto :goto_1
 
-    .line 50
     :cond_2
     add-int/lit8 v0, v4, 0x1
 
@@ -336,7 +293,6 @@
 
     goto :goto_0
 
-    .line 51
     :cond_3
     iget-object v0, p0, Lafl;->b:Ljava/util/List;
 
@@ -346,8 +302,6 @@
 .method final c(Ljava/lang/Class;)Laeb;
     .locals 4
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lafl;->j:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -356,10 +310,8 @@
 
     check-cast v0, Laeb;
 
-    .line 9
     if-nez v0, :cond_1
 
-    .line 10
     iget-object v1, p0, Lafl;->j:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -383,7 +335,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 11
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -396,18 +347,15 @@
 
     if-eqz v2, :cond_0
 
-    .line 12
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Laeb;
 
-    .line 15
     :cond_1
     if-nez v0, :cond_3
 
-    .line 16
     iget-object v0, p0, Lafl;->j:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
@@ -420,7 +368,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 17
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -465,13 +412,11 @@
 
     throw v0
 
-    .line 18
     :cond_2
     sget-object v0, Lalz;->b:Laeb;
 
     check-cast v0, Lalz;
 
-    .line 20
     :cond_3
     return-object v0
 .end method

@@ -14,8 +14,6 @@
 .method public constructor <init>(Lfpn;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfpu;->a:Lfpn;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public final a(Lfpd;)Lfqe;
     .locals 6
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lfpu;->a:Lfpn;
 
     invoke-virtual {v0, p1}, Lfpn;->a(Lfpd;)Lfpo;
 
     move-result-object v0
 
-    .line 3
     new-instance v1, Lfqf;
 
     const-string v2, "legacy"
@@ -53,28 +48,23 @@
 
     const/4 v5, 0x2
 
-    .line 4
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
     aput-object v5, v3, v4
 
-    .line 5
     invoke-virtual {v0, v3}, Lfpo;->a([Ljava/lang/Integer;)Z
 
     move-result v0
 
-    .line 6
     invoke-virtual {v1, v2, v0}, Lfqf;->a(Ljava/lang/String;Z)Lfqf;
 
     move-result-object v0
 
-    .line 7
     invoke-virtual {v0}, Lfqf;->a()Lfqe;
 
     move-result-object v0
 
-    .line 8
     return-object v0
 .end method

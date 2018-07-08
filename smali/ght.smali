@@ -41,8 +41,6 @@
 .method public final run()V
     .locals 11
 
-    .prologue
-    .line 1
     iget-object v7, p0, Lght;->a:Lghs;
 
     iget-object v8, p0, Lght;->b:Lghr;
@@ -53,7 +51,6 @@
 
     iget-object v9, p0, Lght;->e:Lioy;
 
-    .line 2
     iget-object v0, v7, Lghs;->l:Lgho;
 
     sget-object v1, Lgho;->c:Lgho;
@@ -66,7 +63,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 3
     :cond_0
     iget-object v0, v7, Lghs;->b:Ljrw;
 
@@ -76,7 +72,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     iget-object v0, v7, Lghs;->b:Ljrw;
 
     invoke-virtual {v0}, Ljrw;->b()Ljava/lang/Object;
@@ -87,7 +82,6 @@
 
     invoke-interface {v0}, Lbwl;->d()V
 
-    .line 5
     :cond_1
     iget-object v0, v7, Lghs;->a:Ljrw;
 
@@ -97,15 +91,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 7
     invoke-virtual {v7}, Lghs;->B()Lgoa;
 
     move-result-object v0
 
-    .line 8
     iget-wide v4, v7, Lgga;->w:J
 
-    .line 10
     new-instance v1, Ljava/text/SimpleDateFormat;
 
     const-string v6, "\'MVIMG\'_yyyyMMdd_HHmmss"
@@ -118,33 +109,26 @@
 
     move-result-object v4
 
-    .line 12
     iget-object v0, v7, Lghs;->a:Ljrw;
 
-    .line 13
     invoke-virtual {v0}, Ljrw;->b()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lese;
 
-    .line 14
     invoke-virtual {v7}, Lghs;->r()Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 15
     iget-object v5, v7, Lgga;->j:Ljava/lang/String;
 
-    .line 17
     iget-object v6, v7, Lgga;->x:Lgmd;
 
-    .line 18
     invoke-interface/range {v0 .. v6}, Lese;->a(Landroid/net/Uri;Ljava/io/InputStream;Ljrw;Ljava/lang/String;Ljava/lang/String;Lgmd;)Lkey;
 
     move-result-object v1
 
-    .line 19
     iget-object v0, v7, Lghs;->b:Ljrw;
 
     invoke-virtual {v0}, Ljrw;->a()Z
@@ -153,7 +137,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 20
     iget-object v0, v7, Lghs;->b:Ljrw;
 
     invoke-virtual {v0}, Ljrw;->b()Ljava/lang/Object;
@@ -167,33 +150,26 @@
     :cond_2
     move-object v0, v1
 
-    .line 26
     :goto_0
     new-instance v1, Lghv;
 
     invoke-direct {v1, v7, v8, v9}, Lghv;-><init>(Lghs;Lghr;Lioy;)V
 
-    .line 27
     iget-object v2, v7, Lgga;->q:Ljava/util/concurrent/Executor;
 
-    .line 28
     invoke-static {v0, v1, v2}, Lkek;->a(Lkey;Lkej;Ljava/util/concurrent/Executor;)V
 
-    .line 29
     return-void
 
-    .line 22
     :cond_3
     new-instance v0, Lghu;
 
     invoke-direct {v0, v7, v9, v2, v3}, Lghu;-><init>(Lghs;Lioy;Ljava/io/InputStream;Ljrw;)V
 
-    .line 23
     invoke-static {v0}, Lkez;->a(Ljava/util/concurrent/Callable;)Lkez;
 
     move-result-object v0
 
-    .line 24
     invoke-virtual {v0}, Lkez;->run()V
 
     goto :goto_0

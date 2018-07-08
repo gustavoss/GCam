@@ -17,23 +17,16 @@
 .method public constructor <init>(Libm;Lfif;Ljrw;Lfip;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lfeq;->a:Libm;
 
-    .line 3
     iput-object p2, p0, Lfeq;->b:Lfif;
 
-    .line 4
     iput-object p3, p0, Lfeq;->c:Ljrw;
 
-    .line 5
     iput-object p4, p0, Lfeq;->d:Lfip;
 
-    .line 6
     return-void
 .end method
 
@@ -42,8 +35,6 @@
 .method public final a(I)Lfep;
     .locals 8
 
-    .prologue
-    .line 7
     new-instance v0, Lfep;
 
     iget-object v1, p0, Lfeq;->a:Libm;

@@ -13,8 +13,6 @@
 .method constructor <init>(Ljbh;Ljlb;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljbi;->b:Ljbh;
 
     iput-object p2, p0, Ljbi;->a:Ljlb;
@@ -29,24 +27,18 @@
 .method public final synthetic a_(Ljava/lang/Object;)V
     .locals 6
 
-    .prologue
     const/16 v4, 0x16
 
-    .line 2
     check-cast p1, Lizm;
 
-    .line 3
     new-instance v1, Ljava/io/StringWriter;
 
     invoke-direct {v1}, Ljava/io/StringWriter;-><init>()V
 
-    .line 4
     iget-object v0, p0, Ljbi;->b:Ljbh;
 
-    .line 5
     iget-object v0, v0, Ljbh;->b:Ljava/lang/String;
 
-    .line 6
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -83,10 +75,8 @@
 
     invoke-virtual {v1, v0}, Ljava/io/StringWriter;->write(Ljava/lang/String;)V
 
-    .line 8
     iget-object v0, p1, Lizm;->a:Ljava/lang/String;
 
-    .line 9
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -123,10 +113,8 @@
 
     invoke-virtual {v1, v0}, Ljava/io/StringWriter;->write(Ljava/lang/String;)V
 
-    .line 11
     iget v0, p1, Lizm;->b:I
 
-    .line 12
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(I)V
@@ -153,16 +141,13 @@
 
     invoke-virtual {v1, v0}, Ljava/io/StringWriter;->write(Ljava/lang/String;)V
 
-    .line 15
     :try_start_0
     const-string v0, "Artifact timestamps: ["
 
     invoke-virtual {v1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 16
     if-eqz p1, :cond_0
 
-    .line 17
     const-string v2, "cannot log timestamps from "
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -190,24 +175,19 @@
     :goto_0
     invoke-virtual {v1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 18
     :cond_0
     const-string v0, "]\n"
 
     invoke-virtual {v1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 19
     iget-object v0, p0, Ljbi;->a:Ljlb;
 
-    .line 21
     const-string v2, "Frame timestamps: ["
 
     invoke-virtual {v1, v2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 22
     if-eqz v0, :cond_2
 
-    .line 23
     invoke-virtual {v0}, Ljlb;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -229,7 +209,6 @@
 
     move-result-wide v4
 
-    .line 24
     const/16 v0, 0x16
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -256,22 +235,18 @@
 
     goto :goto_1
 
-    .line 36
     :catch_0
     move-exception v0
 
-    .line 37
     const-string v1, "LoggingArtifactRenderer"
 
     const-string v2, "Cannot log artifact composition."
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 38
     :goto_2
     return-void
 
-    .line 17
     :cond_1
     :try_start_1
     new-instance v0, Ljava/lang/String;
@@ -280,48 +255,38 @@
 
     goto :goto_0
 
-    .line 26
     :cond_2
     const-string v0, "]\n"
 
     invoke-virtual {v1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 27
     const-string v0, "CHAIN END. "
 
     invoke-virtual {v1, v0}, Ljava/io/StringWriter;->write(Ljava/lang/String;)V
 
-    .line 28
     const-string v0, "\n\n"
 
     invoke-virtual {v1, v0}, Ljava/io/StringWriter;->write(Ljava/lang/String;)V
 
-    .line 29
     iget-object v0, p0, Ljbi;->b:Ljbh;
 
-    .line 30
     iget-object v2, v0, Ljbh;->a:Ljava/io/Writer;
 
-    .line 31
     monitor-enter v2
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 32
     :try_start_2
     iget-object v0, p0, Ljbi;->b:Ljbh;
 
-    .line 33
     iget-object v0, v0, Ljbh;->a:Ljava/io/Writer;
 
-    .line 34
     invoke-virtual {v1}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 35
     monitor-exit v2
 
     goto :goto_2

@@ -15,23 +15,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
-    .line 3
     invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
 
     move-result-object v0
 
     iput-object v0, p0, Lapq;->a:Ljava/util/Set;
 
-    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -46,18 +41,14 @@
 .method public final a(Laqi;Z)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 5
     if-nez p1, :cond_1
 
-    .line 13
     :cond_0
     :goto_0
     return v0
 
-    .line 7
     :cond_1
     iget-object v1, p0, Lapq;->a:Ljava/util/Set;
 
@@ -65,7 +56,6 @@
 
     move-result v1
 
-    .line 8
     iget-object v2, p0, Lapq;->b:Ljava/util/List;
 
     invoke-interface {v2, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
@@ -76,23 +66,18 @@
 
     if-eqz v1, :cond_3
 
-    .line 9
     :cond_2
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 10
     invoke-interface {p1}, Laqi;->d()V
 
-    .line 11
     if-eqz p2, :cond_0
 
-    .line 12
     invoke-interface {p1}, Laqi;->i()V
 
     goto :goto_0
 
-    .line 8
     :cond_3
     const/4 v0, 0x0
 
@@ -102,8 +87,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 14
     invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0

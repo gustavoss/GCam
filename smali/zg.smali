@@ -16,8 +16,6 @@
 .method constructor <init>(Lzf;Z)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lzg;->b:Lzf;
 
     iput-boolean p2, p0, Lzg;->a:Z
@@ -32,8 +30,6 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lzg;->b:Lzf;
 
     iget-object v0, v0, Lzf;->a:Laad;
@@ -46,6 +42,5 @@
 
     invoke-interface {v0, v1, v2}, Laad;->a(ZLaao;)V
 
-    .line 3
     return-void
 .end method

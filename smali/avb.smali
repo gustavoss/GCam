@@ -31,8 +31,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 39
     const-string v0, "StdPassiveFocus"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -47,39 +45,30 @@
 .method public constructor <init>(Libo;Latf;Lida;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Libm;
 
     invoke-direct {v0}, Libm;-><init>()V
 
     iput-object v0, p0, Lavb;->g:Libm;
 
-    .line 3
     iput-object v1, p0, Lavb;->c:Lhbk;
 
-    .line 4
     iput-object v1, p0, Lavb;->d:Lhbk;
 
-    .line 5
     new-instance v0, Lavd;
 
     invoke-direct {v0, p0}, Lavd;-><init>(Lavb;)V
 
     iput-object v0, p0, Lavb;->h:Libe;
 
-    .line 6
     iput-object p1, p0, Lavb;->f:Libo;
 
-    .line 7
     iput-object p2, p0, Lavb;->b:Latf;
 
-    .line 8
     iget-object v0, p0, Lavb;->g:Libm;
 
     invoke-interface {p3, p0, p1}, Lida;->a(Lihw;Ljava/util/concurrent/Executor;)Lihr;
@@ -88,7 +77,6 @@
 
     invoke-virtual {v0, v1}, Libm;->a(Lihr;)Lihr;
 
-    .line 9
     return-void
 .end method
 
@@ -97,15 +85,12 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 6
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 12
     check-cast p1, Lfbs;
 
-    .line 13
     iget-object v2, p0, Lavb;->c:Lhbk;
 
     if-nez v2, :cond_0
@@ -114,7 +99,6 @@
 
     if-nez v2, :cond_0
 
-    .line 14
     iget-object v2, p1, Lfbs;->a:Lfbp;
 
     iget-object v2, v2, Lfbp;->b:Lgdp;
@@ -133,31 +117,25 @@
 
     move v2, v1
 
-    .line 15
     :goto_0
     if-eqz v2, :cond_0
 
-    .line 16
     sget-object v2, Lavb;->a:Ljava/lang/String;
 
     const-string v3, "PassiveFocusScanAnimation: start"
 
     invoke-static {v2, v3}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 17
     iget-object v2, p0, Lavb;->b:Latf;
 
-    .line 18
     sget-object v3, Ljrk;->a:Ljrk;
 
-    .line 19
     invoke-interface {v2, v3}, Latf;->a(Ljrw;)Lhbk;
 
     move-result-object v2
 
     iput-object v2, p0, Lavb;->c:Lhbk;
 
-    .line 20
     iget-object v2, p0, Lavb;->c:Lhbk;
 
     new-instance v3, Lavc;
@@ -166,23 +144,18 @@
 
     invoke-interface {v2, v3}, Lhbk;->a(Lhbl;)V
 
-    .line 21
     iget-object v2, p0, Lavb;->c:Lhbk;
 
     if-eqz v2, :cond_0
 
-    .line 23
     new-instance v2, Lkfk;
 
     invoke-direct {v2}, Lkfk;-><init>()V
 
-    .line 24
     iput-object v2, p0, Lavb;->e:Lkfk;
 
-    .line 25
     iget-object v2, p0, Lavb;->c:Lhbk;
 
-    .line 26
     invoke-interface {v2}, Lhbk;->a()Lkey;
 
     move-result-object v2
@@ -193,16 +166,13 @@
 
     iget-object v5, p0, Lavb;->f:Libo;
 
-    .line 27
     invoke-static {v2, v3, v4, v5}, Lhxj;->a(Lkey;Lkey;Libe;Ljava/util/concurrent/Executor;)Lkey;
 
-    .line 28
     :cond_0
     iget-object v2, p0, Lavb;->e:Lkfk;
 
     if-eqz v2, :cond_4
 
-    .line 29
     iget-object v2, p1, Lfbs;->a:Lfbp;
 
     iget-object v2, v2, Lfbp;->b:Lgdp;
@@ -215,7 +185,6 @@
 
     iget-object v2, v2, Lfbp;->b:Lgdp;
 
-    .line 31
     sget-object v3, Lgdp;->c:Lgdp;
 
     if-eq v2, v3, :cond_1
@@ -239,22 +208,18 @@
     :cond_1
     move v2, v1
 
-    .line 32
     :goto_1
     if-eqz v2, :cond_7
 
     move v2, v1
 
-    .line 33
     :goto_2
     if-eqz v2, :cond_4
 
-    .line 34
     iget-object v2, p1, Lfbs;->b:Lfbp;
 
     iget-object v2, v2, Lfbp;->b:Lgdp;
 
-    .line 35
     sget-object v3, Lgdp;->c:Lgdp;
 
     if-eq v2, v3, :cond_2
@@ -266,7 +231,6 @@
     :cond_2
     move v0, v1
 
-    .line 37
     :cond_3
     iget-object v1, p0, Lavb;->e:Lkfk;
 
@@ -276,38 +240,31 @@
 
     invoke-virtual {v1, v0}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 38
     :cond_4
     return-void
 
     :cond_5
     move v2, v0
 
-    .line 14
     goto :goto_0
 
     :cond_6
     move v2, v0
 
-    .line 31
     goto :goto_1
 
     :cond_7
     move v2, v0
 
-    .line 32
     goto :goto_2
 .end method
 
 .method public final close()V
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lavb;->g:Libm;
 
     invoke-virtual {v0}, Libm;->close()V
 
-    .line 11
     return-void
 .end method

@@ -11,80 +11,62 @@
 .method public constructor <init>(Lfjl;)V
     .locals 2
 
-    .prologue
-    .line 4
     invoke-direct {p0, p1}, Lfjl;-><init>(Liob;)V
 
-    .line 5
     iget-object v0, p0, Lfjl;->b:Ljava/util/Map;
 
     iget-object v1, p1, Lfjl;->b:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 6
     return-void
 .end method
 
 .method private constructor <init>(Liob;)V
     .locals 1
 
-    .prologue
-    .line 7
     invoke-direct {p0, p1}, Liny;-><init>(Liob;)V
 
-    .line 8
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lfjl;->b:Ljava/util/Map;
 
-    .line 9
     return-void
 .end method
 
 .method public constructor <init>(Liob;Ljava/util/Map;)V
     .locals 1
 
-    .prologue
-    .line 10
     invoke-direct {p0, p1}, Liny;-><init>(Liob;)V
 
-    .line 11
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0, p2}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(Ljava/util/Map;)V
 
     iput-object v0, p0, Lfjl;->b:Ljava/util/Map;
 
-    .line 12
     return-void
 .end method
 
 .method public constructor <init>(Liob;Lkey;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Lfjl;-><init>(Liob;)V
 
-    .line 2
     iget-object v0, p0, Lfjl;->b:Ljava/util/Map;
 
     sget-object v1, Lfjn;->a:Lfjm;
 
     invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     return-void
 .end method
 
 .method public static a(Liob;)Lfjl;
     .locals 1
 
-    .prologue
-    .line 13
     new-instance v0, Lfjl;
 
     invoke-direct {v0, p0}, Lfjl;-><init>(Liob;)V
@@ -95,8 +77,6 @@
 .method private final b(Lfjm;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 18
     iget-object v0, p0, Lfjl;->b:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -105,14 +85,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 19
     iget-object v0, p0, Lfjl;->b:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 20
     :goto_0
     return-object v0
 
@@ -127,27 +105,20 @@
 .method public final a(Lfjm;Ljava/lang/Object;)Lfjl;
     .locals 1
 
-    .prologue
-    .line 14
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 15
     invoke-static {p2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 16
     iget-object v0, p0, Lfjl;->b:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 17
     return-object p0
 .end method
 
 .method public final a(Lfjm;)Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 21
     invoke-direct {p0, p1}, Lfjl;->b(Lfjm;)Ljava/lang/Object;
 
     move-result-object v0
@@ -194,8 +165,6 @@
 .method public final h()Z
     .locals 2
 
-    .prologue
-    .line 22
     invoke-virtual {p0}, Lfjl;->b()I
 
     move-result v0
@@ -218,8 +187,6 @@
 .method public final i()Lkey;
     .locals 1
 
-    .prologue
-    .line 23
     sget-object v0, Lfjn;->a:Lfjm;
 
     invoke-direct {p0, v0}, Lfjl;->b(Lfjm;)Ljava/lang/Object;

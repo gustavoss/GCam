@@ -19,13 +19,10 @@
 .method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 9
 
-    .prologue
     const/4 v5, 0x0
 
     const/4 v6, 0x0
 
-    .line 4
-    .line 5
     invoke-static {p1}, Lhqx;->a(Landroid/os/Parcel;)I
 
     move-result v7
@@ -45,17 +42,14 @@
 
     if-ge v0, v7, :cond_0
 
-    .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 8
     const v8, 0xffff
 
     and-int/2addr v8, v0
 
-    .line 9
     sparse-switch v8, :sswitch_data_0
 
     invoke-static {p1, v0}, Lhqx;->b(Landroid/os/Parcel;I)V
@@ -141,7 +135,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/common/data/DataHolder;-><init>(I[Ljava/lang/String;[Landroid/database/CursorWindow;ILandroid/os/Bundle;)V
 
-    .line 10
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
@@ -220,10 +213,8 @@
     :cond_3
     iput v1, v0, Lcom/google/android/gms/common/data/DataHolder;->e:I
 
-    .line 12
     return-object v0
 
-    .line 9
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -237,11 +228,7 @@
 .method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     new-array v0, p1, [Lcom/google/android/gms/common/data/DataHolder;
 
-    .line 3
     return-object v0
 .end method

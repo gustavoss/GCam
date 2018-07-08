@@ -29,14 +29,10 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lexp;->b:Lexw;
 
-    .line 2
     const/4 v1, 0x0
 
-    .line 3
     iget-object v2, v0, Lexw;->a:Ljava/lang/String;
 
     iget-object v0, v0, Lexw;->b:Ljava/lang/String;
@@ -95,9 +91,7 @@
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 5
     return-void
 .end method

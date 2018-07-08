@@ -14,8 +14,6 @@
 .method constructor <init>(Ldyy;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldzc;->a:Ldyy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,11 +26,8 @@
 .method public final onProgressChanged(Landroid/widget/SeekBar;IZ)V
     .locals 4
 
-    .prologue
-    .line 4
     iget-object v0, p0, Ldzc;->a:Ldyy;
 
-    .line 6
     int-to-double v2, p2
 
     invoke-static {v2, v3}, Ljava/lang/Math;->toRadians(D)D
@@ -43,25 +38,19 @@
 
     iput v1, v0, Ldyy;->d:F
 
-    .line 7
     invoke-virtual {v0}, Ldyy;->b()V
 
-    .line 8
     return-void
 .end method
 
 .method public final onStartTrackingTouch(Landroid/widget/SeekBar;)V
     .locals 0
 
-    .prologue
-    .line 3
     return-void
 .end method
 
 .method public final onStopTrackingTouch(Landroid/widget/SeekBar;)V
     .locals 0
 
-    .prologue
-    .line 2
     return-void
 .end method

@@ -35,14 +35,11 @@
 .method public final a()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
     const-string v0, "mv-highres-encoder"
 
     invoke-static {v0}, Leop;->b(Ljava/lang/String;)Landroid/os/Handler;
 
     move-result-object v0
 
-    .line 2
     return-object v0
 .end method

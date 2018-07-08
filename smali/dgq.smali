@@ -14,8 +14,6 @@
 .method constructor <init>(Ldgp;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldgq;->a:Ldgp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,16 +26,12 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 5
 
-    .prologue
-    .line 2
-    .line 3
     iget-object v0, p0, Ldgq;->a:Ldgp;
 
     iget-object v2, v0, Ldgp;->k:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 4
     :try_start_0
     iget-object v0, p0, Ldgq;->a:Ldgp;
 
@@ -47,10 +41,8 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 5
     sget-object v0, Ldgp;->c:Ljava/lang/String;
 
-    .line 6
     iget-object v1, p0, Ldgq;->a:Ldgp;
 
     iget-object v1, v1, Ldgp;->n:Ldej;
@@ -89,44 +81,35 @@
 
     invoke-static {v0, v1}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7
     monitor-exit v2
 
-    .line 16
     :goto_0
     return-void
 
-    .line 8
     :cond_0
     iget-object v0, p0, Ldgq;->a:Ldgp;
 
     iget-object v0, v0, Ldgp;->e:Licm;
 
-    .line 9
     invoke-virtual {v0}, Licm;->c()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lien;
 
-    .line 10
     const/4 v1, 0x0
 
-    .line 11
     sget-object v3, Lien;->a:Lien;
 
     if-ne v0, v3, :cond_1
 
-    .line 12
     sget-object v0, Lien;->b:Lien;
 
-    .line 15
     :goto_1
     iget-object v1, p0, Ldgq;->a:Ldgp;
 
     invoke-virtual {v1, v0}, Ldgp;->a(Lien;)V
 
-    .line 16
     monitor-exit v2
 
     goto :goto_0
@@ -140,14 +123,12 @@
 
     throw v0
 
-    .line 13
     :cond_1
     :try_start_1
     sget-object v3, Lien;->b:Lien;
 
     if-ne v0, v3, :cond_2
 
-    .line 14
     sget-object v0, Lien;->a:Lien;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

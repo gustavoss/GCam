@@ -11,8 +11,6 @@
 .method public constructor <init>(Lkfk;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldoz;->a:Lkfk;
 
     invoke-direct {p0}, Lfhv;-><init>()V
@@ -25,8 +23,6 @@
 .method public final a_(Linu;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ldoz;->a:Lkfk;
 
     const/4 v1, 0x1
@@ -37,6 +33,5 @@
 
     invoke-virtual {v0, v1}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 3
     return-void
 .end method

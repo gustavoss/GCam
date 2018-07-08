@@ -13,8 +13,6 @@
 .method public constructor <init>(Lgbe;Ljava/util/concurrent/Executor;Lgbd;Lgab;Lihs;Ljrw;Liii;)V
     .locals 10
 
-    .prologue
-    .line 1
     sget v5, Lep;->aW:I
 
     sget v8, Lep;->aT:I
@@ -35,19 +33,16 @@
 
     invoke-direct/range {v1 .. v9}, Lgca;-><init>(Lgbe;Ljava/util/concurrent/Executor;Lgbd;ILgab;Lihs;ILiii;)V
 
-    .line 2
     move-object/from16 v0, p7
 
     iput-object v0, p0, Lgcl;->i:Liii;
 
-    .line 3
     invoke-virtual/range {p6 .. p6}, Ljrw;->a()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 4
     invoke-virtual/range {p6 .. p6}, Ljrw;->b()Ljava/lang/Object;
 
     move-result-object v1
@@ -56,7 +51,6 @@
 
     iput-object v1, p0, Lgcl;->b:Lgcb;
 
-    .line 5
     iget-object v1, p0, Lgcl;->b:Lgcb;
 
     iget-object v1, v1, Lgcb;->g:Lgbe;
@@ -77,7 +71,6 @@
     :goto_0
     invoke-static {v1}, Ljiy;->a(Z)V
 
-    .line 6
     iget-object v1, p0, Lgcl;->b:Lgcb;
 
     iget-object v1, v1, Lgcb;->c:Lgbd;
@@ -91,23 +84,19 @@
     :goto_1
     invoke-static {v1}, Ljiy;->a(Z)V
 
-    .line 8
     :goto_2
     return-void
 
-    .line 5
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 6
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 7
     :cond_3
     const/4 v1, 0x0
 
@@ -121,23 +110,18 @@
 .method public final a(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 9
     return-void
 .end method
 
 .method public final run()V
     .locals 8
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lgcl;->i:Liii;
 
     const-string v1, "PreviewChained"
 
     invoke-interface {v0, v1}, Liii;->a(Ljava/lang/String;)V
 
-    .line 11
     iget-object v0, p0, Lgcl;->g:Lgbe;
 
     invoke-static {v0}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
@@ -146,7 +130,6 @@
 
     check-cast v0, Lgbe;
 
-    .line 12
     iget-object v1, v0, Lgbe;->b:Liob;
 
     iget-object v2, v0, Lgbe;->f:Landroid/graphics/Rect;
@@ -155,13 +138,10 @@
 
     move-result-object v1
 
-    .line 13
     invoke-static {v0}, Lgcl;->a(Lgbe;)Lgcd;
 
-    .line 14
     new-instance v2, Lihs;
 
-    .line 15
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
     move-result v3
@@ -174,17 +154,14 @@
 
     iget-object v3, p0, Lgcl;->a:Lihs;
 
-    .line 16
     invoke-static {v2, v3}, Lgbt;->a(Lihs;Lihs;)I
 
     move-result v2
 
-    .line 17
     invoke-virtual {p0, v0, v2}, Lgcl;->a(Lgbe;I)Lgcd;
 
     move-result-object v3
 
-    .line 18
     :try_start_0
     iget-wide v4, p0, Lgcl;->e:J
 
@@ -192,10 +169,8 @@
 
     invoke-virtual {p0, v4, v5, v3, v6}, Lgcl;->a(JLgcd;I)V
 
-    .line 19
     iget-object v4, v0, Lgbe;->b:Liob;
 
-    .line 20
     invoke-interface {v4}, Liob;->c()I
 
     move-result v4
@@ -204,7 +179,6 @@
 
     iget-object v5, v0, Lgbe;->b:Liob;
 
-    .line 21
     invoke-interface {v5}, Liob;->d()I
 
     move-result v5
@@ -245,24 +219,20 @@
 
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 22
     iget-object v4, v0, Lgbe;->b:Liob;
 
     invoke-virtual {p0, v4, v1, v2}, Lgcl;->a(Liob;Landroid/graphics/Rect;I)[I
 
     move-result-object v1
 
-    .line 23
     sget v2, Lep;->aY:I
 
     invoke-virtual {p0, v3, v1, v2}, Lgcl;->a(Lgcd;[II)V
 
-    .line 24
     iget-object v1, p0, Lgcl;->b:Lgcb;
 
     if-eqz v1, :cond_0
 
-    .line 25
     iget-object v1, p0, Lgcl;->c:Lgbd;
 
     iget-object v2, p0, Lgcl;->b:Lgcb;
@@ -271,7 +241,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 26
     :cond_0
     iget-object v1, p0, Lgcl;->c:Lgbd;
 
@@ -281,15 +250,12 @@
 
     invoke-interface {v1, v0, v2}, Lgbd;->a(Liob;Ljava/util/concurrent/Executor;)V
 
-    .line 29
     iget-object v0, p0, Lgcl;->i:Liii;
 
     invoke-interface {v0}, Liii;->a()V
 
-    .line 30
     return-void
 
-    .line 28
     :catchall_0
     move-exception v1
 

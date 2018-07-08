@@ -19,14 +19,10 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-virtual {p0}, Lti;->a()V
 
-    .line 3
     return-void
 .end method
 
@@ -35,63 +31,49 @@
 .method final a()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 4
     const/4 v0, -0x1
 
     iput v0, p0, Lti;->b:I
 
-    .line 5
     const/high16 v0, -0x80000000
 
     iput v0, p0, Lti;->c:I
 
-    .line 6
     iput-boolean v1, p0, Lti;->d:Z
 
-    .line 7
     iput-boolean v1, p0, Lti;->e:Z
 
-    .line 8
     return-void
 .end method
 
 .method public final a(Landroid/view/View;I)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 14
     iget-object v0, p0, Lti;->a:Lua;
 
     invoke-virtual {v0}, Lua;->a()I
 
     move-result v0
 
-    .line 15
     if-ltz v0, :cond_1
 
-    .line 16
     invoke-virtual {p0, p1, p2}, Lti;->b(Landroid/view/View;I)V
 
-    .line 48
     :cond_0
     :goto_0
     return-void
 
-    .line 18
     :cond_1
     iput p2, p0, Lti;->b:I
 
-    .line 19
     iget-boolean v1, p0, Lti;->d:Z
 
     if-eqz v1, :cond_2
 
-    .line 20
     iget-object v1, p0, Lti;->a:Lua;
 
     invoke-virtual {v1}, Lua;->c()I
@@ -100,17 +82,14 @@
 
     sub-int v0, v1, v0
 
-    .line 21
     iget-object v1, p0, Lti;->a:Lua;
 
     invoke-virtual {v1, p1}, Lua;->b(Landroid/view/View;)I
 
     move-result v1
 
-    .line 22
     sub-int/2addr v0, v1
 
-    .line 23
     iget-object v1, p0, Lti;->a:Lua;
 
     invoke-virtual {v1}, Lua;->c()I
@@ -121,29 +100,24 @@
 
     iput v1, p0, Lti;->c:I
 
-    .line 24
     if-lez v0, :cond_0
 
-    .line 25
     iget-object v1, p0, Lti;->a:Lua;
 
     invoke-virtual {v1, p1}, Lua;->e(Landroid/view/View;)I
 
     move-result v1
 
-    .line 26
     iget v2, p0, Lti;->c:I
 
     sub-int v1, v2, v1
 
-    .line 27
     iget-object v2, p0, Lti;->a:Lua;
 
     invoke-virtual {v2}, Lua;->b()I
 
     move-result v2
 
-    .line 28
     iget-object v3, p0, Lti;->a:Lua;
 
     invoke-virtual {v3, p1}, Lua;->a(Landroid/view/View;)I
@@ -152,20 +126,16 @@
 
     sub-int/2addr v3, v2
 
-    .line 29
     invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
 
     move-result v3
 
     add-int/2addr v2, v3
 
-    .line 30
     sub-int/2addr v1, v2
 
-    .line 31
     if-gez v1, :cond_0
 
-    .line 32
     iget v2, p0, Lti;->c:I
 
     neg-int v1, v1
@@ -180,7 +150,6 @@
 
     goto :goto_0
 
-    .line 34
     :cond_2
     iget-object v1, p0, Lti;->a:Lua;
 
@@ -188,7 +157,6 @@
 
     move-result v1
 
-    .line 35
     iget-object v2, p0, Lti;->a:Lua;
 
     invoke-virtual {v2}, Lua;->b()I
@@ -197,23 +165,18 @@
 
     sub-int v2, v1, v2
 
-    .line 36
     iput v1, p0, Lti;->c:I
 
-    .line 37
     if-lez v2, :cond_0
 
-    .line 38
     iget-object v3, p0, Lti;->a:Lua;
 
-    .line 39
     invoke-virtual {v3, p1}, Lua;->e(Landroid/view/View;)I
 
     move-result v3
 
     add-int/2addr v1, v3
 
-    .line 40
     iget-object v3, p0, Lti;->a:Lua;
 
     invoke-virtual {v3}, Lua;->c()I
@@ -222,37 +185,30 @@
 
     sub-int v0, v3, v0
 
-    .line 41
     iget-object v3, p0, Lti;->a:Lua;
 
-    .line 42
     invoke-virtual {v3, p1}, Lua;->b(Landroid/view/View;)I
 
     move-result v3
 
     sub-int/2addr v0, v3
 
-    .line 43
     iget-object v3, p0, Lti;->a:Lua;
 
     invoke-virtual {v3}, Lua;->c()I
 
     move-result v3
 
-    .line 44
     invoke-static {v4, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
     sub-int v0, v3, v0
 
-    .line 45
     sub-int/2addr v0, v1
 
-    .line 46
     if-gez v0, :cond_0
 
-    .line 47
     iget v1, p0, Lti;->c:I
 
     neg-int v0, v0
@@ -271,31 +227,24 @@
 .method final b()V
     .locals 1
 
-    .prologue
-    .line 9
     iget-boolean v0, p0, Lti;->d:Z
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lti;->a:Lua;
 
-    .line 10
     invoke-virtual {v0}, Lua;->c()I
 
     move-result v0
 
-    .line 11
     :goto_0
     iput v0, p0, Lti;->c:I
 
-    .line 12
     return-void
 
-    .line 10
     :cond_0
     iget-object v0, p0, Lti;->a:Lua;
 
-    .line 11
     invoke-virtual {v0}, Lua;->b()I
 
     move-result v0
@@ -306,13 +255,10 @@
 .method public final b(Landroid/view/View;I)V
     .locals 2
 
-    .prologue
-    .line 49
     iget-boolean v0, p0, Lti;->d:Z
 
     if-eqz v0, :cond_0
 
-    .line 50
     iget-object v0, p0, Lti;->a:Lua;
 
     invoke-virtual {v0, p1}, Lua;->b(Landroid/view/View;)I
@@ -321,7 +267,6 @@
 
     iget-object v1, p0, Lti;->a:Lua;
 
-    .line 51
     invoke-virtual {v1}, Lua;->a()I
 
     move-result v1
@@ -330,14 +275,11 @@
 
     iput v0, p0, Lti;->c:I
 
-    .line 53
     :goto_0
     iput p2, p0, Lti;->b:I
 
-    .line 54
     return-void
 
-    .line 52
     :cond_0
     iget-object v0, p0, Lti;->a:Lua;
 
@@ -353,8 +295,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 13
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "AnchorInfo{mPosition="

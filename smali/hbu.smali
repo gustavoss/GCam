@@ -14,8 +14,6 @@
 .method constructor <init>(Lhbl;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhbu;->a:Lhbl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,26 +26,20 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 3
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 4
     iget-object v0, p0, Lhbu;->a:Lhbl;
 
     invoke-static {p1}, Ljrw;->b(Ljava/lang/Object;)Ljrw;
 
     invoke-interface {v0}, Lhbl;->a()V
 
-    .line 5
     return-void
 .end method
 
 .method public final a(Ljava/lang/Throwable;)V
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V

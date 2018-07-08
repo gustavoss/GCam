@@ -7,8 +7,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 2
     new-instance v0, Ljava/util/Locale;
 
     const-string v1, ""
@@ -23,8 +21,6 @@
 .method public static a(Ljava/util/Locale;)I
     .locals 1
 
-    .prologue
-    .line 1
     invoke-static {p0}, Landroid/text/TextUtils;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
 
     move-result v0

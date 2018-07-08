@@ -16,8 +16,6 @@
 .method constructor <init>(Lisk;Lirv;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lism;->b:Lisk;
 
     iput-object p2, p0, Lism;->a:Lirv;
@@ -32,8 +30,6 @@
 .method public final a(Ljava/lang/Object;Ljava/util/concurrent/Executor;)Lirp;
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lism;->a:Lirv;
 
     invoke-virtual {v0}, Lirv;->a()Lirs;
@@ -54,8 +50,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lism;->b:Lisk;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

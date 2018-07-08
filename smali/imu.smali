@@ -25,18 +25,14 @@
 .method public final close()V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Limu;->a:Link;
 
-    .line 2
     :try_start_0
     invoke-interface {v0}, Link;->c()V
     :try_end_0
     .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Linj; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 5
     :goto_0
     return-void
 

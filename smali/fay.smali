@@ -14,25 +14,18 @@
 .method private constructor <init>(Lilo;)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lfay;->a:Lilo;
 
-    .line 4
     return-void
 .end method
 
 .method public constructor <init>(Lilo;Lhbv;)V
     .locals 0
 
-    .prologue
-    .line 13
     invoke-direct {p0, p1}, Lfay;-><init>(Lilo;)V
 
-    .line 14
     return-void
 .end method
 
@@ -41,8 +34,6 @@
 .method public final a(Lilr;)Lfea;
     .locals 2
 
-    .prologue
-    .line 1
     new-instance v0, Lfeb;
 
     invoke-virtual {p0, p1}, Lfay;->b(Lilr;)Liln;
@@ -57,8 +48,6 @@
 .method public final a()Lilr;
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lfay;->a:Lilo;
 
     invoke-interface {v0}, Lilo;->a()Lilr;
@@ -71,8 +60,6 @@
 .method public final a(Lilt;)Z
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lfay;->a:Lilo;
 
     invoke-interface {v0, p1}, Lilo;->a(Lilt;)Z
@@ -85,8 +72,6 @@
 .method public final b(Lilr;)Liln;
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lfay;->a:Lilo;
 
     invoke-interface {v0, p1}, Lilo;->b(Lilr;)Liln;
@@ -99,8 +84,6 @@
 .method public final b(Lilt;)Lilr;
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lfay;->a:Lilo;
 
     invoke-interface {v0, p1}, Lilo;->b(Lilt;)Lilr;
@@ -113,8 +96,6 @@
 .method public final b()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lfay;->a:Lilo;
 
     invoke-interface {v0}, Lilo;->b()Ljava/util/List;
@@ -127,8 +108,6 @@
 .method public final c(Lilt;)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lfay;->a:Lilo;
 
     invoke-interface {v0, p1}, Lilo;->c(Lilt;)Ljava/util/List;
@@ -141,8 +120,6 @@
 .method public final c()Z
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lfay;->a:Lilo;
 
     invoke-interface {v0}, Lilo;->c()Z
@@ -155,8 +132,6 @@
 .method public final d()Z
     .locals 1
 
-    .prologue
-    .line 12
     iget-object v0, p0, Lfay;->a:Lilo;
 
     invoke-interface {v0}, Lilo;->d()Z

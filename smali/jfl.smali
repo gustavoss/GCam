@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,7 +20,6 @@
 .method public final synthetic a(Ljdm;)Ljava/lang/Object;
     .locals 9
 
-    .prologue
     const/4 v8, 0x3
 
     const/4 v7, 0x2
@@ -31,8 +28,6 @@
 
     const/4 v5, 0x0
 
-    .line 2
-    .line 3
     const-class v0, Ljkp;
 
     const-string v1, "post_proc_quality_metric"
@@ -43,7 +38,6 @@
 
     check-cast v0, Ljkp;
 
-    .line 4
     new-array v2, v7, [Ljle;
 
     new-array v3, v8, [Ljle;
@@ -52,7 +46,6 @@
 
     const-string v4, "jump_cut"
 
-    .line 5
     invoke-virtual {p1, v1, v4}, Ljdm;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
@@ -73,7 +66,6 @@
 
     aput-object v1, v3, v7
 
-    .line 6
     invoke-static {v3}, Ljkz;->a([Ljle;)Ljkz;
 
     move-result-object v0
@@ -94,18 +86,15 @@
 
     aput-object v1, v0, v6
 
-    .line 7
     invoke-static {v0}, Ljkz;->a([Ljle;)Ljkz;
 
     move-result-object v0
 
     aput-object v0, v2, v6
 
-    .line 9
     new-instance v0, Ljla;
 
     invoke-direct {v0, v2}, Ljla;-><init>([Ljle;)V
 
-    .line 10
     return-object v0
 .end method

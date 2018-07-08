@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lizy;-><init>()V
 
     return-void
@@ -19,13 +17,10 @@
 .method protected final a()Ljava/util/Comparator;
     .locals 2
 
-    .prologue
-    .line 2
     invoke-super {p0}, Lizy;->a()Ljava/util/Comparator;
 
     move-result-object v0
 
-    .line 3
     new-instance v1, Lizq;
 
     invoke-direct {v1, v0}, Lizq;-><init>(Ljava/util/Comparator;)V
@@ -36,13 +31,10 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 4
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 5
     invoke-virtual {p0}, Lizp;->b()Ljava/util/List;
 
     move-result-object v0
@@ -64,20 +56,16 @@
 
     check-cast v0, Lizm;
 
-    .line 6
     iget-object v3, v0, Lizm;->a:Ljava/lang/String;
 
-    .line 8
     invoke-interface {v1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 9
     if-nez v0, :cond_0
 
-    .line 10
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -88,7 +76,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -104,7 +91,6 @@
 
     goto :goto_0
 
-    .line 13
     :cond_1
     new-instance v0, Ljrp;
 
@@ -112,31 +98,26 @@
 
     invoke-direct {v0, v2}, Ljrp;-><init>(Ljava/lang/String;)V
 
-    .line 14
     const-string v2, "="
 
     invoke-virtual {v0, v2}, Ljrp;->c(Ljava/lang/String;)Ljrs;
 
     move-result-object v0
 
-    .line 15
     const-string v2, "(ArtifactStack) artifacts are "
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 16
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v1
 
-    .line 17
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 18
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -149,7 +130,6 @@
 
     move-result-object v0
 
-    .line 19
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -164,11 +144,9 @@
 
     move-result-object v0
 
-    .line 20
     :goto_1
     return-object v0
 
-    .line 19
     :cond_2
     new-instance v0, Ljava/lang/String;
 

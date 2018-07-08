@@ -23,11 +23,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcjx;)V
     .locals 18
 
-    .prologue
-    .line 1
     invoke-direct/range {p0 .. p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 2
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v2
@@ -36,7 +33,6 @@
 
     iput-object v2, v0, Ldzw;->d:Ljava/util/Locale;
 
-    .line 3
     new-instance v2, Ljava/text/DecimalFormat;
 
     const-string v3, ".####"
@@ -47,38 +43,32 @@
 
     iput-object v2, v0, Ldzw;->e:Ljava/text/DecimalFormat;
 
-    .line 4
     const/4 v2, -0x1
 
     move-object/from16 v0, p0
 
     iput v2, v0, Ldzw;->f:I
 
-    .line 5
     const/4 v2, -0x1
 
     move-object/from16 v0, p0
 
     iput v2, v0, Ldzw;->g:I
 
-    .line 6
     move-object/from16 v0, p1
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Ldzw;->a:Landroid/content/Context;
 
-    .line 7
     move-object/from16 v0, p2
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Ldzw;->b:Lcjx;
 
-    .line 8
     new-instance v2, Ljava/util/ArrayList;
 
-    .line 9
     move-object/from16 v0, p2
 
     iget-object v3, v0, Lcjx;->a:Ljava/util/TreeMap;
@@ -87,20 +77,16 @@
 
     move-result v3
 
-    .line 10
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Ldzw;->c:Ljava/util/ArrayList;
 
-    .line 12
     const/4 v5, 0x1
 
-    .line 13
     const/4 v4, 0x0
 
-    .line 14
     invoke-virtual/range {p2 .. p2}, Lcjx;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -118,7 +104,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 15
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -131,15 +116,12 @@
 
     sparse-switch v3, :sswitch_data_0
 
-    .line 60
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 61
     if-nez v3, :cond_9
 
-    .line 62
     const-string v3, "%s\'s value is Null"
 
     const/4 v4, 0x1
@@ -166,7 +148,6 @@
 
     aput-object v2, v4, v5
 
-    .line 64
     new-instance v2, Ljava/lang/AssertionError;
 
     invoke-static {v3, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -177,7 +158,6 @@
 
     throw v2
 
-    .line 16
     :sswitch_0
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -195,7 +175,6 @@
 
     move-result-object v3
 
-    .line 66
     :cond_0
     :goto_1
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -208,7 +187,6 @@
 
     move-result v7
 
-    .line 68
     move-object/from16 v0, p2
 
     iget-object v2, v0, Lcjx;->b:Landroid/util/SparseIntArray;
@@ -221,11 +199,9 @@
 
     const/4 v2, 0x1
 
-    .line 69
     :goto_2
     if-eqz v2, :cond_b
 
-    .line 70
     const-string v2, "%s: %s %s"
 
     const/4 v8, 0x3
@@ -234,7 +210,6 @@
 
     const/4 v9, 0x0
 
-    .line 71
     move-object/from16 v0, p1
 
     invoke-static {v0, v7}, Ldzj;->a(Landroid/content/Context;I)Ljava/lang/String;
@@ -249,7 +224,6 @@
 
     const/4 v3, 0x2
 
-    .line 73
     move-object/from16 v0, p2
 
     iget-object v9, v0, Lcjx;->b:Landroid/util/SparseIntArray;
@@ -258,7 +232,6 @@
 
     move-result v7
 
-    .line 74
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -267,12 +240,10 @@
 
     aput-object v7, v8, v3
 
-    .line 75
     invoke-static {v2, v8}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 77
     :goto_3
     move-object/from16 v0, p0
 
@@ -282,7 +253,6 @@
 
     goto/16 :goto_0
 
-    .line 18
     :sswitch_1
     const-string v3, "1"
 
@@ -296,7 +266,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 19
     const v3, 0x7f1100ef
 
     move-object/from16 v0, p1
@@ -307,7 +276,6 @@
 
     goto :goto_1
 
-    .line 20
     :cond_1
     const v3, 0x7f110033
 
@@ -319,7 +287,6 @@
 
     goto :goto_1
 
-    .line 22
     :sswitch_2
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -327,7 +294,6 @@
 
     check-cast v3, Lcjy;
 
-    .line 23
     iget v3, v3, Lcjy;->b:I
 
     sget v7, Lcjy;->a:I
@@ -338,11 +304,9 @@
 
     const/4 v3, 0x1
 
-    .line 24
     :goto_4
     if-eqz v3, :cond_3
 
-    .line 25
     const v3, 0x7f1100b6
 
     move-object/from16 v0, p1
@@ -353,13 +317,11 @@
 
     goto :goto_1
 
-    .line 23
     :cond_2
     const/4 v3, 0x0
 
     goto :goto_4
 
-    .line 26
     :cond_3
     const v3, 0x7f1100b4
 
@@ -371,7 +333,6 @@
 
     goto/16 :goto_1
 
-    .line 28
     :sswitch_3
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -379,7 +340,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 29
     invoke-static {v3}, Ljava/lang/Double;->valueOf(Ljava/lang/String;)Ljava/lang/Double;
 
     move-result-object v3
@@ -388,14 +348,12 @@
 
     move-result-wide v8
 
-    .line 30
     const-wide/high16 v10, 0x3ff0000000000000L    # 1.0
 
     cmpg-double v3, v8, v10
 
     if-gez v3, :cond_4
 
-    .line 31
     move-object/from16 v0, p0
 
     iget-object v3, v0, Ldzw;->d:Ljava/util/Locale;
@@ -440,16 +398,13 @@
 
     goto/16 :goto_1
 
-    .line 32
     :cond_4
     double-to-int v3, v8
 
-    .line 33
     int-to-double v10, v3
 
     sub-double/2addr v8, v10
 
-    .line 34
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v3
@@ -464,14 +419,12 @@
 
     move-result-object v3
 
-    .line 35
     const-wide v10, 0x3f1a36e2eb1c432dL    # 1.0E-4
 
     cmpl-double v7, v8, v10
 
     if-lez v7, :cond_0
 
-    .line 36
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v7
@@ -541,7 +494,6 @@
 
     goto/16 :goto_1
 
-    .line 38
     :sswitch_4
     move-object/from16 v0, p0
 
@@ -555,7 +507,6 @@
 
     iput v3, v0, Ldzw;->f:I
 
-    .line 39
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -572,7 +523,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 40
     const v3, 0x7f11020b
 
     move-object/from16 v0, p1
@@ -581,12 +531,10 @@
 
     move-result-object v3
 
-    .line 41
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 42
     :cond_6
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -600,7 +548,6 @@
 
     goto/16 :goto_1
 
-    .line 44
     :sswitch_5
     move-object/from16 v0, p0
 
@@ -614,7 +561,6 @@
 
     iput v3, v0, Ldzw;->g:I
 
-    .line 45
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -631,7 +577,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 46
     const v3, 0x7f11020b
 
     move-object/from16 v0, p1
@@ -640,12 +585,10 @@
 
     move-result-object v3
 
-    .line 47
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 48
     :cond_7
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -659,7 +602,6 @@
 
     goto/16 :goto_1
 
-    .line 50
     :sswitch_6
     const-string v4, "\n"
 
@@ -685,7 +627,6 @@
 
     move-result-object v3
 
-    .line 51
     :goto_5
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -697,7 +638,6 @@
 
     goto/16 :goto_1
 
-    .line 50
     :cond_8
     new-instance v3, Ljava/lang/String;
 
@@ -705,7 +645,6 @@
 
     goto :goto_5
 
-    .line 53
     :sswitch_7
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -725,7 +664,6 @@
 
     goto/16 :goto_1
 
-    .line 55
     :sswitch_8
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -739,7 +677,6 @@
 
     move-result-wide v8
 
-    .line 57
     move-object/from16 v0, p0
 
     iget-object v3, v0, Ldzw;->e:Ljava/text/DecimalFormat;
@@ -750,7 +687,6 @@
 
     goto/16 :goto_1
 
-    .line 65
     :cond_9
     invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -758,13 +694,11 @@
 
     goto/16 :goto_1
 
-    .line 68
     :cond_a
     const/4 v2, 0x0
 
     goto/16 :goto_2
 
-    .line 76
     :cond_b
     const-string v2, "%s: %s"
 
@@ -792,19 +726,15 @@
 
     goto/16 :goto_3
 
-    .line 79
     :cond_c
     if-nez v5, :cond_d
 
-    .line 81
     invoke-static {v4}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 82
     if-eqz v2, :cond_d
 
-    .line 83
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
@@ -813,17 +743,14 @@
 
     move-result v2
 
-    .line 84
     if-eqz v3, :cond_d
 
     if-nez v2, :cond_e
 
-    .line 94
     :cond_d
     :goto_6
     return-void
 
-    .line 85
     :cond_e
     move-object/from16 v0, p0
 
@@ -843,7 +770,6 @@
 
     const/4 v9, 0x5
 
-    .line 86
     invoke-static {v8, v9}, Ldzj;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v8
@@ -858,12 +784,10 @@
 
     aput-object v3, v6, v7
 
-    .line 87
     invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 88
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ldzw;->d:Ljava/util/Locale;
@@ -882,7 +806,6 @@
 
     const/4 v9, 0x6
 
-    .line 89
     invoke-static {v8, v9}, Ldzj;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v8
@@ -897,12 +820,10 @@
 
     aput-object v2, v6, v7
 
-    .line 90
     invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 91
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ldzw;->c:Ljava/util/ArrayList;
@@ -917,7 +838,6 @@
 
     invoke-virtual {v4, v5, v3}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 92
     move-object/from16 v0, p0
 
     iget-object v3, v0, Ldzw;->c:Ljava/util/ArrayList;
@@ -932,12 +852,10 @@
 
     invoke-virtual {v3, v4, v2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 93
     invoke-virtual/range {p0 .. p0}, Ldzw;->notifyDataSetChanged()V
 
     goto :goto_6
 
-    .line 15
     nop
 
     :sswitch_data_0
@@ -957,8 +875,6 @@
 .method private final a(I)Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 114
     iget-object v0, p0, Ldzw;->d:Ljava/util/Locale;
 
     const-string v1, "%d"
@@ -985,13 +901,10 @@
 .method private final a(Ljava/lang/Object;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 107
     instance-of v0, p1, Ljava/lang/Integer;
 
     if-eqz v0, :cond_0
 
-    .line 108
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -1002,17 +915,14 @@
 
     move-result-object v0
 
-    .line 113
     :goto_0
     return-object v0
 
-    .line 109
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 110
     :try_start_0
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -1037,8 +947,6 @@
 .method public final areAllItemsEnabled()Z
     .locals 1
 
-    .prologue
-    .line 95
     const/4 v0, 0x0
 
     return v0
@@ -1047,8 +955,6 @@
 .method public final getCount()I
     .locals 1
 
-    .prologue
-    .line 97
     iget-object v0, p0, Ldzw;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1061,11 +967,8 @@
 .method public final getItem(I)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 98
     iget-object v0, p0, Ldzw;->b:Lcjx;
 
-    .line 99
     iget-object v0, v0, Lcjx;->a:Ljava/util/TreeMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1076,15 +979,12 @@
 
     move-result-object v0
 
-    .line 100
     return-object v0
 .end method
 
 .method public final getItemId(I)J
     .locals 2
 
-    .prologue
-    .line 101
     int-to-long v0, p1
 
     return-wide v0
@@ -1093,11 +993,8 @@
 .method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 3
 
-    .prologue
-    .line 102
     if-nez p2, :cond_0
 
-    .line 103
     iget-object v0, p0, Ldzw;->a:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -1116,7 +1013,6 @@
 
     move-object p2, v0
 
-    .line 105
     :goto_0
     iget-object v0, p0, Ldzw;->c:Ljava/util/ArrayList;
 
@@ -1128,10 +1024,8 @@
 
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 106
     return-object p2
 
-    .line 104
     :cond_0
     check-cast p2, Landroid/widget/TextView;
 
@@ -1141,8 +1035,6 @@
 .method public final isEnabled(I)Z
     .locals 1
 
-    .prologue
-    .line 96
     const/4 v0, 0x0
 
     return v0

@@ -11,8 +11,6 @@
 .method constructor <init>(Ljtm;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljto;->a:Ljtm;
 
     const/4 v0, 0x0
@@ -27,15 +25,11 @@
 .method final synthetic a(I)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 2
-    .line 3
     new-instance v0, Ljtt;
 
     iget-object v1, p0, Ljto;->a:Ljtm;
 
     invoke-direct {v0, v1, p1}, Ljtt;-><init>(Ljtm;I)V
 
-    .line 4
     return-object v0
 .end method

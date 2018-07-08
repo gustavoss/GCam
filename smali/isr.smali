@@ -24,8 +24,6 @@
 .method constructor <init>(Lisk;Liru;Ljava/util/concurrent/Executor;Lisk;Litc;Liru;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lisr;->f:Lisk;
 
     iput-object p2, p0, Lisr;->a:Liru;
@@ -48,17 +46,12 @@
 .method public final run()V
     .locals 6
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lisr;->f:Lisk;
 
-    .line 3
     iget-object v0, v0, Lisk;->a:Ljava/lang/Object;
 
-    .line 5
     if-eqz v0, :cond_0
 
-    .line 6
     iget-object v1, p0, Lisr;->a:Liru;
 
     iget-object v2, p0, Lisr;->b:Ljava/util/concurrent/Executor;
@@ -69,18 +62,14 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lisk;->a(Ljava/lang/Object;Liru;Ljava/util/concurrent/Executor;Lisk;Litc;)V
 
-    .line 24
     :goto_0
     return-void
 
-    .line 7
     :cond_0
     iget-object v0, p0, Lisr;->f:Lisk;
 
-    .line 8
     iget-object v0, v0, Lisk;->b:Lirr;
 
-    .line 9
     iget-object v1, p0, Lisr;->e:Liru;
 
     iget-object v2, p0, Lisr;->b:Ljava/util/concurrent/Executor;
@@ -89,16 +78,13 @@
 
     iget-object v4, p0, Lisr;->d:Litc;
 
-    .line 11
     :try_start_0
     invoke-interface {v1, v0, v2}, Liru;->a(Ljava/lang/Object;Ljava/util/concurrent/Executor;)Lirp;
 
     move-result-object v0
 
-    .line 12
     sget-object v1, Lkfe;->a:Lkfe;
 
-    .line 13
     new-instance v2, Lisy;
 
     invoke-direct {v2, v3}, Lisy;-><init>(Lisk;)V
@@ -113,7 +99,6 @@
 
     sget-object v1, Liqr;->a:Liqr;
 
-    .line 14
     invoke-interface {v0, v1}, Lirp;->a(Liqc;)V
     :try_end_0
     .catch Lirr; {:try_start_0 .. :try_end_0} :catch_0
@@ -121,28 +106,22 @@
 
     goto :goto_0
 
-    .line 16
     :catch_0
     move-exception v0
 
-    .line 17
     invoke-virtual {v3, v0}, Lisk;->a(Lirr;)Z
 
     goto :goto_0
 
-    .line 19
     :catch_1
     move-exception v0
 
-    .line 21
     invoke-static {v0}, Lirr;->a(Ljava/lang/Throwable;)Lirr;
 
     move-result-object v0
 
-    .line 22
     check-cast v0, Lirr;
 
-    .line 23
     invoke-virtual {v3, v0}, Lisk;->a(Lirr;)Z
 
     goto :goto_0
@@ -151,8 +130,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 25
     iget-object v0, p0, Lisr;->f:Lisk;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

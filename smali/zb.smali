@@ -19,33 +19,24 @@
 .method private constructor <init>(Lyv;Lzz;ILabo;Lzv;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lzb;->a:Lyv;
 
     invoke-direct {p0}, Laao;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lzb;->b:Lzz;
 
-    .line 3
     iput p3, p0, Lzb;->c:I
 
-    .line 4
     iput-object p4, p0, Lzb;->d:Labo;
 
-    .line 5
     iput-object p5, p0, Lzb;->e:Lzv;
 
-    .line 6
     return-void
 .end method
 
 .method synthetic constructor <init>(Lyv;Lzz;ILabo;Lzv;B)V
     .locals 0
 
-    .prologue
-    .line 59
     invoke-direct/range {p0 .. p5}, Lzb;-><init>(Lyv;Lzz;ILabo;Lzv;)V
 
     return-void
@@ -56,8 +47,6 @@
 .method public final a()I
     .locals 1
 
-    .prologue
-    .line 7
     iget v0, p0, Lzb;->c:I
 
     return v0
@@ -66,26 +55,20 @@
 .method public final a(Landroid/os/Handler;Laad;)V
     .locals 3
 
-    .prologue
-    .line 19
     new-instance v0, Lzf;
 
     invoke-direct {v0, p0, p1, p2}, Lzf;-><init>(Lzb;Landroid/os/Handler;Laad;)V
 
-    .line 20
     iget-object v1, p0, Lzb;->a:Lyv;
 
-    .line 21
     iget-object v1, v1, Lyv;->f:Labz;
 
-    .line 22
     new-instance v2, Lzh;
 
     invoke-direct {v2, p0, v0}, Lzh;-><init>(Lzb;Landroid/hardware/Camera$AutoFocusCallback;)V
 
     invoke-virtual {v1, v2}, Labz;->a(Ljava/lang/Runnable;)V
 
-    .line 23
     return-void
 .end method
 
@@ -95,15 +78,11 @@
         value = 0x10
     .end annotation
 
-    .prologue
-    .line 24
     :try_start_0
     iget-object v0, p0, Lzb;->a:Lyv;
 
-    .line 25
     iget-object v0, v0, Lyv;->f:Labz;
 
-    .line 26
     new-instance v1, Lzi;
 
     invoke-direct {v1, p0, p1, p2}, Lzi;-><init>(Lzb;Landroid/os/Handler;Laae;)V
@@ -112,15 +91,12 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 30
     :goto_0
     return-void
 
-    .line 28
     :catch_0
     move-exception v0
 
-    .line 29
     iget-object v1, p0, Lzb;->b:Lzz;
 
     invoke-virtual {v1}, Lzz;->f()Labp;
@@ -135,41 +111,31 @@
 .method public final a(Landroid/os/Handler;Laan;)V
     .locals 2
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lzb;->a:Lyv;
 
-    .line 12
     iget-object v0, v0, Lyv;->f:Labz;
 
-    .line 13
     new-instance v1, Lzc;
 
     invoke-direct {v1, p0, p1, p2}, Lzc;-><init>(Lzb;Landroid/os/Handler;Laan;)V
 
     invoke-virtual {v0, v1}, Labz;->a(Ljava/lang/Runnable;)V
 
-    .line 14
     return-void
 .end method
 
 .method public final a(Landroid/os/Handler;Laaz;Laam;Laam;)V
     .locals 7
 
-    .prologue
-    .line 31
     new-instance v5, Lzj;
 
     invoke-direct {v5, p0, p1, p4}, Lzj;-><init>(Lzb;Landroid/os/Handler;Laam;)V
 
-    .line 32
     :try_start_0
     iget-object v0, p0, Lzb;->a:Lyv;
 
-    .line 33
     iget-object v6, v0, Lyv;->f:Labz;
 
-    .line 34
     new-instance v0, Lzl;
 
     move-object v1, p0
@@ -186,15 +152,12 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 38
     :goto_0
     return-void
 
-    .line 36
     :catch_0
     move-exception v0
 
-    .line 37
     iget-object v1, p0, Lzb;->b:Lzz;
 
     invoke-virtual {v1}, Lzz;->f()Labp;
@@ -209,8 +172,6 @@
 .method public final a(Labv;)Z
     .locals 1
 
-    .prologue
-    .line 49
     const/4 v0, 0x6
 
     invoke-virtual {p0, p1, v0}, Lzb;->a(Labv;I)Z
@@ -223,8 +184,6 @@
 .method public final b()Labo;
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lzb;->d:Labo;
 
     return-object v0
@@ -233,29 +192,22 @@
 .method public final b(Landroid/os/Handler;Laan;)V
     .locals 2
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lzb;->a:Lyv;
 
-    .line 16
     iget-object v0, v0, Lyv;->f:Labz;
 
-    .line 17
     new-instance v1, Lze;
 
     invoke-direct {v1, p0, p1, p2}, Lze;-><init>(Lzb;Landroid/os/Handler;Laan;)V
 
     invoke-virtual {v0, v1}, Labz;->a(Ljava/lang/Runnable;)V
 
-    .line 18
     return-void
 .end method
 
 .method public final c()Labg;
     .locals 2
 
-    .prologue
-    .line 9
     new-instance v0, Lzv;
 
     iget-object v1, p0, Lzb;->e:Lzv;
@@ -268,8 +220,6 @@
 .method public final d()Lzz;
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lzb;->b:Lzz;
 
     return-object v0
@@ -280,25 +230,19 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 39
     new-instance v0, Labd;
 
     invoke-direct {v0}, Labd;-><init>()V
 
-    .line 40
     const/4 v1, 0x1
 
     new-array v1, v1, [Landroid/hardware/Camera$Parameters;
 
-    .line 41
     :try_start_0
     iget-object v2, p0, Lzb;->a:Lyv;
 
-    .line 42
     iget-object v2, v2, Lyv;->f:Labz;
 
-    .line 43
     new-instance v3, Lzd;
 
     invoke-direct {v3, p0, v1, v0}, Lzd;-><init>(Lzb;[Landroid/hardware/Camera$Parameters;Labd;)V
@@ -311,7 +255,6 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 47
     :goto_0
     const/4 v0, 0x0
 
@@ -319,11 +262,9 @@
 
     return-object v0
 
-    .line 45
     :catch_0
     move-exception v0
 
-    .line 46
     iget-object v2, p0, Lzb;->b:Lzz;
 
     invoke-virtual {v2}, Lzz;->f()Labp;
@@ -338,8 +279,6 @@
 .method public final g()Labv;
     .locals 3
 
-    .prologue
-    .line 48
     new-instance v0, Lzy;
 
     iget-object v1, p0, Lzb;->e:Lzv;
@@ -356,41 +295,29 @@
 .method public final h()Landroid/os/Handler;
     .locals 1
 
-    .prologue
-    .line 50
     iget-object v0, p0, Lzb;->a:Lyv;
 
-    .line 51
     iget-object v0, v0, Lyv;->d:Lzm;
 
-    .line 52
     return-object v0
 .end method
 
 .method public final i()Labz;
     .locals 1
 
-    .prologue
-    .line 53
     iget-object v0, p0, Lzb;->a:Lyv;
 
-    .line 54
     iget-object v0, v0, Lyv;->f:Labz;
 
-    .line 55
     return-object v0
 .end method
 
 .method public final j()Labx;
     .locals 1
 
-    .prologue
-    .line 56
     iget-object v0, p0, Lzb;->a:Lyv;
 
-    .line 57
     iget-object v0, v0, Lyv;->e:Labx;
 
-    .line 58
     return-object v0
 .end method

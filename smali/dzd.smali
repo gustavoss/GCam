@@ -14,8 +14,6 @@
 .method constructor <init>(Ldyy;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldzd;->a:Ldyy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,18 +26,14 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 9
 
-    .prologue
     const/4 v8, 0x0
 
-    .line 2
     iget-object v1, p0, Ldzd;->a:Ldyy;
 
-    .line 4
     iget-object v2, v1, Ldyy;->i:Ljava/lang/Boolean;
 
     monitor-enter v2
 
-    .line 5
     const/4 v0, 0x0
 
     :try_start_0
@@ -49,12 +43,10 @@
 
     iput-object v0, v1, Ldyy;->j:Ljava/lang/Boolean;
 
-    .line 6
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8
     invoke-virtual {v1}, Ldyy;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -69,17 +61,14 @@
 
     move-result-object v6
 
-    .line 9
     new-instance v2, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    .line 10
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 11
     iget-object v0, v1, Ldyy;->f:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -120,7 +109,6 @@
 
     move-result-object v3
 
-    .line 12
     new-instance v0, Ldze;
 
     invoke-direct/range {v0 .. v6}, Ldze;-><init>(Ldyy;Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/String;JLjava/lang/String;)V
@@ -129,13 +117,10 @@
 
     new-array v2, v8, [Ljava/lang/Void;
 
-    .line 13
     invoke-virtual {v0, v1, v2}, Ldze;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 14
     return-void
 
-    .line 6
     :catchall_0
     move-exception v0
 

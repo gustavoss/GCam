@@ -34,11 +34,8 @@
 .method private constructor <init>(Landroid/content/Context;Lagb;Laif;Lahf;Lahd;Lapn;Lape;ILaqn;Ljava/util/Map;)V
     .locals 24
 
-    .prologue
-    .line 98
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 99
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
@@ -47,62 +44,52 @@
 
     iput-object v4, v0, Lacj;->h:Ljava/util/List;
 
-    .line 100
     move-object/from16 v0, p4
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lacj;->a:Lahf;
 
-    .line 101
     move-object/from16 v0, p5
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lacj;->e:Lahd;
 
-    .line 102
     move-object/from16 v0, p3
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lacj;->b:Laif;
 
-    .line 103
     move-object/from16 v0, p6
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lacj;->f:Lapn;
 
-    .line 104
     move-object/from16 v0, p7
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lacj;->g:Lape;
 
-    .line 106
     move-object/from16 v0, p9
 
     iget-object v4, v0, Laqn;->s:Lady;
 
-    .line 107
     sget-object v5, Lamv;->a:Ladv;
 
     invoke-virtual {v4, v5}, Lady;->a(Ladv;)Ljava/lang/Object;
 
-    .line 108
     new-instance v4, Laiu;
 
     invoke-direct {v4}, Laiu;-><init>()V
 
-    .line 109
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    .line 110
     new-instance v5, Laco;
 
     invoke-direct {v5}, Laco;-><init>()V
@@ -111,7 +98,6 @@
 
     iput-object v5, v0, Lacj;->d:Laco;
 
-    .line 111
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lacj;->d:Laco;
@@ -120,12 +106,10 @@
 
     invoke-direct {v6}, Lamj;-><init>()V
 
-    .line 112
     iget-object v5, v5, Laco;->d:Laqa;
 
     invoke-virtual {v5, v6}, Laqa;->a(Ladr;)V
 
-    .line 113
     new-instance v5, Lamv;
 
     move-object/from16 v0, p0
@@ -136,7 +120,6 @@
 
     move-result-object v6
 
-    .line 114
     invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object v7
@@ -147,14 +130,12 @@
 
     invoke-direct {v5, v6, v7, v0, v1}, Lamv;-><init>(Ljava/util/List;Landroid/util/DisplayMetrics;Lahf;Lahd;)V
 
-    .line 115
     new-instance v6, Laod;
 
     move-object/from16 v0, p0
 
     iget-object v7, v0, Lacj;->d:Laco;
 
-    .line 116
     invoke-virtual {v7}, Laco;->a()Ljava/util/List;
 
     move-result-object v7
@@ -167,7 +148,6 @@
 
     invoke-direct {v6, v0, v7, v1, v2}, Laod;-><init>(Landroid/content/Context;Ljava/util/List;Lahf;Lahd;)V
 
-    .line 119
     new-instance v7, Lann;
 
     new-instance v8, Lant;
@@ -178,68 +158,56 @@
 
     invoke-direct {v7, v0, v8}, Lann;-><init>(Lahf;Lans;)V
 
-    .line 121
     new-instance v8, Lamg;
 
     invoke-direct {v8, v5}, Lamg;-><init>(Lamv;)V
 
-    .line 122
     new-instance v9, Lanh;
 
     move-object/from16 v0, p5
 
     invoke-direct {v9, v5, v0}, Lanh;-><init>(Lamv;Lahd;)V
 
-    .line 123
     new-instance v5, Laoa;
 
     move-object/from16 v0, p1
 
     invoke-direct {v5, v0}, Laoa;-><init>(Landroid/content/Context;)V
 
-    .line 124
     new-instance v10, Lakx;
 
     invoke-direct {v10, v4}, Lakx;-><init>(Landroid/content/res/Resources;)V
 
-    .line 125
     new-instance v11, Laky;
 
     invoke-direct {v11, v4}, Laky;-><init>(Landroid/content/res/Resources;)V
 
-    .line 126
     new-instance v12, Lakw;
 
     invoke-direct {v12, v4}, Lakw;-><init>(Landroid/content/res/Resources;)V
 
-    .line 127
     new-instance v13, Lakv;
 
     invoke-direct {v13, v4}, Lakv;-><init>(Landroid/content/res/Resources;)V
 
-    .line 128
     new-instance v14, Lamd;
 
     move-object/from16 v0, p5
 
     invoke-direct {v14, v0}, Lamd;-><init>(Lahd;)V
 
-    .line 129
     new-instance v15, Laos;
 
     invoke-direct {v15}, Laos;-><init>()V
 
-    .line 130
     new-instance v16, Laov;
 
     invoke-direct/range {v16 .. v16}, Laov;-><init>()V
 
-    .line 131
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v17
 
-    .line 132
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lacj;->d:Laco;
@@ -252,7 +220,6 @@
 
     invoke-direct/range {v20 .. v20}, Lajg;-><init>()V
 
-    .line 133
     invoke-virtual/range {v18 .. v20}, Laco;->a(Ljava/lang/Class;Ladp;)Laco;
 
     move-result-object v18
@@ -267,7 +234,6 @@
 
     invoke-direct {v0, v1}, Lakz;-><init>(Lahd;)V
 
-    .line 134
     invoke-virtual/range {v18 .. v20}, Laco;->a(Ljava/lang/Class;Ladp;)Laco;
 
     move-result-object v18
@@ -278,7 +244,6 @@
 
     const-class v21, Landroid/graphics/Bitmap;
 
-    .line 135
     move-object/from16 v0, v18
 
     move-object/from16 v1, v19
@@ -297,7 +262,6 @@
 
     const-class v21, Landroid/graphics/Bitmap;
 
-    .line 136
     move-object/from16 v0, v18
 
     move-object/from16 v1, v19
@@ -316,7 +280,6 @@
 
     const-class v21, Landroid/graphics/Bitmap;
 
-    .line 137
     move-object/from16 v0, v18
 
     move-object/from16 v1, v19
@@ -335,15 +298,12 @@
 
     const-class v21, Landroid/graphics/Bitmap;
 
-    .line 139
     new-instance v22, Lann;
 
     new-instance v23, Lanq;
 
-    .line 140
     invoke-direct/range {v23 .. v23}, Lanq;-><init>()V
 
-    .line 141
     move-object/from16 v0, v22
 
     move-object/from16 v1, p4
@@ -352,7 +312,6 @@
 
     invoke-direct {v0, v1, v2}, Lann;-><init>(Lahf;Lans;)V
 
-    .line 142
     invoke-virtual/range {v18 .. v22}, Laco;->a(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Ladz;)Laco;
 
     move-result-object v18
@@ -361,10 +320,8 @@
 
     const-class v20, Landroid/graphics/Bitmap;
 
-    .line 143
     sget-object v21, Lalf;->a:Lalf;
 
-    .line 144
     invoke-virtual/range {v18 .. v21}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v18
@@ -379,14 +336,12 @@
 
     invoke-direct/range {v22 .. v22}, Lanl;-><init>()V
 
-    .line 145
     invoke-virtual/range {v18 .. v22}, Laco;->a(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Ladz;)Laco;
 
     move-result-object v18
 
     const-class v19, Landroid/graphics/Bitmap;
 
-    .line 146
     move-object/from16 v0, v18
 
     move-object/from16 v1, v19
@@ -407,7 +362,6 @@
 
     invoke-direct {v0, v4, v8}, Lama;-><init>(Landroid/content/res/Resources;Ladz;)V
 
-    .line 147
     invoke-virtual/range {v18 .. v22}, Laco;->a(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Ladz;)Laco;
 
     move-result-object v8
@@ -424,7 +378,6 @@
 
     invoke-direct {v0, v4, v9}, Lama;-><init>(Landroid/content/res/Resources;Ladz;)V
 
-    .line 148
     move-object/from16 v0, v18
 
     move-object/from16 v1, v19
@@ -449,7 +402,6 @@
 
     invoke-direct {v0, v4, v7}, Lama;-><init>(Landroid/content/res/Resources;Ladz;)V
 
-    .line 149
     move-object/from16 v0, v18
 
     move-object/from16 v1, v19
@@ -468,7 +420,6 @@
 
     invoke-direct {v9, v0, v14}, Lamb;-><init>(Lahf;Laea;)V
 
-    .line 150
     invoke-virtual {v7, v8, v9}, Laco;->a(Ljava/lang/Class;Laea;)Laco;
 
     move-result-object v7
@@ -487,7 +438,6 @@
 
     move-object/from16 v19, v0
 
-    .line 151
     invoke-virtual/range {v19 .. v19}, Laco;->a()Ljava/util/List;
 
     move-result-object v19
@@ -500,7 +450,6 @@
 
     invoke-direct {v0, v1, v6, v2}, Laor;-><init>(Ljava/util/List;Ladz;Lahd;)V
 
-    .line 152
     move-object/from16 v0, v18
 
     invoke-virtual {v7, v8, v9, v14, v0}, Laco;->a(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Ladz;)Laco;
@@ -513,7 +462,6 @@
 
     const-class v14, Laog;
 
-    .line 153
     invoke-virtual {v7, v8, v9, v14, v6}, Laco;->a(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Ladz;)Laco;
 
     move-result-object v6
@@ -524,7 +472,6 @@
 
     invoke-direct {v8}, Laoi;-><init>()V
 
-    .line 154
     invoke-virtual {v6, v7, v8}, Laco;->a(Ljava/lang/Class;Laea;)Laco;
 
     move-result-object v6
@@ -533,10 +480,8 @@
 
     const-class v8, Ladg;
 
-    .line 155
     sget-object v9, Lalf;->a:Lalf;
 
-    .line 156
     invoke-virtual {v6, v7, v8, v9}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v6
@@ -553,7 +498,6 @@
 
     invoke-direct {v14, v0}, Laop;-><init>(Lahf;)V
 
-    .line 157
     invoke-virtual {v6, v7, v8, v9, v14}, Laco;->a(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Ladz;)Laco;
 
     move-result-object v6
@@ -562,7 +506,6 @@
 
     const-class v8, Landroid/graphics/drawable/Drawable;
 
-    .line 158
     invoke-virtual {v6, v7, v8, v5}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Ladz;)Laco;
 
     move-result-object v6
@@ -577,7 +520,6 @@
 
     invoke-direct {v9, v5, v0}, Lang;-><init>(Laoa;Lahf;)V
 
-    .line 159
     invoke-virtual {v6, v7, v8, v9}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Ladz;)Laco;
 
     move-result-object v5
@@ -586,7 +528,6 @@
 
     invoke-direct {v6}, Lanv;-><init>()V
 
-    .line 160
     invoke-virtual {v5, v6}, Laco;->a(Laei;)Laco;
 
     move-result-object v5
@@ -599,7 +540,6 @@
 
     invoke-direct {v8}, Lajj;-><init>()V
 
-    .line 161
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -614,7 +554,6 @@
 
     invoke-direct {v8, v9}, Lajp;-><init>(B)V
 
-    .line 162
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -627,7 +566,6 @@
 
     invoke-direct {v8}, Laoc;-><init>()V
 
-    .line 163
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Ladz;)Laco;
 
     move-result-object v5
@@ -640,7 +578,6 @@
 
     invoke-direct {v8}, Lajp;-><init>()V
 
-    .line 164
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -649,10 +586,8 @@
 
     const-class v7, Ljava/io/File;
 
-    .line 165
     sget-object v8, Lalf;->a:Lalf;
 
-    .line 166
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -663,7 +598,6 @@
 
     invoke-direct {v6, v0}, Laes;-><init>(Lahd;)V
 
-    .line 167
     invoke-virtual {v5, v6}, Laco;->a(Laei;)Laco;
 
     move-result-object v5
@@ -672,7 +606,6 @@
 
     const-class v7, Ljava/io/InputStream;
 
-    .line 168
     invoke-virtual {v5, v6, v7, v10}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -681,7 +614,6 @@
 
     const-class v7, Landroid/os/ParcelFileDescriptor;
 
-    .line 169
     invoke-virtual {v5, v6, v7, v12}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -690,7 +622,6 @@
 
     const-class v7, Ljava/io/InputStream;
 
-    .line 170
     invoke-virtual {v5, v6, v7, v10}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -699,7 +630,6 @@
 
     const-class v7, Landroid/os/ParcelFileDescriptor;
 
-    .line 171
     invoke-virtual {v5, v6, v7, v12}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -708,7 +638,6 @@
 
     const-class v7, Landroid/net/Uri;
 
-    .line 172
     invoke-virtual {v5, v6, v7, v11}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -717,7 +646,6 @@
 
     const-class v7, Landroid/content/res/AssetFileDescriptor;
 
-    .line 173
     invoke-virtual {v5, v6, v7, v13}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -726,7 +654,6 @@
 
     const-class v7, Landroid/content/res/AssetFileDescriptor;
 
-    .line 174
     invoke-virtual {v5, v6, v7, v13}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -735,7 +662,6 @@
 
     const-class v7, Landroid/net/Uri;
 
-    .line 175
     invoke-virtual {v5, v6, v7, v11}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -748,7 +674,6 @@
 
     invoke-direct {v8}, Lajn;-><init>()V
 
-    .line 176
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -761,7 +686,6 @@
 
     invoke-direct {v8}, Lald;-><init>()V
 
-    .line 177
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -774,7 +698,6 @@
 
     invoke-direct {v8}, Lalc;-><init>()V
 
-    .line 178
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -787,7 +710,6 @@
 
     invoke-direct {v8}, Lalb;-><init>()V
 
-    .line 179
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -800,7 +722,6 @@
 
     invoke-direct {v8}, Lalr;-><init>()V
 
-    .line 180
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -811,7 +732,6 @@
 
     new-instance v8, Laiy;
 
-    .line 181
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v9
@@ -828,14 +748,12 @@
 
     new-instance v8, Laix;
 
-    .line 182
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v9
 
     invoke-direct {v8, v9}, Laix;-><init>(Landroid/content/res/AssetManager;)V
 
-    .line 183
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -850,7 +768,6 @@
 
     invoke-direct {v8, v0}, Lalt;-><init>(Landroid/content/Context;)V
 
-    .line 184
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -865,7 +782,6 @@
 
     invoke-direct {v8, v0}, Lalv;-><init>(Landroid/content/Context;)V
 
-    .line 185
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -880,7 +796,6 @@
 
     invoke-direct {v8, v0}, Lall;-><init>(Landroid/content/ContentResolver;)V
 
-    .line 186
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -895,7 +810,6 @@
 
     invoke-direct {v8, v0}, Lalj;-><init>(Landroid/content/ContentResolver;)V
 
-    .line 187
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -910,7 +824,6 @@
 
     invoke-direct {v8, v0}, Lali;-><init>(Landroid/content/ContentResolver;)V
 
-    .line 188
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -923,7 +836,6 @@
 
     invoke-direct {v8}, Laln;-><init>()V
 
-    .line 189
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -936,7 +848,6 @@
 
     invoke-direct {v8}, Lalx;-><init>()V
 
-    .line 190
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -951,7 +862,6 @@
 
     invoke-direct {v8, v0}, Lakc;-><init>(Landroid/content/Context;)V
 
-    .line 191
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -964,7 +874,6 @@
 
     invoke-direct {v8}, Lalp;-><init>()V
 
-    .line 192
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -977,7 +886,6 @@
 
     invoke-direct {v8}, Laja;-><init>()V
 
-    .line 193
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -990,7 +898,6 @@
 
     invoke-direct {v8}, Laje;-><init>()V
 
-    .line 194
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -999,10 +906,8 @@
 
     const-class v7, Landroid/net/Uri;
 
-    .line 195
     sget-object v8, Lalf;->a:Lalf;
 
-    .line 196
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -1011,10 +916,8 @@
 
     const-class v7, Landroid/graphics/drawable/Drawable;
 
-    .line 197
     sget-object v8, Lalf;->a:Lalf;
 
-    .line 198
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Lakk;)Laco;
 
     move-result-object v5
@@ -1027,7 +930,6 @@
 
     invoke-direct {v8}, Laob;-><init>()V
 
-    .line 199
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Ladz;)Laco;
 
     move-result-object v5
@@ -1040,7 +942,6 @@
 
     invoke-direct {v8, v4}, Laot;-><init>(Landroid/content/res/Resources;)V
 
-    .line 200
     invoke-virtual {v5, v6, v7, v8}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Laow;)Laco;
 
     move-result-object v4
@@ -1049,7 +950,6 @@
 
     const-class v6, [B
 
-    .line 201
     invoke-virtual {v4, v5, v6, v15}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Laow;)Laco;
 
     move-result-object v4
@@ -1066,7 +966,6 @@
 
     invoke-direct {v7, v0, v15, v1}, Laou;-><init>(Lahf;Laow;Laow;)V
 
-    .line 202
     invoke-virtual {v4, v5, v6, v7}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Laow;)Laco;
 
     move-result-object v4
@@ -1075,17 +974,14 @@
 
     const-class v6, [B
 
-    .line 203
     move-object/from16 v0, v16
 
     invoke-virtual {v4, v5, v6, v0}, Laco;->a(Ljava/lang/Class;Ljava/lang/Class;Laow;)Laco;
 
-    .line 204
     new-instance v4, Laqw;
 
     invoke-direct {v4}, Laqw;-><init>()V
 
-    .line 205
     new-instance v4, Lacl;
 
     move-object/from16 v0, p0
@@ -1110,27 +1006,21 @@
 
     iput-object v4, v0, Lacj;->c:Lacl;
 
-    .line 206
     return-void
 .end method
 
 .method private static a()Laci;
     .locals 3
 
-    .prologue
-    .line 86
     const/4 v1, 0x0
 
-    .line 87
     :try_start_0
     const-string v0, "com.bumptech.glide.GeneratedAppGlideModuleImpl"
 
-    .line 88
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 89
     const/4 v2, 0x0
 
     new-array v2, v2, [Ljava/lang/Class;
@@ -1155,11 +1045,9 @@
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_4
 
-    .line 97
     :goto_0
     return-object v0
 
-    .line 92
     :catch_0
     move-exception v0
 
@@ -1173,7 +1061,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 93
     const-string v0, "Glide"
 
     const-string v2, "Failed to find GeneratedAppGlideModule. You should include an annotationProcessor compile dependency on com.github.bumptech.glide:compiler in your application and a @GlideModule annotated AppGlideModule implementation or LibraryGlideModules will be silently ignored"
@@ -1183,14 +1070,11 @@
     :cond_0
     move-object v0, v1
 
-    .line 94
     goto :goto_0
 
-    .line 95
     :catch_1
     move-exception v0
 
-    .line 96
     :goto_1
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -1200,7 +1084,6 @@
 
     throw v1
 
-    .line 95
     :catch_2
     move-exception v0
 
@@ -1220,29 +1103,23 @@
 .method public static a(Landroid/content/Context;)Lacj;
     .locals 25
 
-    .prologue
-    .line 1
     sget-object v4, Lacj;->i:Lacj;
 
     if-nez v4, :cond_13
 
-    .line 2
     const-class v15, Lacj;
 
     monitor-enter v15
 
-    .line 3
     :try_start_0
     sget-object v4, Lacj;->i:Lacj;
 
     if-nez v4, :cond_12
 
-    .line 5
     sget-boolean v4, Lacj;->j:Z
 
     if-eqz v4, :cond_0
 
-    .line 6
     new-instance v4, Ljava/lang/IllegalStateException;
 
     const-string v5, "You cannot call Glide.get() in registerComponents(), use the provided Glide instance instead"
@@ -1251,7 +1128,6 @@
 
     throw v4
 
-    .line 84
     :catchall_0
     move-exception v4
 
@@ -1261,32 +1137,26 @@
 
     throw v4
 
-    .line 7
     :cond_0
     const/4 v4, 0x1
 
     :try_start_1
     sput-boolean v4, Lacj;->j:Z
 
-    .line 9
     new-instance v14, Lack;
 
     invoke-direct {v14}, Lack;-><init>()V
 
-    .line 10
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v16
 
-    .line 11
     invoke-static {}, Lacj;->a()Laci;
 
     move-result-object v4
 
-    .line 12
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
-    .line 13
     new-instance v5, Lazc;
 
     move-object/from16 v0, v16
@@ -1297,10 +1167,8 @@
 
     move-result-object v17
 
-    .line 14
     if-eqz v4, :cond_3
 
-    .line 15
     invoke-virtual {v4}, Laci;->a()Ljava/util/Set;
 
     move-result-object v5
@@ -1311,17 +1179,14 @@
 
     if-nez v5, :cond_3
 
-    .line 17
     invoke-virtual {v4}, Laci;->a()Ljava/util/Set;
 
     move-result-object v5
 
-    .line 18
     invoke-interface/range {v17 .. v17}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
 
-    .line 19
     :cond_1
     :goto_0
     invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
@@ -1330,14 +1195,12 @@
 
     if-eqz v4, :cond_3
 
-    .line 20
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lapv;
 
-    .line 21
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v7
@@ -1348,7 +1211,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 22
     const-string v7, "Glide"
 
     const/4 v8, 0x3
@@ -1359,7 +1221,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 23
     const-string v7, "Glide"
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -1396,13 +1257,11 @@
 
     invoke-static {v7, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 24
     :cond_2
     invoke-interface {v6}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 26
     :cond_3
     const-string v4, "Glide"
 
@@ -1414,7 +1273,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 27
     invoke-interface/range {v17 .. v17}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -1432,7 +1290,6 @@
 
     check-cast v4, Lapv;
 
-    .line 28
     const-string v6, "Glide"
 
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -1475,7 +1332,6 @@
 
     goto :goto_1
 
-    .line 30
     :cond_4
     invoke-interface/range {v17 .. v17}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1494,18 +1350,15 @@
 
     check-cast v4, Lapv;
 
-    .line 31
     invoke-interface {v4}, Lapv;->b()V
 
     goto :goto_2
 
-    .line 34
     :cond_5
     iget-object v4, v14, Lack;->f:Lain;
 
     if-nez v4, :cond_6
 
-    .line 36
     invoke-static {}, Lain;->c()I
 
     move-result v6
@@ -1514,7 +1367,6 @@
 
     sget-object v7, Laiq;->b:Laiq;
 
-    .line 38
     new-instance v13, Lain;
 
     new-instance v5, Ljava/util/concurrent/ThreadPoolExecutor;
@@ -1541,85 +1393,69 @@
 
     invoke-direct {v13, v5}, Lain;-><init>(Ljava/util/concurrent/ExecutorService;)V
 
-    .line 39
     iput-object v13, v14, Lack;->f:Lain;
 
-    .line 40
     :cond_6
     iget-object v4, v14, Lack;->g:Lain;
 
     if-nez v4, :cond_7
 
-    .line 41
     invoke-static {}, Lain;->a()Lain;
 
     move-result-object v4
 
     iput-object v4, v14, Lack;->g:Lain;
 
-    .line 42
     :cond_7
     iget-object v4, v14, Lack;->m:Lain;
 
     if-nez v4, :cond_8
 
-    .line 43
     invoke-static {}, Lain;->b()Lain;
 
     move-result-object v4
 
     iput-object v4, v14, Lack;->m:Lain;
 
-    .line 44
     :cond_8
     iget-object v4, v14, Lack;->i:Laih;
 
     if-nez v4, :cond_9
 
-    .line 45
     new-instance v4, Laii;
 
     move-object/from16 v0, v16
 
     invoke-direct {v4, v0}, Laii;-><init>(Landroid/content/Context;)V
 
-    .line 46
     new-instance v5, Laih;
 
     invoke-direct {v5, v4}, Laih;-><init>(Laii;)V
 
-    .line 47
     iput-object v5, v14, Lack;->i:Laih;
 
-    .line 48
     :cond_9
     iget-object v4, v14, Lack;->j:Lape;
 
     if-nez v4, :cond_a
 
-    .line 49
     new-instance v4, Lape;
 
     invoke-direct {v4}, Lape;-><init>()V
 
     iput-object v4, v14, Lack;->j:Lape;
 
-    .line 50
     :cond_a
     iget-object v4, v14, Lack;->c:Lahf;
 
     if-nez v4, :cond_b
 
-    .line 51
     iget-object v4, v14, Lack;->i:Laih;
 
-    .line 52
     iget v4, v4, Laih;->a:I
 
-    .line 54
     if-lez v4, :cond_10
 
-    .line 55
     new-instance v5, Lahn;
 
     int-to-long v6, v4
@@ -1628,54 +1464,44 @@
 
     iput-object v5, v14, Lack;->c:Lahf;
 
-    .line 57
     :cond_b
     :goto_3
     iget-object v4, v14, Lack;->d:Lahd;
 
     if-nez v4, :cond_c
 
-    .line 58
     new-instance v4, Lahd;
 
     iget-object v5, v14, Lack;->i:Laih;
 
-    .line 59
     iget v5, v5, Laih;->c:I
 
-    .line 60
     invoke-direct {v4, v5}, Lahd;-><init>(I)V
 
     iput-object v4, v14, Lack;->d:Lahd;
 
-    .line 61
     :cond_c
     iget-object v4, v14, Lack;->e:Laif;
 
     if-nez v4, :cond_d
 
-    .line 62
     new-instance v4, Laie;
 
     iget-object v5, v14, Lack;->i:Laih;
 
-    .line 63
     iget v5, v5, Laih;->b:I
 
-    .line 64
     int-to-long v6, v5
 
     invoke-direct {v4, v6, v7}, Laie;-><init>(J)V
 
     iput-object v4, v14, Lack;->e:Laif;
 
-    .line 65
     :cond_d
     iget-object v4, v14, Lack;->h:Lahw;
 
     if-nez v4, :cond_e
 
-    .line 66
     new-instance v4, Lahw;
 
     move-object/from16 v0, v16
@@ -1684,13 +1510,11 @@
 
     iput-object v4, v14, Lack;->h:Lahw;
 
-    .line 67
     :cond_e
     iget-object v4, v14, Lack;->b:Lagb;
 
     if-nez v4, :cond_f
 
-    .line 68
     new-instance v4, Lagb;
 
     iget-object v13, v14, Lack;->e:Laif;
@@ -1707,7 +1531,6 @@
 
     move-object/from16 v20, v0
 
-    .line 69
     new-instance v21, Lain;
 
     new-instance v5, Ljava/util/concurrent/ThreadPoolExecutor;
@@ -1746,7 +1569,6 @@
 
     invoke-direct {v0, v5}, Lain;-><init>(Ljava/util/concurrent/ExecutorService;)V
 
-    .line 70
     invoke-static {}, Lain;->b()Lain;
 
     move-result-object v10
@@ -1765,7 +1587,6 @@
 
     iput-object v4, v14, Lack;->b:Lagb;
 
-    .line 71
     :cond_f
     new-instance v10, Lapn;
 
@@ -1773,7 +1594,6 @@
 
     invoke-direct {v10, v4}, Lapn;-><init>(Lapo;)V
 
-    .line 72
     new-instance v4, Lacj;
 
     iget-object v6, v14, Lack;->b:Lagb;
@@ -1790,19 +1610,16 @@
 
     iget-object v13, v14, Lack;->l:Laqn;
 
-    .line 74
     const/4 v5, 0x1
 
     iput-boolean v5, v13, Laqn;->v:Z
 
-    .line 76
     iget-object v14, v14, Lack;->a:Ljava/util/Map;
 
     move-object/from16 v5, v16
 
     invoke-direct/range {v4 .. v14}, Lacj;-><init>(Landroid/content/Context;Lagb;Laif;Lahf;Lahd;Lapn;Lape;ILaqn;Ljava/util/Map;)V
 
-    .line 78
     invoke-interface/range {v17 .. v17}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -1820,12 +1637,10 @@
 
     check-cast v5, Lapv;
 
-    .line 79
     invoke-interface {v5}, Lapv;->c()V
 
     goto :goto_4
 
-    .line 56
     :cond_10
     new-instance v4, Lahg;
 
@@ -1835,27 +1650,22 @@
 
     goto/16 :goto_3
 
-    .line 81
     :cond_11
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v4}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
 
-    .line 82
     sput-object v4, Lacj;->i:Lacj;
 
-    .line 83
     const/4 v4, 0x0
 
     sput-boolean v4, Lacj;->j:Z
 
-    .line 84
     :cond_12
     monitor-exit v15
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 85
     :cond_13
     sget-object v4, Lacj;->i:Lacj;
 
@@ -1865,30 +1675,23 @@
 .method public static b(Landroid/content/Context;)Lact;
     .locals 5
 
-    .prologue
-    .line 207
-    .line 208
     const-string v0, "You cannot start a load on a not yet attached View or a Fragment where getActivity() returns null (which usually occurs when getActivity() is called before the Fragment is attached or after the Fragment is destroyed)."
 
     invoke-static {p0, v0}, Lapw;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 209
     invoke-static {p0}, Lacj;->a(Landroid/content/Context;)Lacj;
 
     move-result-object v0
 
-    .line 210
     iget-object v0, v0, Lacj;->f:Lapn;
 
     move-object v1, v0
 
     move-object v0, p0
 
-    .line 212
     :goto_0
     if-nez v0, :cond_0
 
-    .line 213
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "You cannot start a load on a null Context"
@@ -1897,7 +1700,6 @@
 
     throw v0
 
-    .line 214
     :cond_0
     invoke-static {}, Lary;->b()Z
 
@@ -1909,142 +1711,111 @@
 
     if-nez v2, :cond_5
 
-    .line 215
     instance-of v2, v0, Landroid/support/v4/app/FragmentActivity;
 
     if-eqz v2, :cond_2
 
-    .line 216
     check-cast v0, Landroid/support/v4/app/FragmentActivity;
 
-    .line 217
     invoke-static {}, Lary;->c()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 218
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 219
     :cond_1
     invoke-static {v0}, Lapn;->a(Landroid/app/Activity;)V
 
-    .line 220
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v2
 
-    .line 222
     invoke-virtual {v1, v2}, Lapn;->a(Landroid/support/v4/app/FragmentManager;)Lapr;
 
     move-result-object v2
 
-    .line 224
     iget-object v1, v2, Lapr;->c:Lact;
 
-    .line 226
     if-nez v1, :cond_6
 
-    .line 227
     invoke-static {v0}, Lacj;->a(Landroid/content/Context;)Lacj;
 
     move-result-object v1
 
-    .line 229
     iget-object v3, v2, Lapr;->a:Lapa;
 
-    .line 231
     iget-object v4, v2, Lapr;->b:Lapp;
 
-    .line 233
     invoke-static {v1, v3, v4, v0}, Lapo;->a(Lacj;Lapi;Lapp;Landroid/content/Context;)Lact;
 
     move-result-object v0
 
-    .line 235
     iput-object v0, v2, Lapr;->c:Lact;
 
-    .line 264
     :goto_1
     return-object v0
 
-    .line 238
     :cond_2
     instance-of v2, v0, Landroid/app/Activity;
 
     if-eqz v2, :cond_4
 
-    .line 239
     check-cast v0, Landroid/app/Activity;
 
-    .line 240
     invoke-static {}, Lary;->c()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 241
     invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 242
     :cond_3
     invoke-static {v0}, Lapn;->a(Landroid/app/Activity;)V
 
-    .line 243
     invoke-virtual {v0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v2
 
-    .line 245
     invoke-virtual {v1, v2}, Lapn;->a(Landroid/app/FragmentManager;)Lapl;
 
     move-result-object v2
 
-    .line 247
     iget-object v1, v2, Lapl;->c:Lact;
 
-    .line 249
     if-nez v1, :cond_6
 
-    .line 250
     invoke-static {v0}, Lacj;->a(Landroid/content/Context;)Lacj;
 
     move-result-object v1
 
-    .line 252
     iget-object v3, v2, Lapl;->a:Lapa;
 
-    .line 254
     iget-object v4, v2, Lapl;->b:Lapp;
 
-    .line 256
     invoke-static {v1, v3, v4, v0}, Lapo;->a(Lacj;Lapi;Lapp;Landroid/content/Context;)Lact;
 
     move-result-object v0
 
-    .line 258
     iput-object v0, v2, Lapl;->c:Lact;
 
     goto :goto_1
 
-    .line 261
     :cond_4
     instance-of v2, v0, Landroid/content/ContextWrapper;
 
     if-eqz v2, :cond_5
 
-    .line 262
     check-cast v0, Landroid/content/ContextWrapper;
 
     invoke-virtual {v0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
@@ -2053,7 +1824,6 @@
 
     goto :goto_0
 
-    .line 263
     :cond_5
     invoke-virtual {v1, v0}, Lapn;->a(Landroid/content/Context;)Lact;
 
@@ -2072,13 +1842,10 @@
 .method final a(Laqz;)Z
     .locals 3
 
-    .prologue
-    .line 265
     iget-object v1, p0, Lacj;->h:Ljava/util/List;
 
     monitor-enter v1
 
-    .line 266
     :try_start_0
     iget-object v0, p0, Lacj;->h:Ljava/util/List;
 
@@ -2099,32 +1866,26 @@
 
     check-cast v0, Lact;
 
-    .line 267
     invoke-virtual {v0, p1}, Lact;->b(Laqz;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 268
     const/4 v0, 0x1
 
     monitor-exit v1
 
-    .line 271
     :goto_0
     return v0
 
-    .line 270
     :cond_1
     monitor-exit v1
 
-    .line 271
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 270
     :catchall_0
     move-exception v0
 
@@ -2138,61 +1899,45 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
 
-    .prologue
-    .line 278
     return-void
 .end method
 
 .method public onLowMemory()V
     .locals 1
 
-    .prologue
-    .line 279
-    .line 280
     invoke-static {}, Lary;->a()V
 
-    .line 281
     iget-object v0, p0, Lacj;->b:Laif;
 
     invoke-interface {v0}, Laif;->a()V
 
-    .line 282
     iget-object v0, p0, Lacj;->a:Lahf;
 
     invoke-interface {v0}, Lahf;->a()V
 
-    .line 283
     iget-object v0, p0, Lacj;->e:Lahd;
 
     invoke-virtual {v0}, Lahd;->a()V
 
-    .line 284
     return-void
 .end method
 
 .method public onTrimMemory(I)V
     .locals 1
 
-    .prologue
-    .line 272
-    .line 273
     invoke-static {}, Lary;->a()V
 
-    .line 274
     iget-object v0, p0, Lacj;->b:Laif;
 
     invoke-interface {v0, p1}, Laif;->a(I)V
 
-    .line 275
     iget-object v0, p0, Lacj;->a:Lahf;
 
     invoke-interface {v0, p1}, Lahf;->a(I)V
 
-    .line 276
     iget-object v0, p0, Lacj;->e:Lahd;
 
     invoke-virtual {v0, p1}, Lahd;->a(I)V
 
-    .line 277
     return-void
 .end method

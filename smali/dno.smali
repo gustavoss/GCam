@@ -25,41 +25,29 @@
 .method public final a(Ljava/lang/Object;)Lkey;
     .locals 6
 
-    .prologue
-    .line 1
     iget-object v5, p0, Ldno;->a:Ldnm;
 
     check-cast p1, Lfnu;
 
-    .line 2
     new-instance v0, Lfst;
 
-    .line 3
     iget-object v1, p1, Lfnu;->b:[B
 
-    .line 5
     iget-object v2, p1, Lfnu;->e:Lihs;
 
-    .line 7
     iget v3, p1, Lfnu;->c:I
 
-    .line 9
     iget-object v4, p1, Lfnu;->d:Lcom/google/android/libraries/camera/exif/ExifInterface;
 
-    .line 10
     iget-object v5, v5, Ldnm;->e:Ldnl;
 
-    .line 11
     iget-object v5, v5, Ldnl;->h:Lhby;
 
-    .line 12
     invoke-direct/range {v0 .. v5}, Lfst;-><init>([BLihs;ILcom/google/android/libraries/camera/exif/ExifInterface;Lhby;)V
 
-    .line 13
     invoke-static {v0}, Lkek;->a(Ljava/lang/Object;)Lkey;
 
     move-result-object v0
 
-    .line 14
     return-object v0
 .end method

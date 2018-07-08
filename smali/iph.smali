@@ -29,17 +29,14 @@
 .method public final run()V
     .locals 14
 
-    .prologue
     const/4 v5, 0x1
 
     const/4 v6, 0x0
 
-    .line 1
     iget-object v10, p0, Liph;->a:Lipe;
 
     iget-object v1, p0, Liph;->b:Landroid/graphics/SurfaceTexture;
 
-    .line 2
     iget-object v2, v10, Lipe;->d:Livf;
 
     iget-object v0, v10, Lipe;->k:Ljrw;
@@ -50,58 +47,45 @@
 
     check-cast v0, Liuj;
 
-    .line 3
     iget-object v11, v10, Lipe;->j:Ljava/lang/Object;
 
     monitor-enter v11
 
-    .line 4
     :try_start_0
     iget-boolean v3, v10, Lipe;->m:Z
 
     if-eqz v3, :cond_0
 
-    .line 5
     monitor-exit v11
 
-    .line 32
     :goto_0
     return-void
 
-    .line 6
     :cond_0
     invoke-virtual {v1}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
 
-    .line 7
     const/16 v3, 0x10
 
     new-array v12, v3, [F
 
-    .line 8
     invoke-virtual {v1, v12}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
 
-    .line 9
     invoke-virtual {v1}, Landroid/graphics/SurfaceTexture;->getTimestamp()J
 
-    .line 10
     iget-object v1, v10, Lipe;->l:Ljuy;
 
-    .line 11
     invoke-virtual {v1}, Ljuy;->isEmpty()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 12
     invoke-virtual {v10, v2, v12, v0}, Lipe;->a(Livf;[FLiuj;)V
 
-    .line 13
     monitor-exit v11
 
     goto :goto_0
 
-    .line 32
     :catchall_0
     move-exception v0
 
@@ -111,7 +95,6 @@
 
     throw v0
 
-    .line 14
     :cond_1
     :try_start_1
     sget-object v3, Lipe;->a:[F
@@ -120,13 +103,10 @@
 
     invoke-virtual {v10, v2, v3, v4}, Lipe;->a(Livf;[FLiuj;)V
 
-    .line 16
     iget-object v3, v10, Lipe;->f:Liwc;
 
-    .line 17
     iget-object v2, v10, Lipe;->i:Liuj;
 
-    .line 18
     check-cast v1, Ljuy;
 
     invoke-virtual {v1}, Ljuy;->size()I
@@ -152,15 +132,12 @@
 
     check-cast v2, Lipc;
 
-    .line 19
     invoke-interface {v2, v8, v4}, Lipc;->a(Liwc;Liuj;)V
 
-    .line 20
     if-nez v9, :cond_2
 
     move v4, v5
 
-    .line 21
     :goto_2
     if-eqz v4, :cond_3
 
@@ -168,7 +145,6 @@
 
     move-object v3, v2
 
-    .line 22
     :goto_3
     if-eqz v4, :cond_4
 
@@ -183,16 +159,13 @@
 
     move-object v4, v2
 
-    .line 23
     goto :goto_1
 
     :cond_2
     move v4, v6
 
-    .line 20
     goto :goto_2
 
-    .line 21
     :cond_3
     iget-object v2, v10, Lipe;->h:Liwc;
 
@@ -200,13 +173,11 @@
 
     goto :goto_3
 
-    .line 22
     :cond_4
     iget-object v2, v10, Lipe;->g:Liuj;
 
     goto :goto_4
 
-    .line 25
     :cond_5
     iget-object v1, v10, Lipe;->b:Liwf;
 
@@ -216,21 +187,18 @@
 
     iget-object v2, v10, Lipe;->c:Livl;
 
-    .line 26
     invoke-virtual {v1, v2}, Liva;->a(Livl;)Liuv;
 
     move-result-object v1
 
     const-string v2, "uImgTex"
 
-    .line 27
     invoke-virtual {v1, v2, v8}, Liuv;->a(Ljava/lang/String;Liwc;)Liuv;
 
     move-result-object v1
 
     const-string v2, "uTransform"
 
-    .line 28
     invoke-virtual {v1, v2, v12}, Liuv;->a(Ljava/lang/String;[F)Liuv;
 
     move-result-object v1
@@ -239,7 +207,6 @@
 
     const/4 v3, 0x0
 
-    .line 29
     invoke-virtual {v1, v2, v3}, Liuv;->a(Ljava/lang/String;I)Liuv;
 
     move-result-object v1
@@ -248,15 +215,12 @@
 
     const/4 v3, 0x1
 
-    .line 30
     invoke-virtual {v1, v2, v3}, Liuv;->a(Ljava/lang/String;I)Liuv;
 
     move-result-object v1
 
-    .line 31
     invoke-virtual {v1, v0}, Liuv;->a(Liuj;)V
 
-    .line 32
     monitor-exit v11
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

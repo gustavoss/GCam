@@ -32,49 +32,34 @@
 .method private constructor <init>(Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lfol;->a:Lkhp;
 
-    .line 3
     iput-object p2, p0, Lfol;->b:Lkhp;
 
-    .line 4
     iput-object p3, p0, Lfol;->c:Lkhp;
 
-    .line 5
     iput-object p4, p0, Lfol;->d:Lkhp;
 
-    .line 6
     iput-object p5, p0, Lfol;->e:Lkhp;
 
-    .line 7
     iput-object p6, p0, Lfol;->f:Lkhp;
 
-    .line 8
     iput-object p7, p0, Lfol;->g:Lkhp;
 
-    .line 9
     iput-object p8, p0, Lfol;->h:Lkhp;
 
-    .line 10
     iput-object p9, p0, Lfol;->i:Lkhp;
 
-    .line 11
     iput-object p10, p0, Lfol;->j:Lkhp;
 
-    .line 12
     return-void
 .end method
 
 .method public static a(Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;)Lfol;
     .locals 11
 
-    .prologue
-    .line 13
     new-instance v0, Lfol;
 
     move-object v1, p0
@@ -107,12 +92,8 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 13
 
-    .prologue
-    .line 14
-    .line 15
     iget-object v0, p0, Lfol;->a:Lkhp;
 
-    .line 16
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -123,12 +104,10 @@
 
     iget-object v0, p0, Lfol;->b:Lkhp;
 
-    .line 17
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Lfol;->c:Lkhp;
 
-    .line 18
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -137,7 +116,6 @@
 
     iget-object v0, p0, Lfol;->d:Lkhp;
 
-    .line 19
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -146,7 +124,6 @@
 
     iget-object v0, p0, Lfol;->e:Lkhp;
 
-    .line 20
     invoke-interface {v0}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -155,7 +132,6 @@
 
     iget-object v3, p0, Lfol;->f:Lkhp;
 
-    .line 21
     invoke-interface {v3}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v8
@@ -164,7 +140,6 @@
 
     iget-object v3, p0, Lfol;->g:Lkhp;
 
-    .line 22
     invoke-interface {v3}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v7
@@ -173,7 +148,6 @@
 
     iget-object v3, p0, Lfol;->h:Lkhp;
 
-    .line 23
     invoke-interface {v3}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v9
@@ -182,7 +156,6 @@
 
     iget-object v3, p0, Lfol;->i:Lkhp;
 
-    .line 24
     invoke-interface {v3}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v10
@@ -191,14 +164,12 @@
 
     iget-object v3, p0, Lfol;->j:Lkhp;
 
-    .line 25
     invoke-interface {v3}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v11
 
     check-cast v11, Liii;
 
-    .line 27
     const/4 v3, 0x0
 
     new-array v3, v3, [Lfih;
@@ -207,35 +178,28 @@
 
     move-result-object v0
 
-    .line 28
     invoke-interface {v0}, Lfif;->a()Lfig;
 
     move-result-object v3
 
-    .line 30
     invoke-interface {v2}, Lflx;->a()I
 
     move-result v4
 
-    .line 31
     invoke-interface {v0}, Lfif;->b()I
 
     move-result v0
 
-    .line 32
     invoke-static {v4, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v5
 
-    .line 34
     const/4 v0, 0x1
 
-    .line 35
     invoke-static {v5, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v4
 
-    .line 36
     const/16 v0, 0xa
 
     mul-int/lit8 v6, v4, 0x3
@@ -244,24 +208,19 @@
 
     move-result v6
 
-    .line 37
     new-instance v0, Lfob;
 
     invoke-direct/range {v0 .. v11}, Lfob;-><init>(Lfhi;Lflx;Lfig;IIILjava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Ljava/util/concurrent/ScheduledExecutorService;Liid;Liii;)V
 
-    .line 38
     invoke-virtual {v12, v0}, Libm;->a(Lihr;)Lihr;
 
-    .line 40
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 41
     invoke-static {v0, v1}, Lkgh;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lfob;
 
-    .line 42
     return-object v0
 .end method

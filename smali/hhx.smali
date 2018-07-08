@@ -14,8 +14,6 @@
 .method constructor <init>(Lhhs;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhhx;->a:Lhhs;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lhhx;->a:Lhhs;
 
     invoke-static {v0}, Lhhs;->a(Lhhs;)Lida;
@@ -52,6 +48,5 @@
 
     invoke-interface {v1, v0}, Lida;->a(Ljava/lang/Object;)V
 
-    .line 3
     return-void
 .end method

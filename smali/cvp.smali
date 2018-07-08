@@ -39,11 +39,8 @@
 .method public constructor <init>(Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v1, 0x1
 
     invoke-static {p1, v1}, Lcvp;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -54,7 +51,6 @@
 
     iput-object v1, p0, Lcvp;->a:Lkhp;
 
-    .line 3
     const/4 v1, 0x2
 
     invoke-static {p2, v1}, Lcvp;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -65,7 +61,6 @@
 
     iput-object v1, p0, Lcvp;->b:Lkhp;
 
-    .line 4
     const/4 v1, 0x3
 
     invoke-static {p3, v1}, Lcvp;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -76,7 +71,6 @@
 
     iput-object v1, p0, Lcvp;->c:Lkhp;
 
-    .line 5
     const/4 v1, 0x4
 
     invoke-static {p4, v1}, Lcvp;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -87,7 +81,6 @@
 
     iput-object v1, p0, Lcvp;->d:Lkhp;
 
-    .line 6
     const/4 v1, 0x5
 
     invoke-static {p5, v1}, Lcvp;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -98,7 +91,6 @@
 
     iput-object v1, p0, Lcvp;->e:Lkhp;
 
-    .line 7
     const/4 v1, 0x6
 
     invoke-static {p6, v1}, Lcvp;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -109,7 +101,6 @@
 
     iput-object v1, p0, Lcvp;->f:Lkhp;
 
-    .line 8
     const/4 v1, 0x7
 
     invoke-static {p7, v1}, Lcvp;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -120,7 +111,6 @@
 
     iput-object v1, p0, Lcvp;->g:Lkhp;
 
-    .line 9
     const/16 v1, 0x8
 
     invoke-static {p8, v1}, Lcvp;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -131,7 +121,6 @@
 
     iput-object v1, p0, Lcvp;->h:Lkhp;
 
-    .line 10
     const/16 v1, 0x9
 
     invoke-static {p9, v1}, Lcvp;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -142,7 +131,6 @@
 
     iput-object v1, p0, Lcvp;->i:Lkhp;
 
-    .line 11
     const/16 v1, 0xa
 
     invoke-static {p10, v1}, Lcvp;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -153,7 +141,6 @@
 
     iput-object v1, p0, Lcvp;->j:Lkhp;
 
-    .line 12
     const/16 v1, 0xb
 
     invoke-static {p11, v1}, Lcvp;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -164,7 +151,6 @@
 
     iput-object v1, p0, Lcvp;->k:Lkhp;
 
-    .line 13
     const/16 v1, 0xc
 
     invoke-static {p12, v1}, Lcvp;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -175,7 +161,6 @@
 
     iput-object v1, p0, Lcvp;->l:Lkhp;
 
-    .line 14
     const/16 v1, 0xd
 
     invoke-static {p13, v1}, Lcvp;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -186,7 +171,6 @@
 
     iput-object v1, p0, Lcvp;->m:Lkhp;
 
-    .line 15
     const/16 v1, 0xe
 
     move-object/from16 v0, p14
@@ -199,7 +183,6 @@
 
     iput-object v1, p0, Lcvp;->n:Lkhp;
 
-    .line 16
     const/16 v1, 0xf
 
     move-object/from16 v0, p15
@@ -212,18 +195,14 @@
 
     iput-object v1, p0, Lcvp;->o:Lkhp;
 
-    .line 17
     return-void
 .end method
 
 .method private static a(Ljava/lang/Object;I)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 36
     if-nez p0, :cond_0
 
-    .line 37
     new-instance v0, Ljava/lang/NullPointerException;
 
     const/16 v1, 0x5d
@@ -250,7 +229,6 @@
 
     throw v0
 
-    .line 38
     :cond_0
     return-object p0
 .end method
@@ -260,15 +238,12 @@
 .method public final a(Ldla;)Lcvm;
     .locals 19
 
-    .prologue
-    .line 18
     new-instance v2, Lcvm;
 
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcvp;->a:Lkhp;
 
-    .line 19
     invoke-interface {v3}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -287,7 +262,6 @@
 
     iget-object v4, v0, Lcvp;->b:Lkhp;
 
-    .line 20
     invoke-interface {v4}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v4
@@ -306,7 +280,6 @@
 
     iget-object v5, v0, Lcvp;->c:Lkhp;
 
-    .line 21
     invoke-interface {v5}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v5
@@ -325,7 +298,6 @@
 
     iget-object v6, v0, Lcvp;->d:Lkhp;
 
-    .line 22
     invoke-interface {v6}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -344,7 +316,6 @@
 
     iget-object v7, v0, Lcvp;->e:Lkhp;
 
-    .line 23
     invoke-interface {v7}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v7
@@ -363,7 +334,6 @@
 
     iget-object v8, v0, Lcvp;->f:Lkhp;
 
-    .line 24
     invoke-interface {v8}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v8
@@ -382,7 +352,6 @@
 
     iget-object v9, v0, Lcvp;->g:Lkhp;
 
-    .line 25
     invoke-interface {v9}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v9
@@ -401,7 +370,6 @@
 
     iget-object v10, v0, Lcvp;->h:Lkhp;
 
-    .line 26
     invoke-interface {v10}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v10
@@ -420,7 +388,6 @@
 
     iget-object v11, v0, Lcvp;->i:Lkhp;
 
-    .line 27
     invoke-interface {v11}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v11
@@ -439,7 +406,6 @@
 
     iget-object v12, v0, Lcvp;->j:Lkhp;
 
-    .line 28
     invoke-interface {v12}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v12
@@ -458,7 +424,6 @@
 
     iget-object v13, v0, Lcvp;->k:Lkhp;
 
-    .line 29
     invoke-interface {v13}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v13
@@ -477,7 +442,6 @@
 
     iget-object v14, v0, Lcvp;->l:Lkhp;
 
-    .line 30
     invoke-interface {v14}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v14
@@ -496,7 +460,6 @@
 
     iget-object v15, v0, Lcvp;->m:Lkhp;
 
-    .line 31
     invoke-interface {v15}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v15
@@ -517,7 +480,6 @@
 
     move-object/from16 v16, v0
 
-    .line 32
     invoke-interface/range {v16 .. v16}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v16
@@ -538,7 +500,6 @@
 
     move-object/from16 v17, v0
 
-    .line 33
     invoke-interface/range {v17 .. v17}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v17
@@ -555,7 +516,6 @@
 
     const/16 v18, 0x10
 
-    .line 34
     move-object/from16 v0, p1
 
     move/from16 v1, v18
@@ -568,6 +528,5 @@
 
     invoke-direct/range {v2 .. v18}, Lcvm;-><init>(Libo;Lkfa;Lgju;Lftt;Lida;Lfga;Lfay;Ldkn;Landroid/util/DisplayMetrics;Lcbq;Lblu;Lcom/google/android/apps/camera/stats/Instrumentation;Liii;Lida;Lida;Ldla;)V
 
-    .line 35
     return-object v2
 .end method

@@ -16,8 +16,6 @@
 .method constructor <init>(Ldea;Lhdi;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldeh;->b:Ldea;
 
     iput-object p2, p0, Ldeh;->a:Lhdi;
@@ -32,33 +30,26 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 9
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 27
     check-cast p1, Ldem;
 
-    .line 28
     sget-object v2, Ldea;->d:Ljava/lang/String;
 
-    .line 29
     const-string v3, "openCamcorderDevice onSuccess"
 
     invoke-static {v2, v3}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 30
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 31
     iget-object v2, p0, Ldeh;->b:Ldea;
 
     iget-object v2, v2, Ldea;->k:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 32
     :try_start_0
     iget-object v3, p0, Ldeh;->b:Ldea;
 
@@ -68,17 +59,13 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 33
     invoke-interface {p1}, Ldem;->close()V
 
-    .line 34
     monitor-exit v2
 
-    .line 53
     :goto_0
     return-void
 
-    .line 35
     :cond_0
     iget-object v3, p0, Ldeh;->b:Ldea;
 
@@ -86,12 +73,10 @@
 
     iput-object v4, v3, Ldea;->n:Ldej;
 
-    .line 36
     iget-object v3, p0, Ldeh;->b:Ldea;
 
     iput-object p1, v3, Ldea;->o:Ldem;
 
-    .line 37
     iget-object v3, p0, Ldeh;->b:Ldea;
 
     iget-object v3, v3, Ldea;->o:Ldem;
@@ -100,22 +85,18 @@
 
     iget-object v5, p0, Ldeh;->b:Ldea;
 
-    .line 40
     iget-object v5, v5, Ldea;->m:Laws;
 
     invoke-virtual {v5}, Laws;->a()Landroid/content/Intent;
 
     move-result-object v5
 
-    .line 41
     if-eqz v5, :cond_1
 
-    .line 42
     invoke-virtual {v5}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 43
     const-string v7, "Video Action Processed"
 
     const/4 v8, 0x0
@@ -124,7 +105,6 @@
 
     move-result v7
 
-    .line 44
     if-eqz v6, :cond_1
 
     const-string v8, "android.media.action.VIDEO_CAMERA"
@@ -135,23 +115,18 @@
 
     if-eqz v6, :cond_1
 
-    .line 45
     if-eqz v7, :cond_2
 
-    .line 50
     :cond_1
     :goto_1
     invoke-interface {v3, v4, v0}, Ldem;->a(Lhdi;Z)V
 
-    .line 51
     iget-object v0, p0, Ldeh;->b:Ldea;
 
-    .line 52
     const/4 v1, 0x0
 
     iput-object v1, v0, Ldea;->p:Lkey;
 
-    .line 53
     monitor-exit v2
 
     goto :goto_0
@@ -165,7 +140,6 @@
 
     throw v0
 
-    .line 48
     :cond_2
     :try_start_1
     const-string v0, "Video Action Processed"
@@ -184,15 +158,12 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 5
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ldeh;->b:Ldea;
 
     iget-object v1, v0, Ldea;->k:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Ldeh;->b:Ldea;
 
@@ -202,41 +173,32 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 4
     sget-object v0, Ldea;->d:Ljava/lang/String;
 
-    .line 5
     const-string v2, "Ignoring openCamcorderDevice failure because state is BACKGROUND"
 
     invoke-static {v0, v2}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
     monitor-exit v1
 
-    .line 26
     :goto_0
     return-void
 
-    .line 7
     :cond_0
     instance-of v0, p1, Ljava/util/concurrent/CancellationException;
 
     if-eqz v0, :cond_1
 
-    .line 8
     sget-object v0, Ldea;->d:Ljava/lang/String;
 
-    .line 9
     const-string v2, "Ignoring openCamcorderDevice failure because it was cancelled"
 
     invoke-static {v0, v2}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     monitor-exit v1
 
     goto :goto_0
 
-    .line 24
     :catchall_0
     move-exception v0
 
@@ -246,25 +208,20 @@
 
     throw v0
 
-    .line 11
     :cond_1
     :try_start_1
     instance-of v0, p1, Lgnj;
 
     if-eqz v0, :cond_2
 
-    .line 12
     sget-object v0, Ldea;->d:Ljava/lang/String;
 
-    .line 13
     const-string v2, "Ignoring openCamcorderDevice failure because of low storage space"
 
     invoke-static {v0, v2}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
     iget-object v0, p0, Ldeh;->b:Ldea;
 
-    .line 16
     iget-object v2, v0, Ldea;->f:Libo;
 
     new-instance v3, Ldeb;
@@ -275,40 +232,31 @@
 
     invoke-virtual {v2, v3}, Libo;->execute(Ljava/lang/Runnable;)V
 
-    .line 17
     monitor-exit v1
 
     goto :goto_0
 
-    .line 18
     :cond_2
     sget-object v0, Ldea;->d:Ljava/lang/String;
 
-    .line 19
     const-string v2, "openCamcorderDevice onFailure: "
 
     invoke-static {v0, v2, p1}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 20
     iget-object v0, p0, Ldeh;->b:Ldea;
 
-    .line 21
     const/4 v2, 0x0
 
     iput-object v2, v0, Ldea;->p:Lkey;
 
-    .line 22
     iget-object v0, p0, Ldeh;->b:Ldea;
 
-    .line 23
     invoke-virtual {v0}, Ldea;->m()V
 
-    .line 24
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 25
     iget-object v0, p0, Ldeh;->b:Ldea;
 
     invoke-static {v0}, Ldea;->a(Ldea;)Lijs;

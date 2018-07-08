@@ -35,16 +35,11 @@
 .method public final a(Ljava/lang/Object;)Lkey;
     .locals 1
 
-    .prologue
-    .line 1
     check-cast p1, Lepd;
 
-    .line 2
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     iget-object v0, p1, Lepd;->a:Lkfk;
 
-    .line 5
     return-object v0
 .end method

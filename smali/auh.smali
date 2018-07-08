@@ -30,38 +30,26 @@
 .method public constructor <init>(Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lauh;->a:Lkhp;
 
-    .line 3
     iput-object p2, p0, Lauh;->b:Lkhp;
 
-    .line 4
     iput-object p3, p0, Lauh;->c:Lkhp;
 
-    .line 5
     iput-object p4, p0, Lauh;->d:Lkhp;
 
-    .line 6
     iput-object p5, p0, Lauh;->e:Lkhp;
 
-    .line 7
     iput-object p6, p0, Lauh;->f:Lkhp;
 
-    .line 8
     iput-object p7, p0, Lauh;->g:Lkhp;
 
-    .line 9
     iput-object p8, p0, Lauh;->h:Lkhp;
 
-    .line 10
     iput-object p9, p0, Lauh;->i:Lkhp;
 
-    .line 11
     return-void
 .end method
 
@@ -70,9 +58,6 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 10
 
-    .prologue
-    .line 12
-    .line 13
     new-instance v0, Laug;
 
     iget-object v1, p0, Lauh;->a:Lkhp;
@@ -95,6 +80,5 @@
 
     invoke-direct/range {v0 .. v9}, Laug;-><init>(Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;)V
 
-    .line 14
     return-object v0
 .end method

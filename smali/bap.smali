@@ -33,17 +33,13 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lbap;->a:Lbao;
 
     iget-object v1, p0, Lbap;->b:Ljava/lang/Thread;
 
     iget-object v2, p0, Lbap;->c:Ljava/lang/Throwable;
 
-    .line 2
     invoke-virtual {v0, v1, v2}, Lbao;->a(Ljava/lang/Thread;Ljava/lang/Throwable;)V
 
-    .line 3
     return-void
 .end method

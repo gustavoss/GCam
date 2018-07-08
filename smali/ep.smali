@@ -769,10 +769,8 @@
 .method public static a(FF)I
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 1
     cmpl-float v0, p0, v2
 
     if-nez v0, :cond_0
@@ -781,14 +779,11 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget v0, Lep;->cf:I
 
-    .line 9
     :goto_0
     return v0
 
-    .line 3
     :cond_0
     invoke-static {p0}, Ljava/lang/Math;->abs(F)F
 
@@ -802,34 +797,28 @@
 
     if-ltz v0, :cond_2
 
-    .line 4
     cmpl-float v0, p0, v2
 
     if-lez v0, :cond_1
 
-    .line 5
     sget v0, Lep;->Q:I
 
     goto :goto_0
 
-    .line 6
     :cond_1
     sget v0, Lep;->R:I
 
     goto :goto_0
 
-    .line 7
     :cond_2
     cmpl-float v0, p1, v2
 
     if-lez v0, :cond_3
 
-    .line 8
     sget v0, Lep;->ce:I
 
     goto :goto_0
 
-    .line 9
     :cond_3
     sget v0, Lep;->cd:I
 
@@ -839,46 +828,37 @@
 .method public static a(I)I
     .locals 2
 
-    .prologue
-    .line 11
     packed-switch p0, :pswitch_data_0
 
-    .line 16
     const/4 v0, 0x3
 
     if-le p0, v0, :cond_0
 
-    .line 17
     sget v0, Lep;->cp:I
 
     :goto_0
     return v0
 
-    .line 12
     :pswitch_0
     sget v0, Lep;->cn:I
 
     goto :goto_0
 
-    .line 13
     :pswitch_1
     sget v0, Lep;->co:I
 
     goto :goto_0
 
-    .line 14
     :pswitch_2
     sget v0, Lep;->bR:I
 
     goto :goto_0
 
-    .line 15
     :pswitch_3
     sget v0, Lep;->cp:I
 
     goto :goto_0
 
-    .line 18
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -888,7 +868,6 @@
 
     throw v0
 
-    .line 11
     nop
 
     :pswitch_data_0
@@ -903,8 +882,6 @@
 .method public static values$50KLMJ33DTMIUPRFDTJMOP9FC5N68SJFD5I2UOBGE1PIUOR1DLIN4O9FELKIUR31F5NNAT1F8THM2J31F5NNAT1489NNGEO_0()[I
     .locals 1
 
-    .prologue
-    .line 10
     sget-object v0, Lep;->cm:[I
 
     invoke-virtual {v0}, [I->clone()Ljava/lang/Object;

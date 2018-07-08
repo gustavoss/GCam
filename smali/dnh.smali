@@ -24,8 +24,6 @@
 .method constructor <init>(Ldnc;ZLcom/google/googlex/gcam/InterleavedImageU8;Ldnb;Lhcf;J)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldnh;->f:Ldnc;
 
     iput-boolean p2, p0, Ldnh;->a:Z
@@ -48,21 +46,16 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 4
 
-    .prologue
-    .line 10
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 11
     iget-boolean v0, p0, Ldnh;->a:Z
 
     if-eqz v0, :cond_0
 
-    .line 12
     iget-object v0, p0, Ldnh;->b:Lcom/google/googlex/gcam/InterleavedImageU8;
 
     invoke-static {v0}, Lcom/google/googlex/gcam/BufferUtils;->deleteNativeImage(Lcom/google/googlex/gcam/InterleavedImageU8;)V
 
-    .line 13
     :cond_0
     iget-object v0, p0, Ldnh;->f:Ldnc;
 
@@ -70,7 +63,6 @@
 
     move-result v1
 
-    .line 14
     iget-boolean v2, v0, Ldnc;->j:Z
 
     or-int/2addr v1, v2
@@ -79,17 +71,14 @@
 
     iput-boolean v1, v0, Ldnc;->j:Z
 
-    .line 15
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 16
     sget-object v0, Ldmz;->a:Ljava/lang/String;
 
-    .line 17
     iget-object v1, p0, Ldnh;->c:Ldnb;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -126,37 +115,29 @@
 
     invoke-static {v0, v1}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 18
     :cond_1
     iget-object v0, p0, Ldnh;->d:Lhcf;
 
     invoke-virtual {v0}, Lhcf;->close()V
 
-    .line 19
     iget-object v0, p0, Ldnh;->f:Ldnc;
 
     iget-wide v2, p0, Ldnh;->e:J
 
-    .line 20
     invoke-virtual {v0, v2, v3}, Ldnc;->a(J)V
 
-    .line 21
     return-void
 .end method
 
 .method public final a(Ljava/lang/Throwable;)V
     .locals 4
 
-    .prologue
-    .line 2
     iget-boolean v0, p0, Ldnh;->a:Z
 
     if-eqz v0, :cond_0
 
-    .line 3
     sget-object v0, Ldmz;->a:Ljava/lang/String;
 
-    .line 4
     iget-object v1, p0, Ldnh;->c:Ldnb;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -193,25 +174,20 @@
 
     invoke-static {v0, v1, p1}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 5
     iget-object v0, p0, Ldnh;->b:Lcom/google/googlex/gcam/InterleavedImageU8;
 
     invoke-static {v0}, Lcom/google/googlex/gcam/BufferUtils;->deleteNativeImage(Lcom/google/googlex/gcam/InterleavedImageU8;)V
 
-    .line 6
     :cond_0
     iget-object v0, p0, Ldnh;->d:Lhcf;
 
     invoke-virtual {v0}, Lhcf;->close()V
 
-    .line 7
     iget-object v0, p0, Ldnh;->f:Ldnc;
 
     iget-wide v2, p0, Ldnh;->e:J
 
-    .line 8
     invoke-virtual {v0, v2, v3}, Ldnc;->a(J)V
 
-    .line 9
     return-void
 .end method

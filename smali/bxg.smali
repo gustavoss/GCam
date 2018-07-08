@@ -14,14 +14,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lbxg;->a:Landroid/content/Context;
 
-    .line 4
     return-void
 .end method
 
@@ -30,8 +26,6 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -42,12 +36,9 @@
 .method public final a(Ljava/lang/String;)Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 5
     :try_start_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .line 6
     iget-object v0, p0, Lbxg;->a:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -56,10 +47,8 @@
 
     move-result-object v0
 
-    .line 7
     return-object v0
 
-    .line 9
     :catch_0
     move-exception v0
 

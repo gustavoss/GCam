@@ -25,17 +25,13 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Leul;->a:Lewb;
 
     check-cast p1, Leuh;
 
-    .line 2
     iget-object v1, p1, Leuh;->d:Lkfk;
 
     invoke-virtual {v1, v0}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 3
     return-void
 .end method

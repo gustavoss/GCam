@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 13
     const/16 v0, 0x5f
 
     invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
@@ -35,20 +33,14 @@
 .method public constructor <init>(Lioe;Lgoa;Lgnd;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbjm;->b:Lioe;
 
-    .line 3
     iput-object p2, p0, Lbjm;->c:Lgoa;
 
-    .line 4
     iput-object p3, p0, Lbjm;->d:Lgnd;
 
-    .line 5
     return-void
 .end method
 
@@ -57,31 +49,24 @@
 .method public final a(Lbhm;Ljrw;Lida;Lida;Lida;Lihs;Landroid/os/Handler;Libi;)Lbjl;
     .locals 13
 
-    .prologue
-    .line 6
     iget-object v1, p0, Lbjm;->b:Lioe;
 
-    .line 7
     move-object/from16 v0, p6
 
     iget v2, v0, Lihs;->a:I
 
-    .line 9
     move-object/from16 v0, p6
 
     iget v3, v0, Lihs;->b:I
 
-    .line 10
     const/16 v4, 0x100
 
     const/4 v5, 0x1
 
-    .line 11
     invoke-interface {v1, v2, v3, v4, v5}, Lioe;->a(IIII)Liod;
 
     move-result-object v8
 
-    .line 12
     new-instance v1, Lbjo;
 
     iget-object v2, p0, Lbjm;->c:Lgoa;

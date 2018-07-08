@@ -91,193 +91,148 @@
 .method constructor <init>(Lbac;Lbad;Lfay;Laws;Lgrs;Libo;Lgkk;Lbvz;Lgxt;Lgxy;Liim;Lbfg;Lijs;Lgog;Lhgl;Lida;Lfdp;Legr;Legx;Lhfv;Lfbc;Lbnx;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lgvn;Lida;Lbny;Lhft;Leak;Lgql;Lasy;Lgue;Ldya;Liix;Ldgb;Ldfo;Liej;Lhhj;Lhbv;Ldew;Lida;Lkhp;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lcry;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldek;->b:Lbac;
 
-    .line 3
     iput-object p2, p0, Ldek;->c:Lbad;
 
-    .line 4
     iput-object p3, p0, Ldek;->a:Lfay;
 
-    .line 5
     iput-object p4, p0, Ldek;->d:Laws;
 
-    .line 6
     iput-object p5, p0, Ldek;->f:Lgrs;
 
-    .line 7
     iput-object p6, p0, Ldek;->g:Libo;
 
-    .line 8
     iput-object p7, p0, Ldek;->e:Lgkk;
 
-    .line 9
     iput-object p8, p0, Ldek;->l:Lbvz;
 
-    .line 10
     iput-object p9, p0, Ldek;->h:Lgxt;
 
-    .line 11
     iput-object p10, p0, Ldek;->i:Lgxy;
 
-    .line 12
     iput-object p11, p0, Ldek;->j:Liim;
 
-    .line 13
     iput-object p12, p0, Ldek;->k:Lbfg;
 
-    .line 14
     iput-object p13, p0, Ldek;->m:Lijs;
 
-    .line 15
     move-object/from16 v0, p14
 
     iput-object v0, p0, Ldek;->n:Lgog;
 
-    .line 16
     move-object/from16 v0, p15
 
     iput-object v0, p0, Ldek;->o:Lhgl;
 
-    .line 17
     move-object/from16 v0, p16
 
     iput-object v0, p0, Ldek;->p:Lida;
 
-    .line 18
     move-object/from16 v0, p17
 
     iput-object v0, p0, Ldek;->q:Lfdp;
 
-    .line 19
     move-object/from16 v0, p18
 
     iput-object v0, p0, Ldek;->r:Legr;
 
-    .line 20
     move-object/from16 v0, p19
 
     iput-object v0, p0, Ldek;->s:Legx;
 
-    .line 21
     move-object/from16 v0, p20
 
     iput-object v0, p0, Ldek;->t:Lhfv;
 
-    .line 22
     move-object/from16 v0, p21
 
     iput-object v0, p0, Ldek;->v:Lfbc;
 
-    .line 24
     move-object/from16 v0, p22
 
     iget-object v1, v0, Lbnx;->a:Lida;
 
-    .line 25
     iput-object v1, p0, Ldek;->w:Lida;
 
-    .line 26
     move-object/from16 v0, p23
 
     iput-object v0, p0, Ldek;->x:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
-    .line 27
     move-object/from16 v0, p24
 
     iput-object v0, p0, Ldek;->y:Lgvn;
 
-    .line 28
     move-object/from16 v0, p25
 
     iput-object v0, p0, Ldek;->z:Lida;
 
-    .line 29
     move-object/from16 v0, p26
 
     iput-object v0, p0, Ldek;->A:Lbny;
 
-    .line 30
     move-object/from16 v0, p27
 
     iput-object v0, p0, Ldek;->u:Lhft;
 
-    .line 31
     move-object/from16 v0, p28
 
     iput-object v0, p0, Ldek;->B:Leak;
 
-    .line 32
     move-object/from16 v0, p29
 
     iput-object v0, p0, Ldek;->C:Lgql;
 
-    .line 33
     move-object/from16 v0, p30
 
     iput-object v0, p0, Ldek;->D:Lasy;
 
-    .line 34
     move-object/from16 v0, p31
 
     iput-object v0, p0, Ldek;->E:Lgue;
 
-    .line 35
     move-object/from16 v0, p32
 
     iput-object v0, p0, Ldek;->F:Ldya;
 
-    .line 36
     move-object/from16 v0, p33
 
     iput-object v0, p0, Ldek;->G:Liix;
 
-    .line 37
     move-object/from16 v0, p34
 
     iput-object v0, p0, Ldek;->H:Ldgb;
 
-    .line 38
     move-object/from16 v0, p35
 
     iput-object v0, p0, Ldek;->I:Ldfo;
 
-    .line 39
     move-object/from16 v0, p36
 
     iput-object v0, p0, Ldek;->J:Liej;
 
-    .line 40
     move-object/from16 v0, p37
 
     iput-object v0, p0, Ldek;->K:Lhhj;
 
-    .line 41
     move-object/from16 v0, p38
 
     iput-object v0, p0, Ldek;->L:Lhbv;
 
-    .line 42
     move-object/from16 v0, p39
 
     iput-object v0, p0, Ldek;->M:Ldew;
 
-    .line 43
     move-object/from16 v0, p40
 
     iput-object v0, p0, Ldek;->N:Lida;
 
-    .line 44
     move-object/from16 v0, p41
 
     iput-object v0, p0, Ldek;->O:Lkhp;
 
-    .line 45
     return-void
 .end method
 
@@ -286,8 +241,6 @@
 .method protected final a(Lbza;)Lcsb;
     .locals 44
 
-    .prologue
-    .line 46
     new-instance v1, Ldha;
 
     move-object/from16 v0, p0
@@ -314,7 +267,6 @@
 
     iget-object v5, v0, Ldek;->d:Laws;
 
-    .line 47
     invoke-virtual {v5}, Laws;->a()Landroid/content/Intent;
 
     move-result-object v8
@@ -519,6 +471,5 @@
 
     invoke-direct/range {v1 .. v43}, Ldha;-><init>(Lbfg;Lbac;Lbad;Lbza;Lbvz;Lfay;Landroid/content/Intent;Lgrs;Libo;Lgkk;Lgxt;Lgxy;Liim;Lijs;Lgog;Lhgl;Lida;Lfdp;Legr;Legx;Lhfv;Lfbc;Lida;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lgvn;Lida;Lbny;Lhft;Leak;Lgql;Lasy;Lgue;Ldya;Liix;Ldgb;Ldfo;Liej;Lhhj;Lhbv;Ldew;Lida;Lkhp;)V
 
-    .line 48
     return-object v1
 .end method

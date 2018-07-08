@@ -25,39 +25,28 @@
 .method public constructor <init>(Landroid/util/SizeF;Lihs;Lihs;JLbxb;Lbxf;)V
     .locals 4
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljiy;->a(Z)V
 
-    .line 3
     iput-object p1, p0, Leug;->f:Landroid/util/SizeF;
 
-    .line 4
     iput-object p2, p0, Leug;->c:Lihs;
 
-    .line 5
     iput-object p3, p0, Leug;->g:Lihs;
 
-    .line 6
     iput-wide p4, p0, Leug;->d:J
 
-    .line 7
     const/16 v0, 0xc
 
     iput v0, p0, Leug;->b:I
 
-    .line 8
     iput-object p6, p0, Leug;->a:Lbxb;
 
-    .line 9
     iput-object p7, p0, Leug;->e:Lbxf;
 
-    .line 10
     invoke-virtual {p1}, Landroid/util/SizeF;->getWidth()F
 
     move-result v0
@@ -68,21 +57,16 @@
 
     div-float/2addr v0, v1
 
-    .line 12
     iget v1, p2, Lihs;->a:I
 
-    .line 13
     int-to-float v1, v1
 
-    .line 14
     iget v2, p2, Lihs;->b:I
 
-    .line 15
     int-to-float v2, v2
 
     div-float/2addr v1, v2
 
-    .line 16
     div-float v2, v1, v0
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -99,15 +83,12 @@
 
     iput v0, p0, Leug;->h:F
 
-    .line 17
     return-void
 .end method
 
 .method public static a(JJJ)J
     .locals 4
 
-    .prologue
-    .line 42
     add-long v0, p2, p4
 
     const-wide/16 v2, 0x2
@@ -124,10 +105,8 @@
 .method public final a(FF[F)F
     .locals 4
 
-    .prologue
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 37
     const/high16 v0, 0x3f000000    # 0.5f
 
     const/4 v1, 0x0
@@ -142,7 +121,6 @@
 
     mul-float/2addr v0, v1
 
-    .line 38
     div-float v1, v3, p1
 
     const/high16 v2, 0x447a0000    # 1000.0f
@@ -153,13 +131,10 @@
 
     div-float v1, v3, v1
 
-    .line 39
     iget-object v2, p0, Leug;->c:Lihs;
 
-    .line 40
     iget v2, v2, Lihs;->a:I
 
-    .line 41
     int-to-float v2, v2
 
     mul-float/2addr v1, v2
@@ -180,17 +155,14 @@
 .method public final a(JJ[F)J
     .locals 5
 
-    .prologue
     const/high16 v3, 0x3f000000    # 0.5f
 
-    .line 18
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
 
     if-lez v0, :cond_0
 
-    .line 19
     iget v0, p0, Leug;->h:F
 
     long-to-float v1, p3
@@ -217,7 +189,6 @@
 
     add-long p1, v0, v2
 
-    .line 20
     :cond_0
     return-wide p1
 .end method
@@ -225,8 +196,6 @@
 .method public final a(J[F)J
     .locals 5
 
-    .prologue
-    .line 21
     long-to-float v0, p1
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -255,50 +224,40 @@
 .method public final a(JJJLihs;[FZ)[F
     .locals 7
 
-    .prologue
-    .line 22
     const/4 v0, 0x2
 
     new-array v0, v0, [F
 
     fill-array-data v0, :array_0
 
-    .line 23
     const-wide/16 v2, 0x0
 
     cmp-long v1, p1, v2
 
     if-ltz v1, :cond_0
 
-    .line 25
     invoke-static/range {p1 .. p6}, Leug;->a(JJJ)J
 
     move-result-wide v0
 
-    .line 26
     if-eqz p9, :cond_1
 
-    .line 27
     iget-object v2, p0, Leug;->e:Lbxf;
 
     invoke-interface {v2, v0, v1, p5, p6}, Lbxf;->a(JJ)[F
 
     move-result-object v0
 
-    .line 29
     :cond_0
     :goto_0
     const/4 v1, 0x2
 
     new-array v1, v1, [F
 
-    .line 30
     const/4 v2, 0x0
 
-    .line 31
     iget v3, p7, Lihs;->a:I
 
-    .line 32
     add-int/lit8 v3, v3, -0x1
 
     int-to-float v3, v3
@@ -321,13 +280,10 @@
 
     aput v3, v1, v2
 
-    .line 33
     const/4 v2, 0x1
 
-    .line 34
     iget v3, p7, Lihs;->b:I
 
-    .line 35
     add-int/lit8 v3, v3, -0x1
 
     int-to-float v3, v3
@@ -350,10 +306,8 @@
 
     aput v0, v1, v2
 
-    .line 36
     return-object v1
 
-    .line 28
     :cond_1
     iget-object v2, p0, Leug;->e:Lbxf;
 
@@ -363,7 +317,6 @@
 
     goto :goto_0
 
-    .line 22
     nop
 
     :array_0
@@ -376,26 +329,20 @@
 .method public final a(Landroid/graphics/Rect;)[F
     .locals 5
 
-    .prologue
-    .line 43
     const/4 v0, 0x2
 
     new-array v0, v0, [F
 
     fill-array-data v0, :array_0
 
-    .line 44
     if-eqz p1, :cond_0
 
-    .line 45
     const/4 v1, 0x0
 
     iget-object v2, p0, Leug;->g:Lihs;
 
-    .line 46
     iget v2, v2, Lihs;->a:I
 
-    .line 47
     int-to-float v2, v2
 
     iget v3, p1, Landroid/graphics/Rect;->right:I
@@ -410,15 +357,12 @@
 
     aput v2, v0, v1
 
-    .line 48
     const/4 v1, 0x1
 
     iget-object v2, p0, Leug;->g:Lihs;
 
-    .line 49
     iget v2, v2, Lihs;->b:I
 
-    .line 50
     int-to-float v2, v2
 
     iget v3, p1, Landroid/graphics/Rect;->bottom:I
@@ -433,11 +377,9 @@
 
     aput v2, v0, v1
 
-    .line 51
     :cond_0
     return-object v0
 
-    .line 43
     nop
 
     :array_0
@@ -450,8 +392,6 @@
 .method public toString()Ljava/lang/String;
     .locals 7
 
-    .prologue
-    .line 52
     iget-object v0, p0, Leug;->c:Lihs;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

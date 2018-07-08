@@ -25,10 +25,7 @@
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Ldns;->a:Lfnz;
 
-    .line 2
     return-object v0
 .end method

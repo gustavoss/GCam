@@ -33,19 +33,15 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lggg;->a:Lgga;
 
     iget-object v1, p0, Lggg;->b:Landroid/graphics/Bitmap;
 
     iget v2, p0, Lggg;->c:I
 
-    .line 2
     iget-object v0, v0, Lgga;->s:Lgiy;
 
     invoke-virtual {v0, v1, v2}, Lgiy;->a(Landroid/graphics/Bitmap;I)V
 
-    .line 3
     return-void
 .end method

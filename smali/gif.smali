@@ -14,8 +14,6 @@
 .method constructor <init>(Lgia;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgif;->a:Lgia;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,21 +26,15 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 2
     :try_start_0
     iget-object v0, p0, Lgif;->a:Lgia;
 
-    .line 3
     iget-object v1, v0, Lgia;->c:Lgng;
 
-    .line 4
     iget-object v0, p0, Lgif;->a:Lgia;
 
-    .line 5
     iget-object v0, v0, Lgia;->b:Lgji;
 
-    .line 6
     invoke-virtual {v0}, Lgji;->c()Ljava/io/File;
 
     move-result-object v0
@@ -59,7 +51,6 @@
 
     move-result-object v0
 
-    .line 15
     new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
     new-instance v2, Ljava/io/ByteArrayInputStream;
@@ -68,24 +59,20 @@
 
     invoke-direct {v1, v2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Ljava/io/InputStream;)V
 
-    .line 16
     invoke-virtual {v1}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 17
     iget-object v1, p0, Lgif;->a:Lgia;
 
     const-string v2, "Could not decode preview file: "
 
     iget-object v0, p0, Lgif;->a:Lgia;
 
-    .line 18
     iget-object v0, v0, Lgia;->b:Lgji;
 
-    .line 19
     invoke-virtual {v0}, Lgji;->c()Ljava/io/File;
 
     move-result-object v0
@@ -114,29 +101,23 @@
 
     move-result-object v0
 
-    .line 20
     :goto_0
     invoke-virtual {v1, v0}, Lgia;->b(Ljava/lang/String;)V
 
-    .line 28
     :goto_1
     return-void
 
-    .line 8
     :catch_0
     move-exception v0
 
     move-object v1, v0
 
-    .line 9
     iget-object v2, p0, Lgif;->a:Lgia;
 
     iget-object v0, p0, Lgif;->a:Lgia;
 
-    .line 10
     iget-object v0, v0, Lgia;->b:Lgji;
 
-    .line 11
     invoke-virtual {v0}, Lgji;->c()Ljava/io/File;
 
     move-result-object v0
@@ -151,7 +132,6 @@
 
     move-result-object v0
 
-    .line 12
     invoke-virtual {v1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
@@ -204,12 +184,10 @@
 
     move-result-object v0
 
-    .line 13
     invoke-virtual {v2, v0}, Lgia;->b(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 19
     :cond_0
     new-instance v0, Ljava/lang/String;
 
@@ -217,19 +195,15 @@
 
     goto :goto_0
 
-    .line 22
     :cond_1
     iget-object v0, p0, Lgif;->a:Lgia;
 
-    .line 23
     iget-object v2, v0, Lgga;->u:Lgii;
 
-    .line 24
     iget-object v0, p0, Lgif;->a:Lgia;
 
     iget-object v0, v0, Lgia;->o:Lgij;
 
-    .line 25
     invoke-static {v0}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -244,10 +218,8 @@
 
     invoke-direct {v3, v1, v4}, Lamc;-><init>(Landroid/graphics/drawable/BitmapDrawable;Lahf;)V
 
-    .line 26
     invoke-virtual {v2, v0, v3}, Lgii;->a(Lgij;Lany;)V
 
-    .line 27
     iget-object v0, p0, Lgif;->a:Lgia;
 
     iget-object v1, p0, Lgif;->a:Lgia;

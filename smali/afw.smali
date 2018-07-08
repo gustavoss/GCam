@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lafv;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public final a()Z
     .locals 1
 
-    .prologue
-    .line 4
     const/4 v0, 0x1
 
     return v0
@@ -29,8 +25,6 @@
 .method public final a(Ladm;)Z
     .locals 1
 
-    .prologue
-    .line 2
     sget-object v0, Ladm;->b:Ladm;
 
     if-ne p1, v0, :cond_0
@@ -49,8 +43,6 @@
 .method public final a(ZLadm;Lado;)Z
     .locals 1
 
-    .prologue
-    .line 3
     sget-object v0, Ladm;->d:Ladm;
 
     if-eq p2, v0, :cond_0
@@ -73,8 +65,6 @@
 .method public final b()Z
     .locals 1
 
-    .prologue
-    .line 5
     const/4 v0, 0x1
 
     return v0

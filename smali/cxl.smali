@@ -13,8 +13,6 @@
 .method public constructor <init>(Lcxg;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcxl;->a:Lcxg;
 
     iput p2, p0, Lcxl;->b:I

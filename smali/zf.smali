@@ -18,8 +18,6 @@
 .method constructor <init>(Lzb;Landroid/os/Handler;Laad;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lzf;->b:Lzb;
 
     iput-object p2, p0, Lzf;->c:Landroid/os/Handler;
@@ -36,16 +34,12 @@
 .method public final onAutoFocus(ZLandroid/hardware/Camera;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lzf;->b:Lzb;
 
     iget-object v0, v0, Lzb;->a:Lyv;
 
-    .line 3
     iget-object v0, v0, Lyv;->e:Labx;
 
-    .line 4
     invoke-virtual {v0}, Labx;->a()I
 
     move-result v0
@@ -54,15 +48,12 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 5
     sget-object v0, Lyv;->a:Lacf;
 
-    .line 6
     const-string v1, "onAutoFocus callback returning when not focusing"
 
     invoke-static {v0, v1}, Lace;->e(Lacf;Ljava/lang/String;)V
 
-    .line 10
     :goto_0
     iget-object v0, p0, Lzf;->c:Landroid/os/Handler;
 
@@ -72,19 +63,15 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 11
     return-void
 
-    .line 7
     :cond_0
     iget-object v0, p0, Lzf;->b:Lzb;
 
     iget-object v0, v0, Lzb;->a:Lyv;
 
-    .line 8
     iget-object v0, v0, Lyv;->e:Labx;
 
-    .line 9
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Labx;->a(I)V

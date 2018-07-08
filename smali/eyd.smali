@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public final a()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 15
     const-string v0, "crop region"
 
     return-object v0
@@ -32,27 +28,20 @@
 .method public final a(Lewb;Lewb;)Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 2
-    .line 3
     iget-object v1, p1, Lewb;->i:Landroid/graphics/Rect;
 
-    .line 6
     iget-object v2, p2, Lewb;->i:Landroid/graphics/Rect;
 
-    .line 8
     if-eqz v1, :cond_0
 
     if-nez v2, :cond_1
 
-    .line 14
     :cond_0
     :goto_0
     return v0
 
-    .line 11
     :cond_1
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
@@ -66,7 +55,6 @@
 
     int-to-double v4, v3
 
-    .line 12
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
 
     move-result v1
@@ -79,14 +67,12 @@
 
     int-to-double v2, v1
 
-    .line 13
     invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->hypot(DD)D
 
     move-result-wide v2
 
     double-to-float v1, v2
 
-    .line 14
     const v2, 0x358637bd    # 1.0E-6f
 
     cmpl-float v1, v1, v2

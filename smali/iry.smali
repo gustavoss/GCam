@@ -14,8 +14,6 @@
 .method public constructor <init>(Lirp;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Liry;->a:Lirp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,11 +26,8 @@
 .method public final synthetic a(Ljava/lang/Object;Ljava/util/concurrent/Executor;)Lirp;
     .locals 3
 
-    .prologue
-    .line 2
     check-cast p1, Lirr;
 
-    .line 3
     iget-object v0, p0, Liry;->a:Lirp;
 
     new-instance v1, Lirz;
@@ -47,6 +42,5 @@
 
     move-result-object v0
 
-    .line 4
     return-object v0
 .end method

@@ -11,8 +11,6 @@
 .method public constructor <init>(Lewi;)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lesg;->a:Lewi;
@@ -25,8 +23,6 @@
 .method public a()Liob;
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lesg;->a:Lewi;
 
     invoke-interface {v0}, Lewc;->f()Ljava/lang/Object;

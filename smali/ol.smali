@@ -14,8 +14,6 @@
 .method constructor <init>(Lok;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lol;->a:Lok;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final onGlobalLayout()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lol;->a:Lok;
 
     invoke-virtual {v0}, Lok;->d()Z
@@ -54,7 +50,6 @@
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -63,18 +58,14 @@
 
     iget-object v0, v0, Lop;->a:Ltw;
 
-    .line 4
     iget-boolean v0, v0, Ltn;->q:Z
 
-    .line 5
     if-nez v0, :cond_1
 
-    .line 6
     iget-object v0, p0, Lol;->a:Lok;
 
     iget-object v0, v0, Lok;->d:Landroid/view/View;
 
-    .line 7
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Landroid/view/View;->isShown()Z
@@ -83,17 +74,14 @@
 
     if-nez v0, :cond_2
 
-    .line 8
     :cond_0
     iget-object v0, p0, Lol;->a:Lok;
 
     invoke-virtual {v0}, Lok;->c()V
 
-    .line 12
     :cond_1
     return-void
 
-    .line 9
     :cond_2
     iget-object v0, p0, Lol;->a:Lok;
 
@@ -116,7 +104,6 @@
 
     check-cast v0, Lop;
 
-    .line 10
     iget-object v0, v0, Lop;->a:Ltw;
 
     invoke-virtual {v0}, Ltw;->b()V

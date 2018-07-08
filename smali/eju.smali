@@ -20,17 +20,14 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
     const/16 v1, 0x9
 
-    .line 33
     new-array v0, v1, [F
 
     fill-array-data v0, :array_0
 
     sput-object v0, Leju;->a:[F
 
-    .line 34
     new-array v0, v1, [F
 
     fill-array-data v0, :array_1
@@ -39,7 +36,6 @@
 
     return-void
 
-    .line 33
     nop
 
     :array_0
@@ -55,7 +51,6 @@
         0x3f000000    # 0.5f
     .end array-data
 
-    .line 34
     :array_1
     .array-data 4
         -0x41000000    # -0.5f
@@ -73,11 +68,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -92,8 +84,6 @@
 .method public final a(FLejn;[FII)V
     .locals 13
 
-    .prologue
-    .line 3
     move/from16 v0, p4
 
     int-to-float v2, v0
@@ -102,7 +92,6 @@
 
     div-float v5, v2, v3
 
-    .line 4
     move/from16 v0, p5
 
     int-to-float v2, v0
@@ -111,7 +100,6 @@
 
     div-float v6, v2, v3
 
-    .line 5
     invoke-static {v5, v6}, Ljava/lang/Math;->min(FF)F
 
     move-result v2
@@ -120,40 +108,32 @@
 
     mul-float v7, v2, v3
 
-    .line 6
     iget-object v2, p0, Leju;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 7
     sget-object v2, Leju;->a:[F
 
     array-length v8, v2
 
-    .line 8
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 9
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 10
     move/from16 v0, p4
 
     move/from16 v1, p5
 
     if-le v0, v1, :cond_0
 
-    .line 11
     const v3, 0x3faaaaab
 
-    .line 13
     :goto_0
     const/4 v4, 0x0
 
     :goto_1
     if-ge v4, v8, :cond_1
 
-    .line 14
     sget-object v9, Leju;->a:[F
 
     aget v9, v9, v4
@@ -166,7 +146,6 @@
 
     add-float/2addr v9, v5
 
-    .line 15
     sget-object v10, Leju;->b:[F
 
     aget v10, v10, v4
@@ -179,7 +158,6 @@
 
     add-float/2addr v10, v6
 
-    .line 16
     iget-object v11, p0, Leju;->c:Ljava/util/ArrayList;
 
     new-instance v12, Landroid/graphics/PointF;
@@ -188,22 +166,18 @@
 
     invoke-virtual {v11, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 17
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 12
     :cond_0
     const v2, 0x3faaaaab
 
     goto :goto_0
 
-    .line 18
     :cond_1
     iget-object v4, p0, Leju;->c:Ljava/util/ArrayList;
 
-    .line 19
     if-eqz v4, :cond_2
 
     iget-object v2, p2, Lejn;->g:Lekc;
@@ -214,28 +188,23 @@
 
     if-nez v2, :cond_3
 
-    .line 32
     :cond_2
     :goto_2
     return-void
 
-    .line 21
     :cond_3
     iget-object v2, p2, Lejn;->g:Lekc;
 
-    .line 22
     iget v2, v2, Leik;->d:I
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 23
     iget-object v2, p2, Lejn;->g:Lekc;
 
     const/high16 v3, 0x3f800000    # 1.0f
 
     invoke-virtual {v2, v3}, Lekc;->a(F)V
 
-    .line 24
     const/4 v2, 0x0
 
     move v3, v2
@@ -248,19 +217,16 @@
 
     if-ge v3, v2, :cond_2
 
-    .line 25
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/graphics/PointF;
 
-    .line 26
     iget-object v5, p2, Lejn;->e:Lein;
 
     if-eqz v5, :cond_4
 
-    .line 27
     iget-object v5, p2, Lejn;->e:Lein;
 
     iget v6, v2, Landroid/graphics/PointF;->x:F
@@ -275,7 +241,6 @@
     :try_end_0
     .catch Leij; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 28
     :cond_4
     add-int/lit8 v2, v3, 0x1
 
@@ -283,11 +248,9 @@
 
     goto :goto_3
 
-    .line 30
     :catch_0
     move-exception v2
 
-    .line 31
     sget-object v3, Lkfu;->a:Lkfv;
 
     invoke-virtual {v3, v2}, Lkfv;->b(Ljava/lang/Throwable;)V

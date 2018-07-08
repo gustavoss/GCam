@@ -14,11 +14,8 @@
 .method public constructor <init>()V
     .locals 4
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lakf;
 
     const-wide/16 v2, 0x1f4
@@ -35,8 +32,6 @@
 .method public final a(Lakq;)Laki;
     .locals 2
 
-    .prologue
-    .line 3
     new-instance v0, Lalo;
 
     iget-object v1, p0, Lalp;->a:Lakf;

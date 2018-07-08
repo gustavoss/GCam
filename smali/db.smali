@@ -17,32 +17,26 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lgh;
 
     invoke-direct {v0}, Lgh;-><init>()V
 
     iput-object v0, p0, Ldb;->a:Lgh;
 
-    .line 3
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Ldb;->b:Landroid/util/SparseArray;
 
-    .line 4
     new-instance v0, Lgn;
 
     invoke-direct {v0}, Lgn;-><init>()V
 
     iput-object v0, p0, Ldb;->c:Lgn;
 
-    .line 5
     new-instance v0, Lgh;
 
     invoke-direct {v0}, Lgh;-><init>()V

@@ -13,8 +13,6 @@
 .method constructor <init>(Lfze;Licm;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfzk;->b:Lfze;
 
     iput-object p2, p0, Lfzk;->a:Licm;

@@ -27,38 +27,26 @@
 .method constructor <init>(Liie;Liii;Ldsh;Lffq;Lfea;Lcqm;Ldrj;Lgmh;Lhbv;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldqm;->a:Liie;
 
-    .line 3
     iput-object p2, p0, Ldqm;->g:Liii;
 
-    .line 4
     iput-object p3, p0, Ldqm;->b:Ldpb;
 
-    .line 5
     iput-object p4, p0, Ldqm;->c:Lffq;
 
-    .line 6
     iput-object p5, p0, Ldqm;->d:Lfea;
 
-    .line 7
     iput-object p6, p0, Ldqm;->e:Lcqm;
 
-    .line 8
     iput-object p7, p0, Ldqm;->f:Lida;
 
-    .line 9
     iput-object p8, p0, Ldqm;->h:Lgmh;
 
-    .line 10
     iput-object p9, p0, Ldqm;->i:Lhbv;
 
-    .line 11
     return-void
 .end method
 
@@ -67,46 +55,34 @@
 .method public final a(ILftc;Lfep;)Lftc;
     .locals 20
 
-    .prologue
-    .line 12
     new-instance v8, Ldsg;
 
-    .line 13
     sget-object v2, Lfck;->a:Lfck;
 
-    .line 14
     new-instance v3, Lfcj;
 
     invoke-direct {v3, v2, v2, v2}, Lfcj;-><init>(Lfck;Lfck;Lfck;)V
 
-    .line 15
     invoke-direct {v8, v3}, Ldsg;-><init>(Lfcj;)V
 
-    .line 16
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldqm;->i:Lhbv;
 
-    .line 17
     iget-object v2, v2, Lhbv;->b:Linc;
 
-    .line 18
     iget-boolean v2, v2, Linc;->g:Z
 
-    .line 19
     if-nez v2, :cond_0
 
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldqm;->i:Lhbv;
 
-    .line 20
     iget-object v2, v2, Lhbv;->b:Linc;
 
-    .line 21
     iget-boolean v2, v2, Linc;->f:Z
 
-    .line 22
     if-nez v2, :cond_0
 
     move-object/from16 v0, p0
@@ -124,14 +100,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 23
     new-instance v2, Lfhm;
 
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->FLASH_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     const/4 v4, 0x0
 
-    .line 24
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -144,7 +118,6 @@
 
     const/4 v5, 0x1
 
-    .line 25
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -157,19 +130,16 @@
 
     const/4 v6, 0x1
 
-    .line 26
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
     invoke-direct {v4, v5, v6}, Lfhm;-><init>(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 27
     invoke-static {v2, v3, v4}, Ljvf;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljvf;
 
     move-result-object v14
 
-    .line 32
     :goto_0
     new-instance v19, Ldri;
 
@@ -235,7 +205,6 @@
 
     return-object v19
 
-    .line 28
     :cond_1
     new-instance v2, Lfhm;
 
@@ -243,7 +212,6 @@
 
     const/4 v4, 0x0
 
-    .line 29
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -256,14 +224,12 @@
 
     const/4 v5, 0x1
 
-    .line 30
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
     invoke-direct {v3, v4, v5}, Lfhm;-><init>(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 31
     invoke-static {v2, v3}, Ljvf;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljvf;
 
     move-result-object v14

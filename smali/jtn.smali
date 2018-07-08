@@ -11,8 +11,6 @@
 .method constructor <init>(Ljtm;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljtn;->a:Ljtm;
 
     const/4 v0, 0x0
@@ -27,8 +25,6 @@
 .method final a(I)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ljtn;->a:Ljtm;
 
     iget-object v0, v0, Ljtm;->b:[Ljava/lang/Object;

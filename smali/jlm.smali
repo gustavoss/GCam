@@ -11,25 +11,18 @@
 .method private constructor <init>(Ljava/util/List;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljlg;-><init>()V
 
-    .line 2
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Ljlm;->a:Ljava/util/List;
 
-    .line 4
     return-void
 .end method
 
 .method public static varargs a([Ljlg;)Ljlm;
     .locals 2
 
-    .prologue
-    .line 5
     new-instance v0, Ljlm;
 
     invoke-static {p0}, Ljxf;->a([Ljava/lang/Object;)Ljava/util/ArrayList;
@@ -46,9 +39,6 @@
 .method public final a(Ljlb;)Ljlb;
     .locals 2
 
-    .prologue
-    .line 6
-    .line 7
     iget-object v0, p0, Ljlm;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -68,14 +58,12 @@
 
     check-cast v0, Ljlg;
 
-    .line 8
     invoke-virtual {v0, p1}, Ljlg;->a(Ljlb;)Ljlb;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 10
     :cond_0
     return-object p1
 .end method
@@ -83,8 +71,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 11
     const-string v0, ","
 
     invoke-static {v0}, Ljrp;->a(Ljava/lang/String;)Ljrp;

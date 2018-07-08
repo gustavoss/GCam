@@ -11,14 +11,10 @@
 .method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lihx;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lihz;->c:Ljava/lang/String;
 
-    .line 3
     return-void
 .end method
 
@@ -27,8 +23,6 @@
 .method protected final a(Ljava/lang/String;)Lihy;
     .locals 2
 
-    .prologue
-    .line 4
     new-instance v0, Lihy;
 
     iget-object v1, p0, Lihz;->c:Ljava/lang/String;

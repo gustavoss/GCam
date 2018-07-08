@@ -11,8 +11,6 @@
 .method public constructor <init>(Lgsj;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgsk;->a:Lgsj;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,16 +23,12 @@
 .method public a()V
     .locals 0
 
-    .prologue
-    .line 2
     return-void
 .end method
 
 .method public a(FZ)Z
     .locals 1
 
-    .prologue
-    .line 5
     const/4 v0, 0x1
 
     return v0
@@ -43,8 +37,6 @@
 .method public a(Z)Z
     .locals 1
 
-    .prologue
-    .line 4
     const/4 v0, 0x1
 
     return v0
@@ -53,28 +45,22 @@
 .method public b()V
     .locals 0
 
-    .prologue
-    .line 3
     return-void
 .end method
 
 .method public final b(FZ)Z
     .locals 4
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 6
     iget-object v3, p0, Lgsk;->a:Lgsj;
 
-    .line 8
     if-eqz p2, :cond_1
 
     iget-object v0, v3, Lgsj;->f:Lida;
 
-    .line 9
     invoke-interface {v0}, Lida;->c()Ljava/lang/Object;
 
     move-result-object v0
@@ -89,7 +75,6 @@
 
     iget-object v0, v3, Lgsj;->e:Landroid/view/WindowManager;
 
-    .line 10
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v0
@@ -102,7 +87,6 @@
 
     iget-object v0, v3, Lgsj;->e:Landroid/view/WindowManager;
 
-    .line 11
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v0
@@ -118,28 +102,22 @@
     :cond_0
     move v0, v1
 
-    .line 14
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 22
     :goto_1
     return v2
 
     :cond_1
     move v0, v2
 
-    .line 13
     goto :goto_0
 
-    .line 16
     :cond_2
     iget-object v0, p0, Lgsk;->a:Lgsj;
 
-    .line 17
     iget-object v0, v0, Lgsj;->e:Landroid/view/WindowManager;
 
-    .line 18
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v0
@@ -150,10 +128,8 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 19
     neg-float p1, p1
 
-    .line 20
     :cond_3
     iget-object v0, p0, Lgsk;->a:Lgsj;
 
@@ -161,7 +137,6 @@
 
     div-float v1, p1, v1
 
-    .line 21
     iput v1, v0, Lgsj;->b:F
 
     goto :goto_1

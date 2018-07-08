@@ -39,8 +39,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 109
     const-string v0, "CdrCamReqBdrFty"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -55,41 +53,28 @@
 .method public constructor <init>(Lbgo;Lida;Lida;Lida;Lida;Lida;Lida;Lida;Lida;Lieh;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbhm;->b:Lbgo;
 
-    .line 3
     iput-object p2, p0, Lbhm;->e:Lida;
 
-    .line 4
     iput-object p3, p0, Lbhm;->f:Lida;
 
-    .line 5
     iput-object p4, p0, Lbhm;->g:Lida;
 
-    .line 6
     iput-object p5, p0, Lbhm;->h:Lida;
 
-    .line 7
     iput-object p6, p0, Lbhm;->c:Lida;
 
-    .line 8
     iput-object p7, p0, Lbhm;->i:Lida;
 
-    .line 9
     iput-object p8, p0, Lbhm;->j:Lida;
 
-    .line 10
     iput-object p9, p0, Lbhm;->k:Lida;
 
-    .line 11
     iput-object p10, p0, Lbhm;->d:Lieh;
 
-    .line 12
     return-void
 .end method
 
@@ -98,31 +83,24 @@
 .method public final a(Lbhe;)Linr;
     .locals 5
 
-    .prologue
-    .line 13
     const/4 v0, 0x3
 
-    .line 14
     invoke-virtual {p1, v0}, Lbhe;->a(I)Linr;
 
     move-result-object v1
 
-    .line 15
     invoke-virtual {p0, v1}, Lbhm;->a(Linr;)V
 
-    .line 16
     iget-object v0, p0, Lbhm;->b:Lbgo;
 
     invoke-interface {v0}, Lbgo;->a()Landroid/util/Range;
 
     move-result-object v0
 
-    .line 17
     sget-object v2, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_TARGET_FPS_RANGE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-virtual {v1, v2, v0}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 18
     sget-object v2, Lbhm;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -159,7 +137,6 @@
 
     invoke-static {v2, v0}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 19
     iget-object v0, p0, Lbhm;->c:Lida;
 
     invoke-interface {v0}, Lida;->c()Ljava/lang/Object;
@@ -172,25 +149,19 @@
 
     move-result v2
 
-    .line 20
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AF_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 21
     if-eqz v2, :cond_0
 
-    .line 22
     const/4 v0, 0x4
 
-    .line 24
     :goto_0
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 25
     invoke-virtual {v1, v3, v0}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 26
     sget-object v0, Lbhm;->a:Ljava/lang/String;
 
     const/16 v3, 0x28
@@ -215,10 +186,8 @@
 
     invoke-static {v0, v2}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 27
     return-object v1
 
-    .line 23
     :cond_0
     const/4 v0, 0x1
 
@@ -228,14 +197,12 @@
 .method public final a(Linr;)V
     .locals 8
 
-    .prologue
     const/4 v1, 0x2
 
     const/4 v2, 0x1
 
     const/4 v4, 0x0
 
-    .line 42
     iget-object v0, p0, Lbhm;->d:Lieh;
 
     invoke-virtual {v0}, Lieh;->c()Z
@@ -246,7 +213,6 @@
 
     move v0, v1
 
-    .line 45
     :goto_0
     sget-object v3, Lbhm;->a:Ljava/lang/String;
 
@@ -272,7 +238,6 @@
 
     invoke-static {v3, v5}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 46
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->CONTROL_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -281,7 +246,6 @@
 
     invoke-virtual {p1, v3, v5}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 47
     iget-object v3, p0, Lbhm;->d:Lieh;
 
     invoke-virtual {v3}, Lieh;->c()Z
@@ -292,7 +256,6 @@
 
     move v3, v2
 
-    .line 50
     :goto_1
     sget-object v5, Lbhm;->a:Ljava/lang/String;
 
@@ -318,7 +281,6 @@
 
     invoke-static {v5, v0}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 51
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_SCENE_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -327,18 +289,14 @@
 
     invoke-virtual {p1, v0, v3}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 52
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 53
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    .line 54
     invoke-virtual {p1, v0, v3}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 55
     sget-object v0, Lbhm;->a:Ljava/lang/String;
 
     iget-object v3, p0, Lbhm;->h:Lida;
@@ -381,7 +339,6 @@
 
     invoke-static {v0, v3}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 56
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_LOCK:Landroid/hardware/camera2/CaptureRequest$Key;
 
     iget-object v0, p0, Lbhm;->h:Lida;
@@ -394,7 +351,6 @@
 
     invoke-virtual {p1, v3, v0}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 57
     sget-object v3, Lbhm;->a:Ljava/lang/String;
 
     iget-object v0, p0, Lbhm;->e:Lida;
@@ -441,22 +397,18 @@
 
     invoke-static {v3, v0}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 58
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_REGIONS:Landroid/hardware/camera2/CaptureRequest$Key;
 
     iget-object v0, p0, Lbhm;->e:Lida;
 
-    .line 59
     invoke-interface {v0}, Lida;->c()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Landroid/hardware/camera2/params/MeteringRectangle;
 
-    .line 60
     invoke-virtual {p1, v3, v0}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 61
     sget-object v0, Lbhm;->a:Ljava/lang/String;
 
     iget-object v3, p0, Lbhm;->g:Lida;
@@ -499,22 +451,18 @@
 
     invoke-static {v0, v3}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 62
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_EXPOSURE_COMPENSATION:Landroid/hardware/camera2/CaptureRequest$Key;
 
     iget-object v0, p0, Lbhm;->g:Lida;
 
-    .line 63
     invoke-interface {v0}, Lida;->c()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 64
     invoke-virtual {p1, v3, v0}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 65
     sget-object v3, Lbhm;->a:Ljava/lang/String;
 
     iget-object v0, p0, Lbhm;->f:Lida;
@@ -561,63 +509,50 @@
 
     invoke-static {v3, v0}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 66
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AF_REGIONS:Landroid/hardware/camera2/CaptureRequest$Key;
 
     iget-object v0, p0, Lbhm;->f:Lida;
 
-    .line 67
     invoke-interface {v0}, Lida;->c()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Landroid/hardware/camera2/params/MeteringRectangle;
 
-    .line 68
     invoke-virtual {p1, v3, v0}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 69
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AF_TRIGGER:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 70
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    .line 71
     invoke-virtual {p1, v0, v3}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 72
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AWB_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     iget-object v0, p0, Lbhm;->i:Lida;
 
-    .line 73
     invoke-interface {v0}, Lida;->c()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 74
     invoke-virtual {p1, v3, v0}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 75
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->SCALER_CROP_REGION:Landroid/hardware/camera2/CaptureRequest$Key;
 
     iget-object v0, p0, Lbhm;->k:Lida;
 
-    .line 76
     invoke-interface {v0}, Lida;->c()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/graphics/Rect;
 
-    .line 77
     invoke-virtual {p1, v3, v0}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 78
     iget-object v0, p0, Lbhm;->d:Lieh;
 
     invoke-virtual {v0}, Lieh;->c()Z
@@ -628,7 +563,6 @@
 
     move v0, v2
 
-    .line 81
     :goto_2
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->STATISTICS_FACE_DETECT_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -638,7 +572,6 @@
 
     invoke-virtual {p1, v3, v0}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 82
     iget-object v0, p0, Lbhm;->j:Lida;
 
     invoke-interface {v0}, Lida;->c()Ljava/lang/Object;
@@ -655,7 +588,6 @@
 
     move v0, v1
 
-    .line 85
     :goto_3
     sget-object v3, Lbhm;->a:Ljava/lang/String;
 
@@ -681,7 +613,6 @@
 
     invoke-static {v3, v5}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 86
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->FLASH_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -690,7 +621,6 @@
 
     invoke-virtual {p1, v3, v0}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 87
     iget-object v0, p0, Lbhm;->d:Lieh;
 
     invoke-virtual {v0}, Lieh;->d()Z
@@ -701,7 +631,6 @@
 
     move v0, v2
 
-    .line 90
     :goto_4
     sget-object v3, Lbhm;->a:Ljava/lang/String;
 
@@ -727,18 +656,14 @@
 
     invoke-static {v3, v5}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 91
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->CONTROL_VIDEO_STABILIZATION_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 92
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 93
     invoke-virtual {p1, v3, v0}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 94
     iget-object v0, p0, Lbhm;->d:Lieh;
 
     invoke-virtual {v0}, Lieh;->e()Z
@@ -749,7 +674,6 @@
 
     move v4, v2
 
-    .line 97
     :cond_0
     sget-object v0, Lbhm;->a:Ljava/lang/String;
 
@@ -775,18 +699,14 @@
 
     invoke-static {v0, v3}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 98
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->LENS_OPTICAL_STABILIZATION_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 99
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    .line 100
     invoke-virtual {p1, v0, v3}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 102
     iget-object v0, p0, Lbhm;->d:Lieh;
 
     invoke-virtual {v0}, Lieh;->f()Z
@@ -795,7 +715,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 104
     :goto_5
     sget-object v0, Lbhm;->a:Ljava/lang/String;
 
@@ -821,48 +740,39 @@
 
     invoke-static {v0, v2}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 105
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->NOISE_REDUCTION_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 106
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 107
     invoke-virtual {p1, v0, v1}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 108
     return-void
 
     :cond_1
     move v0, v2
 
-    .line 44
     goto/16 :goto_0
 
     :cond_2
     move v3, v4
 
-    .line 49
     goto/16 :goto_1
 
     :cond_3
     move v0, v4
 
-    .line 80
     goto/16 :goto_2
 
     :cond_4
     move v0, v4
 
-    .line 84
     goto/16 :goto_3
 
     :cond_5
     move v0, v4
 
-    .line 89
     goto/16 :goto_4
 
     :cond_6
@@ -874,33 +784,26 @@
 .method public final b(Lbhe;)Linr;
     .locals 7
 
-    .prologue
     const/4 v1, 0x3
 
     const/4 v2, 0x1
 
-    .line 28
-    .line 29
     invoke-virtual {p1, v1}, Lbhe;->a(I)Linr;
 
     move-result-object v3
 
-    .line 30
     invoke-virtual {p0, v3}, Lbhm;->a(Linr;)V
 
-    .line 31
     iget-object v0, p0, Lbhm;->b:Lbgo;
 
     invoke-interface {v0}, Lbgo;->b()Landroid/util/Range;
 
     move-result-object v0
 
-    .line 32
     sget-object v4, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_TARGET_FPS_RANGE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-virtual {v3, v4, v0}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 33
     sget-object v4, Lbhm;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -937,7 +840,6 @@
 
     invoke-static {v4, v0}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 34
     iget-object v0, p0, Lbhm;->d:Lieh;
 
     invoke-virtual {v0}, Lieh;->a()Z
@@ -948,7 +850,6 @@
 
     iget-object v0, p0, Lbhm;->c:Lida;
 
-    .line 35
     invoke-interface {v0}, Lida;->c()Ljava/lang/Object;
 
     move-result-object v0
@@ -963,13 +864,11 @@
 
     move v0, v2
 
-    .line 36
     :goto_0
     if-eqz v0, :cond_1
 
     move v0, v1
 
-    .line 39
     :goto_1
     sget-object v1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AF_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -979,7 +878,6 @@
 
     invoke-virtual {v3, v1, v2}, Linr;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 40
     sget-object v1, Lbhm;->a:Ljava/lang/String;
 
     const/16 v2, 0x1b
@@ -1004,10 +902,8 @@
 
     invoke-static {v1, v0}, Lbkl;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 41
     return-object v3
 
-    .line 35
     :cond_0
     const/4 v0, 0x0
 
@@ -1016,6 +912,5 @@
     :cond_1
     move v0, v2
 
-    .line 38
     goto :goto_1
 .end method

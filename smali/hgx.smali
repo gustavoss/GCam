@@ -14,8 +14,6 @@
 .method constructor <init>(Lhgw;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhgx;->a:Lhgw;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,22 +26,17 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 11
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 5
     check-cast p1, Lhcb;
 
-    .line 6
     :try_start_0
     iget-object v0, p0, Lhgx;->a:Lhgw;
 
     iget-object v3, v0, Lhgw;->a:Lhxw;
 
-    .line 8
     iget-object v4, v3, Lhxw;->b:Lhxr;
 
-    .line 9
     new-instance v5, Lhsm;
 
     invoke-direct {v5}, Lhsm;-><init>()V
@@ -52,17 +45,14 @@
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 10
     new-instance v0, Ljava/util/TreeSet;
 
-    .line 11
     iget-object v2, v4, Lhxr;->a:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v2
 
-    .line 12
     invoke-direct {v0, v2}, Ljava/util/TreeSet;-><init>(Ljava/util/Collection;)V
 
     invoke-virtual {v0}, Ljava/util/TreeSet;->size()I
@@ -118,7 +108,6 @@
 
     goto :goto_0
 
-    .line 13
     :cond_0
     iput-object v7, v5, Lhsm;->a:[Lhsn;
 
@@ -126,7 +115,6 @@
 
     invoke-direct {v2, v5, v6}, Lhsl;-><init>(Lhsm;Ljava/util/List;)V
 
-    .line 14
     iget-object v0, v3, Lhxw;->a:Lcom/google/android/gms/wearable/PutDataRequest;
 
     iget-object v4, v2, Lhsl;->a:Lhsm;
@@ -135,10 +123,8 @@
 
     move-result-object v4
 
-    .line 15
     iput-object v4, v0, Lcom/google/android/gms/wearable/PutDataRequest;->b:[B
 
-    .line 16
     iget-object v0, v2, Lhsl;->b:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -202,24 +188,19 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 25
     :catch_0
     move-exception v0
 
-    .line 26
     sget-object v1, Lhgq;->a:Ljava/lang/String;
 
-    .line 27
     const-string v2, "Error setting data item"
 
     invoke-static {v1, v2, v0}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 28
     :cond_1
     :goto_2
     return-void
 
-    .line 16
     :cond_2
     if-nez v0, :cond_4
 
@@ -335,27 +316,22 @@
     :cond_6
     iget-object v0, v3, Lhxw;->a:Lcom/google/android/gms/wearable/PutDataRequest;
 
-    .line 18
     iget-object v1, p1, Lhcb;->a:Lhbz;
 
-    .line 19
     iget-object v1, v1, Lhbz;->a:Lhmc;
 
-    .line 21
     new-instance v2, Lhyf;
 
     invoke-direct {v2, v1, v0}, Lhyf;-><init>(Lhmc;Lcom/google/android/gms/wearable/PutDataRequest;)V
 
     invoke-virtual {v1, v2}, Lhmc;->a(Lhto;)Lhto;
 
-    .line 22
     iget-object v0, p0, Lhgx;->a:Lhgw;
 
     iget-object v0, v0, Lhgw;->b:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_1
 
-    .line 23
     iget-object v0, p0, Lhgx;->a:Lhgw;
 
     iget-object v0, v0, Lhgw;->b:Ljava/lang/Runnable;
@@ -370,15 +346,11 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 2
 
-    .prologue
-    .line 2
     sget-object v0, Lhgq;->a:Ljava/lang/String;
 
-    .line 3
     const-string v1, "Fail to connect to GoogleApiClient"
 
     invoke-static {v0, v1}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     return-void
 .end method

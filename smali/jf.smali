@@ -14,8 +14,6 @@
 .method constructor <init>(Lji;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljf;->a:Lji;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,11 +26,8 @@
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ljf;->a:Lji;
 
-    .line 3
     iget-object v0, v0, Lji;->a:Lni;
 
     iget-object v0, v0, Lni;->c:Landroid/support/v7/widget/ActionBarContainer;
@@ -41,11 +36,9 @@
 
     move-result-object v0
 
-    .line 4
     check-cast v0, Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 5
     return-void
 .end method

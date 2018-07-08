@@ -21,10 +21,8 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 10
     new-instance v0, Lkcn;
 
     const-string v1, "JAVA6"
@@ -33,7 +31,6 @@
 
     sput-object v0, Lkcm;->d:Lkcm;
 
-    .line 11
     new-instance v0, Lkco;
 
     const-string v1, "JAVA7"
@@ -42,7 +39,6 @@
 
     sput-object v0, Lkcm;->a:Lkcm;
 
-    .line 12
     new-instance v0, Lkcp;
 
     const-string v1, "JAVA8"
@@ -51,7 +47,6 @@
 
     sput-object v0, Lkcm;->b:Lkcm;
 
-    .line 13
     new-instance v0, Lkcq;
 
     const-string v1, "JAVA9"
@@ -60,7 +55,6 @@
 
     sput-object v0, Lkcm;->e:Lkcm;
 
-    .line 14
     const/4 v0, 0x4
 
     new-array v0, v0, [Lkcm;
@@ -89,7 +83,6 @@
 
     sput-object v0, Lkcm;->f:[Lkcm;
 
-    .line 15
     const-class v0, Ljava/lang/reflect/AnnotatedElement;
 
     const-class v1, Ljava/lang/reflect/TypeVariable;
@@ -100,7 +93,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 16
     new-instance v0, Lkbz;
 
     invoke-direct {v0, v3}, Lkbz;-><init>(B)V
@@ -109,30 +101,25 @@
 
     move-result-object v0
 
-    .line 17
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "java.util.Map.java.util.Map"
 
-    .line 18
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 19
     sget-object v0, Lkcm;->b:Lkcm;
 
     sput-object v0, Lkcm;->c:Lkcm;
 
-    .line 24
     :goto_0
     return-void
 
-    .line 20
     :cond_0
     sget-object v0, Lkcm;->e:Lkcm;
 
@@ -140,7 +127,6 @@
 
     goto :goto_0
 
-    .line 21
     :cond_1
     new-instance v0, Lkbz;
 
@@ -154,14 +140,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 22
     sget-object v0, Lkcm;->a:Lkcm;
 
     sput-object v0, Lkcm;->c:Lkcm;
 
     goto :goto_0
 
-    .line 23
     :cond_2
     sget-object v0, Lkcm;->d:Lkcm;
 
@@ -173,8 +157,6 @@
 .method constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -183,8 +165,6 @@
 .method public static values()[Lkcm;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lkcm;->f:[Lkcm;
 
     invoke-virtual {v0}, [Lkcm;->clone()Ljava/lang/Object;
@@ -204,13 +184,10 @@
 .method final a([Ljava/lang/reflect/Type;)Ljuy;
     .locals 4
 
-    .prologue
-    .line 3
     invoke-static {}, Ljuy;->f()Ljuz;
 
     move-result-object v1
 
-    .line 4
     array-length v2, p1
 
     const/4 v0, 0x0
@@ -220,19 +197,16 @@
 
     aget-object v3, p1, v0
 
-    .line 5
     invoke-virtual {p0, v3}, Lkcm;->b(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
 
     move-result-object v3
 
     invoke-virtual {v1, v3}, Ljuz;->c(Ljava/lang/Object;)Ljuz;
 
-    .line 6
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 7
     :cond_0
     invoke-virtual {v1}, Ljuz;->a()Ljuy;
 
@@ -244,8 +218,6 @@
 .method a()Z
     .locals 1
 
-    .prologue
-    .line 9
     const/4 v0, 0x1
 
     return v0
@@ -257,8 +229,6 @@
 .method public c(Ljava/lang/reflect/Type;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 8
     invoke-static {p1}, Lkcg;->b(Ljava/lang/reflect/Type;)Ljava/lang/String;
 
     move-result-object v0

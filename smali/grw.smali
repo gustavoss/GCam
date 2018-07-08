@@ -29,46 +29,37 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lgrw;->a:Lgru;
 
     iget-object v2, p0, Lgrw;->b:Lkfk;
 
-    .line 2
     iget-object v0, v1, Lgru;->b:Landroid/app/Activity;
 
     const-string v3, "keyguard"
 
-    .line 3
     invoke-virtual {v0, v3}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/KeyguardManager;
 
-    .line 4
     invoke-virtual {v0}, Landroid/app/KeyguardManager;->isKeyguardLocked()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 5
     new-instance v3, Lgrx;
 
     invoke-direct {v3, v1, v2}, Lgrx;-><init>(Lgru;Lkfk;)V
 
-    .line 6
     iget-object v1, v1, Lgru;->b:Landroid/app/Activity;
 
     invoke-virtual {v0, v1, v3}, Landroid/app/KeyguardManager;->requestDismissKeyguard(Landroid/app/Activity;Landroid/app/KeyguardManager$KeyguardDismissCallback;)V
 
-    .line 10
     :goto_0
     return-void
 
-    .line 8
     :cond_0
     iget-object v0, v1, Lgru;->d:Lkgb;
 
@@ -76,7 +67,6 @@
 
     invoke-virtual {v0, v1}, Lkgb;->a(Landroid/app/Activity;)V
 
-    .line 9
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;

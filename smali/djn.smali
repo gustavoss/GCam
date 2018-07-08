@@ -14,8 +14,6 @@
 .method constructor <init>(Ldjl;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldjn;->a:Ldjl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,9 +26,6 @@
 .method public final synthetic a(Ljava/lang/Object;)Lbsa;
     .locals 4
 
-    .prologue
-    .line 2
-    .line 3
     new-instance v1, Ldie;
 
     iget-object v2, p0, Ldjn;->a:Ldjl;
@@ -39,10 +34,8 @@
 
     iget-object v0, p0, Ldjn;->a:Ldjl;
 
-    .line 4
     iget-object v0, v0, Ldjl;->e:Ljrw;
 
-    .line 5
     invoke-virtual {v0}, Ljrw;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -51,6 +44,5 @@
 
     invoke-direct {v1, v2, v3, v0}, Ldie;-><init>(Ldkc;ZLandroid/net/Uri;)V
 
-    .line 6
     return-object v1
 .end method

@@ -13,8 +13,6 @@
 .method constructor <init>(Linu;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Laxi;->a:Linu;
 
     iput-object p2, p0, Laxi;->b:Ljava/lang/String;

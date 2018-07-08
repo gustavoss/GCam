@@ -14,8 +14,6 @@
 .method constructor <init>(Licm;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lflu;->a:Licm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,24 +26,18 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 3
     check-cast p1, Lflx;
 
-    .line 4
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     invoke-interface {p1}, Lflx;->b()Lida;
 
     move-result-object v0
 
     iget-object v1, p0, Lflu;->a:Licm;
 
-    .line 7
     invoke-static {v0, v1}, Lidb;->a(Lida;Lihw;)Lihr;
 
-    .line 8
     iget-object v1, p0, Lflu;->a:Licm;
 
     invoke-interface {p1}, Lflx;->b()Lida;
@@ -60,14 +52,11 @@
 
     invoke-virtual {v1, v0}, Licm;->a(Ljava/lang/Object;)V
 
-    .line 9
     return-void
 .end method
 
 .method public final a(Ljava/lang/Throwable;)V
     .locals 0
 
-    .prologue
-    .line 2
     return-void
 .end method

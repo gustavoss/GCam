@@ -35,12 +35,9 @@
 .method public final a(Lium;)Lipc;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Lhfl;
 
     invoke-direct {v0}, Lhfl;-><init>()V
 
-    .line 2
     return-object v0
 .end method

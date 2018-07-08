@@ -22,25 +22,18 @@
 .method public constructor <init>(Ljav;Ljia;Ljqj;Ljhi;Lcom/google/android/libraries/smartburst/filterpacks/motion/FrameWarper;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljbc;->d:Ljav;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p2, p0, Ljbc;->e:Ljia;
 
-    .line 3
     iput-object p3, p0, Ljbc;->a:Ljqj;
 
-    .line 4
     iput-object p4, p0, Ljbc;->b:Ljhi;
 
-    .line 5
     iput-object p5, p0, Ljbc;->c:Lcom/google/android/libraries/smartburst/filterpacks/motion/FrameWarper;
 
-    .line 6
     return-void
 .end method
 
@@ -49,11 +42,8 @@
 .method public final synthetic a(Ljava/lang/Object;Ljava/util/concurrent/Executor;)Lirp;
     .locals 4
 
-    .prologue
-    .line 7
     check-cast p1, Ljbb;
 
-    .line 8
     iget-object v0, p0, Ljbc;->e:Ljia;
 
     iget-wide v2, p1, Ljbb;->a:J
@@ -66,11 +56,9 @@
 
     invoke-direct {v1, p0, p1}, Ljbd;-><init>(Ljbc;Ljbb;)V
 
-    .line 9
     invoke-interface {v0, p2, v1}, Lirp;->a(Ljava/util/concurrent/Executor;Liqd;)Lirp;
 
     move-result-object v0
 
-    .line 10
     return-object v0
 .end method

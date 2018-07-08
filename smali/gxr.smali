@@ -25,11 +25,8 @@
 .method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 6
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgxr;->a:Lgxq;
 
-    .line 3
     new-instance v1, Lihs;
 
     sub-int v2, p4, p2
@@ -38,7 +35,6 @@
 
     invoke-direct {v1, v2, v3}, Lihs;-><init>(II)V
 
-    .line 4
     iget-object v2, v0, Lgxq;->k:Lihs;
 
     invoke-virtual {v1, v2}, Lihs;->equals(Ljava/lang/Object;)Z
@@ -49,7 +45,6 @@
 
     iget-object v2, v0, Lgxq;->e:Lfyd;
 
-    .line 5
     invoke-interface {v2}, Lfyd;->g()I
 
     move-result v2
@@ -58,13 +53,11 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 6
     :cond_0
     iget-object v2, v0, Lgxq;->c:Landroid/widget/FrameLayout;
 
     invoke-virtual {v2}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 7
     iget-object v2, v0, Lgxq;->b:Liid;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -101,10 +94,8 @@
 
     invoke-interface {v2, v3}, Liid;->b(Ljava/lang/String;)V
 
-    .line 8
     invoke-virtual {v0, v1}, Lgxq;->a(Lihs;)V
 
-    .line 9
     :cond_1
     return-void
 .end method

@@ -11,8 +11,6 @@
 .method constructor <init>(Lent;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lenr;->a:Lent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -45,7 +45,6 @@
 .method static constructor <clinit>()V
     .locals 14
 
-    .prologue
     const/4 v13, 0x4
 
     const/4 v12, 0x3
@@ -56,7 +55,6 @@
 
     const/4 v2, 0x0
 
-    .line 14
     new-instance v0, Laxg;
 
     const-string v1, "PHOTO"
@@ -73,7 +71,6 @@
 
     sput-object v0, Laxg;->a:Laxg;
 
-    .line 15
     new-instance v3, Laxg;
 
     const-string v4, "VIDEO"
@@ -92,7 +89,6 @@
 
     sput-object v3, Laxg;->b:Laxg;
 
-    .line 16
     new-instance v3, Laxg;
 
     const-string v4, "REFOCUS"
@@ -111,7 +107,6 @@
 
     sput-object v3, Laxg;->c:Laxg;
 
-    .line 17
     new-instance v3, Laxg;
 
     const-string v4, "PHOTOSPHERE"
@@ -130,7 +125,6 @@
 
     sput-object v3, Laxg;->d:Laxg;
 
-    .line 18
     new-instance v3, Laxg;
 
     const-string v4, "PANORAMA"
@@ -149,7 +143,6 @@
 
     sput-object v3, Laxg;->e:Laxg;
 
-    .line 19
     new-instance v3, Laxg;
 
     const-string v4, "VIDEO_HFR"
@@ -168,7 +161,6 @@
 
     sput-object v3, Laxg;->f:Laxg;
 
-    .line 20
     new-instance v3, Laxg;
 
     const-string v4, "PORTRAIT"
@@ -187,7 +179,6 @@
 
     sput-object v3, Laxg;->g:Laxg;
 
-    .line 21
     new-instance v3, Laxg;
 
     const-string v4, "CAPTURE_INTENT"
@@ -206,7 +197,6 @@
 
     sput-object v3, Laxg;->h:Laxg;
 
-    .line 22
     new-instance v3, Laxg;
 
     const-string v4, "VIDEO_INTENT"
@@ -225,7 +215,6 @@
 
     sput-object v3, Laxg;->i:Laxg;
 
-    .line 23
     new-instance v3, Laxg;
 
     const-string v4, "ORNAMENT"
@@ -244,7 +233,6 @@
 
     sput-object v3, Laxg;->j:Laxg;
 
-    .line 24
     new-instance v3, Laxg;
 
     const-string v4, "LENS"
@@ -263,7 +251,6 @@
 
     sput-object v3, Laxg;->k:Laxg;
 
-    .line 25
     new-instance v3, Laxg;
 
     const-string v4, "SETTINGS"
@@ -282,7 +269,6 @@
 
     sput-object v3, Laxg;->l:Laxg;
 
-    .line 26
     const/16 v0, 0xc
 
     new-array v0, v0, [Laxg;
@@ -357,31 +343,22 @@
 .method private constructor <init>(Ljava/lang/String;IIIII)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 4
     iput p3, p0, Laxg;->o:I
 
-    .line 5
     iput p4, p0, Laxg;->m:I
 
-    .line 6
     iput p5, p0, Laxg;->n:I
 
-    .line 7
     iput p6, p0, Laxg;->p:I
 
-    .line 8
     return-void
 .end method
 
 .method public static a(Ljava/lang/String;)Laxg;
     .locals 1
 
-    .prologue
-    .line 2
     const-class v0, Laxg;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -396,11 +373,8 @@
 .method public static a(Laxg;Z)Z
     .locals 2
 
-    .prologue
-    .line 10
     if-eqz p1, :cond_0
 
-    .line 11
     sget-object v0, Laxg;->g:Laxg;
 
     sget-object v1, Laxg;->a:Laxg;
@@ -413,7 +387,6 @@
 
     move-result v0
 
-    .line 12
     :goto_0
     return v0
 
@@ -430,8 +403,6 @@
 .method public static values()[Laxg;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Laxg;->q:[Laxg;
 
     invoke-virtual {v0}, [Laxg;->clone()Ljava/lang/Object;
@@ -448,8 +419,6 @@
 .method public final a(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .prologue
-    .line 9
     iget v0, p0, Laxg;->p:I
 
     const/4 v1, 0x0
@@ -466,8 +435,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 13
     iget v0, p0, Laxg;->o:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I

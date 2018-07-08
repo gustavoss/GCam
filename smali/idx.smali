@@ -25,13 +25,9 @@
 .method public final a()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lidx;->a:Lidw;
 
-    .line 2
     iget-object v0, v0, Lidw;->b:Ljava/lang/Object;
 
-    .line 3
     return-object v0
 .end method

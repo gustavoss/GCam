@@ -298,8 +298,6 @@
 .method private final c(Lhmh;)V
     .locals 4
 
-    .prologue
-    .line 5
     iput-object p1, p0, Lhtr;->i:Lhmh;
 
     iget-object v0, p0, Lhtr;->d:Ljava/util/concurrent/CountDownLatch;
@@ -318,7 +316,6 @@
 
     iput-object v0, p0, Lhtr;->e:Lhmi;
 
-    .line 9
     :cond_0
     :goto_0
     iget-object v0, p0, Lhtr;->h:Ljava/util/ArrayList;
@@ -348,7 +345,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lhtr;->e:Lhmi;
 
@@ -362,21 +358,17 @@
 
     new-instance v0, Lhtu;
 
-    .line 6
     invoke-direct {v0, p0}, Lhtu;-><init>(Lhtr;)V
 
     goto :goto_0
 
-    .line 7
     :cond_2
     iget-object v0, p0, Lhtr;->b:Lhtt;
 
-    .line 8
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Lhtt;->removeMessages(I)V
 
-    .line 9
     iget-object v0, p0, Lhtr;->b:Lhtt;
 
     iget-object v1, p0, Lhtr;->e:Lhmi;
@@ -424,12 +416,10 @@
 .method private final f()Lhmh;
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v3, 0x0
 
-    .line 1
     iget-object v1, p0, Lhtr;->g:Ljava/lang/Object;
 
     monitor-enter v1
@@ -470,7 +460,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2
     iget-object v0, p0, Lhtr;->f:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
@@ -481,18 +470,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, v0, Lhrf;->a:Lhre;
 
     iget-object v0, v0, Lhre;->c:Ljava/util/Set;
 
     invoke-interface {v0, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 4
     :cond_0
     return-object v2
 
-    .line 1
     :cond_1
     const/4 v0, 0x0
 

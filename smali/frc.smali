@@ -26,40 +26,30 @@
 .method constructor <init>(Liie;Lfqw;Lblf;)V
     .locals 2
 
-    .prologue
-    .line 1
     const-string v0, "TuneIoEx"
 
-    .line 2
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lhxj;->c(Ljava/lang/String;I)Ljava/util/concurrent/ThreadFactory;
 
     move-result-object v0
 
-    .line 3
     invoke-static {v0}, Ljava/util/concurrent/Executors;->newCachedThreadPool(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
-    .line 4
     invoke-direct {p0, p1, p2, p3, v0}, Lfrc;-><init>(Liie;Lfqw;Lblf;Ljava/util/concurrent/Executor;)V
 
-    .line 5
     return-void
 .end method
 
 .method private constructor <init>(Liie;Lfqw;Lblf;Ljava/util/concurrent/Executor;)V
     .locals 2
 
-    .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
     iput-object p3, p0, Lfrc;->c:Lblf;
 
-    .line 8
     const-string v0, "TuningDataCollector"
 
     invoke-interface {p1, v0}, Liie;->a(Ljava/lang/String;)Liid;
@@ -68,29 +58,22 @@
 
     iput-object v0, p0, Lfrc;->a:Liid;
 
-    .line 9
     iput-object p4, p0, Lfrc;->d:Ljava/util/concurrent/Executor;
 
-    .line 10
     const-string v0, "tuning"
 
-    .line 11
     new-instance v1, Lfqg;
 
     invoke-direct {v1, v0}, Lfqg;-><init>(Ljava/lang/String;)V
 
-    .line 12
     iput-object v1, p0, Lfrc;->b:Lfqg;
 
-    .line 13
     return-void
 .end method
 
 .method static synthetic a(Ljava/lang/Throwable;Ljava/io/OutputStream;)V
     .locals 1
 
-    .prologue
-    .line 30
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -117,8 +100,6 @@
 .method static synthetic a(Ljava/lang/Throwable;Ljava/io/PrintStream;)V
     .locals 1
 
-    .prologue
-    .line 29
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -147,8 +128,6 @@
 .method public final a(Lfqs;)V
     .locals 2
 
-    .prologue
-    .line 14
     iget-object v0, p0, Lfrc;->d:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lfrd;
@@ -157,24 +136,20 @@
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 15
     return-void
 .end method
 
 .method final a(Ljrw;Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 16
     invoke-virtual {p1}, Ljrw;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 17
     :try_start_0
     iget-object v0, p0, Lfrc;->b:Lfqg;
 
@@ -184,7 +159,6 @@
 
     move-result-object v2
 
-    .line 18
     :try_start_1
     invoke-virtual {p1}, Ljrw;->b()Ljava/lang/Object;
 
@@ -197,7 +171,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 19
     const/4 v0, 0x0
 
     :try_start_2
@@ -205,11 +178,9 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 24
     :cond_0
     return-void
 
-    .line 20
     :catch_0
     move-exception v0
 
@@ -218,7 +189,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 21
     :catchall_0
     move-exception v1
 
@@ -236,18 +206,15 @@
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 22
     :catch_1
     move-exception v0
 
-    .line 23
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 21
     :catchall_1
     move-exception v0
 
@@ -257,18 +224,13 @@
 .method final a(Lkey;Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 25
     new-instance v0, Lfre;
 
     invoke-direct {v0, p0, p2}, Lfre;-><init>(Lfrc;Ljava/lang/String;)V
 
-    .line 26
     sget-object v1, Lkfe;->a:Lkfe;
 
-    .line 27
     invoke-static {p1, v0, v1}, Lkek;->a(Lkey;Lkej;Ljava/util/concurrent/Executor;)V
 
-    .line 28
     return-void
 .end method

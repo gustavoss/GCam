@@ -13,21 +13,16 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/util/Set;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lbkh;->b:Landroid/content/pm/PackageManager;
 
-    .line 3
     iput-object p2, p0, Lbkh;->a:Ljava/util/Set;
 
-    .line 4
     return-void
 .end method
 
@@ -36,28 +31,23 @@
 .method public final a(Ljava/lang/String;)Z
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 5
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 6
     const-string v1, "TrustedPartners"
 
     const-string v2, "null or empty package name; do not trust"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 22
     :goto_0
     return v0
 
-    .line 8
     :cond_0
     :try_start_0
     iget-object v1, p0, Lbkh;->b:Landroid/content/pm/PackageManager;
@@ -70,7 +60,6 @@
 
     move-result-object v1
 
-    .line 13
     iget-object v2, v1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     if-eqz v2, :cond_1
@@ -83,7 +72,6 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 14
     :cond_1
     const-string v2, "TrustedPartners"
 
@@ -133,7 +121,6 @@
 
     goto :goto_0
 
-    .line 11
     :catch_0
     move-exception v1
 
@@ -177,7 +164,6 @@
 
     goto :goto_0
 
-    .line 16
     :cond_2
     :try_start_1
     const-string v2, "SHA1"
@@ -186,7 +172,6 @@
 
     move-result-object v2
 
-    .line 17
     iget-object v1, v1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v3, 0x0
@@ -199,7 +184,6 @@
 
     invoke-virtual {v2, v1}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 18
     invoke-virtual {v2}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object v1
@@ -208,7 +192,6 @@
 
     move-result-object v1
 
-    .line 19
     iget-object v2, p0, Lbkh;->a:Ljava/util/Set;
 
     invoke-interface {v2, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -219,7 +202,6 @@
 
     goto/16 :goto_0
 
-    .line 21
     :catch_1
     move-exception v1
 

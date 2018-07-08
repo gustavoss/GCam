@@ -7,22 +7,16 @@
 .method public constructor <init>(Ljqr;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Ljqw;-><init>(Ljqr;)V
 
-    .line 2
     return-void
 .end method
 
 .method private constructor <init>(Ljqv;)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0, p1}, Ljqw;-><init>(Ljqw;)V
 
-    .line 4
     return-void
 .end method
 
@@ -31,8 +25,6 @@
 .method public final C_()Ljrc;
     .locals 1
 
-    .prologue
-    .line 5
     new-instance v0, Ljqv;
 
     invoke-direct {v0, p0}, Ljqv;-><init>(Ljqv;)V
@@ -43,19 +35,14 @@
 .method protected final a(Ljqr;)V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-interface {p1}, Ljqr;->close()V
 
-    .line 7
     return-void
 .end method
 
 .method public final bridge synthetic close()V
     .locals 0
 
-    .prologue
-    .line 9
     invoke-super {p0}, Ljqw;->close()V
 
     return-void
@@ -64,8 +51,6 @@
 .method public final bridge synthetic d()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 10
     invoke-super {p0}, Ljqw;->d()Ljava/lang/Object;
 
     move-result-object v0
@@ -76,8 +61,6 @@
 .method public final bridge synthetic e()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 11
     invoke-super {p0}, Ljqw;->e()Ljava/lang/Object;
 
     move-result-object v0
@@ -88,8 +71,6 @@
 .method public final bridge synthetic toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 8
     invoke-super {p0}, Ljqw;->toString()Ljava/lang/String;
 
     move-result-object v0

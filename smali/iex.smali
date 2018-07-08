@@ -19,11 +19,8 @@
 .method public constructor <init>(Lies;)V
     .locals 1
 
-    .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -32,13 +29,10 @@
 
     iput-object v0, p0, Liex;->b:[I
 
-    .line 13
     iput-object p1, p0, Liex;->a:Lies;
 
-    .line 14
     return-void
 
-    .line 12
     nop
 
     :array_0
@@ -57,27 +51,20 @@
 .method public static a(Lifj;Liep;III)Liez;
     .locals 9
 
-    .prologue
-    .line 15
-    .line 16
     invoke-static {p0}, Lieo;->b(Lifj;)Lieo;
 
     move-result-object v1
 
-    .line 17
     new-instance v0, Liez;
 
-    .line 18
     invoke-interface {p0}, Lifj;->h()I
 
     move-result v5
 
-    .line 19
     invoke-interface {p0}, Lifj;->i()I
 
     move-result v6
 
-    .line 20
     invoke-interface {p0}, Lifj;->j()I
 
     move-result v7
@@ -92,23 +79,18 @@
 
     invoke-direct/range {v0 .. v8}, Liez;-><init>(Lieo;Liep;IIIIII)V
 
-    .line 21
     return-object v0
 .end method
 
 .method private static a(Lifj;Lien;)Z
     .locals 2
 
-    .prologue
-    .line 22
     invoke-interface {p0}, Lifj;->l()I
 
     move-result v0
 
-    .line 24
     iget v1, p1, Lien;->e:I
 
-    .line 25
     if-gt v1, v0, :cond_0
 
     const/4 v0, 0x1
@@ -125,33 +107,27 @@
 .method public static a(Lifj;Lien;Liep;)Z
     .locals 1
 
-    .prologue
-    .line 1
     invoke-static {p0, p1}, Liex;->a(Lifj;Lien;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {p0, p2}, Liex;->a(Lifj;Liep;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-static {p0}, Lieo;->a(Lifj;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 4
     :cond_0
     const/4 v0, 0x0
 
-    .line 5
     :goto_0
     return v0
 
@@ -164,11 +140,8 @@
 .method private static a(Lifj;Liep;)Z
     .locals 3
 
-    .prologue
-    .line 26
     new-instance v0, Lihs;
 
-    .line 27
     invoke-interface {p0}, Lifj;->m()I
 
     move-result v1
@@ -179,7 +152,6 @@
 
     invoke-direct {v0, v1, v2}, Lihs;-><init>(II)V
 
-    .line 28
     invoke-virtual {p1}, Liep;->b()Lihs;
 
     move-result-object v1
@@ -194,33 +166,27 @@
 .method public static b(Lifj;Lien;Liep;)Z
     .locals 1
 
-    .prologue
-    .line 6
     invoke-static {p0, p1}, Liex;->a(Lifj;Lien;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7
     invoke-static {p0, p2}, Liex;->a(Lifj;Liep;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 8
     invoke-static {p0}, Lieo;->a(Lifj;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 9
     :cond_0
     const/4 v0, 0x0
 
-    .line 10
     :goto_0
     return v0
 

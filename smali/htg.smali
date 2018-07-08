@@ -14,9 +14,6 @@
 .method static synthetic a(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
     .locals 3
 
-    .prologue
-    .line 1
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -46,7 +43,6 @@
 
     invoke-direct {v1, v2, v0}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;)V
 
-    .line 3
     return-object v1
 .end method
 

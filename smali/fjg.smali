@@ -19,28 +19,22 @@
 .method public constructor <init>(Lfir;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lfjg;->a:Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lfjg;->c:Ljava/util/List;
 
-    .line 4
     iput-object p1, p0, Lfjg;->b:Lfir;
 
-    .line 5
     return-void
 .end method
 
@@ -49,46 +43,37 @@
 .method public final a(Lfis;)Lfhv;
     .locals 5
 
-    .prologue
-    .line 6
     new-instance v0, Lfji;
 
     invoke-direct {v0}, Lfji;-><init>()V
 
-    .line 7
     invoke-static {v0}, Lezo;->a(Lihw;)Lfhv;
 
     move-result-object v1
 
-    .line 8
     iget-object v2, p0, Lfjg;->b:Lfir;
 
     new-instance v3, Lfjh;
 
     invoke-direct {v3, p1, v0}, Lfjh;-><init>(Lfis;Lfji;)V
 
-    .line 9
     invoke-interface {v2, v3}, Lfir;->a(Lfis;)Lfhv;
 
     move-result-object v2
 
-    .line 10
     iget-object v3, p0, Lfjg;->a:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 11
     :try_start_0
     iget-object v4, p0, Lfjg;->c:Ljava/util/List;
 
     invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 12
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     const/4 v0, 0x2
 
     new-array v0, v0, [Lfhv;
@@ -107,7 +92,6 @@
 
     return-object v0
 
-    .line 12
     :catchall_0
     move-exception v0
 
@@ -122,13 +106,10 @@
 .method public final close()V
     .locals 3
 
-    .prologue
-    .line 14
     iget-object v1, p0, Lfjg;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 15
     :try_start_0
     iget-object v0, p0, Lfjg;->c:Ljava/util/List;
 
@@ -136,7 +117,6 @@
 
     move-result-object v2
 
-    .line 16
     :goto_0
     invoke-interface {v2}, Ljava/util/ListIterator;->hasNext()Z
 
@@ -144,22 +124,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 17
     invoke-interface {v2}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lfji;
 
-    .line 18
     invoke-virtual {v0}, Lfji;->close()V
 
-    .line 19
     invoke-interface {v2}, Ljava/util/ListIterator;->remove()V
 
     goto :goto_0
 
-    .line 21
     :catchall_0
     move-exception v0
 

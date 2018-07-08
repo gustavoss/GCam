@@ -14,8 +14,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,8 +22,6 @@
 .method public static b(Ljava/lang/Object;)Ljrw;
     .locals 2
 
-    .prologue
-    .line 1
     new-instance v0, Ljsc;
 
     invoke-static {p0}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
@@ -40,14 +36,10 @@
 .method public static c(Ljava/lang/Object;)Ljrw;
     .locals 1
 
-    .prologue
-    .line 2
     if-nez p0, :cond_0
 
-    .line 3
     sget-object v0, Ljrk;->a:Ljrk;
 
-    .line 4
     :goto_0
     return-object v0
 

@@ -25,14 +25,10 @@
 .method public final run()V
     .locals 7
 
-    .prologue
-    .line 1
     iget-object v2, p0, Lixx;->a:Lixw;
 
-    .line 2
     iget-object v0, v2, Lixw;->c:Lkey;
 
-    .line 3
     invoke-static {v0}, Lkek;->c(Ljava/util/concurrent/Future;)Ljava/lang/Object;
 
     move-result-object v0
@@ -43,7 +39,6 @@
 
     move-result-object v3
 
-    .line 4
     iget-object v0, v2, Lixw;->d:Lkey;
 
     invoke-static {v0}, Lkek;->c(Ljava/util/concurrent/Future;)Ljava/lang/Object;
@@ -56,10 +51,8 @@
 
     move-result-object v4
 
-    .line 5
     iget-object v0, v2, Lixw;->e:Lkey;
 
-    .line 6
     invoke-static {v0}, Lkek;->c(Ljava/util/concurrent/Future;)Ljava/lang/Object;
 
     move-result-object v0
@@ -70,7 +63,6 @@
 
     move-result-object v5
 
-    .line 7
     iget-object v0, v2, Lixw;->b:Lkey;
 
     invoke-static {v0}, Lkek;->c(Ljava/util/concurrent/Future;)Ljava/lang/Object;
@@ -79,7 +71,6 @@
 
     check-cast v0, Lixt;
 
-    .line 9
     :try_start_0
     iget-object v1, v0, Lixt;->a:Ljrw;
 
@@ -89,7 +80,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 10
     new-instance v1, Landroid/media/MediaMuxer;
 
     iget-object v0, v0, Lixt;->a:Ljrw;
@@ -104,7 +94,6 @@
 
     invoke-direct {v1, v0, v6}, Landroid/media/MediaMuxer;-><init>(Ljava/lang/String;I)V
 
-    .line 13
     :goto_0
     invoke-virtual {v3}, Ljrw;->a()Z
 
@@ -112,7 +101,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 14
     invoke-virtual {v3}, Ljrw;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -125,7 +113,6 @@
 
     invoke-virtual {v1, v0}, Landroid/media/MediaMuxer;->setOrientationHint(I)V
 
-    .line 15
     :cond_0
     invoke-virtual {v4}, Ljrw;->a()Z
 
@@ -139,7 +126,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 16
     invoke-virtual {v4}, Ljrw;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -162,16 +148,13 @@
 
     invoke-virtual {v1, v3, v0}, Landroid/media/MediaMuxer;->setLocation(FF)V
 
-    .line 17
     :cond_1
     iget-object v0, v2, Lixw;->f:Lkfk;
 
     invoke-virtual {v0, v1}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 18
     return-void
 
-    .line 11
     :cond_2
     new-instance v1, Landroid/media/MediaMuxer;
 
@@ -191,23 +174,19 @@
 
     goto :goto_0
 
-    .line 19
     :catch_0
     move-exception v0
 
-    .line 20
     const-string v1, "MuxerImpl"
 
     const-string v3, "Error trying to construct MediaMuxer."
 
     invoke-static {v1, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 21
     iget-object v1, v2, Lixw;->f:Lkfk;
 
     invoke-virtual {v1, v0}, Lkcy;->a(Ljava/lang/Throwable;)Z
 
-    .line 22
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

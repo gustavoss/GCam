@@ -16,8 +16,6 @@
 .method constructor <init>(Lbzx;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbzy;->b:Lbzx;
 
     iput p2, p0, Lbzy;->a:I
@@ -32,45 +30,34 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget v0, p0, Lbzy;->a:I
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lbzy;->b:Lbzx;
 
     iget-object v0, v0, Lbzx;->a:Lbzd;
 
-    .line 4
     iget-object v0, v0, Lbzd;->Z:Ldzx;
 
-    .line 5
     iget-object v1, p0, Lbzy;->b:Lbzx;
 
     iget-object v1, v1, Lbzx;->a:Lbzd;
 
-    .line 6
     iget-object v1, v1, Lbzd;->K:Lcmj;
 
-    .line 7
     invoke-virtual {v0, v1}, Ldzx;->a(Lcmj;)V
 
-    .line 11
     :goto_0
     return-void
 
-    .line 8
     :cond_0
     iget-object v0, p0, Lbzy;->b:Lbzx;
 
     iget-object v0, v0, Lbzx;->a:Lbzd;
 
-    .line 9
     iget-object v0, v0, Lbzd;->K:Lcmj;
 
-    .line 10
     invoke-interface {v0}, Lcmj;->e()V
 
     goto :goto_0

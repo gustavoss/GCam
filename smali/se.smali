@@ -16,8 +16,6 @@
 .method constructor <init>(Lsb;Ljava/util/ArrayList;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lse;->b:Lsb;
 
     iput-object p2, p0, Lse;->a:Ljava/util/ArrayList;
@@ -32,8 +30,6 @@
 .method public final run()V
     .locals 10
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lse;->a:Ljava/util/ArrayList;
 
     check-cast v0, Ljava/util/ArrayList;
@@ -57,33 +53,26 @@
 
     check-cast v1, Lve;
 
-    .line 3
     iget-object v4, p0, Lse;->b:Lsb;
 
-    .line 4
     iget-object v5, v1, Lve;->a:Landroid/view/View;
 
-    .line 5
     invoke-virtual {v5}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v6
 
-    .line 6
     iget-object v7, v4, Lsb;->d:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 7
     const/high16 v7, 0x3f800000    # 1.0f
 
     invoke-virtual {v6, v7}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v7
 
-    .line 8
     iget-wide v8, v4, Lui;->i:J
 
-    .line 9
     invoke-virtual {v7, v8, v9}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v7
@@ -92,23 +81,19 @@
 
     invoke-direct {v8, v4, v1, v5, v6}, Lsg;-><init>(Lsb;Lve;Landroid/view/View;Landroid/view/ViewPropertyAnimator;)V
 
-    .line 10
     invoke-virtual {v7, v8}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v1
 
-    .line 11
     invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     goto :goto_0
 
-    .line 13
     :cond_0
     iget-object v0, p0, Lse;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 14
     iget-object v0, p0, Lse;->b:Lsb;
 
     iget-object v0, v0, Lsb;->a:Ljava/util/ArrayList;
@@ -117,6 +102,5 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 15
     return-void
 .end method

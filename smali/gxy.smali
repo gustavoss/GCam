@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 86
     const-string v0, "ViewfinderSizeSel"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -33,17 +31,12 @@
 .method public constructor <init>(Lihs;Lbka;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgxy;->b:Lihs;
 
-    .line 3
     iput-object p2, p0, Lgxy;->c:Lbka;
 
-    .line 4
     return-void
 .end method
 
@@ -52,9 +45,6 @@
 .method public final a(Ljava/util/List;Lihg;Z)Lihs;
     .locals 16
 
-    .prologue
-    .line 8
-    .line 9
     move-object/from16 v0, p2
 
     iget v2, v0, Lihg;->c:I
@@ -69,10 +59,8 @@
 
     div-double v10, v2, v4
 
-    .line 11
     invoke-static/range {p1 .. p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 12
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -84,18 +72,14 @@
     :goto_0
     invoke-static {v2}, Ljiy;->a(Z)V
 
-    .line 13
     if-nez p3, :cond_0
 
-    .line 15
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lgxy;->c:Lbka;
 
-    .line 16
     const-string v3, ""
 
-    .line 17
     iget-object v2, v2, Lbka;->a:Landroid/content/ContentResolver;
 
     const-string v4, "camera:blacklisted_preview_resolutions_back"
@@ -104,18 +88,15 @@
 
     move-result-object v2
 
-    .line 19
     move-object/from16 v0, p1
 
     invoke-static {v0, v2}, Lghq;->a(Ljava/util/List;Ljava/lang/String;)Ljava/util/List;
 
     move-result-object p1
 
-    .line 21
     :cond_0
     const/4 v2, 0x0
 
-    .line 22
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -135,36 +116,29 @@
 
     check-cast v2, Lihs;
 
-    .line 23
     iget v2, v2, Lihs;->b:I
 
-    .line 24
     const/16 v5, 0x438
 
     if-gt v2, v5, :cond_c
 
-    .line 25
     add-int/lit8 v2, v3, 0x1
 
     :goto_2
     move v3, v2
 
-    .line 26
     goto :goto_1
 
-    .line 12
     :cond_1
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 27
     :cond_2
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 28
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -183,35 +157,27 @@
 
     check-cast v2, Lihs;
 
-    .line 30
     iget v4, v2, Lihs;->b:I
 
-    .line 31
     const/16 v5, 0x438
 
     if-gt v4, v5, :cond_3
 
-    .line 32
     new-instance v4, Lihs;
 
-    .line 33
     iget v5, v2, Lihs;->a:I
 
-    .line 35
     iget v2, v2, Lihs;->b:I
 
-    .line 36
     invoke-direct {v4, v5, v2}, Lihs;-><init>(II)V
 
     invoke-virtual {v7, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
-    .line 39
     :cond_4
     invoke-static {v7}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 40
     invoke-interface {v7}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -223,29 +189,22 @@
     :goto_4
     invoke-static {v2}, Ljiy;->a(Z)V
 
-    .line 41
     const/4 v3, -0x1
 
-    .line 42
     const-wide v4, 0x7fefffffffffffffL    # Double.MAX_VALUE
 
-    .line 43
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lgxy;->b:Lihs;
 
-    .line 45
     iget v6, v2, Lihs;->a:I
 
-    .line 47
     iget v2, v2, Lihs;->b:I
 
-    .line 48
     invoke-static {v6, v2}, Ljava/lang/Math;->min(II)I
 
     move-result v12
 
-    .line 49
     const/4 v2, 0x0
 
     move v6, v3
@@ -259,28 +218,22 @@
 
     if-ge v3, v2, :cond_8
 
-    .line 50
     invoke-interface {v7, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lihs;
 
-    .line 52
     iget v8, v2, Lihs;->a:I
 
-    .line 53
     int-to-double v8, v8
 
-    .line 54
     iget v13, v2, Lihs;->b:I
 
-    .line 55
     int-to-double v14, v13
 
     div-double/2addr v8, v14
 
-    .line 56
     sub-double/2addr v8, v10
 
     invoke-static {v8, v9}, Ljava/lang/Math;->abs(D)D
@@ -293,10 +246,8 @@
 
     if-gtz v8, :cond_5
 
-    .line 58
     iget v8, v2, Lihs;->b:I
 
-    .line 59
     sub-int/2addr v8, v12
 
     invoke-static {v8}, Ljava/lang/Math;->abs(I)I
@@ -305,7 +256,6 @@
 
     int-to-double v8, v8
 
-    .line 60
     cmpg-double v13, v8, v4
 
     if-gez v13, :cond_7
@@ -314,7 +264,6 @@
 
     move v6, v3
 
-    .line 69
     :cond_5
     :goto_6
     add-int/lit8 v2, v3, 0x1
@@ -323,38 +272,31 @@
 
     goto :goto_5
 
-    .line 40
     :cond_6
     const/4 v2, 0x0
 
     goto :goto_4
 
-    .line 63
     :cond_7
     cmpl-double v13, v8, v4
 
     if-nez v13, :cond_5
 
-    .line 65
     iget v2, v2, Lihs;->b:I
 
-    .line 66
     if-ge v2, v12, :cond_5
 
     move-wide v4, v8
 
     move v6, v3
 
-    .line 68
     goto :goto_6
 
-    .line 70
     :cond_8
     const/4 v2, -0x1
 
     if-ne v6, v2, :cond_a
 
-    .line 71
     sget-object v2, Lgxy;->a:Ljava/lang/String;
 
     invoke-static {v7}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -391,10 +333,8 @@
 
     invoke-static {v2, v3}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 72
     const-wide v4, 0x7fefffffffffffffL    # Double.MAX_VALUE
 
-    .line 73
     const/4 v2, 0x0
 
     move v3, v2
@@ -406,17 +346,14 @@
 
     if-ge v3, v2, :cond_a
 
-    .line 74
     invoke-interface {v7, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lihs;
 
-    .line 76
     iget v8, v2, Lihs;->b:I
 
-    .line 77
     sub-int/2addr v8, v12
 
     invoke-static {v8}, Ljava/lang/Math;->abs(I)I
@@ -429,10 +366,8 @@
 
     if-gez v8, :cond_9
 
-    .line 80
     iget v2, v2, Lihs;->b:I
 
-    .line 81
     sub-int/2addr v2, v12
 
     invoke-static {v2}, Ljava/lang/Math;->abs(I)I
@@ -443,7 +378,6 @@
 
     move v6, v3
 
-    .line 82
     :cond_9
     add-int/lit8 v2, v3, 0x1
 
@@ -451,7 +385,6 @@
 
     goto :goto_7
 
-    .line 83
     :cond_a
     if-ltz v6, :cond_b
 
@@ -460,17 +393,14 @@
     :goto_8
     invoke-static {v2}, Ljiy;->b(Z)V
 
-    .line 84
     invoke-interface {v7, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lihs;
 
-    .line 85
     return-object v2
 
-    .line 83
     :cond_b
     const/4 v2, 0x0
 
@@ -485,16 +415,12 @@
 .method public final a(Ljava/util/List;Lihs;Lilt;)Lihs;
     .locals 2
 
-    .prologue
-    .line 5
-    .line 6
     invoke-static {p2}, Lihg;->a(Lihs;)Lihg;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 7
     invoke-virtual {p0, p1, v0, v1}, Lgxy;->a(Ljava/util/List;Lihg;Z)Lihs;
 
     move-result-object v0

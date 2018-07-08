@@ -29,17 +29,13 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lfvl;->a:Lfvi;
 
     iget-object v1, p0, Lfvl;->b:Lfvn;
 
-    .line 2
     iget-object v0, v0, Lfvi;->a:Lfvm;
 
     invoke-interface {v0, v1}, Lfvm;->a(Lfvn;)V
 
-    .line 3
     return-void
 .end method

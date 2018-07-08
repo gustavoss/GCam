@@ -12,24 +12,18 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 54
     const-string v0, "gcam_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 55
     invoke-static {}, Lcom/google/googlex/gcam/GcamModuleJNI;->swig_module_init()V
 
-    .line 56
     return-void
 .end method
 
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -4130,8 +4124,6 @@
 .method public static SwigDirector_BackgroundAeResultsCallback_Run(Lcom/google/googlex/gcam/BackgroundAeResultsCallback;J)V
     .locals 3
 
-    .prologue
-    .line 30
     new-instance v0, Lcom/google/googlex/gcam/AeResults;
 
     const/4 v1, 0x0
@@ -4140,26 +4132,20 @@
 
     invoke-virtual {p0, v0}, Lcom/google/googlex/gcam/BackgroundAeResultsCallback;->Run(Lcom/google/googlex/gcam/AeResults;)V
 
-    .line 31
     return-void
 .end method
 
 .method public static SwigDirector_BaseFrameCallback_Run(Lcom/google/googlex/gcam/BaseFrameCallback;IIJ)V
     .locals 1
 
-    .prologue
-    .line 14
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/googlex/gcam/BaseFrameCallback;->Run(IIJ)V
 
-    .line 15
     return-void
 .end method
 
 .method public static SwigDirector_BurstCallback_Run(Lcom/google/googlex/gcam/BurstCallback;IJ)V
     .locals 2
 
-    .prologue
-    .line 16
     new-instance v0, Lcom/google/googlex/gcam/ShotLogData;
 
     const/4 v1, 0x0
@@ -4168,15 +4154,12 @@
 
     invoke-virtual {p0, p1, v0}, Lcom/google/googlex/gcam/BurstCallback;->Run(ILcom/google/googlex/gcam/ShotLogData;)V
 
-    .line 17
     return-void
 .end method
 
 .method public static SwigDirector_ClientInterleavedU16Allocator_Allocate(Lcom/google/googlex/gcam/ClientInterleavedU16Allocator;III)J
     .locals 2
 
-    .prologue
-    .line 5
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/googlex/gcam/ClientInterleavedU16Allocator;->Allocate(III)Lcom/google/googlex/gcam/InterleavedU16Allocation;
 
     move-result-object v0
@@ -4191,19 +4174,14 @@
 .method public static SwigDirector_ClientInterleavedU16Allocator_Release(Lcom/google/googlex/gcam/ClientInterleavedU16Allocator;J)V
     .locals 1
 
-    .prologue
-    .line 6
     invoke-virtual {p0, p1, p2}, Lcom/google/googlex/gcam/ClientInterleavedU16Allocator;->Release(J)V
 
-    .line 7
     return-void
 .end method
 
 .method public static SwigDirector_ClientInterleavedU8Allocator_Allocate(Lcom/google/googlex/gcam/ClientInterleavedU8Allocator;III)J
     .locals 2
 
-    .prologue
-    .line 2
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/googlex/gcam/ClientInterleavedU8Allocator;->Allocate(III)Lcom/google/googlex/gcam/InterleavedU8Allocation;
 
     move-result-object v0
@@ -4218,19 +4196,14 @@
 .method public static SwigDirector_ClientInterleavedU8Allocator_Release(Lcom/google/googlex/gcam/ClientInterleavedU8Allocator;J)V
     .locals 1
 
-    .prologue
-    .line 3
     invoke-virtual {p0, p1, p2}, Lcom/google/googlex/gcam/ClientInterleavedU8Allocator;->Release(J)V
 
-    .line 4
     return-void
 .end method
 
 .method public static SwigDirector_ClientRawAllocator_Allocate(Lcom/google/googlex/gcam/ClientRawAllocator;III)J
     .locals 2
 
-    .prologue
-    .line 11
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/googlex/gcam/ClientRawAllocator;->Allocate(III)Lcom/google/googlex/gcam/RawAllocation;
 
     move-result-object v0
@@ -4245,19 +4218,14 @@
 .method public static SwigDirector_ClientRawAllocator_Release(Lcom/google/googlex/gcam/ClientRawAllocator;J)V
     .locals 1
 
-    .prologue
-    .line 12
     invoke-virtual {p0, p1, p2}, Lcom/google/googlex/gcam/ClientRawAllocator;->Release(J)V
 
-    .line 13
     return-void
 .end method
 
 .method public static SwigDirector_ClientYuvAllocator_Allocate(Lcom/google/googlex/gcam/ClientYuvAllocator;III)J
     .locals 2
 
-    .prologue
-    .line 8
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/googlex/gcam/ClientYuvAllocator;->Allocate(III)Lcom/google/googlex/gcam/YuvAllocation;
 
     move-result-object v0
@@ -4272,19 +4240,14 @@
 .method public static SwigDirector_ClientYuvAllocator_Release(Lcom/google/googlex/gcam/ClientYuvAllocator;J)V
     .locals 1
 
-    .prologue
-    .line 9
     invoke-virtual {p0, p1, p2}, Lcom/google/googlex/gcam/ClientYuvAllocator;->Release(J)V
 
-    .line 10
     return-void
 .end method
 
 .method public static SwigDirector_EncodedBlobCallback_Run(Lcom/google/googlex/gcam/EncodedBlobCallback;IJJII)V
     .locals 8
 
-    .prologue
-    .line 26
     const-wide/16 v0, 0x0
 
     cmp-long v0, p2, v0
@@ -4306,10 +4269,8 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/google/googlex/gcam/EncodedBlobCallback;->Run(ILcom/google/googlex/gcam/SWIGTYPE_p_unsigned_char;JII)V
 
-    .line 27
     return-void
 
-    .line 26
     :cond_0
     new-instance v3, Lcom/google/googlex/gcam/SWIGTYPE_p_unsigned_char;
 
@@ -4323,10 +4284,8 @@
 .method public static SwigDirector_FinalImageCallback_RgbReady(Lcom/google/googlex/gcam/FinalImageCallback;IJJI)V
     .locals 4
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 38
     const-wide/16 v0, 0x0
 
     cmp-long v0, p2, v0
@@ -4342,10 +4301,8 @@
 
     invoke-virtual {p0, p1, v0, v1, p6}, Lcom/google/googlex/gcam/FinalImageCallback;->RgbReady(ILcom/google/googlex/gcam/InterleavedImageU8;Lcom/google/googlex/gcam/ExifMetadata;I)V
 
-    .line 39
     return-void
 
-    .line 38
     :cond_0
     new-instance v0, Lcom/google/googlex/gcam/InterleavedImageU8;
 
@@ -4357,10 +4314,8 @@
 .method public static SwigDirector_FinalImageCallback_YuvReady(Lcom/google/googlex/gcam/FinalImageCallback;IJJI)V
     .locals 4
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 40
     const-wide/16 v0, 0x0
 
     cmp-long v0, p2, v0
@@ -4376,10 +4331,8 @@
 
     invoke-virtual {p0, p1, v0, v1, p6}, Lcom/google/googlex/gcam/FinalImageCallback;->YuvReady(ILcom/google/googlex/gcam/YuvImage;Lcom/google/googlex/gcam/ExifMetadata;I)V
 
-    .line 41
     return-void
 
-    .line 40
     :cond_0
     new-instance v0, Lcom/google/googlex/gcam/YuvImage;
 
@@ -4391,19 +4344,14 @@
 .method public static SwigDirector_GoudaCompleteCallback_Run(Lcom/google/googlex/gcam/GoudaCompleteCallback;J)V
     .locals 1
 
-    .prologue
-    .line 52
     invoke-virtual {p0, p1, p2}, Lcom/google/googlex/gcam/GoudaCompleteCallback;->Run(J)V
 
-    .line 53
     return-void
 .end method
 
 .method public static SwigDirector_GoudaImageCallback_RgbReady(Lcom/google/googlex/gcam/GoudaImageCallback;JJILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 9
 
-    .prologue
-    .line 48
     const-wide/16 v0, 0x0
 
     cmp-long v0, p3, v0
@@ -4427,10 +4375,8 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/google/googlex/gcam/GoudaImageCallback;->RgbReady(JLcom/google/googlex/gcam/InterleavedImageU8;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 49
     return-void
 
-    .line 48
     :cond_0
     new-instance v4, Lcom/google/googlex/gcam/InterleavedImageU8;
 
@@ -4444,8 +4390,6 @@
 .method public static SwigDirector_GoudaImageCallback_YuvReady(Lcom/google/googlex/gcam/GoudaImageCallback;JJILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 9
 
-    .prologue
-    .line 50
     const-wide/16 v0, 0x0
 
     cmp-long v0, p3, v0
@@ -4469,10 +4413,8 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/google/googlex/gcam/GoudaImageCallback;->YuvReady(JLcom/google/googlex/gcam/YuvImage;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 51
     return-void
 
-    .line 50
     :cond_0
     new-instance v4, Lcom/google/googlex/gcam/YuvImage;
 
@@ -4486,41 +4428,30 @@
 .method public static SwigDirector_GoudaProgressCallback_Run(Lcom/google/googlex/gcam/GoudaProgressCallback;JF)V
     .locals 1
 
-    .prologue
-    .line 46
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/googlex/gcam/GoudaProgressCallback;->Run(JF)V
 
-    .line 47
     return-void
 .end method
 
 .method public static SwigDirector_ImageReleaseCallback_Run(Lcom/google/googlex/gcam/ImageReleaseCallback;J)V
     .locals 1
 
-    .prologue
-    .line 24
     invoke-virtual {p0, p1, p2}, Lcom/google/googlex/gcam/ImageReleaseCallback;->Run(J)V
 
-    .line 25
     return-void
 .end method
 
 .method public static SwigDirector_MemoryStateCallback_Run(Lcom/google/googlex/gcam/MemoryStateCallback;JJ)V
     .locals 1
 
-    .prologue
-    .line 22
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/googlex/gcam/MemoryStateCallback;->Run(JJ)V
 
-    .line 23
     return-void
 .end method
 
 .method public static SwigDirector_PdImageCallback_ImageReady(Lcom/google/googlex/gcam/PdImageCallback;IJ)V
     .locals 2
 
-    .prologue
-    .line 32
     new-instance v0, Lcom/google/googlex/gcam/InterleavedReadViewU16;
 
     const/4 v1, 0x0
@@ -4529,26 +4460,20 @@
 
     invoke-virtual {p0, p1, v0}, Lcom/google/googlex/gcam/PdImageCallback;->ImageReady(ILcom/google/googlex/gcam/InterleavedReadViewU16;)V
 
-    .line 33
     return-void
 .end method
 
 .method public static SwigDirector_PdImageCallback_MergePdFailed(Lcom/google/googlex/gcam/PdImageCallback;I)V
     .locals 0
 
-    .prologue
-    .line 34
     invoke-virtual {p0, p1}, Lcom/google/googlex/gcam/PdImageCallback;->MergePdFailed(I)V
 
-    .line 35
     return-void
 .end method
 
 .method public static SwigDirector_PostviewCallback_RgbReady(Lcom/google/googlex/gcam/PostviewCallback;IJI)V
     .locals 2
 
-    .prologue
-    .line 42
     new-instance v0, Lcom/google/googlex/gcam/InterleavedReadViewU8;
 
     const/4 v1, 0x0
@@ -4557,15 +4482,12 @@
 
     invoke-virtual {p0, p1, v0, p4}, Lcom/google/googlex/gcam/PostviewCallback;->RgbReady(ILcom/google/googlex/gcam/InterleavedReadViewU8;I)V
 
-    .line 43
     return-void
 .end method
 
 .method public static SwigDirector_PostviewCallback_YuvReady(Lcom/google/googlex/gcam/PostviewCallback;IJI)V
     .locals 2
 
-    .prologue
-    .line 44
     new-instance v0, Lcom/google/googlex/gcam/YuvReadView;
 
     const/4 v1, 0x0
@@ -4574,28 +4496,22 @@
 
     invoke-virtual {p0, p1, v0, p4}, Lcom/google/googlex/gcam/PostviewCallback;->YuvReady(ILcom/google/googlex/gcam/YuvReadView;I)V
 
-    .line 45
     return-void
 .end method
 
 .method public static SwigDirector_ProgressCallback_Run(Lcom/google/googlex/gcam/ProgressCallback;IF)V
     .locals 0
 
-    .prologue
-    .line 28
     invoke-virtual {p0, p1, p2}, Lcom/google/googlex/gcam/ProgressCallback;->Run(IF)V
 
-    .line 29
     return-void
 .end method
 
 .method public static SwigDirector_RawImageCallback_ImageReady(Lcom/google/googlex/gcam/RawImageCallback;IJJ)V
     .locals 6
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 36
     new-instance v1, Lcom/google/googlex/gcam/ExifMetadata;
 
     invoke-direct {v1, p2, p3, v4}, Lcom/google/googlex/gcam/ExifMetadata;-><init>(JZ)V
@@ -4611,10 +4527,8 @@
     :goto_0
     invoke-virtual {p0, p1, v1, v0}, Lcom/google/googlex/gcam/RawImageCallback;->ImageReady(ILcom/google/googlex/gcam/ExifMetadata;Lcom/google/googlex/gcam/RawImage;)V
 
-    .line 37
     return-void
 
-    .line 36
     :cond_0
     new-instance v0, Lcom/google/googlex/gcam/RawImage;
 
@@ -4626,22 +4540,16 @@
 .method public static SwigDirector_ShotErrorCallback_Run(Lcom/google/googlex/gcam/ShotErrorCallback;ILjava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 20
     invoke-virtual {p0, p1, p2}, Lcom/google/googlex/gcam/ShotErrorCallback;->Run(ILjava/lang/String;)V
 
-    .line 21
     return-void
 .end method
 
 .method public static SwigDirector_SimpleCallback_Run(Lcom/google/googlex/gcam/SimpleCallback;)V
     .locals 0
 
-    .prologue
-    .line 18
     invoke-virtual {p0}, Lcom/google/googlex/gcam/SimpleCallback;->Run()V
 
-    .line 19
     return-void
 .end method
 

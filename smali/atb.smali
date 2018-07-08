@@ -19,26 +19,18 @@
 .method public constructor <init>(Lhaw;Lhaz;Lida;Liix;Lasr;)V
     .locals 0
 
-    .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     iput-object p1, p0, Latb;->c:Lhaw;
 
-    .line 26
     iput-object p2, p0, Latb;->d:Lhaz;
 
-    .line 27
     iput-object p3, p0, Latb;->a:Lida;
 
-    .line 28
     iput-object p4, p0, Latb;->b:Liix;
 
-    .line 29
     iput-object p5, p0, Latb;->e:Lasr;
 
-    .line 30
     return-void
 .end method
 
@@ -47,7 +39,6 @@
 .method public final a(Lilt;Landroid/graphics/PointF;Latg;)Lauf;
     .locals 9
 
-    .prologue
     const/4 v8, 0x1
 
     const/high16 v7, 0x3f000000    # 0.5f
@@ -56,17 +47,14 @@
 
     const/4 v6, 0x0
 
-    .line 1
     iget-object v0, p0, Latb;->d:Lhaz;
 
     invoke-interface {v0}, Lhaz;->a()Landroid/graphics/RectF;
 
     move-result-object v0
 
-    .line 2
     iget-object v1, p0, Latb;->c:Lhaw;
 
-    .line 3
     iget v2, p2, Landroid/graphics/PointF;->x:F
 
     cmpg-float v2, v2, v3
@@ -79,7 +67,6 @@
 
     if-gez v2, :cond_1
 
-    .line 4
     :cond_0
     sget-object v2, Lhaw;->a:Ljava/lang/String;
 
@@ -117,13 +104,11 @@
 
     invoke-static {v2, v3}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     :cond_1
     const/4 v2, 0x2
 
     new-array v2, v2, [F
 
-    .line 6
     iget v3, p2, Landroid/graphics/PointF;->x:F
 
     iget v4, v0, Landroid/graphics/RectF;->left:F
@@ -142,7 +127,6 @@
 
     aput v3, v2, v6
 
-    .line 7
     iget v3, p2, Landroid/graphics/PointF;->y:F
 
     iget v4, v0, Landroid/graphics/RectF;->top:F
@@ -161,7 +145,6 @@
 
     aput v3, v2, v8
 
-    .line 8
     iget-object v1, v1, Lhaw;->b:Lfyd;
 
     invoke-interface {v1}, Lfyd;->e()Lihp;
@@ -172,25 +155,20 @@
 
     move-result v1
 
-    .line 9
     new-instance v3, Landroid/graphics/Matrix;
 
     invoke-direct {v3}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 10
     int-to-float v1, v1
 
     invoke-virtual {v3, v1, v7, v7}, Landroid/graphics/Matrix;->setRotate(FFF)V
 
-    .line 11
     invoke-virtual {v3, v2}, Landroid/graphics/Matrix;->mapPoints([F)V
 
-    .line 12
     sget-object v1, Lilt;->a:Lilt;
 
     if-ne p1, v1, :cond_2
 
-    .line 13
     const/high16 v1, 0x3f800000    # 1.0f
 
     aget v3, v2, v6
@@ -199,7 +177,6 @@
 
     aput v1, v2, v6
 
-    .line 14
     :cond_2
     new-instance v1, Landroid/graphics/PointF;
 
@@ -209,20 +186,16 @@
 
     invoke-direct {v1, v3, v2}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 16
     iget-object v2, p0, Latb;->e:Lasr;
 
-    .line 18
     new-instance v3, Lata;
 
     invoke-direct {v3, v1}, Lata;-><init>(Landroid/graphics/PointF;)V
 
-    .line 19
     invoke-interface {v2, v3}, Lasr;->a(Lata;)Lauf;
 
     move-result-object v1
 
-    .line 20
     invoke-interface {p3}, Latg;->a()Lkey;
 
     move-result-object v2
@@ -231,12 +204,9 @@
 
     invoke-direct {v3, p0, p2, v0}, Latd;-><init>(Latb;Landroid/graphics/PointF;Landroid/graphics/RectF;)V
 
-    .line 21
     sget-object v0, Lkfe;->a:Lkfe;
 
-    .line 22
     invoke-static {v2, v3, v0}, Lkek;->a(Lkey;Lkej;Ljava/util/concurrent/Executor;)V
 
-    .line 23
     return-object v1
 .end method

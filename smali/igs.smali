@@ -25,24 +25,18 @@
 .method public final call()Ljava/lang/Object;
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v0, p0, Ligs;->a:Ligc;
 
-    .line 2
     iget-object v1, v0, Ligc;->f:Ligb;
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v0, v0, Ligc;->f:Ligb;
 
-    .line 4
     iget-object v1, v0, Ligb;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 5
     :try_start_0
     iget-object v2, v0, Ligb;->j:Ligr;
 
@@ -56,7 +50,6 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 6
     const-string v2, "VideoEncoder"
 
     iget-object v0, v0, Ligb;->j:Ligr;
@@ -95,18 +88,14 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     monitor-exit v1
 
-    .line 13
     :cond_0
     :goto_0
     const/4 v0, 0x0
 
-    .line 14
     return-object v0
 
-    .line 8
     :cond_1
     new-instance v2, Ligq;
 
@@ -116,22 +105,18 @@
 
     iput-object v2, v0, Ligb;->e:Ljava/lang/Thread;
 
-    .line 9
     iget-object v2, v0, Ligb;->b:Landroid/media/MediaCodec;
 
     invoke-virtual {v2}, Landroid/media/MediaCodec;->start()V
 
-    .line 10
     iget-object v2, v0, Ligb;->e:Ljava/lang/Thread;
 
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
-    .line 11
     sget-object v2, Ligr;->b:Ligr;
 
     iput-object v2, v0, Ligb;->j:Ligr;
 
-    .line 12
     monitor-exit v1
 
     goto :goto_0

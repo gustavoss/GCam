@@ -14,8 +14,6 @@
 .method constructor <init>(Ldao;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldbe;->a:Ldao;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,38 +26,28 @@
 .method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 2
-    .line 3
     iget-object v2, p0, Ldbe;->a:Ldao;
 
-    .line 4
     iget-object v2, v2, Ldao;->v:Leis;
 
-    .line 5
     if-eqz v2, :cond_0
 
-    .line 6
     iget-object v2, p0, Ldbe;->a:Ldao;
 
-    .line 7
     iget-object v2, v2, Ldao;->v:Leis;
 
-    .line 9
     iget-boolean v3, v2, Leis;->t:Z
 
     if-nez v3, :cond_1
 
-    .line 31
     :cond_0
     :goto_0
     return v1
 
-    .line 12
     :cond_1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -77,10 +65,8 @@
     :pswitch_1
     move v1, v0
 
-    .line 29
     goto :goto_0
 
-    .line 14
     :pswitch_2
     invoke-static {p2}, Leis;->a(Landroid/view/MotionEvent;)F
 
@@ -88,12 +74,10 @@
 
     iput v1, v2, Leis;->f:F
 
-    .line 15
     iput-boolean v0, v2, Leis;->e:Z
 
     goto :goto_1
 
-    .line 17
     :pswitch_3
     iget-boolean v1, v2, Leis;->e:Z
 
@@ -105,50 +89,41 @@
 
     if-le v1, v0, :cond_2
 
-    .line 18
     invoke-static {p2}, Leis;->a(Landroid/view/MotionEvent;)F
 
     move-result v1
 
     iput v1, v2, Leis;->g:F
 
-    .line 19
     iget v1, v2, Leis;->g:F
 
     iget v3, v2, Leis;->f:F
 
     div-float/2addr v1, v3
 
-    .line 20
     iget-object v2, v2, Leis;->b:Lejc;
 
-    .line 21
     invoke-virtual {v2, v1}, Lejc;->b(F)V
 
-    .line 22
     iput-boolean v0, v2, Lejc;->n:Z
 
     goto :goto_1
 
-    .line 24
     :pswitch_4
     iput-boolean v1, v2, Leis;->e:Z
 
-    .line 25
     iget v1, v2, Leis;->g:F
 
     iget v3, v2, Leis;->f:F
 
     div-float/2addr v1, v3
 
-    .line 26
     iget-object v2, v2, Leis;->b:Lejc;
 
     invoke-virtual {v2, v1}, Lejc;->a(F)V
 
     goto :goto_1
 
-    .line 12
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

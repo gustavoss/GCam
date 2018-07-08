@@ -22,26 +22,22 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x2
 
     const/4 v1, 0x0
 
     const/4 v2, 0x3
 
-    .line 16
     new-instance v0, Liwe;
 
     invoke-direct {v0, v3, v1}, Liwe;-><init>(II)V
 
-    .line 17
     new-instance v0, Liwe;
 
     invoke-direct {v0, v2, v1}, Liwe;-><init>(II)V
 
     sput-object v0, Liwe;->b:Liwe;
 
-    .line 18
     new-instance v0, Liwe;
 
     const/4 v1, 0x1
@@ -50,29 +46,22 @@
 
     sput-object v0, Liwe;->c:Liwe;
 
-    .line 19
     new-instance v0, Liwe;
 
     invoke-direct {v0, v2, v3}, Liwe;-><init>(II)V
 
-    .line 20
     return-void
 .end method
 
 .method public constructor <init>(II)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Liwe;->a:I
 
-    .line 3
     iput p2, p0, Liwe;->d:I
 
-    .line 4
     return-void
 .end method
 
@@ -81,8 +70,6 @@
 .method public final a(Liwe;)Z
     .locals 1
 
-    .prologue
-    .line 5
     invoke-virtual {p0, p1}, Liwe;->b(Liwe;)I
 
     move-result v0
@@ -103,8 +90,6 @@
 .method public final b(Liwe;)I
     .locals 2
 
-    .prologue
-    .line 7
     iget v0, p0, Liwe;->a:I
 
     iget v1, p1, Liwe;->a:I
@@ -140,8 +125,6 @@
 .method public final synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 15
     check-cast p1, Liwe;
 
     invoke-virtual {p0, p1}, Liwe;->b(Liwe;)I
@@ -154,20 +137,16 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 8
     if-ne p0, p1, :cond_1
 
-    .line 13
     :cond_0
     :goto_0
     return v0
 
-    .line 10
     :cond_1
     instance-of v2, p1, Liwe;
 
@@ -175,14 +154,11 @@
 
     move v0, v1
 
-    .line 11
     goto :goto_0
 
-    .line 12
     :cond_2
     check-cast p1, Liwe;
 
-    .line 13
     iget v2, p0, Liwe;->a:I
 
     iget v3, p1, Liwe;->a:I
@@ -204,8 +180,6 @@
 .method public final hashCode()I
     .locals 2
 
-    .prologue
-    .line 14
     iget v0, p0, Liwe;->a:I
 
     mul-int/lit8 v0, v0, 0x1f
@@ -220,8 +194,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 6
     iget v0, p0, Liwe;->a:I
 
     iget v1, p0, Liwe;->d:I

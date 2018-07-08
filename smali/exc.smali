@@ -25,11 +25,8 @@
 .method public final a(Lbul;)V
     .locals 6
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lexc;->a:Lexb;
 
-    .line 2
     iget-object v0, v0, Lexb;->b:Lbxb;
 
     iget v1, p1, Lbul;->f:F
@@ -42,6 +39,5 @@
 
     invoke-interface/range {v0 .. v5}, Lbxb;->a(FFFJ)Z
 
-    .line 3
     return-void
 .end method

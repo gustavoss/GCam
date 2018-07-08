@@ -42,61 +42,46 @@
 .method public constructor <init>(Landroid/media/MediaFormat;Lesg;Leuf;Lilw;Landroid/os/Handler;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Leua;->c:Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Lkfk;
 
     invoke-direct {v0}, Lkfk;-><init>()V
 
-    .line 5
     iput-object v0, p0, Leua;->d:Lkfk;
 
-    .line 6
     iput-boolean v1, p0, Leua;->j:Z
 
-    .line 7
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Leua;->l:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 8
     iput-object p1, p0, Leua;->g:Landroid/media/MediaFormat;
 
-    .line 9
     iput-object p2, p0, Leua;->h:Lesg;
 
-    .line 10
     iput-object p3, p0, Leua;->a:Leuf;
 
-    .line 11
     iput-object p4, p0, Leua;->i:Lilw;
 
-    .line 12
     iput-object p5, p0, Leua;->b:Landroid/os/Handler;
 
-    .line 13
     return-void
 .end method
 
 .method private static synthetic a(Ljava/lang/Throwable;Liob;)V
     .locals 1
 
-    .prologue
-    .line 115
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -123,8 +108,6 @@
 .method private static synthetic a(Ljava/lang/Throwable;Liwt;)V
     .locals 1
 
-    .prologue
-    .line 114
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -151,20 +134,16 @@
 .method private final d()V
     .locals 2
 
-    .prologue
-    .line 111
     iget-object v0, p0, Leua;->l:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 112
     iget-object v0, p0, Leua;->e:Letz;
 
     invoke-virtual {v0}, Letz;->a()V
 
-    .line 113
     return-void
 .end method
 
@@ -173,8 +152,6 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 22
     iget-object v0, p0, Leua;->l:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -185,7 +162,6 @@
 
     if-nez v0, :cond_1
 
-    .line 23
     :cond_0
     invoke-virtual {p0}, Leua;->c()Z
 
@@ -193,7 +169,6 @@
 
     if-nez v0, :cond_0
 
-    .line 24
     :cond_1
     return-void
 .end method
@@ -201,24 +176,18 @@
 .method public final a(Liwz;Lety;Letz;)V
     .locals 2
 
-    .prologue
-    .line 14
     iput-object p3, p0, Leua;->e:Letz;
 
-    .line 15
     iput-object p2, p0, Leua;->f:Lety;
 
-    .line 16
     iget-object v0, p0, Leua;->g:Landroid/media/MediaFormat;
 
-    .line 17
     invoke-virtual {p1, v0}, Liwz;->a(Landroid/media/MediaFormat;)Liwy;
 
     move-result-object v0
 
     iget-object v1, p0, Leua;->b:Landroid/os/Handler;
 
-    .line 18
     invoke-interface {v0, v1}, Liwy;->a(Landroid/os/Handler;)Liwy;
 
     move-result-object v0
@@ -227,38 +196,31 @@
 
     invoke-direct {v1, p0}, Leue;-><init>(Leua;)V
 
-    .line 19
     invoke-interface {v0, v1}, Liwy;->a(Lixh;)Liwy;
 
     move-result-object v0
 
-    .line 20
     invoke-interface {v0}, Liwy;->b()Liwx;
 
     move-result-object v0
 
     iput-object v0, p0, Leua;->k:Liwx;
 
-    .line 21
     return-void
 .end method
 
 .method public final b()V
     .locals 3
 
-    .prologue
-    .line 25
     iget-object v1, p0, Leua;->c:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 26
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Leua;->j:Z
 
-    .line 27
     iget-object v0, p0, Leua;->l:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -267,14 +229,12 @@
 
     if-nez v0, :cond_0
 
-    .line 28
     iget-object v0, p0, Leua;->d:Lkfk;
 
     sget-object v2, Liqb;->a:Liqb;
 
     invoke-virtual {v0, v2}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 29
     :cond_0
     monitor-exit v1
 
@@ -293,14 +253,12 @@
 .method final c()Z
     .locals 13
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
     const/4 v2, 0x0
 
-    .line 36
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v3
@@ -327,27 +285,22 @@
 
     if-eqz v3, :cond_0
 
-    .line 37
     const-string v3, "VideoTrackSampler"
 
     const-string v4, "Sampling video on a non-video-encoder thread"
 
     invoke-static {v3, v4}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 38
     :cond_0
     iget-object v3, p0, Leua;->c:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 39
     :try_start_0
     iget-object v4, p0, Leua;->k:Liwx;
 
-    .line 40
     iget-object v5, p0, Leua;->f:Lety;
 
-    .line 41
     if-eqz v4, :cond_1
 
     if-eqz v5, :cond_1
@@ -360,30 +313,24 @@
 
     if-nez v6, :cond_3
 
-    .line 42
     :cond_1
     monitor-exit v3
 
-    .line 104
     :cond_2
     :goto_0
     return v0
 
-    .line 43
     :cond_3
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 45
     iget-object v4, v4, Liwx;->a:Liws;
 
-    .line 46
     iget-object v3, v4, Liws;->d:Landroid/view/Surface;
 
     if-eqz v3, :cond_4
 
-    .line 47
     new-instance v0, Ljava/lang/AssertionError;
 
     const-string v1, "MediaCodec configured to use input surface. Should not be requesting for a byte buffer"
@@ -392,7 +339,6 @@
 
     throw v0
 
-    .line 43
     :catchall_0
     move-exception v0
 
@@ -403,29 +349,24 @@
 
     throw v0
 
-    .line 48
     :cond_4
     invoke-virtual {v4}, Liws;->a()I
 
     move-result v6
 
-    .line 49
     if-gez v6, :cond_5
 
     move-object v4, v2
 
-    .line 60
     :goto_1
     if-nez v4, :cond_9
 
-    .line 61
     if-eqz v4, :cond_2
 
     invoke-static {v2, v4}, Leua;->a(Ljava/lang/Throwable;Liwt;)V
 
     goto :goto_0
 
-    .line 51
     :cond_5
     iget-object v3, v4, Liws;->a:Landroid/media/MediaCodec;
 
@@ -433,36 +374,29 @@
 
     move-result-object v3
 
-    .line 52
     if-nez v3, :cond_6
 
     move-object v4, v2
 
-    .line 53
     goto :goto_1
 
-    .line 54
     :cond_6
     invoke-virtual {v3}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result v7
 
-    .line 55
     iget-object v3, v4, Liws;->a:Landroid/media/MediaCodec;
 
     invoke-virtual {v3, v6}, Landroid/media/MediaCodec;->getInputImage(I)Landroid/media/Image;
 
     move-result-object v8
 
-    .line 56
     if-nez v8, :cond_7
 
     move-object v4, v2
 
-    .line 57
     goto :goto_1
 
-    .line 58
     :cond_7
     new-instance v3, Liwo;
 
@@ -472,7 +406,6 @@
 
     goto :goto_1
 
-    .line 105
     :cond_8
     :try_start_2
     const-string v3, "VideoTrackSampler"
@@ -508,7 +441,6 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_4
 
-    .line 106
     if-eqz v6, :cond_9
 
     const/4 v3, 0x0
@@ -516,7 +448,6 @@
     :try_start_3
     invoke-static {v3, v6}, Leua;->a(Ljava/lang/Throwable;Liob;)V
 
-    .line 63
     :cond_9
     iget-object v3, p0, Leua;->h:Lesg;
 
@@ -527,19 +458,15 @@
 
     move-result-object v6
 
-    .line 64
     if-nez v6, :cond_c
 
-    .line 65
     :try_start_4
     iget-boolean v1, p0, Leua;->j:Z
 
     if-eqz v1, :cond_a
 
-    .line 66
     invoke-direct {p0}, Leua;->d()V
 
-    .line 67
     iget-object v1, p0, Leua;->d:Lkfk;
 
     sget-object v3, Liqb;->a:Liqb;
@@ -549,7 +476,6 @@
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_4
 
-    .line 68
     :cond_a
     if-eqz v6, :cond_b
 
@@ -561,7 +487,6 @@
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 69
     :cond_b
     if-eqz v4, :cond_2
 
@@ -569,14 +494,12 @@
 
     goto/16 :goto_0
 
-    .line 71
     :cond_c
     :try_start_6
     invoke-interface {v6}, Liob;->f()J
 
     move-result-wide v8
 
-    .line 72
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
 
     sget-object v7, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
@@ -585,30 +508,24 @@
 
     move-result-wide v10
 
-    .line 73
     new-instance v3, Leuc;
 
     invoke-direct {v3, v10, v11}, Leuc;-><init>(J)V
 
-    .line 74
     invoke-interface {v5, v10, v11}, Lety;->b(J)Letx;
 
     move-result-object v3
 
-    .line 76
     sget-object v7, Letx;->a:Letx;
 
     invoke-virtual {v3, v7}, Letx;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
-    .line 77
     if-eqz v7, :cond_d
 
-    .line 78
     invoke-direct {p0}, Leua;->d()V
 
-    .line 80
     :cond_d
     sget-object v7, Letx;->c:Letx;
 
@@ -629,16 +546,13 @@
     :cond_e
     move v3, v1
 
-    .line 81
     :goto_2
     if-eqz v3, :cond_8
 
-    .line 82
     new-instance v0, Leud;
 
     invoke-direct {v0, v10, v11}, Leud;-><init>(J)V
 
-    .line 83
     iget-object v3, p0, Leua;->i:Lilw;
 
     new-instance v5, Likv;
@@ -653,33 +567,26 @@
 
     invoke-interface {v3, v6, v5}, Lilw;->a(Liob;Liob;)V
 
-    .line 84
     invoke-interface {v4, v10, v11}, Liwt;->a(J)V
 
-    .line 86
     iget-object v0, p0, Leua;->a:Leuf;
 
-    .line 87
     if-eqz v0, :cond_10
 
-    .line 89
     iget-object v3, v0, Leuf;->b:Letj;
 
     sget-object v5, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
 
     sget-object v7, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 90
     invoke-virtual {v5, v8, v9, v7}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
 
     move-result-wide v10
 
-    .line 92
     new-instance v5, Letk;
 
     invoke-direct {v5, v10, v11}, Letk;-><init>(J)V
 
-    .line 93
     iget-object v5, v3, Letj;->a:Leui;
 
     if-eqz v5, :cond_f
@@ -688,24 +595,18 @@
 
     if-eqz v5, :cond_f
 
-    .line 94
     invoke-static {}, Lesq;->a()V
 
-    .line 95
     iget-object v5, v3, Letj;->a:Leui;
 
-    .line 96
     invoke-virtual {v5, v8, v9, v10, v11}, Leui;->a(JJ)Lkey;
 
     move-result-object v5
 
-    .line 97
     invoke-static {}, Lesq;->a()V
 
-    .line 98
     invoke-static {}, Lesq;->d()V
 
-    .line 99
     new-instance v7, Letl;
 
     invoke-direct {v7, v3}, Letl;-><init>(Letj;)V
@@ -714,7 +615,6 @@
 
     invoke-static {v5, v7, v3}, Lkek;->a(Lkey;Lkej;Ljava/util/concurrent/Executor;)V
 
-    .line 100
     :cond_f
     iget-object v3, v0, Leuf;->c:Ljrw;
 
@@ -724,7 +624,6 @@
 
     if-eqz v3, :cond_10
 
-    .line 101
     iget-object v0, v0, Leuf;->c:Ljrw;
 
     invoke-virtual {v0}, Ljrw;->b()Ljava/lang/Object;
@@ -738,7 +637,6 @@
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_4
 
-    .line 102
     :cond_10
     if-eqz v6, :cond_11
 
@@ -750,7 +648,6 @@
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_1
     .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
-    .line 103
     :cond_11
     if-eqz v4, :cond_12
 
@@ -759,16 +656,13 @@
     :cond_12
     move v0, v1
 
-    .line 104
     goto/16 :goto_0
 
     :cond_13
     move v3, v0
 
-    .line 80
     goto :goto_2
 
-    .line 107
     :catch_0
     move-exception v0
 
@@ -777,7 +671,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 108
     :catchall_1
     move-exception v1
 
@@ -799,7 +692,6 @@
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_1
     .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
-    .line 109
     :catch_1
     move-exception v0
 
@@ -808,7 +700,6 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_2
 
-    .line 110
     :catchall_2
     move-exception v1
 
@@ -829,7 +720,6 @@
 
     goto :goto_4
 
-    .line 108
     :catchall_4
     move-exception v0
 
@@ -841,30 +731,23 @@
 .method public final close()V
     .locals 3
 
-    .prologue
-    .line 30
     iget-object v0, p0, Leua;->k:Liwx;
 
     if-eqz v0, :cond_0
 
-    .line 31
     iget-object v0, p0, Leua;->d:Lkfk;
 
     new-instance v1, Leub;
 
     invoke-direct {v1, p0}, Leub;-><init>(Leua;)V
 
-    .line 32
     sget-object v2, Lkfe;->a:Lkfe;
 
-    .line 33
     invoke-virtual {v0, v1, v2}, Lkcy;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    .line 35
     :goto_0
     return-void
 
-    .line 34
     :cond_0
     iget-object v0, p0, Leua;->b:Landroid/os/Handler;
 

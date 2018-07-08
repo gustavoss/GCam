@@ -25,17 +25,11 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Ldye;->a:Ldyd;
 
-    .line 2
     iget-object v0, v0, Ldyd;->h:Lftt;
 
     sget-object v1, Lftw;->b:Lftw;
 
-    invoke-virtual {v0, v1}, Lftt;->a(Ljava/lang/Object;)V
-
-    .line 3
     return-void
 .end method

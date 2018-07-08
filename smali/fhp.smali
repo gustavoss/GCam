@@ -15,20 +15,14 @@
 .method public constructor <init>(Liie;Liii;Limv;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lfhp;->a:Liie;
 
-    .line 3
     iput-object p2, p0, Lfhp;->b:Liii;
 
-    .line 4
     iput-object p3, p0, Lfhp;->c:Limv;
 
-    .line 5
     return-void
 .end method
 
@@ -37,8 +31,6 @@
 .method public final a(Link;Landroid/os/Handler;)Lfho;
     .locals 3
 
-    .prologue
-    .line 6
     new-instance v0, Lfgc;
 
     iget-object v1, p0, Lfhp;->c:Limv;

@@ -16,18 +16,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     iput-object v0, p0, Lcmo;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 5
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -42,8 +38,6 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -54,8 +48,6 @@
 .method public final b()Lfjl;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcmo;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;

@@ -14,11 +14,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lhkx;
 
     const-string v1, "ANDROID_CAMERA"
@@ -27,22 +24,18 @@
 
     iput-object v0, p0, Lenw;->a:Lhkx;
 
-    .line 3
     new-instance v0, Lhkx;
 
     const-string v1, "VISUAL_SEMANTIC_LIFT"
 
     invoke-direct {v0, p1, v1}, Lhkx;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 4
     sget-object v0, Lbkq;->a:Lbkp;
 
-    .line 5
     const-string v1, "GcaClearcutLog"
 
     invoke-interface {v0, v1}, Liie;->a(Ljava/lang/String;)Liid;
 
-    .line 6
     return-void
 .end method
 
@@ -51,21 +44,16 @@
 .method public final a(Lcom/google/common/logging/nano/eventprotos$CameraEvent;)V
     .locals 12
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lenw;->a:Lhkx;
 
     invoke-static {p1}, Lkgr;->toByteArray(Lkgr;)[B
 
     move-result-object v1
 
-    .line 8
     new-instance v10, Lhkz;
 
-    .line 9
     invoke-direct {v10, v0, v1}, Lhkz;-><init>(Lhkx;[B)V
 
-    .line 11
     iget-boolean v0, v10, Lhkz;->h:Z
 
     if-eqz v0, :cond_0
@@ -83,7 +71,6 @@
 
     iput-boolean v0, v10, Lhkz;->h:Z
 
-    .line 12
     new-instance v11, Lcom/google/android/gms/clearcut/LogEventParcelable;
 
     new-instance v0, Lcom/google/android/gms/clearcut/internal/PlayLoggerContext;
@@ -144,7 +131,6 @@
 
     invoke-direct/range {v1 .. v9}, Lcom/google/android/gms/clearcut/LogEventParcelable;-><init>(Lcom/google/android/gms/clearcut/internal/PlayLoggerContext;Lhtd;Lhlb;[I[Ljava/lang/String;[I[[BZ)V
 
-    .line 13
     iget-object v0, v11, Lcom/google/android/gms/clearcut/LogEventParcelable;->a:Lcom/google/android/gms/clearcut/internal/PlayLoggerContext;
 
     iget-object v1, v10, Lhkz;->i:Lhkx;
@@ -171,15 +157,12 @@
 
     invoke-virtual {v0, v11}, Lhld;->a(Lcom/google/android/gms/clearcut/LogEventParcelable;)Lhmf;
 
-    .line 15
     :goto_0
     return-void
 
-    .line 13
     :cond_1
     sget-object v0, Lcom/google/android/gms/common/api/Status;->a:Lcom/google/android/gms/common/api/Status;
 
-    .line 14
     const-string v1, "Result must not be null"
 
     invoke-static {v0, v1}, Lhqx;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;

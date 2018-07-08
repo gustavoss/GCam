@@ -25,11 +25,8 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lfwq;->a:Lfwm;
 
-    .line 2
     iget-object v0, v1, Lfwm;->c:Lida;
 
     invoke-interface {v0}, Lida;->c()Ljava/lang/Object;
@@ -40,6 +37,5 @@
 
     invoke-virtual {v1, v0}, Lfwm;->a(Lhap;)V
 
-    .line 3
     return-void
 .end method

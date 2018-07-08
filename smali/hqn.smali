@@ -33,22 +33,16 @@
 .method public final a()Lhmf;
     .locals 6
 
-    .prologue
-    .line 1
     sget-object v0, Lhqq;->b:Lhqo;
 
     iget-object v1, p0, Lhqn;->c:Lhqm;
 
-    .line 2
     iget-object v1, v1, Lhqm;->a:Lhmc;
 
-    .line 3
     iget-object v2, p0, Lhqn;->c:Lhqm;
 
-    .line 4
     iget-object v2, v2, Lhqm;->b:Lcom/google/android/gms/googlehelp/GoogleHelp;
 
-    .line 5
     iget-object v3, p0, Lhqn;->a:Landroid/os/Bundle;
 
     iget-wide v4, p0, Lhqn;->b:J

@@ -28,8 +28,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 143
     new-instance v0, Lbpw;
 
     const-string v1, "camera.faceannouncer"
@@ -42,11 +40,8 @@
 .method public constructor <init>(Landroid/view/accessibility/AccessibilityManager;Lbov;Lfea;Lfyd;Lcsg;Lbpk;ZI)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lkgh;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -55,7 +50,6 @@
 
     iput-object v0, p0, Lcvu;->a:Landroid/view/accessibility/AccessibilityManager;
 
-    .line 3
     invoke-static {p2}, Lkgh;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -64,7 +58,6 @@
 
     iput-object v0, p0, Lcvu;->c:Lbov;
 
-    .line 4
     invoke-static {p3}, Lkgh;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -73,7 +66,6 @@
 
     iput-object v0, p0, Lcvu;->d:Lfea;
 
-    .line 5
     invoke-static {p4}, Lkgh;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -82,7 +74,6 @@
 
     iput-object v0, p0, Lcvu;->f:Lfyd;
 
-    .line 6
     invoke-static {p5}, Lkgh;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -91,7 +82,6 @@
 
     iput-object v0, p0, Lcvu;->e:Lcsg;
 
-    .line 7
     invoke-static {p6}, Lkgh;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -100,17 +90,14 @@
 
     iput-object v0, p0, Lcvu;->b:Lbpk;
 
-    .line 8
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcvu;->g:Z
 
-    .line 9
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcvu;->h:Z
 
-    .line 10
     return-void
 .end method
 
@@ -119,20 +106,14 @@
 .method public final a(Lihs;)V
     .locals 4
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lcvu;->b:Lbpk;
 
-    .line 12
     iget v1, p1, Lihs;->a:I
 
-    .line 14
     iget v2, p1, Lihs;->b:I
 
-    .line 16
     iget-object v0, v0, Lbpk;->a:Lcom/google/android/apps/camera/faceboxes/FaceView;
 
-    .line 17
     iget v3, v0, Lcom/google/android/apps/camera/faceboxes/FaceView;->f:I
 
     if-ne v3, v1, :cond_0
@@ -145,17 +126,13 @@
 
     if-nez v3, :cond_1
 
-    .line 18
     :cond_0
     iput v1, v0, Lcom/google/android/apps/camera/faceboxes/FaceView;->f:I
 
-    .line 19
     iput v2, v0, Lcom/google/android/apps/camera/faceboxes/FaceView;->g:I
 
-    .line 20
     invoke-virtual {v0}, Lcom/google/android/apps/camera/faceboxes/FaceView;->a()V
 
-    .line 21
     :cond_1
     return-void
 .end method
@@ -163,11 +140,8 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 21
 
-    .prologue
-    .line 27
     check-cast p1, Lfsa;
 
-    .line 28
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lcvu;->g:Z
@@ -184,22 +158,18 @@
 
     if-eqz v2, :cond_f
 
-    .line 31
     move-object/from16 v0, p1
 
     iget-object v4, v0, Lfsa;->a:[Landroid/hardware/camera2/params/Face;
 
-    .line 33
     if-nez v4, :cond_5
 
-    .line 34
     const/4 v2, 0x0
 
     new-array v2, v2, [Lgdm;
 
     move-object v4, v2
 
-    .line 41
     :goto_0
     move-object/from16 v0, p0
 
@@ -211,7 +181,6 @@
 
     sget-object v3, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_ACTIVE_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
-    .line 42
     invoke-interface {v2, v3}, Lfea;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
 
     move-result-object v2
@@ -222,7 +191,6 @@
 
     iget-object v3, v0, Lcvu;->d:Lfea;
 
-    .line 43
     invoke-interface {v3}, Lfea;->d()I
 
     move-result v9
@@ -231,22 +199,18 @@
 
     iget-object v3, v0, Lcvu;->f:Lfyd;
 
-    .line 44
     invoke-interface {v3}, Lfyd;->c()Lihp;
 
     move-result-object v3
 
-    .line 45
     iget v10, v3, Lihp;->e:I
 
-    .line 46
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcvu;->d:Lfea;
 
     sget-object v5, Landroid/hardware/camera2/CameraCharacteristics;->STATISTICS_INFO_MAX_FACE_COUNT:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
-    .line 47
     invoke-interface {v3, v5}, Lfea;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
 
     move-result-object v3
@@ -271,7 +235,6 @@
 
     move v7, v3
 
-    .line 49
     :goto_1
     if-eqz v9, :cond_0
 
@@ -295,7 +258,6 @@
 
     invoke-static {v3, v5, v9}, Ljiy;->a(ZLjava/lang/String;I)V
 
-    .line 50
     if-eqz v10, :cond_1
 
     const/16 v3, 0x5a
@@ -318,21 +280,18 @@
 
     invoke-static {v3, v5, v10}, Ljiy;->a(ZLjava/lang/String;I)V
 
-    .line 51
     invoke-static {v4}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, [Lgdm;
 
-    .line 52
     iget-object v5, v8, Lbov;->d:Lipa;
 
     invoke-interface {v5}, Lipa;->a()J
 
     move-result-wide v12
 
-    .line 53
     iget-wide v14, v8, Lbov;->f:J
 
     const-wide/16 v16, -0x1
@@ -354,7 +313,6 @@
     :cond_2
     const/4 v5, 0x1
 
-    .line 54
     :goto_4
     array-length v6, v3
 
@@ -369,49 +327,40 @@
     :cond_3
     const/4 v6, 0x1
 
-    .line 55
     :goto_5
     if-eqz v5, :cond_c
 
     if-eqz v6, :cond_c
 
-    .line 56
     array-length v3, v3
 
     iput v3, v8, Lbov;->g:I
 
-    .line 57
     iput-wide v12, v8, Lbov;->f:J
 
-    .line 58
     const/4 v3, 0x1
 
-    .line 60
     :goto_6
     if-eqz v3, :cond_f
 
-    .line 62
     invoke-static {v4}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, [Lgdm;
 
-    .line 63
     invoke-static {v2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/graphics/Rect;
 
-    .line 65
     array-length v4, v3
 
     const/4 v5, 0x1
 
     if-ne v4, v5, :cond_19
 
-    .line 66
     iget-object v11, v8, Lbov;->c:Landroid/view/View;
 
     iget-object v12, v8, Lbov;->b:Landroid/content/Context;
@@ -426,7 +375,6 @@
 
     array-length v5, v3
 
-    .line 67
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -439,33 +387,26 @@
 
     aget-object v4, v3, v4
 
-    .line 70
     iget-object v5, v4, Lgdm;->a:Landroid/graphics/Rect;
 
-    .line 71
     invoke-virtual {v5}, Landroid/graphics/Rect;->centerX()I
 
     move-result v5
 
-    .line 73
     iget-object v4, v4, Lgdm;->a:Landroid/graphics/Rect;
 
-    .line 74
     invoke-virtual {v4}, Landroid/graphics/Rect;->centerY()I
 
     move-result v4
 
-    .line 75
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
     move-result v16
 
-    .line 76
     invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
     move-result v6
 
-    .line 77
     add-int v17, v10, v9
 
     move/from16 v0, v17
@@ -474,7 +415,6 @@
 
     move/from16 v17, v0
 
-    .line 78
     if-eqz v7, :cond_d
 
     rem-int/lit16 v0, v9, 0xb4
@@ -483,10 +423,8 @@
 
     if-nez v18, :cond_d
 
-    .line 79
     sub-int v5, v16, v5
 
-    .line 82
     :cond_4
     :goto_7
     sget-object v18, Lbov;->a:Ljava/lang/String;
@@ -523,7 +461,6 @@
 
     invoke-static/range {v18 .. v19}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 83
     sget-object v18, Lbov;->a:Ljava/lang/String;
 
     const/16 v19, 0x1f
@@ -558,10 +495,8 @@
 
     invoke-static/range {v18 .. v19}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 84
     sparse-switch v17, :sswitch_data_0
 
-    .line 97
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const/16 v3, 0x5a
@@ -598,13 +533,11 @@
 
     throw v2
 
-    .line 35
     :cond_5
     array-length v2, v4
 
     new-array v3, v2, [Lgdm;
 
-    .line 36
     const/4 v2, 0x0
 
     :goto_8
@@ -612,7 +545,6 @@
 
     if-ge v2, v5, :cond_6
 
-    .line 37
     new-instance v5, Lgdm;
 
     aget-object v6, v4, v2
@@ -631,7 +563,6 @@
 
     aput-object v5, v3, v2
 
-    .line 38
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_8
@@ -639,10 +570,8 @@
     :cond_6
     move-object v4, v3
 
-    .line 39
     goto/16 :goto_0
 
-    .line 47
     :cond_7
     const/4 v3, 0x0
 
@@ -650,37 +579,31 @@
 
     goto/16 :goto_1
 
-    .line 49
     :cond_8
     const/4 v3, 0x0
 
     goto/16 :goto_2
 
-    .line 50
     :cond_9
     const/4 v3, 0x0
 
     goto/16 :goto_3
 
-    .line 53
     :cond_a
     const/4 v5, 0x0
 
     goto/16 :goto_4
 
-    .line 54
     :cond_b
     const/4 v6, 0x0
 
     goto/16 :goto_5
 
-    .line 59
     :cond_c
     const/4 v3, 0x0
 
     goto/16 :goto_6
 
-    .line 80
     :cond_d
     if-eqz v7, :cond_4
 
@@ -690,12 +613,10 @@
 
     if-eqz v18, :cond_4
 
-    .line 81
     sub-int v4, v6, v4
 
     goto/16 :goto_7
 
-    .line 85
     :sswitch_0
     const/4 v9, 0x3
 
@@ -705,14 +626,12 @@
 
     move-result v5
 
-    .line 86
     const/4 v9, 0x3
 
     invoke-static {v4, v6, v9}, Lbov;->a(III)I
 
     move-result v4
 
-    .line 98
     :goto_9
     iget-object v6, v8, Lbov;->b:Landroid/content/Context;
 
@@ -726,7 +645,6 @@
 
     move-result-object v4
 
-    .line 99
     aput-object v4, v14, v15
 
     const/4 v4, 0x2
@@ -735,24 +653,20 @@
 
     aget-object v3, v3, v5
 
-    .line 102
     iget-object v3, v3, Lgdm;->a:Landroid/graphics/Rect;
 
-    .line 103
     invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
 
     move-result v3
 
     int-to-float v3, v3
 
-    .line 104
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
     move-result v2
 
     int-to-float v2, v2
 
-    .line 105
     const/4 v5, 0x0
 
     cmpl-float v5, v2, v5
@@ -767,7 +681,6 @@
 
     if-gez v5, :cond_13
 
-    .line 106
     :cond_e
     iget-object v2, v8, Lbov;->b:Landroid/content/Context;
 
@@ -777,19 +690,15 @@
 
     move-result-object v2
 
-    .line 114
     :goto_a
     aput-object v2, v14, v4
 
-    .line 115
     invoke-virtual {v12, v13, v14}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 116
     invoke-virtual {v11, v2}, Landroid/view/View;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
-    .line 126
     :cond_f
     :goto_b
     move-object/from16 v0, p0
@@ -798,33 +707,26 @@
 
     if-eqz v2, :cond_12
 
-    .line 128
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcvu;->b:Lbpk;
 
-    .line 130
     move-object/from16 v0, p1
 
     iget-object v3, v0, Lfsa;->a:[Landroid/hardware/camera2/params/Face;
 
-    .line 132
     if-eqz v3, :cond_12
 
-    .line 133
     iget-object v4, v2, Lbpk;->a:Lcom/google/android/apps/camera/faceboxes/FaceView;
 
     new-instance v5, Landroid/graphics/RectF;
 
-    .line 134
     move-object/from16 v0, p1
 
     iget-object v6, v0, Lfsa;->b:Landroid/graphics/Rect;
 
-    .line 135
     invoke-direct {v5, v6}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
 
-    .line 136
     iget-object v6, v4, Lcom/google/android/apps/camera/faceboxes/FaceView;->e:Landroid/graphics/RectF;
 
     invoke-virtual {v5, v6}, Landroid/graphics/RectF;->equals(Ljava/lang/Object;)Z
@@ -837,28 +739,21 @@
 
     if-nez v6, :cond_11
 
-    .line 137
     :cond_10
     iput-object v5, v4, Lcom/google/android/apps/camera/faceboxes/FaceView;->e:Landroid/graphics/RectF;
 
-    .line 138
     invoke-virtual {v4}, Lcom/google/android/apps/camera/faceboxes/FaceView;->a()V
 
-    .line 139
     :cond_11
     iget-object v2, v2, Lbpk;->a:Lcom/google/android/apps/camera/faceboxes/FaceView;
 
-    .line 140
     iput-object v3, v2, Lcom/google/android/apps/camera/faceboxes/FaceView;->d:[Landroid/hardware/camera2/params/Face;
 
-    .line 141
     invoke-virtual {v2}, Lcom/google/android/apps/camera/faceboxes/FaceView;->c()V
 
-    .line 142
     :cond_12
     return-void
 
-    .line 88
     :sswitch_1
     sub-int v4, v6, v4
 
@@ -868,7 +763,6 @@
 
     move-result v6
 
-    .line 89
     const/4 v4, 0x3
 
     move/from16 v0, v16
@@ -879,10 +773,8 @@
 
     move v5, v6
 
-    .line 90
     goto/16 :goto_9
 
-    .line 91
     :sswitch_2
     sub-int v5, v16, v5
 
@@ -894,7 +786,6 @@
 
     move-result v5
 
-    .line 92
     sub-int v4, v6, v4
 
     const/4 v9, 0x3
@@ -905,7 +796,6 @@
 
     goto/16 :goto_9
 
-    .line 94
     :sswitch_3
     const/4 v9, 0x3
 
@@ -913,7 +803,6 @@
 
     move-result v6
 
-    .line 95
     sub-int v4, v16, v5
 
     const/4 v5, 0x3
@@ -926,10 +815,8 @@
 
     move v5, v6
 
-    .line 96
     goto/16 :goto_9
 
-    .line 107
     :cond_13
     float-to-int v3, v3
 
@@ -945,15 +832,12 @@
 
     add-int/lit8 v3, v2, 0xa
 
-    .line 108
     const-string v2, ""
 
-    .line 109
     const/16 v5, 0x32
 
     if-lt v3, v5, :cond_16
 
-    .line 110
     const-string v5, ". "
 
     iget-object v2, v8, Lbov;->b:Landroid/content/Context;
@@ -978,7 +862,6 @@
 
     move-result-object v2
 
-    .line 113
     :cond_14
     :goto_c
     iget-object v5, v8, Lbov;->b:Landroid/content/Context;
@@ -1021,7 +904,6 @@
 
     goto/16 :goto_a
 
-    .line 110
     :cond_15
     new-instance v2, Ljava/lang/String;
 
@@ -1029,7 +911,6 @@
 
     goto :goto_c
 
-    .line 111
     :cond_16
     const/16 v5, 0x1e
 
@@ -1037,7 +918,6 @@
 
     if-eqz v7, :cond_14
 
-    .line 112
     const-string v5, ". "
 
     iget-object v2, v8, Lbov;->b:Landroid/content/Context;
@@ -1071,7 +951,6 @@
 
     goto :goto_c
 
-    .line 113
     :cond_18
     new-instance v2, Ljava/lang/String;
 
@@ -1079,13 +958,11 @@
 
     goto/16 :goto_a
 
-    .line 117
     :cond_19
     array-length v2, v3
 
     if-ne v2, v11, :cond_1a
 
-    .line 118
     iget-object v2, v8, Lbov;->c:Landroid/view/View;
 
     iget-object v4, v8, Lbov;->b:Landroid/content/Context;
@@ -1100,7 +977,6 @@
 
     array-length v3, v3
 
-    .line 119
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -1111,18 +987,15 @@
 
     move-result-object v3
 
-    .line 120
     invoke-virtual {v2, v3}, Landroid/view/View;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_b
 
-    .line 121
     :cond_1a
     iget-object v2, v8, Lbov;->c:Landroid/view/View;
 
     iget-object v4, v8, Lbov;->b:Landroid/content/Context;
 
-    .line 122
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -1139,24 +1012,20 @@
 
     array-length v3, v3
 
-    .line 123
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     aput-object v3, v7, v8
 
-    .line 124
     invoke-virtual {v4, v5, v6, v7}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 125
     invoke-virtual {v2, v3}, Landroid/view/View;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_b
 
-    .line 84
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -1169,19 +1038,13 @@
 .method public final a(Z)V
     .locals 1
 
-    .prologue
-    .line 22
     iget-object v0, p0, Lcvu;->b:Lbpk;
 
-    .line 23
     iget-object v0, v0, Lbpk;->a:Lcom/google/android/apps/camera/faceboxes/FaceView;
 
-    .line 24
     iput-boolean p1, v0, Lcom/google/android/apps/camera/faceboxes/FaceView;->b:Z
 
-    .line 25
     invoke-virtual {v0}, Lcom/google/android/apps/camera/faceboxes/FaceView;->a()V
 
-    .line 26
     return-void
 .end method

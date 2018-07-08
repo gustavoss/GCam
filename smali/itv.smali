@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lits;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public final a()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 2
     const-string v0, "Norm64"
 
     return-object v0
@@ -29,8 +25,6 @@
 .method public final c()I
     .locals 1
 
-    .prologue
-    .line 3
     const/16 v0, 0x40
 
     return v0

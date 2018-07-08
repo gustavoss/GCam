@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method public static a(Landroid/net/Uri;)J
     .locals 2
 
-    .prologue
-    .line 11
     invoke-virtual {p0}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v0
@@ -37,8 +33,6 @@
 .method public static a([BI)J
     .locals 4
 
-    .prologue
-    .line 12
     add-int/lit8 v0, p1, 0xc
 
     invoke-static {p0, v0}, Lboa;->c([BI)I
@@ -57,24 +51,19 @@
 .method public static synthetic a(Lbpj;Lgbe;)Lgbe;
     .locals 6
 
-    .prologue
-    .line 2
     :try_start_0
     iget-object v0, p1, Lgbe;->h:Lcom/google/android/libraries/camera/exif/ExifInterface;
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p1, Lgbe;->h:Lcom/google/android/libraries/camera/exif/ExifInterface;
 
     sget v1, Lcom/google/android/libraries/camera/exif/ExifInterface;->TAG_SOFTWARE:I
 
-    .line 4
     invoke-virtual {v0, v1}, Lcom/google/android/libraries/camera/exif/ExifInterface;->getTagStringValue(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5
     iget-object v1, p1, Lgbe;->h:Lcom/google/android/libraries/camera/exif/ExifInterface;
 
     iget-object v2, p1, Lgbe;->h:Lcom/google/android/libraries/camera/exif/ExifInterface;
@@ -109,15 +98,12 @@
 
     move-result-object v0
 
-    .line 6
     invoke-virtual {v2, v3, v0}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(ILjava/lang/Object;)Likg;
 
     move-result-object v0
 
-    .line 7
     invoke-virtual {v1, v0}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(Likg;)Likg;
 
-    .line 8
     :cond_0
     invoke-virtual {p0, p1}, Lbpj;->a(Lgbe;)Lkey;
 
@@ -132,7 +118,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 10
     :goto_0
     return-object v0
 
@@ -153,11 +138,8 @@
 .method public static b([BI)J
     .locals 6
 
-    .prologue
-    .line 13
     add-int/lit8 v0, p1, 0x10
 
-    .line 14
     aget-byte v1, p0, v0
 
     and-int/lit16 v1, v1, 0xff
@@ -262,15 +244,12 @@
 
     add-long/2addr v0, v2
 
-    .line 15
     return-wide v0
 .end method
 
 .method public static c([BI)I
     .locals 2
 
-    .prologue
-    .line 16
     aget-byte v0, p0, p1
 
     and-int/lit16 v0, v0, 0xff
@@ -311,13 +290,10 @@
 .method public static d([BI)F
     .locals 1
 
-    .prologue
-    .line 17
     invoke-static {p0, p1}, Lboa;->c([BI)I
 
     move-result v0
 
-    .line 18
     invoke-static {v0}, Ljava/lang/Float;->intBitsToFloat(I)F
 
     move-result v0

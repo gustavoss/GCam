@@ -29,17 +29,13 @@
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgpt;->a:Lgps;
 
     iget-object v1, p0, Lgpt;->b:Lgpm;
 
-    .line 2
     iget-object v0, v0, Lgps;->b:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 3
     return-void
 .end method

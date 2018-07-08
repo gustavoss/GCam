@@ -78,8 +78,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 150
     const-string v0, "CdrCaptureSesImpl"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -94,149 +92,116 @@
 .method public constructor <init>(Lbdv;Lbgz;Liez;Lbhg;Ljava/util/concurrent/Executor;Lgoa;Lbij;Lbiz;Lbjc;Lbix;Lbiv;Lida;Lida;Lida;Lida;Lida;Ljrw;Lbht;Lbhx;Landroid/view/Surface;Lihw;Lbhe;Lbhn;Lbip;Lfhv;)V
     .locals 5
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v1, 0x0
 
-    .line 3
     invoke-static {v1}, Lkek;->a(Ljava/lang/Object;)Lkey;
 
     move-result-object v1
 
     iput-object v1, p0, Lbdw;->C:Lkey;
 
-    .line 4
     sget-object v1, Lbeh;->b:Lbeh;
 
     iput-object v1, p0, Lbdw;->v:Lbeh;
 
-    .line 5
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Lbdw;->w:Ljava/lang/Object;
 
-    .line 6
     new-instance v1, Libm;
 
     invoke-direct {v1}, Libm;-><init>()V
 
     iput-object v1, p0, Lbdw;->E:Libm;
 
-    .line 7
     new-instance v1, Lbdx;
 
     invoke-direct {v1, p0}, Lbdx;-><init>(Lbdw;)V
 
     iput-object v1, p0, Lbdw;->x:Ljava/lang/Runnable;
 
-    .line 8
     iput-object p1, p0, Lbdw;->y:Lbdv;
 
-    .line 9
     iput-object p2, p0, Lbdw;->b:Lbgz;
 
-    .line 10
     iput-object p3, p0, Lbdw;->c:Liez;
 
-    .line 11
     iput-object p4, p0, Lbdw;->d:Lbhg;
 
-    .line 12
     iput-object p5, p0, Lbdw;->e:Ljava/util/concurrent/Executor;
 
-    .line 13
     iput-object p6, p0, Lbdw;->f:Lgoa;
 
-    .line 14
     iput-object p7, p0, Lbdw;->z:Lbij;
 
-    .line 15
     iput-object p8, p0, Lbdw;->g:Lbiz;
 
-    .line 16
     iput-object p9, p0, Lbdw;->h:Lbjc;
 
-    .line 17
     iput-object p10, p0, Lbdw;->j:Lbix;
 
-    .line 18
     move-object/from16 v0, p11
 
     iput-object v0, p0, Lbdw;->i:Lbiv;
 
-    .line 19
     move-object/from16 v0, p12
 
     iput-object v0, p0, Lbdw;->k:Lida;
 
-    .line 20
     move-object/from16 v0, p14
 
     iput-object v0, p0, Lbdw;->l:Lida;
 
-    .line 21
     move-object/from16 v0, p15
 
     iput-object v0, p0, Lbdw;->A:Lida;
 
-    .line 22
     move-object/from16 v0, p16
 
     iput-object v0, p0, Lbdw;->m:Lida;
 
-    .line 23
     move-object/from16 v0, p17
 
     iput-object v0, p0, Lbdw;->n:Ljrw;
 
-    .line 24
     move-object/from16 v0, p18
 
     iput-object v0, p0, Lbdw;->o:Lbht;
 
-    .line 25
     move-object/from16 v0, p19
 
     iput-object v0, p0, Lbdw;->p:Lbhx;
 
-    .line 26
     move-object/from16 v0, p20
 
     iput-object v0, p0, Lbdw;->q:Landroid/view/Surface;
 
-    .line 27
     move-object/from16 v0, p21
 
     iput-object v0, p0, Lbdw;->r:Lihw;
 
-    .line 28
     move-object/from16 v0, p22
 
     iput-object v0, p0, Lbdw;->s:Lbhe;
 
-    .line 29
     move-object/from16 v0, p23
 
     iput-object v0, p0, Lbdw;->t:Lbhn;
 
-    .line 30
     move-object/from16 v0, p25
 
     iput-object v0, p0, Lbdw;->B:Lfhv;
 
-    .line 31
     invoke-static/range {p24 .. p24}, Lkek;->a(Ljava/lang/Object;)Lkey;
 
     move-result-object v1
 
     iput-object v1, p0, Lbdw;->D:Lkey;
 
-    .line 32
     iget-object v1, p0, Lbdw;->E:Libm;
 
     new-instance v2, Lbdy;
@@ -251,7 +216,6 @@
 
     invoke-virtual {v1, v2}, Libm;->a(Lihr;)Lihr;
 
-    .line 33
     iget-object v1, p0, Lbdw;->E:Libm;
 
     new-instance v2, Lbdz;
@@ -266,7 +230,6 @@
 
     invoke-virtual {v1, v2}, Libm;->a(Lihr;)Lihr;
 
-    .line 34
     iget-object v1, p0, Lbdw;->E:Libm;
 
     iget-object v2, p0, Lbdw;->l:Lida;
@@ -283,7 +246,6 @@
 
     invoke-virtual {v1, v2}, Libm;->a(Lihr;)Lihr;
 
-    .line 35
     iget-object v1, p0, Lbdw;->E:Libm;
 
     new-instance v2, Lbeb;
@@ -300,15 +262,12 @@
 
     invoke-virtual {v1, v2}, Libm;->a(Lihr;)Lihr;
 
-    .line 36
     return-void
 .end method
 
 .method static synthetic a(Lbdw;)Lfhv;
     .locals 1
 
-    .prologue
-    .line 149
     iget-object v0, p0, Lbdw;->B:Lfhv;
 
     return-object v0
@@ -317,16 +276,12 @@
 .method private final h()Lbip;
     .locals 6
 
-    .prologue
-    .line 57
     iget-object v2, p0, Lbdw;->w:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 58
     const/4 v1, 0x0
 
-    .line 59
     :try_start_0
     iget-object v0, p0, Lbdw;->D:Lkey;
 
@@ -340,18 +295,15 @@
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 63
     :goto_0
     :try_start_1
     monitor-exit v2
 
     return-object v0
 
-    .line 61
     :catch_0
     move-exception v0
 
-    .line 62
     :goto_1
     sget-object v3, Lbdw;->a:Ljava/lang/String;
 
@@ -393,7 +345,6 @@
 
     goto :goto_0
 
-    .line 64
     :catchall_0
     move-exception v0
 
@@ -403,7 +354,6 @@
 
     throw v0
 
-    .line 61
     :catch_1
     move-exception v0
 
@@ -413,18 +363,14 @@
 .method private final i()Lkey;
     .locals 5
 
-    .prologue
-    .line 105
     new-instance v1, Lkfk;
 
     invoke-direct {v1}, Lkfk;-><init>()V
 
-    .line 107
     iget-object v2, p0, Lbdw;->w:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 108
     :try_start_0
     iget-object v0, p0, Lbdw;->z:Lbij;
 
@@ -434,12 +380,10 @@
 
     iput-object v0, p0, Lbdw;->D:Lkey;
 
-    .line 109
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 110
     iget-object v0, p0, Lbdw;->z:Lbij;
 
     invoke-interface {v0}, Lbij;->b()Z
@@ -448,42 +392,33 @@
 
     if-eqz v0, :cond_0
 
-    .line 111
     iget-object v0, p0, Lbdw;->s:Lbhe;
 
     invoke-static {v0}, Lkek;->a(Ljava/lang/Object;)Lkey;
 
     move-result-object v0
 
-    .line 119
     :goto_0
     new-instance v2, Lbef;
 
     invoke-direct {v2, p0}, Lbef;-><init>(Lbdw;)V
 
-    .line 120
     sget-object v3, Lkfe;->a:Lkfe;
 
-    .line 122
     invoke-static {v0, v2, v3}, Lkdm;->a(Lkey;Lkdx;Ljava/util/concurrent/Executor;)Lkey;
 
     move-result-object v0
 
-    .line 123
     new-instance v2, Lbeg;
 
     invoke-direct {v2, p0, v1}, Lbeg;-><init>(Lbdw;Lkfk;)V
 
-    .line 124
     sget-object v3, Lkfe;->a:Lkfe;
 
-    .line 125
     invoke-static {v0, v2, v3}, Lkek;->a(Lkey;Lkej;Ljava/util/concurrent/Executor;)V
 
-    .line 126
     return-object v1
 
-    .line 109
     :catchall_0
     move-exception v0
 
@@ -494,13 +429,11 @@
 
     throw v0
 
-    .line 112
     :cond_0
     iget-object v2, p0, Lbdw;->w:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 113
     :try_start_2
     iget-object v0, p0, Lbdw;->D:Lkey;
 
@@ -508,15 +441,12 @@
 
     invoke-direct {v3, p0}, Lbee;-><init>(Lbdw;)V
 
-    .line 114
     sget-object v4, Lkfe;->a:Lkfe;
 
-    .line 116
     invoke-static {v0, v3, v4}, Lkdm;->a(Lkey;Lkdx;Ljava/util/concurrent/Executor;)Lkey;
 
     move-result-object v0
 
-    .line 118
     monitor-exit v2
 
     goto :goto_0
@@ -536,13 +466,10 @@
 .method public final a(Lata;)Lauf;
     .locals 8
 
-    .prologue
-    .line 93
     iget-object v7, p0, Lbdw;->w:Ljava/lang/Object;
 
     monitor-enter v7
 
-    .line 94
     :try_start_0
     iget-object v0, p0, Lbdw;->v:Lbeh;
 
@@ -550,12 +477,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 95
     iget-object v0, p0, Lbdw;->u:Lbfp;
 
     invoke-static {v0}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 96
     iget-object v0, p0, Lbdw;->u:Lbfp;
 
     invoke-virtual {v0, p1}, Lbfp;->a(Lata;)Lauf;
@@ -564,11 +489,9 @@
 
     monitor-exit v7
 
-    .line 103
     :goto_0
     return-object v0
 
-    .line 97
     :cond_0
     iget-object v0, p0, Lbdw;->v:Lbeh;
 
@@ -576,7 +499,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 98
     sget-object v0, Lbdw;->a:Ljava/lang/String;
 
     iget-object v1, p0, Lbdw;->v:Lbeh;
@@ -615,7 +537,6 @@
 
     invoke-static {v0, v1}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 99
     new-instance v0, Latp;
 
     invoke-direct {v0}, Latp;-><init>()V
@@ -624,7 +545,6 @@
 
     goto :goto_0
 
-    .line 104
     :catchall_0
     move-exception v0
 
@@ -634,7 +554,6 @@
 
     throw v0
 
-    .line 100
     :cond_1
     :try_start_1
     sget-object v0, Lbdw;->a:Ljava/lang/String;
@@ -643,7 +562,6 @@
 
     invoke-static {v0, v1}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 101
     iget-object v0, p0, Lbdw;->b:Lbgz;
 
     iget-object v1, p0, Lbdw;->s:Lbhe;
@@ -662,7 +580,6 @@
 
     aput-object v6, v4, v5
 
-    .line 102
     invoke-static {v4}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v5
@@ -671,7 +588,6 @@
 
     move-object v4, p1
 
-    .line 103
     invoke-interface/range {v0 .. v6}, Lbgz;->a(Lbhe;Lbhn;ZLata;Ljava/util/List;Ljava/lang/Runnable;)Lauf;
 
     move-result-object v0
@@ -686,8 +602,6 @@
 .method public final a()Liez;
     .locals 1
 
-    .prologue
-    .line 56
     iget-object v0, p0, Lbdw;->c:Liez;
 
     return-object v0
@@ -696,8 +610,6 @@
 .method public final a(Lihr;)Lihr;
     .locals 1
 
-    .prologue
-    .line 148
     iget-object v0, p0, Lbdw;->E:Libm;
 
     invoke-virtual {v0, p1}, Libm;->a(Lihr;)Lihr;
@@ -710,13 +622,10 @@
 .method public final a(Lbfo;)Lkey;
     .locals 5
 
-    .prologue
-    .line 65
     iget-object v1, p0, Lbdw;->w:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 66
     :try_start_0
     iget-object v0, p0, Lbdw;->v:Lbeh;
 
@@ -728,7 +637,6 @@
 
     if-nez v0, :cond_0
 
-    .line 67
     new-instance v0, Ljava/lang/IllegalStateException;
 
     iget-object v2, p0, Lbdw;->v:Lbeh;
@@ -773,11 +681,9 @@
 
     monitor-exit v1
 
-    .line 78
     :goto_0
     return-object v0
 
-    .line 68
     :cond_0
     iget-object v0, p0, Lbdw;->v:Lbeh;
 
@@ -789,20 +695,16 @@
 
     invoke-static {v0}, Ljiy;->a(Z)V
 
-    .line 69
     sget-object v0, Lbeh;->c:Lbeh;
 
     iput-object v0, p0, Lbdw;->v:Lbeh;
 
-    .line 70
     invoke-direct {p0}, Lbdw;->h()Lbip;
 
     move-result-object v2
 
-    .line 71
     invoke-static {v2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 72
     invoke-interface {v2}, Lbip;->d()I
 
     move-result v3
@@ -821,12 +723,10 @@
 
     if-eq v3, v0, :cond_2
 
-    .line 73
     invoke-interface {v2}, Lbip;->b()Ljava/io/File;
 
     move-result-object v0
 
-    .line 74
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
@@ -835,7 +735,6 @@
 
     if-nez v2, :cond_1
 
-    .line 75
     sget-object v2, Lbdw;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -872,7 +771,6 @@
 
     invoke-static {v2, v0}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 76
     :cond_1
     invoke-direct {p0}, Lbdw;->i()Lkey;
 
@@ -880,7 +778,6 @@
 
     iput-object v0, p0, Lbdw;->C:Lkey;
 
-    .line 77
     :cond_2
     iget-object v0, p0, Lbdw;->C:Lkey;
 
@@ -894,7 +791,6 @@
 
     move-result-object v0
 
-    .line 78
     iget-object v2, p0, Lbdw;->D:Lkey;
 
     new-instance v3, Lbed;
@@ -909,7 +805,6 @@
 
     goto :goto_0
 
-    .line 79
     :catchall_0
     move-exception v0
 
@@ -923,24 +818,19 @@
 .method public final a(JJ)V
     .locals 3
 
-    .prologue
-    .line 143
     iget-object v1, p0, Lbdw;->w:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 144
     :try_start_0
     iget-object v0, p0, Lbdw;->u:Lbfp;
 
     if-eqz v0, :cond_0
 
-    .line 145
     iget-object v0, p0, Lbdw;->u:Lbfp;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lbfp;->a(JJ)V
 
-    .line 146
     :cond_0
     monitor-exit v1
 
@@ -959,13 +849,10 @@
 .method public final b()Lkey;
     .locals 5
 
-    .prologue
-    .line 80
     iget-object v1, p0, Lbdw;->w:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 81
     :try_start_0
     sget-object v0, Lbdw;->a:Ljava/lang/String;
 
@@ -1005,7 +892,6 @@
 
     invoke-static {v0, v2}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 82
     iget-object v0, p0, Lbdw;->v:Lbeh;
 
     sget-object v2, Lbeh;->a:Lbeh;
@@ -1016,7 +902,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 83
     const/4 v0, 0x0
 
     invoke-static {v0}, Lkek;->a(Ljava/lang/Object;)Lkey;
@@ -1025,11 +910,9 @@
 
     monitor-exit v1
 
-    .line 91
     :goto_0
     return-object v0
 
-    .line 84
     :cond_0
     iget-object v0, p0, Lbdw;->v:Lbeh;
 
@@ -1037,14 +920,12 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 85
     iget-object v0, p0, Lbdw;->C:Lkey;
 
     monitor-exit v1
 
     goto :goto_0
 
-    .line 92
     :catchall_0
     move-exception v0
 
@@ -1054,7 +935,6 @@
 
     throw v0
 
-    .line 86
     :cond_1
     :try_start_1
     iget-object v0, p0, Lbdw;->v:Lbeh;
@@ -1067,12 +947,10 @@
 
     invoke-static {v0}, Ljiy;->a(Z)V
 
-    .line 87
     sget-object v0, Lbeh;->b:Lbeh;
 
     iput-object v0, p0, Lbdw;->v:Lbeh;
 
-    .line 88
     iget-object v0, p0, Lbdw;->u:Lbfp;
 
     if-eqz v0, :cond_2
@@ -1082,19 +960,16 @@
     :goto_1
     invoke-static {v0}, Ljiy;->a(Z)V
 
-    .line 89
     const/4 v0, 0x0
 
     iput-object v0, p0, Lbdw;->u:Lbfp;
 
-    .line 90
     invoke-direct {p0}, Lbdw;->i()Lkey;
 
     move-result-object v0
 
     iput-object v0, p0, Lbdw;->C:Lkey;
 
-    .line 91
     iget-object v0, p0, Lbdw;->C:Lkey;
 
     monitor-exit v1
@@ -1103,7 +978,6 @@
 
     goto :goto_0
 
-    .line 88
     :cond_2
     const/4 v0, 0x0
 
@@ -1113,24 +987,19 @@
 .method public final c()V
     .locals 2
 
-    .prologue
-    .line 127
     iget-object v1, p0, Lbdw;->w:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 128
     :try_start_0
     iget-object v0, p0, Lbdw;->u:Lbfp;
 
     if-eqz v0, :cond_0
 
-    .line 129
     iget-object v0, p0, Lbdw;->u:Lbfp;
 
     invoke-virtual {v0}, Lbfp;->c()V
 
-    .line 130
     :cond_0
     monitor-exit v1
 
@@ -1149,13 +1018,10 @@
 .method public final close()V
     .locals 3
 
-    .prologue
-    .line 37
     iget-object v1, p0, Lbdw;->w:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 38
     :try_start_0
     iget-object v0, p0, Lbdw;->v:Lbeh;
 
@@ -1167,54 +1033,44 @@
 
     if-eqz v0, :cond_0
 
-    .line 39
     sget-object v0, Lbdw;->a:Ljava/lang/String;
 
     const-string v2, "Session has been closed"
 
     invoke-static {v0, v2}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 40
     monitor-exit v1
 
-    .line 55
     :goto_0
     return-void
 
-    .line 41
     :cond_0
     sget-object v0, Lbeh;->a:Lbeh;
 
     iput-object v0, p0, Lbdw;->v:Lbeh;
 
-    .line 42
     sget-object v0, Lbdw;->a:Ljava/lang/String;
 
     const-string v2, "close"
 
     invoke-static {v0, v2}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 43
     iget-object v0, p0, Lbdw;->u:Lbfp;
 
     if-eqz v0, :cond_1
 
-    .line 44
     sget-object v0, Lbdw;->a:Ljava/lang/String;
 
     const-string v2, "CamcorderRecordingSession was not shutdowned properly."
 
     invoke-static {v0, v2}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 45
     iget-object v0, p0, Lbdw;->u:Lbfp;
 
-    .line 46
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Lbfp;->a(Z)Lkey;
 
-    .line 47
     :cond_1
     iget-object v0, p0, Lbdw;->D:Lkey;
 
@@ -1222,47 +1078,39 @@
 
     invoke-interface {v0, v2}, Lkey;->cancel(Z)Z
 
-    .line 48
     iget-object v0, p0, Lbdw;->C:Lkey;
 
     const/4 v2, 0x1
 
     invoke-interface {v0, v2}, Lkey;->cancel(Z)Z
 
-    .line 49
     iget-object v0, p0, Lbdw;->s:Lbhe;
 
     if-eqz v0, :cond_2
 
-    .line 50
     sget-object v0, Lbdw;->a:Ljava/lang/String;
 
     const-string v2, "cameraCaptureSessionProxy is empty this happens when we try to create a session after the cameraDeviceProxy is closed."
 
     invoke-static {v0, v2}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 51
     iget-object v0, p0, Lbdw;->s:Lbhe;
 
     invoke-virtual {v0}, Lbhe;->close()V
 
-    .line 52
     :cond_2
     iget-object v0, p0, Lbdw;->y:Lbdv;
 
     invoke-interface {v0}, Lbdv;->a()V
 
-    .line 53
     iget-object v0, p0, Lbdw;->g:Lbiz;
 
     invoke-interface {v0}, Lbiz;->close()V
 
-    .line 54
     iget-object v0, p0, Lbdw;->E:Libm;
 
     invoke-virtual {v0}, Libm;->close()V
 
-    .line 55
     monitor-exit v1
 
     goto :goto_0
@@ -1280,24 +1128,19 @@
 .method public final d()V
     .locals 2
 
-    .prologue
-    .line 131
     iget-object v1, p0, Lbdw;->w:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 132
     :try_start_0
     iget-object v0, p0, Lbdw;->u:Lbfp;
 
     if-eqz v0, :cond_0
 
-    .line 133
     iget-object v0, p0, Lbdw;->u:Lbfp;
 
     invoke-virtual {v0}, Lbfp;->d()V
 
-    .line 134
     :cond_0
     monitor-exit v1
 
@@ -1316,24 +1159,19 @@
 .method public final e()V
     .locals 2
 
-    .prologue
-    .line 135
     iget-object v1, p0, Lbdw;->w:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 136
     :try_start_0
     iget-object v0, p0, Lbdw;->u:Lbfp;
 
     if-eqz v0, :cond_0
 
-    .line 137
     iget-object v0, p0, Lbdw;->u:Lbfp;
 
     invoke-virtual {v0}, Lbfp;->e()V
 
-    .line 138
     :cond_0
     monitor-exit v1
 
@@ -1352,24 +1190,19 @@
 .method public final f()V
     .locals 2
 
-    .prologue
-    .line 139
     iget-object v1, p0, Lbdw;->w:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 140
     :try_start_0
     iget-object v0, p0, Lbdw;->u:Lbfp;
 
     if-eqz v0, :cond_0
 
-    .line 141
     iget-object v0, p0, Lbdw;->u:Lbfp;
 
     invoke-virtual {v0}, Lbfp;->f()V
 
-    .line 142
     :cond_0
     monitor-exit v1
 
@@ -1388,8 +1221,6 @@
 .method public final g()Libm;
     .locals 1
 
-    .prologue
-    .line 147
     iget-object v0, p0, Lbdw;->E:Libm;
 
     invoke-virtual {v0}, Libm;->g()Libm;

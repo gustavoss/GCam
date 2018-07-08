@@ -728,6 +728,16 @@
     <public type="drawable" name="lineSeparator" id="0x7f020167" />
     <public type="drawable" name="notification_template_icon_bg" id="0x7f020168" />
     <public type="drawable" name="notification_template_icon_low_bg" id="0x7f020169" />
+    <public type="drawable" name="ic_about_grey600_24dp" id="0x7f020170" />
+    <public type="drawable" name="ic_burst_animation_black_grey600_24dp" id="0x7f020171" />
+    <public type="drawable" name="ic_burst_mode_black_grey600_24dp" id="0x7f020172" />
+    <public type="drawable" name="ic_close_inverted_32dp" id="0x7f020173" />
+    <public type="drawable" name="ic_compress_jpeg_back_grey600_24dp" id="0x7f020174" />
+    <public type="drawable" name="ic_compress_jpeg_black_grey600_24dp" id="0x7f020175" />
+    <public type="drawable" name="ic_gouda_black_grey600_24dp" id="0x7f020176" />
+    <public type="drawable" name="ic_lowlight_mode_black_grey600_24dp" id="0x7f020177" />
+    <public type="drawable" name="ic_noise_mode_black_grey600_24dp" id="0x7f020178" />
+    <public type="drawable" name="ic_refocus_camera_back_grey600_24dp" id="0x7f020179" />
     <public type="drawable" name="abc_action_bar_item_background_material" id="0x7f020001" />
     <public type="drawable" name="avd_hide_password" id="0x7f020055" />
     <public type="drawable" name="avd_show_password" id="0x7f020056" />
@@ -1007,6 +1017,7 @@
     <public type="layout" name="viewfinder" id="0x7f040074" />
     <public type="layout" name="viewfinder_labels_video" id="0x7f040075" />
     <public type="layout" name="zoom_ui_layout" id="0x7f040076" />
+    <public type="layout" name="hide" id="0x7f040077" />
     <public type="layout" name="photosphere_tutorial" id="0x7f040058" />
     <public type="layout" name="portrait_tutorial" id="0x7f04005a" />
     <public type="layout" name="refocus_tutorial" id="0x7f040062" />
@@ -1202,6 +1213,14 @@
     <public type="array" name="toybox_hfr_mode_rates" id="0x7f0a0022" />
     <public type="array" name="trusted_certificates" id="0x7f0a0023" />
     <public type="array" name="video_flash_descriptions" id="0x7f0a0024" />
+    <public type="array" name="pref_parameters_camera_entries" id="0x7f0a0025" />
+    <public type="array" name="pref_parameters_camera_entryvalues" id="0x7f0a0026" />
+    <public type="array" name="pref_compress_jpeg_entries" id="0x7f0a0027" />
+    <public type="array" name="pref_compress_jpeg_entryvalues" id="0x7f0a0028" />
+    <public type="array" name="pref_refocus_resolution_entries" id="0x7f0a0029" />
+    <public type="array" name="pref_refocus_resolution_entryvalues" id="0x7f0a002a" />
+    <public type="array" name="pref_aemode_entries" id="0x7f0a002b" />
+    <public type="array" name="pref_aemode_entryvalues" id="0x7f0a002c" />
     <public type="bool" name="abc_action_bar_embed_tabs" id="0x7f0b0000" />
     <public type="bool" name="abc_allow_stacked_button_bar" id="0x7f0b0001" />
     <public type="bool" name="abc_config_actionMenuItemAllCaps" id="0x7f0b0002" />
@@ -3248,6 +3267,58 @@
     <public type="string" name="zoom_announcement" id="0x7f11022f" />
     <public type="string" name="zoom_minus_desc" id="0x7f110230" />
     <public type="string" name="zoom_plus_desc" id="0x7f110231" />
+    <public type="string" name="pref_category_about" id="0x7f110232" />
+    <public type="string" name="pref_developer_title" id="0x7f110233" />
+    <public type="string" name="pref_parameters_camera_title" id="0x7f110234" />
+    <public type="string" name="pref_parameters_camera_summary" id="0x7f110235" />
+    <public type="string" name="pref_parameters_camera_default" id="0x7f110236" />
+    <public type="string" name="pref_parameters_camera_0" id="0x7f110237" />
+    <public type="string" name="pref_parameters_camera_1" id="0x7f110238" />
+    <public type="string" name="pref_parameters_camera_2" id="0x7f110239" />
+    <public type="string" name="pref_parameters_camera_3" id="0x7f11023a" />
+    <public type="string" name="pref_parameters_camera_4" id="0x7f11023b" />
+    <public type="string" name="pref_parameters_camera_5" id="0x7f11023c" />
+    <public type="string" name="pref_compress_jpeg_title" id="0x7f11023d" />
+    <public type="string" name="pref_compress_jpeg_summary" id="0x7f11023e" />
+    <public type="string" name="pref_compress_jpeg_default" id="0x7f11023f" />
+    <public type="string" name="pref_compress_jpeg_50" id="0x7f110240" />
+    <public type="string" name="pref_compress_jpeg_70" id="0x7f110241" />
+    <public type="string" name="pref_compress_jpeg_80" id="0x7f110242" />
+    <public type="string" name="pref_compress_jpeg_90" id="0x7f110243" />
+    <public type="string" name="pref_compress_jpeg_95" id="0x7f110244" />
+    <public type="string" name="pref_compress_jpeg_96" id="0x7f110245" />
+    <public type="string" name="pref_compress_jpeg_97" id="0x7f110246" />
+    <public type="string" name="pref_compress_jpeg_98" id="0x7f110247" />
+    <public type="string" name="pref_compress_jpeg_99" id="0x7f110248" />
+    <public type="string" name="pref_compress_jpeg_100" id="0x7f110249" />
+    <public type="string" name="pref_refocus_resolution_title" id="0x7f11024a" />
+    <public type="string" name="pref_refocus_resolution_summary" id="0x7f11024b" />
+    <public type="string" name="pref_refocus_resolution_default" id="0x7f11024c" />
+    <public type="string" name="pref_enable_lowlight_title" id="0x7f11024d" />
+    <public type="string" name="pref_enable_lowlight_summary" id="0x7f11024e" />
+    <public type="string" name="pref_enable_noise_title" id="0x7f11024f" />
+    <public type="string" name="pref_enable_noise_summary" id="0x7f110250" />
+    <public type="string" name="pref_hdrplus_settings_title" id="0x7f110251" />
+    <public type="string" name="pref_misc_settings_title" id="0x7f110252" />
+    <public type="string" name="pref_paemode_title" id="0x7f110253" />
+    <public type="string" name="pref_aemode_title" id="0x7f110254" />
+    <public type="string" name="pref_aemode_default" id="0x7f110255" />
+    <public type="string" name="pref_aemode_0" id="0x7f110256" />
+    <public type="string" name="pref_aemode_m1" id="0x7f110257" />
+    <public type="string" name="pref_aemode_m2" id="0x7f110258" />
+    <public type="string" name="pref_aemode_1" id="0x7f110259" />
+    <public type="string" name="pref_aemode_2" id="0x7f11025a" />
+    <public type="string" name="pref_aemode_3" id="0x7f11025b" />
+    <public type="string" name="pref_aemode_4" id="0x7f11025c" />
+    <public type="string" name="pref_aemode_5" id="0x7f11025d" />
+    <public type="string" name="pref_aemode_6" id="0x7f11025e" />
+    <public type="string" name="pref_aemode_7" id="0x7f11025f" />
+    <public type="string" name="pref_aemode_8" id="0x7f110260" />
+    <public type="string" name="pref_disable_zoom_title" id="0x7f110261" />
+    <public type="string" name="pref_gcam_hdr_raw_summary" id="0x7f110262" />
+    <public type="string" name="pref_gcam_hdr_raw_title" id="0x7f110263" />
+    <public type="string" name="pref_compress_dng_title" id="0x7f110264" />
+    <public type="string" name="pref_compress_dng_summary" id="0x7f110265" />
     <public type="style" name="AlertDialog.AppCompat" id="0x7f120000" />
     <public type="style" name="AlertDialog.AppCompat.Light" id="0x7f120001" />
     <public type="style" name="Animation.AppCompat.Dialog" id="0x7f120002" />

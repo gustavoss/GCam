@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,11 +20,8 @@
 .method public final synthetic a(Ljdm;)Ljava/lang/Object;
     .locals 6
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 2
-    .line 3
     const/4 v0, 0x3
 
     new-array v2, v0, [Ljit;
@@ -51,37 +46,31 @@
 
     const-class v0, Lcom/google/android/libraries/smartburst/buffers/FeatureTable;
 
-    .line 4
     const-string v1, "default"
 
     invoke-virtual {p1, v0, v1}, Ljdm;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 5
     check-cast v0, Lcom/google/android/libraries/smartburst/buffers/FeatureTable;
 
     const-class v1, Ljia;
 
-    .line 6
     const-string v5, "default"
 
     invoke-virtual {p1, v1, v5}, Ljdm;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 7
     check-cast v1, Ljia;
 
     invoke-direct {v4, v0, v1}, Ljiv;-><init>(Lcom/google/android/libraries/smartburst/buffers/FeatureTable;Ljia;)V
 
     aput-object v4, v2, v3
 
-    .line 8
     invoke-static {v2}, Ljij;->a([Ljit;)Ljij;
 
     move-result-object v0
 
-    .line 9
     return-object v0
 .end method

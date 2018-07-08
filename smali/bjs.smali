@@ -11,8 +11,6 @@
 .method constructor <init>(Lbjr;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbjs;->a:Lbjr;
 
     invoke-direct {p0}, Lfhv;-><init>()V
@@ -25,11 +23,8 @@
 .method public final a(Landroid/view/Surface;J)V
     .locals 4
 
-    .prologue
-    .line 12
     sget-object v0, Lbjo;->a:Ljava/lang/String;
 
-    .line 13
     const/16 v1, 0x2f
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -52,7 +47,6 @@
 
     invoke-static {v0, v1}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
     iget-object v0, p0, Lbjs;->a:Lbjr;
 
     iget-object v0, v0, Lbjr;->c:Lkfk;
@@ -65,23 +59,18 @@
 
     invoke-virtual {v0, v1}, Lkcy;->a(Ljava/lang/Throwable;)Z
 
-    .line 15
     iget-object v0, p0, Lbjs;->a:Lbjr;
 
     iget-object v0, v0, Lbjr;->d:Lbjo;
 
-    .line 16
     invoke-virtual {v0}, Lbjo;->b()V
 
-    .line 17
     return-void
 .end method
 
 .method public final a(Lfgp;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbjs;->a:Lbjr;
 
     iget-object v0, v0, Lbjr;->a:Lkfk;
@@ -90,18 +79,14 @@
 
     invoke-virtual {v0, v1}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 3
     return-void
 .end method
 
 .method public final a(Linq;)V
     .locals 4
 
-    .prologue
-    .line 6
     sget-object v0, Lbjo;->a:Ljava/lang/String;
 
-    .line 7
     invoke-interface {p1}, Linq;->a()I
 
     move-result v1
@@ -128,7 +113,6 @@
 
     invoke-static {v0, v1}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8
     iget-object v0, p0, Lbjs;->a:Lbjr;
 
     iget-object v0, v0, Lbjr;->b:Lkfk;
@@ -141,29 +125,23 @@
 
     invoke-virtual {v0, v1}, Lkcy;->a(Ljava/lang/Throwable;)Z
 
-    .line 9
     iget-object v0, p0, Lbjs;->a:Lbjr;
 
     iget-object v0, v0, Lbjr;->d:Lbjo;
 
-    .line 10
     invoke-virtual {v0}, Lbjo;->b()V
 
-    .line 11
     return-void
 .end method
 
 .method public final a_(Linu;)V
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lbjs;->a:Lbjr;
 
     iget-object v0, v0, Lbjr;->b:Lkfk;
 
     invoke-virtual {v0, p1}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 5
     return-void
 .end method

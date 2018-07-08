@@ -13,11 +13,8 @@
 .method public constructor <init>(Ljava/util/Collection;Ljrm;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    .line 2
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -26,7 +23,6 @@
 
     iput-object v0, p0, Ljtl;->a:Ljava/util/Collection;
 
-    .line 3
     invoke-static {p2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -35,7 +31,6 @@
 
     iput-object v0, p0, Ljtl;->b:Ljrm;
 
-    .line 4
     return-void
 .end method
 
@@ -44,21 +39,16 @@
 .method public final clear()V
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Ljtl;->a:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->clear()V
 
-    .line 6
     return-void
 .end method
 
 .method public final isEmpty()Z
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Ljtl;->a:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
@@ -71,8 +61,6 @@
 .method public final iterator()Ljava/util/Iterator;
     .locals 2
 
-    .prologue
-    .line 8
     iget-object v0, p0, Ljtl;->a:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -91,8 +79,6 @@
 .method public final size()I
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Ljtl;->a:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->size()I

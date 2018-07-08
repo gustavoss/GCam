@@ -34,8 +34,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 104
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     sput-object v0, Lahn;->a:Landroid/graphics/Bitmap$Config;
@@ -46,14 +44,10 @@
 .method public constructor <init>(J)V
     .locals 3
 
-    .prologue
-    .line 8
-    .line 9
     new-instance v0, Lahr;
 
     invoke-direct {v0}, Lahr;-><init>()V
 
-    .line 10
     new-instance v1, Ljava/util/HashSet;
 
     invoke-static {}, Landroid/graphics/Bitmap$Config;->values()[Landroid/graphics/Bitmap$Config;
@@ -66,61 +60,46 @@
 
     invoke-direct {v1, v2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 11
     const/4 v2, 0x0
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 12
     sget-object v2, Landroid/graphics/Bitmap$Config;->HARDWARE:Landroid/graphics/Bitmap$Config;
 
     invoke-interface {v1, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 13
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v1
 
-    .line 14
     invoke-direct {p0, p1, p2, v0, v1}, Lahn;-><init>(JLahp;Ljava/util/Set;)V
 
-    .line 15
     return-void
 .end method
 
 .method private constructor <init>(JLahp;Ljava/util/Set;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-wide p1, p0, Lahn;->d:J
 
-    .line 3
     iput-wide p1, p0, Lahn;->e:J
 
-    .line 4
     iput-object p3, p0, Lahn;->b:Lahp;
 
-    .line 5
     iput-object p4, p0, Lahn;->c:Ljava/util/Set;
 
-    .line 6
     new-instance v0, Laho;
 
     invoke-direct {v0}, Laho;-><init>()V
 
-    .line 7
     return-void
 .end method
 
 .method private final declared-synchronized a(J)V
     .locals 7
 
-    .prologue
-    .line 83
     monitor-enter p0
 
     :goto_0
@@ -131,17 +110,14 @@
 
     if-lez v0, :cond_1
 
-    .line 84
     iget-object v0, p0, Lahn;->b:Lahp;
 
     invoke-interface {v0}, Lahp;->a()Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 85
     if-nez v1, :cond_2
 
-    .line 86
     const-string v0, "LruBitmapPool"
 
     const/4 v1, 0x5
@@ -152,17 +128,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 87
     const-string v0, "LruBitmapPool"
 
     const-string v1, "Size mismatch, resetting"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     invoke-direct {p0}, Lahn;->d()V
 
-    .line 89
     :cond_0
     const-wide/16 v0, 0x0
 
@@ -170,13 +143,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 98
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 91
     :cond_2
     :try_start_1
     iget-wide v2, p0, Lahn;->f:J
@@ -193,14 +164,12 @@
 
     iput-wide v2, p0, Lahn;->f:J
 
-    .line 92
     iget v0, p0, Lahn;->j:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lahn;->j:I
 
-    .line 93
     const-string v0, "LruBitmapPool"
 
     const/4 v2, 0x3
@@ -211,7 +180,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 94
     const-string v2, "LruBitmapPool"
 
     const-string v3, "Evicting bitmap="
@@ -239,18 +207,15 @@
     :goto_1
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 95
     :cond_3
     invoke-direct {p0}, Lahn;->c()V
 
-    .line 96
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 83
     :catchall_0
     move-exception v0
 
@@ -258,7 +223,6 @@
 
     throw v0
 
-    .line 94
     :cond_4
     :try_start_2
     new-instance v0, Ljava/lang/String;
@@ -273,21 +237,16 @@
 .method private final b()V
     .locals 2
 
-    .prologue
-    .line 42
     iget-wide v0, p0, Lahn;->e:J
 
     invoke-direct {p0, v0, v1}, Lahn;->a(J)V
 
-    .line 43
     return-void
 .end method
 
 .method private static c(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
     .locals 1
 
-    .prologue
-    .line 53
     if-eqz p2, :cond_0
 
     :goto_0
@@ -306,8 +265,6 @@
 .method private final c()V
     .locals 2
 
-    .prologue
-    .line 99
     const-string v0, "LruBitmapPool"
 
     const/4 v1, 0x2
@@ -318,10 +275,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 100
     invoke-direct {p0}, Lahn;->d()V
 
-    .line 101
     :cond_0
     return-void
 .end method
@@ -329,17 +284,13 @@
 .method private final declared-synchronized d(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
     .locals 6
 
-    .prologue
-    .line 54
     monitor-enter p0
 
-    .line 55
     :try_start_0
     sget-object v0, Landroid/graphics/Bitmap$Config;->HARDWARE:Landroid/graphics/Bitmap$Config;
 
     if-ne p3, v0, :cond_0
 
-    .line 56
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -386,7 +337,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 54
     :catchall_0
     move-exception v0
 
@@ -394,7 +344,6 @@
 
     throw v0
 
-    .line 57
     :cond_0
     :try_start_1
     iget-object v1, p0, Lahn;->b:Lahp;
@@ -408,10 +357,8 @@
 
     move-result-object v1
 
-    .line 58
     if-nez v1, :cond_5
 
-    .line 59
     const-string v0, "LruBitmapPool"
 
     const/4 v2, 0x3
@@ -422,7 +369,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 60
     const-string v2, "LruBitmapPool"
 
     const-string v3, "Missing bitmap="
@@ -450,7 +396,6 @@
     :goto_1
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
     :cond_1
     iget v0, p0, Lahn;->h:I
 
@@ -458,7 +403,6 @@
 
     iput v0, p0, Lahn;->h:I
 
-    .line 68
     :goto_2
     const-string v0, "LruBitmapPool"
 
@@ -470,7 +414,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 69
     const-string v2, "LruBitmapPool"
 
     const-string v3, "Get bitmap="
@@ -498,25 +441,21 @@
     :goto_3
     invoke-static {v2, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     :cond_2
     invoke-direct {p0}, Lahn;->c()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 71
     monitor-exit p0
 
     return-object v1
 
-    .line 57
     :cond_3
     :try_start_2
     sget-object v0, Lahn;->a:Landroid/graphics/Bitmap$Config;
 
     goto :goto_0
 
-    .line 60
     :cond_4
     new-instance v0, Ljava/lang/String;
 
@@ -524,7 +463,6 @@
 
     goto :goto_1
 
-    .line 62
     :cond_5
     iget v0, p0, Lahn;->g:I
 
@@ -532,7 +470,6 @@
 
     iput v0, p0, Lahn;->g:I
 
-    .line 63
     iget-wide v2, p0, Lahn;->f:J
 
     iget-object v0, p0, Lahn;->b:Lahp;
@@ -547,19 +484,16 @@
 
     iput-wide v2, p0, Lahn;->f:J
 
-    .line 65
     const/4 v0, 0x1
 
     invoke-virtual {v1, v0}, Landroid/graphics/Bitmap;->setHasAlpha(Z)V
 
-    .line 67
     const/4 v0, 0x1
 
     invoke-virtual {v1, v0}, Landroid/graphics/Bitmap;->setPremultiplied(Z)V
 
     goto :goto_2
 
-    .line 69
     :cond_6
     new-instance v0, Ljava/lang/String;
 
@@ -573,8 +507,6 @@
 .method private final d()V
     .locals 12
 
-    .prologue
-    .line 102
     const-string v0, "LruBitmapPool"
 
     iget v1, p0, Lahn;->g:I
@@ -685,7 +617,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     return-void
 .end method
 
@@ -694,25 +625,19 @@
 .method public final a(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
     .locals 2
 
-    .prologue
-    .line 44
     invoke-direct {p0, p1, p2, p3}, Lahn;->d(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 45
     if-eqz v0, :cond_0
 
-    .line 46
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/graphics/Bitmap;->eraseColor(I)V
 
-    .line 48
     :goto_0
     return-object v0
 
-    .line 47
     :cond_0
     invoke-static {p1, p2, p3}, Lahn;->c(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
@@ -724,8 +649,6 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 72
     const-string v0, "LruBitmapPool"
 
     const/4 v1, 0x3
@@ -736,28 +659,23 @@
 
     if-eqz v0, :cond_0
 
-    .line 73
     const-string v0, "LruBitmapPool"
 
     const-string v1, "clearMemory"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     :cond_0
     const-wide/16 v0, 0x0
 
     invoke-direct {p0, v0, v1}, Lahn;->a(J)V
 
-    .line 75
     return-void
 .end method
 
 .method public final declared-synchronized a(F)V
     .locals 2
 
-    .prologue
-    .line 16
     monitor-enter p0
 
     :try_start_0
@@ -775,17 +693,14 @@
 
     iput-wide v0, p0, Lahn;->e:J
 
-    .line 17
     invoke-direct {p0}, Lahn;->b()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 18
     monitor-exit p0
 
     return-void
 
-    .line 16
     :catchall_0
     move-exception v0
 
@@ -802,8 +717,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 76
     const-string v0, "LruBitmapPool"
 
     const/4 v1, 0x3
@@ -814,7 +727,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 77
     const-string v0, "LruBitmapPool"
 
     const/16 v1, 0x1d
@@ -839,27 +751,22 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     :cond_0
     const/16 v0, 0x28
 
     if-lt p1, v0, :cond_2
 
-    .line 79
     invoke-virtual {p0}, Lahn;->a()V
 
-    .line 82
     :cond_1
     :goto_0
     return-void
 
-    .line 80
     :cond_2
     const/16 v0, 0x14
 
     if-lt p1, v0, :cond_1
 
-    .line 81
     iget-wide v0, p0, Lahn;->e:J
 
     const-wide/16 v2, 0x2
@@ -874,13 +781,10 @@
 .method public final declared-synchronized a(Landroid/graphics/Bitmap;)V
     .locals 6
 
-    .prologue
-    .line 19
     monitor-enter p0
 
     if-nez p1, :cond_0
 
-    .line 20
     :try_start_0
     new-instance v0, Ljava/lang/NullPointerException;
 
@@ -892,7 +796,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 19
     :catchall_0
     move-exception v0
 
@@ -900,7 +803,6 @@
 
     throw v0
 
-    .line 21
     :cond_0
     :try_start_1
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->isRecycled()Z
@@ -909,7 +811,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 22
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Cannot pool recycled bitmap"
@@ -918,7 +819,6 @@
 
     throw v0
 
-    .line 23
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->isMutable()Z
 
@@ -942,7 +842,6 @@
 
     iget-object v0, p0, Lahn;->c:Ljava/util/Set;
 
-    .line 24
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v1
@@ -953,7 +852,6 @@
 
     if-nez v0, :cond_4
 
-    .line 25
     :cond_2
     const-string v0, "LruBitmapPool"
 
@@ -965,24 +863,20 @@
 
     if-eqz v0, :cond_3
 
-    .line 26
     const-string v0, "LruBitmapPool"
 
     iget-object v1, p0, Lahn;->b:Lahp;
 
-    .line 27
     invoke-interface {v1, p1}, Lahp;->b(Landroid/graphics/Bitmap;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 28
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->isMutable()Z
 
     move-result v2
 
     iget-object v3, p0, Lahn;->c:Ljava/util/Set;
 
-    .line 29
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v4
@@ -1039,22 +933,18 @@
 
     move-result-object v1
 
-    .line 30
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 31
     :cond_3
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 41
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 33
     :cond_4
     :try_start_2
     iget-object v0, p0, Lahn;->b:Lahp;
@@ -1063,19 +953,16 @@
 
     move-result v0
 
-    .line 34
     iget-object v1, p0, Lahn;->b:Lahp;
 
     invoke-interface {v1, p1}, Lahp;->a(Landroid/graphics/Bitmap;)V
 
-    .line 35
     iget v1, p0, Lahn;->i:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lahn;->i:I
 
-    .line 36
     iget-wide v2, p0, Lahn;->f:J
 
     int-to-long v0, v0
@@ -1084,7 +971,6 @@
 
     iput-wide v0, p0, Lahn;->f:J
 
-    .line 37
     const-string v0, "LruBitmapPool"
 
     const/4 v1, 0x2
@@ -1095,7 +981,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 38
     const-string v1, "LruBitmapPool"
 
     const-string v2, "Put bitmap in pool="
@@ -1123,16 +1008,13 @@
     :goto_1
     invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 39
     :cond_5
     invoke-direct {p0}, Lahn;->c()V
 
-    .line 40
     invoke-direct {p0}, Lahn;->b()V
 
     goto :goto_0
 
-    .line 38
     :cond_6
     new-instance v0, Ljava/lang/String;
 
@@ -1146,21 +1028,16 @@
 .method public final b(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
     .locals 1
 
-    .prologue
-    .line 49
     invoke-direct {p0, p1, p2, p3}, Lahn;->d(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 50
     if-nez v0, :cond_0
 
-    .line 51
     invoke-static {p1, p2, p3}, Lahn;->c(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 52
     :cond_0
     return-object v0
 .end method

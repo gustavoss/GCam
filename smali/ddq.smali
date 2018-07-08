@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 7
     const-string v0, "SlowMoMod"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -27,9 +25,6 @@
 .method public constructor <init>(Lgya;Lbac;Lbad;Lijs;Libo;Landroid/content/res/Resources;Lkhp;Lida;Lhgl;Lbnx;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lgvn;Ldya;Leak;Licm;Lddv;Lbis;Lhhj;Laws;)V
     .locals 21
 
-    .prologue
-    .line 1
-    .line 2
     move-object/from16 v0, p10
 
     iget-object v12, v0, Lbnx;->a:Lida;
@@ -72,10 +67,8 @@
 
     move-object/from16 v20, p19
 
-    .line 4
     invoke-direct/range {v1 .. v20}, Ldea;-><init>(Lida;Lgya;Lbac;Lbad;Lijs;Libo;Landroid/content/res/Resources;Lkhp;Lida;Lhgl;Lida;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lgvn;Ldya;Leak;Lddv;Lbis;Lhhj;Laws;)V
 
-    .line 5
     return-void
 .end method
 
@@ -84,8 +77,6 @@
 .method protected final a(Lcom/google/android/apps/camera/bottombar/BottomBarController;Lgvn;)Lcom/google/android/apps/camera/bottombar/BottomBarListener;
     .locals 1
 
-    .prologue
-    .line 6
     new-instance v0, Lddr;
 
     invoke-direct {v0, p0, p1}, Lddr;-><init>(Lddq;Lcom/google/android/apps/camera/bottombar/BottomBarController;)V

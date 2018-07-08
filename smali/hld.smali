@@ -26,8 +26,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,8 +34,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 24
     sget-object v0, Lhkx;->a:Lhnh;
 
     new-instance v1, Lhrc;
@@ -52,10 +48,8 @@
 .method public constructor <init>(Landroid/content/Context;Lhnh;Lhmk;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "Null context is not permitted."
@@ -86,12 +80,10 @@
 
     iget-object v0, p0, Lhld;->b:Lhnh;
 
-    .line 8
     new-instance v1, Lhtk;
 
     invoke-direct {v1, v0, v2}, Lhtk;-><init>(Lhnh;Lhlx;)V
 
-    .line 9
     iput-object v1, p0, Lhld;->d:Lhtk;
 
     new-instance v0, Lhvi;
@@ -110,14 +102,12 @@
 
     iget-object v0, p0, Lhld;->i:Lhvc;
 
-    .line 10
     iget-object v0, v0, Lhvc;->e:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
     move-result v0
 
-    .line 11
     iput v0, p0, Lhld;->f:I
 
     iget-object v0, p3, Lhmk;->a:Lhrc;
@@ -128,7 +118,6 @@
 
     iget-object v0, p0, Lhld;->i:Lhvc;
 
-    .line 12
     iget-object v1, v0, Lhvc;->h:Landroid/os/Handler;
 
     iget-object v0, v0, Lhvc;->h:Landroid/os/Handler;
@@ -141,7 +130,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 13
     return-void
 .end method
 
@@ -150,20 +138,16 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 14
     new-instance v0, Lhml;
 
     invoke-direct {v0}, Lhml;-><init>()V
 
-    .line 15
     const-string v1, "StatusExceptionMapper must not be null."
 
     invoke-static {p3, v1}, Lhqx;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p3, v0, Lhml;->a:Lhrc;
 
-    .line 16
     invoke-virtual {v0}, Lhml;->a()Lhmk;
 
     move-result-object v0
@@ -178,8 +162,6 @@
 .method public a(Landroid/os/Looper;Lhvd;)Lhma;
     .locals 7
 
-    .prologue
-    .line 20
     new-instance v0, Lhud;
 
     iget-object v1, p0, Lhld;->a:Landroid/content/Context;
@@ -188,10 +170,8 @@
 
     iget-object v1, p0, Lhld;->h:Landroid/accounts/Account;
 
-    .line 21
     iput-object v1, v0, Lhud;->a:Landroid/accounts/Account;
 
-    .line 22
     invoke-virtual {v0}, Lhud;->a()Lhng;
 
     move-result-object v3
@@ -222,32 +202,24 @@
 .method public a(Lcom/google/android/gms/clearcut/LogEventParcelable;)Lhmf;
     .locals 2
 
-    .prologue
-    .line 1
     new-instance v0, Lhle;
 
-    .line 2
     iget-object v1, p0, Lhld;->g:Lhmc;
 
-    .line 3
     invoke-direct {v0, p1, v1}, Lhle;-><init>(Lcom/google/android/gms/clearcut/LogEventParcelable;Lhmc;)V
 
-    .line 4
     const/4 v1, 0x2
 
     invoke-virtual {p0, v1, v0}, Lhld;->a(ILhto;)Lhto;
 
     move-result-object v0
 
-    .line 5
     return-object v0
 .end method
 
 .method public a(Landroid/content/Context;Landroid/os/Handler;)Lhqz;
     .locals 1
 
-    .prologue
-    .line 23
     new-instance v0, Lhqz;
 
     invoke-direct {v0, p1, p2}, Lhqz;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
@@ -258,13 +230,10 @@
 .method public a(ILhto;)Lhto;
     .locals 6
 
-    .prologue
-    .line 17
     invoke-virtual {p2}, Lhto;->d()V
 
     iget-object v0, p0, Lhld;->i:Lhvc;
 
-    .line 18
     new-instance v1, Lhti;
 
     invoke-direct {v1, p2}, Lhti;-><init>(Lhto;)V
@@ -291,6 +260,5 @@
 
     invoke-virtual {v2, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 19
     return-object p2
 .end method

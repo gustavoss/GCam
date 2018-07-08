@@ -16,25 +16,20 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 2
     new-instance v0, Lgz;
 
     invoke-direct {v0}, Lgz;-><init>()V
 
     iput-object v0, p0, Landroid/support/v4/app/SupportActivity;->mExtraDataMap:Lgz;
 
-    .line 3
     new-instance v0, Lh;
 
     invoke-direct {v0, p0}, Lh;-><init>(Lg;)V
 
     iput-object v0, p0, Landroid/support/v4/app/SupportActivity;->mLifecycleRegistry:Lh;
 
-    .line 4
     return-void
 .end method
 
@@ -43,8 +38,6 @@
 .method public getExtraData(Ljava/lang/Class;)Landroid/support/v4/app/SupportActivity$ExtraData;
     .locals 1
 
-    .prologue
-    .line 18
     iget-object v0, p0, Landroid/support/v4/app/SupportActivity;->mExtraDataMap:Lgz;
 
     invoke-virtual {v0, p1}, Lgz;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -59,8 +52,6 @@
 .method public getLifecycle()Ld;
     .locals 1
 
-    .prologue
-    .line 19
     iget-object v0, p0, Landroid/support/v4/app/SupportActivity;->mLifecycleRegistry:Lh;
 
     return-object v0
@@ -69,16 +60,12 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 4
 
-    .prologue
-    .line 7
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 9
     invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
 
-    .line 10
     const-string v1, "android.arch.lifecycle.LifecycleDispatcher.report_fragment_tag"
 
     invoke-virtual {v0, v1}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
@@ -87,7 +74,6 @@
 
     if-nez v1, :cond_0
 
-    .line 11
     invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
 
     move-result-object v1
@@ -104,10 +90,8 @@
 
     invoke-virtual {v1}, Landroid/app/FragmentTransaction;->commit()I
 
-    .line 12
     invoke-virtual {v0}, Landroid/app/FragmentManager;->executePendingTransactions()Z
 
-    .line 13
     :cond_0
     return-void
 .end method
@@ -115,27 +99,20 @@
 .method public onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
 
-    .prologue
-    .line 14
     iget-object v0, p0, Landroid/support/v4/app/SupportActivity;->mLifecycleRegistry:Lh;
 
     sget-object v1, Lf;->c:Lf;
 
-    .line 15
     invoke-virtual {v0, v1}, Lh;->a(Lf;)V
 
-    .line 16
     invoke-super {p0, p1}, Landroid/app/Activity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 17
     return-void
 .end method
 
 .method public putExtraData(Landroid/support/v4/app/SupportActivity$ExtraData;)V
     .locals 2
 
-    .prologue
-    .line 5
     iget-object v0, p0, Landroid/support/v4/app/SupportActivity;->mExtraDataMap:Lgz;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -144,6 +121,5 @@
 
     invoke-virtual {v0, v1, p1}, Lgz;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     return-void
 .end method

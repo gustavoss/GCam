@@ -30,26 +30,18 @@
 .method public constructor <init>(Liie;Liii;Lfge;Lkey;Lfla;Lfrn;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p2, p0, Ldsb;->b:Liii;
 
-    .line 3
     iput-object p3, p0, Ldsb;->c:Lfge;
 
-    .line 4
     iput-object p4, p0, Ldsb;->d:Lkey;
 
-    .line 5
     iput-object p5, p0, Ldsb;->e:Lfla;
 
-    .line 6
     iput-object p6, p0, Ldsb;->f:Lfrn;
 
-    .line 7
     const-string v0, "SimpleImgCaptureCmd"
 
     invoke-interface {p1, v0}, Liie;->a(Ljava/lang/String;)Liid;
@@ -58,15 +50,12 @@
 
     iput-object v0, p0, Ldsb;->a:Liid;
 
-    .line 8
     return-void
 .end method
 
 .method private static synthetic a(Ljava/lang/Throwable;Lfgf;)V
     .locals 1
 
-    .prologue
-    .line 70
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -93,8 +82,6 @@
 .method private static synthetic a(Ljava/lang/Throwable;Lfjk;)V
     .locals 1
 
-    .prologue
-    .line 69
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -121,8 +108,6 @@
 .method private static synthetic a(Ljava/lang/Throwable;Lfro;)V
     .locals 1
 
-    .prologue
-    .line 71
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -151,10 +136,8 @@
 .method public final a()Lida;
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 64
     const/4 v0, 0x2
 
     new-array v0, v0, [Lida;
@@ -163,7 +146,6 @@
 
     iget-object v2, p0, Ldsb;->c:Lfge;
 
-    .line 65
     invoke-interface {v2}, Lfge;->b()Lida;
 
     move-result-object v2
@@ -172,7 +154,6 @@
 
     iget-object v1, p0, Ldsb;->e:Lfla;
 
-    .line 66
     invoke-virtual {v1}, Lfla;->b()Lida;
 
     move-result-object v1
@@ -187,7 +168,6 @@
 
     aput-object v1, v0, v3
 
-    .line 67
     invoke-static {v0}, Lidb;->a([Lida;)Lida;
 
     move-result-object v0
@@ -198,35 +178,30 @@
 .method public final a(Lftd;Lfsr;)V
     .locals 12
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     const/4 v4, 0x0
 
-    .line 9
     iget-object v0, p0, Ldsb;->a:Liid;
 
     const-string v3, "Executing simple capture command."
 
     invoke-interface {v0, v3}, Liid;->d(Ljava/lang/String;)V
 
-    .line 10
     iget-object v0, p0, Ldsb;->b:Liii;
 
     const-string v3, "SimpleImageCapture"
 
     invoke-interface {v0, v3}, Liii;->a(Ljava/lang/String;)V
 
-    .line 11
     iget-object v0, p0, Ldsb;->b:Liii;
 
     const-string v3, "AcquireResources"
 
     invoke-interface {v0, v3}, Liii;->a(Ljava/lang/String;)V
 
-    .line 13
     :try_start_0
     iget-object v0, p0, Ldsb;->f:Lfrn;
 
@@ -236,7 +211,6 @@
 
     move-result-object v5
 
-    .line 14
     :try_start_1
     iget-object v0, p0, Ldsb;->c:Lfge;
 
@@ -247,7 +221,6 @@
 
     move-result-object v6
 
-    .line 16
     :try_start_2
     iget-object v0, p0, Ldsb;->e:Lfla;
 
@@ -260,7 +233,6 @@
 
     move-result-object v7
 
-    .line 18
     :try_start_3
     iget-object v0, p0, Ldsb;->b:Liii;
 
@@ -268,25 +240,20 @@
 
     invoke-interface {v0, v3}, Liii;->b(Ljava/lang/String;)V
 
-    .line 19
     new-instance v3, Lbcm;
 
     invoke-direct {v3}, Lbcm;-><init>()V
 
-    .line 20
     iget-object v0, p0, Ldsb;->d:Lkey;
 
-    .line 21
     invoke-static {v0}, Lijt;->a(Lkey;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lfeu;
 
-    .line 22
     new-instance v8, Lfhn;
 
-    .line 23
     invoke-virtual {v0}, Lfeu;->c()Ljava/lang/Object;
 
     move-result-object v0
@@ -297,26 +264,20 @@
 
     const/4 v0, 0x2
 
-    .line 24
     invoke-virtual {v8, v0}, Lfhn;->a(I)Lfhn;
 
     move-result-object v0
 
-    .line 25
     invoke-virtual {v0, v7}, Lfhn;->a(Lfgx;)Lfhn;
 
-    .line 26
     new-instance v8, Lfte;
 
     invoke-direct {v8}, Lfte;-><init>()V
 
-    .line 27
     invoke-virtual {v0, v8}, Lfhn;->a(Lfhv;)Lfhn;
 
-    .line 29
     iget-object v9, p2, Lfsr;->c:Lfsq;
 
-    .line 30
     invoke-virtual {v9}, Lfsq;->a()Lihw;
 
     move-result-object v9
@@ -325,24 +286,20 @@
 
     move-result-object v9
 
-    .line 31
     invoke-virtual {v0, v9}, Lfhn;->a(Lfhv;)Lfhn;
 
-    .line 32
     invoke-static {v3}, Lezo;->c(Lihw;)Lfhv;
 
     move-result-object v9
 
     invoke-virtual {v0, v9}, Lfhn;->a(Lfhv;)Lfhn;
 
-    .line 33
     const/4 v9, 0x1
 
     new-array v9, v9, [Lfhl;
 
     const/4 v10, 0x0
 
-    .line 34
     invoke-virtual {v0}, Lfhn;->c()Lfhl;
 
     move-result-object v0
@@ -355,46 +312,37 @@
 
     sget-object v9, Lfhu;->b:Lfhu;
 
-    .line 35
     invoke-interface {v6, v0, v9}, Lfgf;->a(Ljava/util/List;Lfhu;)V
 
-    .line 36
     iget-object v0, p0, Ldsb;->b:Liii;
 
     const-string v9, "exposureLatch#await"
 
     invoke-interface {v0, v9}, Liii;->b(Ljava/lang/String;)V
 
-    .line 37
     invoke-virtual {v3}, Lbcm;->await()V
 
-    .line 38
     invoke-interface {v6}, Lfgf;->close()V
 
-    .line 39
     iget-object v0, p0, Ldsb;->b:Liii;
 
     const-string v3, "getImage"
 
     invoke-interface {v0, v3}, Liii;->b(Ljava/lang/String;)V
 
-    .line 40
     invoke-interface {v7}, Lfjk;->a()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Liob;
 
-    .line 42
     iget-object v3, v8, Lfte;->a:Lkfk;
 
-    .line 43
     invoke-interface {v5, v0, v3}, Lfro;->a(Liob;Lkey;)V
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_c
 
-    .line 45
     :try_start_4
     iget-object v0, p0, Ldsb;->a:Liid;
 
@@ -405,7 +353,6 @@
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_7
     .catchall {:try_start_4 .. :try_end_4} :catchall_d
 
-    .line 46
     const/4 v0, 0x0
 
     :try_start_5
@@ -414,7 +361,6 @@
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_6
     .catchall {:try_start_5 .. :try_end_5} :catchall_a
 
-    .line 48
     if-eqz v6, :cond_0
 
     const/4 v0, 0x0
@@ -425,7 +371,6 @@
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_4
     .catchall {:try_start_6 .. :try_end_6} :catchall_7
 
-    .line 50
     :cond_0
     if-eqz v5, :cond_1
 
@@ -436,21 +381,17 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_5
 
-    .line 53
     :cond_1
     iget-object v0, p0, Ldsb;->b:Liii;
 
     invoke-interface {v0}, Liii;->a()V
 
-    .line 54
     iget-object v0, p0, Ldsb;->b:Liii;
 
     invoke-interface {v0}, Liii;->a()V
 
-    .line 55
     return-void
 
-    .line 47
     :catch_0
     move-exception v0
 
@@ -460,7 +401,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 48
     :catchall_0
     move-exception v3
 
@@ -481,7 +421,6 @@
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_1
     .catchall {:try_start_9 .. :try_end_9} :catchall_b
 
-    .line 49
     :catch_1
     move-exception v0
 
@@ -491,7 +430,6 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_1
 
-    .line 50
     :catchall_1
     move-exception v1
 
@@ -513,7 +451,6 @@
     .catch Ljava/lang/Throwable; {:try_start_b .. :try_end_b} :catch_2
     .catchall {:try_start_b .. :try_end_b} :catchall_8
 
-    .line 51
     :catch_2
     move-exception v0
 
@@ -523,7 +460,6 @@
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_2
 
-    .line 52
     :catchall_2
     move-exception v1
 
@@ -542,47 +478,39 @@
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_3
 
-    .line 56
     :catchall_3
     move-exception v0
 
     :goto_6
     if-nez v3, :cond_4
 
-    .line 57
     iget-object v1, p0, Ldsb;->a:Liid;
 
     const-string v3, "Failed to expose an image. Aborting capture!"
 
     invoke-interface {v1, v3}, Liid;->c(Ljava/lang/String;)V
 
-    .line 59
     iget-object v1, p2, Lfsr;->b:Lgfy;
 
-    .line 60
     invoke-static {}, Lgvs;->a()Lgxk;
 
     move-result-object v3
 
     const-string v4, "Simple image capture failed to expose an image. Aborting capture!"
 
-    .line 61
     invoke-interface {v1, v3, v2, v4}, Lgab;->a(Lgxk;ZLjava/lang/String;)V
 
-    .line 62
     :cond_4
     iget-object v1, p0, Ldsb;->b:Liii;
 
     invoke-interface {v1}, Liii;->a()V
 
-    .line 63
     iget-object v1, p0, Ldsb;->b:Liii;
 
     invoke-interface {v1}, Liii;->a()V
 
     throw v0
 
-    .line 56
     :catchall_4
     move-exception v0
 
@@ -597,7 +525,6 @@
 
     goto :goto_6
 
-    .line 52
     :catchall_6
     move-exception v0
 
@@ -617,7 +544,6 @@
 
     goto :goto_5
 
-    .line 51
     :catch_3
     move-exception v0
 
@@ -632,7 +558,6 @@
 
     goto :goto_4
 
-    .line 50
     :catchall_9
     move-exception v0
 
@@ -658,7 +583,6 @@
 
     goto :goto_3
 
-    .line 49
     :catch_5
     move-exception v0
 
@@ -673,7 +597,6 @@
 
     goto :goto_2
 
-    .line 48
     :catchall_c
     move-exception v0
 
@@ -692,7 +615,6 @@
 
     goto :goto_1
 
-    .line 47
     :catch_7
     move-exception v0
 
@@ -704,8 +626,6 @@
 .method public final b()Lida;
     .locals 1
 
-    .prologue
-    .line 68
     invoke-static {}, Lezo;->a()Lfhr;
 
     move-result-object v0

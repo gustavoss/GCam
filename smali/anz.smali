@@ -7,19 +7,14 @@
 .method private constructor <init>(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1}, Lany;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    .line 3
     return-void
 .end method
 
 .method static a(Landroid/graphics/drawable/Drawable;)Lagw;
     .locals 1
 
-    .prologue
-    .line 1
     if-eqz p0, :cond_0
 
     new-instance v0, Lanz;
@@ -40,8 +35,6 @@
 .method public final a()Ljava/lang/Class;
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lanz;->a:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -54,8 +47,6 @@
 .method public final c()I
     .locals 3
 
-    .prologue
-    .line 5
     const/4 v0, 0x1
 
     iget-object v1, p0, Lanz;->a:Landroid/graphics/drawable/Drawable;
@@ -84,7 +75,5 @@
 .method public final d()V
     .locals 0
 
-    .prologue
-    .line 6
     return-void
 .end method

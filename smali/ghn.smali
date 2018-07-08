@@ -13,11 +13,8 @@
 .method constructor <init>(Z)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     sget v1, Lep;->ba:I
@@ -28,10 +25,8 @@
 
     iput-object v0, p0, Lghn;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 3
     iput-boolean p1, p0, Lghn;->b:Z
 
-    .line 4
     return-void
 .end method
 
@@ -40,23 +35,18 @@
 .method final a(I)V
     .locals 2
 
-    .prologue
-    .line 14
     iget-object v0, p0, Lghn;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
     add-int/lit8 v1, p1, -0x1
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 15
     return-void
 .end method
 
 .method final a(IILjava/lang/String;)V
     .locals 4
 
-    .prologue
-    .line 16
     iget-object v0, p0, Lghn;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
     add-int/lit8 v1, p2, -0x1
@@ -69,28 +59,23 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 17
     iget-boolean v0, p0, Lghn;->b:Z
 
     if-eqz v0, :cond_0
 
-    .line 18
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
 
     throw v0
 
-    .line 19
     :cond_0
     iget-object v0, p0, Lghn;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 20
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     move-result v0
 
-    .line 21
     add-int/lit8 v1, p1, -0x1
 
     const/16 v2, 0x4f
@@ -129,10 +114,8 @@
 
     move-result-object v0
 
-    .line 22
     invoke-static {p3, v0}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 23
     :cond_1
     return-void
 .end method
@@ -140,11 +123,8 @@
 .method final varargs a([I)V
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 7
-    .line 8
     array-length v2, p1
 
     move v1, v0
@@ -154,7 +134,6 @@
 
     aget v3, p1, v1
 
-    .line 9
     iget-object v4, p0, Lghn;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -165,16 +144,13 @@
 
     if-ne v4, v3, :cond_0
 
-    .line 10
     const/4 v0, 0x1
 
-    .line 11
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 12
     :cond_1
     iget-object v1, p0, Lghn;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -204,15 +180,12 @@
 
     invoke-static {v0, v1}, Ljiy;->b(ZLjava/lang/Object;)V
 
-    .line 13
     return-void
 .end method
 
 .method final a()Z
     .locals 2
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lghn;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -239,8 +212,6 @@
 .method final b()Z
     .locals 2
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lghn;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I

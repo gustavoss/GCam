@@ -25,7 +25,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -36,7 +35,6 @@
 
     const/4 v3, 0x0
 
-    .line 4
     new-instance v0, Labj;
 
     const-string v1, "AUTO"
@@ -45,7 +43,6 @@
 
     sput-object v0, Labj;->a:Labj;
 
-    .line 5
     new-instance v0, Labj;
 
     const-string v1, "CONTINUOUS_PICTURE"
@@ -54,7 +51,6 @@
 
     sput-object v0, Labj;->b:Labj;
 
-    .line 6
     new-instance v0, Labj;
 
     const-string v1, "CONTINUOUS_VIDEO"
@@ -63,7 +59,6 @@
 
     sput-object v0, Labj;->c:Labj;
 
-    .line 7
     new-instance v0, Labj;
 
     const-string v1, "EXTENDED_DOF"
@@ -72,7 +67,6 @@
 
     sput-object v0, Labj;->d:Labj;
 
-    .line 8
     new-instance v0, Labj;
 
     const-string v1, "FIXED"
@@ -81,7 +75,6 @@
 
     sput-object v0, Labj;->e:Labj;
 
-    .line 9
     new-instance v0, Labj;
 
     const-string v1, "INFINITY"
@@ -92,7 +85,6 @@
 
     sput-object v0, Labj;->f:Labj;
 
-    .line 10
     new-instance v0, Labj;
 
     const-string v1, "MACRO"
@@ -103,7 +95,6 @@
 
     sput-object v0, Labj;->g:Labj;
 
-    .line 11
     const/4 v0, 0x7
 
     new-array v0, v0, [Labj;
@@ -148,8 +139,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -158,8 +147,6 @@
 .method public static a(Ljava/lang/String;)Labj;
     .locals 1
 
-    .prologue
-    .line 2
     const-class v0, Labj;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -174,8 +161,6 @@
 .method public static values()[Labj;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Labj;->h:[Labj;
 
     invoke-virtual {v0}, [Labj;->clone()Ljava/lang/Object;

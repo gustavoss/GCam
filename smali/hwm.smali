@@ -25,13 +25,9 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 1
     check-cast p1, Lhvv;
 
-    .line 2
     invoke-interface {p1}, Lhvv;->a()V
 
-    .line 3
     return-void
 .end method

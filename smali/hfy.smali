@@ -13,8 +13,6 @@
 .method public constructor <init>(Lhhj;Lcom/google/android/apps/camera/bottombar/BottomBarController;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhfy;->a:Lhhj;
 
     iput-object p2, p0, Lhfy;->b:Lcom/google/android/apps/camera/bottombar/BottomBarController;

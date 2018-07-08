@@ -16,8 +16,6 @@
 .method constructor <init>(Ldnc;J)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldnf;->b:Ldnc;
 
     iput-wide p2, p0, Ldnf;->a:J
@@ -32,21 +30,16 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 5
 
-    .prologue
-    .line 9
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 10
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 11
     sget-object v0, Ldmz;->a:Ljava/lang/String;
 
-    .line 12
     iget-wide v2, p0, Ldnf;->a:J
 
     const/16 v1, 0x3f
@@ -71,15 +64,12 @@
 
     invoke-static {v0, v1}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 15
     :goto_0
     return-void
 
-    .line 13
     :cond_0
     sget-object v0, Ldmz;->a:Ljava/lang/String;
 
-    .line 14
     iget-wide v2, p0, Ldnf;->a:J
 
     const/16 v1, 0x36
@@ -110,11 +100,8 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 5
 
-    .prologue
-    .line 2
     sget-object v0, Ldmz;->a:Ljava/lang/String;
 
-    .line 3
     iget-wide v2, p0, Ldnf;->a:J
 
     const/16 v1, 0x31
@@ -139,22 +126,17 @@
 
     invoke-static {v0, v1, p1}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 4
     iget-object v0, p0, Ldnf;->b:Ldnc;
 
-    .line 5
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Ldnc;->k:Z
 
-    .line 6
     iget-object v0, p0, Ldnf;->b:Ldnc;
 
     iget-wide v2, p0, Ldnf;->a:J
 
-    .line 7
     invoke-virtual {v0, v2, v3}, Ldnc;->a(J)V
 
-    .line 8
     return-void
 .end method

@@ -21,8 +21,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lglg;-><init>([[[[C)V
@@ -35,8 +33,6 @@
 .method public a(Lhem;Landroid/net/Uri;Lhea;IZ)V
     .locals 1
 
-    .prologue
-    .line 2
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -45,24 +41,17 @@
 
     iput-object v0, p0, Lhef;->e:Lhem;
 
-    .line 4
     iget-object v0, p1, Lhem;->g:Landroid/widget/VideoView;
 
-    .line 5
     iput-object v0, p0, Lhef;->f:Landroid/widget/VideoView;
 
-    .line 6
     iput-object p3, p0, Lhef;->g:Lhea;
 
-    .line 7
     iput-object p2, p0, Lhef;->h:Landroid/net/Uri;
 
-    .line 8
     iput p4, p0, Lhef;->i:I
 
-    .line 9
     iput-boolean p5, p0, Lhef;->j:Z
 
-    .line 10
     return-void
 .end method

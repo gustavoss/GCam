@@ -25,21 +25,15 @@
 .method public final run()V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgzw;->a:Lgzn;
 
-    .line 2
     iget-object v0, v0, Lgzn;->c:Lfwm;
 
-    .line 3
     iget-object v0, v0, Lfwm;->b:Lcom/google/android/apps/camera/optionsbar/OptionsBarView;
 
-    .line 4
     iget-object v0, v0, Lcom/google/android/apps/camera/optionsbar/OptionsBarView;->d:Lfvi;
 
     invoke-virtual {v0}, Lfvi;->a()V
 
-    .line 5
     return-void
 .end method

@@ -25,11 +25,8 @@
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lguu;->a:Lgur;
 
-    .line 2
     iget-object v0, v0, Lgur;->b:Lcom/google/android/apps/camera/ui/shutterbutton/ShutterButton;
 
     iget-object v1, v0, Lcom/google/android/apps/camera/ui/shutterbutton/ShutterButton;->currentSpec:Lgvu;
@@ -46,6 +43,5 @@
 
     invoke-virtual {v1, v0}, Lgvu;->g(I)Lgvu;
 
-    .line 3
     return-void
 .end method

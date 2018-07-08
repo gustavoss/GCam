@@ -18,8 +18,6 @@
 .method constructor <init>(Lcmv;ILcky;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcmz;->c:Lcmv;
 
     iput p2, p0, Lcmz;->a:I
@@ -36,20 +34,15 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcmz;->c:Lcmv;
 
-    .line 3
     iget-object v0, v0, Lcmv;->a:Lcmd;
 
-    .line 4
     iget v1, p0, Lcmz;->a:I
 
     iget-object v2, p0, Lcmz;->b:Lcky;
 
     invoke-interface {v0, v1, v2}, Lcmd;->b(ILcky;)V
 
-    .line 5
     return-void
 .end method

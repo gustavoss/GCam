@@ -14,8 +14,6 @@
 .method public constructor <init>(Liid;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbkn;->a:Liid;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final a(Ljava/lang/String;)Liid;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbkn;->a:Liid;
 
     invoke-interface {v0, p1}, Liid;->a(Ljava/lang/String;)Liid;

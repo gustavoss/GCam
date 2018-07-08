@@ -25,17 +25,13 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lezz;->a:Lfao;
 
-    .line 2
     iget-object v1, v0, Lfao;->a:Lfar;
 
     iget-object v0, v0, Lfao;->b:Lfap;
 
     invoke-interface {v1, v0}, Lfar;->b(Lfap;)V
 
-    .line 3
     return-void
 .end method

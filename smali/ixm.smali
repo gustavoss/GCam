@@ -26,56 +26,44 @@
 .method public constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lixm;->a:Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Lkfk;
 
     invoke-direct {v0}, Lkfk;-><init>()V
 
-    .line 5
     iput-object v0, p0, Lixm;->c:Lkfk;
 
-    .line 6
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lixm;->d:Ljava/util/Set;
 
-    .line 7
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lixm;->e:Ljava/util/List;
 
-    .line 8
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lixm;->f:J
 
-    .line 10
     new-instance v0, Lkfk;
 
     invoke-direct {v0}, Lkfk;-><init>()V
 
-    .line 11
     iput-object v0, p0, Lixm;->g:Lkfk;
 
-    .line 12
     iput-object p1, p0, Lixm;->b:Ljava/util/concurrent/Executor;
 
-    .line 13
     return-void
 .end method
 
@@ -84,30 +72,23 @@
 .method public final a(Liya;)Liyc;
     .locals 3
 
-    .prologue
-    .line 14
     iget-object v1, p0, Lixm;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 15
     :try_start_0
     new-instance v0, Lixr;
 
-    .line 16
     invoke-direct {v0, p0, p1}, Lixr;-><init>(Lixm;Liya;)V
 
-    .line 18
     iget-object v2, p0, Lixm;->e:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 19
     monitor-exit v1
 
     return-object v0
 
-    .line 20
     :catchall_0
     move-exception v0
 
@@ -121,19 +102,15 @@
 .method public final a()V
     .locals 4
 
-    .prologue
-    .line 21
     iget-object v1, p0, Lixm;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 22
     :try_start_0
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 23
     iget-object v0, p0, Lixm;->e:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -153,15 +130,12 @@
 
     check-cast v0, Lixr;
 
-    .line 25
     iget-object v0, v0, Lixr;->d:Lkfk;
 
-    .line 26
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 29
     :catchall_0
     move-exception v0
 
@@ -171,7 +145,6 @@
 
     throw v0
 
-    .line 28
     :cond_0
     :try_start_1
     iget-object v0, p0, Lixm;->g:Lkfk;
@@ -182,32 +155,26 @@
 
     invoke-virtual {v0, v2}, Lkfk;->a(Lkey;)Z
 
-    .line 29
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 30
     iget-object v0, p0, Lixm;->c:Lkfk;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 31
     return-void
 .end method
 
 .method public final a(J)V
     .locals 7
 
-    .prologue
-    .line 58
     iget-object v1, p0, Lixm;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 59
     :try_start_0
     iget-object v0, p0, Lixm;->c:Lkfk;
 
@@ -217,7 +184,6 @@
 
     if-nez v0, :cond_0
 
-    .line 60
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v2, "Please call this method only after start()."
@@ -226,7 +192,6 @@
 
     throw v0
 
-    .line 72
     :catchall_0
     move-exception v0
 
@@ -236,7 +201,6 @@
 
     throw v0
 
-    .line 61
     :cond_0
     :try_start_1
     iget-wide v2, p0, Lixm;->f:J
@@ -247,7 +211,6 @@
 
     iput-wide v2, p0, Lixm;->f:J
 
-    .line 62
     iget-object v0, p0, Lixm;->e:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -267,15 +230,12 @@
 
     check-cast v0, Lixr;
 
-    .line 63
     iget-object v0, v0, Lixr;->b:Ljava/util/Set;
 
-    .line 64
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .line 65
     :goto_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -283,29 +243,24 @@
 
     if-eqz v0, :cond_1
 
-    .line 66
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lixv;
 
-    .line 67
     iget-object v0, v0, Lixv;->b:Landroid/media/MediaCodec$BufferInfo;
 
-    .line 68
     iget-wide v4, v0, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
     cmp-long v0, v4, p1
 
     if-gez v0, :cond_1
 
-    .line 69
     invoke-interface {v3}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 72
     :cond_2
     monitor-exit v1
     :try_end_1
@@ -317,15 +272,12 @@
 .method public final a(Lixu;JJ)V
     .locals 12
 
-    .prologue
-    .line 35
     iget-wide v2, p0, Lixm;->f:J
 
     cmp-long v2, p2, v2
 
     if-gez v2, :cond_0
 
-    .line 36
     new-instance v2, Ljava/lang/RuntimeException;
 
     iget-wide v4, p0, Lixm;->f:J
@@ -364,7 +316,6 @@
 
     throw v2
 
-    .line 37
     :cond_0
     iget-object v2, p0, Lixm;->c:Lkfk;
 
@@ -374,7 +325,6 @@
 
     if-nez v2, :cond_1
 
-    .line 38
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "CookieCutterMuxer should be started before adding cuts"
@@ -383,13 +333,11 @@
 
     throw v2
 
-    .line 39
     :cond_1
     iget-object v10, p0, Lixm;->a:Ljava/lang/Object;
 
     monitor-enter v10
 
-    .line 40
     :try_start_0
     iget-object v8, p0, Lixm;->d:Ljava/util/Set;
 
@@ -405,12 +353,10 @@
 
     invoke-interface {v8, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 41
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 42
     iget-object v2, p0, Lixm;->e:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -434,13 +380,10 @@
 
     move-object v8, v0
 
-    .line 43
     new-instance v2, Liyi;
 
-    .line 44
     iget-object v3, v8, Lixr;->a:Liya;
 
-    .line 45
     invoke-interface {p1, v3}, Lixu;->a(Liya;)Liyc;
 
     move-result-object v3
@@ -451,13 +394,10 @@
 
     invoke-direct/range {v2 .. v7}, Liyi;-><init>(Ljava/lang/Object;JJ)V
 
-    .line 47
     iget-object v3, v8, Lixr;->c:Ljava/util/Set;
 
-    .line 48
     invoke-interface {v3, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 49
     new-instance v3, Lixo;
 
     invoke-direct {v3, p0, v8, v2}, Lixo;-><init>(Lixm;Lixr;Liyi;)V
@@ -466,7 +406,6 @@
 
     goto :goto_0
 
-    .line 55
     :catchall_0
     move-exception v2
 
@@ -476,12 +415,10 @@
 
     throw v2
 
-    .line 51
     :cond_2
     :try_start_1
     invoke-interface {p1}, Lixu;->a()V
 
-    .line 52
     move-object v0, v9
 
     check-cast v0, Ljava/util/ArrayList;
@@ -507,12 +444,10 @@
 
     check-cast v3, Ljava/lang/Runnable;
 
-    .line 53
     invoke-interface {v3}, Ljava/lang/Runnable;->run()V
 
     goto :goto_1
 
-    .line 55
     :cond_3
     monitor-exit v10
     :try_end_1
@@ -524,8 +459,6 @@
 .method final a(Liyi;Lixv;)V
     .locals 2
 
-    .prologue
-    .line 56
     iget-object v0, p0, Lixm;->b:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lixp;
@@ -534,15 +467,12 @@
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 57
     return-void
 .end method
 
 .method public final b()Lkey;
     .locals 3
 
-    .prologue
-    .line 32
     iget-object v0, p0, Lixm;->g:Lkfk;
 
     new-instance v1, Lixn;
@@ -551,30 +481,24 @@
 
     iget-object v2, p0, Lixm;->b:Ljava/util/concurrent/Executor;
 
-    .line 33
     invoke-static {v0, v1, v2}, Lkdm;->a(Lkey;Lkdx;Ljava/util/concurrent/Executor;)Lkey;
 
     move-result-object v0
 
-    .line 34
     return-object v0
 .end method
 
 .method final synthetic c()Lkey;
     .locals 4
 
-    .prologue
-    .line 73
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 74
     iget-object v2, p0, Lixm;->a:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 75
     :try_start_0
     iget-object v0, p0, Lixm;->d:Ljava/util/Set;
 
@@ -595,10 +519,8 @@
 
     check-cast v0, Liyi;
 
-    .line 77
     iget-object v0, v0, Liyi;->a:Ljava/lang/Object;
 
-    .line 78
     check-cast v0, Lixu;
 
     invoke-interface {v0}, Lixu;->b()Lkey;
@@ -609,7 +531,6 @@
 
     goto :goto_0
 
-    .line 80
     :catchall_0
     move-exception v0
 
@@ -625,21 +546,17 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 82
     invoke-static {v1}, Lkek;->a(Ljava/lang/Iterable;)Lkey;
 
     move-result-object v0
 
     sget-object v1, Lixq;->a:Ljrm;
 
-    .line 83
     sget-object v2, Lkfe;->a:Lkfe;
 
-    .line 85
     invoke-static {v0, v1, v2}, Lkdm;->a(Lkey;Ljrm;Ljava/util/concurrent/Executor;)Lkey;
 
     move-result-object v0
 
-    .line 86
     return-object v0
 .end method

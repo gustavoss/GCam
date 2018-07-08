@@ -20,8 +20,6 @@
 .method public constructor <init>(Lzz;ILandroid/os/Handler;Laaf;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Laaa;->d:Lzz;
 
     iput p2, p0, Laaa;->a:I
@@ -40,8 +38,6 @@
 .method public final run()V
     .locals 6
 
-    .prologue
-    .line 2
     iget-object v0, p0, Laaa;->d:Lzz;
 
     invoke-virtual {v0}, Lzz;->c()Landroid/os/Handler;
@@ -68,6 +64,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 3
     return-void
 .end method

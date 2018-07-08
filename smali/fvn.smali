@@ -17,23 +17,16 @@
 .method public constructor <init>(Lfvp;Ljvd;ILjuy;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lfvn;->a:Lfvp;
 
-    .line 3
     iput-object p2, p0, Lfvn;->d:Ljvd;
 
-    .line 4
     iput p3, p0, Lfvn;->b:I
 
-    .line 5
     iput-object p4, p0, Lfvn;->c:Ljuy;
 
-    .line 6
     return-void
 .end method
 
@@ -42,8 +35,6 @@
 .method public final a(Lfvq;)I
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lfvn;->d:Ljvd;
 
     invoke-virtual {v0, p1}, Ljvd;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -62,8 +53,6 @@
 .method public final b(Lfvq;)Z
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lfvn;->d:Ljvd;
 
     invoke-virtual {v0, p1}, Ljvd;->containsKey(Ljava/lang/Object;)Z
@@ -76,8 +65,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lfvn;->a:Lfvp;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

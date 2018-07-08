@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 7
     const-string v0, "com.bumptech.glide.load.resource.bitmap.CenterCrop"
 
     sget-object v1, Lamh;->a:Ljava/nio/charset/Charset;
@@ -29,8 +27,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lamf;-><init>()V
 
     return-void
@@ -41,8 +37,6 @@
 .method protected final a(Lahf;Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
     .locals 1
 
-    .prologue
-    .line 2
     invoke-static {p1, p2, p3, p4}, Lanj;->a(Lahf;Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -53,21 +47,16 @@
 .method public final a(Ljava/security/MessageDigest;)V
     .locals 1
 
-    .prologue
-    .line 5
     sget-object v0, Lamh;->b:[B
 
     invoke-virtual {p1, v0}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 6
     return-void
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 3
     instance-of v0, p1, Lamh;
 
     return v0
@@ -76,8 +65,6 @@
 .method public final hashCode()I
     .locals 1
 
-    .prologue
-    .line 4
     const-string v0, "com.bumptech.glide.load.resource.bitmap.CenterCrop"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I

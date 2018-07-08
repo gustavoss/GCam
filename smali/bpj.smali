@@ -13,17 +13,12 @@
 .method public constructor <init>(Lfnq;Ljava/util/concurrent/Executor;)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lbpj;->b:Lfnq;
 
-    .line 4
     iput-object p2, p0, Lbpj;->a:Ljava/util/concurrent/Executor;
 
-    .line 5
     return-void
 .end method
 
@@ -32,8 +27,6 @@
 .method public final a(Lgbe;)Lkey;
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lbpj;->b:Lfnq;
 
     new-instance v1, Lbpb;

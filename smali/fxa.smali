@@ -58,98 +58,72 @@
 .method public constructor <init>(Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lfxa;->a:Lkhp;
 
-    .line 3
     iput-object p2, p0, Lfxa;->b:Lkhp;
 
-    .line 4
     iput-object p3, p0, Lfxa;->c:Lkhp;
 
-    .line 5
     iput-object p4, p0, Lfxa;->d:Lkhp;
 
-    .line 6
     iput-object p5, p0, Lfxa;->e:Lkhp;
 
-    .line 7
     iput-object p6, p0, Lfxa;->f:Lkhp;
 
-    .line 8
     iput-object p7, p0, Lfxa;->g:Lkhp;
 
-    .line 9
     iput-object p8, p0, Lfxa;->h:Lkhp;
 
-    .line 10
     iput-object p9, p0, Lfxa;->i:Lkhp;
 
-    .line 11
     iput-object p10, p0, Lfxa;->j:Lkhp;
 
-    .line 12
     iput-object p11, p0, Lfxa;->k:Lkhp;
 
-    .line 13
     iput-object p12, p0, Lfxa;->l:Lkhp;
 
-    .line 14
     iput-object p13, p0, Lfxa;->m:Lkhp;
 
-    .line 15
     iput-object p14, p0, Lfxa;->n:Lkhp;
 
-    .line 16
     move-object/from16 v0, p15
 
     iput-object v0, p0, Lfxa;->o:Lkhp;
 
-    .line 17
     move-object/from16 v0, p16
 
     iput-object v0, p0, Lfxa;->p:Lkhp;
 
-    .line 18
     move-object/from16 v0, p17
 
     iput-object v0, p0, Lfxa;->q:Lkhp;
 
-    .line 19
     move-object/from16 v0, p18
 
     iput-object v0, p0, Lfxa;->r:Lkhp;
 
-    .line 20
     move-object/from16 v0, p19
 
     iput-object v0, p0, Lfxa;->s:Lkhp;
 
-    .line 21
     move-object/from16 v0, p20
 
     iput-object v0, p0, Lfxa;->t:Lkhp;
 
-    .line 22
     move-object/from16 v0, p21
 
     iput-object v0, p0, Lfxa;->u:Lkhp;
 
-    .line 23
     move-object/from16 v0, p22
 
     iput-object v0, p0, Lfxa;->v:Lkhp;
 
-    .line 24
     move-object/from16 v0, p23
 
     iput-object v0, p0, Lfxa;->w:Lkhp;
 
-    .line 25
     return-void
 .end method
 
@@ -158,9 +132,6 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 25
 
-    .prologue
-    .line 26
-    .line 27
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lfxa;->a:Lkhp;
@@ -169,7 +140,6 @@
 
     iget-object v1, v0, Lfxa;->b:Lkhp;
 
-    .line 28
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -180,7 +150,6 @@
 
     iget-object v1, v0, Lfxa;->c:Lkhp;
 
-    .line 29
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -191,7 +160,6 @@
 
     iget-object v1, v0, Lfxa;->d:Lkhp;
 
-    .line 30
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v15
@@ -202,7 +170,6 @@
 
     iget-object v1, v0, Lfxa;->e:Lkhp;
 
-    .line 31
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v8
@@ -213,7 +180,6 @@
 
     iget-object v1, v0, Lfxa;->f:Lkhp;
 
-    .line 32
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v9
@@ -224,7 +190,6 @@
 
     iget-object v1, v0, Lfxa;->g:Lkhp;
 
-    .line 33
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v10
@@ -235,7 +200,6 @@
 
     iget-object v1, v0, Lfxa;->h:Lkhp;
 
-    .line 34
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v11
@@ -246,7 +210,6 @@
 
     iget-object v1, v0, Lfxa;->i:Lkhp;
 
-    .line 35
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v12
@@ -257,7 +220,6 @@
 
     iget-object v1, v0, Lfxa;->j:Lkhp;
 
-    .line 36
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v16
@@ -268,7 +230,6 @@
 
     iget-object v1, v0, Lfxa;->k:Lkhp;
 
-    .line 37
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v20
@@ -279,7 +240,6 @@
 
     iget-object v1, v0, Lfxa;->l:Lkhp;
 
-    .line 38
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v17
@@ -290,7 +250,6 @@
 
     iget-object v1, v0, Lfxa;->m:Lkhp;
 
-    .line 39
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v18
@@ -301,7 +260,6 @@
 
     iget-object v1, v0, Lfxa;->n:Lkhp;
 
-    .line 40
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v24
@@ -312,14 +270,12 @@
 
     iget-object v1, v0, Lfxa;->o:Lkhp;
 
-    .line 41
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lfxa;->p:Lkhp;
 
-    .line 42
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -332,7 +288,6 @@
 
     iget-object v1, v0, Lfxa;->q:Lkhp;
 
-    .line 43
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -345,7 +300,6 @@
 
     iget-object v1, v0, Lfxa;->r:Lkhp;
 
-    .line 44
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v14
@@ -356,7 +310,6 @@
 
     iget-object v1, v0, Lfxa;->s:Lkhp;
 
-    .line 45
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v4
@@ -367,7 +320,6 @@
 
     iget-object v1, v0, Lfxa;->t:Lkhp;
 
-    .line 46
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v7
@@ -378,7 +330,6 @@
 
     iget-object v1, v0, Lfxa;->u:Lkhp;
 
-    .line 47
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -391,7 +342,6 @@
 
     iget-object v1, v0, Lfxa;->v:Lkhp;
 
-    .line 48
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -404,7 +354,6 @@
 
     iget-object v1, v0, Lfxa;->w:Lkhp;
 
-    .line 49
     invoke-interface {v1}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -413,15 +362,12 @@
 
     check-cast v19, Lbky;
 
-    .line 52
     move-object/from16 v0, v19
 
     iget-object v1, v0, Lbky;->a:Lbqi;
 
-    .line 53
     new-instance v1, Lfwm;
 
-    .line 54
     invoke-interface {v2}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -432,48 +378,39 @@
 
     check-cast v2, Lcom/google/android/apps/camera/optionsbar/OptionsBarView;
 
-    .line 55
     invoke-interface {v5}, Lawt;->b()Liaq;
 
     move-result-object v5
 
-    .line 56
     const/4 v13, 0x0
 
-    .line 58
     invoke-virtual/range {v19 .. v19}, Lbky;->c()Z
 
     move-result v19
 
-    .line 59
     invoke-virtual/range {v21 .. v21}, Ljrw;->a()Z
 
     move-result v21
 
-    .line 60
     move-object/from16 v0, v22
 
     iget-object v0, v0, Lfbc;->b:Lida;
 
     move-object/from16 v22, v0
 
-    .line 62
     invoke-virtual/range {v23 .. v23}, Lhbv;->c()Z
 
     move-result v23
 
     invoke-direct/range {v1 .. v24}, Lfwm;-><init>(Lcom/google/android/apps/camera/optionsbar/OptionsBarView;Lida;Libo;Liaq;Lfvz;Lbka;Lida;Lida;Lida;Lida;Lida;ZLida;Lida;Lida;Lida;Lida;ZLida;ZLida;ZLida;)V
 
-    .line 63
     const-string v2, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 64
     invoke-static {v1, v2}, Lkgh;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lfwm;
 
-    .line 65
     return-object v1
 .end method

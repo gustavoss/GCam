@@ -14,8 +14,6 @@
 .method constructor <init>(Lasl;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lawd;->a:Lasl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final a()Lkey;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lawd;->a:Lasl;
 
     invoke-virtual {v0}, Lasl;->a()Lkey;
@@ -42,8 +38,6 @@
 .method public final b()Lkey;
     .locals 1
 
-    .prologue
-    .line 3
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -54,8 +48,6 @@
 .method public final c()V
     .locals 1
 
-    .prologue
-    .line 4
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -66,8 +58,6 @@
 .method public final d()V
     .locals 1
 
-    .prologue
-    .line 5
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

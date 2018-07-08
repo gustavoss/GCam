@@ -13,33 +13,24 @@
 .method public constructor <init>(Ljog;)V
     .locals 1
 
-    .prologue
-    .line 6
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Ljlv;-><init>(Ljog;I)V
 
-    .line 7
     return-void
 .end method
 
 .method public constructor <init>(Ljog;I)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljlg;-><init>()V
 
-    .line 2
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Ljlv;->a:Ljog;
 
-    .line 4
     iput p2, p0, Ljlv;->b:I
 
-    .line 5
     return-void
 .end method
 
@@ -48,23 +39,18 @@
 .method public final a(Ljlb;)Ljlb;
     .locals 8
 
-    .prologue
-    .line 8
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 12
     iget-object v0, p1, Ljlb;->a:Ljava/util/List;
 
     invoke-static {v0}, Ljuy;->a(Ljava/util/Collection;)Ljuy;
 
     move-result-object v0
 
-    .line 13
     check-cast v0, Ljuy;
 
     invoke-virtual {v0}, Ljuy;->size()I
@@ -91,14 +77,12 @@
 
     move-result-wide v6
 
-    .line 14
     iget-object v1, p0, Ljlv;->a:Ljog;
 
     invoke-virtual {v1, v6, v7}, Ljog;->a(J)Ljnu;
 
     move-result-object v1
 
-    .line 15
     sget-object v5, Ljnu;->c:Ljoc;
 
     invoke-virtual {v1, v5}, Ljnu;->b(Ljoc;)Z
@@ -109,7 +93,6 @@
 
     sget-object v5, Ljnu;->c:Ljoc;
 
-    .line 16
     invoke-virtual {v1, v5}, Ljnu;->a(Ljoc;)Ljava/lang/Object;
 
     move-result-object v1
@@ -124,7 +107,6 @@
 
     if-lt v1, v5, :cond_0
 
-    .line 17
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -133,7 +115,6 @@
 
     goto :goto_0
 
-    .line 19
     :cond_1
     new-instance v0, Ljlb;
 
@@ -145,8 +126,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 20
     const-string v0, "MinFaceCountSegmentFilter"
 
     return-object v0

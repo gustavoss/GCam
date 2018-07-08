@@ -15,21 +15,16 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget-object v0, Liep;->a:Liep;
 
     iput-object v0, p0, Ldyx;->a:Liep;
 
-    .line 3
     sget-object v0, Liep;->a:Liep;
 
     iput-object v0, p0, Ldyx;->b:Liep;
 
-    .line 4
     sget-object v0, Liep;->a:Liep;
 
     iput-object v0, p0, Ldyx;->c:Liep;

@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 56
     const-class v0, Leyt;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -37,21 +35,16 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Leyt;->c:Ljava/util/List;
 
-    .line 3
     iput p1, p0, Leyt;->b:I
 
-    .line 4
     return-void
 .end method
 
@@ -60,21 +53,17 @@
 .method public final declared-synchronized a(Ljuy;)I
     .locals 10
 
-    .prologue
     const/4 v3, 0x6
 
     const/4 v1, 0x0
 
-    .line 5
     monitor-enter p0
 
-    .line 6
     :try_start_0
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 7
     iget-object v0, p0, Leyt;->c:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -94,7 +83,6 @@
 
     check-cast v0, Lffr;
 
-    .line 8
     iget-object v0, v0, Lffr;->a:Ljava/util/List;
 
     invoke-interface {v4, v0}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
@@ -103,7 +91,6 @@
 
     goto :goto_0
 
-    .line 5
     :catchall_0
     move-exception v0
 
@@ -111,7 +98,6 @@
 
     throw v0
 
-    .line 10
     :cond_0
     const/4 v0, 0x0
 
@@ -126,14 +112,12 @@
 
     move-result-wide v6
 
-    .line 11
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v0
 
     if-lt v0, v3, :cond_3
 
-    .line 13
     iget-object v0, p0, Leyt;->c:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -142,10 +126,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 14
     const-wide/high16 v2, -0x8000000000000000L
 
-    .line 16
     :goto_1
     const-wide/32 v8, 0x3b9aca00
 
@@ -155,15 +137,12 @@
 
     if-gez v0, :cond_3
 
-    .line 17
     new-instance v3, Lffr;
 
-    .line 18
     invoke-direct {v3}, Lffr;-><init>()V
 
     move v2, v1
 
-    .line 20
     :goto_2
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -177,7 +156,6 @@
 
     if-ge v2, v0, :cond_2
 
-    .line 21
     iget-object v5, v3, Lffr;->a:Ljava/util/List;
 
     invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -188,14 +166,12 @@
 
     invoke-interface {v5, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 22
     add-int/lit8 v0, v2, 0x1
 
     move v2, v0
 
     goto :goto_2
 
-    .line 15
     :cond_1
     iget-object v0, p0, Leyt;->c:Ljava/util/List;
 
@@ -229,13 +205,11 @@
 
     goto :goto_1
 
-    .line 23
     :cond_2
     iget-object v0, p0, Leyt;->c:Ljava/util/List;
 
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 24
     :cond_3
     new-instance v8, Ljava/util/HashMap;
 
@@ -243,7 +217,6 @@
 
     move v2, v1
 
-    .line 25
     :goto_3
     invoke-virtual {p1}, Ljuy;->size()I
 
@@ -251,7 +224,6 @@
 
     if-ge v2, v0, :cond_4
 
-    .line 26
     invoke-virtual {p1, v2}, Ljuy;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -266,7 +238,6 @@
 
     invoke-interface {v8, v0, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 27
     add-int/lit8 v0, v2, 0x1
 
     move v2, v0
@@ -276,7 +247,6 @@
     :cond_4
     move v2, v1
 
-    .line 28
     :goto_4
     iget-object v0, p0, Leyt;->c:Ljava/util/List;
 
@@ -286,7 +256,6 @@
 
     if-ge v2, v0, :cond_6
 
-    .line 29
     iget-object v0, p0, Leyt;->c:Ljava/util/List;
 
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -314,7 +283,6 @@
 
     check-cast v0, Lfie;
 
-    .line 30
     int-to-long v4, v2
 
     const-wide/16 v6, 0x64
@@ -329,7 +297,6 @@
 
     goto :goto_5
 
-    .line 32
     :cond_5
     add-int/lit8 v0, v2, 0x1
 
@@ -337,7 +304,6 @@
 
     goto :goto_4
 
-    .line 33
     :cond_6
     invoke-virtual {p1}, Ljuy;->size()I
 
@@ -355,7 +321,6 @@
 
     move v2, v0
 
-    .line 34
     :goto_6
     invoke-virtual {p1}, Ljuy;->size()I
 
@@ -363,7 +328,6 @@
 
     if-ge v2, v0, :cond_7
 
-    .line 35
     invoke-virtual {p1, v2}, Ljuy;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -382,20 +346,17 @@
 
     invoke-interface {v8, v0, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 36
     add-int/lit8 v0, v2, 0x1
 
     move v2, v0
 
     goto :goto_6
 
-    .line 37
     :cond_7
     const-wide v6, 0x7fffffffffffffffL
 
     move v2, v1
 
-    .line 39
     :goto_7
     invoke-virtual {p1}, Ljuy;->size()I
 
@@ -403,7 +364,6 @@
 
     if-ge v1, v0, :cond_8
 
-    .line 40
     invoke-virtual {p1, v1}, Ljuy;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -418,7 +378,6 @@
 
     move-result-wide v4
 
-    .line 41
     cmp-long v0, v6, v4
 
     if-ltz v0, :cond_b
@@ -427,7 +386,6 @@
 
     move-wide v2, v4
 
-    .line 44
     :goto_8
     add-int/lit8 v1, v1, 0x1
 
@@ -437,7 +395,6 @@
 
     goto :goto_7
 
-    .line 45
     :cond_8
     invoke-virtual {p1, v2}, Ljuy;->get(I)Ljava/lang/Object;
 
@@ -445,12 +402,10 @@
 
     check-cast v0, Lfie;
 
-    .line 46
     sget-object v1, Leyt;->a:Ljava/lang/String;
 
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 47
     invoke-interface {v0}, Lfie;->c()J
 
     move-result-wide v4
@@ -487,15 +442,12 @@
 
     move-result-object v3
 
-    .line 48
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 50
     iget-object v1, p0, Leyt;->c:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -516,7 +468,6 @@
 
     check-cast v1, Lffr;
 
-    .line 51
     iget-object v5, v1, Lffr;->a:Ljava/util/List;
 
     invoke-interface {v5, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -525,12 +476,10 @@
 
     if-eqz v5, :cond_9
 
-    .line 52
     invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_9
 
-    .line 54
     :cond_a
     iget-object v0, p0, Leyt;->c:Ljava/util/List;
 
@@ -538,7 +487,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 55
     monitor-exit p0
 
     return v2

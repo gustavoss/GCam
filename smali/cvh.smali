@@ -13,14 +13,10 @@
 .method constructor <init>(Lcrz;Liie;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcvh;->a:Lcrz;
 
-    .line 3
     const-string v0, "CptModuleCfgBldr"
 
     invoke-interface {p2, v0}, Liie;->a(Ljava/lang/String;)Liid;
@@ -29,7 +25,6 @@
 
     iput-object v0, p0, Lcvh;->b:Liid;
 
-    .line 4
     return-void
 .end method
 
@@ -38,93 +33,74 @@
 .method public final a(Lilr;)Lcsg;
     .locals 7
 
-    .prologue
-    .line 5
     iget-object v6, p0, Lcvh;->a:Lcrz;
 
-    .line 6
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     iget-object v0, v6, Lcrz;->a:Liii;
 
     const-string v1, "OneConfig#create"
 
     invoke-interface {v0, v1}, Liii;->a(Ljava/lang/String;)V
 
-    .line 8
     iget-object v0, v6, Lcrz;->a:Liii;
 
     const-string v1, "OneConfig#oneCharacteristics"
 
     invoke-interface {v0, v1}, Liii;->a(Ljava/lang/String;)V
 
-    .line 9
     iget-object v0, v6, Lcrz;->b:Lfay;
 
-    .line 10
     invoke-virtual {v0, p1}, Lfay;->a(Lilr;)Lfea;
 
     move-result-object v0
 
-    .line 11
     invoke-interface {v0}, Lfea;->b()Lilt;
 
     move-result-object v2
 
-    .line 12
     iget-object v1, v6, Lcrz;->a:Liii;
 
     const-string v3, "OneConfig#pictureSize"
 
     invoke-interface {v1, v3}, Liii;->b(Ljava/lang/String;)V
 
-    .line 13
     iget-object v1, v6, Lcrz;->c:Ldyn;
 
     invoke-virtual {v1, p1, v2}, Ldyn;->a(Lilr;Lilt;)Lihs;
 
     move-result-object v4
 
-    .line 14
     iget-object v1, v6, Lcrz;->a:Liii;
 
     const-string v3, "OneConfig#selectViewfinder"
 
     invoke-interface {v1, v3}, Liii;->b(Ljava/lang/String;)V
 
-    .line 15
     invoke-interface {v0}, Lfea;->c()Ljava/util/List;
 
     move-result-object v0
 
-    .line 16
     iget-object v1, v6, Lcrz;->d:Lgxy;
 
-    .line 17
     invoke-virtual {v1, v0, v4, v2}, Lgxy;->a(Ljava/util/List;Lihs;Lilt;)Lihs;
 
     move-result-object v0
 
-    .line 18
     new-instance v5, Lgxw;
 
-    .line 19
     invoke-static {v0}, Lihg;->a(Lihs;)Lihg;
 
     move-result-object v1
 
     invoke-direct {v5, v2, v0, v1}, Lgxw;-><init>(Lilt;Lihs;Lihg;)V
 
-    .line 20
     iget-object v0, v6, Lcrz;->a:Liii;
 
     invoke-interface {v0}, Liii;->a()V
 
-    .line 21
     new-instance v0, Lcsg;
 
-    .line 22
     invoke-static {v4}, Lihg;->a(Lihs;)Lihg;
 
     move-result-object v3
@@ -133,12 +109,10 @@
 
     invoke-direct/range {v0 .. v5}, Lcsg;-><init>(Lilr;Lilt;Lihg;Lihs;Lgxw;)V
 
-    .line 23
     iget-object v1, v6, Lcrz;->a:Liii;
 
     invoke-interface {v1}, Liii;->a()V
 
-    .line 26
     iget-object v1, p0, Lcvh;->b:Liid;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -199,6 +173,5 @@
 
     invoke-interface {v1, v2}, Liid;->d(Ljava/lang/String;)V
 
-    .line 27
     return-object v0
 .end method

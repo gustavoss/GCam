@@ -25,15 +25,11 @@
 .method public final run()V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Ldvz;->a:Lcom/google/android/apps/camera/legacy/app/refocus/ViewerActivity;
 
-    .line 2
     iget-object v0, v0, Lcom/google/android/apps/camera/legacy/app/refocus/ViewerActivity;->q:Lgcy;
 
     invoke-interface {v0}, Lgcy;->b()V
 
-    .line 3
     return-void
 .end method

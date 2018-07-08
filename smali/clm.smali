@@ -14,8 +14,6 @@
 .method constructor <init>(Lclk;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lclm;->a:Lclk;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,19 +26,13 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lclm;->a:Lclk;
 
-    .line 3
     iget-object v0, v0, Lclk;->a:Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/FilmstripView;
 
-    .line 4
     iget-object v0, v0, Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/FilmstripView;->k:Lcos;
 
-    .line 5
     invoke-interface {v0}, Lcmr;->b()Z
 
-    .line 6
     return-void
 .end method

@@ -37,8 +37,6 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lggb;->a:Lgga;
 
     iget-object v1, p0, Lggb;->b:Landroid/net/Uri;
@@ -47,11 +45,9 @@
 
     iget-object v3, p0, Lggb;->d:Lepa;
 
-    .line 2
     iget-object v0, v0, Lgga;->s:Lgiy;
 
     invoke-virtual {v0, v1, v2, v3}, Lgiy;->a(Landroid/net/Uri;Lgho;Lepa;)V
 
-    .line 3
     return-void
 .end method

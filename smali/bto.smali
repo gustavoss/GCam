@@ -19,8 +19,6 @@
 .method public constructor <init>(Liid;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 2
     iput-object p1, p0, Lbto;->a:Liid;
 
     iput-object p2, p0, Lbto;->b:Ljava/lang/String;
@@ -37,8 +35,6 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -49,29 +45,23 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lbto;->a:Liid;
 
     iget-object v1, p0, Lbto;->b:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Liid;->d(Ljava/lang/String;)V
 
-    .line 4
     return-void
 .end method
 
 .method public final a(Ljava/lang/Throwable;)V
     .locals 2
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lbto;->a:Liid;
 
     iget-object v1, p0, Lbto;->c:Ljava/lang/String;
 
     invoke-interface {v0, v1, p1}, Liid;->c(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 6
     return-void
 .end method

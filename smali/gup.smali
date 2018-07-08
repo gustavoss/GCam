@@ -33,7 +33,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -44,7 +43,6 @@
 
     const/4 v3, 0x0
 
-    .line 3
     new-instance v0, Lgup;
 
     const-string v1, "PHOTO_IDLE"
@@ -53,7 +51,6 @@
 
     sput-object v0, Lgup;->a:Lgup;
 
-    .line 4
     new-instance v0, Lgup;
 
     const-string v1, "PHOTO_PRESSED"
@@ -62,7 +59,6 @@
 
     sput-object v0, Lgup;->b:Lgup;
 
-    .line 5
     new-instance v0, Lgup;
 
     const-string v1, "PORTRAIT_IDLE"
@@ -71,7 +67,6 @@
 
     sput-object v0, Lgup;->c:Lgup;
 
-    .line 6
     new-instance v0, Lgup;
 
     const-string v1, "PORTRAIT_PRESSED"
@@ -80,7 +75,6 @@
 
     sput-object v0, Lgup;->d:Lgup;
 
-    .line 7
     new-instance v0, Lgup;
 
     const-string v1, "PHOTO_BURST"
@@ -89,7 +83,6 @@
 
     sput-object v0, Lgup;->e:Lgup;
 
-    .line 8
     new-instance v0, Lgup;
 
     const-string v1, "VIDEO_IDLE"
@@ -100,7 +93,6 @@
 
     sput-object v0, Lgup;->f:Lgup;
 
-    .line 9
     new-instance v0, Lgup;
 
     const-string v1, "CANCEL"
@@ -111,7 +103,6 @@
 
     sput-object v0, Lgup;->g:Lgup;
 
-    .line 10
     new-instance v0, Lgup;
 
     const-string v1, "CONFIRM_YES_TRANSIENT"
@@ -122,7 +113,6 @@
 
     sput-object v0, Lgup;->h:Lgup;
 
-    .line 11
     new-instance v0, Lgup;
 
     const-string v1, "CONFIRM_DISABLED"
@@ -133,7 +123,6 @@
 
     sput-object v0, Lgup;->i:Lgup;
 
-    .line 12
     new-instance v0, Lgup;
 
     const-string v1, "CONFIRM_ENABLED"
@@ -144,7 +133,6 @@
 
     sput-object v0, Lgup;->j:Lgup;
 
-    .line 13
     new-instance v0, Lgup;
 
     const-string v1, "VIDEO_RECORDING"
@@ -155,7 +143,6 @@
 
     sput-object v0, Lgup;->k:Lgup;
 
-    .line 14
     const/16 v0, 0xb
 
     new-array v0, v0, [Lgup;
@@ -224,8 +211,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -234,8 +219,6 @@
 .method public static values()[Lgup;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lgup;->l:[Lgup;
 
     invoke-virtual {v0}, [Lgup;->clone()Ljava/lang/Object;

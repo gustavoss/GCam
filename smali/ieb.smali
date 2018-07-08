@@ -16,26 +16,20 @@
 .method public constructor <init>(Lida;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lieb;->a:Lida;
 
-    .line 3
     new-instance v0, Liec;
 
     invoke-direct {v0, p0, p1}, Liec;-><init>(Lieb;Lida;)V
 
-    .line 4
     invoke-static {v0}, Lidb;->b(Lida;)Lida;
 
     move-result-object v0
 
     iput-object v0, p0, Lieb;->b:Lida;
 
-    .line 5
     return-void
 .end method
 
@@ -44,8 +38,6 @@
 .method public final a(Lihw;Ljava/util/concurrent/Executor;)Lihr;
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lieb;->b:Lida;
 
     invoke-interface {v0, p1, p2}, Lida;->a(Lihw;Ljava/util/concurrent/Executor;)Lihr;
@@ -61,8 +53,6 @@
 .method public final c()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lieb;->b:Lida;
 
     invoke-interface {v0}, Lida;->c()Ljava/lang/Object;

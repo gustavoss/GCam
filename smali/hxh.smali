@@ -30,8 +30,6 @@
 .method public final a(Lhxd;)V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lhxh;->a:Ljava/lang/Object;
 
     monitor-enter v1
@@ -109,7 +107,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 2
     iget-object v1, v0, Lhxg;->b:Ljava/lang/Object;
 
     monitor-enter v1

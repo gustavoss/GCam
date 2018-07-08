@@ -16,8 +16,6 @@
 .method public constructor <init>(Lkw;Landroid/graphics/Typeface;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lev;->b:Lkw;
 
     iput-object p2, p0, Lev;->a:Landroid/graphics/Typeface;
@@ -32,14 +30,11 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lev;->b:Lkw;
 
     iget-object v1, p0, Lev;->a:Landroid/graphics/Typeface;
 
     invoke-virtual {v0, v1}, Lkw;->a(Landroid/graphics/Typeface;)V
 
-    .line 3
     return-void
 .end method

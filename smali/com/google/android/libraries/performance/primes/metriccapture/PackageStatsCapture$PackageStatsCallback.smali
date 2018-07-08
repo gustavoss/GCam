@@ -13,11 +13,8 @@
 .method constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Landroid/content/pm/IPackageStatsObserver$Stub;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/Semaphore;
 
     const/4 v1, 0x1
@@ -34,13 +31,10 @@
 .method public final onGetStatsCompleted(Landroid/content/pm/PackageStats;Z)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 3
     if-eqz p2, :cond_0
 
-    .line 4
     const-string v0, "PackageStatsCapture"
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -77,24 +71,19 @@
 
     new-array v2, v4, [Ljava/lang/Object;
 
-    .line 5
     const/4 v3, 0x3
 
     invoke-static {v3, v0, v1, v2}, Litc;->a(ILjava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 6
     iput-object p1, p0, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsCallback;->b:Landroid/content/pm/PackageStats;
 
-    .line 9
     :goto_0
     iget-object v0, p0, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsCallback;->a:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 10
     return-void
 
-    .line 7
     :cond_0
     const-string v0, "PackageStatsCapture"
 
@@ -102,7 +91,6 @@
 
     new-array v2, v4, [Ljava/lang/Object;
 
-    .line 8
     const/4 v3, 0x5
 
     invoke-static {v3, v0, v1, v2}, Litc;->a(ILjava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V

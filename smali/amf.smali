@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,17 +20,14 @@
 .method public final a(Landroid/content/Context;Lagw;II)Lagw;
     .locals 3
 
-    .prologue
     const/high16 v2, -0x80000000
 
-    .line 2
     invoke-static {p3, p4}, Lary;->a(II)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const/16 v1, 0x80
@@ -75,30 +70,25 @@
 
     throw v0
 
-    .line 4
     :cond_0
     invoke-static {p1}, Lacj;->a(Landroid/content/Context;)Lacj;
 
     move-result-object v0
 
-    .line 5
     iget-object v1, v0, Lacj;->a:Lahf;
 
-    .line 7
     invoke-interface {p2}, Lagw;->b()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/graphics/Bitmap;
 
-    .line 8
     if-ne p3, v2, :cond_1
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p3
 
-    .line 9
     :cond_1
     if-ne p4, v2, :cond_2
 
@@ -106,24 +96,20 @@
 
     move-result p4
 
-    .line 10
     :cond_2
     invoke-virtual {p0, v1, v0, p3, p4}, Lamf;->a(Lahf;Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 11
     invoke-virtual {v0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 14
     :goto_0
     return-object p2
 
-    .line 13
     :cond_3
     invoke-static {v2, v1}, Lame;->a(Landroid/graphics/Bitmap;Lahf;)Lame;
 

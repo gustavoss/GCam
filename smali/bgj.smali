@@ -54,8 +54,6 @@
 .method constructor <init>(Lbgh;Lkfk;Ligc;Lbhn;Lbhm;Lbhp;Landroid/view/Surface;Lfea;Licm;Licm;Lida;Lieh;Lida;Lida;Licm;Lkhp;Lbhg;Lida;Lida;Lida;Lihw;Lfhv;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbgj;->u:Lbgh;
 
     iput-object p2, p0, Lbgj;->a:Lkfk;
@@ -124,104 +122,79 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 26
 
-    .prologue
-    .line 6
     move-object/from16 v20, p1
 
     check-cast v20, Lbhe;
 
-    .line 7
     if-nez v20, :cond_0
 
-    .line 8
     sget-object v2, Lbgh;->a:Ljava/lang/String;
 
-    .line 9
     const-string v3, "Preview-starting task is failed."
 
     invoke-static {v2, v3}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lbgj;->a:Lkfk;
 
-    .line 11
     sget-object v3, Ljrk;->a:Ljrk;
 
-    .line 12
     invoke-virtual {v2, v3}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 80
     :goto_0
     return-void
 
-    .line 14
     :cond_0
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lbgj;->u:Lbgh;
 
-    .line 15
     iget-object v0, v2, Lbgh;->m:Ljava/lang/Object;
 
     move-object/from16 v24, v0
 
-    .line 16
     monitor-enter v24
 
-    .line 17
     :try_start_0
     sget-object v2, Lbgh;->a:Ljava/lang/String;
 
-    .line 18
     const-string v3, "Preview-starting task is done successfully."
 
     invoke-static {v2, v3}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 19
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lbgj;->u:Lbgh;
 
-    .line 20
     iget-boolean v2, v2, Lbgh;->o:Z
 
-    .line 21
     if-eqz v2, :cond_1
 
-    .line 22
     sget-object v2, Lbgh;->a:Ljava/lang/String;
 
-    .line 23
     const-string v3, "CamcorderDevice has been closed."
 
     invoke-static {v2, v3}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 24
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lbgj;->b:Ligc;
 
     invoke-virtual {v2}, Ligc;->close()V
 
-    .line 25
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lbgj;->a:Lkfk;
 
-    .line 26
     sget-object v3, Ljrk;->a:Ljrk;
 
-    .line 27
     invoke-virtual {v2, v3}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 28
     monitor-exit v24
 
     goto :goto_0
 
-    .line 80
     :catchall_0
     move-exception v2
 
@@ -231,17 +204,14 @@
 
     throw v2
 
-    .line 29
     :cond_1
     :try_start_1
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lbgj;->u:Lbgh;
 
-    .line 30
     iget-boolean v2, v2, Lbgh;->o:Z
 
-    .line 31
     if-nez v2, :cond_2
 
     const/4 v2, 0x1
@@ -249,21 +219,18 @@
     :goto_1
     invoke-static {v2}, Ljiy;->b(Z)V
 
-    .line 32
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lbgj;->b:Ligc;
 
     invoke-static {v2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 33
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lbgj;->c:Lbhn;
 
     invoke-static {v2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 34
     new-instance v17, Lbhx;
 
     move-object/from16 v0, p0
@@ -278,10 +245,8 @@
 
     iget-object v4, v0, Lbgj;->u:Lbgh;
 
-    .line 35
     iget-object v4, v4, Lbgh;->e:Libi;
 
-    .line 36
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lbgj;->f:Landroid/view/Surface;
@@ -290,12 +255,10 @@
 
     invoke-direct {v0, v2, v3, v4, v5}, Lbhx;-><init>(Lbhm;Lbhp;Libi;Landroid/view/Surface;)V
 
-    .line 37
     new-instance v7, Lfda;
 
     invoke-direct {v7}, Lfda;-><init>()V
 
-    .line 38
     new-instance v2, Lbgs;
 
     move-object/from16 v0, p0
@@ -310,10 +273,8 @@
 
     iget-object v5, v0, Lbgj;->u:Lbgh;
 
-    .line 39
     iget-object v5, v5, Lbgh;->e:Libi;
 
-    .line 40
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lbgj;->g:Lfea;
@@ -332,7 +293,6 @@
 
     invoke-direct/range {v2 .. v10}, Lbgs;-><init>(Lbhm;Lbhp;Libi;Lfea;Lfda;Lihw;Lihw;Lida;)V
 
-    .line 41
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lbgj;->k:Lieh;
@@ -343,14 +303,12 @@
 
     if-eqz v3, :cond_3
 
-    .line 42
     new-instance v6, Lica;
 
     const-string v3, "CamcorderEx"
 
     const/4 v4, 0x1
 
-    .line 43
     invoke-static {v3, v4}, Lhxj;->a(Ljava/lang/String;I)Ljava/util/concurrent/ScheduledExecutorService;
 
     move-result-object v3
@@ -361,17 +319,14 @@
 
     invoke-direct {v6, v3, v4, v5, v7}, Lica;-><init>(Ljava/util/concurrent/ScheduledExecutorService;JLjava/util/concurrent/TimeUnit;)V
 
-    .line 44
     new-instance v3, Lbhz;
 
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lbgj;->u:Lbgh;
 
-    .line 45
     iget-object v5, v4, Lbgh;->k:Lfbq;
 
-    .line 46
     move-object/from16 v0, p0
 
     iget-object v7, v0, Lbgj;->h:Licm;
@@ -396,7 +351,6 @@
 
     iget-object v4, v0, Lbgj;->n:Lkhp;
 
-    .line 47
     invoke-interface {v4}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v12
@@ -409,19 +363,15 @@
 
     move-object v4, v3
 
-    .line 52
     :goto_2
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lbgj;->u:Lbgh;
 
-    .line 53
     iget-object v2, v2, Lbgh;->l:Liii;
 
-    .line 54
     sget-object v3, Lbgh;->a:Ljava/lang/String;
 
-    .line 55
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
@@ -434,7 +384,6 @@
 
     invoke-interface {v2, v3}, Liii;->a(Ljava/lang/String;)V
 
-    .line 56
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lbgj;->u:Lbgh;
@@ -451,10 +400,8 @@
 
     iget-object v5, v0, Lbgj;->u:Lbgh;
 
-    .line 57
     iget-object v5, v5, Lbgh;->b:Liez;
 
-    .line 58
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lbgj;->o:Lbhg;
@@ -463,26 +410,20 @@
 
     iget-object v7, v0, Lbgj;->u:Lbgh;
 
-    .line 59
     iget-object v7, v7, Lbgh;->c:Ljava/util/concurrent/Executor;
 
-    .line 60
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lbgj;->u:Lbgh;
 
-    .line 61
     iget-object v8, v8, Lbgh;->d:Lgoa;
 
-    .line 62
     move-object/from16 v0, p0
 
     iget-object v9, v0, Lbgj;->u:Lbgh;
 
-    .line 63
     iget-object v9, v9, Lbgh;->f:Lige;
 
-    .line 64
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lbgj;->p:Lida;
@@ -495,18 +436,14 @@
 
     iget-object v12, v0, Lbgj;->u:Lbgh;
 
-    .line 65
     iget-object v12, v12, Lbgh;->g:Lida;
 
-    .line 66
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lbgj;->u:Lbgh;
 
-    .line 67
     iget-object v13, v13, Lbgh;->h:Lida;
 
-    .line 68
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lbgj;->r:Lida;
@@ -515,24 +452,20 @@
 
     iget-object v15, v0, Lbgj;->u:Lbgh;
 
-    .line 69
     iget-object v15, v15, Lbgh;->i:Ljrw;
 
-    .line 70
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lbgj;->u:Lbgh;
 
     move-object/from16 v16, v0
 
-    .line 71
     move-object/from16 v0, v16
 
     iget-object v0, v0, Lbgh;->j:Lbht;
 
     move-object/from16 v16, v0
 
-    .line 72
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lbgj;->f:Landroid/view/Surface;
@@ -565,23 +498,18 @@
 
     invoke-direct/range {v2 .. v23}, Lbei;-><init>(Lbdv;Lbgz;Liez;Lbhg;Ljava/util/concurrent/Executor;Lgoa;Lige;Lida;Lida;Lida;Lida;Lida;Ljrw;Lbht;Lbhx;Landroid/view/Surface;Lihw;Lbhe;Lbhn;Ligc;Lfhv;)V
 
-    .line 73
     move-object/from16 v0, v25
 
     iput-object v2, v0, Lbgh;->n:Lbdu;
 
-    .line 74
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lbgj;->u:Lbgh;
 
-    .line 75
     iget-object v2, v2, Lbgh;->l:Liii;
 
-    .line 76
     invoke-interface {v2}, Liii;->a()V
 
-    .line 77
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lbgj;->a:Lkfk;
@@ -590,28 +518,23 @@
 
     iget-object v3, v0, Lbgj;->u:Lbgh;
 
-    .line 78
     iget-object v3, v3, Lbgh;->n:Lbdu;
 
-    .line 79
     invoke-static {v3}, Ljrw;->b(Ljava/lang/Object;)Ljrw;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 80
     monitor-exit v24
 
     goto/16 :goto_0
 
-    .line 31
     :cond_2
     const/4 v2, 0x0
 
     goto/16 :goto_1
 
-    .line 49
     :cond_3
     new-instance v3, Lica;
 
@@ -619,7 +542,6 @@
 
     const/4 v5, 0x1
 
-    .line 50
     invoke-static {v4, v5}, Lhxj;->a(Ljava/lang/String;I)Ljava/util/concurrent/ScheduledExecutorService;
 
     move-result-object v4
@@ -630,7 +552,6 @@
 
     invoke-direct {v3, v4, v6, v7, v5}, Lica;-><init>(Ljava/util/concurrent/ScheduledExecutorService;JLjava/util/concurrent/TimeUnit;)V
 
-    .line 51
     new-instance v4, Lbha;
 
     move-object/from16 v0, p0
@@ -651,11 +572,8 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 4
 
-    .prologue
-    .line 2
     sget-object v0, Lbgh;->a:Ljava/lang/String;
 
-    .line 3
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -690,11 +608,9 @@
 
     invoke-static {v0, v1}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lbgj;->a:Lkfk;
 
     invoke-virtual {v0, p1}, Lkcy;->a(Ljava/lang/Throwable;)Z
 
-    .line 5
     return-void
 .end method

@@ -7,8 +7,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 31
     const-string v0, "IntentHelper"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -19,8 +17,6 @@
 .method public static a(Landroid/net/Uri;)Landroid/content/Intent;
     .locals 2
 
-    .prologue
-    .line 1
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VIEW"
@@ -39,8 +35,6 @@
 .method public static a(Landroid/content/Intent;)Z
     .locals 1
 
-    .prologue
-    .line 17
     const-string v0, "android.intent.extra.USE_FRONT_CAMERA"
 
     invoke-virtual {p0, v0}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
@@ -72,29 +66,23 @@
 .method public static a(Laws;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p0}, Laws;->a()Landroid/content/Intent;
 
     move-result-object v1
 
-    .line 3
     if-nez v1, :cond_1
 
-    .line 6
     :cond_0
     :goto_0
     return v0
 
-    .line 5
     :cond_1
     invoke-virtual {v1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 6
     const-string v2, "android.media.action.VIDEO_CAPTURE"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -118,8 +106,6 @@
 .method private static a(Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 28
     const-string v0, "android.media.action.IMAGE_CAPTURE"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -130,7 +116,6 @@
 
     const-string v0, "android.media.action.IMAGE_CAPTURE_SECURE"
 
-    .line 29
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -140,25 +125,20 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 30
     :goto_0
     return v0
 
-    .line 29
     :cond_1
     const/4 v0, 0x0
 
-    .line 30
     goto :goto_0
 .end method
 
 .method public static b(Landroid/content/Intent;)Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 18
     const-string v1, "android.intent.extra.USE_FRONT_CAMERA"
 
     invoke-virtual {p0, v1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
@@ -169,7 +149,6 @@
 
     const-string v1, "android.intent.extra.FRONT_CAMERA"
 
-    .line 19
     invoke-virtual {p0, v1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v1
@@ -179,7 +158,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 20
     :cond_1
     return v0
 .end method
@@ -187,38 +165,31 @@
 .method public static b(Laws;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 7
     invoke-virtual {p0}, Laws;->a()Landroid/content/Intent;
 
     move-result-object v3
 
-    .line 8
     if-nez v3, :cond_1
 
-    .line 16
     :cond_0
     :goto_0
     return v0
 
-    .line 10
     :cond_1
     invoke-virtual {v3}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 11
     invoke-static {v2}, Lawm;->a(Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_3
 
-    .line 12
     const-string v4, "android.media.action.STILL_IMAGE_CAMERA"
 
     invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -229,7 +200,6 @@
 
     const-string v4, "android.media.action.STILL_IMAGE_CAMERA_SECURE"
 
-    .line 13
     invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -239,14 +209,12 @@
     :cond_2
     move v2, v1
 
-    .line 14
     :goto_1
     if-eqz v2, :cond_0
 
     :cond_3
     const-string v2, "android.intent.extra.TIMER_DURATION_SECONDS"
 
-    .line 15
     invoke-virtual {v3, v2}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result v2
@@ -260,15 +228,12 @@
     :cond_4
     move v2, v0
 
-    .line 13
     goto :goto_1
 .end method
 
 .method public static c(Landroid/content/Intent;)Ljrw;
     .locals 1
 
-    .prologue
-    .line 21
     const-string v0, "android.intent.extra.STILL_IMAGE_MODE"
 
     invoke-virtual {p0, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -285,12 +250,10 @@
 .method public static d(Landroid/content/Intent;)I
     .locals 4
 
-    .prologue
     const/16 v1, 0x1e
 
     const/4 v0, 0x3
 
-    .line 22
     const-string v2, "android.intent.extra.TIMER_DURATION_SECONDS"
 
     const/4 v3, 0x0
@@ -299,25 +262,20 @@
 
     move-result v2
 
-    .line 23
     if-ge v2, v0, :cond_0
 
-    .line 27
     :goto_0
     return v0
 
-    .line 25
     :cond_0
     if-le v2, v1, :cond_1
 
     move v0, v1
 
-    .line 26
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 27
     goto :goto_0
 .end method

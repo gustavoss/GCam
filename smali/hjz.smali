@@ -25,21 +25,16 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhjz;->a:Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;
 
-    .line 2
     iget-object v1, v0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->g:Lcom/google/android/apps/refocus/processing/EditingFinishedListener;
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v0, v0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->g:Lcom/google/android/apps/refocus/processing/EditingFinishedListener;
 
     invoke-interface {v0}, Lcom/google/android/apps/refocus/processing/EditingFinishedListener;->onDone()V
 
-    .line 4
     :cond_0
     return-void
 .end method

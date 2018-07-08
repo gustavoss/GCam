@@ -40,8 +40,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 269
     const-string v0, "CameraPreview"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -50,7 +48,6 @@
 
     sput-object v0, Ldwg;->a:Ljava/lang/String;
 
-    .line 270
     const/4 v0, 0x7
 
     new-array v0, v0, [Labj;
@@ -99,7 +96,6 @@
 
     sput-object v0, Ldwg;->j:[Labj;
 
-    .line 271
     new-instance v0, Ldwh;
 
     invoke-direct {v0}, Ldwh;-><init>()V
@@ -112,70 +108,58 @@
 .method public constructor <init>(Lbza;Landroid/os/Handler;Laao;I)V
     .locals 30
 
-    .prologue
-    .line 1
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v4, v0, Ldwg;->b:Laao;
 
-    .line 3
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v4, v0, Ldwg;->c:Labo;
 
-    .line 4
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v4, v0, Ldwg;->d:Z
 
-    .line 5
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v4, v0, Ldwg;->e:Ldwj;
 
-    .line 6
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v4, v0, Ldwg;->k:Lcom/google/android/apps/refocus/image/ColorImage;
 
-    .line 7
     move-object/from16 v0, p1
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Ldwg;->g:Lbza;
 
-    .line 8
     invoke-interface/range {p1 .. p1}, Lbza;->a()Landroid/content/Context;
 
-    .line 9
     move-object/from16 v0, p2
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Ldwg;->h:Landroid/os/Handler;
 
-    .line 10
     move-object/from16 v0, p3
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Ldwg;->b:Laao;
 
-    .line 11
     invoke-virtual/range {p3 .. p3}, Laao;->g()Labv;
 
     move-result-object v4
@@ -184,7 +168,6 @@
 
     iput-object v4, v0, Ldwg;->f:Labv;
 
-    .line 12
     invoke-virtual/range {p3 .. p3}, Laao;->c()Labg;
 
     move-result-object v4
@@ -193,21 +176,18 @@
 
     iput-object v4, v0, Ldwg;->l:Labg;
 
-    .line 14
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ldwg;->b:Laao;
 
     if-eqz v4, :cond_11
 
-    .line 15
     sget-object v4, Ldwg;->a:Ljava/lang/String;
 
     const-string v5, "Configuring camera..."
 
     invoke-static {v4, v5}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 16
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ldwg;->b:Laao;
@@ -220,7 +200,6 @@
 
     iput-object v4, v0, Ldwg;->c:Labo;
 
-    .line 17
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ldwg;->l:Labg;
@@ -229,17 +208,14 @@
 
     iget-object v14, v0, Ldwg;->f:Labv;
 
-    .line 18
     invoke-virtual {v4}, Labg;->c()Ljava/util/List;
 
     move-result-object v15
 
-    .line 19
     invoke-virtual {v4}, Labg;->a()Ljava/util/List;
 
     move-result-object v8
 
-    .line 20
     sget-object v5, Ldwg;->a:Ljava/lang/String;
 
     const-string v6, "preview formats:\n"
@@ -265,7 +241,6 @@
     :goto_0
     invoke-static {v5, v4}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 21
     sget-object v5, Ldwg;->a:Ljava/lang/String;
 
     const-string v6, "picture formats:\n"
@@ -291,17 +266,14 @@
     :goto_1
     invoke-static {v5, v4}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 22
     sget-object v4, Ldwg;->m:Ljava/util/Comparator;
 
     invoke-static {v15, v4}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 23
     sget-object v4, Ldwg;->m:Ljava/util/Comparator;
 
     invoke-static {v8, v4}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 24
     new-instance v16, Lhiq;
 
     new-instance v4, Lhir;
@@ -314,7 +286,6 @@
 
     invoke-direct {v0, v4}, Lhiq;-><init>(Lhir;)V
 
-    .line 26
     move-object/from16 v0, v16
 
     iget-object v4, v0, Lhiq;->a:Lhir;
@@ -327,7 +298,6 @@
 
     if-gez v4, :cond_3
 
-    .line 27
     const/4 v4, 0x0
 
     invoke-interface {v8, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -336,12 +306,10 @@
 
     check-cast v4, Lacd;
 
-    .line 28
     iget-object v4, v4, Lacd;->a:Landroid/graphics/Point;
 
     iget v4, v4, Landroid/graphics/Point;->x:I
 
-    .line 29
     int-to-double v6, v4
 
     const/4 v4, 0x0
@@ -352,29 +320,23 @@
 
     check-cast v4, Lacd;
 
-    .line 30
     iget-object v4, v4, Lacd;->a:Landroid/graphics/Point;
 
     iget v4, v4, Landroid/graphics/Point;->y:I
 
-    .line 31
     int-to-double v4, v4
 
     div-double v4, v6, v4
 
     move-wide v6, v4
 
-    .line 33
     :goto_2
     const/4 v13, 0x0
 
-    .line 34
     const/4 v12, 0x0
 
-    .line 35
     const-wide v10, 0x7fefffffffffffffL    # Double.MAX_VALUE
 
-    .line 36
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v17
@@ -394,27 +356,22 @@
 
     check-cast v5, Lacd;
 
-    .line 39
     iget-object v4, v5, Lacd;->a:Landroid/graphics/Point;
 
     iget v4, v4, Landroid/graphics/Point;->x:I
 
-    .line 40
     int-to-double v8, v4
 
-    .line 41
     iget-object v4, v5, Lacd;->a:Landroid/graphics/Point;
 
     iget v4, v4, Landroid/graphics/Point;->y:I
 
-    .line 42
     int-to-double v0, v4
 
     move-wide/from16 v18, v0
 
     div-double v8, v8, v18
 
-    .line 43
     sub-double/2addr v8, v6
 
     invoke-static {v8, v9}, Ljava/lang/Math;->abs(D)D
@@ -429,16 +386,13 @@
 
     const-wide/high16 v8, 0x402c000000000000L    # 14.0
 
-    .line 44
     :goto_3
     const-wide/high16 v18, 0x4010000000000000L    # 4.0
 
-    .line 47
     iget-object v4, v5, Lacd;->a:Landroid/graphics/Point;
 
     iget v4, v4, Landroid/graphics/Point;->x:I
 
-    .line 49
     iget-object v0, v5, Lacd;->a:Landroid/graphics/Point;
 
     move-object/from16 v20, v0
@@ -449,7 +403,6 @@
 
     move/from16 v20, v0
 
-    .line 50
     mul-int v4, v4, v20
 
     int-to-double v0, v4
@@ -460,7 +413,6 @@
 
     div-double v20, v20, v22
 
-    .line 51
     move-object/from16 v0, v16
 
     iget-object v4, v0, Lhiq;->a:Lhir;
@@ -477,15 +429,12 @@
 
     mul-double v18, v18, v20
 
-    .line 52
     add-double v18, v18, v8
 
-    .line 54
     cmpl-double v4, v18, v10
 
     if-gtz v4, :cond_0
 
-    .line 55
     invoke-interface {v15}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v20
@@ -503,15 +452,12 @@
 
     check-cast v4, Lacd;
 
-    .line 59
     iget-object v8, v4, Lacd;->a:Landroid/graphics/Point;
 
     iget v8, v8, Landroid/graphics/Point;->x:I
 
-    .line 60
     int-to-double v8, v8
 
-    .line 61
     iget-object v0, v4, Lacd;->a:Landroid/graphics/Point;
 
     move-object/from16 v21, v0
@@ -522,7 +468,6 @@
 
     move/from16 v21, v0
 
-    .line 62
     move/from16 v0, v21
 
     int-to-double v0, v0
@@ -531,7 +476,6 @@
 
     div-double v8, v8, v22
 
-    .line 64
     iget-object v0, v5, Lacd;->a:Landroid/graphics/Point;
 
     move-object/from16 v21, v0
@@ -542,14 +486,12 @@
 
     move/from16 v21, v0
 
-    .line 65
     move/from16 v0, v21
 
     int-to-double v0, v0
 
     move-wide/from16 v22, v0
 
-    .line 66
     iget-object v0, v5, Lacd;->a:Landroid/graphics/Point;
 
     move-object/from16 v21, v0
@@ -560,7 +502,6 @@
 
     move/from16 v21, v0
 
-    .line 67
     move/from16 v0, v21
 
     int-to-double v0, v0
@@ -569,7 +510,6 @@
 
     div-double v22, v22, v24
 
-    .line 68
     sub-double v8, v8, v22
 
     invoke-static {v8, v9}, Ljava/lang/Math;->abs(D)D
@@ -584,18 +524,14 @@
 
     const/4 v8, 0x1
 
-    .line 69
     :goto_5
     if-nez v8, :cond_6
 
-    .line 70
     const-wide v8, 0x7fefffffffffffffL    # Double.MAX_VALUE
 
-    .line 102
     :goto_6
     add-double v8, v8, v18
 
-    .line 103
     cmpg-double v21, v8, v10
 
     if-gez v21, :cond_17
@@ -609,10 +545,8 @@
 
     move-wide v10, v8
 
-    .line 107
     goto :goto_4
 
-    .line 20
     :cond_1
     new-instance v4, Ljava/lang/String;
 
@@ -620,7 +554,6 @@
 
     goto/16 :goto_0
 
-    .line 21
     :cond_2
     new-instance v4, Ljava/lang/String;
 
@@ -628,7 +561,6 @@
 
     goto/16 :goto_1
 
-    .line 32
     :cond_3
     move-object/from16 v0, v16
 
@@ -640,30 +572,25 @@
 
     goto/16 :goto_2
 
-    .line 43
     :cond_4
     const-wide/16 v8, 0x0
 
     goto/16 :goto_3
 
-    .line 68
     :cond_5
     const/4 v8, 0x0
 
     goto :goto_5
 
-    .line 73
     :cond_6
     iget-object v8, v4, Lacd;->a:Landroid/graphics/Point;
 
     iget v8, v8, Landroid/graphics/Point;->x:I
 
-    .line 75
     iget-object v9, v4, Lacd;->a:Landroid/graphics/Point;
 
     iget v9, v9, Landroid/graphics/Point;->y:I
 
-    .line 76
     invoke-static {v8, v9}, Ljava/lang/Math;->max(II)I
 
     move-result v8
@@ -684,7 +611,6 @@
 
     div-double v8, v8, v22
 
-    .line 77
     invoke-static {v8, v9}, Ljava/lang/Math;->log(D)D
 
     move-result-wide v8
@@ -711,10 +637,8 @@
 
     double-to-int v8, v8
 
-    .line 78
     new-instance v9, Lacd;
 
-    .line 79
     iget-object v0, v4, Lacd;->a:Landroid/graphics/Point;
 
     move-object/from16 v21, v0
@@ -725,10 +649,8 @@
 
     move/from16 v21, v0
 
-    .line 80
     shr-int v21, v21, v8
 
-    .line 81
     iget-object v0, v4, Lacd;->a:Landroid/graphics/Point;
 
     move-object/from16 v22, v0
@@ -739,19 +661,16 @@
 
     move/from16 v22, v0
 
-    .line 82
     shr-int v8, v22, v8
 
     move/from16 v0, v21
 
     invoke-direct {v9, v0, v8}, Lacd;-><init>(II)V
 
-    .line 85
     iget-object v8, v5, Lacd;->a:Landroid/graphics/Point;
 
     iget v8, v8, Landroid/graphics/Point;->x:I
 
-    .line 87
     iget-object v0, v5, Lacd;->a:Landroid/graphics/Point;
 
     move-object/from16 v21, v0
@@ -762,10 +681,8 @@
 
     move/from16 v21, v0
 
-    .line 88
     mul-int v8, v8, v21
 
-    .line 89
     iget-object v0, v9, Lacd;->a:Landroid/graphics/Point;
 
     move-object/from16 v21, v0
@@ -776,7 +693,6 @@
 
     move/from16 v21, v0
 
-    .line 91
     iget-object v0, v9, Lacd;->a:Landroid/graphics/Point;
 
     move-object/from16 v22, v0
@@ -787,7 +703,6 @@
 
     move/from16 v22, v0
 
-    .line 92
     mul-int v21, v21, v22
 
     div-int v8, v8, v21
@@ -796,17 +711,14 @@
 
     move-wide/from16 v22, v0
 
-    .line 94
     iget-object v8, v4, Lacd;->a:Landroid/graphics/Point;
 
     iget v8, v8, Landroid/graphics/Point;->x:I
 
-    .line 96
     iget-object v9, v9, Lacd;->a:Landroid/graphics/Point;
 
     iget v9, v9, Landroid/graphics/Point;->x:I
 
-    .line 97
     div-int/2addr v8, v9
 
     int-to-double v8, v8
@@ -823,7 +735,6 @@
 
     div-double v8, v8, v24
 
-    .line 98
     const-wide/16 v24, 0x0
 
     move-object/from16 v0, v16
@@ -840,7 +751,6 @@
 
     sub-double v26, v26, v22
 
-    .line 99
     invoke-static/range {v24 .. v27}, Ljava/lang/Math;->max(DD)D
 
     move-result-wide v24
@@ -861,7 +771,6 @@
 
     sub-double v22, v22, v28
 
-    .line 100
     move-wide/from16 v0, v26
 
     move-wide/from16 v2, v22
@@ -872,33 +781,27 @@
 
     add-double v22, v22, v24
 
-    .line 101
     add-double v8, v8, v22
 
     goto/16 :goto_6
 
-    .line 109
     :cond_7
     if-eqz v13, :cond_8
 
     if-nez v12, :cond_b
 
-    .line 110
     :cond_8
     const/4 v4, 0x0
 
-    .line 113
     :goto_8
     if-nez v4, :cond_c
 
-    .line 114
     sget-object v4, Ldwg;->a:Ljava/lang/String;
 
     const-string v5, "Could not find compatible preview and picture sizes!"
 
     invoke-static {v4, v5}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 133
     :goto_9
     move-object/from16 v0, p0
 
@@ -908,19 +811,16 @@
 
     iget-object v6, v0, Ldwg;->f:Labv;
 
-    .line 134
     invoke-virtual {v4}, Labg;->b()Ljava/util/List;
 
     move-result-object v7
 
-    .line 135
     const/4 v4, 0x2
 
     new-array v4, v4, [I
 
     fill-array-data v4, :array_0
 
-    .line 136
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
@@ -941,7 +841,6 @@
 
     check-cast v4, [I
 
-    .line 137
     const/4 v9, 0x0
 
     aget v9, v4, v9
@@ -958,7 +857,6 @@
 
     if-gt v9, v10, :cond_9
 
-    .line 138
     const/4 v9, 0x1
 
     aget v9, v4, v9
@@ -983,10 +881,8 @@
     :goto_b
     move-object v5, v4
 
-    .line 140
     goto :goto_a
 
-    .line 111
     :cond_b
     const/4 v4, 0x2
 
@@ -1002,7 +898,6 @@
 
     goto :goto_8
 
-    .line 116
     :cond_c
     sget-object v5, Ldwg;->a:Ljava/lang/String;
 
@@ -1030,29 +925,24 @@
 
     invoke-static {v5, v6}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 117
     sget-object v5, Ldwg;->a:Ljava/lang/String;
 
     const/4 v6, 0x0
 
     aget-object v6, v4, v6
 
-    .line 118
     iget-object v6, v6, Lacd;->a:Landroid/graphics/Point;
 
     iget v6, v6, Landroid/graphics/Point;->x:I
 
-    .line 119
     const/4 v7, 0x0
 
     aget-object v7, v4, v7
 
-    .line 120
     iget-object v7, v7, Lacd;->a:Landroid/graphics/Point;
 
     iget v7, v7, Landroid/graphics/Point;->y:I
 
-    .line 121
     const/16 v8, 0x2d
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -1085,29 +975,24 @@
 
     invoke-static {v5, v6}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 122
     sget-object v5, Ldwg;->a:Ljava/lang/String;
 
     const/4 v6, 0x1
 
     aget-object v6, v4, v6
 
-    .line 123
     iget-object v6, v6, Lacd;->a:Landroid/graphics/Point;
 
     iget v6, v6, Landroid/graphics/Point;->x:I
 
-    .line 124
     const/4 v7, 0x1
 
     aget-object v7, v4, v7
 
-    .line 125
     iget-object v7, v7, Lacd;->a:Landroid/graphics/Point;
 
     iget v7, v7, Landroid/graphics/Point;->y:I
 
-    .line 126
     const/16 v8, 0x2d
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -1140,43 +1025,36 @@
 
     invoke-static {v5, v6}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 127
     const/4 v5, 0x0
 
     aget-object v5, v4, v5
 
     invoke-virtual {v14, v5}, Labv;->a(Lacd;)Z
 
-    .line 128
     const/4 v5, 0x1
 
     aget-object v4, v4, v5
 
     invoke-virtual {v14, v4}, Labv;->b(Lacd;)Z
 
-    .line 129
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ldwg;->b:Laao;
 
-    .line 130
     invoke-virtual {v4}, Laao;->a()I
 
     move-result v4
 
     const/4 v5, 0x2
 
-    .line 131
     invoke-static {v4, v5}, Landroid/media/CameraProfile;->getJpegEncodingQualityParameter(II)I
 
     move-result v4
 
-    .line 132
     invoke-virtual {v14, v4}, Labv;->a(I)V
 
     goto/16 :goto_9
 
-    .line 141
     :cond_d
     const/4 v4, 0x0
 
@@ -1184,7 +1062,6 @@
 
     if-gez v4, :cond_15
 
-    .line 142
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v4
@@ -1197,7 +1074,6 @@
 
     check-cast v4, [I
 
-    .line 143
     :goto_c
     const/4 v5, 0x0
 
@@ -1209,7 +1085,6 @@
 
     invoke-virtual {v6, v5, v7}, Labv;->a(II)V
 
-    .line 144
     sget-object v5, Ldwg;->a:Ljava/lang/String;
 
     const/4 v6, 0x0
@@ -1252,14 +1127,12 @@
 
     invoke-static {v5, v4}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 145
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ldwg;->l:Labg;
 
     sget-object v5, Labm;->a:Labm;
 
-    .line 146
     if-eqz v5, :cond_12
 
     iget-object v4, v4, Labg;->k:Ljava/util/EnumSet;
@@ -1272,21 +1145,17 @@
 
     const/4 v4, 0x1
 
-    .line 147
     :goto_d
     if-eqz v4, :cond_e
 
-    .line 148
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ldwg;->f:Labv;
 
     sget-object v5, Labm;->a:Labm;
 
-    .line 149
     iput-object v5, v4, Labv;->s:Labm;
 
-    .line 150
     :cond_e
     move-object/from16 v0, p0
 
@@ -1300,23 +1169,19 @@
 
     if-eqz v4, :cond_f
 
-    .line 151
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ldwg;->f:Labv;
 
     sget-object v5, Labi;->c:Labi;
 
-    .line 152
     iput-object v5, v4, Labv;->p:Labi;
 
-    .line 153
     :cond_f
     move-object/from16 v0, p0
 
     iget-object v6, v0, Ldwg;->f:Labv;
 
-    .line 154
     sget-object v7, Ldwg;->j:[Labj;
 
     array-length v8, v7
@@ -1330,7 +1195,6 @@
 
     aget-object v4, v7, v5
 
-    .line 155
     move-object/from16 v0, p0
 
     iget-object v9, v0, Ldwg;->l:Labg;
@@ -1341,12 +1205,10 @@
 
     if-eqz v9, :cond_13
 
-    .line 165
     :cond_10
     :goto_f
     iput-object v4, v6, Labv;->q:Labj;
 
-    .line 166
     :try_start_0
     move-object/from16 v0, p0
 
@@ -1360,11 +1222,9 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 170
     :goto_10
     invoke-virtual/range {p0 .. p0}, Ldwg;->d()V
 
-    .line 171
     :cond_11
     const/4 v4, 0x0
 
@@ -1372,7 +1232,6 @@
 
     invoke-virtual {v0, v4}, Laao;->a(Z)V
 
-    .line 172
     new-instance v4, Ljava/lang/Object;
 
     invoke-direct {v4}, Ljava/lang/Object;-><init>()V
@@ -1381,16 +1240,13 @@
 
     iput-object v4, v0, Ldwg;->i:Ljava/lang/Object;
 
-    .line 173
     return-void
 
-    .line 146
     :cond_12
     const/4 v4, 0x0
 
     goto :goto_d
 
-    .line 157
     :cond_13
     add-int/lit8 v4, v5, 0x1
 
@@ -1398,23 +1254,19 @@
 
     goto :goto_e
 
-    .line 158
     :cond_14
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ldwg;->l:Labg;
 
-    .line 159
     new-instance v5, Ljava/util/HashSet;
 
     iget-object v4, v4, Labg;->j:Ljava/util/EnumSet;
 
     invoke-direct {v5, v4}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 161
     const/4 v4, 0x0
 
-    .line 162
     invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -1433,11 +1285,9 @@
 
     goto :goto_f
 
-    .line 168
     :catch_0
     move-exception v4
 
-    .line 169
     sget-object v5, Ldwg;->a:Ljava/lang/String;
 
     invoke-virtual {v4}, Ljava/lang/RuntimeException;->toString()Ljava/lang/String;
@@ -1467,7 +1317,6 @@
 
     goto/16 :goto_7
 
-    .line 135
     :array_0
     .array-data 4
         -0x1
@@ -1478,11 +1327,8 @@
 .method private static a(Ljava/util/List;)Ljava/lang/String;
     .locals 7
 
-    .prologue
-    .line 260
     const-string v0, ""
 
-    .line 261
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -1502,7 +1348,6 @@
 
     check-cast v0, Lacd;
 
-    .line 262
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -1515,12 +1360,10 @@
 
     const/4 v5, 0x0
 
-    .line 263
     iget-object v6, v0, Lacd;->a:Landroid/graphics/Point;
 
     iget v6, v6, Landroid/graphics/Point;->x:I
 
-    .line 264
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -1529,12 +1372,10 @@
 
     const/4 v5, 0x1
 
-    .line 265
     iget-object v0, v0, Lacd;->a:Landroid/graphics/Point;
 
     iget v0, v0, Landroid/graphics/Point;->y:I
 
-    .line 266
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -1562,10 +1403,8 @@
     :goto_1
     move-object v1, v0
 
-    .line 267
     goto :goto_0
 
-    .line 266
     :cond_0
     new-instance v0, Ljava/lang/String;
 
@@ -1573,7 +1412,6 @@
 
     goto :goto_1
 
-    .line 268
     :cond_1
     return-object v1
 .end method
@@ -1583,16 +1421,12 @@
 .method public final a()I
     .locals 6
 
-    .prologue
     const-wide/high16 v4, 0x4000000000000000L    # 2.0
 
-    .line 188
     iget-object v0, p0, Ldwg;->l:Labg;
 
-    .line 189
     iget v0, v0, Labg;->u:F
 
-    .line 190
     float-to-double v0, v0
 
     const-wide v2, 0x400921fb54442d18L    # Math.PI
@@ -1603,7 +1437,6 @@
 
     div-double/2addr v0, v2
 
-    .line 191
     const-wide/high16 v2, 0x4042000000000000L    # 36.0
 
     div-double/2addr v0, v4
@@ -1624,53 +1457,41 @@
 .method public final a(Laba;)V
     .locals 7
 
-    .prologue
-    .line 192
     iget-object v1, p0, Ldwg;->i:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 193
     :try_start_0
     iget-boolean v0, p0, Ldwg;->d:Z
 
     if-eqz v0, :cond_0
 
-    .line 194
     monitor-exit v1
 
-    .line 229
     :goto_0
     return-void
 
-    .line 195
     :cond_0
     iget-object v0, p0, Ldwg;->e:Ldwj;
 
     if-eqz v0, :cond_3
 
-    .line 198
     iget-object v0, p0, Ldwg;->f:Labv;
 
     invoke-virtual {v0}, Labv;->b()Lacd;
 
     move-result-object v2
 
-    .line 200
     iget-object v0, p0, Ldwg;->f:Labv;
 
-    .line 201
     iget v3, v0, Labv;->k:I
 
-    .line 203
     invoke-static {v3}, Landroid/graphics/ImageFormat;->getBitsPerPixel(I)I
 
     move-result v0
 
-    .line 204
     if-gtz v0, :cond_1
 
-    .line 205
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const/16 v2, 0x21
@@ -1697,7 +1518,6 @@
 
     throw v0
 
-    .line 229
     :catchall_0
     move-exception v0
 
@@ -1707,26 +1527,22 @@
 
     throw v0
 
-    .line 207
     :cond_1
     :try_start_1
     iget-object v4, v2, Lacd;->a:Landroid/graphics/Point;
 
     iget v4, v4, Landroid/graphics/Point;->y:I
 
-    .line 209
     iget-object v5, v2, Lacd;->a:Landroid/graphics/Point;
 
     iget v5, v5, Landroid/graphics/Point;->x:I
 
-    .line 210
     mul-int/2addr v4, v5
 
     mul-int/2addr v0, v4
 
     div-int/lit8 v4, v0, 0x8
 
-    .line 211
     const/4 v0, 0x0
 
     :goto_1
@@ -1734,34 +1550,27 @@
 
     if-ge v0, v5, :cond_2
 
-    .line 212
     new-array v5, v4, [B
 
-    .line 213
     iget-object v6, p0, Ldwg;->b:Laao;
 
     invoke-virtual {v6, v5}, Laao;->a([B)V
 
-    .line 214
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 215
     :cond_2
     new-instance v0, Lcom/google/android/apps/refocus/image/ColorImage;
 
-    .line 216
     iget-object v4, v2, Lacd;->a:Landroid/graphics/Point;
 
     iget v4, v4, Landroid/graphics/Point;->x:I
 
-    .line 218
     iget-object v2, v2, Lacd;->a:Landroid/graphics/Point;
 
     iget v2, v2, Landroid/graphics/Point;->y:I
 
-    .line 219
     invoke-static {v3}, Lcom/google/android/apps/refocus/image/ColorImage$Format;->fromImageFormat(I)I
 
     move-result v3
@@ -1772,42 +1581,35 @@
 
     iput-object v0, p0, Ldwg;->k:Lcom/google/android/apps/refocus/image/ColorImage;
 
-    .line 220
     iget-object v0, p0, Ldwg;->b:Laao;
 
     iget-object v2, p0, Ldwg;->h:Landroid/os/Handler;
 
     invoke-virtual {v0, v2, p0}, Laao;->b(Landroid/os/Handler;Laan;)V
 
-    .line 221
     :cond_3
     if-eqz p1, :cond_4
 
-    .line 222
     iget-object v0, p0, Ldwg;->b:Laao;
 
     iget-object v2, p0, Ldwg;->h:Landroid/os/Handler;
 
     invoke-virtual {v0, v2, p1}, Laao;->a(Landroid/os/Handler;Laba;)V
 
-    .line 228
     :goto_2
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Ldwg;->d:Z
 
-    .line 229
     monitor-exit v1
 
     goto :goto_0
 
-    .line 223
     :cond_4
     iget-object v2, p0, Ldwg;->b:Laao;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 224
     :try_start_2
     invoke-virtual {v2}, Laao;->i()Labz;
 
@@ -1824,11 +1626,9 @@
 
     goto :goto_2
 
-    .line 226
     :catch_0
     move-exception v0
 
-    .line 227
     :try_start_3
     invoke-virtual {v2}, Laao;->d()Lzz;
 
@@ -1848,33 +1648,26 @@
 .method public final a(Labv;)V
     .locals 2
 
-    .prologue
-    .line 174
     iput-object p1, p0, Ldwg;->f:Labv;
 
-    .line 175
     iget-object v0, p0, Ldwg;->b:Laao;
 
     iget-object v1, p0, Ldwg;->f:Labv;
 
     invoke-virtual {v0, v1}, Laao;->a(Labv;)Z
 
-    .line 176
     return-void
 .end method
 
 .method public final a(Landroid/graphics/SurfaceTexture;Laba;)V
     .locals 2
 
-    .prologue
-    .line 230
     iget-object v0, p0, Ldwg;->b:Laao;
 
     if-eqz v0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 231
     :cond_0
     sget-object v0, Ldwg;->a:Ljava/lang/String;
 
@@ -1882,11 +1675,9 @@
 
     invoke-static {v0, v1}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 236
     :goto_0
     return-void
 
-    .line 233
     :cond_1
     sget-object v0, Ldwg;->a:Ljava/lang/String;
 
@@ -1894,12 +1685,10 @@
 
     invoke-static {v0, v1}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 234
     iget-object v0, p0, Ldwg;->b:Laao;
 
     invoke-virtual {v0, p1}, Laao;->a(Landroid/graphics/SurfaceTexture;)V
 
-    .line 235
     invoke-virtual {p0, p2}, Ldwg;->a(Laba;)V
 
     goto :goto_0
@@ -1908,12 +1697,10 @@
 .method public final a(Z)V
     .locals 4
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 177
     iget-object v0, p0, Ldwg;->l:Labg;
 
     sget-object v3, Labh;->f:Labh;
@@ -1924,18 +1711,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 178
     iget-object v3, p0, Ldwg;->f:Labv;
 
     if-nez p1, :cond_2
 
     move v0, v1
 
-    .line 179
     :goto_0
     iput-boolean v0, v3, Labv;->v:Z
 
-    .line 180
     :cond_0
     iget-object v0, p0, Ldwg;->l:Labg;
 
@@ -1947,16 +1731,13 @@
 
     if-eqz v0, :cond_1
 
-    .line 181
     iget-object v0, p0, Ldwg;->f:Labv;
 
     if-nez p1, :cond_3
 
-    .line 182
     :goto_1
     iput-boolean v1, v0, Labv;->u:Z
 
-    .line 183
     :cond_1
     :try_start_0
     iget-object v0, p0, Ldwg;->b:Laao;
@@ -1967,27 +1748,22 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 187
     :goto_2
     return-void
 
     :cond_2
     move v0, v2
 
-    .line 178
     goto :goto_0
 
     :cond_3
     move v1, v2
 
-    .line 181
     goto :goto_1
 
-    .line 185
     :catch_0
     move-exception v0
 
-    .line 186
     sget-object v1, Ldwg;->a:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/RuntimeException;->toString()Ljava/lang/String;
@@ -2002,24 +1778,19 @@
 .method public final a([BLaao;)V
     .locals 4
 
-    .prologue
-    .line 251
     iget-object v0, p0, Ldwg;->e:Ldwj;
 
     if-nez v0, :cond_1
 
-    .line 257
     :cond_0
     :goto_0
     return-void
 
-    .line 253
     :cond_1
     iget-object v0, p0, Ldwg;->k:Lcom/google/android/apps/refocus/image/ColorImage;
 
     invoke-virtual {v0, p1}, Lcom/google/android/apps/refocus/image/ColorImage;->setBuffer([B)V
 
-    .line 254
     iget-object v0, p0, Ldwg;->e:Ldwj;
 
     iget-object v1, p0, Ldwg;->k:Lcom/google/android/apps/refocus/image/ColorImage;
@@ -2030,12 +1801,10 @@
 
     invoke-interface {v0, v1, v2, v3}, Ldwj;->a(Lcom/google/android/apps/refocus/image/ColorImage;J)V
 
-    .line 255
     iget-boolean v0, p0, Ldwg;->d:Z
 
     if-eqz v0, :cond_0
 
-    .line 256
     iget-object v0, p0, Ldwg;->k:Lcom/google/android/apps/refocus/image/ColorImage;
 
     invoke-virtual {v0}, Lcom/google/android/apps/refocus/image/ColorImage;->getBuffer()[B
@@ -2050,13 +1819,10 @@
 .method public final b()V
     .locals 4
 
-    .prologue
-    .line 237
     iget-object v1, p0, Ldwg;->i:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 238
     :try_start_0
     iget-boolean v0, p0, Ldwg;->d:Z
 
@@ -2066,15 +1832,12 @@
 
     if-nez v0, :cond_1
 
-    .line 239
     :cond_0
     monitor-exit v1
 
-    .line 244
     :goto_0
     return-void
 
-    .line 240
     :cond_1
     sget-object v0, Ldwg;->a:Ljava/lang/String;
 
@@ -2082,17 +1845,14 @@
 
     invoke-static {v0, v2}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 241
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Ldwg;->d:Z
 
-    .line 242
     iget-object v0, p0, Ldwg;->b:Laao;
 
     invoke-virtual {v0}, Laao;->k()V
 
-    .line 243
     iget-object v0, p0, Ldwg;->b:Laao;
 
     const/4 v2, 0x0
@@ -2101,7 +1861,6 @@
 
     invoke-virtual {v0, v2, v3}, Laao;->b(Landroid/os/Handler;Laan;)V
 
-    .line 244
     monitor-exit v1
 
     goto :goto_0
@@ -2119,28 +1878,22 @@
 .method public final c()V
     .locals 2
 
-    .prologue
-    .line 245
     sget-object v0, Ldwg;->a:Ljava/lang/String;
 
     const-string v1, "Shutting down camera..."
 
     invoke-static {v0, v1}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 246
     iget-object v0, p0, Ldwg;->b:Laao;
 
     if-nez v0, :cond_0
 
-    .line 250
     :goto_0
     return-void
 
-    .line 248
     :cond_0
     invoke-virtual {p0}, Ldwg;->b()V
 
-    .line 249
     const/4 v0, 0x0
 
     iput-object v0, p0, Ldwg;->b:Laao;
@@ -2151,14 +1904,11 @@
 .method public final d()V
     .locals 2
 
-    .prologue
-    .line 258
     iget-object v0, p0, Ldwg;->b:Laao;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Laao;->a(I)V
 
-    .line 259
     return-void
 .end method

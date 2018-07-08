@@ -60,8 +60,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 157
     const-string v0, "BurstCapCommand"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -76,26 +74,20 @@
 .method public constructor <init>(Lfge;Lkey;Lftv;Lfif;Landroid/view/Surface;Lkey;Lcee;Ljava/lang/Runnable;IILiii;Ljdl;Ljava/util/UUID;Lihs;)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v1, Libm;
 
     invoke-direct {v1}, Libm;-><init>()V
 
     iput-object v1, p0, Lcax;->r:Libm;
 
-    .line 4
     new-instance v1, Lkfk;
 
     invoke-direct {v1}, Lkfk;-><init>()V
 
-    .line 5
     iput-object v1, p0, Lcax;->b:Lkfk;
 
-    .line 6
     new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v2, 0x0
@@ -104,56 +96,40 @@
 
     iput-object v1, p0, Lcax;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 8
     new-instance v1, Lkfk;
 
     invoke-direct {v1}, Lkfk;-><init>()V
 
-    .line 9
     iput-object v1, p0, Lcax;->d:Lkfk;
 
-    .line 10
     iput-object p1, p0, Lcax;->f:Lfge;
 
-    .line 11
     iput-object p2, p0, Lcax;->g:Lkey;
 
-    .line 12
     iput-object p3, p0, Lcax;->h:Lftv;
 
-    .line 13
     iput-object p4, p0, Lcax;->i:Lfif;
 
-    .line 14
     iput-object p5, p0, Lcax;->j:Landroid/view/Surface;
 
-    .line 15
     iput-object p6, p0, Lcax;->k:Lkey;
 
-    .line 16
     iput-object p7, p0, Lcax;->n:Lcee;
 
-    .line 17
     iput-object p8, p0, Lcax;->l:Ljava/lang/Runnable;
 
-    .line 18
     iput p9, p0, Lcax;->m:I
 
-    .line 19
     iput p10, p0, Lcax;->a:I
 
-    .line 20
     iput-object p11, p0, Lcax;->o:Liii;
 
-    .line 21
     iput-object p12, p0, Lcax;->p:Ljdl;
 
-    .line 22
     move-object/from16 v0, p13
 
     iput-object v0, p0, Lcax;->s:Ljava/util/UUID;
 
-    .line 23
     invoke-static {}, Lcom/google/android/apps/camera/stats/Instrumentation;->instance()Lcom/google/android/apps/camera/stats/Instrumentation;
 
     move-result-object v1
@@ -170,20 +146,16 @@
 
     iput-object v1, p0, Lcax;->q:Lcom/google/android/apps/camera/stats/BurstSessionStatistics;
 
-    .line 24
     move-object/from16 v0, p14
 
     iput-object v0, p0, Lcax;->t:Lihs;
 
-    .line 25
     return-void
 .end method
 
 .method private static synthetic a(Ljava/lang/Throwable;Lcei;)V
     .locals 1
 
-    .prologue
-    .line 158
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -210,8 +182,6 @@
 .method private static synthetic a(Ljava/lang/Throwable;Lfgf;)V
     .locals 1
 
-    .prologue
-    .line 160
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -238,8 +208,6 @@
 .method private static synthetic a(Ljava/lang/Throwable;Lfig;)V
     .locals 1
 
-    .prologue
-    .line 159
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -266,11 +234,8 @@
 .method public static a(Lfif;I)Z
     .locals 5
 
-    .prologue
-    .line 137
     add-int/lit8 v1, p1, 0x5
 
-    .line 138
     invoke-interface {p0}, Lfif;->c()Lida;
 
     move-result-object v0
@@ -285,7 +250,6 @@
 
     move-result v0
 
-    .line 139
     sget-object v2, Lcax;->e:Ljava/lang/String;
 
     const/16 v3, 0x4c
@@ -320,7 +284,6 @@
 
     invoke-static {v2, v3}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 140
     if-lt v0, v1, :cond_0
 
     const/4 v0, 0x1
@@ -337,7 +300,6 @@
 .method private final b()Lfhn;
     .locals 12
 
-    .prologue
     const/4 v11, 0x3
 
     const/4 v2, 0x2
@@ -348,7 +310,6 @@
 
     const/4 v9, 0x1
 
-    .line 141
     iget-object v0, p0, Lcax;->h:Lftv;
 
     sget-object v1, Lftv;->c:Lftv;
@@ -357,18 +318,15 @@
 
     move v1, v2
 
-    .line 144
     :goto_0
     iget-object v0, p0, Lcax;->g:Lkey;
 
-    .line 145
     invoke-static {v0}, Lijt;->a(Lkey;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lfeu;
 
-    .line 146
     new-array v4, v9, [Lfhr;
 
     const/4 v5, 0x6
@@ -379,7 +337,6 @@
 
     sget-object v7, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 147
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -392,7 +349,6 @@
 
     sget-object v7, Landroid/hardware/camera2/CaptureRequest;->CONTROL_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 148
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -405,7 +361,6 @@
 
     sget-object v7, Landroid/hardware/camera2/CaptureRequest;->FLASH_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 149
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -418,7 +373,6 @@
 
     sget-object v2, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AF_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 150
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -431,7 +385,6 @@
 
     sget-object v2, Landroid/hardware/camera2/CaptureRequest;->EDGE_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 151
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -446,7 +399,6 @@
 
     sget-object v6, Landroid/hardware/camera2/CaptureRequest;->NOISE_REDUCTION_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 152
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -455,7 +407,6 @@
 
     aput-object v2, v5, v1
 
-    .line 153
     invoke-static {v5}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
@@ -464,15 +415,12 @@
 
     move-result-object v1
 
-    .line 154
     aput-object v1, v4, v3
 
-    .line 155
     invoke-virtual {v0, v4}, Lfeu;->a([Lfhr;)Lfeu;
 
     move-result-object v0
 
-    .line 156
     new-instance v1, Lfhn;
 
     invoke-virtual {v0}, Lfeu;->c()Ljava/lang/Object;
@@ -494,7 +442,6 @@
     :cond_0
     move v1, v3
 
-    .line 143
     goto :goto_0
 .end method
 
@@ -503,14 +450,12 @@
 .method public final a()V
     .locals 12
 
-    .prologue
     const/4 v7, 0x0
 
     const/4 v6, 0x0
 
     const/4 v1, 0x1
 
-    .line 26
     iget v0, p0, Lcax;->m:I
 
     if-lez v0, :cond_2
@@ -522,7 +467,6 @@
 
     invoke-static {v0, v2}, Ljiy;->b(ZLjava/lang/Object;)V
 
-    .line 27
     iget v0, p0, Lcax;->m:I
 
     iget v2, p0, Lcax;->a:I
@@ -534,14 +478,12 @@
 
     invoke-static {v1, v0}, Ljiy;->b(ZLjava/lang/Object;)V
 
-    .line 28
     iget-object v0, p0, Lcax;->o:Liii;
 
     const-string v1, "BurstCaptureCommand#run"
 
     invoke-interface {v0, v1}, Liii;->a(Ljava/lang/String;)V
 
-    .line 29
     :try_start_0
     iget-object v0, p0, Lcax;->f:Lfge;
 
@@ -552,7 +494,6 @@
 
     move-result-object v8
 
-    .line 30
     :try_start_1
     iget-object v0, p0, Lcax;->i:Lfif;
 
@@ -563,26 +504,21 @@
 
     move-result-object v9
 
-    .line 31
     :try_start_2
     iget-object v0, p0, Lcax;->r:Libm;
 
     invoke-virtual {v0, v9}, Libm;->a(Lihr;)Lihr;
 
-    .line 32
     iget v0, p0, Lcax;->m:I
 
     add-int/lit8 v0, v0, 0x5
 
-    .line 33
     invoke-interface {v9, v0}, Lfig;->a(I)Lkey;
 
     move-result-object v0
 
-    .line 34
     invoke-static {v0}, Lkek;->c(Ljava/util/concurrent/Future;)Ljava/lang/Object;
 
-    .line 35
     new-instance v0, Lcei;
 
     iget v1, p0, Lcax;->m:I
@@ -600,26 +536,21 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_3
     .catchall {:try_start_2 .. :try_end_2} :catchall_6
 
-    .line 37
     :try_start_3
     invoke-interface {v9}, Lfig;->w_()Lfgy;
 
     move-result-object v1
 
-    .line 38
     new-instance v2, Lcej;
 
     invoke-direct {v2, v0, v1}, Lcej;-><init>(Lcei;Lfgy;)V
 
-    .line 40
     invoke-direct {p0}, Lcax;->b()Lfhn;
 
     move-result-object v1
 
-    .line 41
     invoke-virtual {v1, v2}, Lfhn;->a(Lfgy;)Lfhn;
 
-    .line 42
     iget-object v2, p0, Lcax;->j:Landroid/view/Surface;
 
     invoke-static {v2}, Lfha;->a(Landroid/view/Surface;)Lfgy;
@@ -628,14 +559,12 @@
 
     invoke-virtual {v1, v2}, Lfhn;->a(Lfgy;)Lfhn;
 
-    .line 45
     const/4 v2, 0x1
 
     new-array v2, v2, [Lfhl;
 
     const/4 v3, 0x0
 
-    .line 46
     invoke-virtual {v1}, Lfhn;->c()Lfhl;
 
     move-result-object v1
@@ -648,17 +577,14 @@
 
     sget-object v2, Lfhu;->a:Lfhu;
 
-    .line 47
     invoke-interface {v8, v1, v2}, Lfgf;->a(Ljava/util/List;Lfhu;)V
 
-    .line 48
     const/4 v1, 0x1
 
     new-array v1, v1, [Lfhl;
 
     const/4 v2, 0x0
 
-    .line 49
     invoke-direct {p0}, Lcax;->b()Lfhn;
 
     move-result-object v3
@@ -675,35 +601,28 @@
 
     sget-object v2, Lfhu;->b:Lfhu;
 
-    .line 50
     invoke-interface {v8, v1, v2}, Lfgf;->a(Ljava/util/List;Lfhu;)V
 
-    .line 51
     const/4 v1, 0x1
 
     new-array v1, v1, [Lfhl;
 
     const/4 v2, 0x0
 
-    .line 52
     invoke-direct {p0}, Lcax;->b()Lfhn;
 
     move-result-object v3
 
-    .line 53
     sget-object v4, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AF_TRIGGER:Landroid/hardware/camera2/CaptureRequest$Key;
 
     const/4 v5, 0x1
 
-    .line 54
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    .line 55
     invoke-virtual {v3, v4, v5}, Lfhn;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)Lfhn;
 
-    .line 57
     invoke-virtual {v3}, Lfhn;->c()Lfhl;
 
     move-result-object v3
@@ -716,12 +635,10 @@
 
     sget-object v2, Lfhu;->b:Lfhu;
 
-    .line 58
     invoke-interface {v8, v1, v2}, Lfgf;->a(Ljava/util/List;Lfhu;)V
 
     move v2, v6
 
-    .line 60
     :cond_0
     :goto_2
     invoke-interface {v9}, Lfig;->x_()Z
@@ -733,18 +650,15 @@
 
     if-nez v1, :cond_9
 
-    .line 61
     :try_start_4
     invoke-interface {v9}, Lfig;->d()I
 
     move-result v1
 
-    .line 62
     iget v3, p0, Lcax;->a:I
 
     if-ge v1, v3, :cond_1
 
-    .line 63
     const/4 v3, 0x1
 
     invoke-interface {v9, v3}, Lfig;->b(I)Z
@@ -753,10 +667,8 @@
 
     if-eqz v3, :cond_4
 
-    .line 64
     invoke-virtual {v0}, Lcei;->e()V
 
-    .line 77
     :cond_1
     invoke-interface {v9}, Lfig;->a()Ljava/lang/Object;
 
@@ -764,20 +676,16 @@
 
     check-cast v1, Lfie;
 
-    .line 78
     iget-object v3, p0, Lcax;->q:Lcom/google/android/apps/camera/stats/BurstSessionStatistics;
 
     invoke-virtual {v3}, Lcom/google/android/apps/camera/stats/BurstSessionStatistics;->h()V
 
-    .line 79
     iget-object v3, p0, Lcax;->t:Lihs;
 
-    .line 80
     invoke-interface {v1}, Lfie;->d()Lkey;
 
     move-result-object v4
 
-    .line 81
     const/4 v5, 0x1
 
     new-array v5, v5, [I
@@ -792,16 +700,13 @@
 
     move-result-object v5
 
-    .line 82
     if-nez v5, :cond_8
 
     move-object v1, v7
 
-    .line 89
     :goto_3
     if-eqz v1, :cond_c
 
-    .line 90
     invoke-virtual {v0, v1}, Lcei;->a(Lfjl;)V
     :try_end_4
     .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_1
@@ -809,13 +714,11 @@
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_2
     .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
-    .line 91
     add-int/lit8 v1, v2, 0x1
 
     :goto_4
     move v2, v1
 
-    .line 95
     :goto_5
     :try_start_5
     iget-object v1, p0, Lcax;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -830,10 +733,8 @@
 
     if-lt v2, v1, :cond_0
 
-    .line 96
     invoke-virtual {v0}, Lcei;->a()Z
 
-    .line 97
     iget-object v1, p0, Lcax;->r:Libm;
 
     invoke-virtual {v1}, Libm;->close()V
@@ -844,7 +745,6 @@
 
     goto :goto_2
 
-    .line 100
     :catch_0
     move-exception v1
 
@@ -853,16 +753,13 @@
     :cond_2
     move v0, v6
 
-    .line 26
     goto/16 :goto_0
 
     :cond_3
     move v1, v6
 
-    .line 27
     goto/16 :goto_1
 
-    .line 65
     :cond_4
     :try_start_6
     invoke-virtual {v0}, Lcei;->b()I
@@ -871,7 +768,6 @@
 
     if-lt v3, v1, :cond_1
 
-    .line 66
     iget-object v1, p0, Lcax;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -880,17 +776,14 @@
 
     if-eqz v1, :cond_7
 
-    .line 67
     sget-object v1, Lcax;->e:Ljava/lang/String;
 
     const-string v3, "Exiting burst early as stop requested and no capacity present."
 
     invoke-static {v1, v3}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
     invoke-virtual {v0}, Lcei;->a()Z
 
-    .line 69
     iget-object v1, p0, Lcax;->r:Libm;
 
     invoke-virtual {v1}, Libm;->close()V
@@ -902,7 +795,6 @@
 
     goto :goto_2
 
-    .line 94
     :catch_1
     move-exception v1
 
@@ -917,7 +809,6 @@
 
     goto :goto_5
 
-    .line 118
     :catch_2
     move-exception v1
 
@@ -926,7 +817,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 119
     :catchall_0
     move-exception v2
 
@@ -945,7 +835,6 @@
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_3
     .catchall {:try_start_9 .. :try_end_9} :catchall_6
 
-    .line 121
     :catch_3
     move-exception v0
 
@@ -954,7 +843,6 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_1
 
-    .line 122
     :catchall_1
     move-exception v1
 
@@ -976,7 +864,6 @@
     .catch Ljava/lang/Throwable; {:try_start_b .. :try_end_b} :catch_4
     .catchall {:try_start_b .. :try_end_b} :catchall_5
 
-    .line 124
     :catch_4
     move-exception v0
 
@@ -985,7 +872,6 @@
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_2
 
-    .line 125
     :catchall_2
     move-exception v1
 
@@ -1005,11 +891,9 @@
     .catch Ljava/lang/Throwable; {:try_start_d .. :try_end_d} :catch_5
     .catchall {:try_start_d .. :try_end_d} :catchall_4
 
-    .line 129
     :catch_5
     move-exception v0
 
-    .line 130
     :try_start_e
     iget-object v1, p0, Lcax;->b:Lkfk;
 
@@ -1017,21 +901,17 @@
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_4
 
-    .line 131
     iget-object v0, p0, Lcax;->l:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 132
     iget-object v0, p0, Lcax;->o:Liii;
 
     invoke-interface {v0}, Liii;->a()V
 
-    .line 133
     :goto_9
     return-void
 
-    .line 70
     :cond_7
     :try_start_f
     sget-object v1, Lcax;->e:Ljava/lang/String;
@@ -1045,7 +925,6 @@
     .catch Ljava/lang/Throwable; {:try_start_f .. :try_end_f} :catch_2
     .catchall {:try_start_f .. :try_end_f} :catchall_3
 
-    .line 71
     const-wide/16 v4, 0x21
 
     :try_start_10
@@ -1058,7 +937,6 @@
 
     goto/16 :goto_2
 
-    .line 74
     :catch_6
     move-exception v1
 
@@ -1069,7 +947,6 @@
 
     invoke-static {v1, v3}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 75
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
@@ -1078,7 +955,6 @@
 
     goto/16 :goto_2
 
-    .line 119
     :catchall_3
     move-exception v1
 
@@ -1086,7 +962,6 @@
 
     goto :goto_6
 
-    .line 85
     :cond_8
     invoke-interface {v5}, Liob;->c()I
 
@@ -1100,14 +975,12 @@
 
     move-result-object v1
 
-    .line 86
     invoke-static {v1, v3}, Liif;->a(Lihs;Lihs;)Landroid/graphics/Rect;
 
     move-result-object v1
 
     invoke-interface {v5, v1}, Liob;->a(Landroid/graphics/Rect;)V
 
-    .line 87
     new-instance v1, Lfjl;
 
     invoke-direct {v1, v5, v4}, Lfjl;-><init>(Liob;Lkey;)V
@@ -1119,7 +992,6 @@
 
     goto/16 :goto_3
 
-    .line 101
     :cond_9
     :try_start_12
     iget-object v1, p0, Lcax;->d:Lkfk;
@@ -1135,26 +1007,21 @@
     .catch Ljava/lang/Throwable; {:try_start_12 .. :try_end_12} :catch_2
     .catchall {:try_start_12 .. :try_end_12} :catchall_3
 
-    .line 103
     :try_start_13
     invoke-direct {p0}, Lcax;->b()Lfhn;
 
     move-result-object v1
 
-    .line 104
     sget-object v2, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AF_TRIGGER:Landroid/hardware/camera2/CaptureRequest$Key;
 
     const/4 v3, 0x2
 
-    .line 105
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    .line 106
     invoke-virtual {v1, v2, v3}, Lfhn;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)Lfhn;
 
-    .line 107
     sget-object v2, Landroid/hardware/camera2/CaptureRequest;->FLASH_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     const/4 v3, 0x0
@@ -1165,7 +1032,6 @@
 
     invoke-virtual {v1, v2, v3}, Lfhn;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)Lfhn;
 
-    .line 108
     const/4 v2, 0x1
 
     new-array v2, v2, [Lfhl;
@@ -1186,14 +1052,12 @@
 
     invoke-interface {v8, v2, v3}, Lfgf;->a(Ljava/util/List;Lfhu;)V
 
-    .line 109
     const/4 v2, 0x1
 
     new-array v2, v2, [Lfhl;
 
     const/4 v3, 0x0
 
-    .line 110
     invoke-virtual {v1}, Lfhn;->c()Lfhl;
 
     move-result-object v1
@@ -1206,7 +1070,6 @@
 
     sget-object v2, Lfhu;->b:Lfhu;
 
-    .line 111
     invoke-interface {v8, v1, v2}, Lfgf;->a(Ljava/util/List;Lfhu;)V
     :try_end_13
     .catch Lijt; {:try_start_13 .. :try_end_13} :catch_8
@@ -1214,14 +1077,12 @@
     .catch Ljava/lang/Throwable; {:try_start_13 .. :try_end_13} :catch_2
     .catchall {:try_start_13 .. :try_end_13} :catchall_3
 
-    .line 115
     :goto_a
     :try_start_14
     invoke-virtual {v0}, Lcei;->d()Ljia;
 
     move-result-object v1
 
-    .line 116
     iget-object v2, p0, Lcax;->b:Lkfk;
 
     invoke-virtual {v2, v1}, Lkcy;->a(Ljava/lang/Object;)Z
@@ -1229,7 +1090,6 @@
     .catch Ljava/lang/Throwable; {:try_start_14 .. :try_end_14} :catch_2
     .catchall {:try_start_14 .. :try_end_14} :catchall_3
 
-    .line 117
     const/4 v1, 0x0
 
     :try_start_15
@@ -1238,7 +1098,6 @@
     .catch Ljava/lang/Throwable; {:try_start_15 .. :try_end_15} :catch_3
     .catchall {:try_start_15 .. :try_end_15} :catchall_6
 
-    .line 120
     if-eqz v9, :cond_a
 
     const/4 v0, 0x0
@@ -1249,7 +1108,6 @@
     .catch Ljava/lang/Throwable; {:try_start_16 .. :try_end_16} :catch_4
     .catchall {:try_start_16 .. :try_end_16} :catchall_5
 
-    .line 123
     :cond_a
     if-eqz v8, :cond_b
 
@@ -1261,20 +1119,17 @@
     .catch Ljava/lang/Throwable; {:try_start_17 .. :try_end_17} :catch_5
     .catchall {:try_start_17 .. :try_end_17} :catchall_4
 
-    .line 126
     :cond_b
     iget-object v0, p0, Lcax;->l:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 127
     iget-object v0, p0, Lcax;->o:Liii;
 
     invoke-interface {v0}, Liii;->a()V
 
     goto/16 :goto_9
 
-    .line 114
     :catch_7
     move-exception v1
 
@@ -1291,7 +1146,6 @@
 
     goto :goto_a
 
-    .line 134
     :catchall_4
     move-exception v0
 
@@ -1299,20 +1153,17 @@
 
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    .line 135
     iget-object v1, p0, Lcax;->o:Liii;
 
     invoke-interface {v1}, Liii;->a()V
 
     throw v0
 
-    .line 125
     :catchall_5
     move-exception v0
 
     goto/16 :goto_8
 
-    .line 122
     :catchall_6
     move-exception v0
 
@@ -1320,7 +1171,6 @@
 
     goto/16 :goto_7
 
-    .line 114
     :catch_8
     move-exception v1
 
@@ -1335,8 +1185,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 136
     const-string v0, "BurstCapture"
 
     return-object v0

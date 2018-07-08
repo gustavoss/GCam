@@ -16,8 +16,6 @@
 .method constructor <init>(Lgiy;Landroid/net/Uri;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lghb;->b:Lgiy;
 
     iput-object p2, p0, Lghb;->a:Landroid/net/Uri;
@@ -32,28 +30,21 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lghb;->b:Lgiy;
 
     iget-object v0, v0, Lgiy;->a:Lggt;
 
-    .line 3
     iget-object v1, v0, Lggt;->c:Ljava/util/LinkedList;
 
-    .line 4
     monitor-enter v1
 
-    .line 5
     :try_start_0
     iget-object v0, p0, Lghb;->b:Lgiy;
 
     iget-object v0, v0, Lgiy;->a:Lggt;
 
-    .line 6
     iget-object v0, v0, Lggt;->c:Ljava/util/LinkedList;
 
-    .line 7
     invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -71,14 +62,12 @@
 
     check-cast v0, Lghg;
 
-    .line 8
     iget-object v3, p0, Lghb;->a:Landroid/net/Uri;
 
     invoke-interface {v0, v3}, Lghg;->c(Landroid/net/Uri;)V
 
     goto :goto_0
 
-    .line 10
     :catchall_0
     move-exception v0
 

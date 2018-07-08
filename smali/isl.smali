@@ -20,8 +20,6 @@
 .method constructor <init>(Lisk;Liqd;Lisk;Litc;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lisl;->d:Lisk;
 
     iput-object p2, p0, Lisl;->a:Liqd;
@@ -40,37 +38,28 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lisl;->d:Lisk;
 
-    .line 3
     iget-object v0, v0, Lisk;->a:Ljava/lang/Object;
 
-    .line 5
     if-eqz v0, :cond_0
 
-    .line 6
     iget-object v1, p0, Lisl;->a:Liqd;
 
     iget-object v2, p0, Lisl;->b:Lisk;
 
     invoke-static {v0, v1, v2}, Lisk;->a(Ljava/lang/Object;Liqd;Lisk;)V
 
-    .line 10
     :goto_0
     return-void
 
-    .line 7
     :cond_0
     iget-object v0, p0, Lisl;->b:Lisk;
 
     iget-object v1, p0, Lisl;->d:Lisk;
 
-    .line 8
     iget-object v1, v1, Lisk;->b:Lirr;
 
-    .line 9
     invoke-virtual {v0, v1}, Lisk;->a(Lirr;)Z
 
     goto :goto_0
@@ -79,8 +68,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lisl;->d:Lisk;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

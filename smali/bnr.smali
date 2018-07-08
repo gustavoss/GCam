@@ -35,7 +35,6 @@
 .method static constructor <clinit>()V
     .locals 14
 
-    .prologue
     const/4 v13, 0x3
 
     const/4 v12, 0x2
@@ -46,7 +45,6 @@
 
     const/4 v5, 0x1
 
-    .line 14
     new-instance v0, Lbnr;
 
     const-string v1, "GENERIC_CAMERA_ERROR"
@@ -57,7 +55,6 @@
 
     sput-object v0, Lbnr;->a:Lbnr;
 
-    .line 15
     new-instance v6, Lbnr;
 
     const-string v7, "ERROR_CAMERA_DISABLED"
@@ -74,7 +71,6 @@
 
     sput-object v6, Lbnr;->b:Lbnr;
 
-    .line 16
     new-instance v6, Lbnr;
 
     const-string v7, "ERROR_CAMERA_DEVICE"
@@ -91,7 +87,6 @@
 
     sput-object v6, Lbnr;->h:Lbnr;
 
-    .line 17
     new-instance v6, Lbnr;
 
     const-string v7, "ERROR_CAMERA_IN_USE"
@@ -108,7 +103,6 @@
 
     sput-object v6, Lbnr;->i:Lbnr;
 
-    .line 18
     new-instance v6, Lbnr;
 
     const-string v7, "ERROR_CAMERA_SERVICE"
@@ -125,7 +119,6 @@
 
     sput-object v6, Lbnr;->j:Lbnr;
 
-    .line 19
     new-instance v6, Lbnr;
 
     const-string v7, "ERROR_MAX_CAMERAS_IN_USE"
@@ -142,7 +135,6 @@
 
     sput-object v6, Lbnr;->k:Lbnr;
 
-    .line 20
     new-instance v6, Lbnr;
 
     const-string v7, "MEDIA_STORAGE_FAILURE"
@@ -159,7 +151,6 @@
 
     sput-object v6, Lbnr;->c:Lbnr;
 
-    .line 21
     new-instance v6, Lbnr;
 
     const-string v7, "MEDIA_RECORDER_FAILURE"
@@ -176,7 +167,6 @@
 
     sput-object v6, Lbnr;->d:Lbnr;
 
-    .line 22
     const/16 v0, 0x8
 
     new-array v0, v0, [Lbnr;
@@ -229,67 +219,52 @@
 .method private constructor <init>(Ljava/lang/String;IIIZ)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput p3, p0, Lbnr;->e:I
 
-    .line 4
     iput p4, p0, Lbnr;->f:I
 
-    .line 5
     iput-boolean p5, p0, Lbnr;->g:Z
 
-    .line 6
     return-void
 .end method
 
 .method public static a(I)Lbnr;
     .locals 1
 
-    .prologue
-    .line 7
     packed-switch p0, :pswitch_data_0
 
-    .line 13
     sget-object v0, Lbnr;->a:Lbnr;
 
     :goto_0
     return-object v0
 
-    .line 8
     :pswitch_0
     sget-object v0, Lbnr;->i:Lbnr;
 
     goto :goto_0
 
-    .line 9
     :pswitch_1
     sget-object v0, Lbnr;->k:Lbnr;
 
     goto :goto_0
 
-    .line 10
     :pswitch_2
     sget-object v0, Lbnr;->b:Lbnr;
 
     goto :goto_0
 
-    .line 11
     :pswitch_3
     sget-object v0, Lbnr;->h:Lbnr;
 
     goto :goto_0
 
-    .line 12
     :pswitch_4
     sget-object v0, Lbnr;->j:Lbnr;
 
     goto :goto_0
 
-    .line 7
     nop
 
     :pswitch_data_0
@@ -305,8 +280,6 @@
 .method public static values()[Lbnr;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lbnr;->l:[Lbnr;
 
     invoke-virtual {v0}, [Lbnr;->clone()Ljava/lang/Object;

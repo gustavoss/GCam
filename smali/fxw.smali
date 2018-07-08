@@ -19,7 +19,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v0, 0x4
 
     const/4 v5, 0x3
@@ -28,19 +27,14 @@
 
     const/4 v3, 0x1
 
-    .line 2
     sput v3, Lfxw;->a:I
 
-    .line 3
     sput v4, Lfxw;->b:I
 
-    .line 4
     sput v5, Lfxw;->c:I
 
-    .line 5
     sput v0, Lfxw;->d:I
 
-    .line 6
     new-array v0, v0, [I
 
     const/4 v1, 0x0
@@ -69,8 +63,6 @@
 .method public static a(I)Z
     .locals 1
 
-    .prologue
-    .line 1
     if-nez p0, :cond_0
 
     const/4 v0, 0x0

@@ -16,8 +16,6 @@
 .method constructor <init>(Lkfc;Ljava/lang/Runnable;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lkfd;->b:Lkfc;
 
     iput-object p2, p0, Lkfd;->a:Ljava/lang/Runnable;
@@ -32,19 +30,15 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lkfd;->b:Lkfc;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lkfc;->a:Z
 
-    .line 3
     iget-object v0, p0, Lkfd;->a:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 4
     return-void
 .end method

@@ -32,11 +32,8 @@
 .method public final a(Lhue;Z)V
     .locals 4
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lhti;->a:Lhto;
 
-    .line 5
     iget-object v1, p1, Lhue;->a:Ljava/util/Map;
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -49,7 +46,6 @@
 
     invoke-direct {v1, p1, v0}, Lhvn;-><init>(Lhue;Lhtr;)V
 
-    .line 6
     const/4 v2, 0x1
 
     const-string v3, "Callback cannot be null."
@@ -94,14 +90,10 @@
 .method public final a(Lhvd;)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhti;->a:Lhto;
 
-    .line 2
     iget-object v1, p1, Lhvd;->a:Lhma;
 
-    .line 3
     invoke-virtual {v0, v1}, Lhto;->b(Lhlz;)V
 
     return-void

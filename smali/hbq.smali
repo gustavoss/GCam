@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,12 +18,10 @@
 .method private static a(JJ)J
     .locals 8
 
-    .prologue
     const/16 v6, 0x2f
 
     const-wide v4, -0x395b586ca42e166bL    # -2.0946245025644615E32
 
-    .line 49
     xor-long v0, p2, p0
 
     mul-long/2addr v0, v4
@@ -50,8 +46,6 @@
 .method public static a([B)J
     .locals 23
 
-    .prologue
-    .line 25
     move-object/from16 v0, p0
 
     array-length v2, v0
@@ -60,7 +54,6 @@
 
     if-gt v2, v3, :cond_5
 
-    .line 26
     move-object/from16 v0, p0
 
     array-length v2, v0
@@ -108,14 +101,12 @@
 
     mul-long/2addr v6, v10
 
-    .line 27
     const/16 v5, 0x2f
 
     ushr-long v10, v6, v5
 
     xor-long/2addr v6, v10
 
-    .line 28
     const-wide v10, -0x395b586ca42e166bL    # -2.0946245025644615E32
 
     mul-long/2addr v6, v10
@@ -137,7 +128,6 @@
     :cond_0
     if-eqz v9, :cond_2
 
-    .line 29
     const-wide/16 v6, 0x0
 
     const/16 v4, 0x8
@@ -171,7 +161,6 @@
 
     goto :goto_1
 
-    .line 30
     :cond_1
     xor-long/2addr v2, v6
 
@@ -179,7 +168,6 @@
 
     mul-long/2addr v2, v4
 
-    .line 31
     :cond_2
     const/16 v4, 0x2f
 
@@ -187,19 +175,16 @@
 
     xor-long/2addr v2, v4
 
-    .line 32
     const-wide v4, -0x395b586ca42e166bL    # -2.0946245025644615E32
 
     mul-long/2addr v2, v4
 
-    .line 33
     const/16 v4, 0x2f
 
     ushr-long v4, v2, v4
 
     xor-long/2addr v2, v4
 
-    .line 46
     :goto_2
     move-object/from16 v0, p0
 
@@ -265,7 +250,6 @@
     :cond_4
     return-wide v2
 
-    .line 34
     :cond_5
     move-object/from16 v0, p0
 
@@ -275,7 +259,6 @@
 
     if-gt v2, v3, :cond_6
 
-    .line 35
     move-object/from16 v0, p0
 
     array-length v2, v0
@@ -462,36 +445,30 @@
 
     add-long/2addr v2, v4
 
-    .line 36
     const/16 v4, 0x2f
 
     ushr-long v4, v2, v4
 
     xor-long/2addr v2, v4
 
-    .line 37
     const-wide v4, -0x5a47a3a1e67127b7L    # -5.623071142144676E-127
 
     mul-long/2addr v2, v4
 
     add-long/2addr v2, v6
 
-    .line 38
     const/16 v4, 0x2f
 
     ushr-long v4, v2, v4
 
     xor-long/2addr v2, v4
 
-    .line 39
     const-wide v4, -0x3b849161c568f12dL    # -8.096527404817815E21
 
     mul-long/2addr v2, v4
 
-    .line 40
     goto/16 :goto_2
 
-    .line 41
     :cond_6
     move-object/from16 v0, p0
 
@@ -565,14 +542,12 @@
 
     aget-wide v2, v8, v2
 
-    .line 42
     const/16 v4, 0x2f
 
     ushr-long v4, v2, v4
 
     xor-long/2addr v2, v4
 
-    .line 43
     const-wide v4, -0x72a753d9501ed1b9L
 
     mul-long/2addr v2, v4
@@ -738,14 +713,12 @@
 
     move-result-wide v2
 
-    .line 44
     const/16 v4, 0x2f
 
     ushr-long v4, v14, v4
 
     xor-long/2addr v4, v14
 
-    .line 45
     const-wide v6, -0x72a753d9501ed1b9L
 
     mul-long/2addr v4, v6
@@ -774,7 +747,6 @@
 
     goto/16 :goto_2
 
-    .line 46
     :cond_7
     const-wide v4, -0x5a47a3a1e67127b7L    # -5.623071142144676E-127
 
@@ -798,8 +770,6 @@
 .method private static a([BI)J
     .locals 2
 
-    .prologue
-    .line 48
     const/16 v0, 0x8
 
     invoke-static {p0, p1, v0}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
@@ -820,8 +790,6 @@
 .method public static a(Landroid/content/pm/PackageManager;Landroid/content/Context;)Landroid/content/pm/PackageInfo;
     .locals 3
 
-    .prologue
-    .line 9
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -837,11 +805,9 @@
 
     return-object v0
 
-    .line 10
     :catch_0
     move-exception v0
 
-    .line 11
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "getPackageInfo for getPackageName should always succeed."
@@ -854,7 +820,6 @@
 .method public static a(J)Ljava/lang/String;
     .locals 12
 
-    .prologue
     const-wide/16 v6, 0x1
 
     const/4 v10, 0x2
@@ -863,7 +828,6 @@
 
     const/4 v8, 0x0
 
-    .line 12
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-virtual {v0, p0, p1}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
@@ -878,7 +842,6 @@
 
     rem-long/2addr v0, v2
 
-    .line 13
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-virtual {v2, p0, p1}, Ljava/util/concurrent/TimeUnit;->toMinutes(J)J
@@ -893,21 +856,18 @@
 
     rem-long/2addr v2, v4
 
-    .line 14
     sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-virtual {v4, p0, p1}, Ljava/util/concurrent/TimeUnit;->toHours(J)J
 
     move-result-wide v4
 
-    .line 15
     const-wide/16 v6, 0x0
 
     cmp-long v6, v4, v6
 
     if-lez v6, :cond_0
 
-    .line 16
     const-string v6, "%1d:%02d:%02d"
 
     const/4 v7, 0x3
@@ -936,7 +896,6 @@
 
     move-result-object v0
 
-    .line 17
     :goto_0
     return-object v0
 
@@ -967,8 +926,6 @@
 .method private static a([BIJJ[J)V
     .locals 12
 
-    .prologue
-    .line 47
     invoke-static {p0, p1}, Lhbq;->a([BI)J
 
     move-result-wide v0
@@ -1033,28 +990,22 @@
 .method public static a([BLjava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 18
     :try_start_0
     new-instance v0, Ljava/io/FileOutputStream;
 
     invoke-direct {v0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
-    .line 19
     invoke-virtual {v0, p0}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 20
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 24
     const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    .line 23
     :catch_0
     move-exception v0
 
@@ -1068,15 +1019,10 @@
 .method public final synthetic a(Landroid/animation/Animator;)Lhbm;
     .locals 3
 
-    .prologue
-    .line 2
-    .line 3
     new-instance v0, Lhbo;
 
-    .line 4
     if-nez p1, :cond_0
 
-    .line 5
     new-instance v0, Ljava/lang/NullPointerException;
 
     const/16 v1, 0x5d
@@ -1099,12 +1045,10 @@
 
     throw v0
 
-    .line 7
     :cond_0
     check-cast p1, Landroid/animation/Animator;
 
     invoke-direct {v0, p1}, Lhbo;-><init>(Landroid/animation/Animator;)V
 
-    .line 8
     return-object v0
 .end method

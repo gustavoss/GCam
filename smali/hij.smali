@@ -25,10 +25,8 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, -0x1
 
-    .line 25
     const-string v0, "content://%s/publicvalue/lens_oem_availability"
 
     const/4 v1, 0x1
@@ -41,87 +39,70 @@
 
     aput-object v3, v1, v2
 
-    .line 26
     invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lhij;->a:Ljava/lang/String;
 
-    .line 27
     new-instance v0, Lhim;
 
     invoke-direct {v0}, Lhim;-><init>()V
 
-    .line 28
     sput-object v0, Lhij;->f:Lhim;
 
     const-string v1, "0.1.0"
 
     iput-object v1, v0, Lhim;->a:Ljava/lang/String;
 
-    .line 29
     sget-object v0, Lhij;->f:Lhim;
 
     const-string v1, ""
 
     iput-object v1, v0, Lhim;->b:Ljava/lang/String;
 
-    .line 30
     sget-object v0, Lhij;->f:Lhim;
 
     iput v4, v0, Lhim;->c:I
 
-    .line 31
     sget-object v0, Lhij;->f:Lhim;
 
     iput v4, v0, Lhim;->d:I
 
-    .line 32
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
     invoke-direct {p0, p1, v0}, Lhij;-><init>(Landroid/content/Context;Landroid/content/pm/PackageManager;)V
 
-    .line 2
     return-void
 .end method
 
 .method private constructor <init>(Landroid/content/Context;Landroid/content/pm/PackageManager;)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lhij;->c:Ljava/util/List;
 
-    .line 5
     iput-object p1, p0, Lhij;->b:Landroid/content/Context;
 
-    .line 6
     iput-object p2, p0, Lhij;->g:Landroid/content/pm/PackageManager;
 
-    .line 8
     iput-boolean v3, p0, Lhij;->e:Z
 
-    .line 9
     sget-object v0, Lhij;->f:Lhim;
 
     invoke-virtual {v0}, Lhim;->a()Lhim;
@@ -130,7 +111,6 @@
 
     iput-object v0, p0, Lhij;->d:Lhim;
 
-    .line 10
     :try_start_0
     iget-object v0, p0, Lhij;->g:Landroid/content/pm/PackageManager;
 
@@ -142,10 +122,8 @@
 
     move-result-object v0
 
-    .line 11
     if-eqz v0, :cond_0
 
-    .line 12
     iget-object v1, p0, Lhij;->d:Lhim;
 
     iget-object v0, v0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
@@ -154,21 +132,18 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 16
     :cond_0
     :goto_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 17
     const-string v1, "com.google.ar.lens"
 
     const-string v2, "com.google.vr.apps.ornament.app.MainActivity"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 18
     iget-object v1, p0, Lhij;->g:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v1, v0, v3}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
@@ -177,27 +152,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 19
     iget-object v0, p0, Lhij;->d:Lhim;
 
     iput v3, v0, Lhim;->d:I
 
-    .line 21
     :goto_1
     new-instance v0, Lhil;
 
-    .line 22
     invoke-direct {v0, p0}, Lhil;-><init>(Lhij;)V
 
-    .line 23
     new-array v1, v3, [Ljava/lang/Void;
 
     invoke-virtual {v0, v1}, Lhil;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 24
     return-void
 
-    .line 15
     :catch_0
     move-exception v0
 
@@ -209,7 +178,6 @@
 
     goto :goto_0
 
-    .line 20
     :cond_1
     iget-object v0, p0, Lhij;->d:Lhim;
 

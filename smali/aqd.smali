@@ -13,18 +13,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Laqd;->a:Ljava/util/List;
 
-    .line 3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -37,8 +33,6 @@
 .method private final declared-synchronized a(Ljava/lang/String;)Ljava/util/List;
     .locals 2
 
-    .prologue
-    .line 35
     monitor-enter p0
 
     :try_start_0
@@ -50,12 +44,10 @@
 
     if-nez v0, :cond_0
 
-    .line 36
     iget-object v0, p0, Laqd;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 37
     :cond_0
     iget-object v0, p0, Laqd;->b:Ljava/util/Map;
 
@@ -65,28 +57,23 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 38
     if-nez v0, :cond_1
 
-    .line 39
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 40
     iget-object v1, p0, Laqd;->b:Ljava/util/Map;
 
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 41
     :cond_1
     monitor-exit p0
 
     return-object v0
 
-    .line 35
     :catchall_0
     move-exception v0
 
@@ -100,8 +87,6 @@
 .method public final declared-synchronized a(Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/List;
     .locals 5
 
-    .prologue
-    .line 12
     monitor-enter p0
 
     :try_start_0
@@ -109,7 +94,6 @@
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 13
     iget-object v0, p0, Laqd;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -129,7 +113,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 14
     iget-object v3, p0, Laqd;->b:Ljava/util/Map;
 
     invoke-interface {v3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -138,10 +121,8 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 15
     if-eqz v0, :cond_0
 
-    .line 16
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -160,14 +141,12 @@
 
     check-cast v0, Laqe;
 
-    .line 17
     invoke-virtual {v0, p1, p2}, Laqe;->a(Ljava/lang/Class;Ljava/lang/Class;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 18
     iget-object v0, v0, Laqe;->b:Ladz;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -176,7 +155,6 @@
 
     goto :goto_0
 
-    .line 12
     :catchall_0
     move-exception v0
 
@@ -184,7 +162,6 @@
 
     throw v0
 
-    .line 21
     :cond_2
     monitor-exit p0
 
@@ -194,8 +171,6 @@
 .method public final declared-synchronized a(Ljava/lang/String;Ladz;Ljava/lang/Class;Ljava/lang/Class;)V
     .locals 2
 
-    .prologue
-    .line 33
     monitor-enter p0
 
     :try_start_0
@@ -211,12 +186,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 34
     monitor-exit p0
 
     return-void
 
-    .line 33
     :catchall_0
     move-exception v0
 
@@ -228,8 +201,6 @@
 .method public final declared-synchronized a(Ljava/util/List;)V
     .locals 5
 
-    .prologue
-    .line 4
     monitor-enter p0
 
     :try_start_0
@@ -239,17 +210,14 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 5
     iget-object v1, p0, Laqd;->a:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 6
     iget-object v1, p0, Laqd;->a:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 7
     check-cast v0, Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -272,14 +240,12 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 8
     invoke-interface {p1, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 9
     iget-object v4, p0, Laqd;->a:Ljava/util/List;
 
     invoke-interface {v4, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -288,7 +254,6 @@
 
     goto :goto_0
 
-    .line 4
     :catchall_0
     move-exception v0
 
@@ -296,7 +261,6 @@
 
     throw v0
 
-    .line 11
     :cond_1
     monitor-exit p0
 
@@ -306,8 +270,6 @@
 .method public final declared-synchronized b(Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/List;
     .locals 5
 
-    .prologue
-    .line 22
     monitor-enter p0
 
     :try_start_0
@@ -315,7 +277,6 @@
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 23
     iget-object v0, p0, Laqd;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -335,7 +296,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 24
     iget-object v3, p0, Laqd;->b:Ljava/util/Map;
 
     invoke-interface {v3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -344,10 +304,8 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 25
     if-eqz v0, :cond_0
 
-    .line 26
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -366,7 +324,6 @@
 
     check-cast v0, Laqe;
 
-    .line 27
     invoke-virtual {v0, p1, p2}, Laqe;->a(Ljava/lang/Class;Ljava/lang/Class;)Z
 
     move-result v4
@@ -375,14 +332,12 @@
 
     iget-object v4, v0, Laqe;->a:Ljava/lang/Class;
 
-    .line 28
     invoke-interface {v1, v4}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 29
     iget-object v0, v0, Laqe;->a:Ljava/lang/Class;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -391,7 +346,6 @@
 
     goto :goto_0
 
-    .line 22
     :catchall_0
     move-exception v0
 
@@ -399,7 +353,6 @@
 
     throw v0
 
-    .line 32
     :cond_2
     monitor-exit p0
 

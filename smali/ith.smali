@@ -23,42 +23,33 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x1
 
     sput v0, Lith;->d:I
 
-    .line 2
     const/4 v0, 0x2
 
     sput v0, Lith;->a:I
 
-    .line 3
     const/4 v0, 0x3
 
     sput v0, Lith;->b:I
 
-    .line 4
     const/4 v0, 0x4
 
     sput v0, Lith;->c:I
 
-    .line 5
     const/4 v0, 0x5
 
     sput v0, Lith;->e:I
 
-    .line 6
     const/4 v0, 0x6
 
     sput v0, Lith;->f:I
 
-    .line 7
     const/4 v0, 0x7
 
     sput v0, Lith;->g:I
 
-    .line 8
     return-void
 .end method

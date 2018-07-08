@@ -18,8 +18,6 @@
 .method public constructor <init>(Lbmg;Liid;Liia;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbmn;->a:Lbmg;
 
     iput-object p2, p0, Lbmn;->b:Liid;
@@ -36,21 +34,16 @@
 .method public final a()V
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lbmn;->a:Lbmg;
 
     invoke-interface {v0}, Lbmg;->a()V
 
-    .line 5
     return-void
 .end method
 
 .method public final a(Lbmh;)V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbmn;->a:Lbmg;
 
     new-instance v1, Lbmo;
@@ -63,19 +56,15 @@
 
     invoke-interface {v0, v1}, Lbmg;->a(Lbmh;)V
 
-    .line 3
     return-void
 .end method
 
 .method public final b()V
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lbmn;->a:Lbmg;
 
     invoke-interface {v0}, Lbmg;->b()V
 
-    .line 7
     return-void
 .end method

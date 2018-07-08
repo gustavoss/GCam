@@ -11,8 +11,6 @@
 .method constructor <init>(Lbbd;Lbbd;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p2, p0, Lbbj;->a:Lbbd;
 
     invoke-direct {p0, p1}, Lbcg;-><init>(Lbbd;)V
@@ -25,15 +23,11 @@
 .method public final close()V
     .locals 1
 
-    .prologue
-    .line 2
     invoke-super {p0}, Lbcg;->close()V
 
-    .line 3
     iget-object v0, p0, Lbbj;->a:Lbbd;
 
     invoke-interface {v0}, Lbbd;->close()V
 
-    .line 4
     return-void
 .end method

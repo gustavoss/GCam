@@ -28,14 +28,10 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhus;->a:Lhui;
 
-    .line 2
     iget-object v0, v0, Lhui;->b:Ljava/util/concurrent/locks/Lock;
 
-    .line 3
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
     :try_start_0
@@ -50,17 +46,13 @@
 
     iget-object v0, p0, Lhus;->a:Lhui;
 
-    .line 4
     iget-object v0, v0, Lhui;->b:Ljava/util/concurrent/locks/Lock;
 
-    .line 5
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 13
     :goto_0
     return-void
 
-    .line 5
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Lhus;->a()V
@@ -70,10 +62,8 @@
 
     iget-object v0, p0, Lhus;->a:Lhui;
 
-    .line 6
     iget-object v0, v0, Lhui;->b:Ljava/util/concurrent/locks/Lock;
 
-    .line 7
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     goto :goto_0
@@ -84,10 +74,8 @@
     :try_start_2
     iget-object v1, p0, Lhus;->a:Lhui;
 
-    .line 8
     iget-object v1, v1, Lhui;->a:Lhuy;
 
-    .line 10
     iget-object v2, v1, Lhuy;->e:Lhva;
 
     const/4 v3, 0x2
@@ -102,13 +90,10 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 11
     iget-object v0, p0, Lhus;->a:Lhui;
 
-    .line 12
     iget-object v0, v0, Lhui;->b:Ljava/util/concurrent/locks/Lock;
 
-    .line 13
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     goto :goto_0
@@ -118,10 +103,8 @@
 
     iget-object v1, p0, Lhus;->a:Lhui;
 
-    .line 14
     iget-object v1, v1, Lhui;->b:Ljava/util/concurrent/locks/Lock;
 
-    .line 15
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw v0

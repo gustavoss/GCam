@@ -18,8 +18,6 @@
 .method constructor <init>(Lgga;Landroid/net/Uri;Lgho;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lghh;->a:Lgga;
@@ -36,8 +34,6 @@
 .method public final a(Ljava/lang/Object;)Lkey;
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lghh;->a:Lgga;
 
     iget-object v1, p0, Lghh;->b:Landroid/net/Uri;
@@ -46,18 +42,15 @@
 
     check-cast p1, Lepd;
 
-    .line 3
     iget-object v0, v0, Lgga;->s:Lgiy;
 
     invoke-virtual {v0, v1, v2, p1}, Lgiy;->a(Landroid/net/Uri;Lgho;Lepa;)V
 
-    .line 4
     const/4 v0, 0x0
 
     invoke-static {v0}, Lkek;->a(Ljava/lang/Object;)Lkey;
 
     move-result-object v0
 
-    .line 5
     return-object v0
 .end method

@@ -28,8 +28,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 65
     const-string v0, "HdrPlusShot"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -44,35 +42,26 @@
 .method public constructor <init>(Lcqm;Lcro;Lihr;Lcom/google/googlex/gcam/IShot;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget v0, Lep;->V:I
 
     iput v0, p0, Lcqw;->e:I
 
-    .line 3
     iput-object p1, p0, Lcqw;->f:Lcqm;
 
-    .line 4
     iput-object p2, p0, Lcqw;->a:Lcro;
 
-    .line 5
     iput-object p3, p0, Lcqw;->g:Lihr;
 
-    .line 6
     iput-object p4, p0, Lcqw;->b:Lcom/google/googlex/gcam/IShot;
 
-    .line 7
     invoke-virtual {p4}, Lcom/google/googlex/gcam/IShot;->shot_id()I
 
     move-result v0
 
     iput v0, p0, Lcqw;->c:I
 
-    .line 8
     return-void
 .end method
 
@@ -81,8 +70,6 @@
 .method public final declared-synchronized a()Z
     .locals 2
 
-    .prologue
-    .line 9
     monitor-enter p0
 
     :try_start_0
@@ -117,10 +104,8 @@
 .method public final declared-synchronized b()Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 18
     monitor-enter p0
 
     :try_start_0
@@ -132,14 +117,12 @@
 
     invoke-virtual {v1}, Libm;->close()V
 
-    .line 19
     iget v1, p0, Lcqw;->e:I
 
     sget v2, Lep;->V:I
 
     if-ne v1, v2, :cond_1
 
-    .line 20
     sget-object v0, Lcqw;->d:Ljava/lang/String;
 
     iget v1, p0, Lcqw;->c:I
@@ -166,7 +149,6 @@
 
     invoke-static {v0, v1}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 21
     iget-object v0, p0, Lcqw;->f:Lcqm;
 
     iget v1, p0, Lcqw;->c:I
@@ -175,10 +157,8 @@
 
     move-result v0
 
-    .line 22
     if-eqz v0, :cond_0
 
-    .line 23
     sget-object v1, Lcqw;->d:Ljava/lang/String;
 
     iget v2, p0, Lcqw;->c:I
@@ -205,26 +185,22 @@
 
     invoke-static {v1, v2}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 25
     :goto_0
     iget-object v1, p0, Lcqw;->g:Lihr;
 
     invoke-interface {v1}, Lihr;->close()V
 
-    .line 26
     sget v1, Lep;->X:I
 
     iput v1, p0, Lcqw;->e:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 33
     :goto_1
     monitor-exit p0
 
     return v0
 
-    .line 24
     :cond_0
     :try_start_1
     sget-object v1, Lcqw;->d:Ljava/lang/String;
@@ -257,7 +233,6 @@
 
     goto :goto_0
 
-    .line 18
     :catchall_0
     move-exception v0
 
@@ -265,7 +240,6 @@
 
     throw v0
 
-    .line 28
     :cond_1
     :try_start_2
     sget-object v1, Lcqw;->d:Ljava/lang/String;
@@ -280,21 +254,18 @@
 
     iget v5, p0, Lcqw;->c:I
 
-    .line 29
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
     aput-object v5, v3, v4
 
-    .line 31
     const/4 v4, 0x0
 
     invoke-static {v4, v2, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 32
     invoke-static {v1, v2}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -305,10 +276,8 @@
 .method public final declared-synchronized c()Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 34
     monitor-enter p0
 
     :try_start_0
@@ -318,7 +287,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 35
     sget-object v0, Lcqw;->d:Ljava/lang/String;
 
     iget v1, p0, Lcqw;->c:I
@@ -345,7 +313,6 @@
 
     invoke-static {v0, v1}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 36
     iget-object v0, p0, Lcqw;->f:Lcqm;
 
     iget v1, p0, Lcqw;->c:I
@@ -354,10 +321,8 @@
 
     move-result v0
 
-    .line 37
     if-eqz v0, :cond_0
 
-    .line 38
     sget-object v1, Lcqw;->d:Ljava/lang/String;
 
     iget v2, p0, Lcqw;->c:I
@@ -384,32 +349,27 @@
 
     invoke-static {v1, v2}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 39
     sget v1, Lep;->W:I
 
     iput v1, p0, Lcqw;->e:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 49
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 40
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcqw;->g:Lihr;
 
     invoke-interface {v1}, Lihr;->close()V
 
-    .line 41
     sget v1, Lep;->X:I
 
     iput v1, p0, Lcqw;->e:I
 
-    .line 42
     iget-object v1, p0, Lcqw;->a:Lcro;
 
     invoke-virtual {v1}, Lcro;->b()Libm;
@@ -422,7 +382,6 @@
 
     goto :goto_0
 
-    .line 34
     :catchall_0
     move-exception v0
 
@@ -430,7 +389,6 @@
 
     throw v0
 
-    .line 44
     :cond_1
     :try_start_2
     sget-object v1, Lcqw;->d:Ljava/lang/String;
@@ -445,21 +403,18 @@
 
     iget v5, p0, Lcqw;->c:I
 
-    .line 45
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
     aput-object v5, v3, v4
 
-    .line 47
     const/4 v4, 0x0
 
     invoke-static {v4, v2, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 48
     invoke-static {v1, v2}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -470,8 +425,6 @@
 .method public final declared-synchronized close()V
     .locals 5
 
-    .prologue
-    .line 10
     monitor-enter p0
 
     :try_start_0
@@ -481,7 +434,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 11
     sget-object v0, Lcqw;->d:Ljava/lang/String;
 
     const-string v1, "Attempted to close() an HdrPlusShot in the CAPTURE_STARTED state without first calling abortCapture() or endCapture(). Invoking abortCapture() on shot_id %d. Stack trace:\n%s"
@@ -494,7 +446,6 @@
 
     iget v4, p0, Lcqw;->c:I
 
-    .line 12
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -509,28 +460,23 @@
 
     aput-object v4, v2, v3
 
-    .line 14
     const/4 v3, 0x0
 
     invoke-static {v3, v1, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 15
     invoke-static {v0, v1}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 16
     invoke-virtual {p0}, Lcqw;->b()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 17
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 10
     :catchall_0
     move-exception v0
 
@@ -542,10 +488,8 @@
 .method public final declared-synchronized d()Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 50
     monitor-enter p0
 
     :try_start_0
@@ -557,7 +501,6 @@
 
     invoke-virtual {v1}, Libm;->close()V
 
-    .line 51
     iget v1, p0, Lcqw;->e:I
 
     sget v2, Lep;->W:I
@@ -570,7 +513,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 52
     :cond_0
     sget-object v0, Lcqw;->d:Ljava/lang/String;
 
@@ -598,7 +540,6 @@
 
     invoke-static {v0, v1}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 53
     iget-object v0, p0, Lcqw;->f:Lcqm;
 
     iget v1, p0, Lcqw;->c:I
@@ -607,10 +548,8 @@
 
     move-result v0
 
-    .line 54
     if-eqz v0, :cond_1
 
-    .line 55
     sget-object v1, Lcqw;->d:Ljava/lang/String;
 
     iget v2, p0, Lcqw;->c:I
@@ -637,20 +576,17 @@
 
     invoke-static {v1, v2}, Lbkl;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 56
     iget-object v1, p0, Lcqw;->g:Lihr;
 
     invoke-interface {v1}, Lihr;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 64
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 57
     :cond_1
     :try_start_1
     sget-object v1, Lcqw;->d:Ljava/lang/String;
@@ -683,7 +619,6 @@
 
     goto :goto_0
 
-    .line 50
     :catchall_0
     move-exception v0
 
@@ -691,7 +626,6 @@
 
     throw v0
 
-    .line 59
     :cond_2
     :try_start_2
     sget-object v1, Lcqw;->d:Ljava/lang/String;
@@ -706,21 +640,18 @@
 
     iget v5, p0, Lcqw;->c:I
 
-    .line 60
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
     aput-object v5, v3, v4
 
-    .line 62
     const/4 v4, 0x0
 
     invoke-static {v4, v2, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 63
     invoke-static {v1, v2}, Lbkl;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0

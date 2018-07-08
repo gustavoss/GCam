@@ -69,7 +69,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -80,7 +79,6 @@
 
     const/4 v3, 0x0
 
-    .line 3
     new-instance v0, Lfvq;
 
     const-string v1, "UNKNOWN"
@@ -89,7 +87,6 @@
 
     sput-object v0, Lfvq;->a:Lfvq;
 
-    .line 4
     new-instance v0, Lfvq;
 
     const-string v1, "TIMER_ZERO_SECONDS"
@@ -98,7 +95,6 @@
 
     sput-object v0, Lfvq;->b:Lfvq;
 
-    .line 5
     new-instance v0, Lfvq;
 
     const-string v1, "TIMER_THREE_SECONDS"
@@ -107,7 +103,6 @@
 
     sput-object v0, Lfvq;->c:Lfvq;
 
-    .line 6
     new-instance v0, Lfvq;
 
     const-string v1, "TIMER_TEN_SECONDS"
@@ -116,7 +111,6 @@
 
     sput-object v0, Lfvq;->d:Lfvq;
 
-    .line 7
     new-instance v0, Lfvq;
 
     const-string v1, "HDR_AUTO"
@@ -125,7 +119,6 @@
 
     sput-object v0, Lfvq;->e:Lfvq;
 
-    .line 8
     new-instance v0, Lfvq;
 
     const-string v1, "HDR_ON"
@@ -136,7 +129,6 @@
 
     sput-object v0, Lfvq;->f:Lfvq;
 
-    .line 9
     new-instance v0, Lfvq;
 
     const-string v1, "HDR_OFF"
@@ -147,7 +139,6 @@
 
     sput-object v0, Lfvq;->g:Lfvq;
 
-    .line 10
     new-instance v0, Lfvq;
 
     const-string v1, "HDR_READY"
@@ -158,7 +149,6 @@
 
     sput-object v0, Lfvq;->h:Lfvq;
 
-    .line 11
     new-instance v0, Lfvq;
 
     const-string v1, "PHOTO_FLASH_ON"
@@ -169,7 +159,6 @@
 
     sput-object v0, Lfvq;->i:Lfvq;
 
-    .line 12
     new-instance v0, Lfvq;
 
     const-string v1, "PHOTO_FLASH_OFF"
@@ -180,7 +169,6 @@
 
     sput-object v0, Lfvq;->j:Lfvq;
 
-    .line 13
     new-instance v0, Lfvq;
 
     const-string v1, "PHOTO_FLASH_AUTO"
@@ -191,7 +179,6 @@
 
     sput-object v0, Lfvq;->k:Lfvq;
 
-    .line 14
     new-instance v0, Lfvq;
 
     const-string v1, "PHOTO_FLASH_GRAYED"
@@ -202,7 +189,6 @@
 
     sput-object v0, Lfvq;->B:Lfvq;
 
-    .line 15
     new-instance v0, Lfvq;
 
     const-string v1, "PHOTO_FLASH_UNGRAYED"
@@ -213,7 +199,6 @@
 
     sput-object v0, Lfvq;->C:Lfvq;
 
-    .line 16
     new-instance v0, Lfvq;
 
     const-string v1, "VIDEO_FLASH_ON"
@@ -224,7 +209,6 @@
 
     sput-object v0, Lfvq;->l:Lfvq;
 
-    .line 17
     new-instance v0, Lfvq;
 
     const-string v1, "VIDEO_FLASH_OFF"
@@ -235,7 +219,6 @@
 
     sput-object v0, Lfvq;->m:Lfvq;
 
-    .line 18
     new-instance v0, Lfvq;
 
     const-string v1, "MICROVIDEO_ON"
@@ -246,7 +229,6 @@
 
     sput-object v0, Lfvq;->n:Lfvq;
 
-    .line 19
     new-instance v0, Lfvq;
 
     const-string v1, "MICROVIDEO_AUTO"
@@ -257,7 +239,6 @@
 
     sput-object v0, Lfvq;->o:Lfvq;
 
-    .line 20
     new-instance v0, Lfvq;
 
     const-string v1, "MICROVIDEO_OFF"
@@ -268,7 +249,6 @@
 
     sput-object v0, Lfvq;->p:Lfvq;
 
-    .line 21
     new-instance v0, Lfvq;
 
     const-string v1, "FPS_30"
@@ -279,7 +259,6 @@
 
     sput-object v0, Lfvq;->q:Lfvq;
 
-    .line 22
     new-instance v0, Lfvq;
 
     const-string v1, "FPS_60"
@@ -290,7 +269,6 @@
 
     sput-object v0, Lfvq;->r:Lfvq;
 
-    .line 23
     new-instance v0, Lfvq;
 
     const-string v1, "WHITE_BALANCE_AUTO"
@@ -301,7 +279,6 @@
 
     sput-object v0, Lfvq;->s:Lfvq;
 
-    .line 24
     new-instance v0, Lfvq;
 
     const-string v1, "WHITE_BALANCE_CLOUDY"
@@ -312,7 +289,6 @@
 
     sput-object v0, Lfvq;->t:Lfvq;
 
-    .line 25
     new-instance v0, Lfvq;
 
     const-string v1, "WHITE_BALANCE_SUNNY"
@@ -323,7 +299,6 @@
 
     sput-object v0, Lfvq;->u:Lfvq;
 
-    .line 26
     new-instance v0, Lfvq;
 
     const-string v1, "WHITE_BALANCE_INCANDESCENT"
@@ -334,7 +309,6 @@
 
     sput-object v0, Lfvq;->v:Lfvq;
 
-    .line 27
     new-instance v0, Lfvq;
 
     const-string v1, "WHITE_BALANCE_FLUORESCENT"
@@ -345,7 +319,6 @@
 
     sput-object v0, Lfvq;->w:Lfvq;
 
-    .line 28
     new-instance v0, Lfvq;
 
     const-string v1, "VESPER_ON"
@@ -356,7 +329,6 @@
 
     sput-object v0, Lfvq;->x:Lfvq;
 
-    .line 29
     new-instance v0, Lfvq;
 
     const-string v1, "VESPER_OFF"
@@ -367,7 +339,6 @@
 
     sput-object v0, Lfvq;->y:Lfvq;
 
-    .line 30
     new-instance v0, Lfvq;
 
     const-string v1, "SELECTED"
@@ -378,7 +349,6 @@
 
     sput-object v0, Lfvq;->z:Lfvq;
 
-    .line 31
     new-instance v0, Lfvq;
 
     const-string v1, "UNSELECTED"
@@ -389,7 +359,6 @@
 
     sput-object v0, Lfvq;->A:Lfvq;
 
-    .line 32
     const/16 v0, 0x1d
 
     new-array v0, v0, [Lfvq;
@@ -566,8 +535,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -576,8 +543,6 @@
 .method public static values()[Lfvq;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lfvq;->D:[Lfvq;
 
     invoke-virtual {v0}, [Lfvq;->clone()Ljava/lang/Object;

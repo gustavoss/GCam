@@ -14,11 +14,8 @@
 .method public constructor <init>(Liid;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const-class v0, Leyv;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -31,7 +28,6 @@
 
     iput-object v0, p0, Leyv;->a:Liid;
 
-    .line 3
     return-void
 .end method
 
@@ -40,8 +36,6 @@
 .method public final a(Liob;J)V
     .locals 4
 
-    .prologue
-    .line 4
     iget-object v0, p0, Leyv;->a:Liid;
 
     const/16 v1, 0x27
@@ -66,9 +60,7 @@
 
     invoke-interface {v0, v1}, Liid;->d(Ljava/lang/String;)V
 
-    .line 5
     invoke-interface {p1}, Liob;->close()V
 
-    .line 6
     return-void
 .end method

@@ -16,8 +16,6 @@
 .method constructor <init>(Lfje;Lfis;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfjd;->a:Lfje;
 
     iput-object p2, p0, Lfjd;->b:Lfis;
@@ -32,8 +30,6 @@
 .method public final a(Lfjl;)Lkey;
     .locals 6
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lfjd;->a:Lfje;
 
     invoke-virtual {p1}, Lfjl;->f()J
@@ -48,13 +44,10 @@
 
     move-result-object v1
 
-    .line 3
     invoke-static {v1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     iget-wide v2, v1, Lfgp;->a:J
 
-    .line 6
     invoke-virtual {p1}, Lfjl;->f()J
 
     move-result-wide v4
@@ -68,17 +61,14 @@
     :goto_0
     invoke-static {v0}, Ljiy;->b(Z)V
 
-    .line 7
     iget-object v0, p0, Lfjd;->a:Lfje;
 
     invoke-virtual {v0, v1}, Lfje;->a(Lfgp;)Z
 
-    .line 8
     sget-object v0, Lfjn;->b:Lfjm;
 
     invoke-virtual {p1, v0, v1}, Lfjl;->a(Lfjm;Ljava/lang/Object;)Lfjl;
 
-    .line 9
     iget-object v0, p0, Lfjd;->b:Lfis;
 
     invoke-interface {v0, p1}, Lfis;->a(Lfjl;)Lkey;
@@ -87,7 +77,6 @@
 
     return-object v0
 
-    .line 6
     :cond_0
     const/4 v0, 0x0
 
@@ -97,8 +86,6 @@
 .method public final a()Z
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lfjd;->b:Lfis;
 
     invoke-interface {v0}, Lfis;->a()Z

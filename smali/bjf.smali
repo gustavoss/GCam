@@ -14,8 +14,6 @@
 .method constructor <init>(Lbje;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbjf;->a:Lbje;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,20 +26,15 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 2
     :try_start_0
     iget-object v0, p0, Lbjf;->a:Lbje;
 
     iget-object v0, v0, Lbje;->b:Lbjd;
 
-    .line 3
     iget-object v0, v0, Lbjd;->c:Lbip;
 
-    .line 4
     invoke-interface {v0}, Lbip;->g()V
 
-    .line 5
     iget-object v0, p0, Lbjf;->a:Lbje;
 
     iget-object v0, v0, Lbje;->a:Lkfk;
@@ -52,18 +45,14 @@
     :try_end_0
     .catch Lihb; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 11
     :goto_0
     return-void
 
-    .line 7
     :catch_0
     move-exception v0
 
-    .line 8
     sget-object v1, Lbjd;->a:Ljava/lang/String;
 
-    .line 9
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -98,7 +87,6 @@
 
     invoke-static {v1, v0}, Lbkl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     iget-object v0, p0, Lbjf;->a:Lbje;
 
     iget-object v0, v0, Lbje;->a:Lkfk;

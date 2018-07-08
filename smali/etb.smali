@@ -25,11 +25,8 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Letb;->a:Leta;
 
-    .line 2
     iget-object v0, v0, Leta;->d:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -49,12 +46,10 @@
 
     check-cast v0, Letw;
 
-    .line 3
     invoke-interface {v0}, Letw;->close()V
 
     goto :goto_0
 
-    .line 5
     :cond_0
     return-void
 .end method

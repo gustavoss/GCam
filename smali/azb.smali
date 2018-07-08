@@ -25,15 +25,11 @@
 .method public final run()V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lazb;->a:Laza;
 
-    .line 2
     iget-object v0, v0, Laza;->a:Layx;
 
     invoke-interface {v0}, Layx;->a()V
 
-    .line 3
     return-void
 .end method

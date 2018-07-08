@@ -23,14 +23,10 @@
 .method public constructor <init>(I)V
     .locals 4
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     if-gtz p1, :cond_0
 
-    .line 3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "maxSize <= 0"
@@ -39,11 +35,9 @@
 
     throw v0
 
-    .line 4
     :cond_0
     iput p1, p0, Lgo;->c:I
 
-    .line 5
     new-instance v0, Ljava/util/LinkedHashMap;
 
     const/4 v1, 0x0
@@ -56,7 +50,6 @@
 
     iput-object v0, p0, Lgo;->a:Ljava/util/LinkedHashMap;
 
-    .line 6
     return-void
 .end method
 
@@ -65,11 +58,8 @@
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 7
     if-nez p1, :cond_0
 
-    .line 8
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "key == null"
@@ -78,11 +68,9 @@
 
     throw v0
 
-    .line 9
     :cond_0
     monitor-enter p0
 
-    .line 10
     :try_start_0
     iget-object v0, p0, Lgo;->a:Ljava/util/LinkedHashMap;
 
@@ -90,24 +78,19 @@
 
     move-result-object v0
 
-    .line 11
     if-eqz v0, :cond_1
 
-    .line 12
     iget v1, p0, Lgo;->f:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lgo;->f:I
 
-    .line 13
     monitor-exit p0
 
-    .line 16
     :goto_0
     return-object v0
 
-    .line 14
     :cond_1
     iget v0, p0, Lgo;->g:I
 
@@ -115,15 +98,12 @@
 
     iput v0, p0, Lgo;->g:I
 
-    .line 15
     monitor-exit p0
 
-    .line 16
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 15
     :catchall_0
     move-exception v0
 
@@ -137,13 +117,10 @@
 .method public final a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 17
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 18
     :cond_0
     new-instance v0, Ljava/lang/NullPointerException;
 
@@ -153,11 +130,9 @@
 
     throw v0
 
-    .line 19
     :cond_1
     monitor-enter p0
 
-    .line 20
     :try_start_0
     iget v0, p0, Lgo;->d:I
 
@@ -165,46 +140,36 @@
 
     iput v0, p0, Lgo;->d:I
 
-    .line 21
     iget v0, p0, Lgo;->b:I
 
-    .line 23
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lgo;->b:I
 
-    .line 24
     iget-object v0, p0, Lgo;->a:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 25
     if-eqz v1, :cond_2
 
-    .line 26
     iget v0, p0, Lgo;->b:I
 
-    .line 28
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lgo;->b:I
 
-    .line 29
     :cond_2
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 30
     iget v2, p0, Lgo;->c:I
 
-    .line 31
     :goto_0
     monitor-enter p0
 
-    .line 32
     :try_start_1
     iget v0, p0, Lgo;->b:I
 
@@ -222,7 +187,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 33
     :cond_3
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -256,7 +220,6 @@
 
     throw v0
 
-    .line 44
     :catchall_0
     move-exception v0
 
@@ -266,7 +229,6 @@
 
     throw v0
 
-    .line 29
     :catchall_1
     move-exception v0
 
@@ -277,7 +239,6 @@
 
     throw v0
 
-    .line 34
     :cond_4
     :try_start_3
     iget v0, p0, Lgo;->b:I
@@ -292,14 +253,11 @@
 
     if-eqz v0, :cond_6
 
-    .line 35
     :cond_5
     monitor-exit p0
 
-    .line 45
     return-object v1
 
-    .line 36
     :cond_6
     iget-object v0, p0, Lgo;->a:Ljava/util/LinkedHashMap;
 
@@ -317,35 +275,28 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 37
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 38
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    .line 39
     iget-object v0, p0, Lgo;->a:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0, v3}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 40
     iget v0, p0, Lgo;->b:I
 
-    .line 42
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lgo;->b:I
 
-    .line 43
     iget v0, p0, Lgo;->e:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lgo;->e:I
 
-    .line 44
     monitor-exit p0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -356,10 +307,8 @@
 .method public final declared-synchronized toString()Ljava/lang/String;
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 46
     monitor-enter p0
 
     :try_start_0
@@ -369,7 +318,6 @@
 
     add-int/2addr v1, v2
 
-    .line 47
     if-eqz v1, :cond_0
 
     iget v0, p0, Lgo;->f:I
@@ -378,7 +326,6 @@
 
     div-int/2addr v0, v1
 
-    .line 48
     :cond_0
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -392,7 +339,6 @@
 
     iget v5, p0, Lgo;->c:I
 
-    .line 49
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -427,7 +373,6 @@
 
     aput-object v0, v3, v4
 
-    .line 50
     invoke-static {v1, v2, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -438,7 +383,6 @@
 
     return-object v0
 
-    .line 46
     :catchall_0
     move-exception v0
 

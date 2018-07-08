@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 26
     const/16 v0, 0xe
 
     new-array v0, v0, [B
@@ -45,34 +43,26 @@
 .method public static a([BLjava/io/OutputStream;Lwk;)V
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v0, p0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 2
     invoke-static {v0, p1, p2}, Leqd;->a(Ljava/io/InputStream;Ljava/io/OutputStream;Lwk;)Z
 
-    .line 3
     return-void
 .end method
 
 .method public static b([BLjava/io/OutputStream;Lwk;)V
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 4
     new-instance v1, Lxr;
 
     invoke-direct {v1}, Lxr;-><init>()V
 
-    .line 5
     invoke-virtual {v1}, Lxr;->b()Lxr;
 
-    .line 6
     :try_start_0
     invoke-static {p2, v1}, Lwl;->a(Lwk;Lxr;)[B
     :try_end_0
@@ -80,7 +70,6 @@
 
     move-result-object v1
 
-    .line 10
     const/4 v2, 0x0
 
     :try_start_1
@@ -90,33 +79,27 @@
 
     invoke-virtual {p1, p0, v2, v3}, Ljava/io/OutputStream;->write([BII)V
 
-    .line 11
     sget-object v2, Lbdb;->a:[B
 
     invoke-virtual {p1, v2}, Ljava/io/OutputStream;->write([B)V
 
-    .line 12
     invoke-virtual {p1, v1}, Ljava/io/OutputStream;->write([B)V
 
-    .line 14
     const/16 v1, 0x102
 
     new-array v1, v1, [B
 
-    .line 15
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
     aput-byte v3, v1, v2
 
-    .line 16
     :goto_0
     const/16 v2, 0x100
 
     if-ge v0, v2, :cond_0
 
-    .line 17
     add-int/lit8 v2, v0, 0x1
 
     rsub-int v3, v0, 0xff
@@ -127,23 +110,19 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 18
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 8
     :catch_0
     move-exception v0
 
-    .line 9
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 19
     :cond_0
     const/16 v0, 0x101
 
@@ -152,23 +131,18 @@
     :try_start_2
     aput-byte v2, v1, v0
 
-    .line 21
     invoke-virtual {p1, v1}, Ljava/io/OutputStream;->write([B)V
 
-    .line 22
     const/16 v0, 0x3b
 
     invoke-virtual {p1, v0}, Ljava/io/OutputStream;->write(I)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 23
     invoke-virtual {p1}, Ljava/io/OutputStream;->close()V
 
-    .line 24
     return-void
 
-    .line 25
     :catchall_0
     move-exception v0
 

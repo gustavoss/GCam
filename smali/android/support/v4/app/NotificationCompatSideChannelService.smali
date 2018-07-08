@@ -7,11 +7,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 2
     return-void
 .end method
 
@@ -26,8 +23,6 @@
 .method checkPermission(ILjava/lang/String;)V
     .locals 4
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Landroid/support/v4/app/NotificationCompatSideChannelService;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -45,23 +40,19 @@
 
     aget-object v3, v1, v0
 
-    .line 7
     invoke-virtual {v3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 8
     return-void
 
-    .line 9
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 10
     :cond_1
     new-instance v0, Ljava/lang/SecurityException;
 
@@ -100,10 +91,8 @@
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 3
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -116,7 +105,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     :cond_0
     return-object v2
 .end method

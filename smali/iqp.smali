@@ -11,16 +11,12 @@
 .method protected constructor <init>([I)V
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     array-length v0, p1
 
     if-lez v0, :cond_0
@@ -30,7 +26,6 @@
     :goto_0
     invoke-static {v0}, Ljiy;->a(Z)V
 
-    .line 4
     array-length v0, p1
 
     :goto_1
@@ -38,10 +33,8 @@
 
     aget v2, p1, v1
 
-    .line 5
     if-gez v2, :cond_1
 
-    .line 6
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const/16 v1, 0x21
@@ -71,16 +64,13 @@
     :cond_0
     move v0, v1
 
-    .line 3
     goto :goto_0
 
-    .line 7
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 8
     :cond_2
     invoke-virtual {p1}, [I->clone()Ljava/lang/Object;
 
@@ -90,15 +80,12 @@
 
     iput-object v0, p0, Liqp;->a:[I
 
-    .line 9
     return-void
 .end method
 
 .method public static a(II)Liqq;
     .locals 1
 
-    .prologue
-    .line 10
     new-instance v0, Liqq;
 
     invoke-direct {v0, p0, p1}, Liqq;-><init>(II)V
@@ -111,10 +98,8 @@
 .method public final a()I
     .locals 2
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 11
     iget-object v1, p0, Liqp;->a:[I
 
     array-length v1, v1
@@ -132,19 +117,14 @@
 .method public final b()Liqq;
     .locals 4
 
-    .prologue
-    .line 12
-    .line 13
     iget-object v0, p0, Liqp;->a:[I
 
     array-length v0, v0
 
-    .line 15
     const/4 v1, 0x2
 
     if-eq v0, v1, :cond_0
 
-    .line 16
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const/16 v2, 0x2e
@@ -177,7 +157,6 @@
 
     throw v1
 
-    .line 18
     :cond_0
     iget-object v0, p0, Liqp;->a:[I
 
@@ -185,7 +164,6 @@
 
     aget v0, v0, v1
 
-    .line 19
     invoke-virtual {p0}, Liqp;->a()I
 
     move-result v1
@@ -200,33 +178,25 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 20
     if-ne p0, p1, :cond_0
 
-    .line 21
     const/4 v0, 0x1
 
-    .line 25
     :goto_0
     return v0
 
-    .line 22
     :cond_0
     instance-of v0, p1, Liqp;
 
     if-nez v0, :cond_1
 
-    .line 23
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 24
     :cond_1
     check-cast p1, Liqp;
 
-    .line 25
     iget-object v0, p0, Liqp;->a:[I
 
     iget-object v1, p1, Liqp;->a:[I
@@ -241,8 +211,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 26
     iget-object v0, p0, Liqp;->a:[I
 
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
@@ -255,12 +223,10 @@
 .method public toString()Ljava/lang/String;
     .locals 7
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 27
     sget-object v3, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const-string v4, "Dimensions = %s, Volume = %d)"
@@ -271,21 +237,18 @@
 
     iget-object v0, p0, Liqp;->a:[I
 
-    .line 28
     invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v5, v2
 
-    .line 29
     iget-object v0, p0, Liqp;->a:[I
 
     array-length v0, v0
 
     if-nez v0, :cond_1
 
-    .line 36
     :cond_0
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -293,14 +256,12 @@
 
     aput-object v0, v5, v1
 
-    .line 37
     invoke-static {v3, v4, v5}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 31
     :cond_1
     iget-object v0, p0, Liqp;->a:[I
 
@@ -310,7 +271,6 @@
 
     move v0, v1
 
-    .line 32
     :goto_0
     iget-object v6, p0, Liqp;->a:[I
 
@@ -318,14 +278,12 @@
 
     if-ge v0, v6, :cond_0
 
-    .line 33
     iget-object v6, p0, Liqp;->a:[I
 
     aget v6, v6, v0
 
     mul-int/2addr v2, v6
 
-    .line 34
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0

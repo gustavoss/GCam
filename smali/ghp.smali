@@ -14,8 +14,6 @@
 .method constructor <init>(Lgga;)V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lghp;->a:Lgga;
@@ -26,8 +24,6 @@
 .method public static a(Lgab;Ljava/io/InputStream;IIILcom/google/android/libraries/camera/exif/ExifInterface;)Lkey;
     .locals 3
 
-    .prologue
-    .line 2
     new-instance v0, Lghr;
 
     new-instance v1, Lihs;
@@ -38,12 +34,10 @@
 
     invoke-direct {v0, v1, v2}, Lghr;-><init>(Lihs;Lioy;)V
 
-    .line 3
     invoke-virtual {v0, p5}, Lghr;->a(Lcom/google/android/libraries/camera/exif/ExifInterface;)Lghr;
 
     move-result-object v0
 
-    .line 4
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -52,7 +46,6 @@
 
     move-result-object v0
 
-    .line 5
     invoke-interface {p0, p1, v0}, Lgab;->a(Ljava/io/InputStream;Lghr;)Lkey;
 
     move-result-object v0
@@ -65,8 +58,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 1
     new-instance v1, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v1, p1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
@@ -93,21 +84,16 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 4
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lghp;->a:Lgga;
 
     check-cast p1, Lepd;
 
-    .line 8
     if-eqz p1, :cond_0
 
-    .line 9
     invoke-virtual {p1}, Lepd;->e()Z
 
     move-result v1
 
-    .line 10
     const/16 v2, 0x21
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -130,7 +116,6 @@
 
     invoke-virtual {v0, v1}, Lgga;->a(Ljava/lang/String;)V
 
-    .line 11
     :cond_0
     return-void
 .end method

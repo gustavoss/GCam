@@ -28,42 +28,32 @@
 .method public constructor <init>(Lfar;Lfzj;Landroid/view/View;Licm;Landroid/content/Context;)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lfze;->d:Ljava/lang/Object;
 
-    .line 3
     iput-boolean v3, p0, Lfze;->e:Z
 
-    .line 4
     sget v0, Lep;->aJ:I
 
     iput v0, p0, Lfze;->f:I
 
-    .line 5
     iput-object p1, p0, Lfze;->a:Lfar;
 
-    .line 6
     iput-object p2, p0, Lfze;->c:Lfzj;
 
-    .line 7
     iput-object p3, p0, Lfze;->h:Landroid/view/View;
 
-    .line 8
     invoke-interface {p1}, Lfar;->f()Lfaq;
 
     move-result-object v0
 
-    .line 9
     invoke-virtual {p5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -78,7 +68,6 @@
 
     move-result-object v0
 
-    .line 10
     invoke-virtual {v0, v3}, Lfaq;->a(Z)Lfaq;
 
     move-result-object v0
@@ -89,12 +78,10 @@
 
     iput-object v0, p0, Lfze;->g:Lfap;
 
-    .line 11
     invoke-interface {p1}, Lfar;->f()Lfaq;
 
     move-result-object v0
 
-    .line 12
     invoke-virtual {p5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -109,7 +96,6 @@
 
     move-result-object v0
 
-    .line 13
     invoke-virtual {v0, v3}, Lfaq;->a(Z)Lfaq;
 
     move-result-object v0
@@ -120,17 +106,14 @@
 
     iput-object v0, p0, Lfze;->b:Lfap;
 
-    .line 14
     if-eqz p2, :cond_0
 
-    .line 15
     new-instance v0, Lfzk;
 
     invoke-direct {v0, p0, p4}, Lfzk;-><init>(Lfze;Licm;)V
 
     invoke-interface {p2, v0}, Lfzj;->a(Lfzk;)V
 
-    .line 16
     :cond_0
     return-void
 .end method
@@ -140,26 +123,20 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 17
     iget v0, p0, Lfze;->f:I
 
     sget v1, Lep;->aJ:I
 
     if-eq v0, v1, :cond_0
 
-    .line 18
     sget v0, Lep;->aJ:I
 
     iput v0, p0, Lfze;->f:I
 
-    .line 19
     invoke-virtual {p0}, Lfze;->b()V
 
-    .line 20
     invoke-virtual {p0}, Lfze;->d()V
 
-    .line 21
     :cond_0
     return-void
 .end method
@@ -167,46 +144,37 @@
 .method public final b()V
     .locals 2
 
-    .prologue
-    .line 28
     iget-object v0, p0, Lfze;->a:Lfar;
 
     iget-object v1, p0, Lfze;->g:Lfap;
 
     invoke-interface {v0, v1}, Lfar;->b(Lfap;)V
 
-    .line 29
     iget-object v0, p0, Lfze;->a:Lfar;
 
     iget-object v1, p0, Lfze;->b:Lfap;
 
     invoke-interface {v0, v1}, Lfar;->b(Lfap;)V
 
-    .line 30
     return-void
 .end method
 
 .method public final c()V
     .locals 2
 
-    .prologue
-    .line 31
     iget-object v1, p0, Lfze;->d:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 32
     :try_start_0
     sget v0, Lep;->aJ:I
 
     iput v0, p0, Lfze;->f:I
 
-    .line 33
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lfze;->e:Z
 
-    .line 34
     monitor-exit v1
 
     return-void
@@ -224,32 +192,25 @@
 .method public final close()V
     .locals 3
 
-    .prologue
-    .line 22
     iget-object v1, p0, Lfze;->d:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 23
     const/4 v0, 0x0
 
     :try_start_0
     iput-boolean v0, p0, Lfze;->e:Z
 
-    .line 24
     invoke-virtual {p0}, Lfze;->a()V
 
-    .line 25
     invoke-virtual {p0}, Lfze;->d()V
 
-    .line 26
     iget-object v0, p0, Lfze;->c:Lfzj;
 
     const/4 v2, 0x0
 
     invoke-interface {v0, v2}, Lfzj;->a(Lfzk;)V
 
-    .line 27
     monitor-exit v1
 
     return-void
@@ -267,13 +228,10 @@
 .method public final d()V
     .locals 2
 
-    .prologue
-    .line 35
     iget-object v0, p0, Lfze;->h:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 36
     iget-object v0, p0, Lfze;->h:Landroid/view/View;
 
     new-instance v1, Lfzf;
@@ -282,7 +240,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    .line 37
     :cond_0
     return-void
 .end method

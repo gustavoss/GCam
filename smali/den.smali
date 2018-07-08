@@ -69,11 +69,8 @@
 .method public constructor <init>(Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;Lkhp;)V
     .locals 2
 
-    .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     const/4 v1, 0x1
 
     invoke-static {p1, v1}, Lden;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -84,7 +81,6 @@
 
     iput-object v1, p0, Lden;->a:Lkhp;
 
-    .line 51
     const/4 v1, 0x2
 
     invoke-static {p2, v1}, Lden;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -95,7 +91,6 @@
 
     iput-object v1, p0, Lden;->b:Lkhp;
 
-    .line 52
     const/4 v1, 0x3
 
     invoke-static {p3, v1}, Lden;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -106,7 +101,6 @@
 
     iput-object v1, p0, Lden;->c:Lkhp;
 
-    .line 53
     const/4 v1, 0x4
 
     invoke-static {p4, v1}, Lden;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -117,7 +111,6 @@
 
     iput-object v1, p0, Lden;->d:Lkhp;
 
-    .line 54
     const/4 v1, 0x5
 
     invoke-static {p5, v1}, Lden;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -128,7 +121,6 @@
 
     iput-object v1, p0, Lden;->e:Lkhp;
 
-    .line 55
     const/4 v1, 0x6
 
     invoke-static {p6, v1}, Lden;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -139,7 +131,6 @@
 
     iput-object v1, p0, Lden;->f:Lkhp;
 
-    .line 56
     const/4 v1, 0x7
 
     invoke-static {p7, v1}, Lden;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -150,7 +141,6 @@
 
     iput-object v1, p0, Lden;->g:Lkhp;
 
-    .line 57
     const/16 v1, 0x8
 
     invoke-static {p8, v1}, Lden;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -161,7 +151,6 @@
 
     iput-object v1, p0, Lden;->h:Lkhp;
 
-    .line 58
     const/16 v1, 0x9
 
     invoke-static {p9, v1}, Lden;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -172,7 +161,6 @@
 
     iput-object v1, p0, Lden;->i:Lkhp;
 
-    .line 59
     const/16 v1, 0xa
 
     invoke-static {p10, v1}, Lden;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -183,7 +171,6 @@
 
     iput-object v1, p0, Lden;->j:Lkhp;
 
-    .line 60
     const/16 v1, 0xb
 
     invoke-static {p11, v1}, Lden;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -194,7 +181,6 @@
 
     iput-object v1, p0, Lden;->k:Lkhp;
 
-    .line 61
     const/16 v1, 0xc
 
     invoke-static {p12, v1}, Lden;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -205,10 +191,8 @@
 
     iput-object v1, p0, Lden;->l:Lkhp;
 
-    .line 62
     const/16 v1, 0xd
 
-    .line 63
     invoke-static {p13, v1}, Lden;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v1
@@ -217,7 +201,6 @@
 
     iput-object v1, p0, Lden;->m:Lkhp;
 
-    .line 64
     const/16 v1, 0xe
 
     move-object/from16 v0, p14
@@ -230,7 +213,6 @@
 
     iput-object v1, p0, Lden;->n:Lkhp;
 
-    .line 65
     const/16 v1, 0xf
 
     move-object/from16 v0, p15
@@ -243,7 +225,6 @@
 
     iput-object v1, p0, Lden;->o:Lkhp;
 
-    .line 66
     const/16 v1, 0x10
 
     move-object/from16 v0, p16
@@ -256,7 +237,6 @@
 
     iput-object v1, p0, Lden;->p:Lkhp;
 
-    .line 67
     const/16 v1, 0x11
 
     move-object/from16 v0, p17
@@ -269,7 +249,6 @@
 
     iput-object v1, p0, Lden;->q:Lkhp;
 
-    .line 68
     const/16 v1, 0x12
 
     move-object/from16 v0, p18
@@ -282,7 +261,6 @@
 
     iput-object v1, p0, Lden;->r:Lkhp;
 
-    .line 69
     const/16 v1, 0x13
 
     move-object/from16 v0, p19
@@ -295,7 +273,6 @@
 
     iput-object v1, p0, Lden;->s:Lkhp;
 
-    .line 70
     const/16 v1, 0x14
 
     move-object/from16 v0, p20
@@ -308,7 +285,6 @@
 
     iput-object v1, p0, Lden;->t:Lkhp;
 
-    .line 71
     const/16 v1, 0x15
 
     move-object/from16 v0, p21
@@ -321,7 +297,6 @@
 
     iput-object v1, p0, Lden;->u:Lkhp;
 
-    .line 72
     const/16 v1, 0x16
 
     move-object/from16 v0, p22
@@ -334,7 +309,6 @@
 
     iput-object v1, p0, Lden;->v:Lkhp;
 
-    .line 73
     const/16 v1, 0x17
 
     move-object/from16 v0, p23
@@ -347,7 +321,6 @@
 
     iput-object v1, p0, Lden;->w:Lkhp;
 
-    .line 74
     const/16 v1, 0x18
 
     move-object/from16 v0, p24
@@ -360,7 +333,6 @@
 
     iput-object v1, p0, Lden;->x:Lkhp;
 
-    .line 75
     const/16 v1, 0x19
 
     move-object/from16 v0, p25
@@ -373,7 +345,6 @@
 
     iput-object v1, p0, Lden;->y:Lkhp;
 
-    .line 76
     const/16 v1, 0x1a
 
     move-object/from16 v0, p26
@@ -386,7 +357,6 @@
 
     iput-object v1, p0, Lden;->z:Lkhp;
 
-    .line 77
     const/16 v1, 0x1b
 
     move-object/from16 v0, p27
@@ -399,7 +369,6 @@
 
     iput-object v1, p0, Lden;->A:Lkhp;
 
-    .line 78
     const/16 v1, 0x1c
 
     move-object/from16 v0, p28
@@ -412,7 +381,6 @@
 
     iput-object v1, p0, Lden;->B:Lkhp;
 
-    .line 79
     const/16 v1, 0x1d
 
     move-object/from16 v0, p29
@@ -425,7 +393,6 @@
 
     iput-object v1, p0, Lden;->C:Lkhp;
 
-    .line 80
     const/16 v1, 0x1e
 
     move-object/from16 v0, p30
@@ -438,18 +405,14 @@
 
     iput-object v1, p0, Lden;->D:Lkhp;
 
-    .line 81
     return-void
 .end method
 
 .method private static a(Ljava/lang/Object;I)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 82
     if-nez p0, :cond_0
 
-    .line 83
     new-instance v0, Ljava/lang/NullPointerException;
 
     const/16 v1, 0x5d
@@ -476,7 +439,6 @@
 
     throw v0
 
-    .line 84
     :cond_0
     return-object p0
 .end method
@@ -486,16 +448,12 @@
 .method public final synthetic a(Lbev;Lbfa;Licm;Lilt;Lcom/google/android/apps/camera/ui/wirers/PreviewOverlay;Ldfz;Lien;Liep;Lasy;Ljrw;Lgxw;Libi;Lilr;Lihc;Lida;Ljrw;)Ldem;
     .locals 46
 
-    .prologue
-    .line 1
-    .line 2
     new-instance v2, Ldeo;
 
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lden;->a:Lkhp;
 
-    .line 3
     invoke-interface {v3}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -514,7 +472,6 @@
 
     iget-object v4, v0, Lden;->b:Lkhp;
 
-    .line 4
     invoke-interface {v4}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v4
@@ -533,7 +490,6 @@
 
     iget-object v5, v0, Lden;->c:Lkhp;
 
-    .line 5
     invoke-interface {v5}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v5
@@ -552,7 +508,6 @@
 
     iget-object v6, v0, Lden;->d:Lkhp;
 
-    .line 6
     invoke-interface {v6}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -571,7 +526,6 @@
 
     iget-object v7, v0, Lden;->e:Lkhp;
 
-    .line 7
     invoke-interface {v7}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v7
@@ -590,7 +544,6 @@
 
     iget-object v8, v0, Lden;->f:Lkhp;
 
-    .line 8
     invoke-interface {v8}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v8
@@ -609,7 +562,6 @@
 
     iget-object v9, v0, Lden;->g:Lkhp;
 
-    .line 9
     invoke-interface {v9}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v9
@@ -628,7 +580,6 @@
 
     iget-object v10, v0, Lden;->h:Lkhp;
 
-    .line 10
     invoke-interface {v10}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v10
@@ -647,7 +598,6 @@
 
     iget-object v11, v0, Lden;->i:Lkhp;
 
-    .line 11
     invoke-interface {v11}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v11
@@ -666,7 +616,6 @@
 
     iget-object v12, v0, Lden;->j:Lkhp;
 
-    .line 12
     invoke-interface {v12}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v12
@@ -685,7 +634,6 @@
 
     iget-object v13, v0, Lden;->k:Lkhp;
 
-    .line 13
     invoke-interface {v13}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v13
@@ -704,7 +652,6 @@
 
     iget-object v14, v0, Lden;->l:Lkhp;
 
-    .line 14
     invoke-interface {v14}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v14
@@ -723,7 +670,6 @@
 
     iget-object v15, v0, Lden;->m:Lkhp;
 
-    .line 15
     invoke-interface {v15}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v15
@@ -744,7 +690,6 @@
 
     move-object/from16 v16, v0
 
-    .line 16
     invoke-interface/range {v16 .. v16}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v16
@@ -765,7 +710,6 @@
 
     move-object/from16 v17, v0
 
-    .line 17
     invoke-interface/range {v17 .. v17}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v17
@@ -786,7 +730,6 @@
 
     move-object/from16 v18, v0
 
-    .line 18
     invoke-interface/range {v18 .. v18}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v18
@@ -807,7 +750,6 @@
 
     move-object/from16 v19, v0
 
-    .line 19
     invoke-interface/range {v19 .. v19}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v19
@@ -828,7 +770,6 @@
 
     move-object/from16 v20, v0
 
-    .line 20
     invoke-interface/range {v20 .. v20}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v20
@@ -849,7 +790,6 @@
 
     move-object/from16 v21, v0
 
-    .line 21
     invoke-interface/range {v21 .. v21}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v21
@@ -870,7 +810,6 @@
 
     move-object/from16 v22, v0
 
-    .line 22
     invoke-interface/range {v22 .. v22}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v22
@@ -891,7 +830,6 @@
 
     move-object/from16 v23, v0
 
-    .line 23
     invoke-interface/range {v23 .. v23}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v23
@@ -912,7 +850,6 @@
 
     move-object/from16 v24, v0
 
-    .line 24
     invoke-interface/range {v24 .. v24}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v24
@@ -933,7 +870,6 @@
 
     move-object/from16 v25, v0
 
-    .line 25
     invoke-interface/range {v25 .. v25}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v25
@@ -954,7 +890,6 @@
 
     move-object/from16 v26, v0
 
-    .line 26
     invoke-interface/range {v26 .. v26}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v26
@@ -975,7 +910,6 @@
 
     move-object/from16 v27, v0
 
-    .line 27
     invoke-interface/range {v27 .. v27}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v27
@@ -996,7 +930,6 @@
 
     move-object/from16 v28, v0
 
-    .line 28
     invoke-interface/range {v28 .. v28}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v28
@@ -1017,7 +950,6 @@
 
     move-object/from16 v29, v0
 
-    .line 29
     invoke-interface/range {v29 .. v29}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v29
@@ -1038,7 +970,6 @@
 
     move-object/from16 v30, v0
 
-    .line 30
     invoke-interface/range {v30 .. v30}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v30
@@ -1059,7 +990,6 @@
 
     move-object/from16 v31, v0
 
-    .line 31
     invoke-interface/range {v31 .. v31}, Lkhp;->a()Ljava/lang/Object;
 
     move-result-object v31
@@ -1082,7 +1012,6 @@
 
     const/16 v33, 0x1f
 
-    .line 32
     move-object/from16 v0, p1
 
     move/from16 v1, v33
@@ -1095,7 +1024,6 @@
 
     const/16 v34, 0x20
 
-    .line 33
     move-object/from16 v0, p2
 
     move/from16 v1, v34
@@ -1108,7 +1036,6 @@
 
     const/16 v35, 0x21
 
-    .line 34
     move-object/from16 v0, p3
 
     move/from16 v1, v35
@@ -1121,7 +1048,6 @@
 
     const/16 v36, 0x22
 
-    .line 35
     move-object/from16 v0, p4
 
     move/from16 v1, v36
@@ -1134,7 +1060,6 @@
 
     const/16 v37, 0x23
 
-    .line 36
     move-object/from16 v0, p5
 
     move/from16 v1, v37
@@ -1143,7 +1068,6 @@
 
     const/16 v37, 0x24
 
-    .line 37
     move-object/from16 v0, p6
 
     move/from16 v1, v37
@@ -1156,7 +1080,6 @@
 
     const/16 v38, 0x25
 
-    .line 38
     move-object/from16 v0, p7
 
     move/from16 v1, v38
@@ -1169,7 +1092,6 @@
 
     const/16 v39, 0x26
 
-    .line 39
     move-object/from16 v0, p8
 
     move/from16 v1, v39
@@ -1182,7 +1104,6 @@
 
     const/16 v40, 0x27
 
-    .line 40
     move-object/from16 v0, p9
 
     move/from16 v1, v40
@@ -1195,7 +1116,6 @@
 
     const/16 v41, 0x28
 
-    .line 41
     move-object/from16 v0, p10
 
     move/from16 v1, v41
@@ -1204,7 +1124,6 @@
 
     const/16 v41, 0x29
 
-    .line 42
     move-object/from16 v0, p11
 
     move/from16 v1, v41
@@ -1217,7 +1136,6 @@
 
     const/16 v42, 0x2a
 
-    .line 43
     move-object/from16 v0, p12
 
     move/from16 v1, v42
@@ -1226,7 +1144,6 @@
 
     const/16 v42, 0x2b
 
-    .line 44
     move-object/from16 v0, p13
 
     move/from16 v1, v42
@@ -1239,7 +1156,6 @@
 
     const/16 v43, 0x2c
 
-    .line 45
     move-object/from16 v0, p14
 
     move/from16 v1, v43
@@ -1252,7 +1168,6 @@
 
     const/16 v44, 0x2d
 
-    .line 46
     move-object/from16 v0, p15
 
     move/from16 v1, v44
@@ -1265,7 +1180,6 @@
 
     const/16 v45, 0x2e
 
-    .line 47
     move-object/from16 v0, p16
 
     move/from16 v1, v45
@@ -1278,6 +1192,5 @@
 
     invoke-direct/range {v2 .. v45}, Ldeo;-><init>(Lida;Lijs;Ljava/util/concurrent/Executor;Lgzd;Libo;Lfyd;Lckg;Lgue;Lckr;Ldfo;Ldfu;Ldgd;Leqa;Legr;Lgkk;Lgql;Lggs;Leot;Lgnk;Lbcr;Lgxt;Lhdf;Ldgb;Liim;Lhbv;Lfbc;Ldfq;Lfdp;Lfwm;Lkhp;Lbev;Lbfa;Licm;Lilt;Ldfz;Lien;Liep;Lasy;Lgxw;Lilr;Lihc;Lida;Ljrw;)V
 
-    .line 48
     return-object v2
 .end method

@@ -18,8 +18,6 @@
 .method public constructor <init>(Libg;Lbfa;Linp;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldil;->c:Libg;
 
     iput-object p2, p0, Ldil;->a:Lbfa;
@@ -36,16 +34,12 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ldil;->c:Libg;
 
     iget-object v0, v0, Libg;->b:Ldif;
 
-    .line 3
     iget-object v0, v0, Lbsa;->a:Lbsb;
 
-    .line 4
     new-instance v1, Ldho;
 
     iget-object v2, p0, Ldil;->a:Lbfa;
@@ -58,9 +52,7 @@
 
     invoke-direct {v1, v2, v3, v4}, Ldho;-><init>(Lbfa;Linp;Liep;)V
 
-    .line 5
     invoke-interface {v0, v1}, Lbsb;->a(Ljava/lang/Object;)V
 
-    .line 6
     return-void
 .end method

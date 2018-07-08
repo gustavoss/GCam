@@ -18,8 +18,6 @@
 .method constructor <init>(Lyf;ZLaao;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lyg;->c:Lyf;
 
     iput-boolean p2, p0, Lyg;->a:Z
@@ -36,8 +34,6 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lyg;->c:Lyf;
 
     iget-object v0, v0, Lyf;->a:Lye;
@@ -50,6 +46,5 @@
 
     invoke-interface {v0, v1, v2}, Laae;->a(ZLaao;)V
 
-    .line 3
     return-void
 .end method

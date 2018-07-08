@@ -14,14 +14,10 @@
 .method constructor <init>(Lida;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lics;->a:Lida;
 
-    .line 3
     return-void
 .end method
 
@@ -30,8 +26,6 @@
 .method public final a(Lihw;Ljava/util/concurrent/Executor;)Lihr;
     .locals 3
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lics;->a:Lida;
 
     new-instance v1, Lict;
@@ -52,8 +46,6 @@
 .method public final c()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lics;->a:Lida;
 
     invoke-interface {v0}, Lida;->c()Ljava/lang/Object;
@@ -66,8 +58,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 6
     const-string v0, "filtered"
 
     invoke-static {v0}, Ljid;->b(Ljava/lang/String;)Ljrt;
@@ -76,15 +66,12 @@
 
     iget-object v1, p0, Lics;->a:Lida;
 
-    .line 8
     invoke-virtual {v0}, Ljrt;->a()Ljru;
 
     move-result-object v2
 
-    .line 9
     iput-object v1, v2, Ljru;->b:Ljava/lang/Object;
 
-    .line 11
     invoke-virtual {v0}, Ljrt;->toString()Ljava/lang/String;
 
     move-result-object v0

@@ -35,8 +35,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 84
     const-string v0, "ImgIntModule"
 
     invoke-static {v0}, Lbkl;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -47,8 +45,6 @@
 .method public constructor <init>(Landroid/content/Context;Lfay;Ldkn;Lhcl;Lfyd;Lbza;Lbvz;Lgrs;Lgoa;Lgng;Lbka;Landroid/content/Intent;Libo;Lgkk;Lbvt;Lgxt;Lgxy;Lijs;Lhgl;Leaf;Lefz;Lawt;Lida;Lhfv;Lhft;Lgjv;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lgvn;Lebt;Leak;Ljrw;Lida;Lger;Lasy;Ldya;Liix;Lgmd;Ldlb;Lgio;Lida;Lhhj;Lbky;Lijg;)V
     .locals 45
 
-    .prologue
-    .line 1
     invoke-interface/range {p6 .. p6}, Lbza;->u()Lbac;
 
     move-result-object v4
@@ -61,7 +57,6 @@
 
     invoke-direct {v0, v4, v5}, Lcrw;-><init>(Lbac;Lbad;)V
 
-    .line 2
     new-instance v4, Lcwe;
 
     move-object/from16 v0, p0
@@ -72,7 +67,6 @@
 
     iput-object v4, v0, Lcwd;->n:Lhgm;
 
-    .line 3
     new-instance v4, Lcwh;
 
     invoke-direct {v4}, Lcwh;-><init>()V
@@ -81,15 +75,12 @@
 
     iput-object v4, v0, Lcwd;->o:Lgub;
 
-    .line 4
     new-instance v5, Lcwi;
 
-    .line 5
     invoke-interface/range {p6 .. p6}, Lbza;->v()Ldzl;
 
     move-result-object v6
 
-    .line 6
     move-object/from16 v0, p15
 
     iget-object v4, v0, Lbvt;->a:Landroid/content/Context;
@@ -102,15 +93,12 @@
 
     check-cast v4, Landroid/view/LayoutInflater;
 
-    .line 8
     invoke-interface/range {p6 .. p6}, Lbza;->v()Ldzl;
 
     move-result-object v7
 
-    .line 9
     iget-object v7, v7, Ldzl;->i:Lcom/google/android/apps/camera/ui/views/MainActivityLayout;
 
-    .line 10
     move-object/from16 v0, p8
 
     invoke-direct {v5, v6, v0, v4, v7}, Lcwi;-><init>(Ldzl;Lgrs;Landroid/view/LayoutInflater;Landroid/view/View;)V
@@ -119,7 +107,6 @@
 
     iput-object v5, v0, Lcwd;->g:Lcwi;
 
-    .line 11
     new-instance v18, Ldyn;
 
     move-object/from16 v0, v18
@@ -132,12 +119,10 @@
 
     invoke-direct {v0, v1, v2, v3}, Ldyn;-><init>(Lgjv;Lfay;Lbka;)V
 
-    .line 12
     new-instance v24, Lcwc;
 
     invoke-direct/range {v24 .. v24}, Lcwc;-><init>()V
 
-    .line 13
     new-instance v4, Lcxr;
 
     move-object/from16 v0, p0
@@ -148,7 +133,6 @@
 
     invoke-direct {v5}, Lcch;-><init>()V
 
-    .line 14
     invoke-virtual/range {p15 .. p15}, Lbvt;->b()Landroid/view/WindowManager;
 
     move-result-object v5
@@ -231,7 +215,6 @@
 
     invoke-direct/range {v4 .. v44}, Lcxr;-><init>(Landroid/content/Intent;Lcwi;Libo;Landroid/content/Context;Lgoa;Lgng;Ldkn;Lfay;Lhcl;Lfyd;Lgjv;Lgkk;Ldya;Ldyn;Lbza;Lijs;Landroid/util/DisplayMetrics;Lgxt;Lgxy;Lcwc;Lbvz;Leaf;Lefz;Lawt;Lida;Lhfv;Lhft;Lebt;Leak;Ljrw;Lida;Lger;Lasy;Liix;Lgmd;Ldlb;Lgio;Lida;Lbky;Lijg;)V
 
-    .line 15
     new-instance v5, Lbsc;
 
     invoke-direct {v5, v4}, Lbsc;-><init>(Lihr;)V
@@ -240,7 +223,6 @@
 
     iput-object v5, v0, Lcwd;->d:Lbsb;
 
-    .line 16
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcwd;->d:Lbsb;
@@ -257,28 +239,24 @@
 
     invoke-interface {v4, v5}, Lbsb;->a(Lbsa;)Z
 
-    .line 17
     move-object/from16 v0, p19
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcwd;->m:Lhgl;
 
-    .line 18
     move-object/from16 v0, p27
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcwd;->h:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
-    .line 19
     move-object/from16 v0, p28
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcwd;->i:Lgvn;
 
-    .line 20
     new-instance v4, Lcwf;
 
     move-object/from16 v0, p0
@@ -289,7 +267,6 @@
 
     iput-object v4, v0, Lcwd;->j:Lcom/google/android/apps/camera/bottombar/BottomBarListener;
 
-    .line 21
     new-instance v4, Lcwg;
 
     move-object/from16 v0, p0
@@ -300,22 +277,18 @@
 
     iput-object v4, v0, Lcwd;->e:Lgvr;
 
-    .line 22
     move-object/from16 v0, p41
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcwd;->f:Lhhj;
 
-    .line 23
     return-void
 .end method
 
 .method static synthetic a(Lcwd;)Lhkn;
     .locals 1
 
-    .prologue
-    .line 83
     iget-object v0, p0, Lcwd;->l:Lhkn;
 
     return-object v0
@@ -324,8 +297,6 @@
 .method static synthetic a(Lcwd;Lhkn;)Lhkn;
     .locals 0
 
-    .prologue
-    .line 82
     iput-object p1, p0, Lcwd;->l:Lhkn;
 
     return-object p1
@@ -336,57 +307,44 @@
 .method public final a(I)V
     .locals 0
 
-    .prologue
-    .line 55
     return-void
 .end method
 
 .method public final a(Laao;)V
     .locals 0
 
-    .prologue
-    .line 24
     return-void
 .end method
 
 .method public final a(Lbza;Lezh;)V
     .locals 0
 
-    .prologue
-    .line 25
     return-void
 .end method
 
 .method public final a(Lgjv;)V
     .locals 0
 
-    .prologue
-    .line 57
     return-void
 .end method
 
 .method public final a(ILandroid/view/KeyEvent;)Z
     .locals 2
 
-    .prologue
-    .line 71
     invoke-virtual {p0}, Lcwd;->m()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 72
     sparse-switch p1, :sswitch_data_0
 
-    .line 75
     :cond_0
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 73
     :sswitch_0
     iget-object v0, p0, Lcwd;->d:Lbsb;
 
@@ -396,12 +354,10 @@
 
     invoke-interface {v0, v1}, Lbsb;->a(Ljava/lang/Object;)V
 
-    .line 74
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 72
     nop
 
     :sswitch_data_0
@@ -414,16 +370,12 @@
 .method public final b(Z)V
     .locals 0
 
-    .prologue
-    .line 56
     return-void
 .end method
 
 .method public final b(ILandroid/view/KeyEvent;)Z
     .locals 1
 
-    .prologue
-    .line 76
     const/4 v0, 0x0
 
     return v0
@@ -432,16 +384,12 @@
 .method public final close()V
     .locals 0
 
-    .prologue
-    .line 54
     return-void
 .end method
 
 .method public final e()Z
     .locals 1
 
-    .prologue
-    .line 81
     const/4 v0, 0x1
 
     return v0
@@ -450,15 +398,12 @@
 .method public final f()V
     .locals 3
 
-    .prologue
-    .line 26
     new-instance v0, Libm;
 
     invoke-direct {v0}, Libm;-><init>()V
 
     iput-object v0, p0, Lcwd;->k:Libm;
 
-    .line 27
     iget-object v0, p0, Lcwd;->k:Libm;
 
     iget-object v1, p0, Lcwd;->i:Lgvn;
@@ -471,35 +416,28 @@
 
     invoke-virtual {v0, v1}, Libm;->a(Lihr;)Lihr;
 
-    .line 28
     iget-object v0, p0, Lcwd;->h:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     iget-object v1, p0, Lcwd;->j:Lcom/google/android/apps/camera/bottombar/BottomBarListener;
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->addListener(Lcom/google/android/apps/camera/bottombar/BottomBarListener;)V
 
-    .line 29
     iget-object v0, p0, Lcwd;->d:Lbsb;
 
-    .line 30
     invoke-interface {v0}, Lbsb;->a()Lihr;
 
     move-result-object v0
 
     check-cast v0, Lcxr;
 
-    .line 31
     iget-object v0, v0, Lcxr;->O:Lbza;
 
-    .line 32
     iget-object v1, p0, Lcwd;->o:Lgub;
 
-    .line 33
     const/4 v2, 0x1
 
     invoke-interface {v0, v1, v2}, Lbza;->a(Lgub;Z)V
 
-    .line 34
     invoke-static {}, Lcom/google/android/apps/camera/stats/Instrumentation;->instance()Lcom/google/android/apps/camera/stats/Instrumentation;
 
     move-result-object v0
@@ -516,20 +454,16 @@
 
     invoke-virtual {v0}, Lgmo;->b()V
 
-    .line 35
     iget-object v0, p0, Lcwd;->g:Lcwi;
 
-    .line 36
     invoke-static {}, Libo;->a()V
 
-    .line 37
     iget-object v1, v0, Lcwi;->a:Ldzl;
 
     iget-object v0, v0, Lcwi;->e:Lgtx;
 
     invoke-virtual {v1, v0}, Ldzl;->a(Lgtx;)V
 
-    .line 38
     iget-object v0, p0, Lcwd;->d:Lbsb;
 
     new-instance v1, Lcxa;
@@ -538,30 +472,24 @@
 
     invoke-interface {v0, v1}, Lbsb;->a(Ljava/lang/Object;)V
 
-    .line 39
     iget-object v0, p0, Lcwd;->m:Lhgl;
 
     iget-object v1, p0, Lcwd;->n:Lhgm;
 
     invoke-virtual {v0, v1}, Lhgl;->a(Lhgm;)V
 
-    .line 40
     return-void
 .end method
 
 .method public final g()V
     .locals 0
 
-    .prologue
-    .line 41
     return-void
 .end method
 
 .method public final h()V
     .locals 2
 
-    .prologue
-    .line 42
     iget-object v0, p0, Lcwd;->d:Lbsb;
 
     new-instance v1, Lcwx;
@@ -570,45 +498,36 @@
 
     invoke-interface {v0, v1}, Lbsb;->a(Ljava/lang/Object;)V
 
-    .line 43
     return-void
 .end method
 
 .method public final i()V
     .locals 2
 
-    .prologue
-    .line 44
     iget-object v0, p0, Lcwd;->g:Lcwi;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcwi;->a(Lgyq;)V
 
-    .line 45
     iget-object v0, p0, Lcwd;->g:Lcwi;
 
-    .line 46
     invoke-static {}, Libo;->a()V
 
-    .line 47
     iget-object v1, v0, Lcwi;->a:Ldzl;
 
     iget-object v0, v0, Lcwi;->e:Lgtx;
 
-    .line 48
     iget-object v1, v1, Ldzl;->E:Lgty;
 
     invoke-interface {v1, v0}, Lgty;->b(Lgtx;)V
 
-    .line 49
     iget-object v0, p0, Lcwd;->h:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     iget-object v1, p0, Lcwd;->j:Lcom/google/android/apps/camera/bottombar/BottomBarListener;
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->removeListener(Lcom/google/android/apps/camera/bottombar/BottomBarListener;)V
 
-    .line 50
     iget-object v0, p0, Lcwd;->d:Lbsb;
 
     new-instance v1, Lcxb;
@@ -617,89 +536,70 @@
 
     invoke-interface {v0, v1}, Lbsb;->a(Ljava/lang/Object;)V
 
-    .line 51
     iget-object v0, p0, Lcwd;->k:Libm;
 
     invoke-virtual {v0}, Libm;->close()V
 
-    .line 52
     iget-object v0, p0, Lcwd;->m:Lhgl;
 
     iget-object v1, p0, Lcwd;->n:Lhgm;
 
     invoke-virtual {v0, v1}, Lhgl;->b(Lhgm;)V
 
-    .line 53
     return-void
 .end method
 
 .method public final j()Lffy;
     .locals 2
 
-    .prologue
-    .line 58
     iget-object v0, p0, Lcwd;->d:Lbsb;
 
-    .line 59
     invoke-interface {v0}, Lbsb;->a()Lihr;
 
     move-result-object v0
 
     check-cast v0, Lcxr;
 
-    .line 60
     iget-object v0, v0, Lcxr;->t:Lcwc;
 
-    .line 61
     iget-object v0, v0, Lcwc;->a:Lffy;
 
-    .line 63
     const-string v1, "Hardware spec is queried before Camera is open"
 
     invoke-static {v0, v1}, Ljiy;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 64
     return-object v0
 .end method
 
 .method public final k()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 65
     iget-object v0, p0, Lcwd;->d:Lbsb;
 
-    .line 66
     invoke-interface {v0}, Lbsb;->a()Lihr;
 
     move-result-object v0
 
     check-cast v0, Lcxr;
 
-    .line 67
     iget-object v0, v0, Lcxr;->d:Landroid/content/Context;
 
-    .line 68
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     const v1, 0x7f11012c
 
-    .line 69
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 70
     return-object v0
 .end method
 
 .method public final l()Z
     .locals 1
 
-    .prologue
-    .line 80
     const/4 v0, 0x0
 
     return v0
@@ -708,18 +608,14 @@
 .method final m()Z
     .locals 1
 
-    .prologue
-    .line 77
     iget-object v0, p0, Lcwd;->g:Lcwi;
 
-    .line 78
     iget-object v0, v0, Lcwi;->c:Lcom/google/android/apps/camera/ui/views/CountDownView;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/ui/views/CountDownView;->a()Z
 
     move-result v0
 
-    .line 79
     if-nez v0, :cond_0
 
     const/4 v0, 0x1

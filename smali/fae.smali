@@ -25,17 +25,13 @@
 .method public final run()V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lfae;->a:Lfac;
 
-    .line 2
     iget-object v0, v0, Lfac;->d:Lfal;
 
     iget-object v0, v0, Lfal;->a:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 3
     return-void
 .end method

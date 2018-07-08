@@ -13,8 +13,6 @@
 .method constructor <init>(Labx;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Laby;->b:Labx;
 
     iput p2, p0, Laby;->a:I

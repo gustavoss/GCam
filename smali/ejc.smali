@@ -164,8 +164,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 728
     const-class v0, Lejc;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -176,7 +174,6 @@
 .method public constructor <init>(Landroid/content/Context;Lejl;Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;Lfyd;)V
     .locals 7
 
-    .prologue
     const/4 v6, 0x0
 
     const/high16 v3, 0x42c80000    # 100.0f
@@ -187,226 +184,170 @@
 
     const/4 v2, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lejh;
 
     invoke-direct {v0}, Lejh;-><init>()V
 
     iput-object v0, p0, Lejc;->b:Lejh;
 
-    .line 3
     new-array v0, v1, [F
 
     iput-object v0, p0, Lejc;->J:[F
 
-    .line 4
     new-array v0, v1, [F
 
     iput-object v0, p0, Lejc;->K:[F
 
-    .line 5
     new-array v0, v1, [F
 
     iput-object v0, p0, Lejc;->L:[F
 
-    .line 6
     new-array v0, v1, [F
 
     iput-object v0, p0, Lejc;->M:[F
 
-    .line 7
     new-array v0, v1, [F
 
     iput-object v0, p0, Lejc;->N:[F
 
-    .line 8
     new-array v0, v1, [F
 
     iput-object v0, p0, Lejc;->O:[F
 
-    .line 9
     new-array v0, v1, [F
 
     iput-object v0, p0, Lejc;->P:[F
 
-    .line 10
     new-array v0, v1, [F
 
     iput-object v0, p0, Lejc;->Q:[F
 
-    .line 11
     new-array v0, v1, [F
 
     iput-object v0, p0, Lejc;->R:[F
 
-    .line 12
     const/high16 v0, 0x42700000    # 60.0f
 
     iput v0, p0, Lejc;->S:F
 
-    .line 13
     iput v3, p0, Lejc;->T:F
 
-    .line 14
     iput v3, p0, Lejc;->U:F
 
-    .line 15
     const/16 v0, 0x78
 
     iput v0, p0, Lejc;->V:I
 
-    .line 16
     const/16 v0, 0x50
 
     iput v0, p0, Lejc;->W:I
 
-    .line 17
     iput-boolean v2, p0, Lejc;->n:Z
 
-    .line 18
     iput-boolean v2, p0, Lejc;->o:Z
 
-    .line 19
     iput-boolean v2, p0, Lejc;->X:Z
 
-    .line 20
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lejc;->p:Z
 
-    .line 21
     iput-boolean v2, p0, Lejc;->ad:Z
 
-    .line 22
     iput-boolean v2, p0, Lejc;->ae:Z
 
-    .line 23
     iput v2, p0, Lejc;->af:I
 
-    .line 24
     iput-boolean v2, p0, Lejc;->ag:Z
 
-    .line 25
     iput-boolean v2, p0, Lejc;->s:Z
 
-    .line 26
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lejc;->ah:Ljava/util/ArrayList;
 
-    .line 27
     iput-boolean v2, p0, Lejc;->t:Z
 
-    .line 28
     iput-boolean v2, p0, Lejc;->u:Z
 
-    .line 29
     iput-boolean v2, p0, Lejc;->v:Z
 
-    .line 30
     sget v0, Lep;->af:I
 
     iput v0, p0, Lejc;->aj:I
 
-    .line 31
     iput-boolean v2, p0, Lejc;->w:Z
 
-    .line 32
     iput-boolean v2, p0, Lejc;->ak:Z
 
-    .line 33
     iput-boolean v2, p0, Lejc;->x:Z
 
-    .line 34
     iput-boolean v2, p0, Lejc;->y:Z
 
-    .line 35
     sget v0, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->a:I
 
     iput v0, p0, Lejc;->z:I
 
-    .line 36
     new-instance v0, Leio;
 
     invoke-direct {v0}, Leio;-><init>()V
 
     iput-object v0, p0, Lejc;->an:Leio;
 
-    .line 37
     iput-boolean v2, p0, Lejc;->ao:Z
 
-    .line 38
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lejc;->ap:J
 
-    .line 39
     iput-boolean v2, p0, Lejc;->aq:Z
 
-    .line 40
     iput-object v6, p0, Lejc;->A:Lejp;
 
-    .line 41
     iput-boolean v2, p0, Lejc;->B:Z
 
-    .line 42
     iput v2, p0, Lejc;->C:I
 
-    .line 43
     iput v2, p0, Lejc;->D:I
 
-    .line 44
     iput-object v6, p0, Lejc;->E:[B
 
-    .line 45
     iput-boolean v2, p0, Lejc;->F:Z
 
-    .line 46
     iput-wide v4, p0, Lejc;->ar:D
 
-    .line 47
     iput-wide v4, p0, Lejc;->as:D
 
-    .line 48
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
     iput-object v0, p0, Lejc;->at:Ljava/util/Vector;
 
-    .line 49
     iput v2, p0, Lejc;->av:I
 
-    .line 50
     const/high16 v0, -0x40800000    # -1.0f
 
     iput v0, p0, Lejc;->aw:F
 
-    .line 51
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lejc;->ax:Ljava/util/HashMap;
 
-    .line 52
     iput-object p1, p0, Lejc;->au:Landroid/content/Context;
 
-    .line 53
     iput-object p2, p0, Lejc;->I:Lejl;
 
-    .line 54
     iput-object p3, p0, Lejc;->e:Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;
 
-    .line 55
     iput-object p4, p0, Lejc;->ai:Lfyd;
 
-    .line 56
     new-instance v0, Lejn;
 
     iget-object v1, p0, Lejc;->au:Landroid/content/Context;
@@ -415,15 +356,12 @@
 
     iput-object v0, p0, Lejc;->d:Lejn;
 
-    .line 57
     return-void
 .end method
 
 .method private static a(FF)F
     .locals 8
 
-    .prologue
-    .line 67
     const-wide v0, 0x405ca5dc1a63c1f8L    # 114.59155902616465
 
     float-to-double v2, p1
@@ -442,7 +380,6 @@
 
     mul-double/2addr v4, v6
 
-    .line 68
     invoke-static {v4, v5}, Ljava/lang/Math;->tan(D)D
 
     move-result-wide v4
@@ -457,15 +394,12 @@
 
     double-to-float v0, v0
 
-    .line 69
     return v0
 .end method
 
 .method static synthetic a(Lejc;)I
     .locals 1
 
-    .prologue
-    .line 727
     iget v0, p0, Lejc;->aj:I
 
     return v0
@@ -474,33 +408,27 @@
 .method private static b(I)Lejs;
     .locals 2
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 716
     sget v1, Lep;->ag:I
 
     if-ne p0, v1, :cond_1
 
-    .line 717
     new-instance v0, Lejt;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Lejt;-><init>(Z)V
 
-    .line 726
     :cond_0
     :goto_0
     return-object v0
 
-    .line 718
     :cond_1
     sget v1, Lep;->ah:I
 
     if-ne p0, v1, :cond_2
 
-    .line 719
     new-instance v0, Lejt;
 
     const/4 v1, 0x0
@@ -509,31 +437,26 @@
 
     goto :goto_0
 
-    .line 720
     :cond_2
     sget v1, Lep;->af:I
 
     if-eq p0, v1, :cond_0
 
-    .line 722
     sget v1, Lep;->aj:I
 
     if-ne p0, v1, :cond_3
 
-    .line 723
     new-instance v0, Lejr;
 
     invoke-direct {v0}, Lejr;-><init>()V
 
     goto :goto_0
 
-    .line 724
     :cond_3
     sget v1, Lep;->ai:I
 
     if-ne p0, v1, :cond_0
 
-    .line 725
     new-instance v0, Leju;
 
     invoke-direct {v0}, Leju;-><init>()V
@@ -544,17 +467,14 @@
 .method private final c(F)F
     .locals 6
 
-    .prologue
     const-wide/high16 v4, 0x4000000000000000L    # 2.0
 
-    .line 70
     iget v0, p0, Lejc;->aa:I
 
     iget v1, p0, Lejc;->ab:I
 
     if-ge v0, v1, :cond_0
 
-    .line 71
     iget v0, p0, Lejc;->aa:I
 
     int-to-double v0, v0
@@ -575,7 +495,6 @@
 
     div-double/2addr v0, v2
 
-    .line 72
     iget v2, p0, Lejc;->ab:I
 
     int-to-double v2, v2
@@ -590,15 +509,12 @@
 
     mul-double/2addr v0, v4
 
-    .line 73
     invoke-static {v0, v1}, Ljava/lang/Math;->toDegrees(D)D
 
     move-result-wide v0
 
-    .line 74
     double-to-float p1, v0
 
-    .line 75
     :cond_0
     return p1
 .end method
@@ -606,12 +522,10 @@
 .method private final declared-synchronized c()V
     .locals 7
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 592
     monitor-enter p0
 
     :try_start_0
@@ -625,14 +539,12 @@
 
     if-nez v2, :cond_1
 
-    .line 688
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 594
     :cond_1
     :try_start_1
     iget-object v3, p0, Lejc;->A:Lejp;
@@ -645,34 +557,27 @@
 
     iget-object v2, p0, Lejc;->h:Lejm;
 
-    .line 595
     iget-boolean v2, v2, Lejm;->h:Z
 
-    .line 596
     if-eqz v2, :cond_9
 
     iget-object v2, p0, Lejc;->H:Leis;
 
-    .line 597
     iget-boolean v2, v2, Leis;->u:Z
 
-    .line 598
     if-eqz v2, :cond_9
 
     move v2, v0
 
-    .line 600
     :goto_1
     if-eqz v4, :cond_2
 
-    .line 602
     invoke-static {v4, v5, v6, v2}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->a([BIIZ)[F
 
     move-result-object v2
 
     iput-object v2, v3, Lejp;->c:[F
 
-    .line 603
     iget-object v2, v3, Lejp;->c:[F
 
     const/4 v4, 0x0
@@ -688,14 +593,12 @@
     :goto_2
     iput-boolean v0, v3, Lejp;->a:Z
 
-    .line 604
     invoke-static {}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->f()Z
 
     move-result v0
 
     iput-boolean v0, v3, Lejp;->b:Z
 
-    .line 605
     :cond_2
     iget v0, p0, Lejc;->av:I
 
@@ -703,30 +606,22 @@
 
     iput v0, p0, Lejc;->av:I
 
-    .line 606
     iget-object v0, p0, Lejc;->A:Lejp;
 
-    .line 607
     iget-boolean v0, v0, Lejp;->a:Z
 
-    .line 610
     iput-boolean v0, p0, Lejc;->ac:Z
 
-    .line 612
     invoke-static {}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->g()Z
 
     move-result v1
 
-    .line 613
     iput-boolean v1, p0, Lejc;->ag:Z
 
-    .line 614
     iget-object v1, p0, Lejc;->A:Lejp;
 
-    .line 615
     iget-boolean v1, v1, Lejp;->b:Z
 
-    .line 616
     if-eqz v1, :cond_4
 
     if-eqz v0, :cond_4
@@ -735,41 +630,32 @@
 
     if-nez v0, :cond_4
 
-    .line 618
     iget-object v0, p0, Lejc;->A:Lejp;
 
-    .line 619
     iget-object v0, v0, Lejp;->c:[F
 
-    .line 621
     iget-object v1, p0, Lejc;->c:Leji;
 
     invoke-virtual {v1, v0}, Leji;->c([F)I
 
     move-result v1
 
-    .line 622
     invoke-static {v0}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->c([F)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 623
     iget-object v3, p0, Lejc;->c:Leji;
 
-    .line 624
     iget-object v3, v3, Leji;->f:Ljava/util/Vector;
 
     invoke-virtual {v3}, Ljava/util/Vector;->size()I
 
     move-result v3
 
-    .line 625
     add-int/lit8 v3, v3, -0x1
 
-    .line 626
     iget-object v4, p0, Lejc;->H:Leis;
 
-    .line 627
     iget-boolean v5, v4, Leis;->s:Z
 
     if-nez v5, :cond_3
@@ -778,7 +664,6 @@
 
     if-nez v5, :cond_b
 
-    .line 637
     :cond_3
     :goto_3
     iget-object v0, p0, Lejc;->c:Leji;
@@ -787,7 +672,6 @@
 
     invoke-virtual {v0, v3, v1}, Leji;->a(IZ)V
 
-    .line 638
     iget-object v0, p0, Lejc;->ah:Ljava/util/ArrayList;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -796,41 +680,33 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 639
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lejc;->s:Z
 
-    .line 640
     invoke-direct {p0}, Lejc;->d()V
 
-    .line 641
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lejc;->p:Z
 
-    .line 642
     iget-object v0, p0, Lejc;->e:Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->a()V
 
-    .line 643
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lejc;->aq:Z
 
-    .line 644
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lejc;->ao:Z
 
-    .line 645
     :cond_4
     iget-boolean v0, p0, Lejc;->t:Z
 
     if-eqz v0, :cond_6
 
-    .line 646
     iget-object v0, p0, Lejc;->ah:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -839,7 +715,6 @@
 
     if-lez v0, :cond_5
 
-    .line 647
     iget-object v0, p0, Lejc;->ah:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -854,75 +729,60 @@
 
     move-result v0
 
-    .line 648
     iget-object v1, p0, Lejc;->ah:Ljava/util/ArrayList;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 649
     iget-object v1, p0, Lejc;->c:Leji;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v0, v2}, Leji;->a(IZ)V
 
-    .line 650
     :cond_5
     iget-object v0, p0, Lejc;->d:Lejn;
 
     invoke-virtual {v0}, Lejn;->b()V
 
-    .line 651
     iget-object v0, p0, Lejc;->e:Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;
 
     iget-boolean v1, p0, Lejc;->y:Z
 
     iget-object v2, p0, Lejc;->H:Leis;
 
-    .line 652
     iget v2, v2, Leis;->o:I
 
-    .line 653
     invoke-virtual {v0, v1, v2}, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->a(ZI)V
 
-    .line 654
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lejc;->t:Z
 
-    .line 655
     :cond_6
     iget-object v0, p0, Lejc;->h:Lejm;
 
-    .line 656
     iget-boolean v0, v0, Lejm;->h:Z
 
-    .line 657
     if-nez v0, :cond_8
 
-    .line 658
     invoke-static {}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->e()Z
 
     move-result v0
 
-    .line 660
     invoke-static {}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->r()I
 
     move-result v1
 
-    .line 661
     iget-boolean v2, p0, Lejc;->x:Z
 
     if-nez v2, :cond_d
 
     iget-object v2, p0, Lejc;->h:Lejm;
 
-    .line 662
     iget-boolean v2, v2, Lejm;->g:Z
 
-    .line 663
     if-nez v2, :cond_d
 
     if-eqz v0, :cond_d
@@ -931,71 +791,56 @@
 
     iget-object v2, p0, Lejc;->H:Leis;
 
-    .line 664
     iget-boolean v2, v2, Leis;->u:Z
 
-    .line 665
     if-eqz v2, :cond_d
 
-    .line 666
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lejc;->x:Z
 
-    .line 667
     iget-object v0, p0, Lejc;->H:Leis;
 
-    .line 668
     iget-object v0, v0, Leis;->c:Lehy;
 
-    .line 669
     new-instance v1, Lejd;
 
     invoke-direct {v1, p0}, Lejd;-><init>(Lejc;)V
 
-    .line 671
     iget-boolean v2, v0, Lehy;->e:Z
 
     if-eqz v2, :cond_c
 
-    .line 672
     iget-object v2, v0, Lehy;->b:Laao;
 
     invoke-virtual {v2}, Laao;->g()Labv;
 
     move-result-object v2
 
-    .line 673
     sget-object v3, Labj;->a:Labj;
 
-    .line 674
     iput-object v3, v2, Labv;->q:Labj;
 
-    .line 675
     iget-object v3, v0, Lehy;->b:Laao;
 
     invoke-virtual {v3, v2}, Laao;->a(Labv;)Z
 
-    .line 676
     iget-object v2, v0, Lehy;->b:Laao;
 
     iget-object v0, v0, Lehy;->a:Landroid/os/Handler;
 
     invoke-virtual {v2, v0, v1}, Laao;->a(Landroid/os/Handler;Laad;)V
 
-    .line 685
     :cond_7
     :goto_4
     iget-boolean v0, p0, Lejc;->v:Z
 
     if-eqz v0, :cond_8
 
-    .line 686
     iget-object v0, p0, Lejc;->h:Lejm;
 
     invoke-virtual {v0}, Lejm;->a()V
 
-    .line 687
     :cond_8
     const/4 v0, 0x0
 
@@ -1005,7 +850,6 @@
 
     goto/16 :goto_0
 
-    .line 592
     :catchall_0
     move-exception v0
 
@@ -1016,28 +860,23 @@
     :cond_9
     move v2, v1
 
-    .line 598
     goto/16 :goto_1
 
     :cond_a
     move v0, v1
 
-    .line 603
     goto/16 :goto_2
 
-    .line 629
     :cond_b
     :try_start_2
     iget-object v5, v4, Leis;->G:Ljava/util/List;
 
     invoke-interface {v5, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 630
     const/4 v2, 0x1
 
     iput-boolean v2, v4, Leis;->s:Z
 
-    .line 632
     new-instance v2, Leiu;
 
     invoke-direct {v2, v4}, Leiu;-><init>(Leis;)V
@@ -1046,15 +885,12 @@
 
     new-array v5, v5, [Ljava/lang/Void;
 
-    .line 633
     invoke-virtual {v2, v5}, Leiu;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 634
     iget-object v2, v4, Leis;->F:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 635
     iget-object v0, v4, Leis;->n:Ljava/util/Vector;
 
     add-int/lit8 v2, v3, 0x1
@@ -1071,7 +907,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/Vector;->setSize(I)V
 
-    .line 636
     iget-object v0, v4, Leis;->n:Ljava/util/Vector;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1082,7 +917,6 @@
 
     goto/16 :goto_3
 
-    .line 678
     :cond_c
     const/4 v0, 0x1
 
@@ -1092,17 +926,13 @@
 
     goto :goto_4
 
-    .line 680
     :cond_d
     iget-object v2, p0, Lejc;->h:Lejm;
 
-    .line 681
     iget-boolean v2, v2, Lejm;->g:Z
 
-    .line 682
     if-eqz v2, :cond_7
 
-    .line 683
     if-eqz v0, :cond_f
 
     if-eqz v0, :cond_e
@@ -1114,7 +944,6 @@
     :cond_e
     if-eqz v1, :cond_7
 
-    .line 684
     :cond_f
     iget-object v0, p0, Lejc;->h:Lejm;
 
@@ -1128,24 +957,18 @@
 .method private final d()V
     .locals 1
 
-    .prologue
-    .line 689
     iget-object v0, p0, Lejc;->c:Leji;
 
-    .line 690
     iget-object v0, v0, Leji;->f:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->size()I
 
-    .line 691
     iget-object v0, p0, Lejc;->c:Leji;
 
-    .line 692
     iget-object v0, v0, Leji;->f:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->size()I
 
-    .line 693
     return-void
 .end method
 
@@ -1154,70 +977,54 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 491
     iget v0, p0, Lejc;->T:F
 
     iget v1, p0, Lejc;->S:F
 
     div-float/2addr v0, v1
 
-    .line 492
     invoke-virtual {p0, v0}, Lejc;->a(F)V
 
-    .line 493
     return-void
 .end method
 
 .method public final a(F)V
     .locals 1
 
-    .prologue
-    .line 58
     invoke-virtual {p0, p1}, Lejc;->b(F)V
 
-    .line 59
     iget v0, p0, Lejc;->T:F
 
     iput v0, p0, Lejc;->S:F
 
-    .line 60
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lejc;->n:Z
 
-    .line 61
     return-void
 .end method
 
 .method public final a(I)V
     .locals 5
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v4, 0x1
 
-    .line 494
     iget v0, p0, Lejc;->aj:I
 
-    .line 495
     iput p1, p0, Lejc;->aj:I
 
-    .line 496
     iput-boolean v3, p0, Lejc;->y:Z
 
-    .line 497
     sget v1, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->a:I
 
     iput v1, p0, Lejc;->z:I
 
-    .line 498
     add-int/lit8 v1, p1, -0x1
 
     packed-switch v1, :pswitch_data_0
 
-    .line 532
     :goto_0
     invoke-static {v0}, Lejc;->b(I)Lejs;
 
@@ -1225,17 +1032,14 @@
 
     iput-object v0, p0, Lejc;->al:Lejs;
 
-    .line 533
     invoke-static {p1}, Lejc;->b(I)Lejs;
 
     move-result-object v0
 
     iput-object v0, p0, Lejc;->am:Lejs;
 
-    .line 534
     return-void
 
-    .line 499
     :pswitch_0
     iget-object v1, p0, Lejc;->e:Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;
 
@@ -1243,146 +1047,119 @@
 
     iget-object v3, p0, Lejc;->H:Leis;
 
-    .line 500
     iget v3, v3, Leis;->o:I
 
-    .line 501
     invoke-virtual {v1, v2, v3}, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->a(ZI)V
 
-    .line 502
     iput-boolean v4, p0, Lejc;->y:Z
 
     goto :goto_0
 
-    .line 504
     :pswitch_1
     sget v1, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->b:I
 
     iput v1, p0, Lejc;->z:I
 
-    .line 505
     iget-object v1, p0, Lejc;->e:Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;
 
     invoke-virtual {v1}, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->a()V
 
-    .line 506
     iget-object v1, p0, Lejc;->d:Lejn;
 
     invoke-virtual {v1, v4}, Lejn;->a(I)V
 
-    .line 507
     iput-boolean v4, p0, Lejc;->ak:Z
 
-    .line 508
     iget-object v1, p0, Lejc;->an:Leio;
 
     invoke-virtual {v1}, Leio;->a()V
 
     goto :goto_0
 
-    .line 510
     :pswitch_2
     sget v1, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->b:I
 
     iput v1, p0, Lejc;->z:I
 
-    .line 511
     iget-object v1, p0, Lejc;->e:Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;
 
     invoke-virtual {v1}, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->a()V
 
-    .line 512
     iget-object v1, p0, Lejc;->d:Lejn;
 
     const/4 v2, 0x2
 
     invoke-virtual {v1, v2}, Lejn;->a(I)V
 
-    .line 513
     iput-boolean v4, p0, Lejc;->ak:Z
 
-    .line 514
     iget-object v1, p0, Lejc;->an:Leio;
 
     invoke-virtual {v1}, Leio;->a()V
 
     goto :goto_0
 
-    .line 516
     :pswitch_3
     sget v1, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->b:I
 
     iput v1, p0, Lejc;->z:I
 
-    .line 517
     iget-object v1, p0, Lejc;->e:Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;
 
     invoke-virtual {v1}, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->a()V
 
-    .line 518
     iget-object v1, p0, Lejc;->d:Lejn;
 
     const/4 v2, 0x3
 
     invoke-virtual {v1, v2}, Lejn;->a(I)V
 
-    .line 519
     iput-boolean v4, p0, Lejc;->ak:Z
 
-    .line 520
     iget-object v1, p0, Lejc;->an:Leio;
 
     invoke-virtual {v1}, Leio;->a()V
 
     goto :goto_0
 
-    .line 522
     :pswitch_4
     sget v1, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->a:I
 
     iput v1, p0, Lejc;->z:I
 
-    .line 523
     iget-object v1, p0, Lejc;->e:Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;
 
     invoke-virtual {v1}, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->a()V
 
-    .line 524
     iget-object v1, p0, Lejc;->d:Lejn;
 
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Lejn;->a(I)V
 
-    .line 525
     iput-boolean v4, p0, Lejc;->ak:Z
 
-    .line 526
     iget-object v1, p0, Lejc;->an:Leio;
 
     invoke-virtual {v1}, Leio;->a()V
 
     goto :goto_0
 
-    .line 528
     :pswitch_5
     sget v1, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->a:I
 
     iput v1, p0, Lejc;->z:I
 
-    .line 529
     iget-boolean v1, p0, Lejc;->p:Z
 
     if-eqz v1, :cond_0
 
-    .line 530
     iget-object v1, p0, Lejc;->e:Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;
 
     iget v2, p0, Lejc;->z:I
 
     invoke-virtual {v1, v2}, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->a(I)V
 
-    .line 531
     :cond_0
     iget-object v1, p0, Lejc;->d:Lejn;
 
@@ -1390,7 +1167,6 @@
 
     goto/16 :goto_0
 
-    .line 498
     nop
 
     :pswitch_data_0
@@ -1407,31 +1183,25 @@
 .method public final declared-synchronized b()V
     .locals 4
 
-    .prologue
-    .line 694
     monitor-enter p0
 
     :try_start_0
     iget-object v0, p0, Lejc;->c:Leji;
 
-    .line 695
     iget-object v0, v0, Leji;->f:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->size()I
 
     move-result v0
 
-    .line 697
     iget-object v1, p0, Lejc;->c:Leji;
 
-    .line 698
     iget-object v2, v1, Leji;->f:Ljava/util/Vector;
 
     monitor-enter v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 699
     :try_start_1
     iget-object v3, v1, Leji;->f:Ljava/util/Vector;
 
@@ -1441,7 +1211,6 @@
 
     if-lez v3, :cond_0
 
-    .line 700
     iget-object v3, v1, Leji;->f:Ljava/util/Vector;
 
     iget-object v1, v1, Leji;->f:Ljava/util/Vector;
@@ -1454,13 +1223,11 @@
 
     invoke-virtual {v3, v1}, Ljava/util/Vector;->removeElementAt(I)V
 
-    .line 701
     :cond_0
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 702
     :goto_0
     :try_start_2
     iget-object v1, p0, Lejc;->at:Ljava/util/Vector;
@@ -1471,7 +1238,6 @@
 
     if-le v1, v0, :cond_1
 
-    .line 703
     iget-object v1, p0, Lejc;->at:Ljava/util/Vector;
 
     iget-object v2, p0, Lejc;->at:Ljava/util/Vector;
@@ -1488,7 +1254,6 @@
 
     goto :goto_0
 
-    .line 694
     :catchall_0
     move-exception v0
 
@@ -1496,7 +1261,6 @@
 
     throw v0
 
-    .line 701
     :catchall_1
     move-exception v0
 
@@ -1508,7 +1272,6 @@
     :try_start_4
     throw v0
 
-    .line 704
     :cond_1
     iget-object v1, p0, Lejc;->at:Ljava/util/Vector;
 
@@ -1518,7 +1281,6 @@
 
     if-ne v1, v0, :cond_2
 
-    .line 705
     iget-wide v2, p0, Lejc;->ar:D
 
     iget-object v0, p0, Lejc;->at:Ljava/util/Vector;
@@ -1537,7 +1299,6 @@
 
     iput-wide v0, p0, Lejc;->ar:D
 
-    .line 706
     iget-wide v0, p0, Lejc;->ar:D
 
     const-wide v2, 0x4046800000000000L    # 45.0
@@ -1546,7 +1307,6 @@
 
     iput-wide v0, p0, Lejc;->as:D
 
-    .line 707
     iget-object v0, p0, Lejc;->at:Ljava/util/Vector;
 
     iget-object v1, p0, Lejc;->at:Ljava/util/Vector;
@@ -1559,38 +1319,31 @@
 
     invoke-virtual {v0, v1}, Ljava/util/Vector;->removeElementAt(I)V
 
-    .line 708
     :cond_2
     invoke-direct {p0}, Lejc;->d()V
 
-    .line 709
     new-instance v0, Leje;
 
     invoke-direct {v0, p0}, Leje;-><init>(Lejc;)V
 
-    .line 710
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 711
     :try_start_5
     invoke-virtual {v0}, Ljava/lang/Thread;->join()V
     :try_end_5
     .catch Ljava/lang/InterruptedException; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 715
     :goto_1
     monitor-exit p0
 
     return-void
 
-    .line 713
     :catch_0
     move-exception v0
 
-    .line 714
     :try_start_6
     sget-object v1, Lkfu;->a:Lkfv;
 
@@ -1604,15 +1357,12 @@
 .method public final b(F)V
     .locals 2
 
-    .prologue
-    .line 62
     iget v0, p0, Lejc;->S:F
 
     div-float/2addr v0, p1
 
     iput v0, p0, Lejc;->T:F
 
-    .line 63
     iget v0, p0, Lejc;->T:F
 
     iget v1, p0, Lejc;->V:I
@@ -1625,7 +1375,6 @@
 
     iput v0, p0, Lejc;->T:F
 
-    .line 64
     iget v0, p0, Lejc;->T:F
 
     iget v1, p0, Lejc;->W:I
@@ -1638,7 +1387,6 @@
 
     iput v0, p0, Lejc;->T:F
 
-    .line 65
     iget v0, p0, Lejc;->T:F
 
     invoke-direct {p0, v0}, Lejc;->c(F)F
@@ -1647,15 +1395,12 @@
 
     iput v0, p0, Lejc;->U:F
 
-    .line 66
     return-void
 .end method
 
 .method public onDrawFrame(Ljavax/microedition/khronos/opengles/GL10;)V
     .locals 20
 
-    .prologue
-    .line 76
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lejc;->o:Z
@@ -1668,12 +1413,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 490
     :cond_0
     :goto_0
     return-void
 
-    .line 78
     :cond_1
     move-object/from16 v0, p0
 
@@ -1681,12 +1424,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 80
     const/16 v2, 0x4000
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glClear(I)V
 
-    .line 82
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lejc;->o:Z
@@ -1699,29 +1440,24 @@
 
     if-nez v2, :cond_0
 
-    .line 84
     invoke-static {}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->a()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 85
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lejc;->ad:Z
 
     if-nez v2, :cond_2
 
-    .line 87
     invoke-static {}, Leii;->c()I
 
-    .line 88
     invoke-static {}, Leii;->c()I
 
     move-result v3
 
-    .line 89
     move-object/from16 v0, p0
 
     iget v2, v0, Lejc;->C:I
@@ -1732,34 +1468,28 @@
 
     invoke-static {v3, v2, v4}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->a(III)V
 
-    .line 90
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->b:Lejh;
 
-    .line 91
     iget-object v4, v2, Lejh;->d:Ljava/util/Vector;
 
     invoke-virtual {v4}, Ljava/util/Vector;->clear()V
 
-    .line 92
     new-instance v4, Leii;
 
     invoke-direct {v4}, Leii;-><init>()V
 
-    .line 93
     iget-object v5, v2, Lejh;->k:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 94
     iget-object v5, v2, Lejh;->d:Ljava/util/Vector;
 
     const/4 v6, 0x0
 
     invoke-virtual {v5, v6, v4}, Ljava/util/Vector;->add(ILjava/lang/Object;)V
 
-    .line 95
     iget-object v2, v2, Lejh;->d:Ljava/util/Vector;
 
     const/4 v4, 0x0
@@ -1770,17 +1500,14 @@
 
     check-cast v2, Leii;
 
-    .line 96
     iput v3, v2, Leii;->a:I
 
-    .line 97
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lejc;->ad:Z
 
-    .line 98
     invoke-static {}, Leii;->d()I
 
     move-result v2
@@ -1789,7 +1516,6 @@
 
     iput v2, v0, Lejc;->r:I
 
-    .line 99
     move-object/from16 v0, p0
 
     iget v2, v0, Lejc;->r:I
@@ -1804,7 +1530,6 @@
 
     invoke-static {v2, v3, v4}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->a(III)V
 
-    .line 100
     invoke-static {}, Leii;->d()I
 
     move-result v2
@@ -1813,7 +1538,6 @@
 
     iput v2, v0, Lejc;->q:I
 
-    .line 101
     move-object/from16 v0, p0
 
     iget v2, v0, Lejc;->q:I
@@ -1828,7 +1552,6 @@
 
     invoke-static {v2, v3, v4}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->a(III)V
 
-    .line 102
     :cond_2
     move-object/from16 v0, p0
 
@@ -1842,29 +1565,23 @@
 
     if-eqz v2, :cond_3
 
-    .line 103
     invoke-direct/range {p0 .. p0}, Lejc;->c()V
 
-    .line 104
     :cond_3
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->G:Lejw;
 
-    .line 105
     iget-boolean v2, v2, Lejw;->b:Z
 
-    .line 106
     if-eqz v2, :cond_5
 
-    .line 107
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lejc;->p:Z
 
     if-eqz v2, :cond_11
 
-    .line 108
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->G:Lejw;
@@ -1873,7 +1590,6 @@
 
     invoke-virtual {v2, v4, v5}, Lejw;->a(D)V
 
-    .line 119
     :cond_4
     :goto_1
     move-object/from16 v0, p0
@@ -1888,14 +1604,12 @@
 
     iput-object v2, v0, Lejc;->R:[F
 
-    .line 120
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->R:[F
 
     invoke-static {v2}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->a([F)V
 
-    .line 121
     :cond_5
     move-object/from16 v0, p0
 
@@ -1903,14 +1617,12 @@
 
     if-eqz v2, :cond_6
 
-    .line 122
     move-object/from16 v0, p0
 
     iget v2, v0, Lejc;->r:I
 
     invoke-static {v2}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->a(I)V
 
-    .line 123
     :cond_6
     move-object/from16 v0, p0
 
@@ -1918,24 +1630,20 @@
 
     if-lez v2, :cond_f
 
-    .line 124
     move-object/from16 v0, p0
 
     iget v10, v0, Lejc;->r:I
 
-    .line 125
     const/16 v2, 0xbe2
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glEnable(I)V
 
-    .line 126
     const/16 v2, 0x302
 
     const/16 v3, 0x303
 
     invoke-static {v2, v3}, Landroid/opengl/GLES20;->glBlendFunc(II)V
 
-    .line 128
     move-object/from16 v0, p0
 
     iget v2, v0, Lejc;->aa:I
@@ -1950,12 +1658,10 @@
 
     div-float v3, v2, v3
 
-    .line 129
     move-object/from16 v0, p0
 
     iget v2, v0, Lejc;->U:F
 
-    .line 130
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lejc;->an:Leio;
@@ -1964,7 +1670,6 @@
 
     move-result-wide v4
 
-    .line 131
     move-object/from16 v0, p0
 
     iget v6, v0, Lejc;->aj:I
@@ -1973,14 +1678,12 @@
 
     if-eq v6, v7, :cond_7
 
-    .line 132
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lejc;->ak:Z
 
     if-eqz v2, :cond_13
 
-    .line 133
     move-object/from16 v0, p0
 
     iget v2, v0, Lejc;->U:F
@@ -1995,7 +1698,6 @@
 
     double-to-float v2, v4
 
-    .line 136
     :cond_7
     :goto_2
     float-to-double v4, v2
@@ -2018,10 +1720,8 @@
 
     mul-float v7, v2, v4
 
-    .line 137
     mul-float v5, v7, v3
 
-    .line 138
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->L:[F
@@ -2038,7 +1738,6 @@
 
     invoke-static/range {v2 .. v9}, Landroid/opengl/Matrix;->frustumM([FIFFFFFF)V
 
-    .line 139
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->M:[F
@@ -2047,12 +1746,10 @@
 
     invoke-static {v2, v3}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 140
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->ai:Lfyd;
 
-    .line 141
     invoke-interface {v2}, Lfyd;->e()Lihp;
 
     move-result-object v2
@@ -2067,13 +1764,10 @@
 
     iget-object v3, v0, Lejc;->G:Lejw;
 
-    .line 142
     iget v3, v3, Lejw;->o:F
 
-    .line 143
     sub-float v4, v2, v3
 
-    .line 144
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->M:[F
@@ -2088,7 +1782,6 @@
 
     invoke-static/range {v2 .. v7}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
 
-    .line 145
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->J:[F
@@ -2109,14 +1802,12 @@
 
     invoke-static/range {v2 .. v7}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
-    .line 146
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lejc;->X:Z
 
     if-nez v2, :cond_9
 
-    .line 148
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->O:[F
@@ -2145,7 +1836,6 @@
 
     invoke-static/range {v2 .. v9}, Landroid/opengl/Matrix;->orthoM([FIFFFFFF)V
 
-    .line 149
     move-object/from16 v0, p0
 
     iget v2, v0, Lejc;->aa:I
@@ -2154,17 +1844,14 @@
 
     iget v3, v0, Lejc;->ab:I
 
-    .line 150
     mul-int/lit8 v2, v2, 0x1f
 
     add-int/2addr v2, v3
 
-    .line 151
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    .line 152
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->ax:Ljava/util/HashMap;
@@ -2175,15 +1862,12 @@
 
     check-cast v2, Lejm;
 
-    .line 153
     if-eqz v2, :cond_14
 
-    .line 154
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lejc;->h:Lejm;
 
-    .line 163
     :goto_3
     move-object/from16 v0, p0
 
@@ -2201,20 +1885,16 @@
 
     iget-object v6, v0, Lejc;->h:Lejm;
 
-    .line 164
     new-instance v2, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 165
     const/4 v7, 0x0
 
     iput-boolean v7, v2, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
 
-    .line 166
     iget-object v7, v3, Lejn;->c:Landroid/content/Context;
 
-    .line 167
     invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
@@ -2225,13 +1905,10 @@
 
     move-result-object v2
 
-    .line 168
     if-eqz v2, :cond_8
 
-    .line 169
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 170
     :cond_8
     new-instance v2, Lein;
 
@@ -2239,7 +1916,6 @@
 
     iput-object v2, v3, Lejn;->e:Lein;
 
-    .line 171
     iget-object v2, v3, Lejn;->e:Lein;
 
     iget-object v7, v3, Lejn;->c:Landroid/content/Context;
@@ -2250,14 +1926,12 @@
 
     invoke-virtual {v2, v7, v8, v9}, Lein;->a(Landroid/content/Context;IF)Z
 
-    .line 172
     new-instance v2, Lein;
 
     invoke-direct {v2}, Lein;-><init>()V
 
     iput-object v2, v3, Lejn;->f:Lein;
 
-    .line 173
     iget-object v2, v3, Lejn;->f:Lein;
 
     iget-object v7, v3, Lejn;->c:Landroid/content/Context;
@@ -2268,7 +1942,6 @@
 
     invoke-virtual {v2, v7, v8, v9}, Lein;->a(Landroid/content/Context;IF)Z
 
-    .line 174
     :try_start_0
     new-instance v2, Lekc;
 
@@ -2276,7 +1949,6 @@
 
     iput-object v2, v3, Lejn;->g:Lekc;
 
-    .line 175
     new-instance v2, Lekb;
 
     invoke-direct {v2}, Lekb;-><init>()V
@@ -2285,24 +1957,19 @@
     :try_end_0
     .catch Leij; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 179
     :goto_4
     iget-object v2, v3, Lejn;->e:Lein;
 
     iget-object v7, v3, Lejn;->g:Lekc;
 
-    .line 180
     iput-object v7, v2, Leih;->e:Leik;
 
-    .line 181
     iget-object v2, v3, Lejn;->f:Lein;
 
     iget-object v7, v3, Lejn;->g:Lekc;
 
-    .line 182
     iput-object v7, v2, Leih;->e:Leik;
 
-    .line 183
     int-to-float v2, v4
 
     const/high16 v4, 0x40000000    # 2.0f
@@ -2311,7 +1978,6 @@
 
     iput v2, v3, Lejn;->m:F
 
-    .line 184
     int-to-float v2, v5
 
     const/high16 v4, 0x40000000    # 2.0f
@@ -2320,17 +1986,14 @@
 
     iput v2, v3, Lejn;->n:F
 
-    .line 185
     iget-object v2, v3, Lejn;->w:[F
 
     const/4 v4, 0x0
 
     invoke-static {v2, v4}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 186
     iput-object v6, v3, Lejn;->x:Lejm;
 
-    .line 187
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->d:Lejn;
@@ -2339,30 +2002,24 @@
 
     iget-object v3, v0, Lejc;->G:Lejw;
 
-    .line 188
     iput-object v3, v2, Lejn;->q:Lejw;
 
-    .line 190
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->au:Landroid/content/Context;
 
-    .line 191
     new-instance v3, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v3}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 192
     const/4 v4, 0x0
 
     iput-boolean v4, v3, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
 
-    .line 193
     const/4 v4, 0x1
 
     iput-boolean v4, v3, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 194
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -2371,7 +2028,6 @@
 
     invoke-static {v2, v4, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 195
     new-instance v2, Lacd;
 
     iget v4, v3, Landroid/graphics/BitmapFactory$Options;->outWidth:I
@@ -2380,12 +2036,10 @@
 
     invoke-direct {v2, v4, v3}, Lacd;-><init>(II)V
 
-    .line 196
     iget-object v2, v2, Lacd;->a:Landroid/graphics/Point;
 
     iget v2, v2, Landroid/graphics/Point;->y:I
 
-    .line 197
     int-to-float v2, v2
 
     const v3, 0x3f59999a    # 0.85f
@@ -2394,21 +2048,18 @@
 
     float-to-int v2, v2
 
-    .line 198
     move-object/from16 v0, p0
 
     iget v3, v0, Lejc;->ab:I
 
     div-int/lit8 v3, v3, 0x2
 
-    .line 199
     move-object/from16 v0, p0
 
     iget v4, v0, Lejc;->aa:I
 
     div-int/lit8 v4, v4, 0x2
 
-    .line 200
     new-instance v5, Landroid/graphics/PointF;
 
     int-to-float v6, v4
@@ -2419,7 +2070,6 @@
 
     invoke-direct {v5, v6, v7}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 201
     new-instance v6, Landroid/graphics/PointF;
 
     int-to-float v4, v4
@@ -2430,7 +2080,6 @@
 
     invoke-direct {v6, v4, v2}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 202
     new-instance v2, Leig;
 
     invoke-direct {v2}, Leig;-><init>()V
@@ -2439,7 +2088,6 @@
 
     iput-object v2, v0, Lejc;->f:Leig;
 
-    .line 203
     new-instance v2, Leig;
 
     invoke-direct {v2}, Leig;-><init>()V
@@ -2448,7 +2096,6 @@
 
     iput-object v2, v0, Lejc;->g:Leig;
 
-    .line 204
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->f:Leig;
@@ -2463,7 +2110,6 @@
 
     invoke-virtual {v2, v3, v4, v7}, Leig;->a(Landroid/content/Context;IF)Z
 
-    .line 205
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->g:Leig;
@@ -2478,21 +2124,18 @@
 
     invoke-virtual {v2, v3, v4, v7}, Leig;->a(Landroid/content/Context;IF)Z
 
-    .line 206
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->f:Leig;
 
     invoke-virtual {v2, v5}, Leig;->a(Landroid/graphics/PointF;)V
 
-    .line 207
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->g:Leig;
 
     invoke-virtual {v2, v6}, Leig;->a(Landroid/graphics/PointF;)V
 
-    .line 208
     :try_start_1
     new-instance v2, Lekb;
 
@@ -2504,7 +2147,6 @@
     :try_end_1
     .catch Leij; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 212
     :goto_5
     move-object/from16 v0, p0
 
@@ -2514,10 +2156,8 @@
 
     iget-object v3, v0, Lejc;->m:Lekb;
 
-    .line 213
     iput-object v3, v2, Leih;->e:Leik;
 
-    .line 214
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->g:Leig;
@@ -2526,45 +2166,37 @@
 
     iget-object v3, v0, Lejc;->m:Lekb;
 
-    .line 215
     iput-object v3, v2, Leih;->e:Leik;
 
-    .line 216
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lejc;->X:Z
 
-    .line 218
     :cond_9
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->b:Lejh;
 
-    .line 219
     const/4 v3, 0x1
 
     iput-boolean v3, v2, Lejh;->l:Z
 
-    .line 220
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lejc;->F:Z
 
     if-eqz v2, :cond_15
 
-    .line 221
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->b:Lejh;
 
-    .line 222
     const/4 v3, 0x1
 
     iput-boolean v3, v2, Lejh;->m:Z
 
-    .line 226
     :goto_6
     move-object/from16 v0, p0
 
@@ -2576,20 +2208,17 @@
 
     const/4 v2, 0x1
 
-    .line 227
     :goto_7
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lejc;->c:Leji;
 
-    .line 228
     iget-object v3, v3, Leji;->f:Ljava/util/Vector;
 
     invoke-virtual {v3}, Ljava/util/Vector;->size()I
 
     move-result v3
 
-    .line 229
     if-nez v3, :cond_17
 
     if-eqz v2, :cond_17
@@ -2601,40 +2230,33 @@
 
     iput-boolean v3, v0, Lejc;->F:Z
 
-    .line 230
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lejc;->F:Z
 
     if-nez v3, :cond_a
 
-    .line 231
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lejc;->b:Lejh;
 
-    .line 232
     const/4 v4, 0x0
 
     iput-boolean v4, v3, Lejh;->m:Z
 
-    .line 233
     :cond_a
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lejc;->b:Lejh;
 
-    .line 234
     iput-boolean v2, v3, Lejh;->l:Z
 
-    .line 235
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->b:Lejh;
 
     invoke-virtual {v2, v10}, Lejh;->a(I)V
 
-    .line 236
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lejc;->I:Lejl;
@@ -2643,41 +2265,33 @@
 
     iget-object v2, v0, Lejc;->c:Leji;
 
-    .line 237
     iget-object v2, v2, Leji;->f:Ljava/util/Vector;
 
     invoke-virtual {v2}, Ljava/util/Vector;->size()I
 
     move-result v2
 
-    .line 238
     if-lez v2, :cond_18
 
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->H:Leis;
 
-    .line 239
     iget-object v2, v2, Leis;->C:Leir;
 
-    .line 240
     iget-boolean v2, v2, Leir;->b:Z
 
-    .line 241
     if-nez v2, :cond_18
 
     const/4 v2, 0x1
 
-    .line 243
     :goto_9
     iget-boolean v4, v3, Lejl;->a:Z
 
     if-eq v2, v4, :cond_b
 
-    .line 244
     iput-boolean v2, v3, Lejl;->a:Z
 
-    .line 246
     :cond_b
     const/4 v2, 0x0
 
@@ -2693,17 +2307,14 @@
 
     invoke-static {v2, v3, v4, v5}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
-    .line 247
     const/16 v2, 0x100
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glClear(I)V
 
-    .line 248
     const/16 v2, 0xb71
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glEnable(I)V
 
-    .line 249
     :try_start_2
     move-object/from16 v0, p0
 
@@ -2725,7 +2336,6 @@
 
     invoke-static/range {v2 .. v7}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
-    .line 250
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->J:[F
@@ -2746,12 +2356,10 @@
 
     invoke-static/range {v2 .. v7}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
-    .line 251
     const/high16 v2, 0x40000000    # 2.0f
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glLineWidth(F)V
 
-    .line 252
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->a:Leih;
@@ -2762,17 +2370,14 @@
 
     invoke-virtual {v2, v3}, Leih;->b([F)V
 
-    .line 253
     const/16 v2, 0xb71
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glDisable(I)V
 
-    .line 254
     const/16 v2, 0xbe2
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glEnable(I)V
 
-    .line 255
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->c:Leji;
@@ -2783,7 +2388,6 @@
 
     invoke-virtual {v2, v3}, Leji;->a([F)V
 
-    .line 256
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->M:[F
@@ -2792,12 +2396,10 @@
 
     invoke-static {v2, v3}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 257
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->ai:Lfyd;
 
-    .line 258
     invoke-interface {v2}, Lfyd;->e()Lihp;
 
     move-result-object v2
@@ -2812,13 +2414,10 @@
 
     iget-object v3, v0, Lejc;->G:Lejw;
 
-    .line 259
     iget v3, v3, Lejw;->o:F
 
-    .line 260
     sub-float v4, v2, v3
 
-    .line 261
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->M:[F
@@ -2833,7 +2432,6 @@
 
     invoke-static/range {v2 .. v7}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
 
-    .line 262
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->M:[F
@@ -2850,7 +2448,6 @@
 
     invoke-static/range {v2 .. v7}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
 
-    .line 263
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->K:[F
@@ -2871,7 +2468,6 @@
 
     invoke-static/range {v2 .. v7}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
-    .line 264
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->l:Leim;
@@ -2880,7 +2476,6 @@
 
     invoke-virtual {v2, v3}, Leim;->b([F)V
 
-    .line 265
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lejc;->n:Z
@@ -2900,18 +2495,15 @@
 
     if-eqz v2, :cond_e
 
-    .line 266
     :cond_d
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->k:Lekd;
 
-    .line 267
     iget v2, v2, Leik;->d:I
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 268
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->k:Lekd;
@@ -2920,7 +2512,6 @@
 
     invoke-virtual {v2, v3}, Lekd;->a(F)V
 
-    .line 269
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->b:Lejh;
@@ -2931,7 +2522,6 @@
 
     invoke-virtual {v2, v3}, Lejh;->a([F)V
 
-    .line 270
     :cond_e
     move-object/from16 v0, p0
 
@@ -2941,10 +2531,8 @@
 
     iget-object v3, v0, Lejc;->R:[F
 
-    .line 271
     iput-object v3, v2, Lejn;->l:[F
 
-    .line 272
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lejc;->d:Lejn;
@@ -2957,15 +2545,12 @@
 
     iget-object v15, v0, Lejc;->O:[F
 
-    .line 273
     invoke-static {}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->o()I
 
     move-result v16
 
-    .line 274
     if-ltz v16, :cond_19
 
-    .line 275
     iget v2, v14, Lejn;->o:F
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -2982,14 +2567,11 @@
 
     iput v2, v14, Lejn;->o:F
 
-    .line 278
     :goto_a
     iget-object v2, v14, Lejn;->q:Lejw;
 
-    .line 279
     iget v2, v2, Lejw;->q:F
 
-    .line 280
     float-to-double v2, v2
 
     invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
@@ -2998,21 +2580,18 @@
 
     double-to-float v2, v2
 
-    .line 281
     const v3, 0x3f32b8c2
 
     invoke-static {v2, v3}, Ljava/lang/Math;->min(FF)F
 
     move-result v2
 
-    .line 282
     const v3, 0x3e32b8c2
 
     invoke-static {v2, v3}, Ljava/lang/Math;->max(FF)F
 
     move-result v2
 
-    .line 283
     const/high16 v3, 0x40300000    # 2.75f
 
     const v5, 0x3e32b8c2
@@ -3033,14 +2612,12 @@
 
     mul-float/2addr v2, v3
 
-    .line 285
     sget-object v3, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->a:Ljava/lang/Object;
 
     monitor-enter v3
     :try_end_2
     .catch Leij; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 286
     :try_start_3
     sget-object v5, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->b:Ljava/lang/Boolean;
 
@@ -3050,7 +2627,6 @@
 
     if-nez v5, :cond_1a
 
-    .line 287
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v4, "State is not ready."
@@ -3059,7 +2635,6 @@
 
     throw v2
 
-    .line 289
     :catchall_0
     move-exception v2
 
@@ -3072,23 +2647,19 @@
     :try_end_4
     .catch Leij; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 479
     :catch_0
     move-exception v2
 
-    .line 480
     sget-object v3, Lkfu;->a:Lkfv;
 
     invoke-virtual {v3, v2}, Lkfv;->b(Ljava/lang/Throwable;)V
 
-    .line 481
     :cond_f
     :goto_b
     move-object/from16 v0, p0
 
     iget v2, v0, Lejc;->r:I
 
-    .line 482
     move-object/from16 v0, p0
 
     iget v3, v0, Lejc;->q:I
@@ -3097,12 +2668,10 @@
 
     iput v3, v0, Lejc;->r:I
 
-    .line 483
     move-object/from16 v0, p0
 
     iput v2, v0, Lejc;->q:I
 
-    .line 484
     move-object/from16 v0, p0
 
     iget v2, v0, Lejc;->af:I
@@ -3113,21 +2682,18 @@
 
     iput v2, v0, Lejc;->af:I
 
-    .line 486
     move-object/from16 v0, p0
 
     iget v2, v0, Lejc;->af:I
 
     if-nez v2, :cond_10
 
-    .line 487
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v2
 
     invoke-virtual {v2}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    .line 488
     :cond_10
     move-object/from16 v0, p0
 
@@ -3143,7 +2709,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 489
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v2
@@ -3152,7 +2717,6 @@
 
     goto/16 :goto_0
 
-    .line 109
     :cond_11
     move-object/from16 v0, p0
 
@@ -3164,7 +2728,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 110
     move-object/from16 v0, p0
 
     iget-wide v2, v0, Lejc;->ar:D
@@ -3189,7 +2752,6 @@
 
     if-gez v2, :cond_12
 
-    .line 111
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->G:Lejw;
@@ -3198,14 +2760,12 @@
 
     iget-object v3, v0, Lejc;->G:Lejw;
 
-    .line 112
     iget-object v3, v3, Lejw;->n:Lejv;
 
     invoke-virtual {v3}, Lejv;->b()D
 
     move-result-wide v4
 
-    .line 113
     move-object/from16 v0, p0
 
     iget-wide v6, v0, Lejc;->ar:D
@@ -3214,7 +2774,6 @@
 
     invoke-virtual {v2, v4, v5}, Lejw;->a(D)V
 
-    .line 114
     const-wide/16 v2, 0x0
 
     move-object/from16 v0, p0
@@ -3223,7 +2782,6 @@
 
     goto/16 :goto_1
 
-    .line 115
     :cond_12
     move-object/from16 v0, p0
 
@@ -3233,14 +2791,12 @@
 
     iget-object v3, v0, Lejc;->G:Lejw;
 
-    .line 116
     iget-object v3, v3, Lejw;->n:Lejv;
 
     invoke-virtual {v3}, Lejv;->b()D
 
     move-result-wide v4
 
-    .line 117
     move-object/from16 v0, p0
 
     iget-wide v6, v0, Lejc;->as:D
@@ -3249,7 +2805,6 @@
 
     invoke-virtual {v2, v4, v5}, Lejw;->a(D)V
 
-    .line 118
     move-object/from16 v0, p0
 
     iget-wide v2, v0, Lejc;->ar:D
@@ -3266,7 +2821,6 @@
 
     goto/16 :goto_1
 
-    .line 134
     :cond_13
     move-object/from16 v0, p0
 
@@ -3288,7 +2842,6 @@
 
     goto/16 :goto_2
 
-    .line 155
     :cond_14
     new-instance v2, Lejm;
 
@@ -3314,7 +2867,6 @@
 
     iput-object v2, v0, Lejc;->h:Lejm;
 
-    .line 156
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->ax:Ljava/util/HashMap;
@@ -3325,7 +2877,6 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 157
     new-instance v2, Lejm;
 
     move-object/from16 v0, p0
@@ -3346,7 +2897,6 @@
 
     invoke-direct {v2, v3, v4, v5, v6}, Lejm;-><init>(Landroid/content/Context;Lejw;II)V
 
-    .line 158
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lejc;->ax:Ljava/util/HashMap;
@@ -3359,75 +2909,62 @@
 
     iget v5, v0, Lejc;->aa:I
 
-    .line 160
     mul-int/lit8 v4, v4, 0x1f
 
     add-int/2addr v4, v5
 
-    .line 161
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
-    .line 162
     invoke-virtual {v3, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_3
 
-    .line 177
     :catch_1
     move-exception v2
 
-    .line 178
     sget-object v7, Lkfu;->a:Lkfv;
 
     invoke-virtual {v7, v2}, Lkfv;->b(Ljava/lang/Throwable;)V
 
     goto/16 :goto_4
 
-    .line 210
     :catch_2
     move-exception v2
 
-    .line 211
     sget-object v3, Lkfu;->a:Lkfv;
 
     invoke-virtual {v3, v2}, Lkfv;->b(Ljava/lang/Throwable;)V
 
     goto/16 :goto_5
 
-    .line 224
     :cond_15
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->b:Lejh;
 
-    .line 225
     const/4 v3, 0x0
 
     iput-boolean v3, v2, Lejh;->m:Z
 
     goto/16 :goto_6
 
-    .line 226
     :cond_16
     const/4 v2, 0x0
 
     goto/16 :goto_7
 
-    .line 229
     :cond_17
     const/4 v3, 0x0
 
     goto/16 :goto_8
 
-    .line 241
     :cond_18
     const/4 v2, 0x0
 
     goto/16 :goto_9
 
-    .line 276
     :cond_19
     const/4 v2, 0x0
 
@@ -3438,17 +2975,14 @@
 
     goto/16 :goto_a
 
-    .line 288
     :cond_1a
     :try_start_6
     invoke-static {v2}, Lcom/google/android/apps/lightcycle/panorama/LightCycleNative;->SetTargetHitAngleRadians(F)V
 
-    .line 289
     monitor-exit v3
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 290
     :try_start_7
     new-instance v17, Leie;
 
@@ -3480,32 +3014,26 @@
 
     invoke-direct {v0, v2, v3, v5}, Leie;-><init>(FFF)V
 
-    .line 291
     const/4 v2, 0x1
 
     const/16 v3, 0x303
 
     invoke-static {v2, v3}, Landroid/opengl/GLES20;->glBlendFunc(II)V
 
-    .line 292
     iget-object v2, v14, Lejn;->g:Lekc;
 
-    .line 293
     iget v2, v2, Leik;->d:I
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 294
     iget-object v2, v14, Lejn;->g:Lekc;
 
-    .line 295
     iget v2, v2, Lekc;->e:I
 
     const/high16 v3, 0x3f800000    # 1.0f
 
     invoke-static {v2, v3}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 296
     iget-object v2, v14, Lejn;->g:Lekc;
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -3514,7 +3042,6 @@
     :try_end_7
     .catch Leij; {:try_start_7 .. :try_end_7} :catch_0
 
-    .line 297
     :try_start_8
     iget-object v0, v14, Lejn;->d:Ljava/util/Map;
 
@@ -3524,7 +3051,6 @@
     :try_end_8
     .catch Leij; {:try_start_8 .. :try_end_8} :catch_3
 
-    .line 298
     :try_start_9
     iget-object v2, v14, Lejn;->d:Ljava/util/Map;
 
@@ -3532,7 +3058,6 @@
 
     move-result-object v2
 
-    .line 299
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v19
@@ -3555,14 +3080,12 @@
 
     move-object v13, v0
 
-    .line 300
     invoke-interface {v13}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, [F
 
-    .line 301
     iget-object v2, v14, Lejn;->k:[F
 
     const/4 v3, 0x0
@@ -3573,7 +3096,6 @@
 
     invoke-static/range {v2 .. v7}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
-    .line 302
     iget-object v7, v14, Lejn;->j:[F
 
     const/4 v8, 0x0
@@ -3588,13 +3110,10 @@
 
     invoke-static/range {v7 .. v12}, Landroid/opengl/Matrix;->multiplyMV([FI[FI[FI)V
 
-    .line 303
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 304
     iget-object v2, v14, Lejn;->r:Lejo;
 
-    .line 305
     new-instance v5, Leie;
 
     const/16 v7, 0x8
@@ -3617,7 +3136,6 @@
 
     invoke-direct {v5, v7, v8, v6}, Leie;-><init>(FFF)V
 
-    .line 307
     iget v6, v5, Leie;->a:F
 
     move-object/from16 v0, v17
@@ -3646,7 +3164,6 @@
 
     add-float/2addr v5, v6
 
-    .line 308
     float-to-double v6, v5
 
     invoke-static {v6, v7}, Ljava/lang/Math;->acos(D)D
@@ -3655,41 +3172,34 @@
 
     double-to-float v5, v6
 
-    .line 309
     sget v6, Lejn;->b:F
 
     cmpg-float v6, v5, v6
 
     if-gez v6, :cond_25
 
-    .line 310
     const/high16 v5, 0x3f800000    # 1.0f
 
     iput v5, v2, Lejo;->a:F
 
-    .line 311
     const/high16 v5, 0x3f800000    # 1.0f
 
     iput v5, v2, Lejo;->b:F
 
-    .line 320
     :goto_d
     iget-boolean v2, v14, Lejn;->p:Z
 
     if-nez v2, :cond_1c
 
-    .line 321
     iget-object v2, v14, Lejn;->r:Lejo;
 
     iget v3, v2, Lejo;->a:F
 
-    .line 322
     :cond_1c
     iget-object v2, v14, Lejn;->r:Lejo;
 
     iget v2, v2, Lejo;->b:F
 
-    .line 323
     iget-object v5, v14, Lejn;->d:Ljava/util/Map;
 
     invoke-interface {v5}, Ljava/util/Map;->size()I
@@ -3700,21 +3210,18 @@
 
     if-ne v5, v6, :cond_27
 
-    .line 324
     const/high16 v2, 0x3f400000    # 0.75f
 
     invoke-static {v2, v3}, Ljava/lang/Math;->max(FF)F
 
     move-result v3
 
-    .line 325
     const/high16 v2, 0x3f800000    # 1.0f
 
     move v5, v3
 
     move v3, v2
 
-    .line 342
     :goto_e
     iget-object v2, v14, Lejn;->j:[F
 
@@ -3728,12 +3235,10 @@
 
     if-ltz v2, :cond_1b
 
-    .line 343
     iget-object v2, v14, Lejn;->j:[F
 
     invoke-static {v2}, Lejn;->b([F)V
 
-    .line 344
     iget-object v2, v14, Lejn;->j:[F
 
     const/4 v6, 0x0
@@ -3748,7 +3253,6 @@
 
     add-float/2addr v6, v2
 
-    .line 345
     iget-object v2, v14, Lejn;->j:[F
 
     const/4 v7, 0x1
@@ -3763,7 +3267,6 @@
 
     add-float/2addr v7, v2
 
-    .line 346
     invoke-interface {v13}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -3778,32 +3281,26 @@
 
     if-ne v2, v0, :cond_2d
 
-    .line 347
     const/high16 v2, 0x3f800000    # 1.0f
 
     sub-float/2addr v2, v5
 
-    .line 349
     iget-object v8, v14, Lejn;->g:Lekc;
 
     invoke-virtual {v8, v5}, Lekc;->a(F)V
 
-    .line 350
     iget-object v5, v14, Lejn;->f:Lein;
 
     invoke-virtual {v5, v15, v6, v7, v3}, Lein;->a([FFFF)V
 
-    .line 351
     iget-object v5, v14, Lejn;->g:Lekc;
 
     invoke-virtual {v5, v2}, Lekc;->a(F)V
 
-    .line 352
     iget-object v2, v14, Lejn;->e:Lein;
 
     invoke-virtual {v2, v15, v6, v7, v3}, Lein;->a([FFFF)V
 
-    .line 353
     iget-object v2, v14, Lejn;->g:Lekc;
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -3812,7 +3309,6 @@
 
     goto/16 :goto_c
 
-    .line 358
     :catchall_1
     move-exception v2
 
@@ -3825,17 +3321,14 @@
     :try_end_a
     .catch Leij; {:try_start_a .. :try_end_a} :catch_3
 
-    .line 413
     :catch_3
     move-exception v2
 
-    .line 414
     :try_start_b
     sget-object v3, Lkfu;->a:Lkfv;
 
     invoke-virtual {v3, v2}, Lkfv;->b(Ljava/lang/Throwable;)V
 
-    .line 415
     :cond_1d
     :goto_f
     const/16 v2, 0x302
@@ -3844,7 +3337,6 @@
 
     invoke-static {v2, v3}, Landroid/opengl/GLES20;->glBlendFunc(II)V
 
-    .line 417
     move-object/from16 v0, p0
 
     iget v2, v0, Lejc;->aj:I
@@ -3859,44 +3351,36 @@
 
     if-eqz v2, :cond_32
 
-    .line 429
     :cond_1e
     :goto_10
     const/16 v2, 0xbe2
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glDisable(I)V
 
-    .line 430
     const/16 v2, 0xb71
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glDisable(I)V
 
-    .line 431
     const/16 v2, 0x302
 
     const/16 v3, 0x303
 
     invoke-static {v2, v3}, Landroid/opengl/GLES20;->glBlendFunc(II)V
 
-    .line 432
     const/16 v2, 0xb71
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glDisable(I)V
 
-    .line 433
     const/16 v2, 0xbe2
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glEnable(I)V
 
-    .line 434
     invoke-static {}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->r()I
 
     move-result v3
 
-    .line 435
     if-nez v3, :cond_21
 
-    .line 436
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lejc;->aq:Z
@@ -3909,21 +3393,18 @@
 
     if-eqz v2, :cond_1f
 
-    .line 437
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lejc;->aq:Z
 
-    .line 438
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lejc;->ao:Z
 
-    .line 439
     :cond_1f
     move-object/from16 v0, p0
 
@@ -3937,21 +3418,18 @@
 
     if-nez v2, :cond_20
 
-    .line 440
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lejc;->aq:Z
 
-    .line 441
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lejc;->ao:Z
 
-    .line 442
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v4
@@ -3960,7 +3438,6 @@
 
     iput-wide v4, v0, Lejc;->ap:J
 
-    .line 443
     :cond_20
     move-object/from16 v0, p0
 
@@ -3968,12 +3445,10 @@
 
     if-eqz v2, :cond_21
 
-    .line 444
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v4
 
-    .line 445
     move-object/from16 v0, p0
 
     iget-wide v6, v0, Lejc;->ap:J
@@ -3986,28 +3461,24 @@
 
     div-double/2addr v4, v6
 
-    .line 446
     const-wide/high16 v6, 0x3fd0000000000000L    # 0.25
 
     cmpl-double v2, v4, v6
 
     if-lez v2, :cond_21
 
-    .line 447
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lejc;->ao:Z
 
-    .line 448
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lejc;->e:Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;
 
     sget v5, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->c:I
 
-    .line 449
     const v2, 0x7f0e0160
 
     invoke-virtual {v4, v2}, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->findViewById(I)Landroid/view/View;
@@ -4016,7 +3487,6 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    .line 450
     iget-object v6, v4, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->d:Landroid/os/Handler;
 
     new-instance v7, Lekq;
@@ -4025,7 +3495,6 @@
 
     invoke-virtual {v6, v7}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 451
     iget-object v4, v4, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->d:Landroid/os/Handler;
 
     new-instance v5, Lekr;
@@ -4036,7 +3505,6 @@
 
     invoke-virtual {v4, v5, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 452
     :cond_21
     move-object/from16 v0, p0
 
@@ -4065,7 +3533,6 @@
     :cond_22
     const/4 v2, 0x1
 
-    .line 453
     :goto_11
     move-object/from16 v0, p0
 
@@ -4075,12 +3542,10 @@
 
     if-nez v2, :cond_24
 
-    .line 454
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->O:[F
 
-    .line 455
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lejc;->G:Lejw;
@@ -4089,39 +3554,33 @@
 
     move-result-object v4
 
-    .line 456
     const/4 v5, 0x6
 
     aget v4, v4, v5
 
     neg-float v4, v4
 
-    .line 457
     const/16 v5, 0xbe2
 
     invoke-static {v5}, Landroid/opengl/GLES20;->glEnable(I)V
     :try_end_b
     .catch Leij; {:try_start_b .. :try_end_b} :catch_0
 
-    .line 458
     const v5, 0x3eb2b8c2
 
     cmpl-float v5, v4, v5
 
     if-lez v5, :cond_23
 
-    .line 459
     :try_start_c
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lejc;->m:Lekb;
 
-    .line 460
     iget v5, v5, Leik;->d:I
 
     invoke-static {v5}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 461
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lejc;->m:Lekb;
@@ -4130,14 +3589,12 @@
 
     invoke-virtual {v5, v6}, Lekb;->a(F)V
 
-    .line 462
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lejc;->g:Leig;
 
     invoke-virtual {v5, v2}, Leig;->a([F)V
 
-    .line 463
     :cond_23
     const v5, -0x414d473e
 
@@ -4145,17 +3602,14 @@
 
     if-gez v4, :cond_24
 
-    .line 464
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lejc;->m:Lekb;
 
-    .line 465
     iget v4, v4, Leik;->d:I
 
     invoke-static {v4}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 466
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lejc;->m:Lekb;
@@ -4164,7 +3618,6 @@
 
     invoke-virtual {v4, v5}, Lekb;->a(F)V
 
-    .line 467
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lejc;->f:Leig;
@@ -4173,26 +3626,22 @@
     :try_end_c
     .catch Leij; {:try_start_c .. :try_end_c} :catch_4
 
-    .line 471
     :cond_24
     :goto_12
     if-eqz v3, :cond_36
 
-    .line 472
     const/4 v2, -0x1
 
     if-ne v3, v2, :cond_35
 
     const/4 v2, 0x1
 
-    .line 473
     :goto_13
     :try_start_d
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lejc;->e:Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;
 
-    .line 474
     iget-object v4, v3, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->d:Landroid/os/Handler;
 
     new-instance v5, Leks;
@@ -4205,7 +3654,6 @@
 
     goto/16 :goto_b
 
-    .line 312
     :cond_25
     :try_start_e
     sget v6, Lejn;->a:F
@@ -4214,14 +3662,12 @@
 
     if-gez v6, :cond_26
 
-    .line 313
     sget v6, Lejn;->a:F
 
     sget v7, Lejn;->b:F
 
     sub-float/2addr v6, v7
 
-    .line 314
     const/high16 v7, 0x3f800000    # 1.0f
 
     sget v8, Lejn;->b:F
@@ -4232,14 +3678,12 @@
 
     sub-float v5, v7, v5
 
-    .line 315
     const/4 v6, 0x0
 
     add-float/2addr v6, v5
 
     iput v6, v2, Lejo;->a:F
 
-    .line 316
     const v6, 0x3f19999a    # 0.6f
 
     mul-float/2addr v5, v6
@@ -4252,20 +3696,17 @@
 
     goto/16 :goto_d
 
-    .line 318
     :cond_26
     const/4 v5, 0x0
 
     iput v5, v2, Lejo;->a:F
 
-    .line 319
     const v5, 0x3ecccccd    # 0.4f
 
     iput v5, v2, Lejo;->b:F
 
     goto/16 :goto_d
 
-    .line 326
     :cond_27
     iget-boolean v5, v14, Lejn;->s:Z
 
@@ -4275,19 +3716,16 @@
 
     if-nez v5, :cond_29
 
-    .line 327
     iget v5, v14, Lejn;->u:F
 
     invoke-static {v5, v3}, Ljava/lang/Math;->max(FF)F
 
     move-result v3
 
-    .line 328
     iget-boolean v5, v14, Lejn;->t:Z
 
     if-eqz v5, :cond_2c
 
-    .line 329
     iget v5, v14, Lejn;->u:F
 
     const/high16 v6, 0x3f800000    # 1.0f
@@ -4304,7 +3742,6 @@
 
     iput v5, v14, Lejn;->u:F
 
-    .line 330
     iget v5, v14, Lejn;->u:F
 
     const v6, 0x3f666666    # 0.9f
@@ -4313,7 +3750,6 @@
 
     if-lez v5, :cond_28
 
-    .line 331
     iget-wide v6, v14, Lejn;->v:J
 
     const-wide/16 v8, 0x0
@@ -4322,14 +3758,12 @@
 
     if-nez v5, :cond_2a
 
-    .line 332
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v6
 
     iput-wide v6, v14, Lejn;->v:J
 
-    .line 339
     :cond_28
     :goto_14
     iget v5, v14, Lejn;->u:F
@@ -4340,12 +3774,10 @@
 
     if-gez v5, :cond_29
 
-    .line 340
     const/4 v5, 0x0
 
     iput v5, v14, Lejn;->u:F
 
-    .line 341
     const/4 v5, 0x0
 
     iput-boolean v5, v14, Lejn;->s:Z
@@ -4357,7 +3789,6 @@
 
     goto/16 :goto_e
 
-    .line 333
     :cond_2a
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
@@ -4373,19 +3804,16 @@
 
     div-double/2addr v6, v8
 
-    .line 334
     const-wide/high16 v8, 0x3fe0000000000000L    # 0.5
 
     cmpl-double v5, v6, v8
 
     if-lez v5, :cond_2b
 
-    .line 335
     const/4 v5, 0x0
 
     iput-boolean v5, v14, Lejn;->t:Z
 
-    .line 336
     :cond_2b
     const v5, 0x3f666666    # 0.9f
 
@@ -4393,7 +3821,6 @@
 
     goto :goto_14
 
-    .line 338
     :cond_2c
     iget v5, v14, Lejn;->u:F
 
@@ -4405,45 +3832,37 @@
 
     goto :goto_14
 
-    .line 355
     :cond_2d
     iget-object v2, v14, Lejn;->g:Lekc;
 
     invoke-virtual {v2, v5}, Lekc;->a(F)V
 
-    .line 356
     iget-object v2, v14, Lejn;->e:Lein;
 
     invoke-virtual {v2, v15, v6, v7, v3}, Lein;->a([FFFF)V
 
     goto/16 :goto_c
 
-    .line 358
     :cond_2e
     monitor-exit v18
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_1
 
-    .line 361
     :try_start_f
     iget-object v2, v14, Lejn;->x:Lejm;
 
     if-eqz v2, :cond_1d
 
-    .line 362
     iget-object v3, v14, Lejn;->x:Lejm;
 
-    .line 363
     iget-boolean v2, v3, Lejm;->i:Z
 
     if-eqz v2, :cond_1d
 
-    .line 364
     iget-boolean v2, v3, Lejm;->g:Z
 
     if-eqz v2, :cond_2f
 
-    .line 366
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v4
@@ -4460,7 +3879,6 @@
 
     double-to-int v2, v4
 
-    .line 367
     int-to-long v4, v2
 
     const-wide/16 v6, 0x190
@@ -4473,7 +3891,6 @@
 
     iput v2, v3, Lejm;->f:I
 
-    .line 368
     iget v2, v3, Lejm;->f:I
 
     iget-object v4, v3, Lejm;->a:Ljava/util/ArrayList;
@@ -4486,17 +3903,14 @@
 
     if-lt v2, v4, :cond_2f
 
-    .line 369
     const/4 v2, 0x0
 
     iput-boolean v2, v3, Lejm;->g:Z
 
-    .line 370
     const/4 v2, 0x1
 
     iput-boolean v2, v3, Lejm;->h:Z
 
-    .line 371
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v4
@@ -4513,25 +3927,20 @@
 
     double-to-int v2, v4
 
-    .line 372
     iget-object v4, v3, Lejm;->b:Lejw;
 
-    .line 373
     iget v4, v4, Lejw;->m:I
 
-    .line 375
     iget-object v5, v3, Lejm;->b:Lejw;
 
     invoke-virtual {v5}, Lejw;->c()[F
 
     move-result-object v5
 
-    .line 377
     invoke-static {v5, v4, v2}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->a([FII)[F
 
     move-result-object v2
 
-    .line 378
     const/4 v4, 0x0
 
     aget v4, v2, v4
@@ -4578,10 +3987,8 @@
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 379
     iget-object v4, v3, Lejm;->b:Lejw;
 
-    .line 380
     iget-object v5, v4, Lejw;->l:[F
 
     const/4 v6, 0x0
@@ -4592,7 +3999,6 @@
 
     aput v7, v5, v6
 
-    .line 381
     iget-object v5, v4, Lejw;->l:[F
 
     const/4 v6, 0x1
@@ -4603,7 +4009,6 @@
 
     aput v7, v5, v6
 
-    .line 382
     iget-object v4, v4, Lejw;->l:[F
 
     const/4 v5, 0x2
@@ -4614,7 +4019,6 @@
 
     aput v2, v4, v5
 
-    .line 383
     iget-object v2, v3, Lejm;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -4625,46 +4029,38 @@
 
     iput v2, v3, Lejm;->f:I
 
-    .line 384
     :cond_2f
     const/16 v2, 0xbe2
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glEnable(I)V
 
-    .line 385
     iget-object v2, v3, Lejm;->d:Lekb;
 
-    .line 386
     iget v2, v2, Leik;->d:I
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 387
     iget-boolean v2, v3, Lejm;->g:Z
 
     if-nez v2, :cond_30
 
-    .line 388
     const/16 v2, 0x302
 
     const/16 v4, 0x303
 
     invoke-static {v2, v4}, Landroid/opengl/GLES20;->glBlendFunc(II)V
 
-    .line 389
     iget-object v2, v3, Lejm;->d:Lekb;
 
     const/high16 v4, 0x3f000000    # 0.5f
 
     invoke-virtual {v2, v4}, Lekb;->a(F)V
 
-    .line 392
     :goto_15
     iget-object v2, v3, Lejm;->a:Ljava/util/ArrayList;
 
     iget v4, v3, Lejm;->f:I
 
-    .line 393
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -4687,12 +4083,10 @@
 
     int-to-float v7, v2
 
-    .line 395
     iget-boolean v2, v9, Lein;->l:Z
 
     if-nez v2, :cond_31
 
-    .line 396
     sget-object v2, Lein;->f:Ljava/lang/String;
 
     const-string v3, "Sprite not initialized."
@@ -4701,7 +4095,6 @@
 
     goto/16 :goto_f
 
-    .line 390
     :cond_30
     const/4 v2, 0x1
 
@@ -4709,7 +4102,6 @@
 
     invoke-static {v2, v4}, Landroid/opengl/GLES20;->glBlendFunc(II)V
 
-    .line 391
     iget-object v2, v3, Lejm;->d:Lekb;
 
     const v4, 0x3f99999a    # 1.2f
@@ -4718,49 +4110,41 @@
 
     goto :goto_15
 
-    .line 398
     :cond_31
     iget-object v2, v9, Lein;->e:Leik;
 
     if-eqz v2, :cond_1d
 
-    .line 399
     iget-object v2, v9, Lein;->e:Leik;
 
-    .line 400
     iget v2, v2, Leik;->d:I
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 401
     iget-object v2, v9, Lein;->a:Ljava/nio/FloatBuffer;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 402
     iget-object v2, v9, Lein;->b:Ljava/nio/FloatBuffer;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 403
     iget-object v2, v9, Lein;->e:Leik;
 
     iget-object v3, v9, Lein;->a:Ljava/nio/FloatBuffer;
 
     invoke-virtual {v2, v3}, Leik;->a(Ljava/nio/FloatBuffer;)V
 
-    .line 404
     iget-object v2, v9, Lein;->e:Leik;
 
     iget-object v3, v9, Lein;->b:Ljava/nio/FloatBuffer;
 
     invoke-virtual {v2, v3}, Leik;->b(Ljava/nio/FloatBuffer;)V
 
-    .line 405
     iget-object v2, v9, Lein;->j:[F
 
     const/4 v3, 0x0
@@ -4781,7 +4165,6 @@
 
     invoke-static/range {v2 .. v8}, Landroid/opengl/Matrix;->translateM([FI[FIFFF)V
 
-    .line 406
     iget-object v2, v9, Lein;->j:[F
 
     const/4 v3, 0x0
@@ -4796,14 +4179,12 @@
 
     invoke-static/range {v2 .. v7}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
 
-    .line 407
     iget-object v2, v9, Lein;->e:Leik;
 
     iget-object v3, v9, Lein;->j:[F
 
     invoke-virtual {v2, v3}, Leik;->a([F)V
 
-    .line 408
     iget-object v2, v9, Lein;->d:Ljava/util/Vector;
 
     invoke-virtual {v2}, Ljava/util/Vector;->size()I
@@ -4812,7 +4193,6 @@
 
     if-eqz v2, :cond_1d
 
-    .line 409
     iget-object v2, v9, Lein;->d:Ljava/util/Vector;
 
     const/4 v3, 0x0
@@ -4825,14 +4205,12 @@
 
     invoke-virtual {v2}, Leii;->b()V
 
-    .line 410
     iget-object v2, v9, Lein;->c:Ljava/nio/ShortBuffer;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Ljava/nio/ShortBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 411
     const/4 v2, 0x4
 
     iget v3, v9, Lein;->k:I
@@ -4847,7 +4225,6 @@
 
     goto/16 :goto_f
 
-    .line 419
     :cond_32
     :try_start_10
     move-object/from16 v0, p0
@@ -4858,7 +4235,6 @@
 
     move-result-wide v8
 
-    .line 420
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->K:[F
@@ -4879,14 +4255,12 @@
 
     invoke-static/range {v2 .. v7}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
-    .line 421
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lejc;->ak:Z
 
     if-eqz v2, :cond_33
 
-    .line 422
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->al:Lejs;
@@ -4915,25 +4289,20 @@
 
     invoke-interface/range {v2 .. v7}, Lejs;->a(FLejn;[FII)V
 
-    .line 423
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->an:Leio;
 
-    .line 424
     iget-boolean v2, v2, Leio;->a:Z
 
-    .line 425
     if-eqz v2, :cond_1e
 
-    .line 426
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->an:Leio;
 
     invoke-virtual {v2}, Leio;->a()V
 
-    .line 427
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
@@ -4942,7 +4311,6 @@
 
     goto/16 :goto_10
 
-    .line 428
     :cond_33
     move-object/from16 v0, p0
 
@@ -4970,36 +4338,30 @@
 
     goto/16 :goto_10
 
-    .line 452
     :cond_34
     const/4 v2, 0x0
 
     goto/16 :goto_11
 
-    .line 469
     :catch_4
     move-exception v2
 
-    .line 470
     sget-object v4, Lkfu;->a:Lkfv;
 
     invoke-virtual {v4, v2}, Lkfv;->b(Ljava/lang/Throwable;)V
 
     goto/16 :goto_12
 
-    .line 472
     :cond_35
     const/4 v2, 0x0
 
     goto/16 :goto_13
 
-    .line 476
     :cond_36
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lejc;->e:Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;
 
-    .line 477
     iget-object v3, v2, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->d:Landroid/os/Handler;
 
     new-instance v4, Lekt;
@@ -5016,10 +4378,8 @@
 .method public onSurfaceChanged(Ljavax/microedition/khronos/opengles/GL10;II)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 583
     iget v0, p0, Lejc;->aa:I
 
     if-ne p2, v0, :cond_0
@@ -5028,31 +4388,24 @@
 
     if-ne p3, v0, :cond_0
 
-    .line 591
     :goto_0
     return-void
 
-    .line 585
     :cond_0
     iput p2, p0, Lejc;->aa:I
 
-    .line 586
     iput p3, p0, Lejc;->ab:I
 
-    .line 587
     iget v0, p0, Lejc;->aa:I
 
     iput v0, p0, Lejc;->Y:I
 
-    .line 588
     iget v0, p0, Lejc;->ab:I
 
     iput v0, p0, Lejc;->Z:I
 
-    .line 589
     iput-boolean v1, p0, Lejc;->X:Z
 
-    .line 590
     iput-boolean v1, p0, Lejc;->B:Z
 
     goto :goto_0
@@ -5061,13 +4414,10 @@
 .method public onSurfaceCreated(Ljavax/microedition/khronos/opengles/GL10;Ljavax/microedition/khronos/egl/EGLConfig;)V
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v5, 0x0
 
-    .line 535
-    .line 536
     :try_start_0
     iget v0, p0, Lejc;->aw:F
 
@@ -5075,7 +4425,6 @@
 
     if-gez v0, :cond_0
 
-    .line 537
     iget-object v0, p0, Lejc;->H:Leis;
 
     invoke-virtual {v0}, Leis;->d()F
@@ -5084,25 +4433,21 @@
 
     iput v0, p0, Lejc;->aw:F
 
-    .line 538
     :cond_0
     iget v0, p0, Lejc;->aw:F
 
     const v1, 0x3fd9999a    # 1.7f
 
-    .line 539
     invoke-static {v0, v1}, Lejc;->a(FF)F
 
     move-result v0
 
     iput v0, p0, Lejc;->T:F
 
-    .line 540
     iget v0, p0, Lejc;->aw:F
 
     const/high16 v1, 0x40200000    # 2.5f
 
-    .line 541
     invoke-static {v0, v1}, Lejc;->a(FF)F
 
     move-result v0
@@ -5111,12 +4456,10 @@
 
     iput v0, p0, Lejc;->V:I
 
-    .line 542
     iget v0, p0, Lejc;->aw:F
 
     const v1, 0x3f8ccccd    # 1.1f
 
-    .line 543
     invoke-static {v0, v1}, Lejc;->a(FF)F
 
     move-result v0
@@ -5125,12 +4468,10 @@
 
     iput v0, p0, Lejc;->W:I
 
-    .line 544
     iget v0, p0, Lejc;->T:F
 
     iput v0, p0, Lejc;->S:F
 
-    .line 545
     iget v0, p0, Lejc;->T:F
 
     invoke-direct {p0, v0}, Lejc;->c(F)F
@@ -5139,42 +4480,36 @@
 
     iput v0, p0, Lejc;->U:F
 
-    .line 546
     new-instance v0, Leil;
 
     invoke-direct {v0}, Leil;-><init>()V
 
     iput-object v0, p0, Lejc;->i:Leil;
 
-    .line 547
     new-instance v0, Leim;
 
     invoke-direct {v0}, Leim;-><init>()V
 
     iput-object v0, p0, Lejc;->l:Leim;
 
-    .line 548
     new-instance v0, Leka;
 
     invoke-direct {v0}, Leka;-><init>()V
 
     iput-object v0, p0, Lejc;->j:Leka;
 
-    .line 549
     new-instance v0, Lekd;
 
     invoke-direct {v0}, Lekd;-><init>()V
 
     iput-object v0, p0, Lejc;->k:Lekd;
 
-    .line 550
     iget-object v0, p0, Lejc;->l:Leim;
 
     sget-object v1, Lehx;->b:[F
 
     invoke-virtual {v0, v1}, Leim;->b([F)V
 
-    .line 551
     new-instance v0, Leji;
 
     iget-object v1, p0, Lejc;->b:Lejh;
@@ -5183,74 +4518,58 @@
 
     iput-object v0, p0, Lejc;->c:Leji;
 
-    .line 552
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 553
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
 
-    .line 554
     iget-object v1, p0, Lejc;->au:Landroid/content/Context;
 
-    .line 555
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
     const v2, 0x7f020096
 
-    .line 556
     invoke-static {v1, v2, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 557
     new-instance v0, Lejf;
 
     invoke-direct {v0}, Lejf;-><init>()V
 
     iput-object v0, p0, Lejc;->a:Leih;
 
-    .line 558
     iget-object v0, p0, Lejc;->b:Lejh;
 
     iget-object v1, p0, Lejc;->k:Lekd;
 
-    .line 559
     iput-object v1, v0, Leih;->e:Leik;
 
-    .line 560
     iget-object v0, p0, Lejc;->b:Lejh;
 
     iget-object v1, p0, Lejc;->l:Leim;
 
-    .line 561
     iput-object v1, v0, Lejh;->j:Leik;
 
-    .line 562
     iget-boolean v0, p0, Lejc;->F:Z
 
     if-eqz v0, :cond_1
 
-    .line 563
     iget-object v0, p0, Lejc;->b:Lejh;
 
-    .line 564
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lejh;->m:Z
 
-    .line 565
     iget-object v0, p0, Lejc;->b:Lejh;
 
-    .line 566
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lejh;->l:Z
 
-    .line 567
     :cond_1
     iget-object v0, p0, Lejc;->P:[F
 
@@ -5258,7 +4577,6 @@
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 568
     iget-object v0, p0, Lejc;->P:[F
 
     const/4 v1, 0x0
@@ -5267,7 +4585,6 @@
 
     aput v2, v0, v1
 
-    .line 569
     iget-object v0, p0, Lejc;->P:[F
 
     const/4 v1, 0x1
@@ -5276,7 +4593,6 @@
 
     aput v2, v0, v1
 
-    .line 570
     iget-object v0, p0, Lejc;->P:[F
 
     const/4 v1, 0x4
@@ -5285,7 +4601,6 @@
 
     aput v2, v0, v1
 
-    .line 571
     iget-object v0, p0, Lejc;->P:[F
 
     const/4 v1, 0x5
@@ -5294,14 +4609,12 @@
 
     aput v2, v0, v1
 
-    .line 572
     iget-object v0, p0, Lejc;->R:[F
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 573
     sget-object v0, Lehx;->c:[F
 
     const/4 v1, 0x0
@@ -5328,17 +4641,14 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
-    .line 574
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lejc;->o:Z
 
-    .line 575
     iget-boolean v0, p0, Lejc;->y:Z
 
     if-eqz v0, :cond_2
 
-    .line 576
     iget-object v0, p0, Lejc;->e:Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;
 
     iget-boolean v1, p0, Lejc;->y:Z
@@ -5347,7 +4657,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;->a(ZI)V
 
-    .line 577
     :cond_2
     iget-object v0, p0, Lejc;->Q:[F
 
@@ -5357,18 +4666,14 @@
     :try_end_0
     .catch Leij; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 581
     :goto_0
     iput-boolean v5, p0, Lejc;->B:Z
 
-    .line 582
     return-void
 
-    .line 579
     :catch_0
     move-exception v0
 
-    .line 580
     sget-object v1, Lkfu;->a:Lkfv;
 
     invoke-virtual {v1, v0}, Lkfv;->b(Ljava/lang/Throwable;)V

@@ -19,20 +19,14 @@
 .method public constructor <init>(Lfav;Libo;Lgfy;)V
     .locals 2
 
-    .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
     iput-object p1, p0, Lfsq;->a:Lfav;
 
-    .line 7
     iput-object p2, p0, Lfsq;->b:Libo;
 
-    .line 8
     iput-object p3, p0, Lfsq;->e:Lgfy;
 
-    .line 9
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -41,7 +35,6 @@
 
     iput-object v0, p0, Lfsq;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 10
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -50,7 +43,6 @@
 
     iput-object v0, p0, Lfsq;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 11
     return-void
 .end method
 
@@ -59,10 +51,8 @@
 .method public final a()Lihw;
     .locals 2
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 1
     iget-object v1, p0, Lfsq;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
@@ -74,14 +64,12 @@
     :goto_0
     invoke-static {v0}, Ljiy;->b(Z)V
 
-    .line 2
     new-instance v0, Lfsj;
 
     invoke-direct {v0, p0}, Lfsj;-><init>(Lfsq;)V
 
     return-object v0
 
-    .line 1
     :cond_0
     const/4 v0, 0x0
 
@@ -91,8 +79,6 @@
 .method public final b()V
     .locals 2
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lfsq;->b:Libo;
 
     new-instance v1, Lfsm;
@@ -101,6 +87,5 @@
 
     invoke-virtual {v0, v1}, Libo;->execute(Ljava/lang/Runnable;)V
 
-    .line 4
     return-void
 .end method

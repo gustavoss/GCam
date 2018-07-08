@@ -49,83 +49,60 @@
 .method constructor <init>(Lbac;Lbad;Lgoa;Lgkk;Lgrs;Lbka;Lgag;Lgad;Lida;Lawt;Libo;Lhgl;Legf;Legl;Lgog;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lgvn;Liix;Lbtg;Lbsm;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lcry;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldbz;->a:Lbac;
 
-    .line 3
     iput-object p2, p0, Ldbz;->b:Lbad;
 
-    .line 4
     iput-object p3, p0, Ldbz;->c:Lgoa;
 
-    .line 5
     iput-object p4, p0, Ldbz;->d:Lgkk;
 
-    .line 6
     iput-object p5, p0, Ldbz;->e:Lgrs;
 
-    .line 7
     iput-object p6, p0, Ldbz;->f:Lbka;
 
-    .line 8
     iput-object p7, p0, Ldbz;->g:Lgag;
 
-    .line 9
     iput-object p8, p0, Ldbz;->h:Lgad;
 
-    .line 10
     iput-object p9, p0, Ldbz;->i:Lida;
 
-    .line 11
     iput-object p11, p0, Ldbz;->j:Libo;
 
-    .line 12
     iput-object p10, p0, Ldbz;->k:Lawt;
 
-    .line 13
     iput-object p12, p0, Ldbz;->l:Lhgl;
 
-    .line 14
     iput-object p13, p0, Ldbz;->m:Legf;
 
-    .line 15
     iput-object p14, p0, Ldbz;->n:Legl;
 
-    .line 16
     move-object/from16 v0, p15
 
     iput-object v0, p0, Ldbz;->o:Lgog;
 
-    .line 17
     move-object/from16 v0, p16
 
     iput-object v0, p0, Ldbz;->p:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
-    .line 18
     move-object/from16 v0, p17
 
     iput-object v0, p0, Ldbz;->q:Lgvn;
 
-    .line 19
     move-object/from16 v0, p18
 
     iput-object v0, p0, Ldbz;->r:Liix;
 
-    .line 20
     move-object/from16 v0, p19
 
     iput-object v0, p0, Ldbz;->s:Lbtg;
 
-    .line 21
     move-object/from16 v0, p20
 
     iput-object v0, p0, Ldbz;->t:Lbsm;
 
-    .line 22
     return-void
 .end method
 
@@ -134,8 +111,6 @@
 .method protected final a(Lbza;)Lcsb;
     .locals 24
 
-    .prologue
-    .line 23
     new-instance v1, Ldao;
 
     move-object/from16 v0, p0
@@ -176,7 +151,6 @@
 
     iget-object v4, v0, Ldbz;->k:Lawt;
 
-    .line 24
     invoke-interface {v4}, Lawt;->b()Liaq;
 
     move-result-object v12
@@ -245,6 +219,5 @@
 
     invoke-direct/range {v1 .. v23}, Ldao;-><init>(Lbac;Lbad;Lbza;ZLgrs;Lgkk;Lbka;Lgag;Lgad;Lgoa;Liaq;Libo;Lida;Lhgl;Legf;Legl;Lgog;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lgvn;Liix;Lbtg;Lbsm;)V
 
-    .line 25
     return-object v1
 .end method

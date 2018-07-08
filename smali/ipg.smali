@@ -41,8 +41,6 @@
 .method public final run()V
     .locals 8
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lipg;->a:Lipe;
 
     iget-object v0, p0, Lipg;->b:Livf;
@@ -53,29 +51,23 @@
 
     iget-object v4, p0, Lipg;->e:Lkfk;
 
-    .line 2
     iget-object v5, v1, Lipe;->j:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 3
     :try_start_0
     iget-boolean v6, v1, Lipe;->m:Z
 
     if-eqz v6, :cond_0
 
-    .line 4
     monitor-exit v5
 
-    .line 12
     :goto_0
     return-void
 
-    .line 5
     :cond_0
     new-instance v6, Landroid/graphics/SurfaceTexture;
 
-    .line 6
     invoke-virtual {v0}, Livf;->b()Livu;
 
     move-result-object v0
@@ -92,29 +84,24 @@
 
     iput-object v6, v1, Lipe;->e:Landroid/graphics/SurfaceTexture;
 
-    .line 7
     iget-object v0, v1, Lipe;->e:Landroid/graphics/SurfaceTexture;
 
-    .line 8
     iget-object v6, v2, Liqp;->a:[I
 
     const/4 v7, 0x0
 
     aget v6, v6, v7
 
-    .line 9
     invoke-virtual {v2}, Liqq;->a()I
 
     move-result v2
 
     invoke-virtual {v0, v6, v2}, Landroid/graphics/SurfaceTexture;->setDefaultBufferSize(II)V
 
-    .line 10
     iget-object v0, v1, Lipe;->e:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0, v3}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
 
-    .line 11
     new-instance v0, Landroid/view/Surface;
 
     iget-object v1, v1, Lipe;->e:Landroid/graphics/SurfaceTexture;
@@ -123,7 +110,6 @@
 
     invoke-virtual {v4, v0}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 12
     monitor-exit v5
 
     goto :goto_0

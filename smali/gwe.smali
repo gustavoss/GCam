@@ -33,20 +33,16 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgwe;->a:Lgwg;
 
     iget-object v1, p0, Lgwe;->b:Lgvx;
 
     iget-object v2, p0, Lgwe;->c:Lgwi;
 
-    .line 4
     iget-object v1, v1, Lgvx;->a:Lgwn;
 
     invoke-virtual {v1}, Lgwn;->a()V
 
-    .line 5
     iget-boolean v1, v0, Lgwg;->p:Z
 
     if-eqz v1, :cond_0
@@ -59,10 +55,8 @@
 
     if-lez v0, :cond_0
 
-    .line 6
     invoke-interface {v2}, Lgwi;->b()V
 
-    .line 7
     :cond_0
     return-void
 .end method

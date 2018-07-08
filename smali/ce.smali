@@ -11,23 +11,18 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Lcg;
 
     invoke-direct {v0}, Lcg;-><init>()V
 
     sput-object v0, Lce;->a:Lch;
 
-    .line 3
     return-void
 .end method
 
 .method static a(Ljava/lang/Object;Landroid/util/Property;Landroid/graphics/Path;)Landroid/animation/ObjectAnimator;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lce;->a:Lch;
 
     invoke-interface {v0, p0, p1, p2}, Lch;->a(Ljava/lang/Object;Landroid/util/Property;Landroid/graphics/Path;)Landroid/animation/ObjectAnimator;

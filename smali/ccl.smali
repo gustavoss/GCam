@@ -29,15 +29,11 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lccl;->a:Lblu;
 
     iget-object v1, p0, Lccl;->b:Lblw;
 
-    .line 2
     iput-object v1, v0, Lblu;->a:Lblt;
 
-    .line 3
     return-void
 .end method

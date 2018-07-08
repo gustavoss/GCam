@@ -19,7 +19,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -28,7 +27,6 @@
 
     const/4 v2, 0x0
 
-    .line 3
     new-instance v0, Lhfb;
 
     const-string v1, "POC_GRAYSCALE"
@@ -37,7 +35,6 @@
 
     sput-object v0, Lhfb;->a:Lhfb;
 
-    .line 4
     new-instance v0, Lhfb;
 
     const-string v1, "TEST_1"
@@ -46,7 +43,6 @@
 
     sput-object v0, Lhfb;->c:Lhfb;
 
-    .line 5
     new-instance v0, Lhfb;
 
     const-string v1, "TEST_2"
@@ -55,7 +51,6 @@
 
     sput-object v0, Lhfb;->d:Lhfb;
 
-    .line 6
     new-instance v0, Lhfb;
 
     const-string v1, "ALWAYS_SKIP"
@@ -64,7 +59,6 @@
 
     sput-object v0, Lhfb;->b:Lhfb;
 
-    .line 7
     const/4 v0, 0x4
 
     new-array v0, v0, [Lhfb;
@@ -93,8 +87,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -103,8 +95,6 @@
 .method public static values()[Lhfb;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lhfb;->e:[Lhfb;
 
     invoke-virtual {v0}, [Lhfb;->clone()Ljava/lang/Object;

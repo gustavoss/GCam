@@ -53,8 +53,6 @@
 .method public final a()Ljava/lang/Object;
     .locals 12
 
-    .prologue
-    .line 1
     iget-object v5, p0, Lerc;->a:Leqy;
 
     iget-object v0, p0, Lerc;->b:Ljava/io/File;
@@ -71,46 +69,36 @@
 
     iget-object v9, p0, Lerc;->h:Lerx;
 
-    .line 2
     new-instance v10, Lerf;
 
     invoke-direct {v10, v0, v6, v7}, Lerf;-><init>(Ljava/io/File;J)V
 
-    .line 3
     iget-object v10, v5, Leqy;->e:Leth;
 
     iget-object v10, v5, Leqy;->b:Ljava/util/concurrent/Executor;
 
-    .line 6
     new-instance v11, Liyg;
 
-    .line 7
     invoke-direct {v11, v10}, Liyg;-><init>(Ljava/util/concurrent/Executor;)V
 
-    .line 9
     invoke-virtual {v11, v0}, Liyg;->a(Ljava/io/File;)Liyh;
 
     move-result-object v0
 
-    .line 10
     check-cast v0, Liyg;
 
-    .line 11
     invoke-virtual {v0, v1}, Liyg;->a(I)Liyg;
 
     move-result-object v0
 
-    .line 12
     invoke-virtual {v0}, Liyg;->a()Liyg;
 
     move-result-object v0
 
-    .line 13
     invoke-virtual {v0}, Liyg;->b()Lixu;
 
     move-result-object v1
 
-    .line 16
     new-instance v10, Lets;
 
     new-instance v11, Letp;
@@ -125,12 +113,9 @@
 
     invoke-direct {v10, v11, v8}, Lets;-><init>(Lixu;Letv;)V
 
-    .line 18
     iget-object v0, v9, Lerx;->f:Lezt;
 
-    .line 19
     invoke-interface {v0, v10, v6, v7}, Lezt;->a(Lixu;J)Lezu;
 
-    .line 21
     return-object v10
 .end method

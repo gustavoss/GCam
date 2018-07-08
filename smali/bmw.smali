@@ -16,8 +16,6 @@
 .method public constructor <init>(Lbmt;Liok;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbmw;->b:Lbmt;
 
     iput-object p2, p0, Lbmw;->a:Liok;
@@ -32,30 +30,24 @@
 .method public final a()Lfjl;
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbmw;->b:Lbmt;
 
     invoke-interface {v0}, Lbmt;->a()Lfjl;
 
     move-result-object v1
 
-    .line 3
     if-eqz v1, :cond_0
 
-    .line 4
     new-instance v2, Lbmx;
 
     invoke-direct {v2, p0, v1, v1}, Lbmx;-><init>(Lbmw;Liob;Lfjl;)V
 
-    .line 5
     new-instance v0, Lfjl;
 
     iget-object v1, v1, Lfjl;->b:Ljava/util/Map;
 
     invoke-direct {v0, v2, v1}, Lfjl;-><init>(Liob;Ljava/util/Map;)V
 
-    .line 6
     :goto_0
     return-object v0
 

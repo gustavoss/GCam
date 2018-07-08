@@ -24,8 +24,6 @@
 .method constructor <init>(Lzb;Landroid/os/Handler;Laaz;Laam;Landroid/hardware/Camera$PictureCallback;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lzl;->f:Lzb;
 
     iput-object p2, p0, Lzl;->a:Landroid/os/Handler;
@@ -50,59 +48,46 @@
 .method public final run()V
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 2
     iget-object v0, p0, Lzl;->f:Lzb;
 
-    .line 3
     iget-object v0, v0, Lzb;->a:Lyv;
 
-    .line 4
     iget-object v0, v0, Lyv;->e:Labx;
 
-    .line 5
     invoke-virtual {v0}, Labx;->c()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 19
     :goto_0
     return-void
 
-    .line 7
     :cond_0
     iget-object v0, p0, Lzl;->f:Lzb;
 
     iget-object v0, v0, Lzb;->a:Lyv;
 
-    .line 8
     iget-object v0, v0, Lyv;->e:Labx;
 
-    .line 9
     const/4 v2, 0x6
 
     invoke-virtual {v0, v2}, Labx;->b(I)Z
 
-    .line 10
     iget-object v0, p0, Lzl;->f:Lzb;
 
     iget-object v0, v0, Lzb;->a:Lyv;
 
-    .line 11
     iget-object v2, v0, Lyv;->d:Lzm;
 
-    .line 12
     iget-object v3, p0, Lzl;->a:Landroid/os/Handler;
 
     iget-object v0, p0, Lzl;->f:Lzb;
 
     iget-object v4, p0, Lzl;->b:Laaz;
 
-    .line 13
     if-eqz v3, :cond_1
 
     if-eqz v0, :cond_1
@@ -112,7 +97,6 @@
     :cond_1
     move-object v0, v1
 
-    .line 16
     :goto_1
     iget-object v3, p0, Lzl;->a:Landroid/os/Handler;
 
@@ -134,12 +118,10 @@
 
     iget-object v4, p0, Lzl;->e:Landroid/hardware/Camera$PictureCallback;
 
-    .line 17
     new-instance v5, Lzn;
 
     invoke-direct {v5, v0, v3, v1, v4}, Lzn;-><init>(Landroid/hardware/Camera$ShutterCallback;Landroid/hardware/Camera$PictureCallback;Landroid/hardware/Camera$PictureCallback;Landroid/hardware/Camera$PictureCallback;)V
 
-    .line 18
     const/16 v0, 0x259
 
     invoke-virtual {v2, v0, v5}, Lzm;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -150,7 +132,6 @@
 
     goto :goto_0
 
-    .line 15
     :cond_2
     new-instance v0, Lzt;
 

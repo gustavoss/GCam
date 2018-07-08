@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ldr;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public final a(Landroid/view/View;)Ldy;
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Ldx;
 
     invoke-direct {v0, p1}, Ldx;-><init>(Landroid/view/View;)V

@@ -11,14 +11,10 @@
 .method public constructor <init>(Lkgg;)V
     .locals 0
 
-    .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     iput-object p1, p0, Lhik;->a:Lkgg;
 
-    .line 14
     return-void
 .end method
 
@@ -27,26 +23,20 @@
 .method public final a(Lhim;)V
     .locals 8
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhik;->a:Lkgg;
 
     iget v1, p1, Lhim;->c:I
 
-    .line 2
     invoke-static {v1}, Lkgb;->a(I)I
 
     move-result v1
 
-    .line 4
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 5
     sget-object v4, Lgru;->a:Ljava/lang/String;
 
-    .line 6
     iget-wide v6, v0, Lkgg;->a:J
 
     sub-long/2addr v2, v6
@@ -81,16 +71,12 @@
 
     move-result-object v2
 
-    .line 7
     invoke-static {v4, v2}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8
     iget-object v0, v0, Lkgg;->b:Lgru;
 
-    .line 9
     iget-object v2, v0, Lgru;->e:Lkfk;
 
-    .line 10
     if-nez v1, :cond_0
 
     const/4 v0, 0x1
@@ -102,10 +88,8 @@
 
     invoke-virtual {v2, v0}, Lkcy;->a(Ljava/lang/Object;)Z
 
-    .line 11
     return-void
 
-    .line 10
     :cond_0
     const/4 v0, 0x0
 

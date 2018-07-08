@@ -33,18 +33,14 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lgir;->a:Lgiq;
 
     iget-object v2, p0, Lgir;->b:Lgxk;
 
     iget-object v3, p0, Lgir;->c:Lgho;
 
-    .line 2
     iget-object v0, v1, Lgiq;->z:Lkey;
 
-    .line 3
     invoke-static {v0}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -57,25 +53,20 @@
 
     check-cast v0, Lepd;
 
-    .line 4
     invoke-virtual {v1, v2, v3, v0}, Lgiq;->a(Lgxk;Lgho;Lepd;)V
 
-    .line 5
     invoke-virtual {v1}, Lgiq;->k()Landroid/net/Uri;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lgiq;->a(Landroid/net/Uri;)V
 
-    .line 6
     iget-object v2, v1, Lgiq;->d:Lepd;
 
     if-nez v2, :cond_0
 
-    .line 7
     iput-object v0, v1, Lgiq;->d:Lepd;
 
-    .line 8
     :cond_0
     return-void
 .end method

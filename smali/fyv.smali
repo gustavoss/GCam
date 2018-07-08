@@ -11,8 +11,6 @@
 .method constructor <init>(Lfyq;Lfzm;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p2, p0, Lfyv;->a:Lfzm;
 
     invoke-direct {p0}, Lcom/google/googlex/gcam/GoudaImageCallback;-><init>()V
@@ -25,11 +23,8 @@
 .method public final RgbReady(JLcom/google/googlex/gcam/InterleavedImageU8;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 13
 
-    .prologue
-    .line 2
     sget-object v2, Lfyo;->a:Ljava/lang/String;
 
-    .line 3
     invoke-static/range {p5 .. p5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
@@ -70,23 +65,18 @@
 
     move-result-object v3
 
-    .line 4
     invoke-static {v2, v3}, Lbkl;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     iget-object v2, p0, Lfyv;->a:Lfzm;
 
     if-eqz v2, :cond_0
 
-    .line 6
     iget-object v2, p0, Lfyv;->a:Lfzm;
 
-    .line 9
     invoke-static {}, Lfzp;->c()Lfzq;
 
     move-result-object v3
 
-    .line 10
     invoke-static/range {p6 .. p6}, Lfyo;->a(Ljava/lang/String;)Ljrw;
 
     move-result-object v4
@@ -95,7 +85,6 @@
 
     move-result-object v3
 
-    .line 11
     invoke-static/range {p7 .. p7}, Lfyo;->a(Ljava/lang/String;)Ljrw;
 
     move-result-object v4
@@ -104,28 +93,22 @@
 
     move-result-object v3
 
-    .line 12
     invoke-virtual {v3}, Lfzq;->a()Lfzp;
 
     move-result-object v7
 
-    .line 15
     iget-object v3, v2, Lfzm;->b:Ldnc;
 
-    .line 16
     iget-object v3, v3, Ldnc;->b:Lhce;
 
-    .line 17
     invoke-virtual {v3}, Lhce;->a()Lhcf;
 
     move-result-object v12
 
-    .line 18
     iget-object v3, v2, Lfzm;->b:Ldnc;
 
     iget-object v2, v2, Lfzm;->b:Ldnc;
 
-    .line 19
     invoke-static {v2}, Ldnc;->a(Ldnc;)I
 
     move-result v8
@@ -140,10 +123,8 @@
 
     move-object/from16 v11, p5
 
-    .line 20
     invoke-static/range {v3 .. v12}, Ldnc;->a(Ldnc;JLcom/google/googlex/gcam/InterleavedImageU8;Lfzp;IZLdnb;Ljava/lang/String;Lhcf;)V
 
-    .line 21
     :cond_0
     return-void
 .end method

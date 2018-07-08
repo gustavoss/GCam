@@ -23,71 +23,55 @@
 .method public constructor <init>(Ljmr;Ljhn;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Ljbx;->a:Ljava/util/Set;
 
-    .line 3
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Ljbx;->b:J
 
-    .line 4
     new-instance v0, Ljby;
 
     invoke-direct {v0}, Ljby;-><init>()V
 
     iput-object v0, p0, Ljbx;->c:Ljby;
 
-    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 6
     invoke-static {p1}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     invoke-static {p2}, Ljiy;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     iput-object p1, p0, Ljbx;->d:Ljmr;
 
-    .line 9
     iput-object p2, p0, Ljbx;->e:Ljhn;
 
-    .line 10
     iget-object v0, p0, Ljbx;->d:Ljmr;
 
     invoke-virtual {v0, p0}, Ljmr;->a(Ljmw;)V
 
-    .line 11
     return-void
 .end method
 
 .method private final declared-synchronized a(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
     .locals 4
 
-    .prologue
-    .line 21
     monitor-enter p0
 
     :try_start_0
     invoke-direct {p0}, Ljbx;->b()V
 
-    .line 22
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->getTimestamp()J
 
     move-result-wide v0
 
-    .line 23
     iget-wide v2, p0, Ljbx;->b:J
 
     cmp-long v2, v0, v2
@@ -106,7 +90,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 24
     :cond_0
     iget-object v0, p0, Ljbx;->c:Ljby;
 
@@ -114,13 +97,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 25
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 21
     :catchall_0
     move-exception v0
 
@@ -132,8 +113,6 @@
 .method private final declared-synchronized b()V
     .locals 6
 
-    .prologue
-    .line 32
     monitor-enter p0
 
     :try_start_0
@@ -165,14 +144,12 @@
 
     move-result-wide v2
 
-    .line 33
     iget-wide v4, p0, Ljbx;->b:J
 
     cmp-long v0, v2, v4
 
     if-gtz v0, :cond_1
 
-    .line 34
     iget-object v0, p0, Ljbx;->d:Ljmr;
 
     invoke-virtual {v0}, Ljmr;->c()Ljava/util/Set;
@@ -189,7 +166,6 @@
 
     if-nez v0, :cond_0
 
-    .line 35
     iget-object v0, p0, Ljbx;->c:Ljby;
 
     invoke-virtual {v0, v2, v3}, Ljby;->a(J)V
@@ -198,7 +174,6 @@
 
     goto :goto_0
 
-    .line 32
     :catchall_0
     move-exception v0
 
@@ -206,7 +181,6 @@
 
     throw v0
 
-    .line 37
     :cond_1
     monitor-exit p0
 
@@ -218,8 +192,6 @@
 .method public final declared-synchronized a()V
     .locals 4
 
-    .prologue
-    .line 26
     monitor-enter p0
 
     :try_start_0
@@ -227,10 +199,8 @@
 
     invoke-virtual {v0, p0}, Ljmr;->b(Ljmw;)V
 
-    .line 27
     invoke-direct {p0}, Ljbx;->b()V
 
-    .line 28
     iget-object v0, p0, Ljbx;->c:Ljby;
 
     iget-object v1, p0, Ljbx;->d:Ljmr;
@@ -245,24 +215,20 @@
 
     invoke-virtual {v0, v1, v2, v3}, Ljby;->a(Ljava/util/Set;Ljava/util/Set;Ljhn;)V
 
-    .line 29
     iget-object v0, p0, Ljbx;->e:Ljhn;
 
     invoke-interface {v0}, Ljhn;->a()V
 
-    .line 30
     iget-object v0, p0, Ljbx;->c:Ljby;
 
     invoke-virtual {v0}, Ljby;->c()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 31
     monitor-exit p0
 
     return-void
 
-    .line 26
     :catchall_0
     move-exception v0
 
@@ -274,8 +240,6 @@
 .method public final declared-synchronized a(J)V
     .locals 3
 
-    .prologue
-    .line 12
     monitor-enter p0
 
     :try_start_0
@@ -285,7 +249,6 @@
 
     if-lez v0, :cond_0
 
-    .line 13
     const-string v0, "FrameDropListeningFrameBuffer"
 
     const/16 v1, 0x54
@@ -318,13 +281,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 15
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 14
     :cond_0
     :try_start_1
     iget-object v0, p0, Ljbx;->a:Ljava/util/Set;
@@ -339,7 +300,6 @@
 
     goto :goto_0
 
-    .line 12
     :catchall_0
     move-exception v0
 
@@ -351,8 +311,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 38
     check-cast p1, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;
 
     invoke-direct {p0, p1}, Ljbx;->a(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
@@ -363,8 +321,6 @@
 .method public final declared-synchronized b(J)V
     .locals 3
 
-    .prologue
-    .line 16
     monitor-enter p0
 
     :try_start_0
@@ -374,7 +330,6 @@
 
     if-gtz v0, :cond_0
 
-    .line 17
     const-string v0, "FrameDropListeningFrameBuffer"
 
     const/16 v1, 0x55
@@ -407,13 +362,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 20
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 18
     :cond_0
     :try_start_1
     iget-object v0, p0, Ljbx;->a:Ljava/util/Set;
@@ -424,14 +377,12 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 19
     iput-wide p1, p0, Ljbx;->b:J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 16
     :catchall_0
     move-exception v0
 
